@@ -4,7 +4,7 @@ namespace AthenaHealth.Sdk.Http
 {
     public interface IConnection
     {
-        string BaseAddress { get; }
+        Uri BaseAddress { get; }
         Credentials Credentials { get; }
     }
 }
