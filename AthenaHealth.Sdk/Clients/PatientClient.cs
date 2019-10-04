@@ -1,15 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using AthenaHealth.Sdk.Http;
+using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
 
 namespace AthenaHealth.Sdk.Clients
 {
-    public class PatientClient
+    public class PatientClient : IPatientClient
     {
-        public Patient Get(int patientId)
+        public IConnection Connection { get; private set; }
+
+        public PatientClient(IConnection connection)
         {
-            throw new NotImplementedException();
+            Connection = connection;
+        }
+        
+        public Patient GetPatientById(int patientId, GetPatientByIdFilter getPatientByIdFilter = null)
+        {
+            return Connection.Get<Patient>("");
         }
     }
 }
