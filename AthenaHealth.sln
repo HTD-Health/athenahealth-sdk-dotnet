@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.29326.143
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AthenaHealth.Sdk", "AthenaHealth.Sdk\AthenaHealth.Sdk.csproj", "{4F4E46DE-B4AF-49F5-8EA2-A3DE6C44DCDA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AthenaHealth.Sdk.Sample.Console", "AthenaHealth.Sdk.Sample.Console\AthenaHealth.Sdk.Sample.Console.csproj", "{A9BE2FB1-0123-4C03-A550-2423A995DE68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AthenaHealth.Sdk.Sample.Console", "AthenaHealth.Sdk.Sample.Console\AthenaHealth.Sdk.Sample.Console.csproj", "{A9BE2FB1-0123-4C03-A550-2423A995DE68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AthenaHealth.Sdk.Tests", "AthenaHealth.Sdk.Tests\AthenaHealth.Sdk.Tests.csproj", "{F0F6B7AE-BDDA-4C7F-9357-183DE7C5D057}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AthenaHealth.Sdk.Tests", "AthenaHealth.Sdk.Tests\AthenaHealth.Sdk.Tests.csproj", "{F0F6B7AE-BDDA-4C7F-9357-183DE7C5D057}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AthenaHealth.Sdk.Tests.Integration", "AthenaHealth.Sdk.Tests.Integration\AthenaHealth.Sdk.Tests.Integration.csproj", "{1825B270-96DA-4A1F-B8E6-FACADA92C9CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{F0F6B7AE-BDDA-4C7F-9357-183DE7C5D057}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F0F6B7AE-BDDA-4C7F-9357-183DE7C5D057}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F0F6B7AE-BDDA-4C7F-9357-183DE7C5D057}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1825B270-96DA-4A1F-B8E6-FACADA92C9CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1825B270-96DA-4A1F-B8E6-FACADA92C9CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1825B270-96DA-4A1F-B8E6-FACADA92C9CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1825B270-96DA-4A1F-B8E6-FACADA92C9CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
