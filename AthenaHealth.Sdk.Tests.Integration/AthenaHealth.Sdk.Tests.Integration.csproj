@@ -24,4 +24,10 @@
     <ProjectReference Include="..\AthenaHealth.Sdk\AthenaHealth.Sdk.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Clients\PatientClient\ResponseOk1.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

@@ -15,7 +15,10 @@ namespace AthenaHealth.Sdk.Clients
         
         public Patient GetPatientById(int patientId, GetPatientByIdFilter getPatientByIdFilter = null)
         {
-            return Connection.Get<Patient>("");
+            //should be: return Connection.GetAsync<Patient>($"patients/{patientId}", getPatientByIdFilter);
+            
+             var resp = Connection.GetAsync($"patients/{patientId}", getPatientByIdFilter);
+             return null;
         }
     }
 }
