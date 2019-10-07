@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AthenaHealth.Sdk.Sample.Con
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AthenaHealth.Sdk.Tests", "AthenaHealth.Sdk.Tests\AthenaHealth.Sdk.Tests.csproj", "{F0F6B7AE-BDDA-4C7F-9357-183DE7C5D057}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AthenaHealth.Sdk.Tests.Integration", "AthenaHealth.Sdk.Tests.Integration\AthenaHealth.Sdk.Tests.Integration.csproj", "{1825B270-96DA-4A1F-B8E6-FACADA92C9CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AthenaHealth.Sdk.Tests.Integration", "AthenaHealth.Sdk.Tests.Integration\AthenaHealth.Sdk.Tests.Integration.csproj", "{1825B270-96DA-4A1F-B8E6-FACADA92C9CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

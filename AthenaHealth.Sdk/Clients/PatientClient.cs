@@ -1,4 +1,5 @@
-﻿using AthenaHealth.Sdk.Http;
+﻿using System.Threading.Tasks;
+using AthenaHealth.Sdk.Http;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
 
@@ -13,12 +14,10 @@ namespace AthenaHealth.Sdk.Clients
             Connection = connection;
         }
         
-        public Patient GetPatientById(int patientId, GetPatientByIdFilter getPatientByIdFilter = null)
+        public async Task<Patient> GetPatientById(int patientId, GetPatientByIdFilter getPatientByIdFilter = null)
         {
-            //should be: return Connection.GetAsync<Patient>($"patients/{patientId}", getPatientByIdFilter);
+            return await Connection.GetAsync<Patient>($"patients/{patientId}", getPatientByIdFilter);
             
-             var resp = Connection.GetAsync($"patients/{patientId}", getPatientByIdFilter);
-             return null;
         }
     }
 }

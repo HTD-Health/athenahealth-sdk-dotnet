@@ -1,11 +1,12 @@
-﻿using AthenaHealth.Sdk.Models.Request;
+﻿using System.Threading.Tasks;
+using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
 
 namespace AthenaHealth.Sdk.Clients
 {
     public interface IPatientClient
     {
-        Patient GetPatientById(int patientId, GetPatientByIdFilter getPatientByIdFilter = null);
+        Task<Patient> GetPatientById(int patientId, GetPatientByIdFilter getPatientByIdFilter = null);
 
     }
 }

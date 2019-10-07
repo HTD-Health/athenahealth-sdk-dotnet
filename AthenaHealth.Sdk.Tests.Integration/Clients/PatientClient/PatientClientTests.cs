@@ -1,4 +1,9 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
+using System.Net;
+using System.Runtime.Serialization;
+using System.Threading.Tasks;
+using AthenaHealth.Sdk.Exceptions;
 using AthenaHealth.Sdk.Models.Response;
 using AthenaHealth.Sdk.Tests.Integration.Helpers;
 using Shouldly;
@@ -9,11 +14,11 @@ namespace AthenaHealth.Sdk.Tests.Integration.Clients.PatientClient
     public class PatientClientTests
     {
         [Fact]
-        public void GetPatientById_ValidId_ReturnsPatient ()
+        public async Task GetPatientById_ValidId_ReturnsPatient ()
         {
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Clients\PatientClient\ResponseOk1.json"));
+            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Clients\PatientClient\Patient.json"));
 
-            Patient patient = patientClient.GetPatientById(1);
+            Patient patient = await patientClient.GetPatientById(1);
 
             patient.ShouldNotBeNull();
             patient.Email.ShouldBe("monroe86@hotmail.com");
@@ -21,5 +26,7 @@ namespace AthenaHealth.Sdk.Tests.Integration.Clients.PatientClient
             patient.Balances.ShouldNotBeEmpty();
             patient.Balances.First().Value.ShouldBe(10);
         }
+
+        
     }
 }
