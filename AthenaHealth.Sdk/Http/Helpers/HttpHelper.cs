@@ -1,13 +1,45 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Specialized;
+using System.Net.Http;
 using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
 using System.Web;
 
 namespace AthenaHealth.Sdk.Http.Helpers
 {
-    internal static class UrlHelper
+    internal static class HttpHelper
     {
+        /// <summary>
+        /// Deserializes response content to object of specified type.
+        /// </summary>
+        /// <typeparam name="T">Object type</typeparam>
+        /// <param name="httpResponseMessage">Http response</param>
+        /// <returns>Object of specified type</returns>
+        public static async Task<T> GetObjectContent<T>(this HttpResponseMessage httpResponseMessage)
+        {
+            string content = await httpResponseMessage.Content.ReadAsStringAsync();
+
+            return JsonConvert.DeserializeObject<T>(content);
+        }
+
+        /// <summary>
+        /// Creates json content from provided object.
+        /// </summary>
+        /// <param name="body">Object to serialize.</param>
+        /// <returns></returns>
+        public static HttpContent CreateJsonContent(object body)
+        {
+            if (body == null)
+                return null;
+
+            if (body is string)
+                return new StringContent(body as string, Encoding.UTF8, "application/json");
+
+            return new StringContent(JsonConvert.SerializeObject(body), Encoding.UTF8, "application/json");
+        }
+
         /// <summary>
         /// Adds query parameters to specified url.
         /// </summary>

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AthenaHealth.Sdk.Http
 {
-    public interface IAthenaHttpClient
+    public interface IHttpClientExtended
     {
         /// <summary>
         /// Gets or sets the base address of Uniform Resource Identifier (URI) of the Internet
@@ -383,6 +383,64 @@ namespace AthenaHealth.Sdk.Http
         /// </exception>
         /// <returns>The task object representing the asynchronous operation.</returns>
         Task<HttpResponseMessage> PostAsync(Uri requestUri, HttpContent content, CancellationToken cancellationToken);
+
+        /// <summary>
+        /// Send a PATCH request to the specified Uri as an asynchronous operation.
+        /// </summary>
+        /// <param name="requestUri">The Uri the request is sent to.</param>
+        /// <param name="content">The HTTP request content sent to the server.</param>
+        /// <exception cref="ArgumentNullException">The <paramref name="requestUri"/> was null.</exception>
+        /// <exception cref="HttpRequestException">
+        /// The request failed due to an underlying issue such as network connectivity, DNS failure,
+        /// server certificate validation or timeout.
+        /// </exception>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        Task<HttpResponseMessage> PatchAsync(Uri requestUri, HttpContent content);
+
+        /// <summary>
+        /// Send a PATCH request with a cancellation token as an asynchronous operation.
+        /// </summary>
+        /// <param name="requestUri">The Uri the request is sent to.</param>
+        /// <param name="content">The HTTP request content sent to the server.</param>
+        /// <param name="cancellationToken">
+        /// A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+        /// </param>
+        /// <exception cref="ArgumentNullException">The <paramref name="requestUri"/> was null.</exception>
+        /// <exception cref="HttpRequestException">
+        /// The request failed due to an underlying issue such as network connectivity, DNS failure,
+        /// server certificate validation or timeout.
+        /// </exception>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        Task<HttpResponseMessage> PatchAsync(Uri requestUri, HttpContent content, CancellationToken cancellationToken);
+
+        /// <summary>
+        /// Send a PATCH request to the specified Uri as an asynchronous operation.
+        /// </summary>
+        /// <param name="requestUri">The Uri the request is sent to.</param>
+        /// <param name="content">The HTTP request content sent to the server.</param>
+        /// <exception cref="ArgumentNullException">The <paramref name="requestUri"/> was null.</exception>
+        /// <exception cref="HttpRequestException">
+        /// The request failed due to an underlying issue such as network connectivity, DNS failure,
+        /// server certificate validation or timeout.
+        /// </exception>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        Task<HttpResponseMessage> PatchAsync(string requestUri, HttpContent content);
+
+        /// <summary>
+        /// Send a PATCH request with a cancellation token as an asynchronous operation.
+        /// </summary>
+        /// <param name="requestUri">The Uri the request is sent to.</param>
+        /// <param name="content">The HTTP request content sent to the server.</param>
+        /// <param name="cancellationToken">
+        /// A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+        /// </param>
+        /// <exception cref="ArgumentNullException">The <paramref name="requestUri"/> was null.</exception>
+        /// <exception cref="HttpRequestException">
+        /// The request failed due to an underlying issue such as network connectivity, DNS failure,
+        /// server certificate validation or timeout.
+        /// </exception>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        Task<HttpResponseMessage> PatchAsync(string requestUri, HttpContent content, CancellationToken cancellationToken);
 
         /// <summary>
         /// Send a PUT request to the specified Uri as an asynchronous operation.
