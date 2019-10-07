@@ -9,7 +9,7 @@ namespace AthenaHealth.Sdk.Tests.Integration.Helpers
         public static Connection Create(string responseContent, HttpStatusCode responseStatus = HttpStatusCode.OK)
         {
             var messageHandler = new MockHttpMessageHandler(responseContent, responseStatus);
-            var athenaHttpClient = new AthenaHttpClient(messageHandler);
+            var athenaHttpClient = new HttpClientExtended(messageHandler);
             var connection = new Connection(athenaHttpClient, new Credentials("", ""), "http://htdevelopers.com");
             return connection;
         }

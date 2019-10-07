@@ -7,7 +7,7 @@ namespace AthenaHealth.Sdk.Sample.Console
     {
         private static void GetPatientSample()
         {
-            var httpClient = new AthenaHttpClient();
+            var httpClient = new HttpClientExtended();
             var credentials = new Credentials("login", "password");
             var connection = new Connection(httpClient, credentials, "https://https://developer.athenahealth.com/api/preview1");
             var client = new AthenaHealthClient(connection, 123);

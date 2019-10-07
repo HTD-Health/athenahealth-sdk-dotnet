@@ -1,13 +1,18 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Specialized;
+using System.Net.Http;
 using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
 using System.Web;
 
 namespace AthenaHealth.Sdk.Http.Helpers
 {
     internal static class UrlHelper
     {
+       
+
         /// <summary>
         /// Adds query parameters to specified url.
         /// </summary>
