@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using AthenaHealth.Sdk.Exceptions;
+using Newtonsoft.Json.Linq;
 
 namespace AthenaHealth.Sdk.Http
 {
@@ -54,7 +55,6 @@ namespace AthenaHealth.Sdk.Http
         public async Task<T> GetAsync<T>(string relativeUrl, object queryParameters = null)
         {
             HttpResponseMessage response = await _httpClient.GetAsync(BuildUrl(relativeUrl, queryParameters));
-            await HandleErrors(response);
             await HandleErrors(response);
             return await GetObjectContent<T>(response);
         }
@@ -223,11 +223,11 @@ namespace AthenaHealth.Sdk.Http
 
         private async Task HandleErrors(HttpResponseMessage response)
         {
-            if (response.IsSuccessStatusCode)
-                return;
-
             string content = await GetContentFromHttpResponse(response);
 
+            if (response.IsSuccessStatusCode)
+                return;
+            
             if (IsValidationStatusCode(response.StatusCode))
             {
                 throw new ApiValidationException(content, response.StatusCode, response);
@@ -239,6 +239,13 @@ namespace AthenaHealth.Sdk.Http
         {
             int statusCodeInt = (int)statusCode;
             return statusCodeInt >= 400 && statusCodeInt <= 409;
+        }
+
+        private void HandleErrorsInPositiveResponse(string content)
+        {
+            JObject json = JObject.Parse(content);
+
+
         }
     }
 }
