@@ -13,13 +13,13 @@ namespace AthenaHealth.Sdk.Http
             _athenaHttpClient = athenaHttpClient;
         }
 
-        public async Task<IResponse> Send(IRequest request)
+        public async Task<Response> Send(Request request)
         {
-            using (HttpRequestMessage httpRequest = HttpRequestMessageFactory.Create(request))
+            using (HttpRequestMessage httpRequest = RequestFactory.Create(request))
             {
                 var httpResponse = await _athenaHttpClient.SendAsync(httpRequest);
-                var response = await ResponseFactory.Create(httpResponse);
-                return response;
+
+                return await ResponseFactory.Create(httpResponse);
             }
         }
     }

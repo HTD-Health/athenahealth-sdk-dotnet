@@ -4,6 +4,6 @@ namespace AthenaHealth.Sdk.Http
 {
     public interface IAthenaHttpAdapter
     {
-        Task<IResponse> Send(IRequest request);
+        Task<Response> Send(Request request);
     }
 }

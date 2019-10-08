@@ -9,8 +9,8 @@ namespace AthenaHealth.Sdk.Sample.Console
     {
         private static async Task GetPatientSample()
         {
-            
-            var client = new AthenaHealthClient("https://developer.athenahealth.com/api/preview1","login", "password", 123);
+
+            var client = new AthenaHealthClient(ApiVersion.Preview, "login", "password", 123);
 
             //case 1
             Patient patient = await client.Patients.GetPatientById(32000);

@@ -8,13 +8,13 @@ namespace AthenaHealth.Sdk.Exceptions
     {
         public HttpStatusCode StatusCode { get; private set; }
         public string ResponseError { get; private set; }
-        public IResponse Response { get; private set; }
+        public Response Response { get; private set; }
 
         public ApiException()
         {
         }
 
-        public ApiException(string responseError, HttpStatusCode statusCode, IResponse response = null): base("An responseError occured in communication with AthenaHealth API: " + responseError)
+        public ApiException(string responseError, HttpStatusCode statusCode, Response response = null): base("An responseError occured in communication with AthenaHealth API: " + responseError)
         {
             StatusCode = statusCode;
             ResponseError = responseError;

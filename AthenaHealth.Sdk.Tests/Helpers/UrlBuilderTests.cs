@@ -17,7 +17,7 @@ namespace AthenaHealth.Sdk.Tests.Helpers
             queryParameters.Add("DepartmentId", "1");
             queryParameters.Add("ShowFullSsn", "true");
 
-            Uri uri = UrlBuilder.BuildUrl(baseUrl, queryParameters);
+            Uri uri = UrlBuilder.BuildUri(baseUrl, queryParameters);
             uri.ToString().ShouldBe("https://htdevelopers.com/patients?DepartmentId=1&ShowFullSsn=true");
         }
     }
