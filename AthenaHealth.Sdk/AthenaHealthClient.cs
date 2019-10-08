@@ -5,12 +5,16 @@ namespace AthenaHealth.Sdk
 {
     public class AthenaHealthClient
     {
-        public AthenaHealthClient(IConnection connection, int practiceId)
+        public AthenaHealthClient(string baseAddress, string login, string password, int practiceId)
         {
-            Connection = connection;
+            var httpClient = new AthenaHttpClient();
+            var athenaHttpAdapter = new AthenaHttpAdapter(httpClient);
+            var credentials = new Credentials(login, password);
+            Connection = new Connection(athenaHttpAdapter, credentials, baseAddress);
+
             PracticeId = practiceId;
 
-            Patients = new PatientClient(connection);
+            Patients = new PatientClient(Connection);
         }
 
         public IConnection Connection { get; private set; }

@@ -35,7 +35,7 @@ namespace AthenaHealth.Sdk.Http.Helpers
         /// Query parameter object. Parameter names are resolved basing on property name or <see cref="JsonPropertyAttribute"/>.
         /// </param>
         /// <returns>Concatenated url.</returns>
-        public static string BuildUrl(string url, object queryParameters)
+        public static Uri BuildUrl(string url, object queryParameters)
         {
             return BuildUrl(new Uri(url), queryParameters);
         }
@@ -69,13 +69,13 @@ namespace AthenaHealth.Sdk.Http.Helpers
         /// Query parameter object. Parameter names are resolved basing on property name or <see cref="JsonPropertyAttribute"/>.
         /// </param>
         /// <returns>Concatenated url.</returns>
-        public static string BuildUrl(Uri uri, object queryParameters)
+        public static Uri BuildUrl(Uri uri, object queryParameters)
         {
             var uriBuilder = new UriBuilder(uri);
 
             uriBuilder.Query = BuildQueryParameters(uriBuilder.Query, queryParameters);
 
-            return uriBuilder.ToString();
+            return uriBuilder.Uri;
         }
 
         /// <summary>

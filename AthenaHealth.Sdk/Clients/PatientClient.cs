@@ -16,7 +16,7 @@ namespace AthenaHealth.Sdk.Clients
         
         public async Task<Patient> GetPatientById(int patientId, GetPatientByIdFilter getPatientByIdFilter = null)
         {
-            return await Connection.GetAsync<Patient>($"patients/{patientId}", getPatientByIdFilter);
+            return await Connection.Get<Patient>($"patients/{patientId}", getPatientByIdFilter);
             
         }
     }

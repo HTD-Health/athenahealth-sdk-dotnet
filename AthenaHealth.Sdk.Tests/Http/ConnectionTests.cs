@@ -28,20 +28,13 @@ namespace AthenaHealth.Sdk.Tests.Http
         {
             Connection connection = ConnectionFactory.Create(@"{""missingfields"": [""patientid""], ""error"": ""Additional fields are required.""}", 
                 Enum.Parse<HttpStatusCode>(statusCode.ToString()));
-            Should.Throw<ApiValidationException>(async () => await connection.GetAsync(""));
-            Should.Throw<ApiValidationException>(async () => await connection.GetAsync<Patient>(""));
+            Should.Throw<ApiValidationException>(async () => await connection.Get<Patient>(""));
 
-            Should.Throw<ApiValidationException>(async () => await connection.PostAsync("", null, null));
-            Should.Throw<ApiValidationException>(async () => await connection.PostAsync<Patient>("", null, null));
+            Should.Throw<ApiValidationException>(async () => await connection.Post<Patient>("", null, null));
 
-            Should.Throw<ApiValidationException>(async () => await connection.PutAsync("", null, null));
-            Should.Throw<ApiValidationException>(async () => await connection.PutAsync<Patient>("", null, null));
+            Should.Throw<ApiValidationException>(async () => await connection.Put<Patient>("", null, null));
 
-            Should.Throw<ApiValidationException>(async () => await connection.DeleteAsync(""));
-            Should.Throw<ApiValidationException>(async () => await connection.DeleteAsync<Patient>(""));
-
-            Should.Throw<ApiValidationException>(async () => await connection.PatchAsync("", null, null));
-            Should.Throw<ApiValidationException>(async () => await connection.PatchAsync<Patient>("", null, null));
+            Should.Throw<ApiValidationException>(async () => await connection.Delete<Patient>(""));
         }
 
         [Theory]
@@ -53,20 +46,13 @@ namespace AthenaHealth.Sdk.Tests.Http
             Connection connection = ConnectionFactory.Create(@"{""missingfields"": [""patientid""], ""error"": ""Additional fields are required.""}", 
                 Enum.Parse<HttpStatusCode>(statusCode.ToString()));
 
-            Should.Throw<ApiException>(async () => await connection.GetAsync(""));
-            Should.Throw<ApiException>(async () => await connection.GetAsync<Patient>(""));
+            Should.Throw<ApiException>(async () => await connection.Get<Patient>(""));
 
-            Should.Throw<ApiException>(async () => await connection.PostAsync("", null, null));
-            Should.Throw<ApiException>(async () => await connection.PostAsync<Patient>("", null, null));
+            Should.Throw<ApiException>(async () => await connection.Post<Patient>("", null, null));
 
-            Should.Throw<ApiException>(async () => await connection.PutAsync("", null, null));
-            Should.Throw<ApiException>(async () => await connection.PutAsync<Patient>("", null, null));
+            Should.Throw<ApiException>(async () => await connection.Put<Patient>("", null, null));
 
-            Should.Throw<ApiException>(async () => await connection.DeleteAsync(""));
-            Should.Throw<ApiException>(async () => await connection.DeleteAsync<Patient>(""));
-
-            Should.Throw<ApiException>(async () => await connection.PatchAsync("", null, null));
-            Should.Throw<ApiException>(async () => await connection.PatchAsync<Patient>("", null, null));
+            Should.Throw<ApiException>(async () => await connection.Delete<Patient>(""));
         }
 
         [Fact]
@@ -76,7 +62,7 @@ namespace AthenaHealth.Sdk.Tests.Http
             var error = @"{""missingfields"": [""patientid""], ""error"": ""Additional fields are required.""}";
             Connection connection = ConnectionFactory.Create(error, HttpStatusCode.BadRequest);
 
-            ApiException exc = Should.Throw<ApiException>(async () => await connection.GetAsync(""));
+            ApiException exc = Should.Throw<ApiException>(async () => await connection.Get<Patient>(""));
             exc.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
             exc.ResponseError.ShouldBe(error);
         }
@@ -85,7 +71,7 @@ namespace AthenaHealth.Sdk.Tests.Http
         public void HttpRequest_NullContent_NotThrowException()
         {
             var connection = ConnectionFactory.Create(null, HttpStatusCode.OK);
-            Should.NotThrow(async () => await connection.GetAsync<Patient>(""));
+            Should.NotThrow(async () => await connection.Get<Patient>(""));
         }
 
     }
