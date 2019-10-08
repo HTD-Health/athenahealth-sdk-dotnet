@@ -1,35 +1,50 @@
-﻿using AthenaHealth.Sdk.Http.Helpers;
+﻿using AthenaHealth.Sdk.Exceptions;
+using AthenaHealth.Sdk.Http.Helpers;
 using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
-using AthenaHealth.Sdk.Exceptions;
-using Newtonsoft.Json.Linq;
 
 namespace AthenaHealth.Sdk.Http
 {
     public class Connection : IConnection
     {
+        /// <summary>
+        /// Http client
+        /// </summary>
         private readonly IHttpClientExtended _httpClient;
 
         /// <summary>
-        /// Base url address
+        /// Authorization token expiration date.
+        /// </summary>
+        private DateTime? _authorizationTokenExpirationDate;
+
+        /// <summary>
+        /// Base url adress
         /// </summary>
         public Uri BaseAddress { get; }
+
+        /// <summary>
+        /// Current API version
+        /// </summary>
+        public ApiVersion Version { get; }
 
         /// <summary>
         /// Connection credentials
         /// </summary>
         public Credentials Credentials { get; }
 
-        public Connection(IHttpClientExtended httpClient, Credentials credentials, string baseAddress)
+        public Connection(IHttpClientExtended httpClient, Credentials credentials, ApiVersion version)
         {
             _httpClient = httpClient;
 
-            BaseAddress = new Uri(baseAddress);
+            BaseAddress = new Uri("https://api.athenahealth.com/");
             Credentials = credentials;
+            Version = version;
         }
 
         /// <summary>
@@ -40,7 +55,9 @@ namespace AthenaHealth.Sdk.Http
         /// <returns>Server response.</returns>
         public async Task<HttpResponseMessage> GetAsync(string relativeUrl, object queryParameters = null)
         {
-            HttpResponseMessage response = await _httpClient.GetAsync(BuildUrl(relativeUrl, queryParameters));
+            await AuthorizeIfRequired();
+
+            HttpResponseMessage response = await _httpClient.GetAsync(BuildUrl(AddVersion(relativeUrl), queryParameters));
             await HandleErrors(response);
             return response;
         }
@@ -54,7 +71,9 @@ namespace AthenaHealth.Sdk.Http
         /// <returns>Deserialized model</returns>
         public async Task<T> GetAsync<T>(string relativeUrl, object queryParameters = null)
         {
-            HttpResponseMessage response = await _httpClient.GetAsync(BuildUrl(relativeUrl, queryParameters));
+            await AuthorizeIfRequired();
+
+            HttpResponseMessage response = await _httpClient.GetAsync(BuildUrl(AddVersion(relativeUrl), queryParameters));
             await HandleErrors(response);
             return await GetObjectContent<T>(response);
         }
@@ -68,7 +87,9 @@ namespace AthenaHealth.Sdk.Http
         /// <returns>Server response.</returns>
         public async Task<HttpResponseMessage> PostAsync(string relativeUrl, object body, object queryParameters = null)
         {
-            HttpResponseMessage response = await _httpClient.PostAsync(BuildUrl(relativeUrl, queryParameters), CreateJsonContent(body));
+            await AuthorizeIfRequired();
+
+            HttpResponseMessage response = await _httpClient.PostAsync(BuildUrl(AddVersion(relativeUrl), queryParameters), CreateJsonContent(body));
             await HandleErrors(response);
             return response;
         }
@@ -83,7 +104,9 @@ namespace AthenaHealth.Sdk.Http
         /// <returns>Deserialized model</returns>
         public async Task<T> PostAsync<T>(string relativeUrl, object body, object queryParameters = null)
         {
-            HttpResponseMessage response = await _httpClient.PostAsync(BuildUrl(relativeUrl, queryParameters), CreateJsonContent(body));
+            await AuthorizeIfRequired();
+
+            HttpResponseMessage response = await _httpClient.PostAsync(BuildUrl(AddVersion(relativeUrl), queryParameters), CreateJsonContent(body));
             await HandleErrors(response);
             return await GetObjectContent<T>(response);
         }
@@ -97,7 +120,9 @@ namespace AthenaHealth.Sdk.Http
         /// <returns>Server response.</returns>
         public async Task<HttpResponseMessage> PutAsync(string relativeUrl, object body, object queryParameters = null)
         {
-            HttpResponseMessage response = await _httpClient.PutAsync(BuildUrl(relativeUrl, queryParameters), CreateJsonContent(body));
+            await AuthorizeIfRequired();
+
+            HttpResponseMessage response = await _httpClient.PutAsync(BuildUrl(AddVersion(relativeUrl), queryParameters), CreateJsonContent(body));
             await HandleErrors(response);
             return response;
         }
@@ -112,7 +137,9 @@ namespace AthenaHealth.Sdk.Http
         /// <returns>Deserialized model</returns>
         public async Task<T> PutAsync<T>(string relativeUrl, object body, object queryParameters = null)
         {
-            HttpResponseMessage response = await _httpClient.PutAsync(BuildUrl(relativeUrl, queryParameters), CreateJsonContent(body));
+            await AuthorizeIfRequired();
+
+            HttpResponseMessage response = await _httpClient.PutAsync(BuildUrl(AddVersion(relativeUrl), queryParameters), CreateJsonContent(body));
             await HandleErrors(response);
             return await GetObjectContent<T>(response);
         }
@@ -125,7 +152,9 @@ namespace AthenaHealth.Sdk.Http
         /// <returns>Server response.</returns>
         public async Task<HttpResponseMessage> DeleteAsync(string relativeUrl, object queryParameters = null)
         {
-            HttpResponseMessage response = await _httpClient.DeleteAsync(BuildUrl(relativeUrl, queryParameters));
+            await AuthorizeIfRequired();
+
+            HttpResponseMessage response = await _httpClient.DeleteAsync(BuildUrl(AddVersion(relativeUrl), queryParameters));
             await HandleErrors(response);
             return response;
         }
@@ -139,7 +168,9 @@ namespace AthenaHealth.Sdk.Http
         /// <returns>Deserialized model</returns>
         public async Task<T> DeleteAsync<T>(string relativeUrl, object queryParameters = null)
         {
-            HttpResponseMessage response = await _httpClient.DeleteAsync(BuildUrl(relativeUrl, queryParameters));
+            await AuthorizeIfRequired();
+
+            HttpResponseMessage response = await _httpClient.DeleteAsync(BuildUrl(AddVersion(relativeUrl), queryParameters));
             await HandleErrors(response);
             return await GetObjectContent<T>(response);
         }
@@ -153,7 +184,9 @@ namespace AthenaHealth.Sdk.Http
         /// <returns>Server response.</returns>
         public async Task<HttpResponseMessage> PatchAsync(string relativeUrl, object body, object queryParameters = null)
         {
-            HttpResponseMessage response = await _httpClient.PatchAsync(BuildUrl(relativeUrl, queryParameters), CreateJsonContent(body));
+            await AuthorizeIfRequired();
+
+            HttpResponseMessage response = await _httpClient.PatchAsync(BuildUrl(AddVersion(relativeUrl), queryParameters), CreateJsonContent(body));
             await HandleErrors(response);
             return response;
         }
@@ -168,9 +201,66 @@ namespace AthenaHealth.Sdk.Http
         /// <returns>Deserialized model</returns>
         public async Task<T> PatchAsync<T>(string relativeUrl, object body, object queryParameters = null)
         {
-            HttpResponseMessage response = await _httpClient.PatchAsync(BuildUrl(relativeUrl, queryParameters), CreateJsonContent(body));
+            await AuthorizeIfRequired();
+
+            HttpResponseMessage response = await _httpClient.PatchAsync(BuildUrl(AddVersion(relativeUrl), queryParameters), CreateJsonContent(body));
             await HandleErrors(response);
             return await GetObjectContent<T>(response);
+        }
+
+        /// <summary>
+        /// Performs authorization if no authorizaton was performed befor or if token expired.
+        /// </summary>
+        /// <returns>Boolean value if is authorized</returns>
+        private async Task AuthorizeIfRequired()
+        {
+            // No authorization is required
+            if (_authorizationTokenExpirationDate.HasValue && DateTime.Now < _authorizationTokenExpirationDate.Value)
+                return;
+
+            await Authorize();
+        }
+
+        /// <summary>
+        /// Performs authorization basing on provided credentials.
+        /// </summary>
+        /// <returns>Boolean value indicating success</returns>
+        private async Task Authorize()
+        {
+            HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, BuildUrl(Version.OAuthPath, null));
+
+            string authorizationToken = Convert.ToBase64String(Encoding.UTF8.GetBytes($"{Credentials.Login}:{Credentials.Password}"));
+            request.Headers.Authorization = new AuthenticationHeaderValue("Basic", authorizationToken);
+
+            request.Content = new FormUrlEncodedContent(new Dictionary<string, string>()
+            {
+                { "grant_type", "client_credentials" }
+            });
+
+            HttpResponseMessage response = await _httpClient.SendAsync(request);
+            DateTime responseTime = DateTime.Now;
+
+            if (response.IsSuccessStatusCode)
+            {
+                AuthorizationResponse authorizationResponse = await GetObjectContent<AuthorizationResponse>(response);
+
+                _authorizationTokenExpirationDate = responseTime.AddSeconds(authorizationResponse.ExpiresIn);
+                _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", authorizationResponse.AccessToken);
+
+                return;
+            }
+
+            throw new Exception("UNAUTHORIZED"); // TODO: Replace with appropriate exception
+        }
+
+        /// <summary>
+        /// Builds relative url by prepending version name.
+        /// </summary>
+        /// <param name="relativeUrl"></param>
+        /// <returns></returns>
+        private string AddVersion(string relativeUrl)
+        {
+            return $"{Version.ApiPath}/{relativeUrl}";
         }
 
         /// <summary>
@@ -199,7 +289,7 @@ namespace AthenaHealth.Sdk.Http
         {
             string content = await GetContentFromHttpResponse(httpResponseMessage);
 
-            return content == null ? default(T) : JsonConvert.DeserializeObject<T>(content);
+            return content == null ? default : JsonConvert.DeserializeObject<T>(content);
         }
 
         /// <summary>
@@ -210,9 +300,8 @@ namespace AthenaHealth.Sdk.Http
         /// <returns>Constructed url.</returns>
         private string BuildUrl(string relativeUrl, object queryParameters)
         {
-            return UrlHelper.BuildUrl(new Uri(BaseAddress, relativeUrl), queryParameters);
+            return UrlHelper.BuildUrl(new Uri(BaseAddress, relativeUrl), queryParameters, -1);
         }
-
 
         private async Task<string> GetContentFromHttpResponse(HttpResponseMessage response)
         {
@@ -227,7 +316,7 @@ namespace AthenaHealth.Sdk.Http
 
             if (response.IsSuccessStatusCode)
                 return;
-            
+
             if (IsValidationStatusCode(response.StatusCode))
             {
                 throw new ApiValidationException(content, response.StatusCode, response);
@@ -241,11 +330,19 @@ namespace AthenaHealth.Sdk.Http
             return statusCodeInt >= 400 && statusCodeInt <= 409;
         }
 
-        private void HandleErrorsInPositiveResponse(string content)
+        public class AuthorizationResponse
         {
-            JObject json = JObject.Parse(content);
+            [JsonProperty("access_token")]
+            public string AccessToken { get; set; }
 
+            [JsonProperty("token_type")]
+            public string TokenType { get; set; }
 
+            [JsonProperty("expires_in")]
+            public int ExpiresIn { get; set; }
+
+            [JsonProperty("refresh_token")]
+            public string RefreshToken { get; set; }
         }
     }
 }
