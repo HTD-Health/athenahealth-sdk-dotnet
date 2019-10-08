@@ -1,9 +1,12 @@
 ﻿using AthenaHealth.Sdk.Http.Helpers;
 using Newtonsoft.Json;
 using System;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using AthenaHealth.Sdk.Exceptions;
+using Newtonsoft.Json.Linq;
 
 namespace AthenaHealth.Sdk.Http
 {
@@ -12,7 +15,7 @@ namespace AthenaHealth.Sdk.Http
         private readonly IHttpClientExtended _httpClient;
 
         /// <summary>
-        /// Base url adress
+        /// Base url address
         /// </summary>
         public Uri BaseAddress { get; }
 
@@ -37,7 +40,9 @@ namespace AthenaHealth.Sdk.Http
         /// <returns>Server response.</returns>
         public async Task<HttpResponseMessage> GetAsync(string relativeUrl, object queryParameters = null)
         {
-            return await _httpClient.GetAsync(BuildUrl(relativeUrl, queryParameters));
+            HttpResponseMessage response = await _httpClient.GetAsync(BuildUrl(relativeUrl, queryParameters));
+            await HandleErrors(response);
+            return response;
         }
 
         /// <summary>
@@ -49,8 +54,8 @@ namespace AthenaHealth.Sdk.Http
         /// <returns>Deserialized model</returns>
         public async Task<T> GetAsync<T>(string relativeUrl, object queryParameters = null)
         {
-            HttpResponseMessage response = await GetAsync(relativeUrl, queryParameters);
-
+            HttpResponseMessage response = await _httpClient.GetAsync(BuildUrl(relativeUrl, queryParameters));
+            await HandleErrors(response);
             return await GetObjectContent<T>(response);
         }
 
@@ -63,7 +68,9 @@ namespace AthenaHealth.Sdk.Http
         /// <returns>Server response.</returns>
         public async Task<HttpResponseMessage> PostAsync(string relativeUrl, object body, object queryParameters = null)
         {
-            return await _httpClient.PostAsync(BuildUrl(relativeUrl, queryParameters), CreateJsonContent(body));
+            HttpResponseMessage response = await _httpClient.PostAsync(BuildUrl(relativeUrl, queryParameters), CreateJsonContent(body));
+            await HandleErrors(response);
+            return response;
         }
 
         /// <summary>
@@ -76,8 +83,8 @@ namespace AthenaHealth.Sdk.Http
         /// <returns>Deserialized model</returns>
         public async Task<T> PostAsync<T>(string relativeUrl, object body, object queryParameters = null)
         {
-            HttpResponseMessage response = await PostAsync(relativeUrl, body, queryParameters);
-
+            HttpResponseMessage response = await _httpClient.PostAsync(BuildUrl(relativeUrl, queryParameters), CreateJsonContent(body));
+            await HandleErrors(response);
             return await GetObjectContent<T>(response);
         }
 
@@ -90,7 +97,9 @@ namespace AthenaHealth.Sdk.Http
         /// <returns>Server response.</returns>
         public async Task<HttpResponseMessage> PutAsync(string relativeUrl, object body, object queryParameters = null)
         {
-            return await _httpClient.PutAsync(BuildUrl(relativeUrl, queryParameters), CreateJsonContent(body));
+            HttpResponseMessage response = await _httpClient.PutAsync(BuildUrl(relativeUrl, queryParameters), CreateJsonContent(body));
+            await HandleErrors(response);
+            return response;
         }
 
         /// <summary>
@@ -103,8 +112,8 @@ namespace AthenaHealth.Sdk.Http
         /// <returns>Deserialized model</returns>
         public async Task<T> PutAsync<T>(string relativeUrl, object body, object queryParameters = null)
         {
-            HttpResponseMessage response = await PutAsync(relativeUrl, body, queryParameters);
-
+            HttpResponseMessage response = await _httpClient.PutAsync(BuildUrl(relativeUrl, queryParameters), CreateJsonContent(body));
+            await HandleErrors(response);
             return await GetObjectContent<T>(response);
         }
 
@@ -116,7 +125,9 @@ namespace AthenaHealth.Sdk.Http
         /// <returns>Server response.</returns>
         public async Task<HttpResponseMessage> DeleteAsync(string relativeUrl, object queryParameters = null)
         {
-            return await _httpClient.DeleteAsync(BuildUrl(relativeUrl, queryParameters));
+            HttpResponseMessage response = await _httpClient.DeleteAsync(BuildUrl(relativeUrl, queryParameters));
+            await HandleErrors(response);
+            return response;
         }
 
         /// <summary>
@@ -128,8 +139,8 @@ namespace AthenaHealth.Sdk.Http
         /// <returns>Deserialized model</returns>
         public async Task<T> DeleteAsync<T>(string relativeUrl, object queryParameters = null)
         {
-            HttpResponseMessage response = await DeleteAsync(relativeUrl, queryParameters);
-
+            HttpResponseMessage response = await _httpClient.DeleteAsync(BuildUrl(relativeUrl, queryParameters));
+            await HandleErrors(response);
             return await GetObjectContent<T>(response);
         }
 
@@ -142,7 +153,9 @@ namespace AthenaHealth.Sdk.Http
         /// <returns>Server response.</returns>
         public async Task<HttpResponseMessage> PatchAsync(string relativeUrl, object body, object queryParameters = null)
         {
-            return await _httpClient.PatchAsync(BuildUrl(relativeUrl, queryParameters), CreateJsonContent(body));
+            HttpResponseMessage response = await _httpClient.PatchAsync(BuildUrl(relativeUrl, queryParameters), CreateJsonContent(body));
+            await HandleErrors(response);
+            return response;
         }
 
         /// <summary>
@@ -155,8 +168,8 @@ namespace AthenaHealth.Sdk.Http
         /// <returns>Deserialized model</returns>
         public async Task<T> PatchAsync<T>(string relativeUrl, object body, object queryParameters = null)
         {
-            HttpResponseMessage response = await PatchAsync(relativeUrl, body, queryParameters);
-
+            HttpResponseMessage response = await _httpClient.PatchAsync(BuildUrl(relativeUrl, queryParameters), CreateJsonContent(body));
+            await HandleErrors(response);
             return await GetObjectContent<T>(response);
         }
 
@@ -184,9 +197,9 @@ namespace AthenaHealth.Sdk.Http
         /// <returns>Object of specified type</returns>
         private async Task<T> GetObjectContent<T>(HttpResponseMessage httpResponseMessage)
         {
-            string content = await httpResponseMessage.Content.ReadAsStringAsync();
+            string content = await GetContentFromHttpResponse(httpResponseMessage);
 
-            return JsonConvert.DeserializeObject<T>(content);
+            return content == null ? default(T) : JsonConvert.DeserializeObject<T>(content);
         }
 
         /// <summary>
@@ -198,6 +211,41 @@ namespace AthenaHealth.Sdk.Http
         private string BuildUrl(string relativeUrl, object queryParameters)
         {
             return UrlHelper.BuildUrl(new Uri(BaseAddress, relativeUrl), queryParameters);
+        }
+
+
+        private async Task<string> GetContentFromHttpResponse(HttpResponseMessage response)
+        {
+            if (response.Content == null)
+                return null;
+            return await response.Content.ReadAsStringAsync();
+        }
+
+        private async Task HandleErrors(HttpResponseMessage response)
+        {
+            string content = await GetContentFromHttpResponse(response);
+
+            if (response.IsSuccessStatusCode)
+                return;
+            
+            if (IsValidationStatusCode(response.StatusCode))
+            {
+                throw new ApiValidationException(content, response.StatusCode, response);
+            }
+            throw new ApiException(content, response.StatusCode, response);
+        }
+
+        private bool IsValidationStatusCode(HttpStatusCode statusCode)
+        {
+            int statusCodeInt = (int)statusCode;
+            return statusCodeInt >= 400 && statusCodeInt <= 409;
+        }
+
+        private void HandleErrorsInPositiveResponse(string content)
+        {
+            JObject json = JObject.Parse(content);
+
+
         }
     }
 }
