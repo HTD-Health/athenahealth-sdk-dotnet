@@ -1,12 +1,11 @@
-﻿using AthenaHealth.Sdk.Http.Helpers;
+﻿using AthenaHealth.Sdk.Exceptions;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
-using System.Reflection;
+using System.Text;
 using System.Threading.Tasks;
-using AthenaHealth.Sdk.Exceptions;
 
 namespace AthenaHealth.Sdk.Http
 {
@@ -14,22 +13,39 @@ namespace AthenaHealth.Sdk.Http
     {
         private readonly IAthenaHttpAdapter _httpAdapter;
 
+        private readonly IDictionary<string, string> _defaultHeaders;
+
+        private DateTime? _accessTokenExpirationDate;
+
         /// <summary>
         /// Base url address
         /// </summary>
         public Uri BaseAddress { get; }
 
         /// <summary>
+        /// Current API version
+        /// </summary>
+        public ApiVersion Version { get; }
+
+        /// <summary>
         /// Connection credentials
         /// </summary>
         public Credentials Credentials { get; }
 
-        public Connection(IAthenaHttpAdapter httpAdapter, Credentials credentials, string baseAddress)
+        /// <summary>
+        /// Indicates if access token exists and is still valid.
+        /// </summary>
+        private bool IsAccessTokenValid => _accessTokenExpirationDate.HasValue && DateTime.Now < _accessTokenExpirationDate.Value;
+
+        public Connection(IAthenaHttpAdapter httpAdapter, Credentials credentials, ApiVersion version)
         {
             _httpAdapter = httpAdapter;
 
-            BaseAddress = new Uri(baseAddress);
+            BaseAddress = new Uri("https://api.athenahealth.com/");
             Credentials = credentials;
+            Version = version;
+
+            _defaultHeaders = new Dictionary<string, string>();
         }
 
         /// <summary>
@@ -41,8 +57,11 @@ namespace AthenaHealth.Sdk.Http
         /// <returns>Deserialized model</returns>
         public async Task<T> Get<T>(string relativeUrl, object queryParameters = null)
         {
-            IResponse response = await SendData(relativeUrl, queryParameters, HttpMethod.Get);
-            return GetObjectContent<T>(response);
+            await RefreshAccessToken();
+
+            Response response = await SendData(AddVersion(relativeUrl), queryParameters, HttpMethod.Get);
+
+            return response.GetObjectContent<T>();
         }
 
         /// <summary>
@@ -55,10 +74,12 @@ namespace AthenaHealth.Sdk.Http
         /// <returns>Deserialized model</returns>
         public async Task<T> Post<T>(string relativeUrl, object body, object queryParameters = null)
         {
-            IResponse response = await SendData(relativeUrl, queryParameters, HttpMethod.Post, body);
-            return GetObjectContent<T>(response);
-        }
+            await RefreshAccessToken();
 
+            Response response = await SendData(AddVersion(relativeUrl), queryParameters, HttpMethod.Post, ContentConverter.ToJson(body));
+
+            return response.GetObjectContent<T>();
+        }
 
         /// <summary>
         /// Sends PUT request to url constructed from <see cref="BaseAddress"/> and <paramref name="relativeUrl"/>.
@@ -70,8 +91,11 @@ namespace AthenaHealth.Sdk.Http
         /// <returns>Deserialized model</returns>
         public async Task<T> Put<T>(string relativeUrl, object body, object queryParameters = null)
         {
-            IResponse response = await SendData(relativeUrl, queryParameters, HttpMethod.Put, body);
-            return GetObjectContent<T>(response);
+            await RefreshAccessToken();
+
+            Response response = await SendData(AddVersion(relativeUrl), queryParameters, HttpMethod.Put, ContentConverter.ToJson(body));
+
+            return response.GetObjectContent<T>();
         }
 
         /// <summary>
@@ -83,43 +107,71 @@ namespace AthenaHealth.Sdk.Http
         /// <returns>Deserialized model</returns>
         public async Task<T> Delete<T>(string relativeUrl, object queryParameters = null)
         {
-            IResponse response = await SendData(relativeUrl, queryParameters, HttpMethod.Delete);
-            return GetObjectContent<T>(response);
+            await RefreshAccessToken();
+
+            Response response = await SendData(AddVersion(relativeUrl), queryParameters, HttpMethod.Delete);
+
+            return response.GetObjectContent<T>();
         }
 
-        private Task<IResponse> SendData(string relativeUrl, object queryParameters, HttpMethod method, object body = null)
+        /// <summary>
+        /// Performs authorization based on provided credentials.
+        /// </summary>
+        /// <returns>Boolean value indicating success</returns>
+        private async Task RefreshAccessToken()
         {
+            // No authorization is required
+            if (IsAccessTokenValid)
+                return;
+
+            string authorizationToken = Convert.ToBase64String(Encoding.UTF8.GetBytes($"{Credentials.Login}:{Credentials.Password}"));
+
+            Response response = await SendData(
+                Version.OAuthPath,
+                null,
+                HttpMethod.Post,
+                ContentConverter.ToUrlEncoded(new { grant_type = "client_credentials" }),
+                new { Authorization = $"Basic {authorizationToken}" });
+
+            AuthorizationResponse authorizationResponse = response.GetObjectContent<AuthorizationResponse>();
+
+            _accessTokenExpirationDate = response.Time.AddSeconds(authorizationResponse.ExpiresIn);
+            _defaultHeaders["Authorization"] = $"Bearer {authorizationResponse.AccessToken}";
+        }
+
+        private async Task<Response> SendData(string relativeUrl, object queryParameters, HttpMethod method, HttpContent content = null, object headers = null)
+        {
+            IDictionary<string, string> requestHeaders = new Dictionary<string, string>(_defaultHeaders);
+
+            foreach (var header in ContentConverter.ConvertObjectToDictionary(headers))
+            {
+                requestHeaders[header.Key] = header.Value;
+            }
+
             var request = new Request
             {
                 Method = method,
-                BaseAddress = BaseAddress,
                 Endpoint = new Uri(BaseAddress, relativeUrl),
-                ContentType = "application/json",
-                Parameters = ConvertObjectToQueryParameters(queryParameters)
+                Content = content,
+                Parameters = ContentConverter.ConvertObjectToDictionary(queryParameters),
+                Headers = requestHeaders
             };
-            return SendDataInternal(body, request);
-        }
 
-        private async Task<IResponse> SendDataInternal(object body, Request request)
-        {
-            //await _authenticator.Apply(request); //TODO Add authentication headers here 
-
-            IResponse response = await _httpAdapter.Send(request);
+            Response response = await _httpAdapter.Send(request);
 
             HandleErrors(response);
 
             return response;
         }
 
-        private void HandleErrors(IResponse response)
+        private void HandleErrors(Response response)
         {
             if (response.IsSuccessStatusCode)
                 return;
 
             if (IsValidationStatusCode(response.StatusCode))
-            {
                 throw new ApiValidationException(response.Body.ToString(), response.StatusCode, response);
-            }
+
             throw new ApiException(response.Body.ToString(), response.StatusCode, response);
         }
 
@@ -130,39 +182,28 @@ namespace AthenaHealth.Sdk.Http
         }
 
         /// <summary>
-        /// Deserializes response content to object of specified type.
+        /// Builds relative url by prepending version name.
         /// </summary>
-        /// <typeparam name="T">Object type</typeparam>
-        /// <param name="httpResponseMessage">Http response</param>
-        /// <returns>Object of specified type</returns>
-        private T GetObjectContent<T>(IResponse response)
+        /// <param name="relativeUrl"></param>
+        /// <returns></returns>
+        private string AddVersion(string relativeUrl)
         {
-            return response.Body == null ? default(T) : JsonConvert.DeserializeObject<T>(response.Body.ToString());
+            return $"{Version.ApiPath}/{relativeUrl}";
         }
 
-        private Dictionary<string, string> ConvertObjectToQueryParameters(object obj)
+        public class AuthorizationResponse
         {
-            var dict = new Dictionary<string, string>();
-            if (obj == null)
-                return dict;
+            [JsonProperty("access_token")]
+            public string AccessToken { get; set; }
 
-            foreach (var item in obj.GetType().GetProperties())
-            {
-                object value = item.GetValue(obj);
+            [JsonProperty("token_type")]
+            public string TokenType { get; set; }
 
-                if (value == null)
-                    continue;
+            [JsonProperty("expires_in")]
+            public int ExpiresIn { get; set; }
 
-                JsonPropertyAttribute jsonPropertyAttribute = item.GetCustomAttribute<JsonPropertyAttribute>();
-
-                string key = item.Name;
-                if (jsonPropertyAttribute != null)
-                    key = jsonPropertyAttribute.PropertyName;
-
-                dict.Add(key, value.ToString());
-            }
-
-            return dict;
+            [JsonProperty("refresh_token")]
+            public string RefreshToken { get; set; }
         }
     }
 }

@@ -13,7 +13,7 @@ namespace AthenaHealth.Sdk.Http
         /// <summary>
         /// Initializes a new instance of the <see cref="AthenaHttpClient"/> class.
         /// </summary>
-        public AthenaHttpClient() : base()
+        public AthenaHttpClient()
         {
         }
 
@@ -23,11 +23,6 @@ namespace AthenaHealth.Sdk.Http
         /// <param name="handler">The HTTP handler stack to use for sending requests.</param>
         public AthenaHttpClient(HttpMessageHandler handler) : base(handler)
         {
-        }
-
-        public new Task<HttpResponseMessage> SendAsync(HttpRequestMessage request)
-        {
-            return base.SendAsync(request);
         }
     }
 }

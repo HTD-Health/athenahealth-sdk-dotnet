@@ -7,7 +7,7 @@ namespace AthenaHealth.Sdk.Http.Factories
 {
     public static class ResponseFactory
     {
-        public static async Task<IResponse> Create(HttpResponseMessage responseMessage)
+        public static async Task<Response> Create(HttpResponseMessage responseMessage)
         {
             object responseBody = null;
             string contentType = null;
@@ -25,8 +25,7 @@ namespace AthenaHealth.Sdk.Http.Factories
                 {
                     contentType = GetContentMediaType(responseMessage.Content);
 
-                    if (contentType != null && (contentType.StartsWith("image/") || binaryContentTypes
-                                                    .Any(item => item.Equals(contentType, StringComparison.OrdinalIgnoreCase))))
+                    if (contentType != null && (contentType.StartsWith("image/") || binaryContentTypes.Any(item => item.Equals(contentType, StringComparison.OrdinalIgnoreCase))))
                     {
                         responseBody = await responseMessage.Content.ReadAsByteArrayAsync().ConfigureAwait(false);
                     }

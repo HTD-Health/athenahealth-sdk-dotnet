@@ -3,22 +3,22 @@ using AthenaHealth.Sdk.Http;
 
 namespace AthenaHealth.Sdk
 {
-    public class AthenaHealthClient
+    public class AthenaHealthClient : IAthenaHealthClient
     {
-        public AthenaHealthClient(string baseAddress, string login, string password, int practiceId)
+        public IPatientClient Patients { get; }
+
+        public int PracticeId { get; set; }
+
+        public AthenaHealthClient(ApiVersion version, string login, string password, int practiceId)
         {
             var httpClient = new AthenaHttpClient();
             var athenaHttpAdapter = new AthenaHttpAdapter(httpClient);
             var credentials = new Credentials(login, password);
-            Connection = new Connection(athenaHttpAdapter, credentials, baseAddress);
+            var connection = new Connection(athenaHttpAdapter, credentials, version);
 
             PracticeId = practiceId;
 
-            Patients = new PatientClient(Connection);
+            Patients = new PatientClient(connection);
         }
-
-        public IConnection Connection { get; private set; }
-        public IPatientClient Patients { get; private set; }
-        public int PracticeId { get; set; }
     }
 }
