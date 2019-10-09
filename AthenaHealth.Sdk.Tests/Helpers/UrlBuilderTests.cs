@@ -10,9 +10,20 @@ namespace AthenaHealth.Sdk.Tests.Helpers
     public class UrlBuilderTests
     {
         [Fact]
-        public void Url_CorrectUrlIsBuilt()
+        public void Url_CommonData_CorrectUrlIsBuilt()
         {
             var baseUrl = new Uri("https://htdevelopers.com/patients");
+            var queryParameters = new Dictionary<string, string>();
+            queryParameters.Add("DepartmentId", "1");
+            queryParameters.Add("ShowFullSsn", "true");
+
+            Uri uri = UrlBuilder.BuildUrl(baseUrl, queryParameters);
+            uri.ToString().ShouldBe("https://htdevelopers.com/patients?DepartmentId=1&ShowFullSsn=true");
+        }
+        [Fact]
+        public void Url_BaseUrlEndsWithSlash_CorrectUrlIsBuilt()
+        {
+            var baseUrl = new Uri("https://htdevelopers.com/patients/");
             var queryParameters = new Dictionary<string, string>();
             queryParameters.Add("DepartmentId", "1");
             queryParameters.Add("ShowFullSsn", "true");

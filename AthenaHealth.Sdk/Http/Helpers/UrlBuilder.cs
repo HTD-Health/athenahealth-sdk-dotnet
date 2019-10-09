@@ -7,17 +7,12 @@ namespace AthenaHealth.Sdk.Http.Helpers
     {
         public static Uri BuildUrl(Uri baseUrl, Dictionary<string, string> queryParameters)
         {
+            var uriString = baseUrl.ToString().TrimEnd(new[] { '/' });
+            baseUrl = new Uri(uriString);
+            ;
             var uriBuilder = new UriBuilder(baseUrl);
             uriBuilder.Query = ConvertDictionaryToQueryString(queryParameters);
             return uriBuilder.Uri;
-
-
-//
-//            var uriBuilder = new UriBuilder(baseUrl);
-//            uriBuilder.Path += relativeUrl; 
-//            uriBuilder.Path += ConvertDictionaryToQueryString(queryParameters);
-//            return uriBuilder.Uri;
-
         }
 
 

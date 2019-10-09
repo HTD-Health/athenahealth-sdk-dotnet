@@ -10,13 +10,13 @@ namespace AthenaHealth.Sdk.Sample.Console
         private static async Task GetPatientSample()
         {
             
-            var client = new AthenaHealthClient("https://developer.athenahealth.com/api/preview1","login", "password", 123);
-
-            //case 1
+            var client = new AthenaHealthClient("https://developer.athenahealth.com/api/preview1","login", "password", practiceId:123);
             Patient patient = await client.Patients.GetPatientById(32000);
-
+            System.Console.WriteLine(patient.Fullname);
 
             //case 2
+
+
             var filter = new GetPatientByIdFilter
             {
                 DepartmentId = 1
