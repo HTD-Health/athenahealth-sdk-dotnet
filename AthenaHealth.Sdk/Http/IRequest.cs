@@ -13,5 +13,6 @@ namespace AthenaHealth.Sdk.Http
         Uri BaseAddress { get; }
         Uri Endpoint { get; }
         string ContentType { get; }
+        Uri RequestUri { get; }
     }
 }

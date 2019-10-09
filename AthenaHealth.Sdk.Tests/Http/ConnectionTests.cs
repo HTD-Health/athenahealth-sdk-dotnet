@@ -4,7 +4,7 @@ using System.Net;
 using AthenaHealth.Sdk.Exceptions;
 using AthenaHealth.Sdk.Http;
 using AthenaHealth.Sdk.Models.Response;
-using AthenaHealth.Sdk.Tests.Helpers;
+using AthenaHealth.Sdk.Tests.TestingHelpers;
 using Shouldly;
 using Xunit;
 

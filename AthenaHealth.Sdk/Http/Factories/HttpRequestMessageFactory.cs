@@ -12,27 +12,24 @@ namespace AthenaHealth.Sdk.Http.Factories
             HttpRequestMessage requestMessage = null;
             try
             {
-                var fullUri = new Uri(request.BaseAddress, request.Endpoint);
-                requestMessage = new HttpRequestMessage(request.Method, fullUri);
+                requestMessage = new HttpRequestMessage(request.Method, request.RequestUri);
 
                 foreach (var header in request.Headers)
                 {
                     requestMessage.Headers.Add(header.Key, header.Value);
                 }
-                var httpContent = request.Body as HttpContent;
-                if (httpContent != null)
+
+                if (request.Body is HttpContent httpContent)
                 {
                     requestMessage.Content = httpContent;
                 }
 
-                var body = request.Body as string;
-                if (body != null)
+                if (request.Body is string body)
                 {
                     requestMessage.Content = new StringContent(body, Encoding.UTF8, request.ContentType);
                 }
 
-                var bodyStream = request.Body as Stream;
-                if (bodyStream != null)
+                if (request.Body is Stream bodyStream)
                 {
                     requestMessage.Content = new StreamContent(bodyStream);
                     requestMessage.Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue(request.ContentType);
@@ -40,10 +37,7 @@ namespace AthenaHealth.Sdk.Http.Factories
             }
             catch (Exception)
             {
-                if (requestMessage != null)
-                {
-                    requestMessage.Dispose();
-                }
+                requestMessage?.Dispose();
                 throw;
             }
 

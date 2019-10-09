@@ -1,8 +1,10 @@
 ﻿using AthenaHealth.Sdk.Http.Helpers;
 using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
+using System.Reflection;
 using System.Threading.Tasks;
 using AthenaHealth.Sdk.Exceptions;
 
@@ -39,7 +41,7 @@ namespace AthenaHealth.Sdk.Http
         /// <returns>Deserialized model</returns>
         public async Task<T> Get<T>(string relativeUrl, object queryParameters = null)
         {
-            IResponse response = await SendData(BuildUrl(relativeUrl, queryParameters), HttpMethod.Get);
+            IResponse response = await SendData(relativeUrl, queryParameters, HttpMethod.Get);
             return GetObjectContent<T>(response);
         }
 
@@ -53,7 +55,7 @@ namespace AthenaHealth.Sdk.Http
         /// <returns>Deserialized model</returns>
         public async Task<T> Post<T>(string relativeUrl, object body, object queryParameters = null)
         {
-            IResponse response = await SendData(BuildUrl(relativeUrl, queryParameters), HttpMethod.Post, body);
+            IResponse response = await SendData(relativeUrl, queryParameters, HttpMethod.Post, body);
             return GetObjectContent<T>(response);
         }
 
@@ -68,7 +70,7 @@ namespace AthenaHealth.Sdk.Http
         /// <returns>Deserialized model</returns>
         public async Task<T> Put<T>(string relativeUrl, object body, object queryParameters = null)
         {
-            IResponse response = await SendData(BuildUrl(relativeUrl, queryParameters), HttpMethod.Put, body);
+            IResponse response = await SendData(relativeUrl, queryParameters, HttpMethod.Put, body);
             return GetObjectContent<T>(response);
         }
 
@@ -81,18 +83,19 @@ namespace AthenaHealth.Sdk.Http
         /// <returns>Deserialized model</returns>
         public async Task<T> Delete<T>(string relativeUrl, object queryParameters = null)
         {
-            IResponse response = await SendData(BuildUrl(relativeUrl, queryParameters), HttpMethod.Delete);
+            IResponse response = await SendData(relativeUrl, queryParameters, HttpMethod.Delete);
             return GetObjectContent<T>(response);
         }
 
-        private Task<IResponse> SendData(Uri uri, HttpMethod method, object body = null)
+        private Task<IResponse> SendData(string relativeUrl, object queryParameters, HttpMethod method, object body = null)
         {
             var request = new Request
             {
                 Method = method,
                 BaseAddress = BaseAddress,
-                Endpoint = uri,
-                ContentType = "application/json"
+                Endpoint = new Uri(BaseAddress, relativeUrl),
+                ContentType = "application/json",
+                Parameters = ConvertObjectToQueryParameters(queryParameters)
             };
             return SendDataInternal(body, request);
         }
@@ -106,17 +109,6 @@ namespace AthenaHealth.Sdk.Http
             HandleErrors(response);
 
             return response;
-        }
-
-        /// <summary>
-        /// Creates url from <see cref="BaseAddress"/>, <paramref name="relativeUrl"/> and <paramref name="queryParameters"/>.
-        /// </summary>
-        /// <param name="relativeUrl">Url relative to <see cref="BaseAddress"/>.</param>
-        /// <param name="queryParameters">Query parameters to be added to constructed url.</param>
-        /// <returns>Constructed url.</returns>
-        private Uri BuildUrl(string relativeUrl, object queryParameters)
-        {
-            return UrlHelper.BuildUrl(new Uri(BaseAddress, relativeUrl), queryParameters);
         }
 
         private void HandleErrors(IResponse response)
@@ -146,6 +138,31 @@ namespace AthenaHealth.Sdk.Http
         private T GetObjectContent<T>(IResponse response)
         {
             return response.Body == null ? default(T) : JsonConvert.DeserializeObject<T>(response.Body.ToString());
+        }
+
+        private Dictionary<string, string> ConvertObjectToQueryParameters(object obj)
+        {
+            var dict = new Dictionary<string, string>();
+            if (obj == null)
+                return dict;
+
+            foreach (var item in obj.GetType().GetProperties())
+            {
+                object value = item.GetValue(obj);
+
+                if (value == null)
+                    continue;
+
+                JsonPropertyAttribute jsonPropertyAttribute = item.GetCustomAttribute<JsonPropertyAttribute>();
+
+                string key = item.Name;
+                if (jsonPropertyAttribute != null)
+                    key = jsonPropertyAttribute.PropertyName;
+
+                dict.Add(key, value.ToString());
+            }
+
+            return dict;
         }
     }
 }

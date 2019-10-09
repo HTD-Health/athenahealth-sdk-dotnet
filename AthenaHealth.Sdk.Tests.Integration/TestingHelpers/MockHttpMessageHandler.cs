@@ -3,7 +3,7 @@ using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace AthenaHealth.Sdk.Tests.Helpers
+namespace AthenaHealth.Sdk.Tests.Integration.TestingHelpers
 {
     public class MockHttpMessageHandler : HttpMessageHandler
     {

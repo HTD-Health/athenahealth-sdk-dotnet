@@ -1,7 +1,8 @@
-﻿using System.Net;
+﻿using System.IO;
+using System.Net;
 using AthenaHealth.Sdk.Http;
 
-namespace AthenaHealth.Sdk.Tests.Helpers
+namespace AthenaHealth.Sdk.Tests.Integration.TestingHelpers
 {
     public static class ConnectionFactory
     {
@@ -12,6 +13,15 @@ namespace AthenaHealth.Sdk.Tests.Helpers
             var athenaHttpAdapter = new AthenaHttpAdapter(athenaHttpClient);
             var connection = new Connection(athenaHttpAdapter, new Credentials("", ""), "http://htdevelopers.com");
             return connection;
+        }
+
+        public static Connection CreateFromFile(string responsePath, HttpStatusCode responseStatus = HttpStatusCode.OK)
+        {
+            if(!File.Exists(responsePath))
+                throw new FileNotFoundException($"Couldn't load test data file {responsePath}. Ensure file has Copy output enabled.");
+
+            var content = File.ReadAllText(responsePath);
+            return Create(content, responseStatus);
         }
     }
 }
