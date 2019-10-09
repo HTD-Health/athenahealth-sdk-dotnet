@@ -1,19 +1,20 @@
-﻿using AthenaHealth.Sdk.Http;
+﻿using System.Threading.Tasks;
+using AthenaHealth.Sdk.Http;
 using AthenaHealth.Sdk.Models.Request;
+using AthenaHealth.Sdk.Models.Response;
 
 namespace AthenaHealth.Sdk.Sample.Console
 {
     internal class Program
     {
-        private static void GetPatientSample()
+        private static async Task GetPatientSample()
         {
-            var httpClient = new HttpClientExtended();
-            var credentials = new Credentials("login", "password");
-            var connection = new Connection(httpClient, credentials, "https://https://developer.athenahealth.com/api/preview1");
-            var client = new AthenaHealthClient(connection, 123);
+            
+            var client = new AthenaHealthClient("https://developer.athenahealth.com/api/preview1","login", "password", 123);
 
             //case 1
-            var patient1 = client.Patients.GetPatientById(32000);
+            Patient patient = await client.Patients.GetPatientById(32000);
+
 
             //case 2
             var filter = new GetPatientByIdFilter
@@ -24,9 +25,9 @@ namespace AthenaHealth.Sdk.Sample.Console
             var patient2 = client.Patients.GetPatientById(32000, filter);
         }
 
-        private static void Main(string[] args)
+        private static async Task Main(string[] args)
         {
-            GetPatientSample();
+            await GetPatientSample();
         }
     }
 }
