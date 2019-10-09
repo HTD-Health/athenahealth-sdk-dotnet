@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace AthenaHealth.Sdk.Http
+namespace AthenaHealth.Sdk.Http.Adapter
 {
     public interface IAthenaHttpAdapter
     {

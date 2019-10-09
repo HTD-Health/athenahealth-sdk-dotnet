@@ -9,7 +9,7 @@ namespace AthenaHealth.Sdk.Http.Helpers
         {
             var uriString = baseUrl.ToString().TrimEnd(new[] { '/' });
             baseUrl = new Uri(uriString);
-            ;
+            
             var uriBuilder = new UriBuilder(baseUrl);
             uriBuilder.Query = ConvertDictionaryToQueryString(queryParameters);
             return uriBuilder.Uri;

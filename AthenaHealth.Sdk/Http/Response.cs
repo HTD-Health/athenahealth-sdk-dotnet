@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AthenaHealth.Sdk.Http
 {
-    internal class Response : IResponse
+    public class Response : IResponse
     {
         public Response() : this(new Dictionary<string, string>())
         {
@@ -40,13 +40,13 @@ namespace AthenaHealth.Sdk.Http
         /// <summary>
         /// The response status code.
         /// </summary>
-        public HttpStatusCode StatusCode { get; private set; }
+        public HttpStatusCode StatusCode { get; set; }
 
         /// <summary>
         /// The content type of the response.
         /// </summary>
         public string ContentType { get; private set; }
 
-        public bool IsSuccessStatusCode { get; private set; }
+        public bool IsSuccessStatusCode { get; set; }
     }
 }

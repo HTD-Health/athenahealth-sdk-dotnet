@@ -1,8 +1,7 @@
 ﻿using System.Net.Http;
 using System.Threading.Tasks;
-using AthenaHealth.Sdk.Http.Factories;
 
-namespace AthenaHealth.Sdk.Http
+namespace AthenaHealth.Sdk.Http.Adapter
 {
     public class AthenaHttpAdapter : IAthenaHttpAdapter
     {
