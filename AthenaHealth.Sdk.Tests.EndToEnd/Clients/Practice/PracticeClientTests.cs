@@ -1,16 +1,16 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
-using AthenaHealth.Sdk.Exceptions;
+﻿using AthenaHealth.Sdk.Exceptions;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
 using Shouldly;
+using System.Threading.Tasks;
 using Xunit;
 
-namespace AthenaHealth.Sdk.Tests.Integration.EndToEnd
+namespace AthenaHealth.Sdk.Tests.EndToEnd
 {
     public class PracticeClientTests
     {
         private readonly IAthenaHealthClient _client;
+
         public PracticeClientTests()
         {
             _client = new AthenaHealthClient(ApiVersion.Preview, "6yspwuq3wnx5n37jp9phqsmt", "Y9UxkbBge5EXutR", 195900);

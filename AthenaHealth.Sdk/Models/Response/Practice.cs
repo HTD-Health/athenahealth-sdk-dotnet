@@ -1,7 +1,7 @@
-﻿using System;
-using Newtonsoft.Json;
-// ReSharper disable StringLiteralTypo
+﻿using Newtonsoft.Json;
+using System;
 
+// ReSharper disable StringLiteralTypo
 namespace AthenaHealth.Sdk.Models.Response
 {
     public class PracticeResponse
@@ -15,6 +15,14 @@ namespace AthenaHealth.Sdk.Models.Response
 
     public class Practice
     {
+        [JsonProperty("nsaenabled")]
+        public string NsaEnabled { get; set; }
+
+        [JsonProperty("publicnames")]
+        public string[] PublicNames { get; set; }
+
+        [JsonProperty("ccmenabled")]
+        public string CcmEnabled { get; set; }
 
         [JsonProperty("practiceid")]
         public string Id { get; set; }
