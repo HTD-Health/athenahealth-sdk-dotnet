@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
-// ReSharper disable StringLiteralTypo
 
+// ReSharper disable StringLiteralTypo
 namespace AthenaHealth.Sdk.Models.Response
 {
     public class DepartmentResponse
@@ -8,12 +8,21 @@ namespace AthenaHealth.Sdk.Models.Response
         [JsonProperty("totalcount")]
         public int Total { get; set; }
 
+        [JsonProperty("next")]
+        public string Next { get; set; }
+
         [JsonProperty("departments")]
         public Department[] Departments { get; set; }
     }
 
     public class Department
     {
+        [JsonProperty("clinicalproviderfax")]
+        public string ClinicalProviderFax { get; set; }
+
+        [JsonProperty("placeofservicetypeid")]
+        public string PlaceOfServiceTypeId { get; set; }
+
         [JsonProperty("departmentid")]
         public string Id { get; set; }
 

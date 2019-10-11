@@ -1,66 +1,195 @@
-﻿using System.Linq;
-using System.Net;
-using System.Threading.Tasks;
-using AthenaHealth.Sdk.Exceptions;
+﻿using AthenaHealth.Sdk.Exceptions;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Tests.Integration.TestingHelpers;
 using Shouldly;
+using System;
+using System.Linq;
+using System.Net;
+using System.Threading.Tasks;
 using Xunit;
-// ReSharper disable StringLiteralTypo
 
+// ReSharper disable StringLiteralTypo
 namespace AthenaHealth.Sdk.Tests.Integration.Clients.Patient
 {
     public class PatientClientTests
     {
         [Fact]
-        public async Task GetPatientById_ValidId_ReturnsPatient ()
+        public async Task GetPatientById_ValidId_ReturnsPatient()
         {
+            // Arrange
             var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Clients\Patient\Patient.json"));
 
-            Models.Response.Patient patient = await patientClient.GetPatientById(1);
+            // Act
+            var result = await patientClient.GetPatientById(1);
 
-            patient.ShouldNotBeNull();
-            patient.Email.ShouldBe("monroe86@hotmail.com");
-            patient.DepartmentId.ShouldBe(162);
-            patient.Balances.ShouldNotBeEmpty();
-            patient.Balances.First().Value.ShouldBe(10);
+            // Assert
+            result.ShouldNotBeNull();
+            result.Email.ShouldBe("monroe86@hotmail.com");
+            result.DepartmentId.ShouldBe(162);
+            result.Balances.ShouldNotBeEmpty();
+            result.Balances.First().Value.ShouldBe(10);
         }
 
         [Fact]
-        public void GetPatientById_InvalidId_ThrowsApiException ()
+        public void GetPatientById_InvalidId_ThrowsApiException()
         {
+            // Arrange
             var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Clients\Patient\GetPatient_InvalidId.json", HttpStatusCode.OK)); //In this case athena respond with HTTP 200 OK and status code 400 in response body
-            ApiException exc = Should.Throw<ApiException>(async () => await patientClient.GetPatientById(0));
-            exc.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
+
+            // Act
+            ApiException exception = Should.Throw<ApiException>(async () => await patientClient.GetPatientById(0));
+
+            // Assert
+            exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
         }
 
         [Fact]
-        public async Task GetDefaultPharmacy_ValidId_ReturnsDefaultPharmacy ()
+        public async Task EnhancedBestmatch_ValidData_ReturnsPatientsCollection()
         {
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Clients\Patient\GetDefaultPharmacy.json", HttpStatusCode.OK));
-            
-            Models.Response.Pharmacy pharmacy = await patientClient.GetDefaultPharmacy(195900, 300, 1);
+            // Arrange
+            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Clients\Patient\EnhancedBestmatch.json"));
+            var queryParameters = new EnhancedBestmatchFilter()
+            {
+                DateOfBirth = new DateTime(1989, 09, 07),
+                FirstName = "Peter",
+                LastName = "Tots",
+                ShowAllClaims = true,
+                ShowAllPatientDepartmentStatus = true,
+                ShowBalanceDetails = true,
+                Show2015EdCehrtValues = true,
+                ShowCustomFields = true,
+                ShowFullSsn = true,
+                ShowInsurance = true,
+                ShowLocalPatientId = true,
+                ShowPortalStatus = true
+            };
 
-            pharmacy.ShouldNotBeNull();
-            pharmacy.State.ShouldBe("NY");
-            pharmacy.ClinicalProviderName.ShouldBe("Himani Shishodia");
+            // Act
+            var result = await patientClient.EnhancedBestmatch(195900, queryParameters);
+
+            // Assert
+            result.ShouldNotBeNull();
+            result.Count().ShouldBeGreaterThan(0);
+        }
+
+        [Fact]
+        public async Task EnhancedBestmatch_ValidData_ReturnsNoPatient()
+        {
+            // Arrange
+            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("[]"));
+            var queryParameters = new EnhancedBestmatchFilter()
+            {
+                DateOfBirth = new DateTime(1989, 09, 07),
+                FirstName = "Peter",
+                LastName = "Tots",
+                ShowAllClaims = true,
+                ShowAllPatientDepartmentStatus = true,
+                ShowBalanceDetails = true,
+                Show2015EdCehrtValues = true,
+                ShowCustomFields = true,
+                ShowFullSsn = true,
+                ShowInsurance = true,
+                ShowLocalPatientId = true,
+                ShowPortalStatus = true
+            };
+
+            // Act
+            var result = await patientClient.EnhancedBestmatch(195900, queryParameters);
+
+            // Assert
+            result.ShouldNotBeNull();
+            result.Count().ShouldBe(0);
+        }
+
+        [Fact]
+        public void EnhancedBestmatch_InvalidDateOfBirthFormat_ThrowsException()
+        {
+            // Arrange
+            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Clients\Patient\EnhancedBestmatch_InvalidDateOfBirthFormat.json", HttpStatusCode.BadRequest));
+            var queryParameters = new EnhancedBestmatchFilter()
+            {
+                DateOfBirth = new DateTime(01, 09, 07),
+                FirstName = "Peter",
+                LastName = "Tots",
+                ShowAllClaims = true,
+                ShowAllPatientDepartmentStatus = true,
+                ShowBalanceDetails = true,
+                Show2015EdCehrtValues = true,
+                ShowCustomFields = true,
+                ShowFullSsn = true,
+                ShowInsurance = true,
+                ShowLocalPatientId = true,
+                ShowPortalStatus = true
+            };
+
+            // Act
+            ApiException exception = Should.Throw<ApiException>(async () => await patientClient.EnhancedBestmatch(195900, queryParameters));
+
+            // Assert
+            exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
+        }
+
+        [Fact]
+        public void EnhancedBestmatch_MissingFields_ThrowsException()
+        {
+            // Arrange
+            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Clients\Patient\EnhancedBestmatch_MissingFields.json", HttpStatusCode.BadRequest));
+            var queryParameters = new EnhancedBestmatchFilter()
+            {
+                DateOfBirth = new DateTime(1989, 09, 07),
+                LastName = "Tots",
+                ShowAllClaims = true,
+                ShowAllPatientDepartmentStatus = true,
+                ShowBalanceDetails = true,
+                Show2015EdCehrtValues = true,
+                ShowCustomFields = true,
+                ShowFullSsn = true,
+                ShowInsurance = true,
+                ShowLocalPatientId = true,
+                ShowPortalStatus = true
+            };
+
+            // Act
+            ApiException exception = Should.Throw<ApiException>(async () => await patientClient.EnhancedBestmatch(195900, queryParameters));
+
+            // Assert
+            exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
+        }
+
+        [Fact]
+        public async Task GetDefaultPharmacy_ValidId_ReturnsDefaultPharmacy()
+        {
+            // Arrange
+            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Clients\Patient\GetDefaultPharmacy.json", HttpStatusCode.OK));
+
+            // Act
+            var result = await patientClient.GetDefaultPharmacy(195900, 300, 1);
+
+            // Assert
+            result.ShouldNotBeNull();
+            result.State.ShouldBe("NY");
+            result.ClinicalProviderName.ShouldBe("Himani Shishodia");
         }
 
         [Fact]
         public async Task GetPreferredPharmacies_ReturnsPreferredPharmacies()
         {
-            var patientClient = new Sdk.Clients.PatientClient(
-                ConnectionFactory.CreateFromFile(@"Clients\Patient\GetPreferredPharmacies.json", HttpStatusCode.OK));
+            // Arrange
+            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Clients\Patient\GetPreferredPharmacies.json", HttpStatusCode.OK));
+            var queryParameters = new GetPreferredPharmacyFilter
+            {
+                DepartmentId = 1
+            };
 
-            Models.Response.Pharmacies pharmacies =
-                await patientClient.GetPreferredPharmacies(195900, 300,
-                    new GetPreferredPharmacyFilter {DepartmentId = 1});
+            // Act
+            var result = await patientClient.GetPreferredPharmacies(195900, 300, queryParameters);
 
-            pharmacies.ShouldNotBeNull();
-            pharmacies.Total.ShouldBe(1);
-            pharmacies.Items.ShouldNotBeNull();
-            pharmacies.Items.Length.ShouldBe(1);
-            pharmacies.Items[0].ClinicalProviderId.ShouldBe(11242674);
+            // Assert
+            result.ShouldNotBeNull();
+            result.Total.ShouldBe(1);
+            result.Items.ShouldNotBeNull();
+            result.Items.Length.ShouldBe(1);
+            result.Items[0].ClinicalProviderId.ShouldBe(11242674);
         }
     }
 }

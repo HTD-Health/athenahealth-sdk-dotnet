@@ -1,0 +1,6 @@
+{
+  "missingfields": [
+    "firstname"
+  ],
+  "error": "Additional fields are required."
+}

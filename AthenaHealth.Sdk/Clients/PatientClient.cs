@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using AthenaHealth.Sdk.Http;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
@@ -30,6 +31,11 @@ namespace AthenaHealth.Sdk.Clients
         {
             return await Connection.Get<Pharmacies>($"{practiceId}/chart/{patientId}/pharmacies/preferred", getPreferredPharmacyFilter);
             
+        }
+
+        public async Task<IEnumerable<EnhancedBestmatchResponse>> EnhancedBestmatch(int practiceId, EnhancedBestmatchFilter queryParameters)
+        {
+            return await Connection.Get< IEnumerable<EnhancedBestmatchResponse>>($"{practiceId}/patients/enhancedbestmatch", queryParameters);
         }
     }
 }

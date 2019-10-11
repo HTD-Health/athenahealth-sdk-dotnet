@@ -1,7 +1,9 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Net;
 using System.Text;
 
@@ -59,7 +61,16 @@ namespace AthenaHealth.Sdk.Http
         /// <returns>Object of specified type</returns>
         public T GetObjectContent<T>()
         {
-            return Body == null ? default : JsonConvert.DeserializeObject<T>(Body.ToString());
+            return Body == null ? default : JsonConvert.DeserializeObject<T>(Body.ToString(), new JsonSerializerSettings()
+            {
+                MissingMemberHandling = MissingMemberHandling.Error,
+                TraceWriter = new MemoryTraceWriter(),
+                Error = (object sender, ErrorEventArgs args) =>
+                {
+                    Debug.WriteLine($"ERROR: {args.ErrorContext.Error.Message}");
+                    args.ErrorContext.Handled = false;
+                }
+            });
         }
     }
 }

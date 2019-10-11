@@ -31,6 +31,15 @@
     <None Update="Clients\Department\GetById_ExistingId.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Clients\Patient\EnhancedBestmatch_MissingFields.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Clients\Patient\EnhancedBestmatch_InvalidDateOfBirthFormat.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Clients\Patient\EnhancedBestmatch.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Clients\Patient\GetDefaultPharmacy.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

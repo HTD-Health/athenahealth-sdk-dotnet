@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AthenaHealth.Sdk.Http.Adapter;
 using AthenaHealth.Sdk.Http.Helpers;
+using System.Diagnostics;
 
 namespace AthenaHealth.Sdk.Http
 {
@@ -160,6 +161,8 @@ namespace AthenaHealth.Sdk.Http
             };
 
             Response response = await _httpAdapter.Send(request);
+
+            Debug.WriteLine(response.Body.ToString());
 
             HandleErrors(response);
 
