@@ -6,6 +6,7 @@ namespace AthenaHealth.Sdk
     {
         IPatientClient Patients { get; }
         IPracticeClient Practices { get; }
+        IDepartmentClient Departments { get; }
         int PracticeId { get; set; }
     }
 }

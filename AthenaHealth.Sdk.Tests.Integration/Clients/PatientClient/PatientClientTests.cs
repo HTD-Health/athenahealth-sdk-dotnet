@@ -1,9 +1,5 @@
-﻿using System;
-using System.Linq;
-using System.Net;
-using System.Runtime.Serialization;
+﻿using System.Linq;
 using System.Threading.Tasks;
-using AthenaHealth.Sdk.Exceptions;
 using AthenaHealth.Sdk.Models.Response;
 using AthenaHealth.Sdk.Tests.Integration.TestingHelpers;
 using Shouldly;
