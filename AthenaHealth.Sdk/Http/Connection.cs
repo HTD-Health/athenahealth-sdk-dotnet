@@ -126,7 +126,7 @@ namespace AthenaHealth.Sdk.Http
             if (IsAccessTokenValid)
                 return;
 
-            string authorizationToken = Convert.ToBase64String(Encoding.UTF8.GetBytes($"{Credentials.Login}:{Credentials.Password}"));
+            string authorizationToken = Convert.ToBase64String(Encoding.UTF8.GetBytes($"{Credentials.ClientId}:{Credentials.ClientSecret}"));
 
             Response response = await SendData(
                 Version.OAuthPath,

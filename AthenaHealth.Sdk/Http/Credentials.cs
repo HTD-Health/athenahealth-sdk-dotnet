@@ -2,17 +2,17 @@
 {
     public class Credentials
     {
-        public Credentials(string login, string password)
+        public Credentials(string clientId, string clientSecret)
         {
-            Login = login;
-            Password = password;
+            ClientId = clientId;
+            ClientSecret = clientSecret;
         }
 
         private Credentials()
         {
         }
 
-        public string Login { get; }
-        public string Password { get; }
+        public string ClientId { get; }
+        public string ClientSecret { get; }
     }
 }
