@@ -1,0 +1,27 @@
+{
+  "totalcount": 2,
+  "practiceinfo": [
+    {
+      "iscoordinatorsender": false,
+      "hasclinicals": true,
+      "name": "athenahealth MDP Sandbox",
+      "golivedate": "09\/14\/2015",
+      "experiencemode": "STREAMLINEDONLY",
+      "hascommunicator": true,
+      "iscoordinatorreceiver": false,
+      "hascollector": true,
+      "practiceid": "195900"
+    },
+    {
+      "iscoordinatorsender": false,
+      "hasclinicals": true,
+      "name": "MDP-Hospital Test 1128700",
+      "golivedate": "05\/28\/2015",
+      "experiencemode": "STREAMLINEDONLY",
+      "hascommunicator": true,
+      "iscoordinatorreceiver": false,
+      "hascollector": true,
+      "practiceid": "1128700"
+    }
+  ]
+}

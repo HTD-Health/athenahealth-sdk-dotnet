@@ -15,6 +15,10 @@ namespace AthenaHealth.Sdk.Models.Response
 
     public class Practice
     {
+
+        [JsonProperty("practiceid")]
+        public string Id { get; set; }
+
         [JsonProperty("name")]
         public string Name { get; set; }
 
@@ -23,9 +27,6 @@ namespace AthenaHealth.Sdk.Models.Response
 
         [JsonProperty("experiencemode")]
         public string ExperienceMode { get; set; }
-
-        [JsonProperty("practiceid")]
-        public string PracticeId { get; set; }
 
         [JsonProperty("iscoordinatorsender")]
         public bool IsCoordinatorSender { get; set; }

@@ -6,7 +6,7 @@ namespace AthenaHealth.Sdk.Clients
 {
     public interface IPracticeClient
     {
-        Task<PracticeResponse> GetById(int practiceId, GetPracticeFilter filter = null);
-        Task<PracticeResponse> GetAll(GetPracticeFilter filter = null);
+        Task<Practice> GetById(int practiceId, BaseLimitFilter filter = null);
+        Task<PracticeResponse> GetAll(BaseLimitFilter filter = null);
     }
 }

@@ -7,6 +7,8 @@ namespace AthenaHealth.Sdk
     {
         public IPatientClient Patients { get; }
         public IPracticeClient Practices { get; }
+        public IDepartmentClient Departments { get; }
+
         public int PracticeId { get; set; }
 
         public AthenaHealthClient(ApiVersion version, string clientId, string clientSecret, int practiceId)
@@ -20,6 +22,7 @@ namespace AthenaHealth.Sdk
 
             Patients = new PatientClient(connection);
             Practices = new PracticeClient(connection);
+            Departments = new DepartmentClient(connection);
         }
     }
 }
