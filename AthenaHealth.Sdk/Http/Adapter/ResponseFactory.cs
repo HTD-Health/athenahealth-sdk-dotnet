@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -7,8 +8,11 @@ namespace AthenaHealth.Sdk.Http.Adapter
 {
     public static class ResponseFactory
     {
+        private static readonly AthenaResponsePipeline ResponsePipeline = new AthenaResponsePipeline();
         public static async Task<Response> Create(HttpResponseMessage httpResponse)
         {
+            
+
             object responseBody = null;
             string contentType = null;
 
@@ -41,8 +45,7 @@ namespace AthenaHealth.Sdk.Http.Adapter
                 contentType,
                 httpResponse.IsSuccessStatusCode);
 
-            var responsePipeline = new AthenaResponsePipeline();
-            responsePipeline.Execute(response);
+            ResponsePipeline.Execute(response);
 
             return response;
         }

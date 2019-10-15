@@ -13,12 +13,12 @@ namespace AthenaHealth.Sdk.Http.Adapter
 
         private void HandleAthenaBodyError(Response response)
         {
-            string code = GetAthenaBodyStatusCode(response.Body);
+            string statusCode = GetAthenaBodyStatusCode(response.Body);
 
-            if (code == null)
+            if (statusCode == null)
                 return;
 
-            if (Enum.TryParse(code, out HttpStatusCode httpStatusCode))
+            if (Enum.TryParse(statusCode, out HttpStatusCode httpStatusCode))
             {
                 response.StatusCode = httpStatusCode;
                 //Assumed that any status code in the response (both success and failure) means some error - body couldn't be parsed
@@ -26,7 +26,7 @@ namespace AthenaHealth.Sdk.Http.Adapter
             }
             else
             {
-                throw new InvalidCastException("AthenaHealth API response contains status code in body which cannot be parsed to HttpStatusCode: " + code);
+                throw new InvalidCastException("AthenaHealth API response contains status code in body which cannot be parsed to HttpStatusCode: " + statusCode);
             }
         }
 
