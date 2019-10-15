@@ -9,11 +9,11 @@ namespace AthenaHealth.Sdk
         public IPracticeClient Practices { get; }
         public int PracticeId { get; set; }
 
-        public AthenaHealthClient(ApiVersion version, string login, string password, int practiceId)
+        public AthenaHealthClient(ApiVersion version, string clientId, string clientSecret, int practiceId)
         {
             var httpClient = new AthenaHttpClient();
             var athenaHttpAdapter = new AthenaHttpAdapter(httpClient);
-            var credentials = new Credentials(login, password);
+            var credentials = new Credentials(clientId, clientSecret);
             var connection = new Connection(athenaHttpAdapter, credentials, version);
 
             PracticeId = practiceId;
