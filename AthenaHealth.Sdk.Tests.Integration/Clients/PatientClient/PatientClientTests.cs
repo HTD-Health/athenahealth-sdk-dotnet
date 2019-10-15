@@ -26,5 +26,13 @@ namespace AthenaHealth.Sdk.Tests.Integration.Clients.PatientClient
             patient.Balances.ShouldNotBeEmpty();
             patient.Balances.First().Value.ShouldBe(10);
         }
+
+        [Fact]
+        public void GetPatientById_InvalidId_ThrowsApiException ()
+        {
+            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Clients\PatientClient\GetPatient_InvalidId.json", HttpStatusCode.OK)); //In this case athena respond with HTTP 200 OK and status code 400 in response body
+            ApiException exc = Should.Throw<ApiException>(async () => await patientClient.GetPatientById(0));
+            exc.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
+        }
     }
 }
