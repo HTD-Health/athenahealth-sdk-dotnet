@@ -8,12 +8,12 @@ namespace AthenaHealth.Sdk.Http.Adapter
     {
         public void Execute(Response response)
         {
-            HandleAthenaBodyError(response);
+            HandleErrorIfAppearsInResponseBody(response);
         }
 
-        private void HandleAthenaBodyError(Response response)
+        private void HandleErrorIfAppearsInResponseBody(Response response)
         {
-            string statusCode = GetAthenaBodyStatusCode(response.Body);
+            string statusCode = GetStatusCode(response.Body);
 
             if (statusCode == null)
                 return;
@@ -30,7 +30,7 @@ namespace AthenaHealth.Sdk.Http.Adapter
             }
         }
 
-        private string GetAthenaBodyStatusCode(object bodyObj)
+        private string GetStatusCode(object bodyObj)
         {
             if (!(bodyObj is string body))
                 return null;
