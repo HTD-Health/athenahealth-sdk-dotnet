@@ -1,5 +1,6 @@
 ﻿using AthenaHealth.Sdk.Clients;
 using AthenaHealth.Sdk.Http;
+using AthenaHealth.Sdk.Http.Adapter;
 
 namespace AthenaHealth.Sdk
 {

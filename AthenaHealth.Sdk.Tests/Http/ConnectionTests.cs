@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
+using AthenaHealth.Sdk.Http.Adapter;
 using Xunit;
 
 namespace AthenaHealth.Sdk.Tests.Http

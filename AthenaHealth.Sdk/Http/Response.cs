@@ -40,14 +40,14 @@ namespace AthenaHealth.Sdk.Http
         /// <summary>
         /// The response status code.
         /// </summary>
-        public HttpStatusCode StatusCode { get;  }
+        public HttpStatusCode StatusCode { get; set; }
 
         /// <summary>
         /// The content type of the response.
         /// </summary>
         public string ContentType { get;  }
 
-        public bool IsSuccessStatusCode { get;  }
+        public bool IsSuccessStatusCode { get; set; }
 
         public DateTime Time { get; } = DateTime.Now;
 

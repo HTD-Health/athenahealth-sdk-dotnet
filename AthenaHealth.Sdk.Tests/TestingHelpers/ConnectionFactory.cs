@@ -1,5 +1,6 @@
 ﻿using System.Net;
 using AthenaHealth.Sdk.Http;
+using AthenaHealth.Sdk.Http.Adapter;
 
 namespace AthenaHealth.Sdk.Tests.TestingHelpers
 {
