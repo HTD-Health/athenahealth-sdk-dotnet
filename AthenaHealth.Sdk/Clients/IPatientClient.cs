@@ -8,5 +8,6 @@ namespace AthenaHealth.Sdk.Clients
     {
         Task<Patient> GetPatientById(int patientId, GetPatientByIdFilter getPatientByIdFilter = null);
         Task<Pharmacy> GetDefaultPharmacy(int practiceId, int patientId, int departmentId);
+        Task<Pharmacies> GetPreferredPharmacies(int practiceId, int patientId, GetPreferredPharmacyFilter getPreferredPharmacyFilter);
     }
 }

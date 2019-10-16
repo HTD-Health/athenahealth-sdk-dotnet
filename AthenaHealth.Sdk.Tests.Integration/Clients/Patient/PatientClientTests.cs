@@ -2,6 +2,7 @@
 using System.Net;
 using System.Threading.Tasks;
 using AthenaHealth.Sdk.Exceptions;
+using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Tests.Integration.TestingHelpers;
 using Shouldly;
 using Xunit;
@@ -43,6 +44,23 @@ namespace AthenaHealth.Sdk.Tests.Integration.Clients.Patient
             pharmacy.ShouldNotBeNull();
             pharmacy.State.ShouldBe("NY");
             pharmacy.ClinicalProviderName.ShouldBe("Himani Shishodia");
+        }
+
+        [Fact]
+        public async Task GetPreferredPharmacies_ReturnsPreferredPharmacies()
+        {
+            var patientClient = new Sdk.Clients.PatientClient(
+                ConnectionFactory.CreateFromFile(@"Clients\Patient\GetPreferredPharmacies.json", HttpStatusCode.OK));
+
+            Models.Response.Pharmacies pharmacies =
+                await patientClient.GetPreferredPharmacies(195900, 300,
+                    new GetPreferredPharmacyFilter {DepartmentId = 1});
+
+            pharmacies.ShouldNotBeNull();
+            pharmacies.Total.ShouldBe(1);
+            pharmacies.Items.ShouldNotBeNull();
+            pharmacies.Items.Length.ShouldBe(1);
+            pharmacies.Items[0].ClinicalProviderId.ShouldBe(11242674);
         }
     }
 }
