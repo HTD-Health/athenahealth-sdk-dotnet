@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 namespace AthenaHealth.Sdk.Http.Adapter
@@ -32,12 +33,19 @@ namespace AthenaHealth.Sdk.Http.Adapter
 
         private string GetStatusCode(object bodyObj)
         {
-            if (!(bodyObj is string body))
-                return null;
+            try
+            {
+                if (!(bodyObj is string body))
+                    return null;
 
-            JObject jsonBody = JObject.Parse(body);
-            JToken token = jsonBody.SelectToken("status.code");
-            return token?.ToString();
+                JObject jsonBody = JObject.Parse(body);
+                string output = jsonBody.SelectToken("status.code")?.ToString();
+                return output;
+            }
+            catch (JsonReaderException)
+            {
+                return null;
+            }
         }
     }
 }
