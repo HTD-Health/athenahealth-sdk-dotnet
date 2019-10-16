@@ -31,10 +31,13 @@
     <None Update="Clients\Department\GetById_ExistingId.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Clients\PatientClient\GetPatient_InvalidId.json">
+    <None Update="Clients\Patient\GetDefaultPharmacy.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Clients\PatientClient\Patient.json">
+    <None Update="Clients\Patient\GetPatient_InvalidId.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Clients\Patient\Patient.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

@@ -7,5 +7,6 @@ namespace AthenaHealth.Sdk.Clients
     public interface IPatientClient
     {
         Task<Patient> GetPatientById(int patientId, GetPatientByIdFilter getPatientByIdFilter = null);
+        Task<Pharmacy> GetDefaultPharmacy(int practiceId, int patientId, int departmentId);
     }
 }
