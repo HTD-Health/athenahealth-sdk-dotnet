@@ -4,6 +4,15 @@
 
 namespace AthenaHealth.Sdk.Models.Response
 {
+    public class Pharmacies
+    {
+        [JsonProperty("totalcount")]
+        public int Total { get; set; }
+
+        [JsonProperty("pharmacies")]
+        public Pharmacy[] Items { get; set; }
+    }
+
     public class Pharmacy
     {
         /// <summary>
