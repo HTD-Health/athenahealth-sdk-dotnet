@@ -11,21 +11,27 @@ namespace AthenaHealth.Sdk
         public IDepartmentClient Departments { get; }
         public IProviderClient Providers { get; }
 
-        public int PracticeId { get; set; }
+        private readonly IConnection _connection;
+
+        public int PracticeId
+        {
+            get => _connection.Credentials.PracticeId;
+            set => _connection.Credentials.PracticeId = value;
+        }
 
         public AthenaHealthClient(ApiVersion version, string clientId, string clientSecret, int practiceId)
         {
             var httpClient = new AthenaHttpClient();
             var athenaHttpAdapter = new AthenaHttpAdapter(httpClient);
             var credentials = new Credentials(clientId, clientSecret);
-            var connection = new Connection(athenaHttpAdapter, credentials, version);
+            _connection = new Connection(athenaHttpAdapter, credentials, version);
 
             PracticeId = practiceId;
 
-            Patients = new PatientClient(connection);
-            Practices = new PracticeClient(connection);
-            Departments = new DepartmentClient(connection);
-            Providers = new ProviderClient(connection);
+            Patients = new PatientClient(_connection);
+            Practices = new PracticeClient(_connection);
+            Departments = new DepartmentClient(_connection);
+            Providers = new ProviderClient(_connection);
         }
     }
 }

@@ -8,6 +8,9 @@ namespace AthenaHealth.Sdk.Models.Response
         [JsonProperty("totalcount")]
         public int Total { get; set; }
 
+        [JsonProperty("next")]
+        public string Next { get; set; }
+
         [JsonProperty("providers")]
         public Provider[] Items { get; set; }
     }
@@ -49,7 +52,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// <summary>
         /// This is the ANSI code for this provider's specialty.
         /// </summary>
-        [JsonProperty("ansispecialtycode	")]
+        [JsonProperty("ansispecialtycode")]
         public string AnsiSpecialtyCode { get; set; }
 
         /// <summary>

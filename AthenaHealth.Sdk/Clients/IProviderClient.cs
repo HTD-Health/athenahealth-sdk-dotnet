@@ -6,8 +6,8 @@ namespace AthenaHealth.Sdk.Clients
 {
     public interface IProviderClient
     {
-        Task<ProviderTypeResponse> GetProviderTypes(int practiceId, BaseLimitFilter filter = null);
-        Task<ProviderResponse> GetAll(int practiceId, GetProviderFilter filter = null);
-        Task<ProviderExtended> GetById(int practiceId, int providerId, GetByIdProviderFilter filter = null);
+        Task<ProviderTypeResponse> GetProviderTypes(BaseLimitFilter filter = null);
+        Task<ProviderResponse> GetAll(GetProviderFilter filter = null);
+        Task<ProviderExtended> GetById(int providerId, GetByIdProviderFilter filter = null);
     }
 }

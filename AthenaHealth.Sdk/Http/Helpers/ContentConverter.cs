@@ -1,12 +1,10 @@
-﻿using AthenaHealth.Sdk.Http.Helpers;
-using AthenaHealth.Sdk.Models.Converters.Base;
+﻿using AthenaHealth.Sdk.Models.Converters.Base;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Reflection;
 using System.Text;
-using Newtonsoft.Json;
 
 namespace AthenaHealth.Sdk.Http.Helpers
 {

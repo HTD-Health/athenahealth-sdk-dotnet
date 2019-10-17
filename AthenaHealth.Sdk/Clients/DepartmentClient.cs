@@ -16,14 +16,14 @@ namespace AthenaHealth.Sdk.Clients
             _connection = connection;
         }
 
-        public async Task<DepartmentResponse> GetAll(int practiceId, GetDepartmentFilter filter = null)
+        public async Task<DepartmentResponse> GetAll(GetDepartmentFilter filter = null)
         {
-            return await _connection.Get<DepartmentResponse>($"{practiceId}/departments", filter);
+            return await _connection.Get<DepartmentResponse>($"{_connection.Credentials.PracticeId}/departments", filter);
         }
 
-        public async Task<Department> GetById(int practiceId, int departmentId, GetDepartmentFilter filter = null)
+        public async Task<Department> GetById(int departmentId, GetDepartmentFilter filter = null)
         {
-            Department[] result = await _connection.Get<Department[]>($"{practiceId}/departments/{departmentId}", filter);
+            Department[] result = await _connection.Get<Department[]>($"{_connection.Credentials.PracticeId}/departments/{departmentId}", filter);
 
             if (result.Length == 1)
             {

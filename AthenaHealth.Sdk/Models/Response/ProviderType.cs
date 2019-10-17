@@ -11,6 +11,9 @@ namespace AthenaHealth.Sdk.Models.Response
         [JsonProperty("totalcount")]
         public int Total { get; set; }
 
+        [JsonProperty("next")]
+        public string Next { get; set; }
+
         [JsonProperty("providertypes")]
         public ProviderType[] Items { get; set; }
     }

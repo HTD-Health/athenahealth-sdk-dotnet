@@ -24,7 +24,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         [Fact]
         public async Task GetDefaultPharmacy_ReturnsPharmacy()
         {
-            Pharmacy pharmacy = await Client.Patients.GetDefaultPharmacy(195900, 300, 1);
+            Pharmacy pharmacy = await Client.Patients.GetDefaultPharmacy(300, 1);
 
             pharmacy.State.ShouldNotBeEmpty();
             pharmacy.ClinicalProviderId.ShouldBeGreaterThan(0);
@@ -33,13 +33,13 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         [Fact]
         public async Task GetDefaultPharmacy_NotExistingPharmacy_ThrowsException()
         {
-            await Assert.ThrowsAsync<ApiValidationException>(async () => await Client.Patients.GetDefaultPharmacy(195900, 300, 2));
+            await Assert.ThrowsAsync<ApiValidationException>(async () => await Client.Patients.GetDefaultPharmacy(300, 2));
         }
 
         [Fact]
         public async Task GetPreferredPharmacies_ReturnsPharmacy()
         {
-            PharmacyResponse pharmacies = await Client.Patients.GetPreferredPharmacies(195900, 300, new GetPreferredPharmacyFilter { DepartmentId = 1 });
+            PharmacyResponse pharmacies = await Client.Patients.GetPreferredPharmacies(300, new GetPreferredPharmacyFilter { DepartmentId = 1 });
             pharmacies.ShouldNotBeNull();
             pharmacies.Total.ShouldBe(1);
             pharmacies.Items.ShouldNotBeNull();
@@ -50,7 +50,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         [Fact]
         public async Task GetPreferredPharmacies_NotExistingPharmacy_ThrowsException()
         {
-            await Assert.ThrowsAsync<ApiValidationException>(async () => await Client.Patients.GetPreferredPharmacies(195900, 300, new GetPreferredPharmacyFilter { DepartmentId = 2 }));
+            await Assert.ThrowsAsync<ApiValidationException>(async () => await Client.Patients.GetPreferredPharmacies(300, new GetPreferredPharmacyFilter { DepartmentId = 2 }));
         }
 
         [Theory]
@@ -61,7 +61,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             DateTime dateOfBirth = DateTime.ParseExact(dob, "MM/dd/yyyy", CultureInfo.InvariantCulture);
 
             // Act
-            var result = await Client.Patients.EnhancedBestmatch(195900, new Models.Request.EnhancedBestmatchFilter()
+            var result = await Client.Patients.EnhancedBestmatch(new Models.Request.EnhancedBestmatchFilter()
             {
                 DateOfBirth = dateOfBirth,
                 FirstName = firstName,
@@ -89,7 +89,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             DateTime dateOfBirth = DateTime.ParseExact("01/01/1982", "MM/dd/yyyy", CultureInfo.InvariantCulture);
 
             // Act
-            var result = await Client.Patients.EnhancedBestmatch(195900, new Models.Request.EnhancedBestmatchFilter()
+            var result = await Client.Patients.EnhancedBestmatch(new Models.Request.EnhancedBestmatchFilter()
             {
                 DateOfBirth = dateOfBirth,
                 FirstName = "InvalidName",

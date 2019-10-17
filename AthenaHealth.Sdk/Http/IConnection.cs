@@ -7,7 +7,7 @@ namespace AthenaHealth.Sdk.Http
     public interface IConnection
     {
         /// <summary>
-        /// Base url adress
+        /// Base url address
         /// </summary>
         Uri BaseAddress { get; }
 
