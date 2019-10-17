@@ -12,7 +12,6 @@ namespace AthenaHealth.Sdk.Clients
         Task<IEnumerable<EnhancedBestmatchResponse>> EnhancedBestmatch(int practiceId, EnhancedBestmatchFilter queryParameters);
 
         Task<Pharmacy> GetDefaultPharmacy(int practiceId, int patientId, int departmentId);
-
-        Task<Pharmacies> GetPreferredPharmacies(int practiceId, int patientId, GetPreferredPharmacyFilter getPreferredPharmacyFilter);
+        Task<PharmacyResponse> GetPreferredPharmacies(int practiceId, int patientId, GetPreferredPharmacyFilter getPreferredPharmacyFilter);
     }
 }
