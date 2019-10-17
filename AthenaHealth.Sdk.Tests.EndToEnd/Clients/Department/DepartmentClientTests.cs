@@ -1,6 +1,7 @@
 ﻿using AthenaHealth.Sdk.Exceptions;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
+using AthenaHealth.Sdk.Tests.EndToEnd.Fixtures;
 using Shouldly;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,13 +9,13 @@ using Xunit;
 
 namespace AthenaHealth.Sdk.Tests.EndToEnd
 {
-    public class DepartmentClientTests
+    public class DepartmentClientTests : IClassFixture<AthenaHealthClientFixture>
     {
         private readonly IAthenaHealthClient _client;
 
-        public DepartmentClientTests()
+        public DepartmentClientTests(AthenaHealthClientFixture athenaHealthClientFixture)
         {
-            _client = new AthenaHealthClient(ApiVersion.Preview, "6yspwuq3wnx5n37jp9phqsmt", "Y9UxkbBge5EXutR", 195900);
+            _client = athenaHealthClientFixture.Client;
         }
 
         [Fact]
@@ -26,14 +27,14 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             {
                 response.ShouldNotBe(null);
                 response.Total.ShouldBeGreaterThan(0);
-                response.Departments.ShouldNotBe(null);
-                response.Departments.All(x => !x.IsHospitalDepartment).ShouldBeTrue();
-                response.Departments.All(x => x.ProviderList == null).ShouldBeTrue();
+                response.Items.ShouldNotBe(null);
+                response.Items.All(x => !x.IsHospitalDepartment).ShouldBeTrue();
+                response.Items.All(x => x.ProviderList == null).ShouldBeTrue();
             }
             else
             {
                 response.Total.ShouldBe(0);
-                response.Departments.Length.ShouldBe(0);
+                response.Items.Length.ShouldBe(0);
             }
         }
 
@@ -47,13 +48,13 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             {
                 response.ShouldNotBe(null);
                 response.Total.ShouldBeGreaterThan(0);
-                response.Departments.ShouldNotBe(null);
-                response.Departments.All(x => x.ProviderList.Length > 0).ShouldBeTrue();
+                response.Items.ShouldNotBe(null);
+                response.Items.All(x => x.ProviderList.Length > 0).ShouldBeTrue();
             }
             else
             {
                 response.Total.ShouldBe(0);
-                response.Departments.Length.ShouldBe(0);
+                response.Items.Length.ShouldBe(0);
             }
         }
 
@@ -84,12 +85,12 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
 
             if (departmentResponse.Total > 0)
             {
-                departmentResponse.Departments.All(x => x.IsHospitalDepartment).ShouldBeTrue();
+                departmentResponse.Items.All(x => x.IsHospitalDepartment).ShouldBeTrue();
             }
             else
             {
                 departmentResponse.Total.ShouldBe(0);
-                departmentResponse.Departments.Length.ShouldBe(0);
+                departmentResponse.Items.Length.ShouldBe(0);
             }
         }
 
@@ -103,18 +104,18 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             {
                 if (departmentResponse.Total > 5)
                 {
-                    departmentResponse.Departments.Length.ShouldBe(5);
-                    departmentResponse.Total.ShouldBeGreaterThan(departmentResponse.Departments.Length);
+                    departmentResponse.Items.Length.ShouldBe(5);
+                    departmentResponse.Total.ShouldBeGreaterThan(departmentResponse.Items.Length);
                 }
                 else
                 {
-                    departmentResponse.Total.ShouldBe(departmentResponse.Departments.Length);
+                    departmentResponse.Total.ShouldBe(departmentResponse.Items.Length);
                 }
             }
             else
             {
                 departmentResponse.Total.ShouldBe(0);
-                departmentResponse.Departments.Length.ShouldBe(0);
+                departmentResponse.Items.Length.ShouldBe(0);
             }
         }
 

@@ -15,17 +15,17 @@ namespace AthenaHealth.Sdk.Clients
         {
             _connection = connection;
         }
-
+        
         public async Task<Practice> GetById(int practiceId, BaseLimitFilter filter = null)
         {
             PracticeResponse result = await _connection.Get<PracticeResponse>($"{practiceId}/practiceinfo", filter);
             
             if (result.Total == 1)
             {
-                return result.Practices.First();
+                return result.Items.First();
             }
 
-            throw new Exception("Number of Practices not equals 1.");
+            throw new Exception("Number of Items not equals 1.");
         }
 
         public async Task<PracticeResponse> GetAll(BaseLimitFilter filter = null)

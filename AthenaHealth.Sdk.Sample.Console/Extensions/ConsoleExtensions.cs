@@ -15,7 +15,7 @@ namespace AthenaHealth.Sdk.Sample.Console.Extensions
         public static void Display(this PracticeResponse response)
         {
             System.Console.WriteLine($"Total: {response.Total}");
-            foreach (Practice practice in response.Practices)
+            foreach (Practice practice in response.Items)
             {
                 Display(practice);
             }
@@ -32,7 +32,7 @@ namespace AthenaHealth.Sdk.Sample.Console.Extensions
         public static void Display(this DepartmentResponse response)
         {
             System.Console.WriteLine($"Total: {response.Total}");
-            foreach (Department department in response.Departments)
+            foreach (Department department in response.Items)
             {
                 Display(department);
             }
