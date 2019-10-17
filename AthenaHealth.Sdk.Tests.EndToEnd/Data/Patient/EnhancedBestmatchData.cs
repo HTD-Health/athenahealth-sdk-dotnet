@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-namespace AthenaHealth.Sdk.Tests.EndToEnd.Clients.Patient.Data
+namespace AthenaHealth.Sdk.Tests.EndToEnd.Data.Patient
 {
     public class EnhancedBestmatchData : IEnumerable<object[]>
     {

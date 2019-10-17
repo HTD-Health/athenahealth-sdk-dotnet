@@ -18,9 +18,4 @@
     <ProjectReference Include="..\AthenaHealth.Sdk\AthenaHealth.Sdk.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Clients\Department\Data\" />
-    <Folder Include="Clients\Practice\Data\" />
-  </ItemGroup>
-
 </Project>

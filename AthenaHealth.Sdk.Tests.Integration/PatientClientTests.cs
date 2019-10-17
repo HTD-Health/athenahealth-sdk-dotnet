@@ -1,15 +1,15 @@
-﻿using AthenaHealth.Sdk.Exceptions;
-using AthenaHealth.Sdk.Models.Request;
-using AthenaHealth.Sdk.Tests.Integration.TestingHelpers;
-using Shouldly;
-using System;
+﻿using System;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+using AthenaHealth.Sdk.Exceptions;
+using AthenaHealth.Sdk.Models.Request;
+using AthenaHealth.Sdk.Tests.Integration.TestingHelpers;
+using Shouldly;
 using Xunit;
 
 // ReSharper disable StringLiteralTypo
-namespace AthenaHealth.Sdk.Tests.Integration.Clients.Patient
+namespace AthenaHealth.Sdk.Tests.Integration
 {
     public class PatientClientTests
     {
@@ -17,7 +17,7 @@ namespace AthenaHealth.Sdk.Tests.Integration.Clients.Patient
         public async Task GetPatientById_ValidId_ReturnsPatient()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Clients\Patient\Patient.json"));
+            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\Patient.json"));
 
             // Act
             var result = await patientClient.GetPatientById(1);
@@ -49,7 +49,7 @@ namespace AthenaHealth.Sdk.Tests.Integration.Clients.Patient
         public async Task EnhancedBestmatch_ValidData_ReturnsPatientsCollection()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Clients\Patient\EnhancedBestmatch.json"));
+            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\EnhancedBestmatch.json"));
             var queryParameters = new EnhancedBestmatchFilter()
             {
                 DateOfBirth = new DateTime(1989, 09, 07),
@@ -107,7 +107,7 @@ namespace AthenaHealth.Sdk.Tests.Integration.Clients.Patient
         public void EnhancedBestmatch_InvalidDateOfBirthFormat_ThrowsException()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Clients\Patient\EnhancedBestmatch_InvalidDateOfBirthFormat.json", HttpStatusCode.BadRequest));
+            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\EnhancedBestmatch_InvalidDateOfBirthFormat.json", HttpStatusCode.BadRequest));
             var queryParameters = new EnhancedBestmatchFilter()
             {
                 DateOfBirth = new DateTime(01, 09, 07),
@@ -135,7 +135,7 @@ namespace AthenaHealth.Sdk.Tests.Integration.Clients.Patient
         public void EnhancedBestmatch_MissingFields_ThrowsException()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Clients\Patient\EnhancedBestmatch_MissingFields.json", HttpStatusCode.BadRequest));
+            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\EnhancedBestmatch_MissingFields.json", HttpStatusCode.BadRequest));
             var queryParameters = new EnhancedBestmatchFilter()
             {
                 DateOfBirth = new DateTime(1989, 09, 07),
@@ -162,7 +162,7 @@ namespace AthenaHealth.Sdk.Tests.Integration.Clients.Patient
         public async Task GetDefaultPharmacy_ValidId_ReturnsDefaultPharmacy()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Clients\Patient\GetDefaultPharmacy.json", HttpStatusCode.OK));
+            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetDefaultPharmacy.json", HttpStatusCode.OK));
 
             // Act
             var result = await patientClient.GetDefaultPharmacy(300, 1);
@@ -177,7 +177,7 @@ namespace AthenaHealth.Sdk.Tests.Integration.Clients.Patient
         public async Task GetPreferredPharmacies_ReturnsPreferredPharmacies()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Clients\Patient\GetPreferredPharmacies.json", HttpStatusCode.OK));
+            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetPreferredPharmacies.json", HttpStatusCode.OK));
             var queryParameters = new GetPreferredPharmacyFilter
             {
                 DepartmentId = 1

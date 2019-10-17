@@ -1,9 +1,9 @@
-﻿using AthenaHealth.Sdk.Models.Request;
-using AthenaHealth.Sdk.Models.Response;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using AthenaHealth.Sdk.Models.Request;
+using AthenaHealth.Sdk.Models.Response;
 
-namespace AthenaHealth.Sdk.Clients
+namespace AthenaHealth.Sdk.Clients.Interfaces
 {
     public interface IPatientClient
     {

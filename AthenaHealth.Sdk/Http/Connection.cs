@@ -35,6 +35,8 @@ namespace AthenaHealth.Sdk.Http
         /// </summary>
         public Credentials Credentials { get; }
 
+        public int PracticeId { get; set; }
+
         /// <summary>
         /// Indicates if access token exists and is still valid.
         /// </summary>

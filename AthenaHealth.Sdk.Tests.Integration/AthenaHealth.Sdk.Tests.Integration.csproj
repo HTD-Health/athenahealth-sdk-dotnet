@@ -25,28 +25,28 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Clients\Department\GetAll_Extended.json">
+    <None Update="Data\Department\GetAll_Extended.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Clients\Department\GetById_ExistingId.json">
+    <None Update="Data\Department\GetById_ExistingId.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Clients\Patient\EnhancedBestmatch_MissingFields.json">
+    <None Update="Data\Patient\EnhancedBestmatch_MissingFields.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Clients\Patient\EnhancedBestmatch_InvalidDateOfBirthFormat.json">
+    <None Update="Data\Patient\EnhancedBestmatch_InvalidDateOfBirthFormat.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Clients\Patient\EnhancedBestmatch.json">
+    <None Update="Data\Patient\EnhancedBestmatch.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Clients\Patient\GetDefaultPharmacy.json">
+    <None Update="Data\Patient\GetDefaultPharmacy.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Clients\Patient\GetPreferredPharmacies.json">
+    <None Update="Data\Patient\GetPreferredPharmacies.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Clients\Patient\Patient.json">
+    <None Update="Data\Patient\Patient.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

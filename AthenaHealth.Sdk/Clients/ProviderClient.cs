@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
+using AthenaHealth.Sdk.Clients.Interfaces;
 using AthenaHealth.Sdk.Http;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
@@ -18,17 +19,17 @@ namespace AthenaHealth.Sdk.Clients
 
         public async Task<ProviderTypeResponse> GetProviderTypes(BaseLimitFilter filter = null)
         {
-            return await _connection.Get<ProviderTypeResponse>($"{_connection.Credentials.PracticeId}/reference/providertypes", filter);
+            return await _connection.Get<ProviderTypeResponse>($"{_connection.PracticeId}/reference/providertypes", filter);
         }
 
         public async Task<ProviderResponse> GetAll(GetProviderFilter filter = null)
         {
-            return await _connection.Get<ProviderResponse>($"{_connection.Credentials.PracticeId}/providers", filter);
+            return await _connection.Get<ProviderResponse>($"{_connection.PracticeId}/providers", filter);
         }
 
         public async Task<ProviderExtended> GetById(int providerId, GetByIdProviderFilter filter = null)
         {
-            var result = await _connection.Get<ProviderExtended[]>($"{_connection.Credentials.PracticeId}/providers/{providerId}", filter);
+            var result = await _connection.Get<ProviderExtended[]>($"{_connection.PracticeId}/providers/{providerId}", filter);
             if (result.Length == 1)
             {
                 return result.First();

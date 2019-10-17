@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
+using AthenaHealth.Sdk.Clients.Interfaces;
 using AthenaHealth.Sdk.Http;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
@@ -18,12 +19,12 @@ namespace AthenaHealth.Sdk.Clients
 
         public async Task<DepartmentResponse> GetAll(GetDepartmentFilter filter = null)
         {
-            return await _connection.Get<DepartmentResponse>($"{_connection.Credentials.PracticeId}/departments", filter);
+            return await _connection.Get<DepartmentResponse>($"{_connection.PracticeId}/departments", filter);
         }
 
         public async Task<Department> GetById(int departmentId, GetDepartmentFilter filter = null)
         {
-            Department[] result = await _connection.Get<Department[]>($"{_connection.Credentials.PracticeId}/departments/{departmentId}", filter);
+            Department[] result = await _connection.Get<Department[]>($"{_connection.PracticeId}/departments/{departmentId}", filter);
 
             if (result.Length == 1)
             {

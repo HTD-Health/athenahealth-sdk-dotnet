@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace AthenaHealth.Sdk.Http
@@ -15,6 +14,8 @@ namespace AthenaHealth.Sdk.Http
         /// Connection credentials
         /// </summary>
         Credentials Credentials { get; }
+
+        int PracticeId { get; set; }
 
         /// <summary>
         /// Sends GET request to url constructed from <see cref="BaseAddress"/> and <paramref name="relativeUrl"/>.

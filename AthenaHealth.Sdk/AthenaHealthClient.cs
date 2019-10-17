@@ -1,4 +1,5 @@
 ﻿using AthenaHealth.Sdk.Clients;
+using AthenaHealth.Sdk.Clients.Interfaces;
 using AthenaHealth.Sdk.Http;
 using AthenaHealth.Sdk.Http.Adapter;
 
@@ -15,8 +16,8 @@ namespace AthenaHealth.Sdk
 
         public int PracticeId
         {
-            get => _connection.Credentials.PracticeId;
-            set => _connection.Credentials.PracticeId = value;
+            get => _connection.PracticeId;
+            set => _connection.PracticeId = value;
         }
 
         public AthenaHealthClient(ApiVersion version, string clientId, string clientSecret, int practiceId)
