@@ -129,7 +129,7 @@ namespace AthenaHealth.Sdk.Tests.Http
             _athenaHttpAdapter.Send(Arg.Is<Request>(x => x.RequestUri.AbsoluteUri.EndsWith("/test"))).Returns(Task.FromResult(response));
 
             // Act
-            Should.Throw<ApiValidationException>(async () => await _connection.Put<object>("test", null));
+            Should.Throw<ApiValidationException>(async () => await _connection.Put("test", null));
 
             // Assert
             _athenaHttpAdapter.Received(2).Send(Arg.Any<Request>());
@@ -229,7 +229,7 @@ namespace AthenaHealth.Sdk.Tests.Http
             _athenaHttpAdapter.Send(Arg.Is<Request>(x => x.RequestUri.AbsoluteUri.EndsWith("/test"))).Returns(Task.FromResult(response));
 
             // Act
-            Should.Throw<ApiException>(async () => await _connection.Put<object>("test", null));
+            Should.Throw<ApiException>(async () => await _connection.Put("test", null));
 
             // Assert
             _athenaHttpAdapter.Received(2).Send(Arg.Any<Request>());

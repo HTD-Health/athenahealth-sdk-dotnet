@@ -77,7 +77,7 @@ namespace AthenaHealth.Sdk.Http
         /// <param name="body">Request content</param>
         /// <param name="queryParameters">Query parameters to be added to constructed url.</param>
         /// <returns>Deserialized model</returns>
-        public async Task<T> Post<T>(string relativeUrl, object body, object queryParameters = null)
+        public async Task<T> Post<T>(string relativeUrl, object queryParameters = null, object body = null)
         {
             await RefreshAccessToken();
 
@@ -89,18 +89,14 @@ namespace AthenaHealth.Sdk.Http
         /// <summary>
         /// Sends PUT request to url constructed from <see cref="BaseAddress"/> and <paramref name="relativeUrl"/>.
         /// </summary>
-        /// <typeparam name="T">Model type</typeparam>
         /// <param name="relativeUrl">Url relative to <see cref="BaseAddress"/>.</param>
         /// <param name="body">Request content</param>
         /// <param name="queryParameters">Query parameters to be added to constructed url.</param>
-        /// <returns>Deserialized model</returns>
-        public async Task<T> Put<T>(string relativeUrl, object body, object queryParameters = null)
+        public async Task Put(string relativeUrl, object queryParameters = null, object body = null)
         {
             await RefreshAccessToken();
 
             Response response = await SendData(AddVersion(relativeUrl), queryParameters, HttpMethod.Put, ContentConverter.ToJson(body));
-
-            return response.GetObjectContent<T>();
         }
 
         /// <summary>
