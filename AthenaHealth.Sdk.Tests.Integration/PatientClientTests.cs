@@ -190,5 +190,12 @@ namespace AthenaHealth.Sdk.Tests.Integration
             result.Items.Length.ShouldBe(1);
             result.Items[0].ClinicalProviderId.ShouldBe(11242674);
         }
+
+        [Fact]
+        public void SetDefaultPharmacy_ValidData_NotThrow()
+        {
+            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"success\": true}", HttpStatusCode.OK));
+            Should.NotThrow(async () => await patientClient.SetDefaultPharmacy(195900, 5000, new SetPharmacyRequest{DepartmentId = 164, ClinicalProviderId = 11242674}));
+        }
     }
 }
