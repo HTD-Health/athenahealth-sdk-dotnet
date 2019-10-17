@@ -27,9 +27,9 @@ namespace AthenaHealth.Sdk.Clients
             
         }
 
-        public async Task<Pharmacies> GetPreferredPharmacies(int practiceId, int patientId, GetPreferredPharmacyFilter getPreferredPharmacyFilter)
+        public async Task<PharmacyResponse> GetPreferredPharmacies(int practiceId, int patientId, GetPreferredPharmacyFilter getPreferredPharmacyFilter)
         {
-            return await Connection.Get<Pharmacies>($"{practiceId}/chart/{patientId}/pharmacies/preferred", getPreferredPharmacyFilter);
+            return await Connection.Get<PharmacyResponse>($"{practiceId}/chart/{patientId}/pharmacies/preferred", getPreferredPharmacyFilter);
             
         }
 

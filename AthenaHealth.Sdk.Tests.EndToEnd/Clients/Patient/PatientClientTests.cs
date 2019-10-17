@@ -39,7 +39,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         [Fact]
         public async Task GetPreferredPharmacies_ReturnsPharmacy()
         {
-            Pharmacies pharmacies = await Client.Patients.GetPreferredPharmacies(195900, 300, new GetPreferredPharmacyFilter { DepartmentId = 1 });
+            PharmacyResponse pharmacies = await Client.Patients.GetPreferredPharmacies(195900, 300, new GetPreferredPharmacyFilter { DepartmentId = 1 });
             pharmacies.ShouldNotBeNull();
             pharmacies.Total.ShouldBe(1);
             pharmacies.Items.ShouldNotBeNull();

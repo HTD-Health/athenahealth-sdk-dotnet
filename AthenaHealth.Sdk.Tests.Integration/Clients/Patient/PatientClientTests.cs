@@ -34,13 +34,15 @@ namespace AthenaHealth.Sdk.Tests.Integration.Clients.Patient
         public void GetPatientById_InvalidId_ThrowsApiException()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Clients\Patient\GetPatient_InvalidId.json", HttpStatusCode.OK)); //In this case athena respond with HTTP 200 OK and status code 400 in response body
+            var responseBody = "{\"error\": \"Invalid practice.\",\"detailedmessage\": \"The practice ID does not exist.\"}";
+            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create(responseBody, HttpStatusCode.NotFound));
 
             // Act
-            ApiException exception = Should.Throw<ApiException>(async () => await patientClient.GetPatientById(0));
+            ApiException exc = Should.Throw<ApiValidationException>(async () => await patientClient.GetPatientById(0));
 
             // Assert
-            exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
+            exc.StatusCode.ShouldBe(HttpStatusCode.NotFound);
+            exc.ResponseError.ShouldBe(responseBody);
         }
 
         [Fact]
