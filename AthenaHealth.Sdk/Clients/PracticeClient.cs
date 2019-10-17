@@ -15,7 +15,17 @@ namespace AthenaHealth.Sdk.Clients
         {
             _connection = connection;
         }
-        
+
+        /// <summary>
+        /// Returns <see cref="Practice"/> for <see cref="IAthenaHealthClient.PracticeId"/>.
+        /// </summary>
+        /// <param name="filter"></param>
+        /// <returns></returns>
+        public async Task<Practice> GetCurrentPractice(BaseLimitFilter filter = null)
+        {
+            return await GetById(_connection.Credentials.PracticeId, filter);
+        }
+
         public async Task<Practice> GetById(int practiceId, BaseLimitFilter filter = null)
         {
             PracticeResponse result = await _connection.Get<PracticeResponse>($"{practiceId}/practiceinfo", filter);

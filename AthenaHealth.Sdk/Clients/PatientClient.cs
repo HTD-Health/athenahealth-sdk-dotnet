@@ -8,34 +8,34 @@ namespace AthenaHealth.Sdk.Clients
 {
     public class PatientClient : IPatientClient
     {
-        public IConnection Connection { get; private set; }
+        private readonly IConnection _connection;
 
         public PatientClient(IConnection connection)
         {
-            Connection = connection;
+            _connection = connection;
         }
         
         public async Task<Patient> GetPatientById(int patientId, GetPatientByIdFilter getPatientByIdFilter = null)
         {
-            return await Connection.Get<Patient>($"patients/{patientId}", getPatientByIdFilter);
+            return await _connection.Get<Patient>($"patients/{patientId}", getPatientByIdFilter);
             
         }
 
-        public async Task<Pharmacy> GetDefaultPharmacy(int practiceId, int patientId, int departmentId)
+        public async Task<Pharmacy> GetDefaultPharmacy(int patientId, int departmentId)
         {
-            return await Connection.Get<Pharmacy>($"{practiceId}/chart/{patientId}/pharmacies/default", new{DepartmentId = departmentId});
+            return await _connection.Get<Pharmacy>($"{_connection.Credentials.PracticeId}/chart/{patientId}/pharmacies/default", new{DepartmentId = departmentId});
             
         }
 
-        public async Task<PharmacyResponse> GetPreferredPharmacies(int practiceId, int patientId, GetPreferredPharmacyFilter getPreferredPharmacyFilter)
+        public async Task<PharmacyResponse> GetPreferredPharmacies(int patientId, GetPreferredPharmacyFilter getPreferredPharmacyFilter)
         {
-            return await Connection.Get<PharmacyResponse>($"{practiceId}/chart/{patientId}/pharmacies/preferred", getPreferredPharmacyFilter);
+            return await _connection.Get<PharmacyResponse>($"{_connection.Credentials.PracticeId}/chart/{patientId}/pharmacies/preferred", getPreferredPharmacyFilter);
             
         }
 
-        public async Task<IEnumerable<EnhancedBestmatchResponse>> EnhancedBestmatch(int practiceId, EnhancedBestmatchFilter queryParameters)
+        public async Task<IEnumerable<EnhancedBestmatchResponse>> EnhancedBestmatch(EnhancedBestmatchFilter queryParameters)
         {
-            return await Connection.Get< IEnumerable<EnhancedBestmatchResponse>>($"{practiceId}/patients/enhancedbestmatch", queryParameters);
+            return await _connection.Get< IEnumerable<EnhancedBestmatchResponse>>($"{_connection.Credentials.PracticeId}/patients/enhancedbestmatch", queryParameters);
         }
     }
 }

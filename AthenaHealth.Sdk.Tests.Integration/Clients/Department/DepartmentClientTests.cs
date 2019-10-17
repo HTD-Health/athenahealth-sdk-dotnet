@@ -14,7 +14,7 @@ namespace AthenaHealth.Sdk.Tests.Integration.Clients.Department
         {
             var departmentClient = new Sdk.Clients.DepartmentClient(ConnectionFactory.CreateFromFile(@"Clients\Department\GetAll_Extended.json"));
 
-            DepartmentResponse departmentResponse = await departmentClient.GetAll(195900);
+            DepartmentResponse departmentResponse = await departmentClient.GetAll();
 
             departmentResponse.ShouldNotBeNull();
             departmentResponse.Total.ShouldBe(31);
@@ -29,7 +29,7 @@ namespace AthenaHealth.Sdk.Tests.Integration.Clients.Department
         {
             var departmentClient = new Sdk.Clients.DepartmentClient(ConnectionFactory.CreateFromFile(@"Clients\Department\GetById_ExistingId.json"));
 
-            var departmentResponse = await departmentClient.GetById(195900, 1);
+            var departmentResponse = await departmentClient.GetById(1);
 
             departmentResponse.ShouldNotBeNull();
             departmentResponse.Id.ShouldBe("1");

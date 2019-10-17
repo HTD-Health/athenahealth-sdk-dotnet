@@ -67,7 +67,7 @@ namespace AthenaHealth.Sdk.Tests.Integration.Clients.Patient
             };
 
             // Act
-            var result = await patientClient.EnhancedBestmatch(195900, queryParameters);
+            var result = await patientClient.EnhancedBestmatch(queryParameters);
 
             // Assert
             result.ShouldNotBeNull();
@@ -96,7 +96,7 @@ namespace AthenaHealth.Sdk.Tests.Integration.Clients.Patient
             };
 
             // Act
-            var result = await patientClient.EnhancedBestmatch(195900, queryParameters);
+            var result = await patientClient.EnhancedBestmatch(queryParameters);
 
             // Assert
             result.ShouldNotBeNull();
@@ -125,7 +125,7 @@ namespace AthenaHealth.Sdk.Tests.Integration.Clients.Patient
             };
 
             // Act
-            ApiException exception = Should.Throw<ApiException>(async () => await patientClient.EnhancedBestmatch(195900, queryParameters));
+            ApiException exception = Should.Throw<ApiException>(async () => await patientClient.EnhancedBestmatch(queryParameters));
 
             // Assert
             exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
@@ -152,7 +152,7 @@ namespace AthenaHealth.Sdk.Tests.Integration.Clients.Patient
             };
 
             // Act
-            ApiException exception = Should.Throw<ApiException>(async () => await patientClient.EnhancedBestmatch(195900, queryParameters));
+            ApiException exception = Should.Throw<ApiException>(async () => await patientClient.EnhancedBestmatch(queryParameters));
 
             // Assert
             exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
@@ -165,7 +165,7 @@ namespace AthenaHealth.Sdk.Tests.Integration.Clients.Patient
             var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Clients\Patient\GetDefaultPharmacy.json", HttpStatusCode.OK));
 
             // Act
-            var result = await patientClient.GetDefaultPharmacy(195900, 300, 1);
+            var result = await patientClient.GetDefaultPharmacy(300, 1);
 
             // Assert
             result.ShouldNotBeNull();
@@ -184,7 +184,7 @@ namespace AthenaHealth.Sdk.Tests.Integration.Clients.Patient
             };
 
             // Act
-            var result = await patientClient.GetPreferredPharmacies(195900, 300, queryParameters);
+            var result = await patientClient.GetPreferredPharmacies(300, queryParameters);
 
             // Assert
             result.ShouldNotBeNull();

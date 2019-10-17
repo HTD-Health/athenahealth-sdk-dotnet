@@ -62,15 +62,15 @@ namespace AthenaHealth.Sdk.Sample.Console
             try
             {
                 "Department.GetAll".Display();
-                var response = await client.Departments.GetAll(client.PracticeId);
+                var response = await client.Departments.GetAll();
                 response.Display();
 
                 "Department.GetById=1".Display();
-                var department = await client.Departments.GetById(client.PracticeId, 1);
+                var department = await client.Departments.GetById(1);
                 department.Display();
 
                 "Department.GetById=999".Display();
-                department = await client.Departments.GetById(client.PracticeId, 999);
+                department = await client.Departments.GetById(999);
                 department.Display();
             }
             catch (ApiValidationException e)

@@ -21,7 +21,7 @@ namespace AthenaHealth.Sdk.Tests.Integration.EndToEnd
         [Fact]
         public async Task GetAll_ReturnsRecords()
         {
-            ProviderResponse response = await _client.Providers.GetAll(195900);
+            ProviderResponse response = await _client.Providers.GetAll();
 
             if (response.Total > 0)
             {
@@ -44,7 +44,7 @@ namespace AthenaHealth.Sdk.Tests.Integration.EndToEnd
         public async Task GetAll_ProviderListRequested_ReturnedRecordsWithProviders()
         {
             ProviderResponse response = await _client.Providers
-                .GetAll(195900, new GetProviderFilter() { ShowAllProviderIds = true });
+                .GetAll(new GetProviderFilter() { ShowAllProviderIds = true });
 
             if (response.Total > 0)
             {
@@ -64,7 +64,7 @@ namespace AthenaHealth.Sdk.Tests.Integration.EndToEnd
         public async Task GetAll_ProviderListNotRequested_ReturnedRecordsWithoutProviders()
         {
             var departmentResponse = await _client.Providers
-                .GetAll(195900, new GetProviderFilter() { ShowAllProviderIds = false });
+                .GetAll(new GetProviderFilter() { ShowAllProviderIds = false });
 
             if (departmentResponse.Total > 0)
             {
@@ -81,7 +81,7 @@ namespace AthenaHealth.Sdk.Tests.Integration.EndToEnd
         public async Task GetAll_LimitEqual5_ReturnsOnly5Records()
         {
             ProviderResponse departmentResponse = await _client.Providers
-                .GetAll(195900, new GetProviderFilter() { Limit = 5 });
+                .GetAll(new GetProviderFilter() { Limit = 5 });
 
             if (departmentResponse.Total > 0)
             {
@@ -105,7 +105,7 @@ namespace AthenaHealth.Sdk.Tests.Integration.EndToEnd
         [Fact]
         public async Task GetById_ExistingId_ReturnsRecordWithFederalIdNumber()
         {
-            ProviderExtended response = await _client.Providers.GetById(195900, 86,
+            ProviderExtended response = await _client.Providers.GetById(86,
                 new GetByIdProviderFilter() { ShowFederalIdNumber = 1 });
 
             response.FederalIdNumber.ShouldBeGreaterThan(0);
@@ -114,7 +114,7 @@ namespace AthenaHealth.Sdk.Tests.Integration.EndToEnd
         [Fact]
         public async Task GetById_ExistingId_ReturnsRecord()
         {
-            ProviderExtended response = await _client.Providers.GetById(195900, 86,
+            ProviderExtended response = await _client.Providers.GetById(86,
                 new GetByIdProviderFilter() { ShowFederalIdNumber = 0 });
 
             response.FederalIdNumber.ShouldBe(0);
@@ -124,14 +124,14 @@ namespace AthenaHealth.Sdk.Tests.Integration.EndToEnd
         public async Task GetById_NotExistingId_ThrowsApiException()
         {
             await Assert.ThrowsAsync<ApiValidationException>(() =>
-                _client.Providers.GetById(195900, 999)
+                _client.Providers.GetById(999)
                 );
         }
 
         [Fact]
         public async Task GetProviderTypes_ReturnsRecords()
         {
-            ProviderTypeResponse response = await _client.Providers.GetProviderTypes(195900);
+            ProviderTypeResponse response = await _client.Providers.GetProviderTypes();
 
             if (response.Total > 0)
             {
@@ -150,7 +150,7 @@ namespace AthenaHealth.Sdk.Tests.Integration.EndToEnd
         public async Task GetProviderTypes_LimitEqual5_ReturnsOnly5Records()
         {
             ProviderTypeResponse response = await _client.Providers
-                .GetProviderTypes(195900, new BaseLimitFilter() { Limit = 5 });
+                .GetProviderTypes(new BaseLimitFilter() { Limit = 5 });
 
             if (response.Total > 0)
             {

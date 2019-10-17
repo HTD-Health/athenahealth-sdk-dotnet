@@ -9,9 +9,10 @@ namespace AthenaHealth.Sdk.Clients
     {
         Task<Patient> GetPatientById(int patientId, GetPatientByIdFilter getPatientByIdFilter = null);
 
-        Task<IEnumerable<EnhancedBestmatchResponse>> EnhancedBestmatch(int practiceId, EnhancedBestmatchFilter queryParameters);
+        Task<IEnumerable<EnhancedBestmatchResponse>> EnhancedBestmatch(EnhancedBestmatchFilter queryParameters);
 
-        Task<Pharmacy> GetDefaultPharmacy(int practiceId, int patientId, int departmentId);
-        Task<PharmacyResponse> GetPreferredPharmacies(int practiceId, int patientId, GetPreferredPharmacyFilter getPreferredPharmacyFilter);
+        Task<Pharmacy> GetDefaultPharmacy(int patientId, int departmentId);
+
+        Task<PharmacyResponse> GetPreferredPharmacies(int patientId, GetPreferredPharmacyFilter getPreferredPharmacyFilter);
     }
 }

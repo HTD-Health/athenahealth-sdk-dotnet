@@ -16,19 +16,19 @@ namespace AthenaHealth.Sdk.Clients
             _connection = connection;
         }
 
-        public async Task<ProviderTypeResponse> GetProviderTypes(int practiceId, BaseLimitFilter filter = null)
+        public async Task<ProviderTypeResponse> GetProviderTypes(BaseLimitFilter filter = null)
         {
-            return await _connection.Get<ProviderTypeResponse>($"{practiceId}/reference/providertypes", filter);
+            return await _connection.Get<ProviderTypeResponse>($"{_connection.Credentials.PracticeId}/reference/providertypes", filter);
         }
 
-        public async Task<ProviderResponse> GetAll(int practiceId, GetProviderFilter filter = null)
+        public async Task<ProviderResponse> GetAll(GetProviderFilter filter = null)
         {
-            return await _connection.Get<ProviderResponse>($"{practiceId}/providers", filter);
+            return await _connection.Get<ProviderResponse>($"{_connection.Credentials.PracticeId}/providers", filter);
         }
 
-        public async Task<ProviderExtended> GetById(int practiceId, int providerId, GetByIdProviderFilter filter = null)
+        public async Task<ProviderExtended> GetById(int providerId, GetByIdProviderFilter filter = null)
         {
-            var result = await _connection.Get<ProviderExtended[]>($"{practiceId}/providers/{providerId}", filter);
+            var result = await _connection.Get<ProviderExtended[]>($"{_connection.Credentials.PracticeId}/providers/{providerId}", filter);
             if (result.Length == 1)
             {
                 return result.First();
