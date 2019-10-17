@@ -69,9 +69,9 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         }
 
         [Fact]
-        public async Task GetById_NotExistingId_ThrowsApiException()
+        public void GetById_NotExistingId_ThrowsApiException()
         {
-            await Assert.ThrowsAsync<ApiValidationException>(() => _client.Practices.GetById(666));
+            Should.Throw<ApiValidationException>(async () => await _client.Practices.GetById(666));
         }
     }
 }

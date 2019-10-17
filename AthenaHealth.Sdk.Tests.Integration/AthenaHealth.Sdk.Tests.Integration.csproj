@@ -46,7 +46,7 @@
     <None Update="Data\Patient\GetPreferredPharmacies.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Data\Patient\Patient.json">
+    <None Update="Data\Patient\GetPatient.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

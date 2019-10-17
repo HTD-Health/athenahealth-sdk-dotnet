@@ -1,0 +1,889 @@
+[
+  {
+    "email": "test@test.com",
+    "portalaccessgiven": true,
+    "driverslicense": true,
+    "contactpreference_billing_phone": false,
+    "address2": "Unit #123",
+    "ethnicitycode": "declined",
+    "contactpreference": "MOBILEPHONE",
+    "contactrelationship": "SPOUSE",
+    "guarantorssn": "123456789",
+    "contactpreference_lab_sms": true,
+    "guarantordob": "01/06/2008",
+    "zip": "111",
+    "employerphone": "8885559371",
+    "contactmobilephone": "6122329999",
+    "nextkinphone": "6122327777",
+    "portaltermsonfile": true,
+    "status": "active",
+    "portalstatus": {
+      "registered": true,
+      "noportal": false,
+      "status": "REGISTERED",
+      "lastlogindate": "11/15/2014",
+      "lastloginentity": "PATIENT",
+      "termsaccepted": true,
+      "blockedfailedlogins": false,
+      "familyregistered": false,
+      "familyblockedfailedlogins": false,
+      "entitytodisplay": "PATIENT",
+      "portalregistrationdate": "10/31/2009"
+    },
+    "ssn": "123456789",
+    "guarantorcity": "SOUTHBRIDGE",
+    "guarantorzip": "01550",
+    "privacyinformationverified": true,
+    "primarydepartmentid": "148",
+    "contactpreference_lab_email": true,
+    "balances": [
+      {
+        "balance": "-978.7",
+        "departmentlist": "1,21,102,144,145,148,150,157,162,172",
+        "providergroupid": 1,
+        "cleanbalance": true
+      },
+      {
+        "balance": 0,
+        "departmentlist": "62,142,164",
+        "providergroupid": 2,
+        "cleanbalance": true
+      },
+      {
+        "balance": 0,
+        "departmentlist": "82",
+        "providergroupid": 22,
+        "cleanbalance": true
+      }
+    ],
+    "contactpreference_announcement_sms": true,
+    "emailexists": true,
+    "race": [
+      "declined"
+    ],
+    "firstappointment": "08/20/2010 10:30",
+    "language6392code": "eng",
+    "insurances": [
+      {
+        "insurancepolicyholdercountrycode": "USA",
+        "sequencenumber": 3,
+        "insurancepolicyholderlastname": "TESTTEST",
+        "insuredentitytypeid": 1,
+        "insuranceidnumber": "999999999",
+        "relationshiptoinsured": "Self",
+        "eligibilitystatus": "Unverified",
+        "insuredfirstname": "TEST",
+        "insurancepackageaddress1": "PO BOX 986020",
+        "insuredcountrycode": "USA",
+        "insurancepolicyholdersex": "M",
+        "eligibilityreason": "Athena",
+        "ircname": "BCBS-MA",
+        "insuredlastname": "TESTTEST",
+        "insuranceplanname": "BCBS-MA: BLUE CROSS BLUE SHIELD",
+        "insurancetype": "Group Policy",
+        "insuredsex": "M",
+        "insurancephone": "(800) 882-2060",
+        "insurancepackagestate": "MA",
+        "insurancepackagecity": "BOSTON",
+        "id": "23225",
+        "relationshiptoinsuredid": 1,
+        "insuranceid": "23225",
+        "insurancepolicyholder": "TEST TESTTEST",
+        "eligibilitylastchecked": "04/03/2019",
+        "insurancepolicyholderfirstname": "TEST",
+        "insurancepackageid": 1424,
+        "insurancepolicyholdercountryiso3166": "US",
+        "insuranceplandisplayname": "BCBS-MA",
+        "insurancepackagezip": "02298-6020",
+        "insuredcountryiso3166": "US"
+      },
+      {
+        "insurancepolicyholdercountrycode": "USA",
+        "sequencenumber": 5,
+        "insuredmiddleinitial": "DASDAD",
+        "insurancepolicyholderlastname": "JANE",
+        "insuredentitytypeid": 1,
+        "insuranceidnumber": "ABC123456",
+        "insurancepolicyholderstate": "MN",
+        "insurancepolicyholderzip": "55124",
+        "insurancepolicyholderdob": "05/20/1980",
+        "relationshiptoinsured": "Spouse",
+        "eligibilitystatus": "Unverified",
+        "insuredfirstname": "MARY",
+        "insurancepolicyholderaddress1": "123 MAIN ST",
+        "insurancepackageaddress1": "PO BOX 986020",
+        "insuredcountrycode": "USA",
+        "insurancepolicyholdersex": "F",
+        "eligibilityreason": "Athena",
+        "insuredzip": "55124",
+        "ircname": "BCBS-MA",
+        "insuredlastname": "JANE",
+        "insuranceplanname": "BCBS-MA: BCBS (PPO)",
+        "insurancetype": "Group Policy",
+        "insuredsex": "F",
+        "insuredcity": "APPLE VALLEY",
+        "insurancephone": "(800) 882-2060",
+        "insureddob": "05/20/1980",
+        "insurancepackagestate": "MA",
+        "insurancepackagecity": "BOSTON",
+        "id": "21084",
+        "insuredaddress": "123 MAIN ST",
+        "insuredstate": "MN",
+        "relationshiptoinsuredid": 2,
+        "insuranceid": "21084",
+        "insurancepolicyholder": "MARY JANE",
+        "eligibilitylastchecked": "06/25/2019",
+        "insurancepolicyholdermiddlename": "DASDAD",
+        "insurancepolicyholderfirstname": "MARY",
+        "insurancepackageid": 8477,
+        "insurancepolicyholdercountryiso3166": "US",
+        "insuranceplandisplayname": "BCBS-MA (PPO)",
+        "insurancepolicyholdercity": "APPLE VALLEY",
+        "insurancepackagezip": "02298-6020",
+        "insuredcountryiso3166": "US"
+      },
+      {
+        "insurancepolicyholderssn": "501944150",
+        "insuranceplanname": "PAYMENT PLAN",
+        "insurancetype": "Commercial",
+        "insurancepolicyholderlastname": "SEGOVIA",
+        "insuredcity": "SOUTHBRIDGE",
+        "insureddob": "03/26/1974",
+        "id": "1442",
+        "insuranceidnumber": "123456789",
+        "insuredaddress": "8762 STONERIDGE CT",
+        "relationshiptoinsuredid": 1,
+        "insuranceid": "1442",
+        "insurancepolicyholder": "NOEL SEGOVIA",
+        "insurancepolicyholderdob": "03/26/1974",
+        "insurancepolicyholdersuffix": "IV",
+        "eligibilitystatus": "Eligible",
+        "insuredfirstname": "NOEL",
+        "insurancepolicyholderfirstname": "NOEL",
+        "insurancepolicyholderaddress1": "8762 STONERIDGE CT",
+        "insurancepackageid": -500,
+        "insuredssn": "501944150",
+        "insurednamesuffix": "IV",
+        "ircname": "Self-Pay (cash)",
+        "insurancepolicyholdercity": "SOUTHBRIDGE",
+        "insuredlastname": "SEGOVIA"
+      },
+      {
+        "insuranceplanname": "PAYMENT PLAN",
+        "insurancetype": "Commercial",
+        "id": "18235",
+        "relationshiptoinsuredid": 1,
+        "insuranceid": "18235",
+        "eligibilitystatus": "Unverified",
+        "insurancepackageid": -500,
+        "ircname": "Self-Pay (cash)"
+      },
+      {
+        "insurancepolicyholdercountrycode": "USA",
+        "insuranceplanname": "*SELF PAY*",
+        "insurancetype": "Personal Payment (Cash - No Insurance)",
+        "insuredentitytypeid": 1,
+        "id": "22057",
+        "relationshiptoinsuredid": 1,
+        "insuranceid": "22057",
+        "relationshiptoinsured": "Self",
+        "eligibilitystatus": "Unverified",
+        "insurancepackageid": 0,
+        "insuredcountrycode": "USA",
+        "insurancepolicyholdercountryiso3166": "US",
+        "ircname": "Self-Pay (cash)",
+        "insuredcountryiso3166": "US"
+      },
+      {
+        "insurancepolicyholdercountrycode": "USA",
+        "insuranceplanname": "*SELF PAY*",
+        "insurancetype": "Personal Payment (Cash - No Insurance)",
+        "insuredentitytypeid": 1,
+        "id": "22230",
+        "relationshiptoinsuredid": 1,
+        "insuranceid": "22230",
+        "relationshiptoinsured": "Self",
+        "eligibilitystatus": "Unverified",
+        "insurancepackageid": 0,
+        "insuredcountrycode": "USA",
+        "insurancepolicyholdercountryiso3166": "US",
+        "ircname": "Self-Pay (cash)",
+        "insuredcountryiso3166": "US"
+      },
+      {
+        "insurancepolicyholdercountrycode": "USA",
+        "insuranceplanname": "*SELF PAY*",
+        "insurancetype": "Personal Payment (Cash - No Insurance)",
+        "insuredentitytypeid": 1,
+        "id": "22236",
+        "relationshiptoinsuredid": 1,
+        "insuranceid": "22236",
+        "relationshiptoinsured": "Self",
+        "eligibilitystatus": "Unverified",
+        "insurancepackageid": 0,
+        "insuredcountrycode": "USA",
+        "insurancepolicyholdercountryiso3166": "US",
+        "ircname": "Self-Pay (cash)",
+        "insuredcountryiso3166": "US"
+      },
+      {
+        "insuranceplanname": "PAYMENT PLAN",
+        "insurancetype": "Commercial",
+        "id": "22535",
+        "relationshiptoinsuredid": 1,
+        "insuranceid": "22535",
+        "eligibilitystatus": "Unverified",
+        "insurancepackageid": -500,
+        "ircname": "Self-Pay (cash)"
+      },
+      {
+        "insurancepolicyholdercountrycode": "USA",
+        "insuranceplanname": "*SELF PAY*",
+        "insurancetype": "Personal Payment (Cash - No Insurance)",
+        "insuredentitytypeid": 1,
+        "id": "22667",
+        "relationshiptoinsuredid": 1,
+        "insuranceid": "22667",
+        "relationshiptoinsured": "Self",
+        "eligibilitystatus": "Unverified",
+        "insurancepackageid": 0,
+        "insuredcountrycode": "USA",
+        "insurancepolicyholdercountryiso3166": "US",
+        "ircname": "Self-Pay (cash)",
+        "insuredcountryiso3166": "US"
+      },
+      {
+        "insurancepolicyholdercountrycode": "USA",
+        "insuranceplanname": "*SELF PAY*",
+        "insurancetype": "Personal Payment (Cash - No Insurance)",
+        "insuredentitytypeid": 1,
+        "id": "23060",
+        "relationshiptoinsuredid": 1,
+        "insuranceid": "23060",
+        "relationshiptoinsured": "Self",
+        "eligibilitystatus": "Unverified",
+        "insurancepackageid": 0,
+        "insuredcountrycode": "USA",
+        "insurancepolicyholdercountryiso3166": "US",
+        "ircname": "Self-Pay (cash)",
+        "insuredcountryiso3166": "US"
+      },
+      {
+        "insuranceplanname": "PAYMENT PLAN",
+        "insurancetype": "Commercial",
+        "id": "23107",
+        "relationshiptoinsuredid": 1,
+        "insuranceid": "23107",
+        "eligibilitystatus": "Unverified",
+        "insurancepackageid": -500,
+        "ircname": "Self-Pay (cash)"
+      },
+      {
+        "insuranceplanname": "PAYMENT PLAN",
+        "insurancetype": "Commercial",
+        "id": "23108",
+        "relationshiptoinsuredid": 1,
+        "insuranceid": "23108",
+        "eligibilitystatus": "Unverified",
+        "insurancepackageid": -500,
+        "ircname": "Self-Pay (cash)"
+      },
+      {
+        "insuranceplanname": "PAYMENT PLAN",
+        "insurancetype": "Commercial",
+        "id": "23109",
+        "relationshiptoinsuredid": 1,
+        "insuranceid": "23109",
+        "eligibilitystatus": "Unverified",
+        "insurancepackageid": -500,
+        "ircname": "Self-Pay (cash)"
+      },
+      {
+        "insuranceplanname": "PAYMENT PLAN",
+        "insurancetype": "Commercial",
+        "id": "23110",
+        "relationshiptoinsuredid": 1,
+        "insuranceid": "23110",
+        "eligibilitystatus": "Unverified",
+        "insurancepackageid": -500,
+        "ircname": "Self-Pay (cash)"
+      },
+      {
+        "insuranceplanname": "PAYMENT PLAN",
+        "insurancetype": "Commercial",
+        "id": "23111",
+        "relationshiptoinsuredid": 1,
+        "insuranceid": "23111",
+        "eligibilitystatus": "Unverified",
+        "insurancepackageid": -500,
+        "ircname": "Self-Pay (cash)"
+      },
+      {
+        "insuranceplanname": "PAYMENT PLAN",
+        "insurancetype": "Commercial",
+        "id": "23112",
+        "relationshiptoinsuredid": 1,
+        "insuranceid": "23112",
+        "eligibilitystatus": "Unverified",
+        "insurancepackageid": -500,
+        "ircname": "Self-Pay (cash)"
+      },
+      {
+        "insurancepolicyholdercountrycode": "USA",
+        "insurancepolicyholderlastname": "SS",
+        "insuredentitytypeid": 1,
+        "insuranceidnumber": "22236",
+        "casepolicytypename": "Worker's Comp",
+        "relationshiptoinsured": "Self",
+        "eligibilitystatus": "Unverified",
+        "insuredfirstname": "SDS",
+        "insurancepackageaddress1": "PO BOX 1470",
+        "insuredcountrycode": "USA",
+        "insurancepolicyholdersex": "M",
+        "eligibilityreason": "Athena",
+        "ircname": "WC - Workers Comp Other",
+        "insuredlastname": "SS",
+        "insuranceplanname": "ARCHER DANIELS MIDLAND CO - WORKERS COMPENSATION",
+        "insurancetype": "Commercial",
+        "insuredsex": "M",
+        "insurancephone": "(217) 451-4601",
+        "insurancepackagestate": "IL",
+        "insurancepackagecity": "DECATUR",
+        "id": "23902",
+        "relationshiptoinsuredid": 1,
+        "insuranceid": "23902",
+        "insurancepolicyholder": "SDS SS",
+        "eligibilitylastchecked": "09/28/2019",
+        "insurancepolicyholderfirstname": "SDS",
+        "insurancepackageid": 22236,
+        "insurancepolicyholdercountryiso3166": "US",
+        "insurancepackagezip": "62525-1820",
+        "insuredcountryiso3166": "US"
+      },
+      {
+        "insurancepolicyholdercountrycode": "USA",
+        "insurancepolicyholderlastname": "SS",
+        "insuredentitytypeid": 1,
+        "insuranceidnumber": "22236",
+        "casepolicytypename": "Worker's Comp",
+        "relationshiptoinsured": "Self",
+        "eligibilitystatus": "Unverified",
+        "insuredfirstname": "SDS",
+        "expirationdate": "12/30/2019",
+        "insurancepackageaddress1": "PO BOX 1470",
+        "insuredcountrycode": "USA",
+        "insurancepolicyholdersex": "M",
+        "eligibilityreason": "Athena",
+        "ircname": "WC - Workers Comp Other",
+        "insuredlastname": "SS",
+        "insuranceplanname": "ARCHER DANIELS MIDLAND CO - WORKERS COMPENSATION",
+        "insurancetype": "Commercial",
+        "insuredsex": "M",
+        "insurancephone": "(217) 451-4601",
+        "insurancepackagestate": "IL",
+        "insurancepackagecity": "DECATUR",
+        "id": "23905",
+        "relationshiptoinsuredid": 1,
+        "insuranceid": "23905",
+        "insurancepolicyholder": "SDS SS",
+        "eligibilitylastchecked": "09/28/2019",
+        "insurancepolicyholderfirstname": "SDS",
+        "insurancepackageid": 22236,
+        "insurancepolicyholdercountryiso3166": "US",
+        "insurancepackagezip": "62525-1820",
+        "insuredcountryiso3166": "US"
+      }
+    ],
+    "primaryproviderid": "126",
+    "patientphoto": true,
+    "povertylevelincomerangedeclined": false,
+    "contactpreference_billing_email": false,
+    "contactname": "MARY JANE",
+    "contactpreference_announcement_email": false,
+    "registrationdate": "10/08/2008",
+    "firstname": "Peter",
+    "guarantorcountrycode": "USA",
+    "state": "FL",
+    "guardianlastname": "STRING",
+    "guarantoremployerid": "1",
+    "contactpreference_billing_sms": true,
+    "povertylevelfamilysizedeclined": false,
+    "driverslicenseurl": "/preview1/195900/patients/1/driverslicense",
+    "allpatientstatuses": [
+      {
+        "status": "active",
+        "primaryproviderid": "126",
+        "departmentid": 1
+      },
+      {
+        "status": "active",
+        "primaryproviderid": "47",
+        "departmentid": 62
+      },
+      {
+        "status": "active",
+        "primaryproviderid": "67",
+        "departmentid": 82
+      }
+    ],
+    "altfirstname": "Ben",
+    "maritalstatusname": "SINGLE",
+    "guarantormiddlename": "Paul",
+    "consenttotext": false,
+    "countrycode3166": "US",
+    "contactpreference_lab_phone": false,
+    "preferredname": "IV",
+    "racename": "Patient Declined",
+    "donotcall": false,
+    "suffix": "IV",
+    "departmentid": "1",
+    "homephone": "9372521234",
+    "guarantorstate": "MA",
+    "nextkinrelationship": "SPOUSE",
+    "claimbalancedetails": [
+      {
+        "claimdetails": [
+          {
+            "claimid": 166,
+            "departmentid": 1,
+            "servicedate": "11/07/2015",
+            "cleanbalance": true,
+            "patientbalance": 0,
+            "supervisingproviderid": 27,
+            "chargeleveldetail": [
+              {
+                "procedurecodesubmitted": "99213",
+                "servicedate": "11/07/2015",
+                "transactions": [
+                  {
+                    "date": "09/16/2019",
+                    "transfertype": "2",
+                    "id": 4839,
+                    "description": "OTHER",
+                    "amount": 230,
+                    "type": "TRANSFERIN"
+                  },
+                  {
+                    "date": "09/16/2019",
+                    "transfertype": "1",
+                    "id": 4838,
+                    "description": "OTHER",
+                    "amount": -230,
+                    "type": "TRANSFEROUT"
+                  }
+                ],
+                "id": 2328,
+                "procedurecode": "99213",
+                "description": "OFFICE OUTPATIENT VISIT 15 MINUTES",
+                "amount": 230
+              }
+            ],
+            "amount": 230
+          },
+          {
+            "claimid": 301,
+            "departmentid": 1,
+            "servicedate": "06/22/2016",
+            "cleanbalance": true,
+            "patientbalance": 0,
+            "supervisingproviderid": 27,
+            "chargeleveldetail": [
+              {
+                "procedurecodesubmitted": "99202",
+                "servicedate": "06/22/2016",
+                "transactions": [
+                  {
+                    "date": "11/09/2016",
+                    "transfertype": "p",
+                    "epaymentid": 3800,
+                    "id": 3256,
+                    "amount": -5,
+                    "type": "PAYMENT"
+                  },
+                  {
+                    "date": "02/22/2017",
+                    "transfertype": "p",
+                    "id": 3414,
+                    "amount": -220,
+                    "type": "PAYMENT"
+                  }
+                ],
+                "id": 2801,
+                "procedurecode": "99202",
+                "description": "INITIAL OFFICE VISIT LIMITED",
+                "amount": 225
+              }
+            ],
+            "amount": 225
+          },
+          {
+            "claimid": 311,
+            "departmentid": 1,
+            "servicedate": "07/18/2016",
+            "cleanbalance": true,
+            "patientbalance": 0,
+            "supervisingproviderid": 23,
+            "chargeleveldetail": [
+              {
+                "procedurecodesubmitted": "99490",
+                "servicedate": "07/18/2016",
+                "id": 2932,
+                "procedurecode": "99490",
+                "description": "CHRON CARE MANAGEMENT SRVC 20 MIN PER MONTH",
+                "amount": 777.67
+              }
+            ],
+            "amount": 777.67
+          },
+          {
+            "claimid": 391,
+            "departmentid": 1,
+            "servicedate": "03/31/2017",
+            "cleanbalance": true,
+            "patientbalance": 0,
+            "supervisingproviderid": 71,
+            "chargeleveldetail": [
+              {
+                "procedurecodesubmitted": "99396,25,59",
+                "procedurecodeothermodifier": "25,59",
+                "servicedate": "03/31/2017",
+                "id": 3929,
+                "procedurecode": "99396",
+                "description": "PERIODIC PREVENTIVE MED EST PATIENT 40 64YRS",
+                "amount": 370
+              },
+              {
+                "procedurecodesubmitted": "20610",
+                "servicedate": "03/31/2017",
+                "id": 3930,
+                "procedurecode": "20610",
+                "description": "ARTHROCENTESIS ASPIR&/INJ MAJOR JT/BURSA W/O US",
+                "amount": 229
+              }
+            ],
+            "amount": 599
+          },
+          {
+            "claimid": 356,
+            "departmentid": 1,
+            "servicedate": "04/20/2017",
+            "cleanbalance": true,
+            "patientbalance": 0,
+            "supervisingproviderid": 71,
+            "chargeleveldetail": [
+              {
+                "procedurecodesubmitted": "99490",
+                "servicedate": "04/20/2017",
+                "id": 3583,
+                "procedurecode": "99490",
+                "description": "CHRON CARE MANAGEMENT SRVC 20 MIN PER MONTH",
+                "amount": 327.44
+              }
+            ],
+            "amount": 327.44
+          },
+          {
+            "claimid": 357,
+            "departmentid": 1,
+            "servicedate": "04/20/2017",
+            "cleanbalance": true,
+            "patientbalance": 0,
+            "supervisingproviderid": 71,
+            "chargeleveldetail": [
+              {
+                "procedurecodesubmitted": "99490",
+                "servicedate": "04/20/2017",
+                "id": 3584,
+                "procedurecode": "99490",
+                "description": "CHRON CARE MANAGEMENT SRVC 20 MIN PER MONTH",
+                "amount": 327.44
+              }
+            ],
+            "amount": 327.44
+          },
+          {
+            "claimid": 358,
+            "departmentid": 1,
+            "servicedate": "05/01/2017",
+            "cleanbalance": true,
+            "patientbalance": 0,
+            "supervisingproviderid": 71,
+            "chargeleveldetail": [
+              {
+                "procedurecodesubmitted": "99490",
+                "servicedate": "05/01/2017",
+                "id": 3616,
+                "procedurecode": "99490",
+                "description": "CHRON CARE MANAGEMENT SRVC 20 MIN PER MONTH",
+                "amount": 409.3
+              }
+            ],
+            "amount": 409.3
+          },
+          {
+            "claimid": 390,
+            "departmentid": 1,
+            "servicedate": "07/12/2017",
+            "cleanbalance": true,
+            "patientbalance": 0,
+            "supervisingproviderid": 71,
+            "chargeleveldetail": [
+              {
+                "procedurecodesubmitted": "99396,25,59",
+                "procedurecodeothermodifier": "25,59",
+                "servicedate": "07/12/2017",
+                "id": 3928,
+                "procedurecode": "99396",
+                "description": "PERIODIC PREVENTIVE MED EST PATIENT 40 64YRS",
+                "amount": 370
+              }
+            ],
+            "amount": 370
+          },
+          {
+            "claimid": 393,
+            "departmentid": 1,
+            "servicedate": "11/03/2017",
+            "cleanbalance": true,
+            "patientbalance": 0,
+            "supervisingproviderid": 71,
+            "chargeleveldetail": [
+              {
+                "procedurecodesubmitted": "99490",
+                "servicedate": "11/03/2017",
+                "id": 3955,
+                "procedurecode": "99490",
+                "description": "CHRON CARE MANAGEMENT SRVC 20 MIN PER MONTH",
+                "amount": 409.3
+              }
+            ],
+            "amount": 409.3
+          },
+          {
+            "claimid": 528,
+            "departmentid": 1,
+            "servicedate": "03/03/2019",
+            "cleanbalance": true,
+            "patientbalance": 0,
+            "supervisingproviderid": 27,
+            "chargeleveldetail": [
+              {
+                "procedurecodesubmitted": "93295",
+                "servicedate": "03/03/2019",
+                "id": 4624,
+                "procedurecode": "93295",
+                "description": "DEV INTERROGREMOTE UP TO 90D SINGLE OR DUAL MLT LD",
+                "amount": 222
+              }
+            ],
+            "amount": 222
+          },
+          {
+            "claimid": 529,
+            "departmentid": 1,
+            "servicedate": "03/03/2019",
+            "cleanbalance": true,
+            "patientbalance": 0,
+            "supervisingproviderid": 27,
+            "chargeleveldetail": [
+              {
+                "procedurecodesubmitted": "93295",
+                "servicedate": "03/03/2019",
+                "id": 4625,
+                "procedurecode": "93295",
+                "description": "DEV INTERROGREMOTE UP TO 90D SINGLE OR DUAL MLT LD",
+                "amount": 222
+              }
+            ],
+            "amount": 222
+          },
+          {
+            "claimid": 530,
+            "departmentid": 1,
+            "servicedate": "03/03/2019",
+            "cleanbalance": true,
+            "patientbalance": 0,
+            "supervisingproviderid": 68,
+            "chargeleveldetail": [
+              {
+                "procedurecodesubmitted": "93295",
+                "servicedate": "03/03/2019",
+                "id": 4626,
+                "procedurecode": "93295",
+                "description": "DEV INTERROGREMOTE UP TO 90D SINGLE OR DUAL MLT LD",
+                "amount": 222
+              }
+            ],
+            "amount": 222
+          },
+          {
+            "claimid": 531,
+            "departmentid": 1,
+            "servicedate": "03/03/2019",
+            "cleanbalance": true,
+            "patientbalance": 0,
+            "supervisingproviderid": 68,
+            "chargeleveldetail": [
+              {
+                "procedurecodesubmitted": "93295",
+                "servicedate": "03/03/2019",
+                "id": 4627,
+                "procedurecode": "93295",
+                "description": "DEV INTERROGREMOTE UP TO 90D SINGLE OR DUAL MLT LD",
+                "amount": 222
+              }
+            ],
+            "amount": 222
+          },
+          {
+            "claimid": 615,
+            "departmentid": 1,
+            "servicedate": "06/06/2019",
+            "cleanbalance": true,
+            "patientbalance": 0,
+            "supervisingproviderid": 86,
+            "chargeleveldetail": [
+              {
+                "procedurecodesubmitted": "99202",
+                "servicedate": "06/06/2019",
+                "id": 4748,
+                "procedurecode": "99202",
+                "description": "INITIAL OFFICE VISIT LIMITED",
+                "amount": 225
+              }
+            ],
+            "amount": 225
+          },
+          {
+            "claimid": 642,
+            "departmentid": 1,
+            "servicedate": "09/19/2019",
+            "cleanbalance": true,
+            "patientbalance": 0,
+            "supervisingproviderid": 21,
+            "chargeleveldetail": [
+              {
+                "procedurecodesubmitted": "11040",
+                "servicedate": "09/19/2019",
+                "id": 4850,
+                "procedurecode": "11040",
+                "description": "DEBRIDEMENT SKIN PARTIAL THICKNESS",
+                "amount": 100
+              }
+            ],
+            "amount": 100
+          },
+          {
+            "claimid": 635,
+            "departmentid": 1,
+            "servicedate": "09/20/2019",
+            "cleanbalance": true,
+            "patientbalance": 0,
+            "supervisingproviderid": 21,
+            "chargeleveldetail": [
+              {
+                "procedurecodesubmitted": "11040",
+                "servicedate": "09/20/2019",
+                "id": 4840,
+                "procedurecode": "11040",
+                "description": "DEBRIDEMENT SKIN PARTIAL THICKNESS",
+                "amount": 100
+              }
+            ],
+            "amount": 100
+          },
+          {
+            "claimid": 647,
+            "departmentid": 1,
+            "servicedate": "09/27/2019",
+            "cleanbalance": true,
+            "patientbalance": 0,
+            "supervisingproviderid": 21,
+            "chargeleveldetail": [
+              {
+                "procedurecodesubmitted": "99490",
+                "servicedate": "09/27/2019",
+                "id": 4854,
+                "procedurecode": "99490",
+                "description": "CHRON CARE MANAGEMENT SRVC 20 MIN PER MONTH",
+                "amount": 40.93
+              }
+            ],
+            "amount": 40.93
+          },
+          {
+            "claimid": 648,
+            "departmentid": 1,
+            "servicedate": "09/28/2019",
+            "cleanbalance": true,
+            "patientbalance": 0,
+            "supervisingproviderid": 21,
+            "chargeleveldetail": [
+              {
+                "procedurecodesubmitted": "99490",
+                "servicedate": "09/28/2019",
+                "id": 4855,
+                "procedurecode": "99490",
+                "description": "CHRON CARE MANAGEMENT SRVC 20 MIN PER MONTH",
+                "amount": 40.93
+              }
+            ],
+            "amount": 40.93
+          }
+        ],
+        "providergroupid": 1,
+        "departmentids": "1,21,102,144,145,148,150,157,162,172"
+      }
+    ],
+    "referralsourceid": "2",
+    "contactpreference_appointment_email": false,
+    "homebound": false,
+    "nextkinname": "Mary Jane",
+    "contactpreference_appointment_sms": true,
+    "sexualorientation": "Something else, please describe",
+    "notes": "Testing",
+    "contactpreference_announcement_phone": false,
+    "lastemail": "lukasz.jachym@gmail.com",
+    "contacthomephone": "6122327777",
+    "guarantoraddresssameaspatient": false,
+    "lastname": "Tots",
+    "guarantorfirstname": "Peter",
+    "city": "MIAMI",
+    "lastappointment": "06/03/2019 08:00",
+    "povertylevelincomedeclined": false,
+    "guarantoremail": "test@test.com",
+    "middlename": "Paul",
+    "sex": "M",
+    "consenttocall": false,
+    "patientphotourl": "/preview1/195900/patients/1/photo",
+    "guardianfirstname": "STRING",
+    "mobilephone": "4154652155",
+    "hasmobile": true,
+    "guarantorsuffix": "IV",
+    "caresummarydeliverypreference": "PORTAL",
+    "guarantorlastname": "Ttt",
+    "guardianmiddlename": "STRING",
+    "contactpreference_appointment_phone": false,
+    "patientid": "1",
+    "dob": "09/07/1989",
+    "customfields": [
+      {
+        "customfieldid": "201",
+        "customfieldvalue": "1121"
+      },
+      {
+        "customfieldid": "21",
+        "customfieldvalue": "12322"
+      }
+    ],
+    "guarantorrelationshiptopatient": "1",
+    "address1": "100 Main Street",
+    "localpatientid": "1,271,282",
+    "guarantorphone": "9372521234",
+    "maritalstatus": "S",
+    "countrycode": "USA",
+    "guarantoraddress1": "8762 Stoneridge Ct",
+    "onlinestatementonly": true,
+    "guarantorcountrycode3166": "US"
+  }
+]

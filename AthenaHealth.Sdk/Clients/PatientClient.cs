@@ -3,7 +3,9 @@ using System.Threading.Tasks;
 using AthenaHealth.Sdk.Clients.Interfaces;
 using AthenaHealth.Sdk.Http;
 using AthenaHealth.Sdk.Models.Request;
+using System.Linq;
 using AthenaHealth.Sdk.Models.Response;
+using System;
 
 namespace AthenaHealth.Sdk.Clients
 {
@@ -18,7 +20,14 @@ namespace AthenaHealth.Sdk.Clients
         
         public async Task<Patient> GetPatientById(int patientId, GetPatientByIdFilter getPatientByIdFilter = null)
         {
-            return await _connection.Get<Patient>($"patients/{patientId}", getPatientByIdFilter);
+            var result = await _connection.Get<IEnumerable<Patient>>($"{_connection.PracticeId}/patients/{patientId}", getPatientByIdFilter);
+
+            if (result.Count() == 1)
+            {
+                return result.First();
+            }
+
+            throw new Exception("Number of Patients not equals 1.");
         }
 
         public async Task<Pharmacy> GetDefaultPharmacy(int patientId, int departmentId)
@@ -31,9 +40,9 @@ namespace AthenaHealth.Sdk.Clients
             return await _connection.Get<PharmacyResponse>($"{_connection.PracticeId}/chart/{patientId}/pharmacies/preferred", getPreferredPharmacyFilter);
         }
 
-        public async Task<IEnumerable<EnhancedBestmatchResponse>> EnhancedBestmatch(EnhancedBestmatchFilter queryParameters)
+        public async Task<IEnumerable<PatientWithScore>> EnhancedBestmatch(EnhancedBestmatchFilter queryParameters)
         {
-            return await _connection.Get< IEnumerable<EnhancedBestmatchResponse>>($"{_connection.PracticeId}/patients/enhancedbestmatch", queryParameters);
+            return await _connection.Get< IEnumerable<PatientWithScore>>($"{_connection.PracticeId}/patients/enhancedbestmatch", queryParameters);
         }
     }
 }
