@@ -30,7 +30,7 @@ namespace AthenaHealth.Sdk.Clients
                 return result.First();
             }
 
-            throw new Exception("Number of Departments not equals 1.");
+            throw new Exception("Number of Items not equals 1.");
         }
     }
 }

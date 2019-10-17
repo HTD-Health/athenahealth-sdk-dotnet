@@ -1,19 +1,20 @@
 ﻿using AthenaHealth.Sdk.Exceptions;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
+using AthenaHealth.Sdk.Tests.EndToEnd.Fixtures;
 using Shouldly;
 using System.Threading.Tasks;
 using Xunit;
 
 namespace AthenaHealth.Sdk.Tests.EndToEnd
 {
-    public class PracticeClientTests
+    public class PracticeClientTests : IClassFixture<AthenaHealthClientFixture>
     {
         private readonly IAthenaHealthClient _client;
 
-        public PracticeClientTests()
+        public PracticeClientTests(AthenaHealthClientFixture athenaHealthClientFixture)
         {
-            _client = new AthenaHealthClient(ApiVersion.Preview, "6yspwuq3wnx5n37jp9phqsmt", "Y9UxkbBge5EXutR", 195900);
+            _client = athenaHealthClientFixture.Client;
         }
 
         [Fact]
@@ -25,12 +26,12 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             {
                 response.ShouldNotBe(null);
                 response.Total.ShouldBeGreaterThan(0);
-                response.Practices.ShouldNotBe(null);
+                response.Items.ShouldNotBe(null);
             }
             else
             {
                 response.Total.ShouldBe(0);
-                response.Practices.Length.ShouldBe(0);
+                response.Items.Length.ShouldBe(0);
             }
         }
 
@@ -44,18 +45,18 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             {
                 if (response.Total > 5)
                 {
-                    response.Practices.Length.ShouldBe(5);
-                    response.Total.ShouldBeGreaterThan(response.Practices.Length);
+                    response.Items.Length.ShouldBe(5);
+                    response.Total.ShouldBeGreaterThan(response.Items.Length);
                 }
                 else
                 {
-                    response.Total.ShouldBe(response.Practices.Length);
+                    response.Total.ShouldBe(response.Items.Length);
                 }
             }
             else
             {
                 response.Total.ShouldBe(0);
-                response.Practices.Length.ShouldBe(0);
+                response.Items.Length.ShouldBe(0);
             }
         }
 

@@ -12,7 +12,7 @@ namespace AthenaHealth.Sdk.Models.Response
         public string Next { get; set; }
 
         [JsonProperty("departments")]
-        public Department[] Departments { get; set; }
+        public Department[] Items { get; set; }
     }
 
     public class Department
@@ -117,7 +117,7 @@ namespace AthenaHealth.Sdk.Models.Response
         public string[] ECommerceCreditCardTypes { get; set; }
 
         /// <summary>
-        /// Providers who see patients in this department.
+        /// Items who see patients in this department.
         /// </summary>
         [JsonProperty("providerlist")]
         public string[] ProviderList { get; set; }

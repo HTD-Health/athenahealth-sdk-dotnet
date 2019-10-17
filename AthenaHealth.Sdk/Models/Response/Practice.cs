@@ -10,7 +10,7 @@ namespace AthenaHealth.Sdk.Models.Response
         public int Total { get; set; }
 
         [JsonProperty("practiceinfo")]
-        public Practice[] Practices { get; set; }
+        public Practice[] Items { get; set; }
     }
 
     public class Practice
