@@ -14,6 +14,5 @@
 
         public string ClientId { get; }
         public string ClientSecret { get; }
-        public int PracticeId { get; set; }
     }
 }

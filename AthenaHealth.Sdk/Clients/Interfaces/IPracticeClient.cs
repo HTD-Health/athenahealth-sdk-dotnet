@@ -2,7 +2,7 @@
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
 
-namespace AthenaHealth.Sdk.Clients
+namespace AthenaHealth.Sdk.Clients.Interfaces
 {
     public interface IPracticeClient
     {

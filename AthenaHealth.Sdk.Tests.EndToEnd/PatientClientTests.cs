@@ -1,12 +1,12 @@
 ﻿using AthenaHealth.Sdk.Exceptions;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
-using AthenaHealth.Sdk.Tests.EndToEnd.Clients.Patient.Data;
 using Shouldly;
 using System;
 using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
+using AthenaHealth.Sdk.Tests.EndToEnd.Data.Patient;
 using Xunit;
 
 // ReSharper disable StringLiteralTypo
