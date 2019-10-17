@@ -14,5 +14,6 @@ namespace AthenaHealth.Sdk.Clients
         Task<Pharmacy> GetDefaultPharmacy(int practiceId, int patientId, int departmentId);
         Task<PharmacyResponse> GetPreferredPharmacies(int practiceId, int patientId, GetPreferredPharmacyFilter getPreferredPharmacyFilter);
         Task SetDefaultPharmacy(int practiceId, int patientId, SetPharmacyRequest setPharmacyRequest);
+        Task AddPreferredPharmacy(int practiceId, int patientId, SetPharmacyRequest setPharmacyRequest);
     }
 }

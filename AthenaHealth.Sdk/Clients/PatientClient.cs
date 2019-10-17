@@ -41,13 +41,16 @@ namespace AthenaHealth.Sdk.Clients
         }
 
         public async Task<IEnumerable<PatientWithScore>> EnhancedBestmatch(EnhancedBestmatchFilter queryParameters)
-        {
-            return await _connection.Get< IEnumerable<PatientWithScore>>($"{_connection.PracticeId}/patients/enhancedbestmatch", queryParameters);
-        }
-
         public async Task SetDefaultPharmacy(int practiceId, int patientId, SetPharmacyRequest setPharmacyRequest)
         {
+            return await _connection.Get< IEnumerable<PatientWithScore>>($"{_connection.PracticeId}/patients/enhancedbestmatch", queryParameters);
             await Connection.Put($"{practiceId}/chart/{patientId}/pharmacies/default", setPharmacyRequest);
+            
+        }
+
+        public async Task AddPreferredPharmacy(int practiceId, int patientId, SetPharmacyRequest setPharmacyRequest)
+        {
+            await Connection.Put($"{practiceId}/chart/{patientId}/pharmacies/preferred", setPharmacyRequest);
             
         }
     }

@@ -55,9 +55,7 @@ namespace AthenaHealth.Sdk.Http.Helpers
                     string stringValue = value.ToString();
                     if(jsonConverterAttribute != null)
                     {
-                        Converter converter = Activator.CreateInstance(jsonConverterAttribute.ConverterType) as Converter;
-
-                        if (converter != null)
+                        if (Activator.CreateInstance(jsonConverterAttribute.ConverterType) is Converter converter)
                             stringValue = converter.Convert(value).ToString();
                     }
 

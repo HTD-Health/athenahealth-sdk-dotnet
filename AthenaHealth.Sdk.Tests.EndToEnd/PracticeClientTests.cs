@@ -1,12 +1,12 @@
-﻿using AthenaHealth.Sdk.Exceptions;
+﻿using System.Threading.Tasks;
+using AthenaHealth.Sdk.Exceptions;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
 using AthenaHealth.Sdk.Tests.EndToEnd.Fixtures;
 using Shouldly;
-using System.Threading.Tasks;
 using Xunit;
 
-namespace AthenaHealth.Sdk.Tests.EndToEnd
+namespace AthenaHealth.Sdk.Tests.EndToEnd.Clients.Practice
 {
     public class PracticeClientTests : IClassFixture<AthenaHealthClientFixture>
     {
@@ -63,7 +63,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         [Fact]
         public async Task GetById_ExistingId_ReturnsRecord()
         {
-            Practice response = await _client.Practices.GetById(195900);
+            Models.Response.Practice response = await _client.Practices.GetById(195900);
 
             response.ShouldNotBeNull();
         }
