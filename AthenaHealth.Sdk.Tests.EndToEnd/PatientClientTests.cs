@@ -1,6 +1,7 @@
 ﻿using AthenaHealth.Sdk.Exceptions;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
+using AthenaHealth.Sdk.Tests.EndToEnd.Fixtures;
 using Shouldly;
 using System;
 using System.Globalization;
@@ -12,34 +13,42 @@ using Xunit;
 // ReSharper disable StringLiteralTypo
 namespace AthenaHealth.Sdk.Tests.EndToEnd
 {
-    public class PatientClientTests
+    public class PatientClientTests : IClassFixture<AthenaHealthClientFixture>
     {
-        public static AthenaHealthClient Client;
+        private readonly IAthenaHealthClient _client;
 
-        static PatientClientTests()
+        public PatientClientTests(AthenaHealthClientFixture athenaHealthClientFixture)
         {
-            Client = new AthenaHealthClient(ApiVersion.Preview, "3jv4q4py8jg9dw4uw3bxgnj9", "RyM7VpBbh89E9cw", 195900);
+            _client = athenaHealthClientFixture.Client;
         }
 
         [Fact]
         public async Task GetDefaultPharmacy_ReturnsPharmacy()
         {
-            Pharmacy pharmacy = await Client.Patients.GetDefaultPharmacy(300, 1);
+            Pharmacy pharmacy = await _client.Patients.GetDefaultPharmacy(300, 1);
 
+            // Assert
             pharmacy.State.ShouldNotBeEmpty();
             pharmacy.ClinicalProviderId.ShouldBeGreaterThan(0);
         }
 
         [Fact]
-        public async Task GetDefaultPharmacy_NotExistingPharmacy_ThrowsException()
+        public void GetDefaultPharmacy_NotExistingPharmacy_ThrowsException()
         {
-            await Assert.ThrowsAsync<ApiValidationException>(async () => await Client.Patients.GetDefaultPharmacy(300, 2));
+            // Arrange
+            // Act
+            // Assert
+            Should.Throw<ApiValidationException>(async () => await _client.Patients.GetDefaultPharmacy(300, 2));
         }
 
         [Fact]
         public async Task GetPreferredPharmacies_ReturnsPharmacy()
         {
-            PharmacyResponse pharmacies = await Client.Patients.GetPreferredPharmacies(300, new GetPreferredPharmacyFilter { DepartmentId = 1 });
+            // Arrange
+            // Act
+            PharmacyResponse pharmacies = await _client.Patients.GetPreferredPharmacies(300, new GetPreferredPharmacyFilter { DepartmentId = 1 });
+
+            // Assert
             pharmacies.ShouldNotBeNull();
             pharmacies.Total.ShouldBe(1);
             pharmacies.Items.ShouldNotBeNull();
@@ -48,9 +57,12 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         }
 
         [Fact]
-        public async Task GetPreferredPharmacies_NotExistingPharmacy_ThrowsException()
+        public void GetPreferredPharmacies_NotExistingPharmacy_ThrowsException()
         {
-            await Assert.ThrowsAsync<ApiValidationException>(async () => await Client.Patients.GetPreferredPharmacies(300, new GetPreferredPharmacyFilter { DepartmentId = 2 }));
+            // Arrange
+            // Act
+            // Assert
+            Should.Throw<ApiValidationException>(async () => await _client.Patients.GetPreferredPharmacies(300, new GetPreferredPharmacyFilter { DepartmentId = 2 }));
         }
 
         [Theory]
@@ -61,7 +73,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             DateTime dateOfBirth = DateTime.ParseExact(dob, "MM/dd/yyyy", CultureInfo.InvariantCulture);
 
             // Act
-            var result = await Client.Patients.EnhancedBestmatch(new Models.Request.EnhancedBestmatchFilter()
+            var result = await _client.Patients.EnhancedBestmatch(new EnhancedBestmatchFilter()
             {
                 DateOfBirth = dateOfBirth,
                 FirstName = firstName,
@@ -78,8 +90,56 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
                 MinScore = 1
             });
 
+            // Assert
             result.ShouldNotBeNull();
             result.Count().ShouldBeGreaterThan(0);
+        }
+
+        [Theory]
+        [ClassData(typeof(GetPatientByIdData))]
+        public async Task GetPatientById_PatientExists_ShouldNotThrowJsonSerializationException(int patientId)
+        {
+            // Arrange
+            // Act
+            var result = await _client.Patients.GetPatientById(patientId, new GetPatientByIdFilter()
+            {
+                ShowAllClaims = true,
+                ShowAllPatientDepartmentStatus = true,
+                ShowBalanceDetails = true,
+                Show2015EdCehrtValues = true,
+                ShowCustomFields = true,
+                ShowFullSsn = true,
+                ShowInsurance = true,
+                ShowLocalPatientId = true,
+                ShowPortalStatus = true
+            });
+
+            // Assert
+            result.ShouldNotBeNull();
+        }
+
+        [Fact]
+        public void GetPatientById_PatientDoesNotExists_ShouldThrowException()
+        {
+            // Arrange
+            var queryParameters = new GetPatientByIdFilter()
+            {
+                ShowAllClaims = true,
+                ShowAllPatientDepartmentStatus = true,
+                ShowBalanceDetails = true,
+                Show2015EdCehrtValues = true,
+                ShowCustomFields = true,
+                ShowFullSsn = true,
+                ShowInsurance = true,
+                ShowLocalPatientId = true,
+                ShowPortalStatus = true
+            };
+
+            // Act
+            ApiValidationException exception = Should.Throw<ApiValidationException>(async () => await _client.Patients.GetPatientById(0, queryParameters));
+
+            // Assert
+            exception.ShouldNotBeNull();
         }
 
         [Fact]
@@ -89,7 +149,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             DateTime dateOfBirth = DateTime.ParseExact("01/01/1982", "MM/dd/yyyy", CultureInfo.InvariantCulture);
 
             // Act
-            var result = await Client.Patients.EnhancedBestmatch(new Models.Request.EnhancedBestmatchFilter()
+            var result = await _client.Patients.EnhancedBestmatch(new EnhancedBestmatchFilter()
             {
                 DateOfBirth = dateOfBirth,
                 FirstName = "InvalidName",
@@ -105,6 +165,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
                 ShowPortalStatus = true
             });
 
+            // Assert
             result.ShouldNotBeNull();
             result.Count().ShouldBe(0);
         }

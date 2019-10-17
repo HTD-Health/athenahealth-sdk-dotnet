@@ -8,11 +8,11 @@ namespace AthenaHealth.Sdk.Models.Response
 {
     public class ProviderTypeResponse
     {
-        [JsonProperty("totalcount")]
-        public int Total { get; set; }
-
         [JsonProperty("next")]
         public string Next { get; set; }
+
+        [JsonProperty("totalcount")]
+        public int Total { get; set; }
 
         [JsonProperty("providertypes")]
         public ProviderType[] Items { get; set; }

@@ -17,32 +17,29 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public async Task GetPatientById_ValidId_ReturnsPatient()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\Patient.json"));
+            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetPatient.json"));
 
             // Act
             var result = await patientClient.GetPatientById(1);
 
             // Assert
             result.ShouldNotBeNull();
-            result.Email.ShouldBe("monroe86@hotmail.com");
-            result.DepartmentId.ShouldBe(162);
+            result.Email.ShouldBe("test@test.com");
+            result.DepartmentId.ShouldBe(1);
             result.Balances.ShouldNotBeEmpty();
-            result.Balances.First().Value.ShouldBe(10);
         }
 
         [Fact]
         public void GetPatientById_InvalidId_ThrowsApiException()
         {
             // Arrange
-            var responseBody = "{\"error\": \"Invalid practice.\",\"detailedmessage\": \"The practice ID does not exist.\"}";
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create(responseBody, HttpStatusCode.NotFound));
+            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{ \"missingfields\": [ \"patientid\" ], \"error\": \"Additional fields are required.\" }", HttpStatusCode.BadRequest));
 
             // Act
-            ApiException exc = Should.Throw<ApiValidationException>(async () => await patientClient.GetPatientById(0));
+            ApiException exception = Should.Throw<ApiException>(async () => await patientClient.GetPatientById(0));
 
             // Assert
-            exc.StatusCode.ShouldBe(HttpStatusCode.NotFound);
-            exc.ResponseError.ShouldBe(responseBody);
+            exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
         }
 
         [Fact]

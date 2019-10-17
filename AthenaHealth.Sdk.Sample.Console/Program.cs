@@ -15,23 +15,23 @@ namespace AthenaHealth.Sdk.Sample.Console
 
             await GetPracticeSample(client);
             await GetDepartmentSample(client);
+            await GetPatientSample(client);
 
             System.Console.ReadKey();
         }
 
         private static async Task GetPatientSample(IAthenaHealthClient client)
         {
-            //case 1
-            Patient patient = await client.Patients.GetPatientById(32000);
-
-
-            //case 2
-            var filter = new GetPatientByIdFilter
+            try
             {
-                DepartmentId = 1
-            };
-
-            var patient2 = client.Patients.GetPatientById(32000, filter);
+                "Patient.GetPatientById=1".Display();
+                Patient response = await client.Patients.GetPatientById(1);
+                response.Display();
+            }
+            catch (ApiValidationException e)
+            {
+                System.Console.WriteLine(e.Message);
+            }
         }
 
         private static async Task GetPracticeSample(IAthenaHealthClient client)
