@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.ComponentModel.DataAnnotations;
+using Newtonsoft.Json;
 // ReSharper disable StringLiteralTypo
 // ReSharper disable CommentTypo
 
@@ -15,6 +16,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// <summary>
         /// The athenaNet department id.
         /// </summary>
+        [Required]
         [JsonProperty(PropertyName = "departmentid")]
         public int DepartmentId { get; set; }
 
