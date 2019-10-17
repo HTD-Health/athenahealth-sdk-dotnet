@@ -43,9 +43,6 @@
     <None Update="Clients\Patient\GetDefaultPharmacy.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Clients\Patient\GetPatient_InvalidId.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Update="Clients\Patient\GetPreferredPharmacies.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

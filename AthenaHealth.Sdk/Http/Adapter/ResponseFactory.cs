@@ -8,7 +8,6 @@ namespace AthenaHealth.Sdk.Http.Adapter
 {
     public static class ResponseFactory
     {
-        private static readonly AthenaResponsePipeline ResponsePipeline = new AthenaResponsePipeline();
         public static async Task<Response> Create(HttpResponseMessage httpResponse)
         {
             
@@ -44,8 +43,6 @@ namespace AthenaHealth.Sdk.Http.Adapter
                 httpResponse.Headers.ToDictionary(h => h.Key, h => h.Value.First()),
                 contentType,
                 httpResponse.IsSuccessStatusCode);
-
-            ResponsePipeline.Execute(response);
 
             return response;
         }
