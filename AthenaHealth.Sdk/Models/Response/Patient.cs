@@ -1,9 +1,42 @@
-﻿using Newtonsoft.Json;
+﻿using AthenaHealth.Sdk.Models.Converters;
+using AthenaHealth.Sdk.Models.Enums;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using System;
 
 namespace AthenaHealth.Sdk.Models.Response
 {
+    public class PatientResponse
+    {
+        [JsonProperty("totalcount")]
+        public int Total { get; set; }
+
+        [JsonProperty("next")]
+        public string Next { get; set; } 
+        
+        [JsonProperty("previous")]
+        public string Previous { get; set; }
+
+        [JsonProperty("patients")]
+        public Patient[] Items { get; set; }
+    }
+
+
     public class Patient
     {
+        /// <summary>
+        /// Please remember to never disclose this ID to patients since it may result in inadvertant
+        /// disclosure that a patient exists in a practice already.
+        /// </summary>
+        [JsonProperty("patientid")]
+        public int Id { get; set; }
+
+        /// <summary>
+        /// The patient race hierarchical code
+        /// </summary>
+        [JsonProperty("hierarchicalcode")]
+        public string HierarchicalCode { get; set; }
+
         /// <summary>
         /// Warning! This patient will not receive any communication from the practice if this field
         /// is set to true.
@@ -29,7 +62,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// is set.)
         /// </summary>
         [JsonProperty("claimbalancedetails")]
-        public ClaimBalanceDetailsModel[] ClaimBalanceDetails { get; set; }
+        public ClaimBalanceDetail[] ClaimBalanceDetails { get; set; }
 
         /// <summary>
         /// If the patient is homebound, this is true.
@@ -82,7 +115,8 @@ namespace AthenaHealth.Sdk.Models.Response
         /// (mm/dd/yyyy h24:mi)
         /// </summary>
         [JsonProperty("firstappointment")]
-        public string FirstAppointment { get; set; }
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy HH:mm")]
+        public DateTime? FirstAppointment { get; set; }
 
         /// <summary>
         /// The "primary" provider for this patient, if set.
@@ -148,7 +182,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// Portal status details. See /patients/{patientid}/portalstatus for details.
         /// </summary>
         [JsonProperty("portalstatus")]
-        public PortalstatusModel PortalStatus { get; set; }
+        public PortalStatusModel PortalStatus { get; set; }
 
         /// <summary>
         /// The "status" of the patient, one of active, inactive, prospective, or deleted.
@@ -185,7 +219,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// List of balances owed by the patient, broken down by provider (financial) group.
         /// </summary>
         [JsonProperty("balances")]
-        public BalanceModel[] Balances { get; set; }
+        public Balance[] Balances { get; set; }
 
         /// <summary>
         /// If set, the patient has indicated a preference to get or not get "announcement"
@@ -216,7 +250,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// SHOWINSURANCE is set.
         /// </summary>
         [JsonProperty("insurances")]
-        public InsuranceModel[] Insurances { get; set; }
+        public Insurance[] Insurances { get; set; }
 
         /// <summary>
         /// True if the patient has a photo uploaded
@@ -246,7 +280,8 @@ namespace AthenaHealth.Sdk.Models.Response
         /// Date the patient was registered.
         /// </summary>
         [JsonProperty("registrationdate")]
-        public string RegistrationDate { get; set; }
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+        public DateTime? RegistrationDate { get; set; }
 
         /// <summary>
         /// Guarantor's country code
@@ -273,7 +308,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// <summary>
         /// </summary>
         [JsonProperty("allpatientstatuses")]
-        public AllPatientStatusModel[] AllPatientStatuses { get; set; }
+        public PatientStatus[] AllPatientStatuses { get; set; }
 
         /// <summary>
         /// The flag is used to record the consent of a patient to receive text messages per FCC
@@ -368,18 +403,14 @@ namespace AthenaHealth.Sdk.Models.Response
         [JsonProperty("contactpreference_appointment_phone")]
         public bool? ContactPreferenceAppointmentPhone { get; set; }
 
-        /// <summary>
-        /// Please remember to never disclose this ID to patients since it may result in inadvertant
-        /// disclosure that a patient exists in a practice already.
-        /// </summary>
-        [JsonProperty("patientid")]
-        public int? PatientId { get; set; }
+   
 
         /// <summary>
         /// Patient's DOB (mm/dd/yyyy)
         /// </summary>
         [JsonProperty("dob")]
-        public string DateOfBirth { get; set; }
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+        public DateTime? DateOfBirth { get; set; }
 
         /// <summary>
         /// Same as /patients/{patientid}/customfields call, but without the department ID. Depending
@@ -388,7 +419,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// call is preferred. Only for a single patient when showcustomfields is set to true.
         /// </summary>
         [JsonProperty("customfields")]
-        public CustomFieldModel[] CustomFields { get; set; }
+        public CustomField[] CustomFields { get; set; }
 
         /// <summary>
         /// The guarantor's relationship to the patient
@@ -547,7 +578,8 @@ namespace AthenaHealth.Sdk.Models.Response
         /// Patient's sex (M/F)
         /// </summary>
         [JsonProperty("sex")]
-        public string Sex { get; set; }
+        [JsonConverter(typeof(EnumConverter))]
+        public SexEnum? Sex { get; set; }
 
         /// <summary>
         /// Marital Status (D=Divorced, M=Married, S=Single, U=Unknown, W=Widowed, X=Separated, P=Partner)
@@ -584,7 +616,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// in a POST will be ignored, possibly resulting in an error.
         /// </summary>
         [JsonProperty("contacthomephone")]
-        public string ContactHomephone { get; set; }
+        public string ContactHomePhone { get; set; }
 
         /// <summary>
         /// Emergency contact mobile phone. Invalid numbers in a GET/PUT will be ignored. Patient
@@ -701,7 +733,8 @@ namespace AthenaHealth.Sdk.Models.Response
         /// Guarantor's DOB (mm/dd/yyyy)
         /// </summary>
         [JsonProperty("guarantordob")]
-        public string GuarantorDateOfBirth { get; set; }
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+        public DateTime? GuarantorDateOfBirth { get; set; }
 
         /// <summary>
         /// Guarantor's SSN
@@ -990,13 +1023,13 @@ namespace AthenaHealth.Sdk.Models.Response
         [JsonProperty("driverslicenseurl")]
         public string DriversLicenseUrl { get; set; }
 
-        public class CustomFieldModel
+        public class CustomField
         {
             /// <summary>
             /// Corresponds to the /customfields customfieldid.
             /// </summary>
             [JsonProperty("customfieldid")]
-            public int? CustomFieldId { get; set; }
+            public int? Id { get; set; }
 
             /// <summary>
             /// For a non-select custom field, the value.
@@ -1011,7 +1044,7 @@ namespace AthenaHealth.Sdk.Models.Response
             public int? OptionId { get; set; }
         }
 
-        public class PortalstatusModel
+        public class PortalStatusModel
         {
             /// <summary>
             /// Either "PATIENT" or "FAMILY", the last entity who accessed this patient.
@@ -1023,13 +1056,15 @@ namespace AthenaHealth.Sdk.Models.Response
             /// The date the patient registered for the portal.
             /// </summary>
             [JsonProperty("portalregistrationdate")]
-            public string PortalRegistrationDate { get; set; }
+            [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+            public DateTime? PortalRegistrationDate { get; set; }
 
             /// <summary>
             /// The last login date.
             /// </summary>
             [JsonProperty("lastlogindate")]
-            public string LastLoginDate { get; set; }
+            [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+            public DateTime? LastLoginDate { get; set; }
 
             /// <summary>
             /// The privacy setting for blocking the patient from the portal is set.
@@ -1092,7 +1127,7 @@ namespace AthenaHealth.Sdk.Models.Response
             public string EntityToDisplay { get; set; }
         }
 
-        public class InsuranceModel
+        public class Insurance
         {
             [JsonProperty("id")]
             public int? Id { get; set; }
@@ -1104,7 +1139,8 @@ namespace AthenaHealth.Sdk.Models.Response
             public string InsuredCity { get; set; }
 
             [JsonProperty("insureddob")]
-            public string InsuredDateOfBirth { get; set; }
+            [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+            public DateTime? InsuredDateOfBirth { get; set; }
 
             [JsonProperty("insuredaddress")]
             public string InsuredAddress { get; set; }
@@ -1113,7 +1149,8 @@ namespace AthenaHealth.Sdk.Models.Response
             public string InsuredZip { get; set; }
 
             [JsonProperty("insuredsex")]
-            public string InsuredSex { get; set; }
+            [JsonConverter(typeof(EnumConverter))]
+            public SexEnum? InsuredSex { get; set; }
 
             [JsonProperty("insuredstate")]
             public string InsuredState { get; set; }
@@ -1171,7 +1208,8 @@ namespace AthenaHealth.Sdk.Models.Response
             /// Date the insurance expires.
             /// </summary>
             [JsonProperty("expirationdate")]
-            public string ExpirationDate { get; set; }
+            [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+            public DateTime? ExpirationDate { get; set; }
 
             /// <summary>
             /// The last name of the insurance policy holder. Except for self-pay, required for new policies.
@@ -1189,7 +1227,8 @@ namespace AthenaHealth.Sdk.Models.Response
             /// The sex of the insurance policy holder. Except for self-pay, required for new policies.
             /// </summary>
             [JsonProperty("insurancepolicyholdersex")]
-            public string InsurancePolicyHolderSex { get; set; }
+            [JsonConverter(typeof(EnumConverter))]
+            public SexEnum? InsurancePolicyHolderSex { get; set; }
 
             /// <summary>
             /// 1 = primary, 2 = secondary, 3 = tertiary, etc. Must have a primary before a secondary
@@ -1278,7 +1317,8 @@ namespace AthenaHealth.Sdk.Models.Response
             /// The DOB of the insurance policy holder (mm/dd/yyyy).
             /// </summary>
             [JsonProperty("insurancepolicyholderdob")]
-            public string InsurancePolicyHolderDateOfBirth { get; set; }
+            [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+            public DateTime? InsurancePolicyHolderDateOfBirth { get; set; }
 
             /// <summary>
             /// The middle name of the insurance policy holder.
@@ -1441,7 +1481,7 @@ namespace AthenaHealth.Sdk.Models.Response
             /// insurance you will have to wait for the auto eligbility check before these populate.
             /// </summary>
             [JsonProperty("copays")]
-            public CopayModel[] Copays { get; set; }
+            public Copay[] Copays { get; set; }
 
             /// <summary>
             /// Zip code of the AthenaNet insurance package
@@ -1555,7 +1595,7 @@ namespace AthenaHealth.Sdk.Models.Response
             [JsonProperty("employerid")]
             public string EmployerId { get; set; }
 
-            public class CopayModel
+            public class Copay
             {
                 /// <summary>
                 /// What the copay amount applies to.
@@ -1571,13 +1611,13 @@ namespace AthenaHealth.Sdk.Models.Response
             }
         }
 
-        public class BalanceModel
+        public class Balance
         {
             /// <summary>
             /// Balance for this provider group.
             /// </summary>
             [JsonProperty("balance")]
-            public string Balance { get; set; }
+            public string Value { get; set; }
 
             /// <summary>
             /// Comma separated list of department IDs that belong to this group
@@ -1614,9 +1654,9 @@ namespace AthenaHealth.Sdk.Models.Response
             /// Information related to existing credit card contracts.
             /// </summary>
             [JsonProperty("contracts")]
-            public ContractModel[] Contracts { get; set; }
+            public Contract[] Contracts { get; set; }
 
-            public class ContractModel
+            public class Contract
             {
                 /// <summary>
                 /// The available balance on this contract.
@@ -1638,7 +1678,7 @@ namespace AthenaHealth.Sdk.Models.Response
             }
         }
 
-        public class AllPatientStatusModel
+        public class PatientStatus
         {
             /// <summary>
             /// The "status" of the patient, one of active, inactive, prospective, or deleted.
@@ -1659,7 +1699,7 @@ namespace AthenaHealth.Sdk.Models.Response
             public int? DepartmentId { get; set; }
         }
 
-        public class ClaimBalanceDetailsModel
+        public class ClaimBalanceDetail
         {
             /// <summary>
             /// The ID of the provider group for the claim.
@@ -1677,9 +1717,9 @@ namespace AthenaHealth.Sdk.Models.Response
             /// Information related to claims for the patient.
             /// </summary>
             [JsonProperty("claimdetails")]
-            public ClaimDetailsModel[] ClaimDetails { get; set; }
+            public ClaimDetail[] ClaimDetails { get; set; }
 
-            public class ClaimDetailsModel
+            public class ClaimDetail
             {
                 /// <summary>
                 /// Indicates whether the balance is associated with a contract or payment plan.
@@ -1697,7 +1737,8 @@ namespace AthenaHealth.Sdk.Models.Response
                 /// The date the service was rendered.
                 /// </summary>
                 [JsonProperty("servicedate")]
-                public string ServiceDate { get; set; }
+                [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+                public DateTime? ServiceDate { get; set; }
 
                 /// <summary>
                 /// The ID of the supervising provider who rendered the service.
@@ -1727,9 +1768,9 @@ namespace AthenaHealth.Sdk.Models.Response
                 /// Detailed information on charges associated with the claim.
                 /// </summary>
                 [JsonProperty("chargeleveldetail")]
-                public ChargeLevelDetailModel[] ChargeLevelDetail { get; set; }
+                public ChargeLevelDetail[] ChargeLevelDetails { get; set; }
 
-                public class ChargeLevelDetailModel
+                public class ChargeLevelDetail
                 {
                     /// <summary>
                     /// The athenaNet ID of the charge.
@@ -1771,21 +1812,23 @@ namespace AthenaHealth.Sdk.Models.Response
                     /// Date of service for the charge.
                     /// </summary>
                     [JsonProperty("servicedate")]
-                    public string ServiceDate { get; set; }
+                    [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+                    public DateTime? ServiceDate { get; set; }
 
                     /// <summary>
                     /// Detailed information on transactions associated with the charge.
                     /// </summary>
                     [JsonProperty("transactions")]
-                    public TransactionModel[] Transactions { get; set; }
+                    public Transaction[] Transactions { get; set; }
 
-                    public class TransactionModel
+                    public class Transaction
                     {
                         /// <summary>
                         /// The date of the transaction.
                         /// </summary>
                         [JsonProperty("date")]
-                        public string Date { get; set; }
+                        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+                        public DateTime? Date { get; set; }
 
                         /// <summary>
                         /// The athenaNet ID of the transaction.

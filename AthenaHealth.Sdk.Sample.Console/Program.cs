@@ -12,7 +12,7 @@ namespace AthenaHealth.Sdk.Sample.Console
         private static async Task Main(string[] args)
         {
             var client = new AthenaHealthClient(ApiVersion.Preview, "6yspwuq3wnx5n37jp9phqsmt", "Y9UxkbBge5EXutR", 195900);
-
+           
             await GetPracticeSample(client);
             await GetDepartmentSample(client);
             await GetPatientSample(client);

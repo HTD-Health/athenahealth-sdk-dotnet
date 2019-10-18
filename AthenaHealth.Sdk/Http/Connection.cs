@@ -161,6 +161,7 @@ namespace AthenaHealth.Sdk.Http
 
             Response response = await _httpAdapter.Send(request);
 
+            Debug.WriteLine(response.StatusCode.ToString());
             Debug.WriteLine(response.Body.ToString());
 
             HandleErrors(response);
