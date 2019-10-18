@@ -1,0 +1,5 @@
+﻿/// <summary>
+/// !SUMMARY!
+/// </summary>
+[JsonProperty(PropertyName = "!JSONPROPERTYNAME!")]
+public !PROPERTYTYPE! !PROPERTYNAME! { get; set; }
