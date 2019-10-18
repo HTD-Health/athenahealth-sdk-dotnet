@@ -19,7 +19,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
             departmentResponse.ShouldNotBeNull();
             departmentResponse.Total.ShouldBe(31);
 
-            Models.Response.Department mdCallDepartment = departmentResponse.Items.First(x => x.Name == "MD CALL");
+            Department mdCallDepartment = departmentResponse.Items.First(x => x.Name == "MD CALL");
             mdCallDepartment.City.ShouldBe("SAUGUS");
             mdCallDepartment.Id.ShouldBe("155");
         }
