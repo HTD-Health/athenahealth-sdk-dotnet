@@ -43,6 +43,70 @@ namespace AthenaHealth.Sdk.Tests.Integration
         }
 
         [Fact]
+        public async Task GetPatients_ValidData_ReturnsPatientsCollection()
+        {
+            // Arrange
+            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetPatients.json"));
+            var queryParameters = new GetPatientsFilter()
+            {
+                FirstName = "Michael",
+                DepartmentId = 1,
+                OmitBalances = false,
+                OmitDefaultPharmacy = false,
+                OmitPhotoInformation = false,
+                Show2015EdCehrtValues = true
+            };
+
+            // Act
+            var result = await patientClient.GetPatients(queryParameters);
+
+            // Assert
+            result.ShouldNotBeNull();
+            result.Items.Count().ShouldBeGreaterThan(0);
+        }
+
+        [Fact]
+        public void GetPatients_TooMuchDataFound_ThrowsException()
+        {
+            // Arrange
+            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"error\":\"The given search parameters would produce a total data set larger than 1000 records.Please refine your search and try again.\"}", HttpStatusCode.BadRequest));
+            var queryParameters = new GetPatientsFilter()
+            {
+                DepartmentId = 1,
+                OmitBalances = false,
+                OmitDefaultPharmacy = false,
+                OmitPhotoInformation = false,
+                Show2015EdCehrtValues = true
+            };
+
+            // Act
+            ApiException exception = Should.Throw<ApiException>(async () => await patientClient.GetPatients(queryParameters));
+
+            // Assert
+            exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
+        }
+
+        [Fact]
+        public void GetPatients_InvalidFilter_ThrowsException()
+        {
+            // Arrange
+            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"fields\":[\"guarantorfirstname\",\"dob\",\"firstname\",\"workphone\",\"departmentid\",\"guarantorsuffix\",\"guarantorlastname\",\"mobilephone\",\"middlename\",\"suffix\",\"guarantormiddlename\",\"lastname\",\"homephone\",\"anyphone\"],\"error\":\"Data for one or more of the fields listed above are required to successfully find a patient record.Note: invalid phone numbers are ignored.\"}", HttpStatusCode.BadRequest));
+            var queryParameters = new GetPatientsFilter()
+            {
+                OmitBalances = false,
+                OmitDefaultPharmacy = false,
+                OmitPhotoInformation = false,
+                Show2015EdCehrtValues = true
+            };
+
+            // Act
+            ApiException exception = Should.Throw<ApiException>(async () => await patientClient.GetPatients(queryParameters));
+
+            // Assert
+            exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
+        }
+
+        [Fact]
         public async Task EnhancedBestmatch_ValidData_ReturnsPatientsCollection()
         {
             // Arrange

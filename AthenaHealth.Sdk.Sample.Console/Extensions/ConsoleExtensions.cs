@@ -48,7 +48,7 @@ namespace AthenaHealth.Sdk.Sample.Console.Extensions
 
         public static void Display(this Patient patient)
         {
-            System.Console.WriteLine($"First name: {patient.FirstName}{Environment.NewLine}Last name: {patient.LastName}{Environment.NewLine}Id: {patient.PatientId}");
+            System.Console.WriteLine($"First name: {patient.FirstName}{Environment.NewLine}Last name: {patient.LastName}{Environment.NewLine}Id: {patient.Id}");
             System.Console.WriteLine();
         }
     }

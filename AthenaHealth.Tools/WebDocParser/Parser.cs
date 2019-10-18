@@ -40,7 +40,7 @@ namespace AthenaHealth.Tools.WebDocParser
 
         private static string ConvertType(string typeDoc)
         {
-            if(typeDoc == null) 
+            if (typeDoc == null)
                 return "";
             typeDoc = typeDoc.Replace("integer", "int?");
             typeDoc = typeDoc.Replace("boolean", "bool?");

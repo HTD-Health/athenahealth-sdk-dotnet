@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Net.Http;
 
 namespace AthenaHealth.Sdk.Http.Adapter
@@ -7,6 +8,8 @@ namespace AthenaHealth.Sdk.Http.Adapter
     {
         public static HttpRequestMessage Create(Request request)
         {
+            Debug.WriteLine(request.RequestUri);
+
             HttpRequestMessage requestMessage = null;
             try
             {

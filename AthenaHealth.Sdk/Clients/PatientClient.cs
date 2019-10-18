@@ -60,5 +60,10 @@ namespace AthenaHealth.Sdk.Clients
             await _connection.Put($"{_connection.PracticeId}/chart/{patientId}/pharmacies/preferred", setPharmacyRequest);
             
         }
+
+        public async Task<PatientResponse> GetPatients(GetPatientsFilter queryParameters)
+        {
+            return await _connection.Get<PatientResponse>($"{_connection.PracticeId}/patients", queryParameters);
+        }
     }
 }
