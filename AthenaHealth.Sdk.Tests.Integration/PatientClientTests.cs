@@ -195,15 +195,16 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public void SetDefaultPharmacy_ValidData_NotThrow()
         {
             var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"success\": true}", HttpStatusCode.OK));
-            Should.NotThrow(async () => await patientClient.SetDefaultPharmacy(195900, 5000, new SetPharmacyRequest{DepartmentId = 164, ClinicalProviderId = 11242674}));
-        }
 
+            Should.NotThrow(async () => await patientClient.SetDefaultPharmacy(5000, new SetPharmacyRequest{DepartmentId = 164, ClinicalProviderId = 11242674}));
+        }
         
         [Fact]
         public void AddPreferredPharmacy_ValidData_NotThrow()
         {
             var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"success\": true}", HttpStatusCode.OK));
-            Should.NotThrow(async () => await patientClient.AddPreferredPharmacy(195900, 5000, new SetPharmacyRequest{DepartmentId = 164, ClinicalProviderId = 11242674}));
+
+            Should.NotThrow(async () => await patientClient.AddPreferredPharmacy(5000, new SetPharmacyRequest{DepartmentId = 164, ClinicalProviderId = 11242674}));
         }
     }
 }

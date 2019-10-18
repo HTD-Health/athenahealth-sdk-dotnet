@@ -6,7 +6,7 @@ using AthenaHealth.Sdk.Tests.EndToEnd.Fixtures;
 using Shouldly;
 using Xunit;
 
-namespace AthenaHealth.Sdk.Tests.EndToEnd.Clients.Practice
+namespace AthenaHealth.Sdk.Tests.EndToEnd
 {
     public class PracticeClientTests : IClassFixture<AthenaHealthClientFixture>
     {
@@ -63,7 +63,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd.Clients.Practice
         [Fact]
         public async Task GetById_ExistingId_ReturnsRecord()
         {
-            Models.Response.Practice response = await _client.Practices.GetById(195900);
+            Practice response = await _client.Practices.GetById(195900);
 
             response.ShouldNotBeNull();
         }

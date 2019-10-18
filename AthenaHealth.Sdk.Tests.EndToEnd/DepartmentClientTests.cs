@@ -7,7 +7,7 @@ using AthenaHealth.Sdk.Tests.EndToEnd.Fixtures;
 using Shouldly;
 using Xunit;
 
-namespace AthenaHealth.Sdk.Tests.EndToEnd.Clients.Department
+namespace AthenaHealth.Sdk.Tests.EndToEnd
 {
     public class DepartmentClientTests : IClassFixture<AthenaHealthClientFixture>
     {

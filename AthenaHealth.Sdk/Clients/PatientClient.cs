@@ -30,27 +30,34 @@ namespace AthenaHealth.Sdk.Clients
             throw new Exception("Number of Patients not equals 1.");
         }
 
+
+        public async Task<IEnumerable<PatientWithScore>> EnhancedBestmatch(EnhancedBestmatchFilter queryParameters)
+        {
+            return await _connection.Get< IEnumerable<PatientWithScore>>($"{_connection.PracticeId}/patients/enhancedbestmatch", queryParameters);
+        }
+
+
         public async Task<Pharmacy> GetDefaultPharmacy(int patientId, int departmentId)
         {
             return await _connection.Get<Pharmacy>($"{_connection.PracticeId}/chart/{patientId}/pharmacies/default", new{DepartmentId = departmentId});
+            
         }
 
         public async Task<PharmacyResponse> GetPreferredPharmacies(int patientId, GetPreferredPharmacyFilter getPreferredPharmacyFilter)
         {
             return await _connection.Get<PharmacyResponse>($"{_connection.PracticeId}/chart/{patientId}/pharmacies/preferred", getPreferredPharmacyFilter);
-        }
-
-        public async Task<IEnumerable<PatientWithScore>> EnhancedBestmatch(EnhancedBestmatchFilter queryParameters)
-        public async Task SetDefaultPharmacy(int practiceId, int patientId, SetPharmacyRequest setPharmacyRequest)
-        {
-            return await _connection.Get< IEnumerable<PatientWithScore>>($"{_connection.PracticeId}/patients/enhancedbestmatch", queryParameters);
-            await Connection.Put($"{practiceId}/chart/{patientId}/pharmacies/default", setPharmacyRequest);
             
         }
 
-        public async Task AddPreferredPharmacy(int practiceId, int patientId, SetPharmacyRequest setPharmacyRequest)
+        public async Task SetDefaultPharmacy(int patientId, SetPharmacyRequest setPharmacyRequest)
         {
-            await Connection.Put($"{practiceId}/chart/{patientId}/pharmacies/preferred", setPharmacyRequest);
+            await _connection.Put($"{_connection.PracticeId}/chart/{patientId}/pharmacies/default", setPharmacyRequest);
+            
+        }
+
+        public async Task AddPreferredPharmacy(int patientId, SetPharmacyRequest setPharmacyRequest)
+        {
+            await _connection.Put($"{_connection.PracticeId}/chart/{patientId}/pharmacies/preferred", setPharmacyRequest);
             
         }
     }

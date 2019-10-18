@@ -23,46 +23,12 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         }
 
         [Fact]
-        public async Task GetDefaultPharmacy_ReturnsPharmacy()
-        {
-            Pharmacy pharmacy = await _client.Patients.GetDefaultPharmacy(300, 1);
-
-            // Assert
-            pharmacy.State.ShouldNotBeEmpty();
-            pharmacy.ClinicalProviderId.ShouldBeGreaterThan(0);
-        }
-
-        [Fact]
         public void GetDefaultPharmacy_NotExistingPharmacy_ThrowsException()
         {
             // Arrange
             // Act
             // Assert
             Should.Throw<ApiValidationException>(async () => await _client.Patients.GetDefaultPharmacy(300, 2));
-        }
-
-        [Fact]
-        public async Task GetPreferredPharmacies_ReturnsPharmacy()
-        {
-            // Arrange
-            // Act
-            PharmacyResponse pharmacies = await _client.Patients.GetPreferredPharmacies(300, new GetPreferredPharmacyFilter { DepartmentId = 1 });
-
-            // Assert
-            pharmacies.ShouldNotBeNull();
-            pharmacies.Total.ShouldBe(1);
-            pharmacies.Items.ShouldNotBeNull();
-            pharmacies.Items.Length.ShouldBe(1);
-            pharmacies.Items[0].ClinicalProviderId.ShouldBe(11242674);
-        }
-
-        [Fact]
-        public void GetPreferredPharmacies_NotExistingPharmacy_ThrowsException()
-        {
-            // Arrange
-            // Act
-            // Assert
-            Should.Throw<ApiValidationException>(async () => await _client.Patients.GetPreferredPharmacies(300, new GetPreferredPharmacyFilter { DepartmentId = 2 }));
         }
 
         [Theory]
@@ -168,6 +134,47 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             // Assert
             result.ShouldNotBeNull();
             result.Count().ShouldBe(0);
+        }
+
+        [Fact]
+        public async Task GetDefaultPharmacy_ReturnsPharmacy()
+        {
+            Pharmacy pharmacy = await _client.Patients.GetDefaultPharmacy(300, 1);
+
+            // Assert
+            pharmacy.State.ShouldNotBeEmpty();
+            pharmacy.ClinicalProviderId.ShouldBeGreaterThan(0);
+        }
+
+        [Fact]
+        public async Task GetPreferredPharmacies_ReturnsPharmacy()
+        {
+            PharmacyResponse pharmacies = await _client.Patients.GetPreferredPharmacies(300, new GetPreferredPharmacyFilter { DepartmentId = 1 });
+
+            pharmacies.ShouldNotBeNull();
+            pharmacies.Total.ShouldBeGreaterThan(0);
+            pharmacies.Items.ShouldNotBeNull();
+            pharmacies.Items.Length.ShouldBeGreaterThan(0);
+            pharmacies.Items[0].ClinicalProviderId.ShouldBeGreaterThan(0);
+        }
+
+        [Fact]
+        public async Task GetPreferredPharmacies_NotExistingPharmacy_ThrowsException()
+        {
+            await Should.ThrowAsync<ApiValidationException>(async () => await _client.Patients.GetPreferredPharmacies(300, new GetPreferredPharmacyFilter { DepartmentId = 2 }));
+        }
+
+
+        [Fact]
+        public void SetDefaultPharmacy_ValidData_NotThrow()
+        {
+            Should.NotThrow(async () => await _client.Patients.SetDefaultPharmacy(5000, new SetPharmacyRequest{DepartmentId = 164, ClinicalProviderId = 11242674}));
+        }
+
+        [Fact]
+        public void AddPreferredPharmacy_ValidData_NotThrow()
+        {
+            Should.NotThrow(async () => await _client.Patients.AddPreferredPharmacy(5000, new SetPharmacyRequest{DepartmentId = 164, ClinicalProviderId = 11242674}));
         }
     }
 }
