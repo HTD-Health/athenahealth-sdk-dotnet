@@ -25,6 +25,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Data\Appointment\GetAppointmentTypes.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Data\Department\GetAll_Extended.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
