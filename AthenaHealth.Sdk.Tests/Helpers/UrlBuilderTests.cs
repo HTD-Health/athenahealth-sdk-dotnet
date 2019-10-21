@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using AthenaHealth.Sdk.Http.Helpers;
-using AthenaHealth.Sdk.Models.Request;
 using Shouldly;
 using Xunit;
 
