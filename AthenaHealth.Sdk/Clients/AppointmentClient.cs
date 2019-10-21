@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 using AthenaHealth.Sdk.Clients.Interfaces;
 using AthenaHealth.Sdk.Http;
+using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
 
 namespace AthenaHealth.Sdk.Clients
@@ -14,10 +15,10 @@ namespace AthenaHealth.Sdk.Clients
             _connection = connection;
         }
         
-        public async Task<AppointmentTypeResponse> GetAppointmentTypes()
+        public async Task<AppointmentTypeResponse> GetAppointmentTypes(GetAppointmentTypeFilter filter = null)
         {
             // ReSharper disable once StringLiteralTypo
-            return await _connection.Get<AppointmentTypeResponse>($"{_connection.PracticeId}/appointmenttypes");
+            return await _connection.Get<AppointmentTypeResponse>($"{_connection.PracticeId}/appointmenttypes", filter);
         }
     }
 }
