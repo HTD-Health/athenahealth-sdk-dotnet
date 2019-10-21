@@ -28,8 +28,9 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
                 response.ShouldNotBe(null);
                 response.Total.ShouldBeGreaterThan(0);
                 response.Items.ShouldNotBe(null);
-                response.Items.Count(x => !string.IsNullOrWhiteSpace(x.DisplayName))
-                    .ShouldBeGreaterThan(0);
+                response.Items
+                    .Count(x => !string.IsNullOrWhiteSpace(x.FirstName))
+                    .ShouldBe(response.Total);
                 response.Items.Count(x => int.Parse(x.Id) > 0)
                     .ShouldBe(response.Total);
             }

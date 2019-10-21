@@ -1,0 +1,14 @@
+{
+  "insurancepackages": [
+    {
+      "state": "KY",
+      "insurancepackageid": 31724,
+      "city": "LEXINGTON",
+      "address": "PO BOX 14601",
+      "name": "HUMANA (PPO) [31724] ",
+      "phone": "(800) 558-4444",
+      "zip": "40512-4601"
+    }
+  ],
+  "totalcount": 1
+}

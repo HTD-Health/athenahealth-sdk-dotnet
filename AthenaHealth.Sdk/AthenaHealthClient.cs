@@ -12,6 +12,7 @@ namespace AthenaHealth.Sdk
         public IDepartmentClient Departments { get; }
         public IProviderClient Providers { get; }
         public IAppointmentClient Appointments { get; }
+        public IInsurancePackageClient InsurancePackage { get; }
 
         private readonly IConnection _connection;
 
@@ -35,6 +36,7 @@ namespace AthenaHealth.Sdk
             Departments = new DepartmentClient(_connection);
             Providers = new ProviderClient(_connection);
             Appointments = new AppointmentClient(_connection);
+            InsurancePackage = new InsurancePackageClient(_connection);
         }
     }
 }
