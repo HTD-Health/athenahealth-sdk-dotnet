@@ -10,7 +10,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
     public class DepartmentClientTests
     {
         [Fact]
-        public async Task GetAll_ValidPractice_ReturnsDepartments()
+        public async Task GetAll_ReturnsRecords()
         {
             var departmentClient = new Sdk.Clients.DepartmentClient(ConnectionFactory.CreateFromFile(@"Data\Department\GetAll_Extended.json"));
 
@@ -25,7 +25,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         }
 
         [Fact]
-        public async Task GetById_ExistingId_ReturnsDepartment()
+        public async Task GetById_ExistingId_ReturnsRecord()
         {
             var departmentClient = new Sdk.Clients.DepartmentClient(ConnectionFactory.CreateFromFile(@"Data\Department\GetById_ExistingId.json"));
 

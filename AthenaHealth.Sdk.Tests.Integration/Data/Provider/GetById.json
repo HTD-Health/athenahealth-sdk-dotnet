@@ -1,0 +1,25 @@
+[
+  {
+    "firstname": "Terry",
+    "specialty": "Internal Medicine",
+    "acceptingnewpatients": false,
+    "schedulingname": "tahmad0",
+    "providergrouplist": [
+      "1"
+    ],
+    "providertypeid": "MD",
+    "billable": false,
+    "displayname": "Terry Ahmad, MD",
+    "ansinamecode": "Allopathic & Osteopathic Physicians : Family Practice (207Q00000X)",
+    "lastname": "Ahmad",
+    "providerid": 86,
+    "supervisingproviderusername": "btrout0",
+    "supervisingproviderid": 1,
+    "ansispecialtycode": "207Q00000X",
+    "hideinportal": false,
+    "entitytype": "Person",
+    "federalidnumber": "1211122220",
+    "providertype": "MD",
+    "createencounteroncheckin": false
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "totalcount": 1,
+  "practiceinfo": [
+    {
+      "iscoordinatorsender": false,
+      "nsaenabled": false,
+      "hasclinicals": true,
+      "name": "athenahealth MDP Sandbox",
+      "golivedate": "09/14/2015",
+      "experiencemode": "STREAMLINEDONLY",
+      "hascommunicator": true,
+      "iscoordinatorreceiver": false,
+      "hascollector": true,
+      "ccmenabled": false,
+      "publicnames": [
+        "athenahealth MDP Sandbox"
+      ],
+      "practiceid": "195900"
+    }
+  ]
+}
