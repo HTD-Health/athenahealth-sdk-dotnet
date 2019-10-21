@@ -1,0 +1,13 @@
+[
+  {
+    "shortname": "SV",
+    "name": "Sick Visit",
+    "duration": 15,
+    "patientdisplayname": "Sick Visit",
+    "appointmenttypeid": 622,
+    "generic": false,
+    "patient": true,
+    "createencounteroncheckin": false,
+    "templatetypeonly": false
+  }
+]
