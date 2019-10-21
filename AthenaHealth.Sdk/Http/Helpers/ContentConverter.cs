@@ -1,14 +1,16 @@
 ﻿using AthenaHealth.Sdk.Models.Converters.Base;
 using Newtonsoft.Json;
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Reflection;
 using System.Text;
 
 namespace AthenaHealth.Sdk.Http.Helpers
 {
-   internal static class ContentConverter
+    public static class ContentConverter
     {
         public static HttpContent ToJson(object obj)
         {
@@ -51,9 +53,10 @@ namespace AthenaHealth.Sdk.Http.Helpers
                         key = jsonPropertyAttribute.PropertyName;
 
                     JsonConverterAttribute jsonConverterAttribute = item.GetCustomAttribute<JsonConverterAttribute>();
+                    
+                    string stringValue = GetStringValue(value);
 
-                    string stringValue = value.ToString();
-                    if(jsonConverterAttribute != null)
+                    if (jsonConverterAttribute != null)
                     {
                         if (Activator.CreateInstance(jsonConverterAttribute.ConverterType) is Converter converter)
                             stringValue = converter.Convert(value).ToString();
@@ -66,5 +69,16 @@ namespace AthenaHealth.Sdk.Http.Helpers
             return dictionary;
         }
 
+        private static string GetStringValue(object value)
+        {
+            if (value is Array array)
+            {
+                var list = array.Cast<object>().ToList();
+                var joined = string.Join(",", list);
+                return $"[{joined}]";
+            }
+
+            return value.ToString();
+        }
     }
 }
