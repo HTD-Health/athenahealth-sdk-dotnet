@@ -17,7 +17,7 @@ namespace AthenaHealth.Tools.WebDocParser
         /// 2. run app
         /// 3. see output file out.cs in bin\Debug\WebDocParser\
         /// </summary>
-        public static void Parse()
+        public static void ParseAndSave()
         {
             var list = ParseItems("WebDocParser\\in.html");
 
@@ -38,7 +38,6 @@ namespace AthenaHealth.Tools.WebDocParser
         }
 
 
-
         private static string ConvertType(string typeDoc)
         {
             if(typeDoc == null) 
@@ -49,7 +48,7 @@ namespace AthenaHealth.Tools.WebDocParser
         }
 
 
-        static List<Item> ParseItems(string file)
+        public static List<Item> ParseItems(string file)
         {
             List<Item> items = new List<Item>();
             HtmlDocument doc = new HtmlDocument();
@@ -57,9 +56,9 @@ namespace AthenaHealth.Tools.WebDocParser
             foreach (var tr in doc.DocumentNode.SelectNodes("//tr"))
             {
                 Item item = new Item();
-                item.Name = tr.SelectNodes(".//td[@data-label='Name']")?.First().InnerText.Trim();
-                item.Type = tr.SelectNodes(".//td[@data-label='Type']")?.First().InnerText;
-                item.Description = tr.SelectNodes(".//td[@data-label='Description']")?.First().InnerText;
+                item.Name = tr.SelectNodes("./td[@class='outputname' and @data-label='Name']")?.First().InnerText.Trim();
+                item.Type = tr.SelectNodes("./td[@class='outputtype' and @data-label='Type']")?.First().InnerText;
+                item.Description = tr.SelectNodes("./td[@class='outputnote' and @data-label='Description']")?.First().InnerText;
 
                 if(item.Name != null)
                     items.Add(item);
@@ -69,7 +68,7 @@ namespace AthenaHealth.Tools.WebDocParser
         }
 
 
-        private class Item
+        public class Item
         {
             public string Name;
             public string Type;
@@ -80,7 +79,7 @@ namespace AthenaHealth.Tools.WebDocParser
                 if (other == null)
                     return false;
 
-                if (this.Name == ((Item)other).Name && this.Type == ((Item)other).Type) 
+                if (this.Name == ((Item)other).Name && this.Type == ((Item)other).Type && this.Description == ((Item)other).Description) 
                     return true; ;
                 return false;
             }

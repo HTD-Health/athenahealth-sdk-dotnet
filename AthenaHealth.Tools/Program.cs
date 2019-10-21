@@ -1,4 +1,5 @@
-﻿using AthenaHealth.Tools.WebDocParser;
+﻿using AthenaHealth.Tools.WebDocComparer;
+using AthenaHealth.Tools.WebDocParser;
 
 namespace AthenaHealth.Tools
 {
@@ -9,7 +10,8 @@ namespace AthenaHealth.Tools
     {
         static void Main(string[] args)
         {
-            Parser.Parse(); 
+            Parser.ParseAndSave(); 
+            Comparer.Compare();
         }
     }
 }

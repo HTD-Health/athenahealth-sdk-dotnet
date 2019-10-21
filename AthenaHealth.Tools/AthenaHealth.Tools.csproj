@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="WebDocComparer\Comparer.cs" />
     <Compile Include="WebDocParser\Extensions.cs" />
     <Compile Include="WebDocParser\Parser.cs" />
     <Compile Include="Program.cs" />
@@ -56,6 +57,12 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="WebDocComparer\in2.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="WebDocComparer\in1.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="WebDocParser\in.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -63,5 +70,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
