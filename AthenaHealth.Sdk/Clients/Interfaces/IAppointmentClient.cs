@@ -7,6 +7,9 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
     public interface IAppointmentClient
     {
         Task<AppointmentTypeResponse> GetAppointmentTypes(GetAppointmentTypeFilter filter = null);
+
         Task<AppointmentType> GetAppointmentType(int appointmentTypeId);
+
+        Task<AppointmentResponse> GetBookedAppointments(GetBookedAppointmentsFilter filter);
     }
 }

@@ -1,4 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Linq;
+using System.Threading.Tasks;
 using AthenaHealth.Sdk.Exceptions;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
@@ -32,9 +34,9 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
 
             GetAppointmentTypeFilter filter = new GetAppointmentTypeFilter
             {
-                DepartmentIds = new int[] {1, 2},
+                DepartmentIds = new int[] { 1, 2 },
                 HideNonPatient = false,
-                ProviderIds = new int[] {1}
+                ProviderIds = new int[] { 1 }
             };
 
             AppointmentTypeResponse response = await _client.Appointments.GetAppointmentTypes(filter);
@@ -53,9 +55,56 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         }
 
         [Fact]
-        public  async Task GetAppointmentType_InvalidId_ThrowException()
+        public async Task GetAppointmentType_InvalidId_ThrowException()
         {
             await Should.ThrowAsync<ApiValidationException>(async () => await _client.Appointments.GetAppointmentType(5000000));
+        }
+
+        [Fact]
+        public async Task GetBookedAppointments_SingleDepartment_ReturnsRecords()
+        {
+            GetBookedAppointmentsFilter filter = new GetBookedAppointmentsFilter
+            {
+                StartDate = new DateTime(2019, 01, 01),
+                EndDate = new DateTime(2019, 02, 01),
+                DepartmentIds = new[] { 1 },
+                ShowClaimDetail = true,
+                ShowExpectedProcedureCodes = true,
+                ShowCopay = true,
+                ShowPatientDetail = true,
+                ShowInsurance = true,
+                ShowReminderCallDetail = true
+            };
+
+            AppointmentResponse response = await _client.Appointments.GetBookedAppointments(filter);
+
+            response.Items.ShouldNotBeNull();
+            response.Items.ShouldContain(a => a.DepartmentId.HasValue);
+            response.Items.First().Date.ShouldNotBeNull();
+            response.Items.First().AppointmentStatus.ShouldNotBeNull();
+        }
+
+        [Fact]
+        public async Task GetBookedAppointments_MultipleDepartments_ReturnsRecords()
+        {
+            GetBookedAppointmentsFilter filter = new GetBookedAppointmentsFilter
+            {
+                StartDate = new DateTime(2019, 01, 01),
+                EndDate = new DateTime(2019, 02, 01),
+                DepartmentIds = new[] { 1, 21 },
+                ShowClaimDetail = true,
+                ShowExpectedProcedureCodes = true,
+                ShowCopay = true,
+                ShowPatientDetail = true,
+                ShowInsurance = true,
+                ShowReminderCallDetail = true
+            };
+
+            AppointmentResponse response = await _client.Appointments.GetBookedAppointments(filter);
+
+            response.Items.ShouldNotBeNull();
+            response.Items.ShouldContain(a => a.DepartmentId == 1);
+            response.Items.ShouldContain(a => a.DepartmentId == 21);
         }
     }
 }

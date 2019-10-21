@@ -7,6 +7,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Reflection;
 using System.Text;
+using AthenaHealth.Sdk.Models.Converters;
 
 namespace AthenaHealth.Sdk.Http.Helpers
 {
@@ -46,7 +47,7 @@ namespace AthenaHealth.Sdk.Http.Helpers
                     if (value == null)
                         continue;
 
-                    string stringValue = GetStringValue(value);
+                    string stringValue = ObjectToDelimitedStringConverter.Convert(value);
 
                     if (stringValue == null)
                         continue;
@@ -74,48 +75,6 @@ namespace AthenaHealth.Sdk.Http.Helpers
             return dictionary;
         }
 
-        private static string GetStringValue(object value)
-        {
-            // Here we convert most common value types
-            if (value is string stringValue)
-            {
-                return stringValue;
-            }
-            else if (value is int intValue)
-            {
-                return intValue.ToString(CultureInfo.InvariantCulture);
-            }
-            else if (value is double doubleValue)
-            {
-                return doubleValue.ToString(CultureInfo.InvariantCulture);
-            }
-            else if (value is float floatValue)
-            {
-                return floatValue.ToString(CultureInfo.InvariantCulture);
-            }
-            else if (value is decimal decimalValue)
-            {
-                return decimalValue.ToString(CultureInfo.InvariantCulture);
-            }
-            else if (value is bool boolValue)
-            {
-                return boolValue.ToString(CultureInfo.InvariantCulture);
-            }
-            else if (value is IEnumerable collection)
-            {
-                var list = collection
-                    .Cast<object>()
-                    .Where(x => x != null)
-                    .Select(x => GetStringValue(x));
 
-                if(list.Any())
-                    return $"[{string.Join(",", list)}]";
-
-                return null;
-            }
-
-            // Everything which does not suit rules above is converted that way
-            return value.ToString();
-        }
     }
 }

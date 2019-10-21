@@ -7,6 +7,7 @@ using AthenaHealth.Sdk.Extensions;
 using AthenaHealth.Sdk.Http;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
+// ReSharper disable StringLiteralTypo
 
 namespace AthenaHealth.Sdk.Clients
 {
@@ -18,18 +19,23 @@ namespace AthenaHealth.Sdk.Clients
         {
             _connection = connection;
         }
-        
+
         public async Task<AppointmentTypeResponse> GetAppointmentTypes(GetAppointmentTypeFilter filter = null)
         {
-            // ReSharper disable once StringLiteralTypo
             return await _connection.Get<AppointmentTypeResponse>($"{_connection.PracticeId}/appointmenttypes", filter);
         }
 
         public async Task<AppointmentType> GetAppointmentType(int appointmentTypeId)
         {
-            // ReSharper disable once StringLiteralTypo
             AppointmentType[] result = await _connection.Get<AppointmentType[]>($"{_connection.PracticeId}/appointmenttypes/{appointmentTypeId}");
             return result.FirstOrThrowException();
+        }
+
+        public async Task<AppointmentResponse> GetBookedAppointments(GetBookedAppointmentsFilter filter)
+        {
+            if (filter.DepartmentIds != null && filter.DepartmentIds.Length > 1)
+                return await _connection.Get<AppointmentResponse>($"{_connection.PracticeId}/appointments/booked/multipledepartment", filter);
+            return await _connection.Get<AppointmentResponse>($"{_connection.PracticeId}/appointments/booked", filter);
         }
     }
 }

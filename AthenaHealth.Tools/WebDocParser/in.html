@@ -1,1132 +1,173 @@
-﻿<table class="outputdocumentation table-responsive">
+﻿<table class="table-responsive">
     <tbody>
         <tr>
             <th class="outputnameheader">Name</th>
             <th class="outputtypeheader">Type</th>
-            <th class="outputnoteheader">Description</th>
-        </tr>
-        <tr id="reasonid-GET">
-            <td class="outputname" width="20%" data-label="Name">reasonid</td>
-            <td class="outputtype" width="10%" data-label="Type">integer</td>
-            <td class="outputnote" width="70%" data-label="Description">A list of reason IDs that could be used for this slot.  Only present if multiple reason IDs are requested.</td>
-        </tr>
-        <tr id="appointmentnotes-GET">
-            <td class="outputname" width="20%" data-label="Name">appointmentnotes</td>
-            <td class="outputtype" width="10%" data-label="Type">object</td>
-            <td class="outputnote" width="70%" data-label="Description">An array of appointment notes for this appointment.</td>
+            <th class="outputtypeheader">Description</th>
+            <th class="outputtypeheader">Default</th>
+            <th class="outputtypeheader">Values</th>
         </tr>
         <tr>
-            <td colspan="3" width="100%" data-label="Name">
-                <table width="100%" class="table-responsive">
+            <td class="outputname" data-label="Name">appointmentstatus</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">Filter appointments by status.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">
+                <table class="table-responsive">
                     <tbody>
                         <tr>
-                            <td class="innerdocumentation" width="8%" data-label="Name">&nbsp;</td>
-                            <td class="innerdocumentation" data-label="Type">
-                                <table border="1" width="100%" class="table-responsive">
-                                    <tbody>
-                                        <tr id="displayonschedule-appointmentnotes-APPOINTMENTNOTES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">displayonschedule</td>
-                                            <td class="outputtype" width="10%" data-label="Type">boolean</td>
-                                            <td class="outputnote" width="70%" data-label="Description">Whether the note should be displayed on the schedule.</td>
-                                        </tr>
-                                        <tr id="text-appointmentnotes-APPOINTMENTNOTES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">text</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The note associated with the appointment.</td>
-                                        </tr>
-                                        <tr id="id-appointmentnotes-APPOINTMENTNOTES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">id</td>
-                                            <td class="outputtype" width="10%" data-label="Type">integer</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The id of the appointment note.</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
+                            <th>Submitted Value</th>
+                            <th>Display Value</th>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">2</td>
+                            <td data-label="Display Value">Checked in</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">3</td>
+                            <td data-label="Display Value">Checked out</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">4</td>
+                            <td data-label="Display Value">Charges entered</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">f</td>
+                            <td data-label="Display Value">Filled appointments</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">x</td>
+                            <td data-label="Display Value">Canceled appointments</td>
                         </tr>
                     </tbody>
                 </table>
             </td>
         </tr>
-        <tr id="appointmentstatus-GET">
-            <td class="outputname" width="20%" data-label="Name">appointmentstatus</td>
-            <td class="outputtype" width="10%" data-label="Type">string</td>
-            <td class="outputnote" width="70%" data-label="Description">The athenaNet appointment status. There are several possible statuses.  x=cancelled. f=future. (It can include appointments where were never checked in, even if the appointment date is in the past. It is up to a practice to cancel appointments as a no show when appropriate to do so.)  o=open. 2=checked in. 3=checked out. 4=charge entered (i.e. a past appointment).</td>
-        </tr>
-        <tr id="cancelleddatetime-GET">
-            <td class="outputname" width="20%" data-label="Name">cancelleddatetime</td>
-            <td class="outputtype" width="10%" data-label="Type">string</td>
-            <td class="outputnote" width="70%" data-label="Description">The time (mm/dd/yyyy hh24:mi:ss; Eastern time) that this appointment was cancelled (if cancelled)</td>
-        </tr>
-        <tr id="chargeentrynotrequired-GET">
-            <td class="outputname" width="20%" data-label="Name">chargeentrynotrequired</td>
-            <td class="outputtype" width="10%" data-label="Type">boolean</td>
-            <td class="outputnote" width="70%" data-label="Description">This field will tell if an appointment has been marked as not requiring change entry.</td>
-        </tr>
-        <tr id="hl7providerid-GET">
-            <td class="outputname" width="20%" data-label="Name">hl7providerid</td>
-            <td class="outputtype" width="10%" data-label="Type">integer</td>
-            <td class="outputnote" width="70%" data-label="Description">This is the raw provider ID that should be used ONLY if using this appointment in conjunction with an HL7 message and with athenahealth's prior guidance. It is only available in some situations.</td>
-        </tr>
-        <tr id="cancelreasonname-GET">
-            <td class="outputname" width="20%" data-label="Name">cancelreasonname</td>
-            <td class="outputtype" width="10%" data-label="Type">string</td>
-            <td class="outputnote" width="70%" data-label="Description">If the appointment was cancelled, the name (local to the practice) for the cancel reason.</td>
-        </tr>
-        <tr id="chargeentrynotrequiredreason-GET">
-            <td class="outputname" width="20%" data-label="Name">chargeentrynotrequiredreason</td>
-            <td class="outputtype" width="10%" data-label="Type">string</td>
-            <td class="outputnote" width="70%" data-label="Description">This field will give the reason that an appointment has been marked as not requiring charge entry.</td>
-        </tr>
-        <tr id="lastmodified-GET">
-            <td class="outputname" width="20%" data-label="Name">lastmodified</td>
-            <td class="outputtype" width="10%" data-label="Type">string</td>
-            <td class="outputnote" width="70%" data-label="Description">The date/time when the appointment was last modified. Note: It may be possible for the lastmodified field to be updated without any other field in the API call being changed. This occurs when appointment fields not included in the API output are updated.</td>
-        </tr>
-        <tr id="departmentid-GET">
-            <td class="outputname" width="20%" data-label="Name">departmentid</td>
-            <td class="outputtype" width="10%" data-label="Type">integer</td>
-            <td class="outputnote" width="70%" data-label="Description"></td>
-        </tr>
-        <tr id="checkoutdatetime-GET">
-            <td class="outputname" width="20%" data-label="Name">checkoutdatetime</td>
-            <td class="outputtype" width="10%" data-label="Type">string</td>
-            <td class="outputnote" width="70%" data-label="Description">The time (mm/dd/yyyy hh24:mi:ss) that the appointment was checked out.</td>
-        </tr>
-        <tr id="copay-GET">
-            <td class="outputname" width="20%" data-label="Name">copay</td>
-            <td class="outputtype" width="10%" data-label="Type">string</td>
-            <td class="outputnote" width="70%" data-label="Description">Expected copay for this appointment. Based on the appointment type, the patient's primary insurance, and any copays collected.  To see the amounts used in this calculated value, see the APPOINTMENTCOPAY fields.</td>
-        </tr>
-        <tr id="encounterid-GET">
-            <td class="outputname" width="20%" data-label="Name">encounterid</td>
-            <td class="outputtype" width="10%" data-label="Type">integer</td>
-            <td class="outputnote" width="70%" data-label="Description">The encounter id associated with this appointment, useful for certain other calls. Only present for appointments with Clinicals that have been checked in.</td>
-        </tr>
-        <tr id="scheduledby-GET">
-            <td class="outputname" width="20%" data-label="Name">scheduledby</td>
-            <td class="outputtype" width="10%" data-label="Type">string</td>
-            <td class="outputnote" width="70%" data-label="Description">The username who scheduled the appointment.</td>
-        </tr>
-        <tr id="checkindatetime-GET">
-            <td class="outputname" width="20%" data-label="Name">checkindatetime</td>
-            <td class="outputtype" width="10%" data-label="Type">string</td>
-            <td class="outputnote" width="70%" data-label="Description">The time (mm/dd/yyyy hh24:mi:ss) that the appointment was checked in.</td>
-        </tr>
-        <tr id="cancelledby-GET">
-            <td class="outputname" width="20%" data-label="Name">cancelledby</td>
-            <td class="outputtype" width="10%" data-label="Type">string</td>
-            <td class="outputnote" width="70%" data-label="Description">If the appointment has been cancelled, the username who cancelled the appointment.</td>
-        </tr>
-        <tr id="stopintakedatetime-GET">
-            <td class="outputname" width="20%" data-label="Name">stopintakedatetime</td>
-            <td class="outputtype" width="10%" data-label="Type">string</td>
-            <td class="outputnote" width="70%" data-label="Description">The time (mm/dd/yyyy hh24:mi:ss) that the intake process was completed.</td>
-        </tr>
-        <tr id="encounterstatus-GET">
-            <td class="outputname" width="20%" data-label="Name">encounterstatus</td>
-            <td class="outputtype" width="10%" data-label="Type">string</td>
-            <td class="outputnote" width="70%" data-label="Description">The status of this patient in the encounter (READYFORSTAFF, WITHSTAFF, READFORPROVIDER, CHECKEDOUT). Only present for appointments with Clinicals that have been checked in.</td>
-        </tr>
-        <tr id="frozenyn-GET">
-            <td class="outputname" width="20%" data-label="Name">frozenyn</td>
-            <td class="outputtype" width="10%" data-label="Type">boolean</td>
-            <td class="outputnote" width="70%" data-label="Description">If true, this appointment slot is frozen</td>
-        </tr>
-        <tr id="appointmenttype-GET">
-            <td class="outputname" width="20%" data-label="Name">appointmenttype</td>
-            <td class="outputtype" width="10%" data-label="Type">string</td>
-            <td class="outputnote" width="70%" data-label="Description">The practice-friendly (not patient friendly) name for this appointment type.  Note that this may <strong>not</strong> be the same as the booked appointment because of "generic" slots.</td>
-        </tr>
-        <tr id="appointmenttypeid-GET">
-            <td class="outputname" width="20%" data-label="Name">appointmenttypeid</td>
-            <td class="outputtype" width="10%" data-label="Type">integer</td>
-            <td class="outputnote" width="70%" data-label="Description">This is the ID for the appointment type.   Note that this may <strong>not</strong> be the same as the booked appointment because of "generic" slots.</td>
-        </tr>
-        <tr id="cancelreasonid-GET">
-            <td class="outputname" width="20%" data-label="Name">cancelreasonid</td>
-            <td class="outputtype" width="10%" data-label="Type">integer</td>
-            <td class="outputnote" width="70%" data-label="Description">If the appointment was cancelled, the numeric ID (local to the practice) for the cancel reason.</td>
-        </tr>
-        <tr id="cancelreasonnoshow-GET">
-            <td class="outputname" width="20%" data-label="Name">cancelreasonnoshow</td>
-            <td class="outputtype" width="10%" data-label="Type">boolean</td>
-            <td class="outputnote" width="70%" data-label="Description">If the appointment was cancelled, if the cancel reason is marked as a no show reason.</td>
-        </tr>
-        <tr id="cancelreasonslotavailable-GET">
-            <td class="outputname" width="20%" data-label="Name">cancelreasonslotavailable</td>
-            <td class="outputtype" width="10%" data-label="Type">boolean</td>
-            <td class="outputnote" width="70%" data-label="Description">If the appointment was cancelled, if the cancel reason is marked as a slot available reason.</td>
-        </tr>
-        <tr id="coordinatorenterpriseyn-GET">
-            <td class="outputname" width="20%" data-label="Name">coordinatorenterpriseyn</td>
-            <td class="outputtype" width="10%" data-label="Type">boolean</td>
-            <td class="outputnote" width="70%" data-label="Description">If true, the appointment was booked through athenaCoordinator Enterprise.</td>
-        </tr>
-        <tr id="duration-GET">
-            <td class="outputname" width="20%" data-label="Name">duration</td>
-            <td class="outputtype" width="10%" data-label="Type">integer</td>
-            <td class="outputnote" width="70%" data-label="Description">In minutes</td>
-        </tr>
-        <tr id="scheduleddatetime-GET">
-            <td class="outputname" width="20%" data-label="Name">scheduleddatetime</td>
-            <td class="outputtype" width="10%" data-label="Type">string</td>
-            <td class="outputnote" width="70%" data-label="Description">The time (mm/dd/yyyy hh24:mi:ss; Eastern time) that this appointment was scheduled.</td>
-        </tr>
-        <tr id="urgentyn-GET">
-            <td class="outputname" width="20%" data-label="Name">urgentyn</td>
-            <td class="outputtype" width="10%" data-label="Type">boolean</td>
-            <td class="outputnote" width="70%" data-label="Description">Urgent flag for the appointment.</td>
-        </tr>
-        <tr id="startcheckin-GET">
-            <td class="outputname" width="20%" data-label="Name">startcheckin</td>
-            <td class="outputtype" width="10%" data-label="Type">string</td>
-            <td class="outputnote" width="70%" data-label="Description">The timestamp when the appointment started the check in process. If this is set while an appointment is still in status 'f', it means that the check-in process has begun but is not yet completed.</td>
-        </tr>
-        <tr id="appointmentconfirmationid-GET">
-            <td class="outputname" width="20%" data-label="Name">appointmentconfirmationid</td>
-            <td class="outputtype" width="10%" data-label="Type">integer</td>
-            <td class="outputnote" width="70%" data-label="Description">If there is an appointment confirmation result for this appointment, the numeric ID (global to athenaNet).</td>
-        </tr>
-        <tr id="suggestedoverbooking-GET">
-            <td class="outputname" width="20%" data-label="Name">suggestedoverbooking</td>
-            <td class="outputtype" width="10%" data-label="Type">string</td>
-            <td class="outputnote" width="70%" data-label="Description">High risk score for Smart Scheduling</td>
-        </tr>
-        <tr id="appointmentcopay-GET">
-            <td class="outputname" width="20%" data-label="Name">appointmentcopay</td>
-            <td class="outputtype" width="10%" data-label="Type">string</td>
-            <td class="outputnote" width="70%" data-label="Description">Detailed information about the copay for this appointment.  Gives more detail than the COPAY field.  Note: this information is not yet available in all practices, we are rolling this out slowly.</td>
+        <tr>
+            <td class="outputname" data-label="Name">appointmenttypeid</td>
+            <td class="outputname" data-label="Type">integer</td>
+            <td class="outputname" data-label="Description">Filter by appointment type ID.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
         </tr>
         <tr>
-            <td colspan="3" width="100%" data-label="Name">
-                <table width="100%" class="table-responsive">
-                    <tbody>
-                        <tr>
-                            <td class="innerdocumentation" width="8%" data-label="Name">&nbsp;</td>
-                            <td class="innerdocumentation" data-label="Type">
-                                <table border="1" width="100%" class="table-responsive">
-                                    <tbody>
-                                        <tr id="insurancecopay-appointmentcopay-APPOINTMENTCOPAY-GET">
-                                            <td class="outputname" width="20%" data-label="Name">insurancecopay</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The expected copay based on the patient's primary insurance and appointment type.</td>
-                                        </tr>
-                                        <tr id="collectedforappointment-appointmentcopay-APPOINTMENTCOPAY-GET">
-                                            <td class="outputname" width="20%" data-label="Name">collectedforappointment</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">Copay payments that have already been collected for this specific appointment.</td>
-                                        </tr>
-                                        <tr id="collectedforother-appointmentcopay-APPOINTMENTCOPAY-GET">
-                                            <td class="outputname" width="20%" data-label="Name">collectedforother</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">Copay payments that have already been collected for this patient, but that have not yet been applied to any specific appointment.</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-        </tr>
-        <tr id="appointmentid-GET">
-            <td class="outputname" width="20%" data-label="Name">appointmentid</td>
-            <td class="outputtype" width="10%" data-label="Type">integer</td>
-            <td class="outputnote" width="70%" data-label="Description">Appointment ID of the booked appointment</td>
-        </tr>
-        <tr id="date-GET">
-            <td class="outputname" width="20%" data-label="Name">date</td>
-            <td class="outputtype" width="10%" data-label="Type">date</td>
-            <td class="outputnote" width="70%" data-label="Description">The appointment date.</td>
-        </tr>
-        <tr id="patient-GET">
-            <td class="outputname" width="20%" data-label="Name">patient</td>
-            <td class="outputtype" width="10%" data-label="Type">string</td>
-            <td class="outputnote" width="70%" data-label="Description">See /patients for details</td>
+            <td class="outputname" data-label="Name">departmentid</td>
+            <td class="outputname" data-label="Type">integer</td>
+            <td class="outputname" data-label="Description">The athenaNet department ID.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
         </tr>
         <tr>
-            <td colspan="3" width="100%" data-label="Name">
-                <table width="100%" class="table-responsive">
-                    <tbody>
-                        <tr>
-                            <td class="innerdocumentation" width="8%" data-label="Name">&nbsp;</td>
-                            <td class="innerdocumentation" data-label="Type">
-                                <table border="1" width="100%" class="table-responsive">
-                                </table>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-        </tr>
-        <tr id="startcheckoutdatetime-GET">
-            <td class="outputname" width="20%" data-label="Name">startcheckoutdatetime</td>
-            <td class="outputtype" width="10%" data-label="Type">string</td>
-            <td class="outputnote" width="70%" data-label="Description">The time (mm/dd/yyyy hh24:mi:ss) that the appointment check-out was started.</td>
-        </tr>
-        <tr id="appointmentconfirmationname-GET">
-            <td class="outputname" width="20%" data-label="Name">appointmentconfirmationname</td>
-            <td class="outputtype" width="10%" data-label="Type">string</td>
-            <td class="outputnote" width="70%" data-label="Description">If there is an appointment confirmation result for this appointment, the name (global to athenaNet).</td>
-        </tr>
-        <tr id="useexpectedprocedurecodes-GET">
-            <td class="outputname" width="20%" data-label="Name">useexpectedprocedurecodes</td>
-            <td class="outputtype" width="10%" data-label="Type">string</td>
-            <td class="outputnote" width="70%" data-label="Description">An array of expected procedure codes attached to this appointment.</td>
+            <td class="outputname required" data-label="Name">enddate (required)</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">End of the appointment search date range (mm/dd/yyyy).  Inclusive.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
         </tr>
         <tr>
-            <td colspan="3" width="100%" data-label="Name">
-                <table width="100%" class="table-responsive">
-                    <tbody>
-                        <tr>
-                            <td class="innerdocumentation" width="8%" data-label="Name">&nbsp;</td>
-                            <td class="innerdocumentation" data-label="Type">
-                                <table border="1" width="100%" class="table-responsive">
-                                    <tbody>
-                                        <tr id="procedurecode-useexpectedprocedurecodes-USEEXPECTEDPROCEDURECODES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">procedurecode</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The ID of the code.</td>
-                                        </tr>
-                                        <tr id="procedurecodedescription-useexpectedprocedurecodes-USEEXPECTEDPROCEDURECODES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">procedurecodedescription</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The description of the code.</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-        </tr>
-        <tr id="lastmodifiedby-GET">
-            <td class="outputname" width="20%" data-label="Name">lastmodifiedby</td>
-            <td class="outputtype" width="10%" data-label="Type">string</td>
-            <td class="outputnote" width="70%" data-label="Description">The user who last modified the appointment.</td>
-        </tr>
-        <tr id="patientappointmenttypename-GET">
-            <td class="outputname" width="20%" data-label="Name">patientappointmenttypename</td>
-            <td class="outputtype" width="10%" data-label="Type">string</td>
-            <td class="outputnote" width="70%" data-label="Description">The patient-friendly name for this appointment type.  Note that this may <strong>not</strong> be the same as the booked appointment because of "generic" slots.</td>
-        </tr>
-        <tr id="starttime-GET">
-            <td class="outputname" width="20%" data-label="Name">starttime</td>
-            <td class="outputtype" width="10%" data-label="Type">time</td>
-            <td class="outputnote" width="70%" data-label="Description">As HH:MM (where HH is the 0-23 hour and MM is the minute).  This time is local to the department.</td>
-        </tr>
-        <tr id="stopcheckin-GET">
-            <td class="outputname" width="20%" data-label="Name">stopcheckin</td>
-            <td class="outputtype" width="10%" data-label="Type">string</td>
-            <td class="outputnote" width="70%" data-label="Description">The timestamp when the check-in process was finished for this appointment.</td>
-        </tr>
-        <tr id="providerid-GET">
-            <td class="outputname" width="20%" data-label="Name">providerid</td>
-            <td class="outputtype" width="10%" data-label="Type">integer</td>
-            <td class="outputnote" width="70%" data-label="Description"></td>
-        </tr>
-        <tr id="stopexamdatetime-GET">
-            <td class="outputname" width="20%" data-label="Name">stopexamdatetime</td>
-            <td class="outputtype" width="10%" data-label="Type">string</td>
-            <td class="outputnote" width="70%" data-label="Description">The time (mm/dd/yyyy hh24:mi:ss) that the exam was completed.</td>
-        </tr>
-        <tr id="renderingproviderid-GET">
-            <td class="outputname" width="20%" data-label="Name">renderingproviderid</td>
-            <td class="outputtype" width="10%" data-label="Type">integer</td>
-            <td class="outputnote" width="70%" data-label="Description">The rendering provider ID.</td>
-        </tr>
-        <tr id="supervisingproviderid-GET">
-            <td class="outputname" width="20%" data-label="Name">supervisingproviderid</td>
-            <td class="outputtype" width="10%" data-label="Type">integer</td>
-            <td class="outputnote" width="70%" data-label="Description">The supervising provider ID.</td>
-        </tr>
-        <tr id="claims-GET">
-            <td class="outputname" width="20%" data-label="Name">claims</td>
-            <td class="outputtype" width="10%" data-label="Type">string</td>
-            <td class="outputnote" width="70%" data-label="Description">As detailed in /claims, if requested.</td>
+            <td class="outputname" data-label="Name">endlastmodified</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">Identify appointments modified prior to this date/time (mm/dd/yyyy hh:mi:ss).  Inclusive. Note: This can only be used if a startlastmodified value is supplied as well.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
         </tr>
         <tr>
-            <td colspan="3" width="100%" data-label="Name">
-                <table width="100%" class="table-responsive">
-                    <tbody>
-                        <tr>
-                            <td class="innerdocumentation" width="8%" data-label="Name">&nbsp;</td>
-                            <td class="innerdocumentation" data-label="Type">
-                                <table border="1" width="100%" class="table-responsive">
-                                    <tbody>
-                                        <tr id="referringproviderid-claims-CLAIMS-GET">
-                                            <td class="outputname" width="20%" data-label="Name">referringproviderid</td>
-                                            <td class="outputtype" width="10%" data-label="Type">integer</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The referring provider ID for this claim.  See /referringproviders.  This is not the same as the ID from the /providers call.</td>
-                                        </tr>
-                                        <tr id="primaryinsurancepayer-claims-CLAIMS-GET">
-                                            <td class="outputname" width="20%" data-label="Name">primaryinsurancepayer</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The status and notes of a responsible payer.  This payer is the primary insurace.</td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="3" width="100%" data-label="Name">
-                                                <table width="100%" class="table-responsive">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="innerdocumentation" width="8%" data-label="Name">&nbsp;</td>
-                                                            <td class="innerdocumentation" data-label="Type">
-                                                                <table border="1" width="100%" class="table-responsive">
-                                                                    <tbody>
-                                                                        <tr id="note-primaryinsurancepayer-PRIMARYINSURANCEPAYER-claims-CLAIMS-GET">
-                                                                            <td class="outputname" width="20%" data-label="Name">note</td>
-                                                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                                                            <td class="outputnote" width="70%" data-label="Description">The note that is attached to this status.</td>
-                                                                        </tr>
-                                                                        <tr id="status-primaryinsurancepayer-PRIMARYINSURANCEPAYER-claims-CLAIMS-GET">
-                                                                            <td class="outputname" width="20%" data-label="Name">status</td>
-                                                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                                                            <td class="outputnote" width="70%" data-label="Description">The status associated with this responsible payer.</td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr id="diagnoses-claims-CLAIMS-GET">
-                                            <td class="outputname" width="20%" data-label="Name">diagnoses</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">
-                                                <p>Diagnoses is an array of all diagnoses.   Each entry in the array is a hash with several fields.  /ccda is a better clinical representation.  These fields are:</p>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="3" width="100%" data-label="Name">
-                                                <table width="100%" class="table-responsive">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="innerdocumentation" width="8%" data-label="Name">&nbsp;</td>
-                                                            <td class="innerdocumentation" data-label="Type">
-                                                                <table border="1" width="100%" class="table-responsive">
-                                                                    <tbody>
-                                                                        <tr id="diagnosisid-diagnoses-DIAGNOSES-claims-CLAIMS-GET">
-                                                                            <td class="outputname" width="20%" data-label="Name">diagnosisid</td>
-                                                                            <td class="outputtype" width="10%" data-label="Type">integer</td>
-                                                                            <td class="outputnote" width="70%" data-label="Description">A unique ID related to this diagnosis.</td>
-                                                                        </tr>
-                                                                        <tr id="diagnosisdescription-diagnoses-DIAGNOSES-claims-CLAIMS-GET">
-                                                                            <td class="outputname" width="20%" data-label="Name">diagnosisdescription</td>
-                                                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                                                            <td class="outputnote" width="70%" data-label="Description">A description of this diagnosis.</td>
-                                                                        </tr>
-                                                                        <tr id="diagnosisrawcode-diagnoses-DIAGNOSES-claims-CLAIMS-GET">
-                                                                            <td class="outputname" width="20%" data-label="Name">diagnosisrawcode</td>
-                                                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                                                            <td class="outputnote" width="70%" data-label="Description">The raw ICD-9 code.  This will migrate to ICD-10 in the future.</td>
-                                                                        </tr>
-                                                                        <tr id="diagnosiscategory-diagnoses-DIAGNOSES-claims-CLAIMS-GET">
-                                                                            <td class="outputname" width="20%" data-label="Name">diagnosiscategory</td>
-                                                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                                                            <td class="outputnote" width="70%" data-label="Description">The category for this diagnosis.</td>
-                                                                        </tr>
-                                                                        <tr id="deleteddiagnosis-diagnoses-DIAGNOSES-claims-CLAIMS-GET">
-                                                                            <td class="outputname" width="20%" data-label="Name">deleteddiagnosis</td>
-                                                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                                                            <td class="outputnote" width="70%" data-label="Description">In certain cases, diagnoses may be added and then removed from a particular claim.  In normal circumstances, this will be false.  However, if a diagnosis was removed, this will be true.</td>
-                                                                        </tr>
-                                                                        <tr id="diagnosiscodeset-diagnoses-DIAGNOSES-claims-CLAIMS-GET">
-                                                                            <td class="outputname" width="20%" data-label="Name">diagnosiscodeset</td>
-                                                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                                                            <td class="outputnote" width="70%" data-label="Description">Either ICD9 or ICD10.</td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr id="patientpayer-claims-CLAIMS-GET">
-                                            <td class="outputname" width="20%" data-label="Name">patientpayer</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The status and notes of a responsible payer.  This payer is the patient.</td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="3" width="100%" data-label="Name">
-                                                <table width="100%" class="table-responsive">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="innerdocumentation" width="8%" data-label="Name">&nbsp;</td>
-                                                            <td class="innerdocumentation" data-label="Type">
-                                                                <table border="1" width="100%" class="table-responsive">
-                                                                    <tbody>
-                                                                        <tr id="note-patientpayer-PATIENTPAYER-claims-CLAIMS-GET">
-                                                                            <td class="outputname" width="20%" data-label="Name">note</td>
-                                                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                                                            <td class="outputnote" width="70%" data-label="Description">The note that is attached to this status.</td>
-                                                                        </tr>
-                                                                        <tr id="status-patientpayer-PATIENTPAYER-claims-CLAIMS-GET">
-                                                                            <td class="outputname" width="20%" data-label="Name">status</td>
-                                                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                                                            <td class="outputnote" width="70%" data-label="Description">The status associated with this responsible payer.</td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr id="claimcreateddate-claims-CLAIMS-GET">
-                                            <td class="outputname" width="20%" data-label="Name">claimcreateddate</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The date the claim was created.</td>
-                                        </tr>
-                                        <tr id="procedures-claims-CLAIMS-GET">
-                                            <td class="outputname" width="20%" data-label="Name">procedures</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">
-                                                <p>Procedures is an array of all procedures.  /ccda is a better clinical representation.   These fields are:</p>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="3" width="100%" data-label="Name">
-                                                <table width="100%" class="table-responsive">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="innerdocumentation" width="8%" data-label="Name">&nbsp;</td>
-                                                            <td class="innerdocumentation" data-label="Type">
-                                                                <table border="1" width="100%" class="table-responsive">
-                                                                    <tbody>
-                                                                        <tr id="procedurecategory-procedures-PROCEDURES-claims-CLAIMS-GET">
-                                                                            <td class="outputname" width="20%" data-label="Name">procedurecategory</td>
-                                                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                                                            <td class="outputnote" width="70%" data-label="Description">The category name associated with this procedure.</td>
-                                                                        </tr>
-                                                                        <tr id="allowablemin-procedures-PROCEDURES-claims-CLAIMS-GET">
-                                                                            <td class="outputname" width="20%" data-label="Name">allowablemin</td>
-                                                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                                                            <td class="outputnote" width="70%" data-label="Description">The minimum amount expected from payer for all services from this procedure.</td>
-                                                                        </tr>
-                                                                        <tr id="proceduredescription-procedures-PROCEDURES-claims-CLAIMS-GET">
-                                                                            <td class="outputname" width="20%" data-label="Name">proceduredescription</td>
-                                                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                                                            <td class="outputnote" width="70%" data-label="Description">A description of this procedure.</td>
-                                                                        </tr>
-                                                                        <tr id="chargeamount-procedures-PROCEDURES-claims-CLAIMS-GET">
-                                                                            <td class="outputname" width="20%" data-label="Name">chargeamount</td>
-                                                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                                                            <td class="outputnote" width="70%" data-label="Description">The amount charged for this procedure.</td>
-                                                                        </tr>
-                                                                        <tr id="transactionid-procedures-PROCEDURES-claims-CLAIMS-GET">
-                                                                            <td class="outputname" width="20%" data-label="Name">transactionid</td>
-                                                                            <td class="outputtype" width="10%" data-label="Type">integer</td>
-                                                                            <td class="outputnote" width="70%" data-label="Description">The ID of the last transaction associated with the claim.</td>
-                                                                        </tr>
-                                                                        <tr id="procedurecode-procedures-PROCEDURES-claims-CLAIMS-GET">
-                                                                            <td class="outputname" width="20%" data-label="Name">procedurecode</td>
-                                                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                                                            <td class="outputnote" width="70%" data-label="Description">The CPT code associated with this procedure.</td>
-                                                                        </tr>
-                                                                        <tr id="allowablemax-procedures-PROCEDURES-claims-CLAIMS-GET">
-                                                                            <td class="outputname" width="20%" data-label="Name">allowablemax</td>
-                                                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                                                            <td class="outputnote" width="70%" data-label="Description">The maximum amount expected from payer for all services from this procedure.</td>
-                                                                        </tr>
-                                                                        <tr id="allowableamount-procedures-PROCEDURES-claims-CLAIMS-GET">
-                                                                            <td class="outputname" width="20%" data-label="Name">allowableamount</td>
-                                                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                                                            <td class="outputnote" width="70%" data-label="Description">The total amount expected from payer for all services from this procedure.</td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr id="billedservicedate-claims-CLAIMS-GET">
-                                            <td class="outputname" width="20%" data-label="Name">billedservicedate</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The billed date of service.</td>
-                                        </tr>
-                                        <tr id="billedproviderid-claims-CLAIMS-GET">
-                                            <td class="outputname" width="20%" data-label="Name">billedproviderid</td>
-                                            <td class="outputtype" width="10%" data-label="Type">integer</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The provider ID of the billing provider for this claim.</td>
-                                        </tr>
-                                        <tr id="appointmentid-claims-CLAIMS-GET">
-                                            <td class="outputname" width="20%" data-label="Name">appointmentid</td>
-                                            <td class="outputtype" width="10%" data-label="Type">integer</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The appointment ID associated with this claim.</td>
-                                        </tr>
-                                        <tr id="secondaryinsurancepayer-claims-CLAIMS-GET">
-                                            <td class="outputname" width="20%" data-label="Name">secondaryinsurancepayer</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The status and notes of a responsible payer.  This payer is the secondary insurace.</td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="3" width="100%" data-label="Name">
-                                                <table width="100%" class="table-responsive">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="innerdocumentation" width="8%" data-label="Name">&nbsp;</td>
-                                                            <td class="innerdocumentation" data-label="Type">
-                                                                <table border="1" width="100%" class="table-responsive">
-                                                                    <tbody>
-                                                                        <tr id="note-secondaryinsurancepayer-SECONDARYINSURANCEPAYER-claims-CLAIMS-GET">
-                                                                            <td class="outputname" width="20%" data-label="Name">note</td>
-                                                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                                                            <td class="outputnote" width="70%" data-label="Description">The note that is attached to this status.</td>
-                                                                        </tr>
-                                                                        <tr id="status-secondaryinsurancepayer-SECONDARYINSURANCEPAYER-claims-CLAIMS-GET">
-                                                                            <td class="outputname" width="20%" data-label="Name">status</td>
-                                                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                                                            <td class="outputnote" width="70%" data-label="Description">The status associated with this responsible payer.</td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr id="chargeamount-claims-CLAIMS-GET">
-                                            <td class="outputname" width="20%" data-label="Name">chargeamount</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The total amount billed for all services from this claim.</td>
-                                        </tr>
-                                        <tr id="transactiondetails-claims-CLAIMS-GET">
-                                            <td class="outputname" width="20%" data-label="Name">transactiondetails</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">A hash of ids ("transactionid") to amounts; these should sum to the chargeamount. Please note that this has been deprecated in lieu of the data being available in the procedures section.</td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="3" width="100%" data-label="Name">
-                                                <table width="100%" class="table-responsive">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="innerdocumentation" width="8%" data-label="Name">&nbsp;</td>
-                                                            <td class="innerdocumentation" data-label="Type">
-                                                                <table border="1" width="100%" class="table-responsive">
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr id="transactionid-claims-CLAIMS-GET">
-                                            <td class="outputname" width="20%" data-label="Name">transactionid</td>
-                                            <td class="outputtype" width="10%" data-label="Type">integer</td>
-                                            <td class="outputnote" width="70%" data-label="Description">A unique ID for the primary transaction this claim represents.  May be useful for debugging.</td>
-                                        </tr>
-                                        <tr id="claimid-claims-CLAIMS-GET">
-                                            <td class="outputname" width="20%" data-label="Name">claimid</td>
-                                            <td class="outputtype" width="10%" data-label="Type">integer</td>
-                                            <td class="outputnote" width="70%" data-label="Description">athenaNet's internal ID for this claim, specific to the practice.</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-        </tr>
-        <tr id="insurances-GET">
-            <td class="outputname" width="20%" data-label="Name">insurances</td>
-            <td class="outputtype" width="10%" data-label="Type">string</td>
-            <td class="outputnote" width="70%" data-label="Description">List of active patient insurance packages. Only shown for single or multiple booked appointments if SHOWINSURANCE is set.</td>
+            <td class="outputname" data-label="Name">ignorerestrictions</td>
+            <td class="outputname" data-label="Type">boolean</td>
+            <td class="outputname" data-label="Description">When showing patient detail for appointments, the patient information for patients with record restrictions and blocked patients will not be shown.  Setting this flag to true will show that information for those patients.</td>
+            <td class="outputname" data-label="Default">0</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
         </tr>
         <tr>
-            <td colspan="3" width="100%" data-label="Name">
-                <table width="100%" class="table-responsive">
-                    <tbody>
-                        <tr>
-                            <td class="innerdocumentation" width="8%" data-label="Name">&nbsp;</td>
-                            <td class="innerdocumentation" data-label="Type">
-                                <table border="1" width="100%" class="table-responsive">
-                                    <tbody>
-                                        <tr id="insurancepolicyholder-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">insurancepolicyholder</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The full name of the insurance policy holder.</td>
-                                        </tr>
-                                        <tr id="ccmstatusname-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">ccmstatusname</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The name of current CCM enrollment status.</td>
-                                        </tr>
-                                        <tr id="insurancepolicyholderaddress2-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">insurancepolicyholderaddress2</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The second address line of the insurance policy holder.</td>
-                                        </tr>
-                                        <tr id="caseinjurydate-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">caseinjurydate</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">CASE POLICY FIELD - Date of the injury.  Required for auto insurance, legal, and worker's comp case policies.</td>
-                                        </tr>
-                                        <tr id="insurancepolicyholderfirstname-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">insurancepolicyholderfirstname</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The first name of the insurance policy holder.  Except for self-pay, required for new policies.</td>
-                                        </tr>
-                                        <tr id="expirationdate-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">expirationdate</td>
-                                            <td class="outputtype" width="10%" data-label="Type">date</td>
-                                            <td class="outputnote" width="70%" data-label="Description">Date the insurance expires.</td>
-                                        </tr>
-                                        <tr id="insurancepolicyholderlastname-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">insurancepolicyholderlastname</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The last name of the insurance policy holder.  Except for self-pay, required for new policies.</td>
-                                        </tr>
-                                        <tr id="cancelled-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">cancelled</td>
-                                            <td class="outputtype" width="10%" data-label="Type">date</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The date in which the insurance was marked cancelled.</td>
-                                        </tr>
-                                        <tr id="insurancepolicyholdersex-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">insurancepolicyholdersex</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The sex of the insurance policy holder.  Except for self-pay, required for new policies.</td>
-                                        </tr>
-                                        <tr id="sequencenumber-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">sequencenumber</td>
-                                            <td class="outputtype" width="10%" data-label="Type">integer</td>
-                                            <td class="outputnote" width="70%" data-label="Description">1 = primary, 2 = secondary, 3 = tertiary, etc.  Must have a primary before a secondary and a secondary before a tertiary, etc.</td>
-                                        </tr>
-                                        <tr id="adjusterfirstname-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">adjusterfirstname</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">CASE POLICY FIELD - First name of the adjuster on this case policy.  Only available for auto insurance or worker's comp case policies.</td>
-                                        </tr>
-                                        <tr id="anotherpartyresponsibleyn-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">anotherpartyresponsibleyn</td>
-                                            <td class="outputtype" width="10%" data-label="Type">boolean</td>
-                                            <td class="outputnote" width="70%" data-label="Description">CASE POLICY FIELD - Boolean field indicating if another party was responsible for this accident.</td>
-                                        </tr>
-                                        <tr id="descriptionofinjury-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">descriptionofinjury</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">CASE POLICY FIELD - A description of the injury.  Only available for auto insurance and worker's comp case policies.</td>
-                                        </tr>
-                                        <tr id="eligibilityreason-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">eligibilityreason</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The source of the current status. Athena is our eligibility engine.</td>
-                                        </tr>
-                                        <tr id="icd10codes-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">icd10codes</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">CASE POLICY FIELD - See documentation for ICD9CODES.</td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="3" width="100%" data-label="Name">
-                                                <table width="100%" class="table-responsive">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="innerdocumentation" width="8%" data-label="Name">&nbsp;</td>
-                                                            <td class="innerdocumentation" data-label="Type">
-                                                                <table border="1" width="100%" class="table-responsive">
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr id="icd9codes-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">icd9codes</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">CASE POLICY FIELD - A list of ICD9 accepted diagnosis codes. Only available for worker's comp case policies.</td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="3" width="100%" data-label="Name">
-                                                <table width="100%" class="table-responsive">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="innerdocumentation" width="8%" data-label="Name">&nbsp;</td>
-                                                            <td class="innerdocumentation" data-label="Type">
-                                                                <table border="1" width="100%" class="table-responsive">
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr id="insuranceclaimnumber-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">insuranceclaimnumber</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">CASE POLICY FIELD - The auto insurance claim number or the worker's comp claim number.</td>
-                                        </tr>
-                                        <tr id="insuranceid-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">insuranceid</td>
-                                            <td class="outputtype" width="10%" data-label="Type">integer</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The athena insurance policy ID.</td>
-                                        </tr>
-                                        <tr id="insuranceplandisplayname-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">insuranceplandisplayname</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">Superpackagename of the specific insurance package.</td>
-                                        </tr>
-                                        <tr id="insurancepolicyholdercity-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">insurancepolicyholdercity</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The city of the insurance policy holder.</td>
-                                        </tr>
-                                        <tr id="insurancepolicyholdercountrycode-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">insurancepolicyholdercountrycode</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The country code (3 letter) of the insurance policy holder.</td>
-                                        </tr>
-                                        <tr id="insurancepolicyholdercountryiso3166-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">insurancepolicyholdercountryiso3166</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The <a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166</a> country code of the insurance policy holder.</td>
-                                        </tr>
-                                        <tr id="insurancepolicyholderdob-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">insurancepolicyholderdob</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The DOB of the insurance policy holder (mm/dd/yyyy).</td>
-                                        </tr>
-                                        <tr id="insurancepolicyholdermiddlename-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">insurancepolicyholdermiddlename</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The middle name of the insurance policy holder.</td>
-                                        </tr>
-                                        <tr id="insurancepolicyholderstate-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">insurancepolicyholderstate</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The state of the insurance policy holder.</td>
-                                        </tr>
-                                        <tr id="insurancepolicyholderzip-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">insurancepolicyholderzip</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The zip of the insurance policy holder.</td>
-                                        </tr>
-                                        <tr id="relatedtootheraccidentyn-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">relatedtootheraccidentyn</td>
-                                            <td class="outputtype" width="10%" data-label="Type">boolean</td>
-                                            <td class="outputnote" width="70%" data-label="Description">CASE POLICY FIELD - Boolean field indicating whether this case policy is related to another accident.  Only available for worker's comp case policies.</td>
-                                        </tr>
-                                        <tr id="policynumber-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">policynumber</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The insurance group number.  This is sometimes present on an insurance card.</td>
-                                        </tr>
-                                        <tr id="slidingfeeplanid-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">slidingfeeplanid</td>
-                                            <td class="outputtype" width="10%" data-label="Type">integer</td>
-                                            <td class="outputnote" width="70%" data-label="Description">If the patient is on a sliding fee plan, this is the ID of that plan.  See /slidingfeeplans.</td>
-                                        </tr>
-                                        <tr id="adjusterfax-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">adjusterfax</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">CASE POLICY FIELD - Fax for the adjuster on this case policy.  Only available for auto insurance or worker's comp case policies.</td>
-                                        </tr>
-                                        <tr id="relationshiptoinsured-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">relationshiptoinsured</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">This patient's relationship to the policy holder (text).</td>
-                                        </tr>
-                                        <tr id="stateofreportedinjury-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">stateofreportedinjury</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">CASE POLICY FIELD - Two-letter state abbreviation for the state this injury was reported in.  Only available for worker's comp case policies.</td>
-                                        </tr>
-                                        <tr id="relatedtoautoaccidentyn-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">relatedtoautoaccidentyn</td>
-                                            <td class="outputtype" width="10%" data-label="Type">boolean</td>
-                                            <td class="outputnote" width="70%" data-label="Description">CASE POLICY FIELD - Boolean field indicating whether this case policy is related to an auto accident.</td>
-                                        </tr>
-                                        <tr id="eligibilitymessage-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">eligibilitymessage</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The message, usually from our engine, of the eligibility check.</td>
-                                        </tr>
-                                        <tr id="insuranceidnumber-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">insuranceidnumber</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The insurance policy ID number (as presented on the insurance card itself).</td>
-                                        </tr>
-                                        <tr id="adjusterphone-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">adjusterphone</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">CASE POLICY FIELD - Phone number/other contact info for the adjuster on this case policy.  Only available for auto insurance or worker's comp case policies.</td>
-                                        </tr>
-                                        <tr id="insurancepackageaddress1-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">insurancepackageaddress1</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">Address 1 for the AthenaNet insurance Package.</td>
-                                        </tr>
-                                        <tr id="insurancepolicyholderaddress1-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">insurancepolicyholderaddress1</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The first address line of the insurance policy holder.</td>
-                                        </tr>
-                                        <tr id="ccmstatusid-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">ccmstatusid</td>
-                                            <td class="outputtype" width="10%" data-label="Type">integer</td>
-                                            <td class="outputnote" width="70%" data-label="Description">Status ID of current CCM enrollment.</td>
-                                        </tr>
-                                        <tr id="coinsurancepercent-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">coinsurancepercent</td>
-                                            <td class="outputtype" width="10%" data-label="Type">number</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The coinsurance percentage for this insurance. If you've just POSTed a new insurance you will have to wait for the auto eligbility check before this field populates.</td>
-                                        </tr>
-                                        <tr id="insurancepolicyholdersuffix-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">insurancepolicyholdersuffix</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The suffix of the insurance policy holder.</td>
-                                        </tr>
-                                        <tr id="insuredpcpnpi-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">insuredpcpnpi</td>
-                                            <td class="outputtype" width="10%" data-label="Type">integer</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The national provider id of the primary care physcian assicated with the insurance.</td>
-                                        </tr>
-                                        <tr id="injuredbodypart-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">injuredbodypart</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">CASE POLICY FIELD - Text field for describing the injured body part.  Only available for auto insurance  and worker's comp case policies.</td>
-                                        </tr>
-                                        <tr id="eligibilitylastchecked-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">eligibilitylastchecked</td>
-                                            <td class="outputtype" width="10%" data-label="Type">date</td>
-                                            <td class="outputnote" width="70%" data-label="Description">Date the eligibility was last checked.</td>
-                                        </tr>
-                                        <tr id="insuredpcp-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">insuredpcp</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description"></td>
-                                        </tr>
-                                        <tr id="insurancepackageaddress2-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">insurancepackageaddress2</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">Address 2 for the AthenaNet insurance Package.</td>
-                                        </tr>
-                                        <tr id="autoaccidentstate-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">autoaccidentstate</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">CASE POLICY FIELD - Two-letter abbreviation for the state in which the auto accident took place. Only meaningful for auto insurance case policies.</td>
-                                        </tr>
-                                        <tr id="adjusterlastname-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">adjusterlastname</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">CASE POLICY FIELD - Last name of the adjuster on this case policy.  Only available for auto insurance or worker's comp case policies.</td>
-                                        </tr>
-                                        <tr id="copays-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">copays</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">Details about the copays for this insurance package. If you've just POSTed a new insurance you will have to wait for the auto eligbility check before these populate.</td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="3" width="100%" data-label="Name">
-                                                <table width="100%" class="table-responsive">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="innerdocumentation" width="8%" data-label="Name">&nbsp;</td>
-                                                            <td class="innerdocumentation" data-label="Type">
-                                                                <table border="1" width="100%" class="table-responsive">
-                                                                    <tbody>
-                                                                        <tr id="copaytype-copays-COPAYS-insurances-INSURANCES-GET">
-                                                                            <td class="outputname" width="20%" data-label="Name">copaytype</td>
-                                                                            <td class="outputtype" width="10%" data-label="Type">number</td>
-                                                                            <td class="outputnote" width="70%" data-label="Description">What the copay amount applies to.</td>
-                                                                        </tr>
-                                                                        <tr id="copayamount-copays-COPAYS-insurances-INSURANCES-GET">
-                                                                            <td class="outputname" width="20%" data-label="Name">copayamount</td>
-                                                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                                                            <td class="outputnote" width="70%" data-label="Description">The amount of the copay.</td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr id="insurancepackagezip-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">insurancepackagezip</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">Zip code of the AthenaNet insurance package</td>
-                                        </tr>
-                                        <tr id="insurancepackagecity-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">insurancepackagecity</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">City for the AthenaNet insurance Package.</td>
-                                        </tr>
-                                        <tr id="insurancepolicyholderssn-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">insurancepolicyholderssn</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The SSN of the insurance policy holder.</td>
-                                        </tr>
-                                        <tr id="insurancetype-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">insurancetype</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">Type of insurance. E.g., Medicare Part B, Group Policy, HMO, etc.</td>
-                                        </tr>
-                                        <tr id="ircname-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">ircname</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">Insurance category / company. E.g., United Healthcare, BCBS-MA, etc.</td>
-                                        </tr>
-                                        <tr id="casepolicytypename-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">casepolicytypename</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">CASE POLICY FIELD - The name of this type of case policy.</td>
-                                        </tr>
-                                        <tr id="repricerphone-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">repricerphone</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">CASE POLICY FIELD - Phone number for the repricer.  Only available for worker's comp case policies.</td>
-                                        </tr>
-                                        <tr id="insurancepackagestate-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">insurancepackagestate</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">State of the AthenaNet insurance package</td>
-                                        </tr>
-                                        <tr id="insuranceplanname-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">insuranceplanname</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">Name of the specific insurance package.</td>
-                                        </tr>
-                                        <tr id="insurancepackageid-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">insurancepackageid</td>
-                                            <td class="outputtype" width="10%" data-label="Type">integer</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The athenaNet insurance package ID.</td>
-                                        </tr>
-                                        <tr id="eligibilitystatus-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">eligibilitystatus</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">Current eligibility status of this insurance package.</td>
-                                        </tr>
-                                        <tr id="relatedtoemploymentyn-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">relatedtoemploymentyn</td>
-                                            <td class="outputtype" width="10%" data-label="Type">boolean</td>
-                                            <td class="outputnote" width="70%" data-label="Description">CASE POLICY FIELD - Boolean field indicating whether this case policy is related to the patient's employer.</td>
-                                        </tr>
-                                        <tr id="insurancephone-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">insurancephone</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The phone number for the insurance company. Note: This defaults to the insurance package phone number. If this is set, it will override it. Likewise if blanked out, it will go back to default.</td>
-                                        </tr>
-                                        <tr id="relationshiptoinsuredid-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">relationshiptoinsuredid</td>
-                                            <td class="outputtype" width="10%" data-label="Type">integer</td>
-                                            <td class="outputnote" width="70%" data-label="Description">This patient's relationship to the policy holder (as an ID).  See <a href="/docs/read/reference/Patient_Relationship_Mapping">the mapping</a>.</td>
-                                        </tr>
-                                        <tr id="repricername-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">repricername</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">CASE POLICY FIELD - Name for the repricer.  Only available for worker's comp case policies.</td>
-                                        </tr>
-                                        <tr id="insuredentitytypeid-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">insuredentitytypeid</td>
-                                            <td class="outputtype" width="10%" data-label="Type">integer</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The ID of the entity type for this insurance.</td>
-                                        </tr>
-                                        <tr id="issuedate-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">issuedate</td>
-                                            <td class="outputtype" width="10%" data-label="Type">date</td>
-                                            <td class="outputnote" width="70%" data-label="Description">Date the insurance was issued.</td>
-                                        </tr>
-                                        <tr id="employerid-insurances-INSURANCES-GET">
-                                            <td class="outputname" width="20%" data-label="Name">employerid</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The employer ID associated with the patient's insurance.</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-        </tr>
-        <tr id="patientlocationid-GET">
-            <td class="outputname" width="20%" data-label="Name">patientlocationid</td>
-            <td class="outputtype" width="10%" data-label="Type">integer</td>
-            <td class="outputnote" width="70%" data-label="Description">The location of the patient. See /patientlocation for practice list. Only present for appointments with Clinicals that have been checked in.</td>
-        </tr>
-        <tr id="encounterstate-GET">
-            <td class="outputname" width="20%" data-label="Name">encounterstate</td>
-            <td class="outputtype" width="10%" data-label="Type">string</td>
-            <td class="outputnote" width="70%" data-label="Description">The status of the clinical encounter associated with this appointment (OPEN, CLOSED, DELETED, PEND, etc.). This differs from encounterstatus, which refers to the status of the patient in the encounter.</td>
-        </tr>
-        <tr id="rescheduledappointmentid-GET">
-            <td class="outputname" width="20%" data-label="Name">rescheduledappointmentid</td>
-            <td class="outputtype" width="10%" data-label="Type">integer</td>
-            <td class="outputnote" width="70%" data-label="Description">When an appointment is rescheduled, this is the ID of the replacement appointment.</td>
-        </tr>
-        <tr id="referringproviderid-GET">
-            <td class="outputname" width="20%" data-label="Name">referringproviderid</td>
-            <td class="outputtype" width="10%" data-label="Type">integer</td>
-            <td class="outputnote" width="70%" data-label="Description">The referring provider ID.</td>
-        </tr>
-        <tr id="reminderdetails-GET">
-            <td class="outputname" width="20%" data-label="Name">reminderdetails</td>
-            <td class="outputtype" width="10%" data-label="Type">string</td>
-            <td class="outputnote" width="70%" data-label="Description">Detailed ReminderCall information made for this appointment.</td>
+            <td class="outputname" data-label="Name">patientid</td>
+            <td class="outputname" data-label="Type">integer</td>
+            <td class="outputname" data-label="Description">The athenaNet patient ID.  If operating in a Provider Group Enterprise practice, this should be the enterprise patient ID.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
         </tr>
         <tr>
-            <td colspan="3" width="100%" data-label="Name">
-                <table width="100%" class="table-responsive">
-                    <tbody>
-                        <tr>
-                            <td class="innerdocumentation" width="8%" data-label="Name">&nbsp;</td>
-                            <td class="innerdocumentation" data-label="Type">
-                                <table border="1" width="100%" class="table-responsive">
-                                    <tbody>
-                                        <tr id="messagetype-reminderdetails-REMINDERDETAILS-GET">
-                                            <td class="outputname" width="20%" data-label="Name">messagetype</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">The type of message that was attempted.</td>
-                                        </tr>
-                                        <tr id="calltime-reminderdetails-REMINDERDETAILS-GET">
-                                            <td class="outputname" width="20%" data-label="Name">calltime</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">Date and time of the call attempt.</td>
-                                        </tr>
-                                        <tr id="messageresultid-reminderdetails-REMINDERDETAILS-GET">
-                                            <td class="outputname" width="20%" data-label="Name">messageresultid</td>
-                                            <td class="outputtype" width="10%" data-label="Type">integer</td>
-                                            <td class="outputnote" width="70%" data-label="Description">Id of the message attempt.</td>
-                                        </tr>
-                                        <tr id="result-reminderdetails-REMINDERDETAILS-GET">
-                                            <td class="outputname" width="20%" data-label="Name">result</td>
-                                            <td class="outputtype" width="10%" data-label="Type">string</td>
-                                            <td class="outputnote" width="70%" data-label="Description">A description of what happened during the call attempt.</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
+            <td class="outputname" data-label="Name">providerid</td>
+            <td class="outputname" data-label="Type">array</td>
+            <td class="outputname" data-label="Description">The athenaNet provider ID.  Multiple IDs (either as a comma delimited list or multiple POSTed values) are allowed.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
         </tr>
-        <tr id="templateappointmenttypeid-GET">
-            <td class="outputname" width="20%" data-label="Name">templateappointmenttypeid</td>
-            <td class="outputtype" width="10%" data-label="Type">integer</td>
-            <td class="outputnote" width="70%" data-label="Description">The original appointment type for this slot. This can change for generic appointments.</td>
+        <tr>
+            <td class="outputname" data-label="Name">scheduledenddate</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">End of the appointment scheduled search date range (mm/dd/yyyy).  Inclusive.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
         </tr>
-        <tr id="templateappointmentid-GET">
-            <td class="outputname" width="20%" data-label="Name">templateappointmentid</td>
-            <td class="outputtype" width="10%" data-label="Type">integer</td>
-            <td class="outputnote" width="70%" data-label="Description">The original appointment ID. This is useful if an appointment has been cancelled and you want to find the original ID.</td>
+        <tr>
+            <td class="outputname" data-label="Name">scheduledstartdate</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">Start of the appointment scheduled search date range (mm/dd/yyyy).  Inclusive.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
         </tr>
-        <tr id="patientid-GET">
-            <td class="outputname" width="20%" data-label="Name">patientid</td>
-            <td class="outputtype" width="10%" data-label="Type">integer</td>
-            <td class="outputnote" width="70%" data-label="Description">The athenaNet patient ID for this appointment</td>
+        <tr>
+            <td class="outputname" data-label="Name">showcancelled</td>
+            <td class="outputname" data-label="Type">boolean</td>
+            <td class="outputname" data-label="Description">Include appointments that have been cancelled.</td>
+            <td class="outputname" data-label="Default">0</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">showclaimdetail</td>
+            <td class="outputname" data-label="Type">boolean</td>
+            <td class="outputname" data-label="Description">Include claim information, if available, associated with an appointment.</td>
+            <td class="outputname" data-label="Default">0</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">showcopay</td>
+            <td class="outputname" data-label="Type">boolean</td>
+            <td class="outputname" data-label="Description">By default, the expected co-pay is returned. For performance purposes, you can set this to false and copay will not be populated.</td>
+            <td class="outputname" data-label="Default">1</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">showexpectedprocedurecodes</td>
+            <td class="outputname" data-label="Type">boolean</td>
+            <td class="outputname" data-label="Description">Show the expetcted procedurecodes.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">showinsurance</td>
+            <td class="outputname" data-label="Type">boolean</td>
+            <td class="outputname" data-label="Description">Include patient insurance information. Shows insurance packages for the appointment if any are selected, and all patient packages otherwise.</td>
+            <td class="outputname" data-label="Default">0</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">showpatientdetail</td>
+            <td class="outputname" data-label="Type">boolean</td>
+            <td class="outputname" data-label="Description">Include patient information for each patient associated with an appointment.</td>
+            <td class="outputname" data-label="Default">0</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">showremindercalldetail</td>
+            <td class="outputname" data-label="Type">boolean</td>
+            <td class="outputname" data-label="Description">Include all remindercall related results, if available, associated with an appointment.</td>
+            <td class="outputname" data-label="Default">0</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname required" data-label="Name">startdate (required)</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">Start of the appointment search date range (mm/dd/yyyy).  Inclusive.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">startlastmodified</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">Identify appointments modified after this date/time (mm/dd/yyyy hh:mi:ss).  Inclusive.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
         </tr>
     </tbody>
 </table>
