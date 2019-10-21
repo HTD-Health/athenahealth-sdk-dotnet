@@ -43,7 +43,7 @@ namespace AthenaHealth.Tools.WebDocParser
             if (typeDoc == null)
                 return "";
             typeDoc = typeDoc.Replace("integer", "int?");
-            typeDoc = typeDoc.Replace("boolean", "bool?");
+            typeDoc = typeDoc.Replace("boolean", "bool");
             return typeDoc;
         }
 
@@ -56,12 +56,32 @@ namespace AthenaHealth.Tools.WebDocParser
             foreach (var tr in doc.DocumentNode.SelectNodes("//tr"))
             {
                 Item item = new Item();
-                item.Name = tr.SelectNodes("./td[@class='outputname' and @data-label='Name']")?.First().InnerText.Trim();
-                item.Type = tr.SelectNodes("./td[@class='outputtype' and @data-label='Type']")?.First().InnerText;
-                item.Description = tr.SelectNodes("./td[@class='outputnote' and @data-label='Description']")?.First().InnerText;
+                item.Name = tr.SelectNodes($"./td[@class='outputname' and @data-label='Name']")?.First().InnerText.Trim();
+                item.Type = tr.SelectNodes($"./td[@class='outputtype' and @data-label='Type']")?.First().InnerText;
+                item.Description = tr.SelectNodes($"./td[@class='outputnote' and @data-label='Description']")?.First().InnerText;
+
+                if(item.Name == null)
+                    item.Name = tr.SelectNodes($"./td[@class='outputname required' and @data-label='Name']")?.First().InnerText.Trim();
+
+                if(item.Name == null)
+                    item.Name = tr.SelectNodes($"./td[@class='outputname' and @data-label='Name']")?.First().InnerText.Trim();
+
+
+                if(item.Type == null)
+                    item.Type = tr.SelectNodes($"./td[@class='outputname required' and @data-label='Type']")?.First().InnerText.Trim();
+
+                if(item.Type == null)
+                    item.Type = tr.SelectNodes($"./td[@class='outputname' and @data-label='Type']")?.First().InnerText.Trim();
+
+                if(item.Description == null)
+                    item.Description = tr.SelectNodes($"./td[@class='outputname required' and @data-label='Description']")?.First().InnerText.Trim();
+
+                if(item.Description == null)
+                    item.Description = tr.SelectNodes($"./td[@class='outputname' and @data-label='Description']")?.First().InnerText.Trim();
 
                 if(item.Name != null)
                     items.Add(item);
+                
             }
 
             return items;
