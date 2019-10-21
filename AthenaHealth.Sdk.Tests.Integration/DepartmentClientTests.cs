@@ -4,6 +4,7 @@ using AthenaHealth.Sdk.Models.Response;
 using AthenaHealth.Sdk.Tests.Integration.TestingHelpers;
 using Shouldly;
 using Xunit;
+using AthenaHealth.Sdk.Clients;
 
 namespace AthenaHealth.Sdk.Tests.Integration
 {
@@ -12,7 +13,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         [Fact]
         public async Task GetAll_ReturnsRecords()
         {
-            var departmentClient = new Sdk.Clients.DepartmentClient(ConnectionFactory.CreateFromFile(@"Data\Department\GetAll_Extended.json"));
+            var departmentClient = new DepartmentClient(ConnectionFactory.CreateFromFile(@"Data\Department\GetAll_Extended.json"));
 
             DepartmentResponse departmentResponse = await departmentClient.GetAll();
 
@@ -27,7 +28,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         [Fact]
         public async Task GetById_ExistingId_ReturnsRecord()
         {
-            var departmentClient = new Sdk.Clients.DepartmentClient(ConnectionFactory.CreateFromFile(@"Data\Department\GetById_ExistingId.json"));
+            var departmentClient = new DepartmentClient(ConnectionFactory.CreateFromFile(@"Data\Department\GetById_ExistingId.json"));
 
             var departmentResponse = await departmentClient.GetById(1);
 

@@ -1,5 +1,4 @@
-﻿using AthenaHealth.Sdk.Clients;
-using AthenaHealth.Sdk.Clients.Interfaces;
+﻿using AthenaHealth.Sdk.Clients.Interfaces;
 
 namespace AthenaHealth.Sdk.Models.Request
 {
@@ -19,8 +18,9 @@ namespace AthenaHealth.Sdk.Models.Request
         /// These IDs are used in certain external messages (e.g. HL7)
         /// and thus these IDs may need to be known by the API user as well.
         /// When set to true, a list of all of these ancillary IDs will be provided.
+        /// Default set to true.
         /// </summary>
-        public bool ShowAllProviderIds { get; set; }
+        public bool ShowAllProviderIds { get; set; } = true;
 
         /// <summary>
         /// Min: 0.0, Max: 1.0

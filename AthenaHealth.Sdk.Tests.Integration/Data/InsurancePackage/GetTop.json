@@ -1,0 +1,89 @@
+{
+  "insurancepackages": [
+    {
+      "ranking": "1",
+      "name": "*SELF PAY*",
+      "percentage": "72.44258872651356993736951983298538622129",
+      "insurancepackageid": "0"
+    },
+    {
+      "ranking": "2",
+      "name": "HUMANA (PPO)",
+      "percentage": "14.09185803757828810020876826722338204593",
+      "phone": "(800) 558-4444",
+      "insuranceproducttypename": "PPO",
+      "state": "KY",
+      "zip": "40512-4601",
+      "city": "LEXINGTON",
+      "insurancepackageid": "31724",
+      "address": "PO BOX 14601"
+    },
+    {
+      "ranking": "3",
+      "name": "PAYMENT PLAN",
+      "percentage": "3.02713987473903966597077244258872651357",
+      "insurancepackageid": "-500"
+    },
+    {
+      "ranking": "4",
+      "name": "BCBS-MA: BCBS (PPO)",
+      "percentage": ".6263048016701461377870563674321503131524",
+      "phone": "(800) 882-2060",
+      "insuranceproducttypename": "PPO",
+      "state": "MA",
+      "zip": "02298-6020",
+      "city": "BOSTON",
+      "insurancepackageid": "8477",
+      "address": "PO BOX 986020"
+    },
+    {
+      "ranking": "5",
+      "name": "BCBS-TN: (PPO)",
+      "percentage": ".5219206680584551148225469728601252609603",
+      "phone": "(800) 705-0391",
+      "insuranceproducttypename": "PPO",
+      "state": "TN",
+      "zip": "37402-0002",
+      "city": "CHATTANOOGA",
+      "insurancepackageid": "9037",
+      "address": "1 CAMERON HILL CIR STE 2"
+    },
+    {
+      "ranking": "5",
+      "name": "IBEW LOCAL 490 HEALTH & WELFARE",
+      "percentage": ".5219206680584551148225469728601252609603",
+      "phone": "(800) 248-0029",
+      "insuranceproducttypename": "OTHER",
+      "state": "NH",
+      "zip": "03821-0271",
+      "city": "DOVER",
+      "insurancepackageid": "10389",
+      "address": "PO BOX 271"
+    },
+    {
+      "ranking": "5",
+      "name": "MEDICARE-TN (MEDICARE)",
+      "percentage": ".5219206680584551148225469728601252609603",
+      "phone": "(877) 567-7271",
+      "insuranceproducttypename": "Medicare B-Traditional",
+      "state": "SC",
+      "zip": "29202-3306",
+      "city": "COLUMBIA",
+      "insurancepackageid": "18669",
+      "address": "PO BOX 100306"
+    },
+    {
+      "ranking": "5",
+      "name": "BCBS-MA: SAVER DEDUCTIBLE (PPO)",
+      "percentage": ".5219206680584551148225469728601252609603",
+      "phone": "(800) 443-6657",
+      "insuranceproducttypename": "PPO",
+      "state": "MA",
+      "zip": "02298-6020",
+      "city": "BOSTON",
+      "insurancepackageid": "90283",
+      "address": "PO BOX 986020"
+    }
+  ],
+  "totalcount": 8
+}

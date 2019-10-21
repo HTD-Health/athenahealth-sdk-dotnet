@@ -66,7 +66,8 @@ namespace AthenaHealth.Sdk.Http
 
             Response response = await SendData(AddVersion(relativeUrl), queryParameters, HttpMethod.Get);
 
-            return response.GetObjectContent<T>();
+            T output = response.GetObjectContent<T>();
+            return output;
         }
 
         /// <summary>
