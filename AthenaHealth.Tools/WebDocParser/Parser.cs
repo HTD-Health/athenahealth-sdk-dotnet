@@ -57,9 +57,9 @@ namespace AthenaHealth.Tools.WebDocParser
             foreach (var tr in doc.DocumentNode.SelectNodes("//tr"))
             {
                 Item item = new Item();
-                item.Name = tr.SelectNodes(".//td[@class='outputname' and @data-label='Name']")?.First().InnerText.Trim();
-                item.Type = tr.SelectNodes(".//td[@class='outputtype' and @data-label='Type']")?.First().InnerText;
-                item.Description = tr.SelectNodes(".//td[@class='outputnote' and @data-label='Description']")?.First().InnerText;
+                item.Name = tr.SelectNodes(".//td[@data-label='Name']")?.First().InnerText.Trim();
+                item.Type = tr.SelectNodes(".//td[@data-label='Type']")?.First().InnerText;
+                item.Description = tr.SelectNodes(".//td[@data-label='Description']")?.First().InnerText;
 
                 if(item.Name != null)
                     items.Add(item);
