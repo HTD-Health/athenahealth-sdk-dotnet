@@ -1,0 +1,5196 @@
+{
+  "providers": [
+    {
+      "firstname": "Terry",
+      "specialty": "Internal Medicine",
+      "acceptingnewpatients": false,
+      "schedulingname": "tahmad0",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": false,
+      "displayname": "Terry Ahmad, MD",
+      "ansinamecode": "Allopathic & Osteopathic Physicians : Family Practice (207Q00000X)",
+      "lastname": "Ahmad",
+      "providerid": 86,
+      "supervisingproviderusername": "btrout0",
+      "supervisingproviderid": 1,
+      "ansispecialtycode": "207Q00000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Shayna",
+      "specialty": "Internal Medicine",
+      "schedulingname": "savallone2",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "displayname": "Shayna Avallone, MD",
+      "ansinamecode": "Allopathic & Osteopathic Physicians : Internal Medicine (207R00000X)",
+      "lastname": "Avallone",
+      "createencounterprovideridlist": [
+        "117"
+      ],
+      "providerid": 117,
+      "providerusername": "sandrews",
+      "ansispecialtycode": "207R00000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": true
+    },
+    {
+      "firstname": "Shayna",
+      "specialty": "Internal Medicine",
+      "schedulingname": "savallone1",
+      "providergrouplist": [
+        "2",
+        "22"
+      ],
+      "otherprovideridlist": [
+        "119"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "displayname": "Shayna Avallone, MD",
+      "ansinamecode": "Allopathic & Osteopathic Physicians : Internal Medicine (207R00000X)",
+      "lastname": "Avallone",
+      "createencounterprovideridlist": [
+        "118",
+        "119"
+      ],
+      "providerid": 118,
+      "providerusername": "sanneley",
+      "ansispecialtycode": "207R00000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "npi": 1245319599,
+      "providertype": "MD",
+      "createencounteroncheckin": true
+    },
+    {
+      "firstname": "N",
+      "schedulingname": "NAlex5583",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Alex",
+      "providerid": 257,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Denil",
+      "acceptingnewpatients": false,
+      "schedulingname": "DenilAllas7240",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Allas",
+      "providerid": 418,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Kisan",
+      "schedulingname": "KisanAmra7823",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Amra",
+      "providerid": 181,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Aman",
+      "schedulingname": "AmanArora0459",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Arora",
+      "providerid": 216,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Kaushik",
+      "schedulingname": "KAUSHIKArrora6076",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Arrora",
+      "providerid": 361,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Sam",
+      "schedulingname": "SamB8304",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "B",
+      "providerid": 343,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Ariane",
+      "specialty": "General Practice",
+      "homedepartment": "ST FRANCIS HOSP -ER",
+      "acceptingnewpatients": true,
+      "schedulingname": "abalderrama0",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "NP, S",
+      "billable": true,
+      "scheduleresourcetype": "Physical Therapy",
+      "ansinamecode": "Group : Single Specialty (193400000X)",
+      "lastname": "Balderrama",
+      "createencounterprovideridlist": [
+        "79"
+      ],
+      "providerid": 79,
+      "supervisingproviderusername": "abalderrama0",
+      "providerusername": "abalderrama0",
+      "supervisingproviderid": 79,
+      "ansispecialtycode": "193400000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "npi": 86940163,
+      "providertype": "NURSE PRACTITIONER, SUPERVISING(NP,S)",
+      "createencounteroncheckin": true
+    },
+    {
+      "firstname": "Tim",
+      "schedulingname": "TimBelvin6766",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Belvin",
+      "providerid": 242,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Vilson",
+      "schedulingname": "vilsonboard2994",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Board",
+      "providerid": 213,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Sanjuanita",
+      "specialty": "General Surgery",
+      "acceptingnewpatients": false,
+      "schedulingname": "sbriganti0",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "displayname": "Sanjuanita Briganti, MD",
+      "ansinamecode": "Respite Care Facility : Respite Care (385H00000X)",
+      "lastname": "Briganti",
+      "providerid": 75,
+      "ansispecialtycode": "385H00000X",
+      "hideinportal": true,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Shandi",
+      "specialty": "Adolescent Medicine",
+      "acceptingnewpatients": false,
+      "schedulingname": "sbutner0",
+      "providergrouplist": [
+        "22"
+      ],
+      "providertypeid": "MD",
+      "billable": false,
+      "displayname": "Shandi Butner, MD",
+      "lastname": "Butner",
+      "providerid": 95,
+      "supervisingproviderusername": "sbutner0",
+      "supervisingproviderid": 95,
+      "hideinportal": true,
+      "entitytype": "Non-person entity",
+      "providertype": "MD",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Shyam",
+      "schedulingname": "ShyamBalley1607",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Balley",
+      "providerid": 303,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Krish",
+      "schedulingname": "KrishBarbe4200",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Barbe",
+      "providerid": 281,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Shyama",
+      "schedulingname": "ShyamaBaru9381",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Baru",
+      "providerid": 172,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Dyter",
+      "schedulingname": "DyterBaru5829",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Baru",
+      "providerid": 173,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Vikram",
+      "schedulingname": "VikramBasappa3998",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Basappa",
+      "providerid": 237,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Rohit",
+      "schedulingname": "RohitBassu1227",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Bassu",
+      "providerid": 264,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Halley",
+      "schedulingname": "HalleyBen8324",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Ben",
+      "providerid": 292,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Halley",
+      "schedulingname": "HalleyBenny1061",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Benny",
+      "providerid": 335,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Tim",
+      "schedulingname": "TimBevin6329",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Bevin",
+      "providerid": 240,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Darak",
+      "schedulingname": "DarakBhanu4382",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Bhanu",
+      "providerid": 334,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Avinash",
+      "schedulingname": "AvinashBhave0822",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Bhave",
+      "providerid": 175,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Coner",
+      "schedulingname": "ConerBrandi6957",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Brandi",
+      "providerid": 232,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Gene",
+      "schedulingname": "GeneBrody8905",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Brody",
+      "providerid": 276,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Mikael",
+      "acceptingnewpatients": false,
+      "schedulingname": "MikaelBurns1524",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Burns",
+      "providerid": 407,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Jorge",
+      "specialty": "Family Medicine",
+      "acceptingnewpatients": true,
+      "schedulingname": "jcapetillo0",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "ansinamecode": "Group : Single Specialty (193400000X)",
+      "lastname": "Capetillo",
+      "providerid": 83,
+      "ansispecialtycode": "193400000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Gregory",
+      "specialty": "Family Medicine",
+      "schedulingname": "gcarter14",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "displayname": "Gregory Carter, MD",
+      "ansinamecode": "Physician Assistants & Advanced Practice Nursing Providers : Clinical Nurse Specialist : Acute Care (364SA2100X)",
+      "lastname": "Carter",
+      "createencounterprovideridlist": [
+        "88"
+      ],
+      "providerid": 88,
+      "supervisingproviderusername": "gcarter14",
+      "providerusername": "gcarter14",
+      "supervisingproviderid": 88,
+      "ansispecialtycode": "364SA2100X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": true
+    },
+    {
+      "firstname": "Mitch",
+      "specialty": "Family Medicine",
+      "acceptingnewpatients": true,
+      "schedulingname": "mclayborne0",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "displayname": "Mitch Clayborne, MD",
+      "ansinamecode": "Group : Single Specialty (193400000X)",
+      "lastname": "Clayborne",
+      "createencounterprovideridlist": [
+        "26"
+      ],
+      "providerid": 26,
+      "providerusername": "mclayborne0",
+      "ansispecialtycode": "193400000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": true
+    },
+    {
+      "firstname": "Patient",
+      "specialty": "General Practice",
+      "homedepartment": "MAIN ST (HUB)",
+      "schedulingname": "cpatient3",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "ansinamecode": "Allopathic & Osteopathic Physicians : Dermatology (207N00000X)",
+      "lastname": "Context Three",
+      "createencounterprovideridlist": [
+        "115"
+      ],
+      "providerid": 115,
+      "providerusername": "cpatient3",
+      "ansispecialtycode": "207N00000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "npi": 1821010695,
+      "providertype": "MD",
+      "createencounteroncheckin": true
+    },
+    {
+      "firstname": "Celestina",
+      "specialty": "Family Medicine",
+      "schedulingname": "ccoonrod0",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "displayname": "Celestina Coonrod, MD",
+      "ansinamecode": "Group : Single Specialty (193400000X)",
+      "lastname": "Coonrod",
+      "createencounterprovideridlist": [
+        "24"
+      ],
+      "providerid": 24,
+      "providerusername": "ccoonrod0",
+      "ansispecialtycode": "193400000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": true
+    },
+    {
+      "firstname": "Casey",
+      "specialty": "Family Medicine",
+      "acceptingnewpatients": false,
+      "schedulingname": "ccozart0",
+      "providergrouplist": [
+        "22"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "ansinamecode": "Group : Multi-Specialty (193200000X)",
+      "lastname": "Cozart",
+      "createencounterprovideridlist": [
+        "103"
+      ],
+      "providerid": 103,
+      "supervisingproviderusername": "ccozart0",
+      "providerusername": "ccozart0",
+      "supervisingproviderid": 103,
+      "ansispecialtycode": "193200000X",
+      "hideinportal": true,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": true
+    },
+    {
+      "firstname": "Alleen",
+      "specialty": "Chiropractic",
+      "acceptingnewpatients": true,
+      "schedulingname": "acray0",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "displayname": "Alleen Cray, MD",
+      "ansinamecode": "Chiropractic Providers : Chiropractor (111N00000X)",
+      "lastname": "Cray",
+      "providerid": 92,
+      "ansispecialtycode": "111N00000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "S",
+      "schedulingname": "SCals6603",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Cals",
+      "providerid": 152,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Joseph",
+      "schedulingname": "JosephCame2339",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Came",
+      "providerid": 310,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Thomas",
+      "acceptingnewpatients": false,
+      "schedulingname": "ThomasCarey8261",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Carey",
+      "providerid": 393,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "William",
+      "acceptingnewpatients": false,
+      "schedulingname": "WilliamCarey5273",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Carey",
+      "providerid": 406,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Smitha",
+      "schedulingname": "SmithaChaouta2835",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Chaouta",
+      "providerid": 306,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Richel",
+      "schedulingname": "RichelCharli5975",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Charli",
+      "providerid": 366,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Noah",
+      "acceptingnewpatients": false,
+      "schedulingname": "NoahColon3352",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Colon",
+      "providerid": 395,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Default Provider",
+      "schedulingname": "curogram",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Curogram",
+      "providerid": 142,
+      "hideinportal": true,
+      "entitytype": "Non-person entity",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Tom",
+      "schedulingname": "TomCurze5667",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Curze",
+      "providerid": 300,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Ronald",
+      "acceptingnewpatients": false,
+      "schedulingname": "RonaldD3667",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "D",
+      "providerid": 387,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Rajan",
+      "schedulingname": "RajanDavid0646",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "David",
+      "providerid": 158,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Nigel",
+      "specialty": "Acupuncture",
+      "acceptingnewpatients": true,
+      "schedulingname": "ndeen",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "displayname": "Nigel Deen",
+      "ansinamecode": "Chiropractic Providers : Chiropractor (111N00000X)",
+      "lastname": "Deen",
+      "createencounterprovideridlist": [
+        "113"
+      ],
+      "providerid": 113,
+      "providerusername": "ndeen",
+      "ansispecialtycode": "111N00000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "npi": 1023001880,
+      "providertype": "MD",
+      "createencounteroncheckin": true
+    },
+    {
+      "firstname": "Daminid",
+      "schedulingname": "DaminiDeokar3198",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Deokar",
+      "providerid": 220,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Kathryne",
+      "specialty": "Cardiology",
+      "homedepartment": "ST FRANCIS HOSP -IN PT",
+      "acceptingnewpatients": true,
+      "schedulingname": "kderrico0",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "ansinamecode": "Allopathic & Osteopathic Physicians : Internal Medicine : Cardiovascular Disease (207RC0000X)",
+      "lastname": "Derrico",
+      "createencounterprovideridlist": [
+        "69"
+      ],
+      "providerid": 69,
+      "providerusername": "kderrico0",
+      "ansispecialtycode": "207RC0000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": true
+    },
+    {
+      "firstname": "Izetta",
+      "specialty": "Maxillofacial Surgery",
+      "homedepartment": "NORTH CENTRAL (SPOKE)",
+      "acceptingnewpatients": true,
+      "schedulingname": "idipaola0",
+      "providergrouplist": [
+        "2"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "displayname": "Izetta Dipaola, MD",
+      "ansinamecode": "Dental Providers : Dentist : Oral and Maxillofacial Surgery (1223S0112X)",
+      "lastname": "Dipaola",
+      "providerid": 47,
+      "ansispecialtycode": "1223S0112X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Clelia",
+      "specialty": "Family Medicine",
+      "acceptingnewpatients": true,
+      "schedulingname": "cduncan19",
+      "providergrouplist": [
+        "22"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "displayname": "Clelia Duncan, MD",
+      "ansinamecode": "Group : Multi-Specialty (193200000X)",
+      "lastname": "Duncan",
+      "createencounterprovideridlist": [
+        "104"
+      ],
+      "providerid": 104,
+      "providerusername": "cduncan19",
+      "ansispecialtycode": "193200000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": true
+    },
+    {
+      "firstname": "Mason",
+      "acceptingnewpatients": false,
+      "schedulingname": "MasonDalton9601",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Dalton",
+      "providerid": 398,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Praveen",
+      "schedulingname": "PraveenDarak5883",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Darak",
+      "providerid": 186,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Praveen",
+      "schedulingname": "PraveenDarak6883",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Darak",
+      "providerid": 223,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Praveen",
+      "schedulingname": "PraveenDarak7270",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Darak",
+      "providerid": 261,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Praveen",
+      "schedulingname": "PraveenDarak6966",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Darak",
+      "providerid": 270,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Madhu",
+      "schedulingname": "MadhuDarak2614",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Darak",
+      "providerid": 285,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Praveen",
+      "schedulingname": "PraveenDarak0053",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Darak",
+      "providerid": 333,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Praveen",
+      "schedulingname": "PraveenDarak9564",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Darak",
+      "providerid": 358,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Joseph",
+      "acceptingnewpatients": false,
+      "schedulingname": "JosephDart2797",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Dart",
+      "providerid": 374,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Saurab",
+      "schedulingname": "SaurabDavid8117",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "David",
+      "providerid": 314,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Damini",
+      "schedulingname": "DaminiDevkar0564",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Devkar",
+      "providerid": 171,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Maria",
+      "schedulingname": "MariaDisuza2475",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Disuza",
+      "providerid": 284,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Shefali",
+      "schedulingname": "ShefaliDisuza3752",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Disuza",
+      "providerid": 320,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Sonia",
+      "schedulingname": "SoniaDisuza0284",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Disuza",
+      "providerid": 339,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Maria",
+      "schedulingname": "MariaDisuza7304",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Disuza",
+      "providerid": 354,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Anurag",
+      "schedulingname": "AnuragDixit3591",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Dixit",
+      "providerid": 345,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Anurag",
+      "schedulingname": "AnuragDixit2381",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Dixit",
+      "providerid": 346,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Adnins",
+      "schedulingname": "AdninsDouglas0643",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Douglas",
+      "providerid": 296,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "John",
+      "schedulingname": "JohnDwayn2893",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Dwayn",
+      "providerid": 348,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Rocky",
+      "acceptingnewpatients": false,
+      "schedulingname": "RockyE5166",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "E",
+      "providerid": 375,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Beryl",
+      "specialty": "Internal Medicine",
+      "homedepartment": "ST FRANCIS HOSP -IN PT",
+      "acceptingnewpatients": true,
+      "schedulingname": "bearp0",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "ansinamecode": "Allopathic & Osteopathic Physicians : Internal Medicine (207R00000X)",
+      "lastname": "Earp",
+      "createencounterprovideridlist": [
+        "68"
+      ],
+      "providerid": 68,
+      "providerusername": "bearp0",
+      "ansispecialtycode": "207R00000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": true
+    },
+    {
+      "firstname": "Nereida",
+      "specialty": "Family Medicine",
+      "acceptingnewpatients": true,
+      "schedulingname": "neasterly0",
+      "providergrouplist": [
+        "22"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "displayname": "Nereida Easterly, MD",
+      "ansinamecode": "Group : Multi-Specialty (193200000X)",
+      "lastname": "Easterly",
+      "createencounterprovideridlist": [
+        "105"
+      ],
+      "providerid": 105,
+      "providerusername": "neasterly0",
+      "ansispecialtycode": "193200000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": true
+    },
+    {
+      "firstname": "Emmaline",
+      "specialty": "Family Medicine",
+      "homedepartment": "ST FRANCIS SURGERY",
+      "acceptingnewpatients": true,
+      "schedulingname": "eeckstein0",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "ansinamecode": "Allopathic & Osteopathic Physicians : Family Practice (207Q00000X)",
+      "lastname": "Eckstein",
+      "createencounterprovideridlist": [
+        "110"
+      ],
+      "providerid": 110,
+      "providerusername": "eeckstein0",
+      "ansispecialtycode": "207Q00000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": true
+    },
+    {
+      "firstname": "Maddy",
+      "acceptingnewpatients": false,
+      "schedulingname": "MaddyEillson0426",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Eillson",
+      "providerid": 425,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Bell",
+      "acceptingnewpatients": false,
+      "schedulingname": "BellFolra2642",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Folra",
+      "providerid": 420,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Junner",
+      "acceptingnewpatients": false,
+      "schedulingname": "JunnerG5079",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "G",
+      "providerid": 389,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Asdsd",
+      "schedulingname": "Tha",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Gjghja",
+      "providerid": 127,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Daniel",
+      "specialty": "Family Medicine",
+      "homedepartment": "ST FRANCIS SURGERY",
+      "acceptingnewpatients": true,
+      "schedulingname": "dgrate0",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "ansinamecode": "Ambulatory Health Care Facilities : Clinic/Center (261Q00000X)",
+      "lastname": "Grate",
+      "providerid": 108,
+      "ansispecialtycode": "261Q00000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Leonor",
+      "specialty": "Family Medicine",
+      "homedepartment": "MAIN ST (HUB)",
+      "acceptingnewpatients": true,
+      "schedulingname": "lguillotte0",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "ansinamecode": "Group : Single Specialty (193400000X)",
+      "lastname": "Guillotte",
+      "createencounterprovideridlist": [
+        "23"
+      ],
+      "providerid": 23,
+      "providerusername": "lguillotte0",
+      "ansispecialtycode": "193400000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": true
+    },
+    {
+      "firstname": "Sakhi",
+      "acceptingnewpatients": false,
+      "schedulingname": "SakhiGhokhale1535",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Ghokhale",
+      "providerid": 379,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Ross",
+      "schedulingname": "RossGiller6071",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Giller",
+      "providerid": 364,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Shital",
+      "schedulingname": "ShitalGodase7821",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Godase",
+      "providerid": 155,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Samir",
+      "schedulingname": "SamirGore8291",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Gore",
+      "providerid": 263,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Thomas",
+      "acceptingnewpatients": false,
+      "schedulingname": "ThomasGreen8814",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Green",
+      "providerid": 399,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Minion",
+      "specialty": "Dermatology",
+      "schedulingname": "MinionGregg5925",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "ACNP",
+      "billable": false,
+      "lastname": "Gregg",
+      "providerid": 236,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "ACUTE CARE - NURSE PRACTITIONER",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Neha",
+      "schedulingname": "NehaGupata5056",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Gupata",
+      "providerid": 163,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Steve",
+      "schedulingname": "SteveH4366",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "H",
+      "providerid": 153,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Digna",
+      "specialty": "Neurophysiology",
+      "homedepartment": "CHERRY STREET",
+      "acceptingnewpatients": true,
+      "schedulingname": "dhames0",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "displayname": "Digna Hames, MD",
+      "ansinamecode": "Hospitals : General Acute Care Hospital (282N00000X)",
+      "lastname": "Hames",
+      "providerid": 93,
+      "ansispecialtycode": "282N00000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Kandi",
+      "specialty": "General Practice",
+      "acceptingnewpatients": false,
+      "schedulingname": "khaworth0",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "ansinamecode": "Allopathic & Osteopathic Physicians : Dermatology (207N00000X)",
+      "lastname": "Haworth",
+      "createencounterprovideridlist": [
+        "71"
+      ],
+      "providerid": 71,
+      "providerusername": "khaworth0",
+      "ansispecialtycode": "207N00000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": true
+    },
+    {
+      "firstname": "Rachell",
+      "acceptingnewpatients": false,
+      "schedulingname": "rhutcheson0",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "displayname": "Rachell Hutcheson,",
+      "lastname": "Hutcheson",
+      "providerid": 96,
+      "hideinportal": true,
+      "entitytype": "Non-person entity",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Roy",
+      "acceptingnewpatients": false,
+      "schedulingname": "RoyHaden9694",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Haden",
+      "providerid": 400,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Ben",
+      "schedulingname": "BenHalley1788",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Halley",
+      "providerid": 159,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Paul",
+      "acceptingnewpatients": false,
+      "schedulingname": "PaulHard2368",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Hard",
+      "providerid": 392,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Steven",
+      "specialty": "Dermatology",
+      "schedulingname": "stevenHobert",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Hobert",
+      "providerid": 147,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Peter",
+      "schedulingname": "PeterHobert9049",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Hobert",
+      "providerid": 195,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Krish",
+      "schedulingname": "KrishHobert0027",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Hobert",
+      "providerid": 317,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Cox",
+      "schedulingname": "CoxHock1347",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Hock",
+      "providerid": 268,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Funny",
+      "acceptingnewpatients": false,
+      "schedulingname": "FunnyHotseon4764",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Hotseon",
+      "providerid": 426,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Brian",
+      "schedulingname": "BrianHowe9988",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Howe",
+      "providerid": 308,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Adonis",
+      "acceptingnewpatients": false,
+      "schedulingname": "AdonisHughes4387",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Hughes",
+      "providerid": 409,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Nome",
+      "acceptingnewpatients": false,
+      "schedulingname": "NomeJ8614",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "J",
+      "providerid": 390,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Hudson",
+      "schedulingname": "HudsonJackson2689",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Jackson",
+      "providerid": 249,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Hudsonk",
+      "schedulingname": "HudsonJacksodn2689",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": false,
+      "lastname": "Jackson",
+      "providerid": 255,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Peter",
+      "schedulingname": "PeterJackson5952",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Jackson",
+      "providerid": 277,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Kelvin",
+      "schedulingname": "KelvinJackson1197",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Jackson",
+      "providerid": 278,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Dhananjay",
+      "schedulingname": "DhananjayJackson5767",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Jackson",
+      "providerid": 279,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Sagar",
+      "schedulingname": "SagarJackson0608",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Jackson",
+      "providerid": 280,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Kiran",
+      "schedulingname": "KiranJackson6554",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Jackson",
+      "providerid": 287,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Hudson",
+      "schedulingname": "HudsonJackson7633",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Jackson",
+      "providerid": 368,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Shepherd",
+      "acceptingnewpatients": false,
+      "schedulingname": "ShepherdJackson3367",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Jackson",
+      "providerid": 397,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Deepti",
+      "schedulingname": "DeeptiJadhav4956",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Jadhav",
+      "providerid": 209,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Lalita",
+      "schedulingname": "LalitaJain0031",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Jain",
+      "providerid": 193,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Shubham",
+      "schedulingname": "ShubhamJain6472",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Jain",
+      "providerid": 203,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Kaushik",
+      "schedulingname": "KaushikJain4453",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Jain",
+      "providerid": 212,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Wilson",
+      "schedulingname": "WilsonJohn8029",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "John",
+      "providerid": 151,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "John",
+      "acceptingnewpatients": false,
+      "schedulingname": "JohnJohnson5128",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Johnson",
+      "providerid": 408,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Kingsley",
+      "acceptingnewpatients": false,
+      "schedulingname": "KingsleyJohnston8268",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Johnston",
+      "providerid": 403,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Krish",
+      "acceptingnewpatients": false,
+      "schedulingname": "KrishJunior4280",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Junior",
+      "providerid": 427,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Nikhil",
+      "schedulingname": "NikhilK5072",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "K",
+      "providerid": 243,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Bob",
+      "acceptingnewpatients": false,
+      "schedulingname": "BobK1082",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "K",
+      "providerid": 383,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Koe",
+      "acceptingnewpatients": false,
+      "schedulingname": "KoeK6557",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "K",
+      "providerid": 385,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Gajendras",
+      "schedulingname": "YadavGajendra7853",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Kale",
+      "providerid": 183,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Madhuri",
+      "schedulingname": "MadhuriKannya8253",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Kannya",
+      "providerid": 377,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Alberto",
+      "specialty": "Nurse Practitioner- Specialist",
+      "acceptingnewpatients": false,
+      "schedulingname": "akrupa0",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "NP",
+      "billable": true,
+      "displayname": "Alberto Krupa, NP",
+      "ansinamecode": "Nursing Service Providers : Licensed Practical Nurse (164W00000X)",
+      "lastname": "Krupa",
+      "providerid": 99,
+      "ansispecialtycode": "164W00000X",
+      "hideinportal": false,
+      "entitytype": "Non-person entity",
+      "providertype": "Nurse Practitioner (NP)",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Ashokl",
+      "schedulingname": "AshokKumar4958",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Kumar",
+      "providerid": 230,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Aksl",
+      "schedulingname": "AkslKapoor2313",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Kapoor",
+      "providerid": 288,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Hardy",
+      "schedulingname": "HardyKapron1482",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Kapron",
+      "providerid": 170,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Zeenat",
+      "schedulingname": "ZeenatKhan4438",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Khan",
+      "providerid": 164,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Amira",
+      "schedulingname": "AmiraKhan4528",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Khan",
+      "providerid": 226,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Shruti",
+      "schedulingname": "ShrutiKhanna8714",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Khanna",
+      "providerid": 253,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Kunal",
+      "schedulingname": "KunalKhemu9025",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Khemu",
+      "providerid": 355,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Nik",
+      "schedulingname": "NikKhenat6100",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Khenat",
+      "providerid": 290,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Aanna",
+      "schedulingname": "AannaKhurana9031",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Khurana",
+      "providerid": 304,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Pradnya",
+      "acceptingnewpatients": false,
+      "schedulingname": "PradnyaKore9112",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Kore",
+      "providerid": 413,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Santosh",
+      "schedulingname": "SantoshKuamat2270",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Kuamat",
+      "providerid": 350,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Alter",
+      "schedulingname": "AlterKul6421",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Kul",
+      "providerid": 329,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Raj",
+      "schedulingname": "rajkulkarni123",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": false,
+      "lastname": "Kulkarni",
+      "providerid": 138,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Raj",
+      "schedulingname": "rajkulkarni1234",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": false,
+      "lastname": "Kulkarni",
+      "providerid": 139,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Krishna",
+      "schedulingname": "krishnakulkarni1234",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": false,
+      "lastname": "Kulkarni",
+      "providerid": 140,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Dhanesh",
+      "schedulingname": "DhaneshKumar4222",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Kumar",
+      "providerid": 282,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Anamika",
+      "schedulingname": "AnamikaKumar0177",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Kumar",
+      "providerid": 360,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Gargi",
+      "schedulingname": "GargiKumari8343",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Kumari",
+      "providerid": 275,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Samaria",
+      "schedulingname": "SamariaKureja2248",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Kureja",
+      "providerid": 167,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Mark",
+      "schedulingname": "MarkL9633",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "L",
+      "providerid": 188,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Vikas",
+      "schedulingname": "vikasL1424",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "L",
+      "providerid": 215,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "E",
+      "schedulingname": "EL7805",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "L",
+      "providerid": 248,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Chris",
+      "schedulingname": "ChrisL5234",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "L",
+      "providerid": 250,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Sunny",
+      "schedulingname": "SunnyL6623",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "L",
+      "providerid": 319,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Kevin",
+      "acceptingnewpatients": false,
+      "schedulingname": "KevinL1642",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "L",
+      "providerid": 378,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Sandy",
+      "acceptingnewpatients": false,
+      "schedulingname": "SandyL7850",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "L",
+      "providerid": 386,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Shanayal",
+      "schedulingname": "ShanayaLimbe2004",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Limbe",
+      "providerid": 221,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Tele",
+      "schedulingname": "TeleLKU1066",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Lku",
+      "providerid": 210,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Videl",
+      "schedulingname": "Videllos5180",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Los",
+      "providerid": 417,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Pearlie",
+      "specialty": "Family Medicine",
+      "schedulingname": "plouder0",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "displayname": "Pearlie Louder, MD",
+      "ansinamecode": "Group : Single Specialty (193400000X)",
+      "lastname": "Louder",
+      "createencounterprovideridlist": [
+        "25"
+      ],
+      "providerid": 25,
+      "providerusername": "plouder0",
+      "ansispecialtycode": "193400000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": true
+    },
+    {
+      "firstname": "Maida",
+      "specialty": "Genetics",
+      "acceptingnewpatients": true,
+      "schedulingname": "mlummus0",
+      "providergrouplist": [
+        "22"
+      ],
+      "providertypeid": "LCAS",
+      "billable": true,
+      "displayname": "Maida Lummus, Lcas",
+      "ansinamecode": "Laboratories : Clinical Medical Laboratory (291U00000X)",
+      "lastname": "Lummus",
+      "providerid": 107,
+      "ansispecialtycode": "291U00000X",
+      "hideinportal": false,
+      "entitytype": "Non-person entity",
+      "providertype": "LICENSED CLINICAL ADDICTION SPECIALIST",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Jon",
+      "schedulingname": "jonLastName9843",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Lastname",
+      "providerid": 184,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Marlo",
+      "schedulingname": "MarloLee6511",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Lee",
+      "providerid": 297,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Trudi",
+      "specialty": "Physical Therapy",
+      "schedulingname": "tmaddock0",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "displayname": "Trudi Maddock, MD",
+      "scheduleresourcetype": "Physical Therapy",
+      "ansinamecode": "Managed Care Organizations : Preferred Provider Organization (305R00000X)",
+      "lastname": "Maddock",
+      "createencounterprovideridlist": [
+        "94"
+      ],
+      "providerid": 94,
+      "providerusername": "tmccrary",
+      "ansispecialtycode": "305R00000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": true
+    },
+    {
+      "firstname": "Aksl",
+      "schedulingname": "AkslMarcko5253",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Marcko",
+      "providerid": 415,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Avinash",
+      "schedulingname": "AviMathur9484",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Mathur",
+      "providerid": 200,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Lakendra",
+      "specialty": "Internal Medicine",
+      "homedepartment": "ST FRANCIS HOSP -ER",
+      "acceptingnewpatients": true,
+      "schedulingname": "lmcclusky0",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "ansinamecode": "Other Service Providers : Genetic Counselor, MS (170300000X)",
+      "lastname": "McClusky",
+      "createencounterprovideridlist": [
+        "67"
+      ],
+      "providerid": 67,
+      "providerusername": "lmcclusky0",
+      "ansispecialtycode": "170300000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": true
+    },
+    {
+      "firstname": "Max",
+      "schedulingname": "MaxMillian3081",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Millian",
+      "providerid": 227,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Barrie",
+      "specialty": "Pediatric Medicine",
+      "homedepartment": "ST FRANCIS SURGERY",
+      "acceptingnewpatients": true,
+      "schedulingname": "bmina0",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "ansinamecode": "Allopathic & Osteopathic Physicians : Pediatrics : Adolescent Medicine (2080A0000X)",
+      "lastname": "Mina",
+      "createencounterprovideridlist": [
+        "111"
+      ],
+      "providerid": 111,
+      "supervisingproviderusername": "bmina0",
+      "providerusername": "bmina0",
+      "supervisingproviderid": 111,
+      "ansispecialtycode": "2080A0000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": true
+    },
+    {
+      "firstname": "Anjalik",
+      "schedulingname": "AnjaliMittal1605",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Mittal",
+      "providerid": 218,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Madhu",
+      "schedulingname": "MadhuMurthy8620",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Murthy",
+      "providerid": 252,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Kul",
+      "schedulingname": "KulMadhu5471",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Madhu",
+      "providerid": 347,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Kerry",
+      "schedulingname": "KerryMalley7239",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Malley",
+      "providerid": 309,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "S",
+      "schedulingname": "SMane6598",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Mane",
+      "providerid": 315,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Spine",
+      "schedulingname": "SpineMarcko2778",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Marcko",
+      "providerid": 349,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Madhuri",
+      "schedulingname": "MadhuriMathur5904",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Mathur",
+      "providerid": 344,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Alia",
+      "acceptingnewpatients": false,
+      "schedulingname": "AliaMathur9327",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Mathur",
+      "providerid": 414,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Fox",
+      "acceptingnewpatients": false,
+      "schedulingname": "FoxMelton6484",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Melton",
+      "providerid": 404,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Denny",
+      "schedulingname": "DennyMiller7677",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Miller",
+      "providerid": 247,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Santosh",
+      "schedulingname": "SantoshMinny7603",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Minny",
+      "providerid": 330,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Steve",
+      "schedulingname": "SteveMishra3422",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Mishra",
+      "providerid": 338,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Krish",
+      "schedulingname": "KrishMishra9976",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Mishra",
+      "providerid": 359,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Anand",
+      "schedulingname": "AnandMukharji1534",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Mukharji",
+      "providerid": 312,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Daniel",
+      "schedulingname": "DanielMukherji9100",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Mukherji",
+      "providerid": 283,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Anand",
+      "schedulingname": "AnandMurthy7114",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Murthy",
+      "providerid": 185,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Madhu",
+      "schedulingname": "MadhuMurthy2705",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Murthy",
+      "providerid": 233,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Madhu",
+      "schedulingname": "MadhuMurthy6085",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Murthy",
+      "providerid": 271,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Madhu",
+      "schedulingname": "MadhuMurthy6001",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Murthy",
+      "providerid": 352,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Madhu",
+      "acceptingnewpatients": false,
+      "schedulingname": "MadhuMurthy4951",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Murthy",
+      "providerid": 410,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Richel",
+      "schedulingname": "RichelN9387",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "N",
+      "providerid": 307,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Martin",
+      "schedulingname": "MartinN7617",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "N",
+      "providerid": 321,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Nill",
+      "schedulingname": "NillN3201",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "N",
+      "providerid": 332,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Richel",
+      "schedulingname": "RichelN2675",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "N",
+      "providerid": 341,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Krish",
+      "schedulingname": "KrishN0401",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "N",
+      "providerid": 362,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Wynell",
+      "specialty": "Retail Clinic",
+      "homedepartment": "ST FRANCIS HOSP -ER",
+      "acceptingnewpatients": true,
+      "schedulingname": "wnations0",
+      "providergrouplist": [
+        "42"
+      ],
+      "providertypeid": "TECH",
+      "billable": true,
+      "ansinamecode": "Physician Assistants & Advanced Practice Nursing Providers : Anesthesiologist Assistant (367H00000X)",
+      "lastname": "Nations",
+      "providerid": 80,
+      "ansispecialtycode": "367H00000X",
+      "hideinportal": false,
+      "entitytype": "Non-person entity",
+      "providertype": "TECHNICAL",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Rahul",
+      "schedulingname": "RahulNene5269",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Nene",
+      "providerid": 208,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Dushant",
+      "schedulingname": "DushantNene5706",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Nene",
+      "providerid": 356,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Segal",
+      "schedulingname": "SegalNeo7269",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Neo",
+      "providerid": 325,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Noe",
+      "schedulingname": "NoeNil1576",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Nil",
+      "providerid": 322,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Paul",
+      "schedulingname": "PaulNil3807",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Nil",
+      "providerid": 326,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Noe",
+      "schedulingname": "NoeNil2183",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Nil",
+      "providerid": 331,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Context Five",
+      "specialty": "Ambulatory Surgical Center",
+      "schedulingname": "pcontext5",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "ansinamecode": "Hospitals : Chronic Disease Hospital (281P00000X)",
+      "lastname": "Patient",
+      "createencounterprovideridlist": [
+        "116"
+      ],
+      "providerid": 116,
+      "providerusername": "pcontextfive",
+      "ansispecialtycode": "281P00000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "npi": 1275536104,
+      "providertype": "MD",
+      "createencounteroncheckin": true
+    },
+    {
+      "firstname": "Apolonia",
+      "specialty": "Family Medicine",
+      "acceptingnewpatients": true,
+      "schedulingname": "apenniman0",
+      "providergrouplist": [
+        "1",
+        "22"
+      ],
+      "otherprovideridlist": [
+        "125"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "displayname": "Apolonia Penniman, MD",
+      "ansinamecode": "Group : Multi-Specialty (193200000X)",
+      "lastname": "Penniman",
+      "createencounterprovideridlist": [
+        "102"
+      ],
+      "providerid": 102,
+      "providerusername": "apenniman0",
+      "ansispecialtycode": "193200000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "npi": 1649676073,
+      "providertype": "MD",
+      "createencounteroncheckin": true
+    },
+    {
+      "firstname": "Shawana",
+      "specialty": "Dermatology",
+      "acceptingnewpatients": true,
+      "schedulingname": "speppers0",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "ansinamecode": "Allopathic & Osteopathic Physicians : Dermatology (207N00000X)",
+      "lastname": "Peppers",
+      "createencounterprovideridlist": [
+        "109"
+      ],
+      "providerid": 109,
+      "providerusername": "speppers0",
+      "ansispecialtycode": "207N00000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": true
+    },
+    {
+      "firstname": "Leola",
+      "specialty": "Allergy/Immunology",
+      "acceptingnewpatients": true,
+      "schedulingname": "lpine0",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "displayname": "Leola Pine, MD",
+      "ansinamecode": "Hospitals : Chronic Disease Hospital (281P00000X)",
+      "lastname": "Pine",
+      "createencounterprovideridlist": [
+        "112"
+      ],
+      "providerid": 112,
+      "providerusername": "lpine0",
+      "ansispecialtycode": "281P00000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": true
+    },
+    {
+      "firstname": "Pf1",
+      "schedulingname": "1",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Pl1",
+      "providerid": 129,
+      "hideinportal": false,
+      "npi": 1234567890,
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Pf2",
+      "schedulingname": "2",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Pl2",
+      "providerid": 130,
+      "hideinportal": false,
+      "npi": 1234567891,
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Pf3",
+      "schedulingname": "3",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Pl3",
+      "providerid": 131,
+      "hideinportal": false,
+      "npi": 1234567892,
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Pf4",
+      "schedulingname": "4",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Pl4",
+      "providerid": 132,
+      "hideinportal": false,
+      "npi": 1234567893,
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Alvaro",
+      "specialty": "Cardiology",
+      "schedulingname": "aplanas0",
+      "providertypeid": "DPM",
+      "billable": false,
+      "displayname": "Alvaro Planas, DPM",
+      "ansinamecode": "Ambulatory Health Care Facilities : Clinic/Center : Adult Day Care (261QA0600X)",
+      "lastname": "Planas",
+      "providerid": 85,
+      "ansispecialtycode": "261QA0600X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "DOCTOR OF PODIATRIC MEDICINE"
+    },
+    {
+      "firstname": "Test",
+      "schedulingname": "test_provider",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "ansinamecode": "Allopathic & Osteopathic Physicians : Family Practice (207Q00000X)",
+      "lastname": "Provider",
+      "providerid": 124,
+      "ansispecialtycode": "207Q00000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Laurine",
+      "specialty": "Addiction Medicine",
+      "acceptingnewpatients": true,
+      "schedulingname": "lpurvis0",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "displayname": "Laurine Purvis, MD",
+      "ansinamecode": "Behavioral Health & Social Service Providers : Neuropsychologist (103G00000X)",
+      "lastname": "Purvis",
+      "providerid": 90,
+      "ansispecialtycode": "103G00000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Rahul",
+      "schedulingname": "RahulPai0076",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Pai",
+      "providerid": 165,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Avina",
+      "schedulingname": "AvinaPatil7146",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Patil",
+      "providerid": 192,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Jimmy",
+      "schedulingname": "JimmyPaul5810",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Paul",
+      "providerid": 365,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Saint",
+      "acceptingnewpatients": false,
+      "schedulingname": "SaintPerez1083",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Perez",
+      "providerid": 402,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "William",
+      "acceptingnewpatients": false,
+      "schedulingname": "WilliamPerez9960",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Perez",
+      "providerid": 419,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Viks",
+      "schedulingname": "ViksPeter3874",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Peter",
+      "providerid": 239,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Viks",
+      "schedulingname": "ViksPeter1720",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Peter",
+      "providerid": 241,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Steven",
+      "schedulingname": "StevenPeterson8224",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Peterson",
+      "providerid": 196,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Kevin",
+      "acceptingnewpatients": false,
+      "schedulingname": "KevinPeterson6835",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Peterson",
+      "providerid": 411,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Rahul",
+      "schedulingname": "RahulPhatak2180",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Phatak",
+      "providerid": 160,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Sumit",
+      "schedulingname": "SumitPingale7228",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Pingale",
+      "providerid": 202,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Hanks",
+      "schedulingname": "HanksRaid6457",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Raid",
+      "providerid": 294,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Test",
+      "schedulingname": "RCL",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Raincloud",
+      "providerid": 126,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "npi": 9999999,
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "McKinley",
+      "specialty": "Internal Medicine",
+      "acceptingnewpatients": true,
+      "schedulingname": "mriccardi0",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "displayname": "McKinley Riccardi, MD",
+      "ansinamecode": "Allopathic & Osteopathic Physicians : Allergy & Immunology (207K00000X)",
+      "lastname": "Riccardi",
+      "createencounterprovideridlist": [
+        "77"
+      ],
+      "providerid": 77,
+      "providerusername": "mriccardi0",
+      "ansispecialtycode": "207K00000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": true
+    },
+    {
+      "firstname": "Tenisha",
+      "acceptingnewpatients": false,
+      "schedulingname": "trieves0",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "displayname": "Tenisha Rieves,",
+      "lastname": "Rieves",
+      "providerid": 98,
+      "hideinportal": true,
+      "entitytype": "Non-person entity",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Eleanora",
+      "specialty": "General Practice",
+      "homedepartment": "MAIN ST (HUB)",
+      "acceptingnewpatients": true,
+      "schedulingname": "erieves0",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "displayname": "Eleanora Rieves, MD",
+      "scheduleresourcetype": "Flu shot",
+      "ansinamecode": "Group : Multi-Specialty (193200000X)",
+      "lastname": "Rieves",
+      "providerid": 101,
+      "ansispecialtycode": "193200000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Deandra",
+      "specialty": "Internal Medicine",
+      "homedepartment": "CHERRY STREET",
+      "acceptingnewpatients": true,
+      "schedulingname": "droper4",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "displayname": "Deandra Roper, MD",
+      "ansinamecode": "Other Service Providers : Community Health Worker (172V00000X)",
+      "lastname": "Roper",
+      "providerid": 89,
+      "ansispecialtycode": "172V00000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Kevins",
+      "schedulingname": "KevinRose2171",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Rose",
+      "providerid": 219,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Ajay",
+      "schedulingname": "AjayRose6917",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Rose",
+      "providerid": 273,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Helaine",
+      "specialty": "Breast Surgery",
+      "acceptingnewpatients": true,
+      "schedulingname": "hruder0",
+      "providergrouplist": [
+        "22"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "displayname": "Helaine Ruder, MD",
+      "ansinamecode": "Other Service Providers : Contractor (171W00000X)",
+      "lastname": "Ruder",
+      "createencounterprovideridlist": [
+        "100"
+      ],
+      "providerid": 100,
+      "providerusername": "hruder0",
+      "ansispecialtycode": "171W00000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": true
+    },
+    {
+      "firstname": "Virat",
+      "schedulingname": "ViratRao6140",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Rao",
+      "providerid": 211,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Victoria",
+      "acceptingnewpatients": false,
+      "schedulingname": "VictoriaRetro5204",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Retro",
+      "providerid": 380,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Steven",
+      "schedulingname": "ste1234",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Robert",
+      "providerid": 144,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Kevin",
+      "specialty": "Dermatology",
+      "schedulingname": "kevinnrob123",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Robert",
+      "providerid": 145,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Rahul",
+      "specialty": "Dermatology",
+      "schedulingname": "rrose0",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Rose",
+      "providerid": 146,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Gill",
+      "schedulingname": "GillRoss9524",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Ross",
+      "providerid": 267,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Allex",
+      "acceptingnewpatients": false,
+      "schedulingname": "AllexRotson6674",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Rotson",
+      "providerid": 381,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Nil",
+      "schedulingname": "NilRoy3485",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Roy",
+      "providerid": 299,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "N",
+      "schedulingname": "NRoy8260",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Roy",
+      "providerid": 311,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Mari",
+      "schedulingname": "MariRoy6531",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Roy",
+      "providerid": 324,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Roy",
+      "schedulingname": "RoyRoyl1535",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Royl",
+      "providerid": 328,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Alex",
+      "schedulingname": "AlexS2764",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "S",
+      "providerid": 157,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Tim",
+      "schedulingname": "TimS0411",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "S",
+      "providerid": 260,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Mark",
+      "schedulingname": "MarkS4425",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "S",
+      "providerid": 265,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Tim",
+      "schedulingname": "TimS7501",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "S",
+      "providerid": 266,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Tim",
+      "schedulingname": "TimS0238",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "S",
+      "providerid": 336,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Georgy",
+      "schedulingname": "GeorgyS1804",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "S",
+      "providerid": 382,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Nick",
+      "specialty": "Family Medicine",
+      "schedulingname": "Nick_Saban_MD",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "displayname": "Nick Saban, MD",
+      "ansinamecode": "Allopathic & Osteopathic Physicians : Allergy & Immunology (207K00000X)",
+      "lastname": "Saban",
+      "createencounterprovideridlist": [
+        "120"
+      ],
+      "providerid": 120,
+      "providerusername": "nsaban",
+      "ansispecialtycode": "207K00000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": true
+    },
+    {
+      "firstname": "Joshoowa",
+      "specialty": "Homeopathy",
+      "schedulingname": "jsadownik1",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "displayname": "Joshoowa Sadownik, MD",
+      "ansinamecode": "Emergency Medical Service Providers : Emergency Medical Technician, Basic (146N00000X)",
+      "lastname": "Sadownik",
+      "createencounterprovideridlist": [
+        "262"
+      ],
+      "providerid": 262,
+      "supervisingproviderusername": "jsadownik1",
+      "providerusername": "jsadownik1",
+      "supervisingproviderid": 262,
+      "ansispecialtycode": "146N00000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": true
+    },
+    {
+      "firstname": "Mehul",
+      "schedulingname": "MehulSathiya9996",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Sathiya",
+      "providerid": 416,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Ricoh",
+      "specialty": "General Surgery",
+      "schedulingname": "SDCA",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "CST",
+      "billable": true,
+      "ansinamecode": "Allopathic & Osteopathic Physicians : General Practice (208D00000X)",
+      "lastname": "Sdca",
+      "providerid": 274,
+      "ansispecialtycode": "208D00000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "CERTIFIED SURGICAL TECHNICIAN",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Sima",
+      "schedulingname": "SimaShukla4095",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Shukla",
+      "providerid": 207,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Nathanial",
+      "specialty": "Orthopedics",
+      "homedepartment": "ST FRANCIS SURGERY",
+      "schedulingname": "nspiers0",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "displayname": "Nathanial Spiers, MD",
+      "ansinamecode": "Group : Single Specialty (193400000X)",
+      "lastname": "Spiers",
+      "createencounterprovideridlist": [
+        "22"
+      ],
+      "providerid": 22,
+      "providerusername": "nspiers0",
+      "ansispecialtycode": "193400000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": true
+    },
+    {
+      "firstname": "Jolanda",
+      "specialty": "Podiatric Surgery",
+      "acceptingnewpatients": true,
+      "schedulingname": "jstcyr0",
+      "providergrouplist": [
+        "22"
+      ],
+      "providertypeid": "OTC",
+      "billable": true,
+      "displayname": "Jolanda Stcyr, OTC",
+      "ansinamecode": "Hospital Units : Rehabilitation Unit (273Y00000X)",
+      "lastname": "Stcyr",
+      "providerid": 106,
+      "ansispecialtycode": "273Y00000X",
+      "hideinportal": false,
+      "entitytype": "Non-person entity",
+      "providertype": "CERTIFIED ORTHOPEDIC TECHNICIAN",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Genie",
+      "specialty": "Family Medicine",
+      "schedulingname": "gsturtevant0",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "NP",
+      "billable": true,
+      "displayname": "Genie Sturtevant, NP",
+      "ansinamecode": "Physician Assistants & Advanced Practice Nursing Providers : Anesthesiologist Assistant (367H00000X)",
+      "lastname": "Sturtevant",
+      "createencounterprovideridlist": [
+        "87"
+      ],
+      "providerid": 87,
+      "supervisingproviderusername": "mweist0",
+      "providerusername": "gsturtevant0",
+      "supervisingproviderid": 27,
+      "ansispecialtycode": "367H00000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "Nurse Practitioner (NP)",
+      "createencounteroncheckin": true
+    },
+    {
+      "firstname": "Kaul",
+      "acceptingnewpatients": false,
+      "schedulingname": "KaulSafron2450",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Safron",
+      "providerid": 373,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Ena",
+      "schedulingname": "EnaSam1297",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Sam",
+      "providerid": 246,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Sam",
+      "acceptingnewpatients": false,
+      "schedulingname": "SamSami1780",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Sami",
+      "providerid": 370,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Wilson",
+      "schedulingname": "WilsonSammy2906",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Sammy",
+      "providerid": 251,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Sanjay",
+      "schedulingname": "SanjaySane5137",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Sane",
+      "providerid": 156,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Malik",
+      "schedulingname": "MalikShabo2189",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Shabo",
+      "providerid": 229,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Pratik",
+      "schedulingname": "PratikShah9581",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Shah",
+      "providerid": 217,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Smith",
+      "schedulingname": "SmithShaha6780",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Shaha",
+      "providerid": 291,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Sniksh",
+      "schedulingname": "SnikshShaha3419",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Shaha",
+      "providerid": 340,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Shaam",
+      "schedulingname": "ShaamShams2056",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Shams",
+      "providerid": 198,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Sahil",
+      "schedulingname": "SahilShana2457",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Shana",
+      "providerid": 180,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Shaan",
+      "schedulingname": "ShaanShane7904",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Shane",
+      "providerid": 225,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Krishna",
+      "schedulingname": "kps123",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Sharma",
+      "providerid": 133,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Gajandra",
+      "schedulingname": "gasa1234",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Sharma",
+      "providerid": 143,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Anil",
+      "schedulingname": "AnilSharma5651",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Sharma",
+      "providerid": 176,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Pream",
+      "schedulingname": "PreamSharma9215",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Sharma",
+      "providerid": 177,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Krishna",
+      "schedulingname": "KrishnaSharma2684",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Sharma",
+      "providerid": 367,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Shyam",
+      "schedulingname": "ShyamShelly2549",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Shelly",
+      "providerid": 293,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Golden",
+      "schedulingname": "GoldenSherry1333",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Sherry",
+      "providerid": 258,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Rashmi",
+      "schedulingname": "RashmiShetty3454",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Shetty",
+      "providerid": 161,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Ram",
+      "schedulingname": "RamShinde4151",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Shinde",
+      "providerid": 295,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Milind",
+      "schedulingname": "MilindShroff2265",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Shroff",
+      "providerid": 224,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Raj",
+      "schedulingname": "rajshu123",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": false,
+      "lastname": "Shukla",
+      "providerid": 136,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "M",
+      "schedulingname": "MSigal4948",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Sigal",
+      "providerid": 305,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Simbha",
+      "schedulingname": "SimbhaSimbha9106",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Simbha",
+      "providerid": 199,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Ranvijay",
+      "schedulingname": "RanvijaySingh2004",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Singh",
+      "providerid": 169,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Sam",
+      "schedulingname": "SamSingh7461",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Singh",
+      "providerid": 174,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Rajdeep",
+      "schedulingname": "RajdeepSingh8558",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Singh",
+      "providerid": 238,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Astar",
+      "acceptingnewpatients": false,
+      "schedulingname": "AstarSlob6368",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Slob",
+      "providerid": 422,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Peter",
+      "schedulingname": "PeterSmith1697",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Smith",
+      "providerid": 149,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Peter",
+      "schedulingname": "PeterSmith8055",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Smith",
+      "providerid": 150,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Smooth",
+      "schedulingname": "SmoothSmith8081",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Smith",
+      "providerid": 201,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Steve",
+      "schedulingname": "SteveSmith8441",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Smith",
+      "providerid": 222,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Silk",
+      "schedulingname": "SilkSmith3350",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Smith",
+      "providerid": 245,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Steve",
+      "schedulingname": "SteveSmith0826",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Smith",
+      "providerid": 269,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Will",
+      "schedulingname": "WillSmith4141",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Smith",
+      "providerid": 298,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Singh",
+      "schedulingname": "SinghSodi2586",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Sodi",
+      "providerid": 162,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Shubham",
+      "schedulingname": "ShubhamSoni8020",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Soni",
+      "providerid": 154,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "New",
+      "acceptingnewpatients": false,
+      "schedulingname": "NewSpecialis6878",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Specialis",
+      "providerid": 369,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Charles",
+      "acceptingnewpatients": false,
+      "schedulingname": "CharlesStanley6582",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Stanley",
+      "providerid": 401,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "D",
+      "schedulingname": "DStark7315",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Stark",
+      "providerid": 316,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Maria",
+      "schedulingname": "MariaSteffon0863",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Steffon",
+      "providerid": 337,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Marcko",
+      "schedulingname": "MarckoSteffy4031",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Steffy",
+      "providerid": 357,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Mack",
+      "schedulingname": "MackSteller4738",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Steller",
+      "providerid": 244,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Krish",
+      "schedulingname": "KrishSteve5511",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Steve",
+      "providerid": 254,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Smith",
+      "schedulingname": "SmithSteve6416",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Steve",
+      "providerid": 256,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Smith",
+      "schedulingname": "SmithSteve8088",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Steve",
+      "providerid": 353,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Arnulfo",
+      "specialty": "Physical Therapy",
+      "acceptingnewpatients": true,
+      "schedulingname": "atackitt0",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "displayname": "Arnulfo Tackitt, MD",
+      "ansinamecode": "Emergency Medical Service Providers : Emergency Medical Technician, Basic (146N00000X)",
+      "lastname": "Tackitt",
+      "providerid": 91,
+      "ansispecialtycode": "146N00000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Doc",
+      "specialty": "Cardiology",
+      "schedulingname": "d_test",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "displayname": "Doc Test",
+      "ansinamecode": "Group : Multi-Specialty (193200000X)",
+      "lastname": "Test",
+      "createencounterprovideridlist": [
+        "122"
+      ],
+      "providerid": 122,
+      "providerusername": "dtest42",
+      "ansispecialtycode": "193200000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": true
+    },
+    {
+      "firstname": "Reegan",
+      "schedulingname": "RTESTER",
+      "providergrouplist": [
+        "2"
+      ],
+      "billable": false,
+      "displayname": "Rtester",
+      "lastname": "Tester",
+      "providerid": 121,
+      "hideinportal": true,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Dave",
+      "specialty": "Adolescent Medicine",
+      "acceptingnewpatients": false,
+      "schedulingname": "TESTING_DAVE1",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "ansinamecode": "Group : Single Specialty (193400000X)",
+      "lastname": "Testing",
+      "providerid": 412,
+      "supervisingproviderusername": "TESTING_DAVE1",
+      "supervisingproviderid": 412,
+      "ansispecialtycode": "193400000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "npi": 12010101,
+      "providertype": "MD",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Test",
+      "schedulingname": "testTEss5724",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Tess",
+      "providerid": 259,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Ronna",
+      "specialty": "Internal Medicine",
+      "acceptingnewpatients": false,
+      "schedulingname": "rtowles0",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "ansinamecode": "Group : Single Specialty (193400000X)",
+      "lastname": "Towles",
+      "createencounterprovideridlist": [
+        "21"
+      ],
+      "providerid": 21,
+      "supervisingproviderusername": "rtowles0",
+      "providerusername": "rtowles0",
+      "supervisingproviderid": 21,
+      "ansispecialtycode": "193400000X",
+      "hideinportal": true,
+      "entitytype": "Person",
+      "npi": 87614027,
+      "providertype": "MD",
+      "createencounteroncheckin": true
+    },
+    {
+      "firstname": "Ken",
+      "schedulingname": "KenThoms0577",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Thoms",
+      "providerid": 313,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Gangadhar",
+      "schedulingname": "GangadharTilak9294",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Tilak",
+      "providerid": 204,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Ben",
+      "acceptingnewpatients": false,
+      "schedulingname": "BenToon7297",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Toon",
+      "providerid": 423,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Vishal",
+      "schedulingname": "VishalTyagi2769",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Tyagi",
+      "providerid": 166,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Hanerry",
+      "schedulingname": "HanerryV3707",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "V",
+      "providerid": 342,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Baskin",
+      "acceptingnewpatients": false,
+      "schedulingname": "BaskinV5085",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "V",
+      "providerid": 388,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Hamerrr",
+      "schedulingname": "HamerV7543",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Va",
+      "providerid": 384,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Krish",
+      "schedulingname": "kps1234",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Verma",
+      "providerid": 134,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Chetan",
+      "schedulingname": "ChetanW4741",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "W",
+      "providerid": 178,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Maddy",
+      "schedulingname": "MaddyW9528",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "W",
+      "providerid": 363,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Lang",
+      "acceptingnewpatients": false,
+      "schedulingname": "lwilcher0",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "displayname": "Lang Wilcher,",
+      "lastname": "Wilcher",
+      "providerid": 97,
+      "hideinportal": true,
+      "entitytype": "Non-person entity",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Vijay",
+      "schedulingname": "VijayWilson0781",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Wilson",
+      "providerid": 272,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Codd",
+      "acceptingnewpatients": false,
+      "schedulingname": "CoddWet0870",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Wet",
+      "providerid": 424,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Oliver",
+      "acceptingnewpatients": false,
+      "schedulingname": "OliverWhite7579",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "White",
+      "providerid": 396,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Smith",
+      "schedulingname": "SmithWill7385",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Will",
+      "providerid": 323,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "William",
+      "acceptingnewpatients": false,
+      "schedulingname": "WilliamWilliams4542",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Williams",
+      "providerid": 405,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "John",
+      "specialty": "Dermatology",
+      "schedulingname": "Johnwilson",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Wilson",
+      "providerid": 148,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "John",
+      "specialty": "Dermatology",
+      "schedulingname": "Johnhobert",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "ACNP",
+      "billable": false,
+      "lastname": "Wilson",
+      "providerid": 182,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "ACUTE CARE - NURSE PRACTITIONER",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Johns",
+      "specialty": "Dermatology",
+      "schedulingname": "Johnhobert34",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "ACNP",
+      "billable": false,
+      "lastname": "Wilson",
+      "providerid": 187,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "ACUTE CARE - NURSE PRACTITIONER",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Benjamin",
+      "acceptingnewpatients": false,
+      "schedulingname": "BenjaminWood7211",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Wood",
+      "providerid": 394,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Kamlesh",
+      "schedulingname": "ky2323",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Yadav",
+      "providerid": 135,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Vijay",
+      "schedulingname": "VijayYadav1030",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Yadav",
+      "providerid": 205,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Krishna",
+      "schedulingname": "KrishnaYadav9180",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Yadav",
+      "providerid": 206,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Roma",
+      "acceptingnewpatients": false,
+      "schedulingname": "RomaZarex4212",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Zarex",
+      "providerid": 391,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Efron",
+      "schedulingname": "EfronZen1379",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Zen",
+      "providerid": 318,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Ab",
+      "schedulingname": "ThatName",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Cd",
+      "providerid": 228,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Pranav",
+      "schedulingname": "PranavdARAK0082",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Darak",
+      "providerid": 168,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Jon",
+      "schedulingname": "jondev2503",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Dev",
+      "providerid": 234,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Mork",
+      "acceptingnewpatients": false,
+      "schedulingname": "morkdin1148",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Din",
+      "providerid": 376,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Brokan",
+      "acceptingnewpatients": false,
+      "schedulingname": "brokandoc0170",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Doc",
+      "providerid": 371,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Wewe",
+      "acceptingnewpatients": false,
+      "schedulingname": "weweee0811",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Ee",
+      "providerid": 372,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Sf",
+      "schedulingname": "sffw1714",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Fw",
+      "providerid": 286,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Mukesh",
+      "schedulingname": "mukeshl3698",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "L",
+      "providerid": 189,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Mukesh",
+      "schedulingname": "8156768767",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "L",
+      "providerid": 190,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Montin",
+      "schedulingname": "montinl5709",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "L",
+      "providerid": 197,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Vilsons",
+      "schedulingname": "vilsonsl4737",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "L",
+      "providerid": 214,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Mukessxh",
+      "schedulingname": "mukessxhlast4306",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Last",
+      "providerid": 191,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Mukessxh",
+      "schedulingname": "mukessxhlast9935",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Last",
+      "providerid": 194,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Visha",
+      "schedulingname": "vishalast9955",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Last",
+      "providerid": 235,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Krok",
+      "acceptingnewpatients": false,
+      "schedulingname": "Kroklem6884",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Lem",
+      "providerid": 421,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Karcko",
+      "schedulingname": "KARCKOmahind0781",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Mahind",
+      "providerid": 327,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Arman",
+      "schedulingname": "Armanmalik8755",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Malik",
+      "providerid": 179,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Gsfg",
+      "schedulingname": "gsfgsfgsfag1872",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "lastname": "Sfgsfag",
+      "providerid": 289,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "David",
+      "schedulingname": "test_david1",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": true,
+      "ansinamecode": "Group : Single Specialty (193400000X)",
+      "lastname": "Testing",
+      "providerid": 351,
+      "supervisingproviderusername": "test_david1",
+      "supervisingproviderid": 351,
+      "ansispecialtycode": "193400000X",
+      "hideinportal": false,
+      "entitytype": "Person",
+      "npi": 1310101,
+      "providertype": "MD",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Minions",
+      "specialty": "Dermatology",
+      "schedulingname": "Minionwalker5925",
+      "providergrouplist": [
+        "2"
+      ],
+      "providertypeid": "ACNP",
+      "billable": false,
+      "lastname": "Walker",
+      "providerid": 301,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "ACUTE CARE - NURSE PRACTITIONER",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Minions",
+      "specialty": "Dermatology",
+      "schedulingname": "Minionwalker59252",
+      "providergrouplist": [
+        "2"
+      ],
+      "providertypeid": "ACNP",
+      "billable": false,
+      "lastname": "Walker",
+      "providerid": 302,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "ACUTE CARE - NURSE PRACTITIONER",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Raj",
+      "schedulingname": "rajyadav123",
+      "providergrouplist": [
+        "1"
+      ],
+      "providertypeid": "MD",
+      "billable": false,
+      "lastname": "Yadav",
+      "providerid": 137,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "providertype": "MD",
+      "createencounteroncheckin": false
+    },
+    {
+      "firstname": "Edison",
+      "schedulingname": "Thomas",
+      "providergrouplist": [
+        "1"
+      ],
+      "billable": false,
+      "providerid": 141,
+      "hideinportal": false,
+      "entitytype": "Person",
+      "createencounteroncheckin": false
+    }
+  ],
+  "totalcount": 353
+}
