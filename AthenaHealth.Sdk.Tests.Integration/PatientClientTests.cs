@@ -43,6 +43,45 @@ namespace AthenaHealth.Sdk.Tests.Integration
         }
 
         [Fact]
+        public async Task GetPatientProblems_ValidData_ReturnsProblemsCollection()
+        {
+            // Arrange
+            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetPatientProblems.json"));
+            var queryParameters = new GetPatientProblemsFilter()
+            {
+                DepartmentId = 1,
+                ShowDiagnosisInfo = true,
+                ShowInactive = true
+            };
+
+            // Act
+            var result = await patientClient.GetPatientProblems(1, queryParameters);
+
+            // Assert
+            result.ShouldNotBeNull();
+            result.Problems.Count().ShouldBeGreaterThan(0);
+        }
+
+        [Fact]
+        public void GetPatientProblems_PatientInDifferentDepartment_ThrowsException()
+        {
+            // Arrange
+            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"error\":\"Invalid departmentid or departmentid / patientid combination.\"}", HttpStatusCode.BadRequest));
+            var queryParameters = new GetPatientProblemsFilter()
+            {
+                DepartmentId = 2,
+                ShowDiagnosisInfo = true,
+                ShowInactive = true
+            };
+
+            // Act
+            ApiException exception = Should.Throw<ApiException>(async () => await patientClient.GetPatientProblems(1, queryParameters));
+
+            // Assert
+            exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
+        }
+
+        [Fact]
         public async Task GetPatients_ValidData_ReturnsPatientsCollection()
         {
             // Arrange

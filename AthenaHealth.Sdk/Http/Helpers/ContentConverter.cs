@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Net.Http;
 using System.Reflection;
@@ -45,13 +46,10 @@ namespace AthenaHealth.Sdk.Http.Helpers
                     if (value == null)
                         continue;
 
-                    JsonPropertyAttribute jsonPropertyAttribute = item.GetCustomAttribute<JsonPropertyAttribute>();
-
-                    string key = item.Name;
-                    if (jsonPropertyAttribute != null)
-                        key = jsonPropertyAttribute.PropertyName;
-
                     string stringValue = GetStringValue(value);
+
+                    if (stringValue == null)
+                        continue;
 
                     JsonConverterAttribute jsonConverterAttribute = item.GetCustomAttribute<JsonConverterAttribute>();
 
@@ -63,6 +61,12 @@ namespace AthenaHealth.Sdk.Http.Helpers
                             .Trim('"');
                     }
 
+                    JsonPropertyAttribute jsonPropertyAttribute = item.GetCustomAttribute<JsonPropertyAttribute>();
+
+                    string key = item.Name;
+                    if (jsonPropertyAttribute != null)
+                        key = jsonPropertyAttribute.PropertyName;
+
                     dictionary[key] = stringValue;
                 }
             }
@@ -72,13 +76,45 @@ namespace AthenaHealth.Sdk.Http.Helpers
 
         private static string GetStringValue(object value)
         {
-            if (value is Array array)
+            // Here we convert most common value types
+            if (value is string stringValue)
             {
-                var list = array.Cast<object>().ToList();
-                var joined = string.Join(",", list);
-                return $"[{joined}]";
+                return stringValue;
+            }
+            else if (value is int intValue)
+            {
+                return intValue.ToString(CultureInfo.InvariantCulture);
+            }
+            else if (value is double doubleValue)
+            {
+                return doubleValue.ToString(CultureInfo.InvariantCulture);
+            }
+            else if (value is float floatValue)
+            {
+                return floatValue.ToString(CultureInfo.InvariantCulture);
+            }
+            else if (value is decimal decimalValue)
+            {
+                return decimalValue.ToString(CultureInfo.InvariantCulture);
+            }
+            else if (value is bool boolValue)
+            {
+                return boolValue.ToString(CultureInfo.InvariantCulture);
+            }
+            else if (value is IEnumerable collection)
+            {
+                var list = collection
+                    .Cast<object>()
+                    .Where(x => x != null)
+                    .Select(x => GetStringValue(x));
+
+                if(list.Any())
+                    return $"[{string.Join(",", list)}]";
+
+                return null;
             }
 
+            // Everything which does not suit rules above is converted that way
             return value.ToString();
         }
     }

@@ -1,0 +1,2476 @@
+﻿{
+  "notelastmodifieddatetime": "2019-08-08T14:31:41-04:00",
+  "notelastmodifiedby": "API-8579",
+  "lastmodifieddatetime": "2019-08-08T14:31:41-04:00",
+  "totalcount": 80,
+  "sectionnote": "sleep: well enough, with occasional coughing\nsocial: good, interacting\nthis is a problem\n\n                -----------------------\n                PATIENT COLLATERAL\n                Type: psychiatry\n                Collected by: John Schmon <juju@gmail.com>\n                Collected on: 2019-07-30T21:51:05.523Z\n\n                Responses:\n                sleep: Occasional waking in the middle of the nightdiet: Well,social: Well.behavior: memory: nonemedicationIssues: noneother: none\n            -----------------------\n            PATIENT COLLATERAL\n            Type: psychiatry\n            Collected by: Juan Person <juju@ju.com>\n            Collected on: 2019-07-30T22:17:51.564Z\n\n            Responses:\n            sleep: poorly.\ndiet: well.\nsocial: good.\nbehavior: \nmemory: something\nmedicationIssues: something\nother: something\n\n            -----------------------\n            -----------------------\n            PATIENT COLLATERAL\n            Type: psychiatry\n            Collected by: JuJu <juju@ju.com>\n            Collected on: 2019-07-31T00:23:11.384Z\n\n            Responses:\n            sleep: well. with some trouble.\ndiet: well\nsocial: not well\nbehavior: \nmemory: owefoin\nmedicationIssues: wfeoin\nother: oij\n\n            -----------------------\n            -----------------------\n            PATIENT COLLATERAL\n            Type: psychiatry\n            Collected by: John Lazos <jelazos7@gmail.com>\n            Collected on: 2019-08-08T18:31:38.763Z\n\n            Responses:\n            sleep: sleep\ndiet: eating\nsocial: soci\nbehavior: \nmemory: joijefoiwoiweoo\nmedicationIssues: io\nother: ioh\n\n            -----------------------",
+  "lastupdated": "11/08/2018",
+  "lastmodifiedby": "API-8579",
+  "problems": [
+    {
+      "lastmodifieddatetime": "2018-05-30T15:00:13-04:00",
+      "deactivateddate": "05/30/2018",
+      "name": "AIDS",
+      "bestmatchicd10code": "B20",
+      "problemid": 65273,
+      "events": [
+        {
+          "eventtype": "HIDDEN",
+          "enddate": "05/30/2018"
+        },
+        {
+          "status": "ACUTE",
+          "eventtype": "START",
+          "startdate": "05/23/2018",
+          "createddate": "05/23/2018",
+          "createdby": "API-8232"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5879",
+      "code": "62479008"
+    },
+    {
+      "lastmodifieddatetime": "2018-05-20T12:15:26-04:00",
+      "deactivateddate": "05/20/2018",
+      "name": "Viral hepatitis without hepatic coma",
+      "bestmatchicd10code": "B19.9",
+      "problemid": 65228,
+      "events": [
+        {
+          "eventtype": "HIDDEN",
+          "enddate": "05/20/2018"
+        },
+        {
+          "eventtype": "START",
+          "startdate": "05/17/2018",
+          "createddate": "05/17/2018",
+          "createdby": "API-7127"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5879",
+      "code": "111896003"
+    },
+    {
+      "lastmodifieddatetime": "2018-05-20T11:46:01-04:00",
+      "deactivateddate": "05/20/2018",
+      "name": "Viral hepatitis without hepatic coma",
+      "bestmatchicd10code": "B19.9",
+      "problemid": 65229,
+      "events": [
+        {
+          "eventtype": "HIDDEN",
+          "enddate": "05/20/2018"
+        },
+        {
+          "eventtype": "START",
+          "startdate": "05/17/2018",
+          "createddate": "05/17/2018",
+          "createdby": "API-7127"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5879",
+      "code": "111896003"
+    },
+    {
+      "lastmodifieddatetime": "2018-05-20T12:22:33-04:00",
+      "deactivateddate": "05/20/2018",
+      "name": "Viral hepatitis without hepatic coma",
+      "bestmatchicd10code": "B19.9",
+      "problemid": 65230,
+      "events": [
+        {
+          "eventtype": "HIDDEN",
+          "enddate": "05/20/2018"
+        },
+        {
+          "eventtype": "START",
+          "startdate": "05/17/2018",
+          "createddate": "05/17/2018",
+          "createdby": "API-7127"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5879",
+      "code": "111896003"
+    },
+    {
+      "lastmodifieddatetime": "2018-05-20T12:25:42-04:00",
+      "deactivateddate": "05/20/2018",
+      "name": "Viral hepatitis without hepatic coma",
+      "bestmatchicd10code": "B19.9",
+      "problemid": 65231,
+      "events": [
+        {
+          "eventtype": "HIDDEN",
+          "enddate": "05/20/2018"
+        },
+        {
+          "eventtype": "START",
+          "startdate": "05/17/2018",
+          "createddate": "05/17/2018",
+          "createdby": "API-7127"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5879",
+      "code": "111896003"
+    },
+    {
+      "lastmodifieddatetime": "2018-05-20T11:26:46-04:00",
+      "deactivateddate": "05/17/2018",
+      "name": "Malignant tumor of colon",
+      "bestmatchicd10code": "C18.9",
+      "problemid": 64239,
+      "events": [
+        {
+          "eventtype": "HIDDEN",
+          "enddate": "05/17/2018"
+        },
+        {
+          "source": "HISTORY",
+          "status": "CHRONIC",
+          "eventtype": "START",
+          "startdate": "08/10/2015",
+          "createddate": "06/16/2017",
+          "onsetdate": "08/10/2015"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5879",
+      "code": "363406005"
+    },
+    {
+      "lastmodifieddatetime": "2018-05-31T12:44:27-04:00",
+      "deactivateddate": "05/31/2018",
+      "name": "Malignant tumor of prostate",
+      "bestmatchicd10code": "C61",
+      "problemid": 64241,
+      "events": [
+        {
+          "eventtype": "HIDDEN",
+          "enddate": "05/31/2018"
+        },
+        {
+          "source": "HISTORY",
+          "status": "CHRONIC",
+          "eventtype": "START",
+          "startdate": "01/01/2015",
+          "note": "edit",
+          "createddate": "06/16/2017",
+          "onsetdate": "01/01/2015"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5879",
+      "code": "399068003"
+    },
+    {
+      "lastmodifieddatetime": "2018-06-06T12:19:54-04:00",
+      "deactivateddate": "06/06/2018",
+      "name": "Neoplasm of pylorus",
+      "bestmatchicd10code": "D49.0",
+      "problemid": 65213,
+      "events": [
+        {
+          "eventtype": "HIDDEN",
+          "enddate": "06/06/2018"
+        },
+        {
+          "status": "ACUTE",
+          "eventtype": "START",
+          "startdate": "03/10/2015",
+          "createddate": "05/11/2018",
+          "onsetdate": "03/10/2015",
+          "createdby": "API-8232"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-8232",
+      "code": "126831006"
+    },
+    {
+      "lastmodifieddatetime": "2018-06-06T13:41:17-04:00",
+      "deactivateddate": "06/06/2018",
+      "name": "Neoplasm of carotid body",
+      "bestmatchicd10code": "D49.7",
+      "problemid": 65201,
+      "events": [
+        {
+          "eventtype": "HIDDEN",
+          "enddate": "06/06/2018"
+        },
+        {
+          "status": "ACUTE",
+          "eventtype": "START",
+          "startdate": "05/10/2018",
+          "createddate": "05/11/2018",
+          "onsetdate": "05/10/2018",
+          "createdby": "API-8232"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-8232",
+      "code": "127028003"
+    },
+    {
+      "lastmodifieddatetime": "2018-06-06T14:27:54-04:00",
+      "name": "Diabetes mellitus",
+      "problemid": 63490,
+      "events": [
+        {
+          "source": "HISTORY",
+          "status": "ACUTE",
+          "eventtype": "START",
+          "startdate": "03/10/2015",
+          "createddate": "10/12/2016",
+          "onsetdate": "03/10/2015"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD10",
+              "name": "Cholera",
+              "code": "A00"
+            }
+          ],
+          "encounterdate": "10/23/2018"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "12/20/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "12/20/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "12/20/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "12/20/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "10/14/2019"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "12/20/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "01/20/2017"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "10/14/2019"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "01/19/2017"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "12/20/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "10/15/2019"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "01/19/2017"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "01/20/2017"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "10/15/2019"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "10/14/2019"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "10/14/2019"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "01/23/2017"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD9",
+              "name": "DIABETES MELLITUS WITHOUT MENTION OF COMPLICATION, TYPE II OR UNSPECIFIED TYPE, NOT STATED AS UNCONTROLLED",
+              "code": "250.00"
+            }
+          ],
+          "encounterdate": "07/13/2015"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "01/19/2017"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "12/20/2016"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5879",
+      "code": "73211009"
+    },
+    {
+      "lastmodifieddatetime": "2018-06-20T03:20:00-04:00",
+      "name": "Diabetes mellitus",
+      "problemid": 65331,
+      "events": [
+        {
+          "status": "CHRONIC",
+          "eventtype": "START",
+          "startdate": "06/20/2018",
+          "laterality": "LEFT",
+          "createddate": "06/20/2018",
+          "onsetdate": "06/20/2018",
+          "createdby": "API-6442"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD10",
+              "name": "Cholera",
+              "code": "A00"
+            }
+          ],
+          "encounterdate": "10/23/2018"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "12/20/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "12/20/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "12/20/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "12/20/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "10/14/2019"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "12/20/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "01/20/2017"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "10/14/2019"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "01/19/2017"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "12/20/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "10/15/2019"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "01/19/2017"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "01/20/2017"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "10/15/2019"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "10/14/2019"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "10/14/2019"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "01/23/2017"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD9",
+              "name": "DIABETES MELLITUS WITHOUT MENTION OF COMPLICATION, TYPE II OR UNSPECIFIED TYPE, NOT STATED AS UNCONTROLLED",
+              "code": "250.00"
+            }
+          ],
+          "encounterdate": "07/13/2015"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "01/19/2017"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "12/20/2016"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-6442",
+      "code": "73211009"
+    },
+    {
+      "lastmodifieddatetime": "2018-06-06T14:10:25-04:00",
+      "deactivateddate": "06/06/2018",
+      "name": "Type 2 diabetes mellitus",
+      "bestmatchicd10code": "E11.37X2",
+      "problemid": 63489,
+      "events": [
+        {
+          "eventtype": "HIDDEN",
+          "enddate": "06/06/2018"
+        },
+        {
+          "source": "HISTORY",
+          "eventtype": "START",
+          "startdate": "10/12/2016",
+          "createddate": "10/12/2016",
+          "onsetdate": "10/12/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "04/24/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "04/23/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "04/23/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "04/23/2016"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5879",
+      "code": "44054006"
+    },
+    {
+      "lastmodifieddatetime": "2018-06-20T09:04:31-04:00",
+      "name": "Type 1 diabetes mellitus",
+      "bestmatchicd10code": "E10.9",
+      "problemid": 63488,
+      "events": [
+        {
+          "source": "HISTORY",
+          "status": "ACUTE",
+          "eventtype": "START",
+          "startdate": "03/10/2015",
+          "note": "Demo For TEst",
+          "createddate": "10/12/2016",
+          "onsetdate": "03/10/2015"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-8409",
+      "code": "46635009"
+    },
+    {
+      "lastmodifieddatetime": "2017-05-16T10:20:31-04:00",
+      "name": "Chronic gouty arthritis",
+      "bestmatchicd10code": "M1A.00X0",
+      "problemid": 64109,
+      "events": [
+        {
+          "source": "HISTORY",
+          "eventtype": "START",
+          "startdate": "05/15/2017",
+          "createddate": "05/16/2017",
+          "onsetdate": "05/15/2017"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5787",
+      "code": "68451005"
+    },
+    {
+      "lastmodifieddatetime": "2017-06-16T15:48:53-04:00",
+      "name": "Overweight",
+      "bestmatchicd10code": "E66.3",
+      "problemid": 64237,
+      "events": [
+        {
+          "source": "HISTORY",
+          "eventtype": "START",
+          "startdate": "06/16/2017",
+          "createddate": "06/16/2017"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5532",
+      "code": "238131007"
+    },
+    {
+      "lastmodifieddatetime": "2018-06-07T08:12:42-04:00",
+      "deactivateddate": "06/07/2018",
+      "name": "Sickle cell-hemoglobin SS disease",
+      "bestmatchicd10code": "D57.1",
+      "problemid": 65217,
+      "events": [
+        {
+          "eventtype": "HIDDEN",
+          "enddate": "06/07/2018"
+        },
+        {
+          "status": "ACUTE",
+          "eventtype": "START",
+          "startdate": "05/09/2018",
+          "note": "This is it",
+          "createddate": "05/11/2018",
+          "onsetdate": "05/09/2018",
+          "createdby": "API-8232"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-8232",
+      "code": "127040003"
+    },
+    {
+      "lastmodifieddatetime": "2018-05-23T15:17:08-04:00",
+      "name": "Pancytopenia",
+      "bestmatchicd10code": "D61.818",
+      "problemid": 65274,
+      "events": [
+        {
+          "status": "ACUTE",
+          "eventtype": "START",
+          "startdate": "04/18/2018",
+          "createddate": "05/23/2018",
+          "onsetdate": "04/18/2018",
+          "createdby": "API-8232"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-8232",
+      "code": "127034005"
+    },
+    {
+      "lastmodifieddatetime": "2017-06-16T15:48:48-04:00",
+      "name": "Stress",
+      "bestmatchicd10code": "Z73.3",
+      "problemid": 64233,
+      "events": [
+        {
+          "source": "HISTORY",
+          "eventtype": "START",
+          "startdate": "06/16/2017",
+          "createddate": "06/16/2017"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5532",
+      "code": "73595000"
+    },
+    {
+      "lastmodifieddatetime": "2017-03-27T11:31:09-04:00",
+      "name": "Anxiety disorder of childhood OR adolescence",
+      "bestmatchicd10code": "F93.8",
+      "problemid": 63945,
+      "events": [
+        {
+          "source": "HISTORY",
+          "eventtype": "START",
+          "startdate": "11/22/2015",
+          "createddate": "03/27/2017",
+          "onsetdate": "11/22/2015"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-4341",
+      "code": "109006"
+    },
+    {
+      "deactivateduser": "mpupienis",
+      "lastmodifieddatetime": "2016-09-08T17:53:56-04:00",
+      "deactivateddate": "08/25/2016",
+      "name": "Carpal tunnel syndrome",
+      "problemid": 5087,
+      "events": [
+        {
+          "eventtype": "HIDDEN",
+          "enddate": "08/25/2016"
+        },
+        {
+          "source": "HISTORY",
+          "status": "ACUTE",
+          "eventtype": "START",
+          "startdate": "10/30/2015",
+          "createddate": "10/30/2015",
+          "onsetdate": "10/30/2015"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD10",
+              "name": "Carpal tunnel syndrome, unspecified upper limb",
+              "code": "G56.00"
+            }
+          ],
+          "encounterdate": "11/05/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD9",
+              "name": "CARPAL TUNNEL SYNDROME",
+              "code": "354.0"
+            }
+          ],
+          "encounterdate": "10/27/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD9",
+              "name": "CARPAL TUNNEL SYNDROME",
+              "code": "354.0"
+            }
+          ],
+          "encounterdate": "03/30/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "laterality": "LEFT",
+          "encounterdate": "10/04/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "laterality": "LEFT",
+          "encounterdate": "10/04/2016"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "mpupienis",
+      "code": "57406009"
+    },
+    {
+      "deactivateduser": "mpupienis",
+      "lastmodifieddatetime": "2016-09-08T17:53:56-04:00",
+      "deactivateddate": "09/08/2016",
+      "name": "Carpal tunnel syndrome",
+      "problemid": 7416,
+      "events": [
+        {
+          "eventtype": "HIDDEN",
+          "enddate": "09/08/2016"
+        },
+        {
+          "source": "HISTORY",
+          "eventtype": "START",
+          "startdate": "03/04/2016",
+          "laterality": "LEFT",
+          "note": "TEST",
+          "createddate": "05/09/2016",
+          "onsetdate": "03/04/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD10",
+              "name": "Carpal tunnel syndrome, unspecified upper limb",
+              "code": "G56.00"
+            }
+          ],
+          "encounterdate": "11/05/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD9",
+              "name": "CARPAL TUNNEL SYNDROME",
+              "code": "354.0"
+            }
+          ],
+          "encounterdate": "10/27/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD9",
+              "name": "CARPAL TUNNEL SYNDROME",
+              "code": "354.0"
+            }
+          ],
+          "encounterdate": "03/30/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "laterality": "LEFT",
+          "encounterdate": "10/04/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "laterality": "LEFT",
+          "encounterdate": "10/04/2016"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "mpupienis",
+      "code": "57406009"
+    },
+    {
+      "lastmodifieddatetime": "2016-11-08T10:53:02-05:00",
+      "deactivateddate": "11/08/2016",
+      "name": "Carpal tunnel syndrome",
+      "problemid": 7442,
+      "events": [
+        {
+          "eventtype": "HIDDEN",
+          "enddate": "11/08/2016"
+        },
+        {
+          "source": "HISTORY",
+          "status": "CHRONIC",
+          "eventtype": "START",
+          "startdate": "05/10/2016",
+          "laterality": "RIGHT",
+          "note": "test",
+          "createddate": "05/10/2016",
+          "onsetdate": "05/10/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD10",
+              "name": "Carpal tunnel syndrome, unspecified upper limb",
+              "code": "G56.00"
+            }
+          ],
+          "encounterdate": "11/05/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD9",
+              "name": "CARPAL TUNNEL SYNDROME",
+              "code": "354.0"
+            }
+          ],
+          "encounterdate": "10/27/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD9",
+              "name": "CARPAL TUNNEL SYNDROME",
+              "code": "354.0"
+            }
+          ],
+          "encounterdate": "03/30/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "laterality": "LEFT",
+          "encounterdate": "10/04/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "laterality": "LEFT",
+          "encounterdate": "10/04/2016"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-4403",
+      "code": "57406009"
+    },
+    {
+      "lastmodifieddatetime": "2016-11-08T10:53:06-05:00",
+      "deactivateddate": "11/08/2016",
+      "name": "Carpal tunnel syndrome",
+      "problemid": 7443,
+      "events": [
+        {
+          "eventtype": "HIDDEN",
+          "enddate": "11/08/2016"
+        },
+        {
+          "source": "HISTORY",
+          "status": "CHRONIC",
+          "eventtype": "START",
+          "startdate": "05/10/2016",
+          "laterality": "RIGHT",
+          "note": "test",
+          "createddate": "05/10/2016",
+          "onsetdate": "05/10/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD10",
+              "name": "Carpal tunnel syndrome, unspecified upper limb",
+              "code": "G56.00"
+            }
+          ],
+          "encounterdate": "11/05/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD9",
+              "name": "CARPAL TUNNEL SYNDROME",
+              "code": "354.0"
+            }
+          ],
+          "encounterdate": "10/27/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD9",
+              "name": "CARPAL TUNNEL SYNDROME",
+              "code": "354.0"
+            }
+          ],
+          "encounterdate": "03/30/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "laterality": "LEFT",
+          "encounterdate": "10/04/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "laterality": "LEFT",
+          "encounterdate": "10/04/2016"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-4403",
+      "code": "57406009"
+    },
+    {
+      "lastmodifieddatetime": "2016-11-08T10:53:11-05:00",
+      "deactivateddate": "11/08/2016",
+      "name": "Carpal tunnel syndrome",
+      "problemid": 7444,
+      "events": [
+        {
+          "eventtype": "HIDDEN",
+          "enddate": "11/08/2016"
+        },
+        {
+          "source": "HISTORY",
+          "eventtype": "START",
+          "startdate": "05/10/2016",
+          "laterality": "RIGHT",
+          "note": "test",
+          "createddate": "05/10/2016",
+          "onsetdate": "05/10/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD10",
+              "name": "Carpal tunnel syndrome, unspecified upper limb",
+              "code": "G56.00"
+            }
+          ],
+          "encounterdate": "11/05/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD9",
+              "name": "CARPAL TUNNEL SYNDROME",
+              "code": "354.0"
+            }
+          ],
+          "encounterdate": "10/27/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD9",
+              "name": "CARPAL TUNNEL SYNDROME",
+              "code": "354.0"
+            }
+          ],
+          "encounterdate": "03/30/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "laterality": "LEFT",
+          "encounterdate": "10/04/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "laterality": "LEFT",
+          "encounterdate": "10/04/2016"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-4403",
+      "code": "57406009"
+    },
+    {
+      "lastmodifieddatetime": "2016-11-08T10:53:26-05:00",
+      "deactivateddate": "11/08/2016",
+      "name": "Carpal tunnel syndrome",
+      "problemid": 63266,
+      "events": [
+        {
+          "eventtype": "HIDDEN",
+          "enddate": "11/08/2016"
+        },
+        {
+          "source": "HISTORY",
+          "status": "CHRONIC",
+          "eventtype": "START",
+          "startdate": "09/14/2016",
+          "laterality": "LEFT",
+          "note": "wefwefwe",
+          "createddate": "09/14/2016",
+          "onsetdate": "09/14/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD10",
+              "name": "Carpal tunnel syndrome, unspecified upper limb",
+              "code": "G56.00"
+            }
+          ],
+          "encounterdate": "11/05/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD9",
+              "name": "CARPAL TUNNEL SYNDROME",
+              "code": "354.0"
+            }
+          ],
+          "encounterdate": "10/27/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD9",
+              "name": "CARPAL TUNNEL SYNDROME",
+              "code": "354.0"
+            }
+          ],
+          "encounterdate": "03/30/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "laterality": "LEFT",
+          "encounterdate": "10/04/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "laterality": "LEFT",
+          "encounterdate": "10/04/2016"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-4403",
+      "code": "57406009"
+    },
+    {
+      "lastmodifieddatetime": "2016-11-08T10:53:34-05:00",
+      "deactivateddate": "11/08/2016",
+      "name": "Carpal tunnel syndrome",
+      "problemid": 63486,
+      "events": [
+        {
+          "eventtype": "HIDDEN",
+          "enddate": "11/08/2016"
+        },
+        {
+          "source": "HISTORY",
+          "eventtype": "START",
+          "startdate": "10/12/2016",
+          "createddate": "10/12/2016",
+          "onsetdate": "10/12/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD10",
+              "name": "Carpal tunnel syndrome, unspecified upper limb",
+              "code": "G56.00"
+            }
+          ],
+          "encounterdate": "11/05/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD9",
+              "name": "CARPAL TUNNEL SYNDROME",
+              "code": "354.0"
+            }
+          ],
+          "encounterdate": "10/27/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD9",
+              "name": "CARPAL TUNNEL SYNDROME",
+              "code": "354.0"
+            }
+          ],
+          "encounterdate": "03/30/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "laterality": "LEFT",
+          "encounterdate": "10/04/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "laterality": "LEFT",
+          "encounterdate": "10/04/2016"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-4403",
+      "code": "57406009"
+    },
+    {
+      "lastmodifieddatetime": "2016-11-08T10:53:42-05:00",
+      "deactivateddate": "11/08/2016",
+      "name": "Carpal tunnel syndrome",
+      "problemid": 63487,
+      "events": [
+        {
+          "eventtype": "HIDDEN",
+          "enddate": "11/08/2016"
+        },
+        {
+          "source": "HISTORY",
+          "eventtype": "START",
+          "startdate": "10/12/2016",
+          "createddate": "10/12/2016",
+          "onsetdate": "10/12/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD10",
+              "name": "Carpal tunnel syndrome, unspecified upper limb",
+              "code": "G56.00"
+            }
+          ],
+          "encounterdate": "11/05/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD9",
+              "name": "CARPAL TUNNEL SYNDROME",
+              "code": "354.0"
+            }
+          ],
+          "encounterdate": "10/27/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD9",
+              "name": "CARPAL TUNNEL SYNDROME",
+              "code": "354.0"
+            }
+          ],
+          "encounterdate": "03/30/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "laterality": "LEFT",
+          "encounterdate": "10/04/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "laterality": "LEFT",
+          "encounterdate": "10/04/2016"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-4403",
+      "code": "57406009"
+    },
+    {
+      "lastmodifieddatetime": "2016-11-24T01:22:29-05:00",
+      "name": "Carpal tunnel syndrome",
+      "problemid": 63707,
+      "events": [
+        {
+          "source": "HISTORY",
+          "eventtype": "START",
+          "startdate": "11/24/2016",
+          "createddate": "11/24/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD10",
+              "name": "Carpal tunnel syndrome, unspecified upper limb",
+              "code": "G56.00"
+            }
+          ],
+          "encounterdate": "11/05/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD9",
+              "name": "CARPAL TUNNEL SYNDROME",
+              "code": "354.0"
+            }
+          ],
+          "encounterdate": "10/27/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD9",
+              "name": "CARPAL TUNNEL SYNDROME",
+              "code": "354.0"
+            }
+          ],
+          "encounterdate": "03/30/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "laterality": "LEFT",
+          "encounterdate": "10/04/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "laterality": "LEFT",
+          "encounterdate": "10/04/2016"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-3916",
+      "code": "57406009"
+    },
+    {
+      "lastmodifieddatetime": "2016-11-24T01:33:53-05:00",
+      "name": "Carpal tunnel syndrome",
+      "problemid": 63708,
+      "events": [
+        {
+          "source": "HISTORY",
+          "eventtype": "START",
+          "startdate": "11/24/2016",
+          "createddate": "11/24/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD10",
+              "name": "Carpal tunnel syndrome, unspecified upper limb",
+              "code": "G56.00"
+            }
+          ],
+          "encounterdate": "11/05/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD9",
+              "name": "CARPAL TUNNEL SYNDROME",
+              "code": "354.0"
+            }
+          ],
+          "encounterdate": "10/27/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD9",
+              "name": "CARPAL TUNNEL SYNDROME",
+              "code": "354.0"
+            }
+          ],
+          "encounterdate": "03/30/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "laterality": "LEFT",
+          "encounterdate": "10/04/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "laterality": "LEFT",
+          "encounterdate": "10/04/2016"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-3916",
+      "code": "57406009"
+    },
+    {
+      "lastmodifieddatetime": "2018-05-30T15:16:43-04:00",
+      "name": "Carpal tunnel syndrome",
+      "problemid": 63722,
+      "events": [
+        {
+          "source": "HISTORY",
+          "status": "ACUTE",
+          "eventtype": "START",
+          "startdate": "12/14/2016",
+          "laterality": "RIGHT",
+          "note": "www",
+          "createddate": "12/14/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD10",
+              "name": "Carpal tunnel syndrome, unspecified upper limb",
+              "code": "G56.00"
+            }
+          ],
+          "encounterdate": "11/05/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD9",
+              "name": "CARPAL TUNNEL SYNDROME",
+              "code": "354.0"
+            }
+          ],
+          "encounterdate": "10/27/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD9",
+              "name": "CARPAL TUNNEL SYNDROME",
+              "code": "354.0"
+            }
+          ],
+          "encounterdate": "03/30/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "laterality": "LEFT",
+          "encounterdate": "10/04/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "laterality": "LEFT",
+          "encounterdate": "10/04/2016"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5879",
+      "code": "57406009"
+    },
+    {
+      "lastmodifieddatetime": "2017-03-29T09:07:10-04:00",
+      "name": "Carpal tunnel syndrome",
+      "problemid": 63951,
+      "events": [
+        {
+          "source": "HISTORY",
+          "status": "CHRONIC",
+          "eventtype": "START",
+          "startdate": "12/12/2006",
+          "laterality": "LEFT",
+          "note": "asfasf",
+          "createddate": "03/29/2017",
+          "onsetdate": "12/12/2006"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD10",
+              "name": "Carpal tunnel syndrome, unspecified upper limb",
+              "code": "G56.00"
+            }
+          ],
+          "encounterdate": "11/05/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD9",
+              "name": "CARPAL TUNNEL SYNDROME",
+              "code": "354.0"
+            }
+          ],
+          "encounterdate": "10/27/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD9",
+              "name": "CARPAL TUNNEL SYNDROME",
+              "code": "354.0"
+            }
+          ],
+          "encounterdate": "03/30/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "laterality": "LEFT",
+          "encounterdate": "10/04/2016"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "laterality": "LEFT",
+          "encounterdate": "10/04/2016"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-3133",
+      "code": "57406009"
+    },
+    {
+      "lastmodifieddatetime": "2016-11-08T10:53:51-05:00",
+      "deactivateddate": "11/08/2016",
+      "name": "Acquired disorder of keratinization",
+      "bestmatchicd10code": "L98.8",
+      "problemid": 7,
+      "events": [
+        {
+          "eventtype": "HIDDEN",
+          "enddate": "11/08/2016"
+        },
+        {
+          "source": "HISTORY",
+          "status": "CHRONIC",
+          "eventtype": "START",
+          "startdate": "04/06/2007",
+          "laterality": "BILATERAL",
+          "createddate": "04/26/2010",
+          "onsetdate": "04/06/2007",
+          "createdby": "catstevens"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-4403",
+      "code": "399937000"
+    },
+    {
+      "lastmodifieddatetime": "2016-11-08T10:54:01-05:00",
+      "deactivateddate": "11/08/2016",
+      "name": "Acquired disorder of keratinization",
+      "bestmatchicd10code": "L98.8",
+      "problemid": 5022,
+      "events": [
+        {
+          "eventtype": "HIDDEN",
+          "enddate": "11/08/2016"
+        },
+        {
+          "source": "HISTORY",
+          "eventtype": "START",
+          "startdate": "10/22/2015",
+          "createddate": "10/27/2015",
+          "onsetdate": "10/22/2015"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-4403",
+      "code": "399937000"
+    },
+    {
+      "lastmodifieddatetime": "2017-06-16T15:48:50-04:00",
+      "name": "Hypertensive disorder",
+      "problemid": 64234,
+      "events": [
+        {
+          "source": "HISTORY",
+          "eventtype": "START",
+          "startdate": "06/16/2017",
+          "createddate": "06/16/2017"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD10",
+              "name": "Essential (primary) hypertension",
+              "code": "I10"
+            }
+          ],
+          "encounterdate": "10/26/2016"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5532",
+      "code": "38341003"
+    },
+    {
+      "lastmodifieddatetime": "2017-06-16T15:48:47-04:00",
+      "name": "Disorder of cardiovascular system",
+      "bestmatchicd10code": "I99.9",
+      "problemid": 64232,
+      "events": [
+        {
+          "source": "HISTORY",
+          "eventtype": "START",
+          "startdate": "06/16/2017",
+          "createddate": "06/16/2017"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5532",
+      "code": "49601007"
+    },
+    {
+      "lastmodifieddatetime": "2018-05-23T21:53:04-04:00",
+      "name": "Herniated polyp of maxillary sinus",
+      "bestmatchicd10code": "J33.8",
+      "problemid": 65276,
+      "events": [
+        {
+          "status": "CHRONIC",
+          "eventtype": "START",
+          "startdate": "07/01/2017",
+          "note": "none",
+          "createddate": "05/23/2018",
+          "onsetdate": "07/01/2017",
+          "createdby": "API-5879"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5879",
+      "code": "109360003"
+    },
+    {
+      "lastmodifieddatetime": "2017-06-16T15:48:51-04:00",
+      "name": "Kidney disease",
+      "bestmatchicd10code": "N08",
+      "problemid": 64235,
+      "events": [
+        {
+          "source": "HISTORY",
+          "eventtype": "START",
+          "startdate": "06/16/2017",
+          "createddate": "06/16/2017"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5532",
+      "code": "90708001"
+    },
+    {
+      "lastmodifieddatetime": "2017-07-31T05:20:54-04:00",
+      "name": "Carbuncle of nose",
+      "bestmatchicd10code": "J34.0",
+      "problemid": 64370,
+      "events": [
+        {
+          "source": "HISTORY",
+          "status": "CHRONIC",
+          "eventtype": "START",
+          "startdate": "07/31/2017",
+          "createddate": "07/31/2017"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-3916",
+      "code": "11857005"
+    },
+    {
+      "lastmodifieddatetime": "2017-06-16T15:48:46-04:00",
+      "name": "Allergy to food",
+      "bestmatchicd10code": "T78.1XXA",
+      "problemid": 64231,
+      "events": [
+        {
+          "source": "HISTORY",
+          "eventtype": "START",
+          "startdate": "06/16/2017",
+          "createddate": "06/16/2017"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5532",
+      "code": "414285001"
+    },
+    {
+      "lastmodifieddatetime": "2017-07-03T06:44:07-04:00",
+      "name": "Arthritis",
+      "bestmatchicd10code": "M19.90",
+      "problemid": 64262,
+      "events": [
+        {
+          "source": "HISTORY",
+          "eventtype": "START",
+          "startdate": "07/03/2017",
+          "createddate": "07/03/2017"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-6231",
+      "code": "3723001"
+    },
+    {
+      "lastmodifieddatetime": "2018-05-16T11:17:52-04:00",
+      "name": "Headache",
+      "problemid": 65223,
+      "events": [
+        {
+          "status": "CHRONIC",
+          "eventtype": "START",
+          "startdate": "05/16/2018",
+          "createddate": "05/16/2018",
+          "createdby": "API-5879"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD10",
+              "name": "Heart disease, unspecified",
+              "code": "I51.9"
+            }
+          ],
+          "encounterdate": "11/05/2018"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5879",
+      "code": "25064002"
+    },
+    {
+      "lastmodifieddatetime": "2018-05-16T11:30:29-04:00",
+      "name": "Headache",
+      "problemid": 65224,
+      "events": [
+        {
+          "status": "CHRONIC",
+          "eventtype": "START",
+          "startdate": "05/16/2018",
+          "createddate": "05/16/2018",
+          "createdby": "API-5879"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD10",
+              "name": "Heart disease, unspecified",
+              "code": "I51.9"
+            }
+          ],
+          "encounterdate": "11/05/2018"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5879",
+      "code": "25064002"
+    },
+    {
+      "lastmodifieddatetime": "2018-05-16T11:53:09-04:00",
+      "name": "Sinus headache",
+      "bestmatchicd10code": "R51",
+      "problemid": 65226,
+      "events": [
+        {
+          "status": "ACUTE",
+          "eventtype": "START",
+          "startdate": "03/11/2018",
+          "note": "asfsdfsdfsdfsdfsf",
+          "createddate": "05/16/2018",
+          "onsetdate": "03/11/2018",
+          "createdby": "API-5879"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5879",
+      "code": "4969004"
+    },
+    {
+      "lastmodifieddatetime": "2016-11-08T10:54:10-05:00",
+      "deactivateddate": "11/08/2016",
+      "name": "Cough",
+      "problemid": 63658,
+      "events": [
+        {
+          "eventtype": "HIDDEN",
+          "enddate": "11/08/2016"
+        },
+        {
+          "source": "ENCOUNTER",
+          "eventtype": "START",
+          "startdate": "11/05/2016",
+          "createddate": "11/05/2016",
+          "createdby": "akopp1"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD10",
+              "name": "Cough",
+              "code": "R05"
+            }
+          ],
+          "encounterdate": "11/05/2016"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-4403",
+      "code": "49727002"
+    },
+    {
+      "lastmodifieddatetime": "2018-05-10T15:39:33-04:00",
+      "name": "Cough",
+      "problemid": 65195,
+      "events": [
+        {
+          "status": "CHRONIC",
+          "eventtype": "START",
+          "startdate": "01/01/2018",
+          "createddate": "05/10/2018",
+          "onsetdate": "01/01/2018",
+          "createdby": "API-5879"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD10",
+              "name": "Cough",
+              "code": "R05"
+            }
+          ],
+          "encounterdate": "11/05/2016"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5879",
+      "code": "49727002"
+    },
+    {
+      "lastmodifieddatetime": "2016-11-08T10:54:16-05:00",
+      "deactivateddate": "11/08/2016",
+      "name": "Hemorrhagic diarrhea",
+      "bestmatchicd10code": "R19.7",
+      "problemid": 5024,
+      "events": [
+        {
+          "eventtype": "HIDDEN",
+          "enddate": "11/08/2016"
+        },
+        {
+          "source": "HISTORY",
+          "eventtype": "START",
+          "startdate": "10/27/2015",
+          "createddate": "10/27/2015",
+          "onsetdate": "10/27/2015"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-4403",
+      "code": "95545007"
+    },
+    {
+      "lastmodifieddatetime": "2016-11-08T10:54:39-05:00",
+      "deactivateddate": "11/08/2016",
+      "name": "Hemorrhagic diarrhea",
+      "bestmatchicd10code": "R19.7",
+      "problemid": 5025,
+      "events": [
+        {
+          "eventtype": "HIDDEN",
+          "enddate": "11/08/2016"
+        },
+        {
+          "source": "HISTORY",
+          "eventtype": "START",
+          "startdate": "10/27/2015",
+          "createddate": "10/27/2015",
+          "onsetdate": "10/27/2015"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-4403",
+      "code": "95545007"
+    },
+    {
+      "deactivateduser": "mpupienis",
+      "lastmodifieddatetime": "2016-09-08T17:53:56-04:00",
+      "deactivateddate": "09/08/2016",
+      "name": "Liver function tests abnormal",
+      "bestmatchicd10code": "R94.5",
+      "problemid": 8,
+      "events": [
+        {
+          "eventtype": "HIDDEN",
+          "enddate": "09/08/2016"
+        },
+        {
+          "source": "ENCOUNTER",
+          "eventtype": "START",
+          "startdate": "08/21/2012",
+          "createddate": "08/21/2012",
+          "createdby": "krodden"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD9",
+              "name": "NONSPECIFIC ABNORMAL RESULTS OF FUNCTION STUDY OF LIVER",
+              "code": "794.8"
+            }
+          ],
+          "encounterdate": "12/20/2013"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD9",
+              "name": "NONSPECIFIC ABNORMAL RESULTS OF FUNCTION STUDY OF LIVER",
+              "code": "794.8"
+            }
+          ],
+          "encounterdate": "12/11/2014"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "mpupienis",
+      "code": "166603001"
+    },
+    {
+      "lastmodifieddatetime": "2016-11-08T10:54:45-05:00",
+      "deactivateddate": "11/08/2016",
+      "name": "Liver function tests abnormal",
+      "bestmatchicd10code": "R94.5",
+      "problemid": 4945,
+      "events": [
+        {
+          "eventtype": "HIDDEN",
+          "enddate": "11/08/2016"
+        },
+        {
+          "source": "HISTORY",
+          "eventtype": "START",
+          "startdate": "10/20/2015",
+          "laterality": "BILATERAL",
+          "note": "hello",
+          "createddate": "10/21/2015",
+          "onsetdate": "10/20/2015"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD9",
+              "name": "NONSPECIFIC ABNORMAL RESULTS OF FUNCTION STUDY OF LIVER",
+              "code": "794.8"
+            }
+          ],
+          "encounterdate": "12/20/2013"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD9",
+              "name": "NONSPECIFIC ABNORMAL RESULTS OF FUNCTION STUDY OF LIVER",
+              "code": "794.8"
+            }
+          ],
+          "encounterdate": "12/11/2014"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-4403",
+      "code": "166603001"
+    },
+    {
+      "lastmodifieddatetime": "2016-11-08T10:54:51-05:00",
+      "deactivateddate": "11/08/2016",
+      "name": "Liver function tests abnormal",
+      "bestmatchicd10code": "R94.5",
+      "problemid": 4946,
+      "events": [
+        {
+          "eventtype": "HIDDEN",
+          "enddate": "11/08/2016"
+        },
+        {
+          "source": "HISTORY",
+          "eventtype": "START",
+          "startdate": "10/20/2015",
+          "laterality": "BILATERAL",
+          "note": "hello",
+          "createddate": "10/21/2015",
+          "onsetdate": "10/20/2015"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD9",
+              "name": "NONSPECIFIC ABNORMAL RESULTS OF FUNCTION STUDY OF LIVER",
+              "code": "794.8"
+            }
+          ],
+          "encounterdate": "12/20/2013"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "diagnoses": [
+            {
+              "codeset": "ICD9",
+              "name": "NONSPECIFIC ABNORMAL RESULTS OF FUNCTION STUDY OF LIVER",
+              "code": "794.8"
+            }
+          ],
+          "encounterdate": "12/11/2014"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-4403",
+      "code": "166603001"
+    },
+    {
+      "lastmodifieddatetime": "2018-05-16T11:13:09-04:00",
+      "name": "Clinical finding",
+      "bestmatchicd10code": "L53.9",
+      "problemid": 65222,
+      "events": [
+        {
+          "status": "CHRONIC",
+          "eventtype": "START",
+          "startdate": "05/16/2018",
+          "createddate": "05/16/2018",
+          "createdby": "API-5879"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5879",
+      "code": "404684003"
+    },
+    {
+      "deactivateduser": "gwissler",
+      "lastmodifieddatetime": "2016-09-08T17:53:57-04:00",
+      "deactivateddate": "10/01/2014",
+      "name": "Chest injury",
+      "bestmatchicd10code": "S29.9XXA",
+      "problemid": 1581,
+      "events": [
+        {
+          "eventtype": "HIDDEN",
+          "enddate": "10/01/2014"
+        },
+        {
+          "source": "HISTORY",
+          "status": "ACUTE",
+          "eventtype": "START",
+          "startdate": "09/01/2014",
+          "laterality": "LEFT",
+          "createddate": "10/01/2014",
+          "onsetdate": "09/01/2014",
+          "createdby": "gwissler"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "mpupienis",
+      "code": "262525000"
+    },
+    {
+      "lastmodifieddatetime": "2018-05-11T13:36:44-04:00",
+      "name": "Problem",
+      "bestmatchicd10code": "I99.9",
+      "problemid": 65203,
+      "events": [
+        {
+          "status": "ACUTE",
+          "eventtype": "START",
+          "startdate": "05/11/2018",
+          "createddate": "05/11/2018",
+          "onsetdate": "05/11/2018",
+          "createdby": "API-5879"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5879",
+      "code": "55607006"
+    },
+    {
+      "lastmodifieddatetime": "2016-11-08T10:55:01-05:00",
+      "deactivateddate": "11/08/2016",
+      "name": "History of cardioversion",
+      "bestmatchicd10code": "Z92.89",
+      "problemid": 63586,
+      "events": [
+        {
+          "eventtype": "HIDDEN",
+          "enddate": "11/08/2016"
+        },
+        {
+          "source": "HISTORY",
+          "eventtype": "START",
+          "startdate": "10/25/2016",
+          "createddate": "10/25/2016"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-4403",
+      "code": "76661000119108"
+    },
+    {
+      "lastmodifieddatetime": "2018-11-08T03:44:19-05:00",
+      "name": "Housing problem",
+      "bestmatchicd10code": "Z59.1",
+      "problemid": 65509,
+      "events": [
+        {
+          "eventtype": "START",
+          "startdate": "11/08/2018",
+          "note": "partial",
+          "createddate": "11/08/2018",
+          "onsetdate": "11/08/2018",
+          "createdby": "API-9397"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-9397",
+      "code": "105531004"
+    },
+    {
+      "lastmodifieddatetime": "2018-11-08T03:45:59-05:00",
+      "name": "Housing problem",
+      "bestmatchicd10code": "Z59.1",
+      "problemid": 65510,
+      "events": [
+        {
+          "eventtype": "START",
+          "startdate": "11/08/2018",
+          "note": "partial",
+          "createddate": "11/08/2018",
+          "onsetdate": "11/08/2018",
+          "createdby": "API-9397"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-9397",
+      "code": "105531004"
+    },
+    {
+      "lastmodifieddatetime": "2018-11-08T05:08:36-05:00",
+      "name": "Housing problem",
+      "bestmatchicd10code": "Z59.1",
+      "problemid": 65511,
+      "events": [
+        {
+          "eventtype": "START",
+          "startdate": "11/08/2018",
+          "note": "partial",
+          "createddate": "11/08/2018",
+          "onsetdate": "11/08/2018",
+          "createdby": "API-9397"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-9397",
+      "code": "105531004"
+    },
+    {
+      "lastmodifieddatetime": "2016-11-08T10:55:09-05:00",
+      "deactivateddate": "11/08/2016",
+      "name": "Pregnancy",
+      "problemid": 7536,
+      "events": [
+        {
+          "eventtype": "HIDDEN",
+          "enddate": "11/08/2016"
+        },
+        {
+          "source": "HISTORY",
+          "eventtype": "START",
+          "startdate": "06/02/2016",
+          "createddate": "06/02/2016",
+          "onsetdate": "06/02/2016"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-4403",
+      "code": "289908002"
+    },
+    {
+      "lastmodifieddatetime": "2017-04-12T14:40:56-04:00",
+      "deactivateddate": "04/12/2017",
+      "name": "Local",
+      "problemid": 63984,
+      "events": [
+        {
+          "eventtype": "HIDDEN",
+          "enddate": "04/12/2017"
+        },
+        {
+          "source": "HISTORY",
+          "status": "CHRONIC",
+          "eventtype": "START",
+          "startdate": "01/01/2017",
+          "note": "Test Problem Note",
+          "createddate": "04/12/2017",
+          "onsetdate": "01/01/2017"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-2072",
+      "code": "255470001"
+    },
+    {
+      "lastmodifieddatetime": "2017-06-16T15:48:52-04:00",
+      "name": "Serum cholesterol very high",
+      "bestmatchicd10code": "E78.00",
+      "problemid": 64236,
+      "events": [
+        {
+          "source": "HISTORY",
+          "eventtype": "START",
+          "startdate": "06/16/2017",
+          "createddate": "06/16/2017"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5532",
+      "code": "166831007"
+    },
+    {
+      "lastmodifieddatetime": "2017-10-22T16:32:52-04:00",
+      "name": "Hysterectomy",
+      "problemid": 64577,
+      "events": [
+        {
+          "source": "HISTORY",
+          "eventtype": "START",
+          "startdate": "10/22/2017",
+          "createddate": "10/22/2017"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "11/01/2017"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5386",
+      "code": "236886002"
+    },
+    {
+      "lastmodifieddatetime": "2017-11-10T13:26:26-05:00",
+      "name": "Urine specimen",
+      "problemid": 64662,
+      "events": [
+        {
+          "source": "HISTORY",
+          "status": "CHRONIC",
+          "eventtype": "START",
+          "startdate": "08/22/2017",
+          "laterality": "LEFT",
+          "note": "blah blah note note",
+          "createddate": "11/10/2017",
+          "onsetdate": "08/22/2017"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-6333",
+      "code": "122575003"
+    },
+    {
+      "lastmodifieddatetime": "2018-02-12T02:05:22-05:00",
+      "name": "Escherichia coli",
+      "problemid": 64852,
+      "events": [
+        {
+          "source": "HISTORY",
+          "eventtype": "START",
+          "startdate": "12/12/2017",
+          "createddate": "02/12/2018",
+          "onsetdate": "12/12/2017"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-8034",
+      "code": "112283007"
+    },
+    {
+      "lastmodifieddatetime": "2018-02-12T02:07:59-05:00",
+      "name": "Escherichia coli",
+      "problemid": 64853,
+      "events": [
+        {
+          "source": "HISTORY",
+          "eventtype": "START",
+          "startdate": "12/12/2017",
+          "createddate": "02/12/2018",
+          "onsetdate": "12/12/2017"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-8034",
+      "code": "112283007"
+    },
+    {
+      "lastmodifieddatetime": "2018-05-04T19:04:58-04:00",
+      "name": "Amputation stump",
+      "problemid": 65093,
+      "events": [
+        {
+          "eventtype": "START",
+          "startdate": "05/04/2018",
+          "createddate": "05/04/2018",
+          "createdby": "API-5879"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5879",
+      "code": "38033009"
+    },
+    {
+      "lastmodifieddatetime": "2018-05-04T19:40:03-04:00",
+      "name": "Injection site",
+      "problemid": 65094,
+      "events": [
+        {
+          "status": "ACUTE",
+          "eventtype": "START",
+          "startdate": "05/04/2018",
+          "createddate": "05/04/2018",
+          "createdby": "API-5879"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5879",
+      "code": "13136005"
+    },
+    {
+      "lastmodifieddatetime": "2018-05-04T19:46:12-04:00",
+      "name": "Scar",
+      "problemid": 65095,
+      "events": [
+        {
+          "status": "ACUTE",
+          "eventtype": "START",
+          "startdate": "12/12/2017",
+          "createddate": "05/04/2018",
+          "onsetdate": "12/12/2017",
+          "createdby": "API-5879"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5879",
+      "code": "12402003"
+    },
+    {
+      "lastmodifieddatetime": "2018-05-04T19:57:14-04:00",
+      "name": "Trigger point",
+      "problemid": 65096,
+      "events": [
+        {
+          "status": "CHRONIC",
+          "eventtype": "START",
+          "startdate": "05/04/2018",
+          "createddate": "05/04/2018",
+          "createdby": "API-5879"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5879",
+      "code": "134190002"
+    },
+    {
+      "lastmodifieddatetime": "2018-05-04T19:59:41-04:00",
+      "name": "Tripier flap",
+      "problemid": 65097,
+      "events": [
+        {
+          "status": "CHRONIC",
+          "eventtype": "START",
+          "startdate": "05/04/2018",
+          "createddate": "05/04/2018",
+          "createdby": "API-5879"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5879",
+      "code": "256736009"
+    },
+    {
+      "lastmodifieddatetime": "2018-05-04T20:10:50-04:00",
+      "name": "Anatomical structure",
+      "problemid": 65098,
+      "events": [
+        {
+          "status": "ACUTE",
+          "eventtype": "START",
+          "startdate": "08/10/1969",
+          "createddate": "05/04/2018",
+          "onsetdate": "08/10/1969",
+          "createdby": "API-5879"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5879",
+      "code": "91723000"
+    },
+    {
+      "lastmodifieddatetime": "2018-05-04T20:15:29-04:00",
+      "name": "Operative site",
+      "problemid": 65099,
+      "events": [
+        {
+          "status": "ACUTE",
+          "eventtype": "START",
+          "startdate": "01/01/1975",
+          "createddate": "05/04/2018",
+          "onsetdate": "01/01/1975",
+          "createdby": "API-5879"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5879",
+      "code": "43526002"
+    },
+    {
+      "lastmodifieddatetime": "2018-05-11T13:47:15-04:00",
+      "name": "% inhib",
+      "problemid": 65204,
+      "events": [
+        {
+          "status": "CHRONIC",
+          "eventtype": "START",
+          "startdate": "05/11/2018",
+          "createddate": "05/11/2018",
+          "onsetdate": "05/11/2018",
+          "createdby": "API-5879"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5879",
+      "code": "419495008"
+    },
+    {
+      "lastmodifieddatetime": "2018-05-11T13:48:37-04:00",
+      "name": "\"Linked to\" reference set attribute",
+      "problemid": 65205,
+      "events": [
+        {
+          "status": "CHRONIC",
+          "eventtype": "START",
+          "startdate": "12/31/1998",
+          "createddate": "05/11/2018",
+          "onsetdate": "12/31/1998",
+          "createdby": "API-5879"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5879",
+      "code": "447257003"
+    },
+    {
+      "lastmodifieddatetime": "2018-05-11T13:57:51-04:00",
+      "name": "% negative control",
+      "problemid": 65206,
+      "events": [
+        {
+          "status": "ACUTE",
+          "eventtype": "START",
+          "startdate": "11/01/2018",
+          "createddate": "05/11/2018",
+          "onsetdate": "11/01/2018",
+          "createdby": "API-5879"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5879",
+      "code": "420067008"
+    },
+    {
+      "lastmodifieddatetime": "2018-05-11T13:59:02-04:00",
+      "name": "% normal forms",
+      "problemid": 65207,
+      "events": [
+        {
+          "status": "ACUTE",
+          "eventtype": "START",
+          "startdate": "01/01/2018",
+          "createddate": "05/11/2018",
+          "onsetdate": "01/01/2018",
+          "createdby": "API-5879"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5879",
+      "code": "258749005"
+    },
+    {
+      "lastmodifieddatetime": "2018-05-11T14:11:40-04:00",
+      "name": "% abnormal forms",
+      "problemid": 65210,
+      "events": [
+        {
+          "status": "CHRONIC",
+          "eventtype": "START",
+          "startdate": "11/01/2018",
+          "createddate": "05/11/2018",
+          "onsetdate": "11/01/2018",
+          "createdby": "API-5879"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5879",
+      "code": "258750005"
+    },
+    {
+      "lastmodifieddatetime": "2018-05-11T14:26:39-04:00",
+      "name": "% of total protein",
+      "problemid": 65214,
+      "events": [
+        {
+          "status": "ACUTE",
+          "eventtype": "START",
+          "startdate": "05/11/2018",
+          "createddate": "05/11/2018",
+          "onsetdate": "05/11/2018",
+          "createdby": "API-5879"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5879",
+      "code": "258757008"
+    },
+    {
+      "lastmodifieddatetime": "2018-05-11T14:48:16-04:00",
+      "name": "(-)-borneol dehydrogenase",
+      "problemid": 65215,
+      "events": [
+        {
+          "status": "ACUTE",
+          "eventtype": "START",
+          "startdate": "05/11/2018",
+          "createddate": "05/11/2018",
+          "createdby": "API-5879"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5879",
+      "code": "129945000"
+    },
+    {
+      "lastmodifieddatetime": "2018-05-11T14:57:28-04:00",
+      "name": "(-)-limonene 3-monooxygenase",
+      "problemid": 65216,
+      "events": [
+        {
+          "status": "ACUTE",
+          "eventtype": "START",
+          "startdate": "05/08/2018",
+          "createddate": "05/11/2018",
+          "onsetdate": "05/08/2018",
+          "createdby": "API-5879"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5879",
+      "code": "130170003"
+    },
+    {
+      "lastmodifieddatetime": "2018-05-16T11:40:06-04:00",
+      "name": "Headache stick",
+      "problemid": 65225,
+      "events": [
+        {
+          "status": "CHRONIC",
+          "eventtype": "START",
+          "startdate": "05/11/2018",
+          "createddate": "05/16/2018",
+          "onsetdate": "05/11/2018",
+          "createdby": "API-5879"
+        },
+        {
+          "eventtype": "ENCOUNTER",
+          "encounterdate": "10/14/2019"
+        }
+      ],
+      "codeset": "SNOMED",
+      "lastmodifiedby": "API-5879",
+      "code": "462677001"
+    }
+  ]
+}

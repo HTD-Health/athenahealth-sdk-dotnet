@@ -20,5 +20,7 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         Task AddPreferredPharmacy(int patientId, SetPharmacyRequest setPharmacyRequest);
 
         Task<PatientResponse> GetPatients(GetPatientsFilter queryParameters);
+
+        Task<ProblemResponse> GetPatientProblems(int patientId, GetPatientProblemsFilter queryParameters);
     }
 }

@@ -115,7 +115,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// (mm/dd/yyyy h24:mi)
         /// </summary>
         [JsonProperty("firstappointment")]
-        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy HH:mm")]
+        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy HH:mm")]
         public DateTime? FirstAppointment { get; set; }
 
         /// <summary>
@@ -280,7 +280,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// Date the patient was registered.
         /// </summary>
         [JsonProperty("registrationdate")]
-        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
         public DateTime? RegistrationDate { get; set; }
 
         /// <summary>
@@ -409,7 +409,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// Patient's DOB (mm/dd/yyyy)
         /// </summary>
         [JsonProperty("dob")]
-        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
         public DateTime? DateOfBirth { get; set; }
 
         /// <summary>
@@ -578,7 +578,6 @@ namespace AthenaHealth.Sdk.Models.Response
         /// Patient's sex (M/F)
         /// </summary>
         [JsonProperty("sex")]
-        [JsonConverter(typeof(EnumConverter))]
         public SexEnum? Sex { get; set; }
 
         /// <summary>
@@ -733,7 +732,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// Guarantor's DOB (mm/dd/yyyy)
         /// </summary>
         [JsonProperty("guarantordob")]
-        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
         public DateTime? GuarantorDateOfBirth { get; set; }
 
         /// <summary>
@@ -1056,14 +1055,14 @@ namespace AthenaHealth.Sdk.Models.Response
             /// The date the patient registered for the portal.
             /// </summary>
             [JsonProperty("portalregistrationdate")]
-            [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+            [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
             public DateTime? PortalRegistrationDate { get; set; }
 
             /// <summary>
             /// The last login date.
             /// </summary>
             [JsonProperty("lastlogindate")]
-            [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+            [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
             public DateTime? LastLoginDate { get; set; }
 
             /// <summary>
@@ -1139,7 +1138,7 @@ namespace AthenaHealth.Sdk.Models.Response
             public string InsuredCity { get; set; }
 
             [JsonProperty("insureddob")]
-            [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+            [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
             public DateTime? InsuredDateOfBirth { get; set; }
 
             [JsonProperty("insuredaddress")]
@@ -1149,7 +1148,6 @@ namespace AthenaHealth.Sdk.Models.Response
             public string InsuredZip { get; set; }
 
             [JsonProperty("insuredsex")]
-            [JsonConverter(typeof(EnumConverter))]
             public SexEnum? InsuredSex { get; set; }
 
             [JsonProperty("insuredstate")]
@@ -1208,7 +1206,7 @@ namespace AthenaHealth.Sdk.Models.Response
             /// Date the insurance expires.
             /// </summary>
             [JsonProperty("expirationdate")]
-            [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+            [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
             public DateTime? ExpirationDate { get; set; }
 
             /// <summary>
@@ -1227,7 +1225,6 @@ namespace AthenaHealth.Sdk.Models.Response
             /// The sex of the insurance policy holder. Except for self-pay, required for new policies.
             /// </summary>
             [JsonProperty("insurancepolicyholdersex")]
-            [JsonConverter(typeof(EnumConverter))]
             public SexEnum? InsurancePolicyHolderSex { get; set; }
 
             /// <summary>
@@ -1317,7 +1314,7 @@ namespace AthenaHealth.Sdk.Models.Response
             /// The DOB of the insurance policy holder (mm/dd/yyyy).
             /// </summary>
             [JsonProperty("insurancepolicyholderdob")]
-            [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+            [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
             public DateTime? InsurancePolicyHolderDateOfBirth { get; set; }
 
             /// <summary>
@@ -1737,7 +1734,7 @@ namespace AthenaHealth.Sdk.Models.Response
                 /// The date the service was rendered.
                 /// </summary>
                 [JsonProperty("servicedate")]
-                [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+                [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
                 public DateTime? ServiceDate { get; set; }
 
                 /// <summary>
@@ -1812,7 +1809,7 @@ namespace AthenaHealth.Sdk.Models.Response
                     /// Date of service for the charge.
                     /// </summary>
                     [JsonProperty("servicedate")]
-                    [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+                    [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
                     public DateTime? ServiceDate { get; set; }
 
                     /// <summary>
@@ -1827,7 +1824,7 @@ namespace AthenaHealth.Sdk.Models.Response
                         /// The date of the transaction.
                         /// </summary>
                         [JsonProperty("date")]
-                        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+                        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
                         public DateTime? Date { get; set; }
 
                         /// <summary>
