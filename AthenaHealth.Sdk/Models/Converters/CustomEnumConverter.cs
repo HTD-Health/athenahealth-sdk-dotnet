@@ -5,28 +5,28 @@ using System;
 
 namespace AthenaHealth.Sdk.Models.Converters
 {
-    public class EnumConverter : StringEnumConverter
+    public class CustomEnumConverter : StringEnumConverter
     {
-        public EnumConverter()
+        public CustomEnumConverter()
         {
         }
 
-        public EnumConverter(Type namingStrategyType)
+        public CustomEnumConverter(Type namingStrategyType)
             : base(namingStrategyType)
         {
         }
 
-        public EnumConverter(NamingStrategy namingStrategy, bool allowIntegerValues = true)
+        public CustomEnumConverter(NamingStrategy namingStrategy, bool allowIntegerValues = true)
             : base(namingStrategy, allowIntegerValues)
         {
         }
 
-        public EnumConverter(Type namingStrategyType, object[] namingStrategyParameters)
+        public CustomEnumConverter(Type namingStrategyType, object[] namingStrategyParameters)
             : base(namingStrategyType, namingStrategyParameters)
         {
         }
 
-        public EnumConverter(Type namingStrategyType, object[] namingStrategyParameters, bool allowIntegerValues)
+        public CustomEnumConverter(Type namingStrategyType, object[] namingStrategyParameters, bool allowIntegerValues)
             : base(namingStrategyType, namingStrategyParameters, allowIntegerValues)
         {
         }
@@ -39,6 +39,11 @@ namespace AthenaHealth.Sdk.Models.Converters
             }
             catch (JsonSerializationException)
             {
+                // Important: At the moment we rethrow catched exception, but code below allows to
+                //            handle default value of enum if the deserialized value does not match
+                //            to anything.
+                throw;
+
                 // We have to produce default value (API can return values which does not match enum values)
                 if (objectType.IsValueType)
                 {

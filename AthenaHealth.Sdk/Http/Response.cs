@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using AthenaHealth.Sdk.Models.Converters;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,8 @@ namespace AthenaHealth.Sdk.Http
 {
     public class Response
     {
+        private static readonly CustomEnumConverter EnumConverter = new CustomEnumConverter();
+
         public Response() : this(new Dictionary<string, string>())
         {
         }
@@ -61,7 +64,7 @@ namespace AthenaHealth.Sdk.Http
         /// <returns>Object of specified type</returns>
         public T GetObjectContent<T>()
         {
-            return Body == null ? default : JsonConvert.DeserializeObject<T>(Body.ToString(), new JsonSerializerSettings()
+            JsonSerializerSettings settings = new JsonSerializerSettings()
             {
                 MissingMemberHandling = MissingMemberHandling.Error,
                 TraceWriter = new MemoryTraceWriter(),
@@ -69,8 +72,14 @@ namespace AthenaHealth.Sdk.Http
                 {
                     Debug.WriteLine($"ERROR: {args.ErrorContext.Error.Message}");
                     args.ErrorContext.Handled = false;
+                },
+                Converters = new List<JsonConverter>()
+                {
+                    EnumConverter
                 }
-            });
+            };
+
+            return Body == null ? default : JsonConvert.DeserializeObject<T>(Body.ToString(), settings);
         }
     }
 }
