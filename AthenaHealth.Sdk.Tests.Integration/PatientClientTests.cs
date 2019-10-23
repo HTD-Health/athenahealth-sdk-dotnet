@@ -43,6 +43,47 @@ namespace AthenaHealth.Sdk.Tests.Integration
         }
 
         [Fact]
+        public async Task GetLabResults_ValidData_ReturnsLabResultCollection()
+        {
+            // Arrange
+            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetLabResults.json"));
+            var queryParameters = new GetLabResultsFilter()
+            {
+                DepartmentId = 1,
+                ShowAbnormalDetails = true,
+                ShowHidden = true,
+                ShowTemplate = true
+            };
+
+            // Act
+            var result = await patientClient.GetLabResults(1, queryParameters);
+
+            // Assert
+            result.ShouldNotBeNull();
+            result.Items.Count().ShouldBeGreaterThan(0);
+        }
+
+        [Fact]
+        public void GetLabResults_PatientInDifferentDepartment_ThrowsException()
+        {
+            // Arrange
+            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"error\":\"The Patient ID or Department ID is invalid.\"}", HttpStatusCode.NotFound));
+            var queryParameters = new GetLabResultsFilter()
+            {
+                DepartmentId = 2,
+                ShowAbnormalDetails = true,
+                ShowHidden = true,
+                ShowTemplate = true
+            };
+
+            // Act
+            ApiException exception = Should.Throw<ApiException>(async () => await patientClient.GetLabResults(1, queryParameters));
+
+            // Assert
+            exception.StatusCode.ShouldBe(HttpStatusCode.NotFound);
+        }
+
+        [Fact]
         public async Task GetPatientProblems_ValidData_ReturnsProblemsCollection()
         {
             // Arrange

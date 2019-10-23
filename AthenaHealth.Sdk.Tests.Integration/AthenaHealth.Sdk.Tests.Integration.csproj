@@ -76,6 +76,9 @@
     <None Update="Data\Patient\GetPatientProblems.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Data\Patient\GetLabResults.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Data\Patient\GetPatients.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
