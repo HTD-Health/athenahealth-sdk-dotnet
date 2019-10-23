@@ -1,0 +1,109 @@
+[
+  {
+    "diagnosisid": 14453,
+    "icdcodes": [
+      {
+        "codeset": "ICD9",
+        "diagnosiscode": "28989",
+        "description": "Other specified diseases of blood and blood-forming organs",
+        "code": "289.89"
+      }
+    ],
+    "snomedcode": 52967002,
+    "supportslaterality": false,
+    "description": "myelofibrosis"
+  },
+  {
+    "diagnosisid": 14454,
+    "icdcodes": [],
+    "snomedcode": 363698007,
+    "supportslaterality": false,
+    "description": "finding site"
+  },
+  {
+    "diagnosisid": 14452,
+    "icdcodes": [
+      {
+        "codeset": "ICD9",
+        "diagnosiscode": "1970",
+        "description": "Secondary malignant neoplasm of lung",
+        "code": "197.0"
+      }
+    ],
+    "snomedcode": 94524008,
+    "supportslaterality": false,
+    "description": "secondary malignant neoplasm of right upper lobe of lung"
+  },
+  {
+    "diagnosisid": 14807,
+    "ranking": 1,
+    "icdcodes": [
+      {
+        "codeset": "ICD9",
+        "diagnosiscode": "4280",
+        "description": "Congestive heart failure, unspecified",
+        "code": "428.0"
+      }
+    ],
+    "snomedcode": 42343007,
+    "description": "congestive heart failure",
+    "supportslaterality": false
+  },
+  {
+    "diagnosisid": 14923,
+    "ranking": 2,
+    "icdcodes": [],
+    "snomedcode": 19030005,
+    "description": "human immunodeficiency virus",
+    "supportslaterality": false
+  },
+  {
+    "diagnosisid": 14933,
+    "ranking": 3,
+    "icdcodes": [
+      {
+        "codeset": "ICD9",
+        "diagnosiscode": "V7651",
+        "description": "Special screening for malignant neoplasms of colon",
+        "code": "V76.51"
+      }
+    ],
+    "snomedcode": 275978004,
+    "description": "screening for malignant neoplasm of colon",
+    "supportslaterality": false
+  },
+  {
+    "diagnosisid": 15043,
+    "ranking": 4,
+    "icdcodes": [],
+    "snomedcode": 396550006,
+    "description": "blood test",
+    "supportslaterality": false
+  },
+  {
+    "diagnosisid": 15065,
+    "ranking": 5,
+    "icdcodes": [],
+    "snomedcode": 6007000,
+    "description": "MRI of chest",
+    "supportslaterality": false
+  },
+  {
+    "diagnosisid": 15081,
+    "ranking": 6,
+    "icdcodes": [],
+    "snomedcode": 106229004,
+    "description": "qualifier for type of diagnosis",
+    "laterality": "BILATERAL",
+    "supportslaterality": false
+  },
+  {
+    "diagnosisid": 15082,
+    "ranking": 7,
+    "icdcodes": [],
+    "snomedcode": 362981000,
+    "description": "qualifier value",
+    "laterality": "BILATERAL",
+    "supportslaterality": false
+  }
+]

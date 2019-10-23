@@ -11,6 +11,7 @@ namespace AthenaHealth.Sdk
         IProviderClient Providers { get; }
         IAppointmentClient Appointments { get; }
         IInsurancePackageClient InsurancePackage { get; }
+        IEncounterClient Encounter { get; }
 
         int PracticeId { get; set; }
     }

@@ -66,7 +66,7 @@ namespace AthenaHealth.Sdk.Http
 
             Response response = await SendData(AddVersion(relativeUrl), queryParameters, HttpMethod.Get);
 
-            T output = response.GetObjectContent<T>();
+            T output = response.GetObjectContent<T>(true);
             return output;
         }
 
@@ -82,7 +82,7 @@ namespace AthenaHealth.Sdk.Http
         {
             await RefreshAccessToken();
 
-            Response response = await SendData(AddVersion(relativeUrl), queryParameters, HttpMethod.Post, ContentConverter.ToJson(body));
+            Response response = await SendData(AddVersion(relativeUrl), queryParameters, HttpMethod.Post, ContentConverter.ToUrlEncoded(body));
 
             return response.GetObjectContent<T>();
         }

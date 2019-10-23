@@ -6,7 +6,6 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
 {
     public interface IInsurancePackageClient
     {
-
         /// <summary>
         /// The top athenaNet insurance packages (over .5% utilized, up to 100 packages total) used by the practice.
         /// </summary>

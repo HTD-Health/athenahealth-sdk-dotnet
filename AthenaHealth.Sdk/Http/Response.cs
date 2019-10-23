@@ -60,9 +60,9 @@ namespace AthenaHealth.Sdk.Http
         /// Deserializes response content to object of specified type.
         /// </summary>
         /// <typeparam name="T">Object type</typeparam>
-        /// <param name="httpResponseMessage">Http response</param>
+        /// <param name="shouldThrowErrors">True: Throws exception if invalid response object.</param>
         /// <returns>Object of specified type</returns>
-        public T GetObjectContent<T>()
+        public T GetObjectContent<T>(bool shouldThrowErrors = false)
         {
             JsonSerializerSettings settings = new JsonSerializerSettings()
             {
@@ -71,7 +71,7 @@ namespace AthenaHealth.Sdk.Http
                 Error = (object sender, ErrorEventArgs args) =>
                 {
                     Debug.WriteLine($"ERROR: {args.ErrorContext.Error.Message}");
-                    args.ErrorContext.Handled = false;
+                    args.ErrorContext.Handled = !shouldThrowErrors;
                 },
                 Converters = new List<JsonConverter>()
                 {
