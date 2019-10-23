@@ -11,5 +11,7 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         Task<AppointmentType> GetAppointmentType(int appointmentTypeId);
 
         Task<AppointmentResponse> GetBookedAppointments(GetBookedAppointmentsFilter filter);
+
+        Task<Appointment> GetAppointmentById(int id, GetAppointmentFilter filter = null);
     }
 }

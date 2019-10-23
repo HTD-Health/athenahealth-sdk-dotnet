@@ -106,5 +106,30 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             response.Items.ShouldContain(a => a.DepartmentId == 1);
             response.Items.ShouldContain(a => a.DepartmentId == 21);
         }
+
+        [Fact]
+        public async Task GetAppointmentById_ValidId_ReturnsAppointment()
+        {
+            GetAppointmentFilter filter = new GetAppointmentFilter
+            {
+                ShowClaimDetail = true,
+                ShowExpectedProcedureCodes = true,
+                ShowCopay = true,
+                ShowPatientDetail = true,
+                ShowInsurance = true,
+            };
+
+            Appointment appointment = await _client.Appointments.GetAppointmentById(997681, filter);
+
+            appointment.ShouldNotBeNull();
+            appointment.DepartmentId.ShouldNotBeNull();
+        }
+
+        [Fact]
+        public async Task GetAppointmentById_InvalidId_ThrowsException()
+        {
+            await Should.ThrowAsync<ApiException>(async ()=> await _client.Appointments.GetAppointmentById(0));
+        }
+
     }
 }
