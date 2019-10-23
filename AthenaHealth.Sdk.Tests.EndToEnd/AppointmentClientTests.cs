@@ -80,7 +80,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
 
             response.Items.ShouldNotBeNull();
             response.Items.ShouldContain(a => a.DepartmentId.HasValue);
-            response.Items.First().Date.ShouldNotBeNull();
+            response.Items.ShouldContain(a=>a.Date != null);
             response.Items.First().AppointmentStatus.ShouldNotBeNull();
         }
 
