@@ -1,0 +1,97 @@
+[
+  {
+    "encountertype": "ORDERSONLY",
+    "stage": "INTAKE",
+    "status": "TEMP",
+    "departmentid": 1,
+    "diagnoses": [
+      {
+        "diagnosisid": 14453,
+        "icdcodes": [
+          {
+            "codeset": "ICD9",
+            "description": "OTHER SPECIFIED DISEASES OF BLOOD AND BLOOD-FORMING ORGANS",
+            "code": "289.89"
+          }
+        ],
+        "snomedcode": 52967002,
+        "description": "Myelofibrosis"
+      },
+      {
+        "diagnosisid": 14454,
+        "icdcodes": [],
+        "snomedcode": 363698007,
+        "description": "Finding site"
+      },
+      {
+        "diagnosisid": 14452,
+        "icdcodes": [
+          {
+            "codeset": "ICD9",
+            "description": "SECONDARY MALIGNANT NEOPLASM OF LUNG",
+            "code": "197.0"
+          }
+        ],
+        "snomedcode": 94524008,
+        "description": "Secondary malignant neoplasm of right upper lobe of lung"
+      },
+      {
+        "diagnosisid": 14807,
+        "icdcodes": [
+          {
+            "codeset": "ICD9",
+            "description": "CONGESTIVE HEART FAILURE, UNSPECIFIED",
+            "code": "428.0"
+          }
+        ],
+        "snomedcode": 42343007,
+        "description": "Congestive heart failure"
+      },
+      {
+        "diagnosisid": 14923,
+        "icdcodes": [],
+        "snomedcode": 19030005,
+        "description": "Human immunodeficiency virus"
+      },
+      {
+        "diagnosisid": 14933,
+        "icdcodes": [
+          {
+            "codeset": "ICD9",
+            "description": "SPECIAL SCREENING FOR MALIGNANT NEOPLASMS OF COLON",
+            "code": "V76.51"
+          }
+        ],
+        "snomedcode": 275978004,
+        "description": "Screening for malignant neoplasm of colon"
+      },
+      {
+        "diagnosisid": 15043,
+        "icdcodes": [],
+        "snomedcode": 396550006,
+        "description": "Blood test"
+      },
+      {
+        "diagnosisid": 15065,
+        "icdcodes": [],
+        "snomedcode": 6007000,
+        "description": "MRI of chest"
+      },
+      {
+        "diagnosisid": 15081,
+        "icdcodes": [],
+        "snomedcode": 106229004,
+        "description": "Qualifier for type of diagnosis"
+      },
+      {
+        "diagnosisid": 15082,
+        "icdcodes": [],
+        "snomedcode": 362981000,
+        "description": "Qualifier value"
+      }
+    ],
+    "encounterdate": "04/02/2009",
+    "encounterid": 1,
+    "lastupdated": "11/17/2011"
+  }
+]
