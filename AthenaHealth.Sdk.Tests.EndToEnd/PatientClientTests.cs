@@ -9,6 +9,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AthenaHealth.Sdk.Tests.EndToEnd.Data.Patient;
 using Xunit;
+using System.Diagnostics;
 
 // ReSharper disable StringLiteralTypo
 namespace AthenaHealth.Sdk.Tests.EndToEnd
@@ -29,6 +30,25 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             // Act
             // Assert
             Should.Throw<ApiValidationException>(async () => await _client.Patients.GetDefaultPharmacy(300, 2));
+        }
+
+        [Theory]
+        [ClassData(typeof(GetLabResultsData))]
+        public async Task GetLabResults_ResultsExists_ShouldNotThrowJsonSerializationException(int patientId)
+        {
+            // Arrange
+            // Act
+            var result = await _client.Patients.GetLabResults(patientId, new GetLabResultsFilter()
+            {
+                DepartmentId = 1,
+                ShowAbnormalDetails = true,
+                ShowHidden = true,
+                ShowTemplate = true
+            });
+
+            // Assert
+            result.ShouldNotBeNull();
+            result.Items.Length.ShouldBeGreaterThan(0);
         }
 
         [Theory]

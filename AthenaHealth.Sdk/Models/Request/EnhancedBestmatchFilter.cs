@@ -11,8 +11,8 @@ namespace AthenaHealth.Sdk.Models.Request
         /// Patient's DOB (mm/dd/yyyy).
         /// </summary>
         [Required]
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
         [JsonProperty("dob")]
+        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
         public DateTime DateOfBirth { get; set; }
 
         /// <summary>
