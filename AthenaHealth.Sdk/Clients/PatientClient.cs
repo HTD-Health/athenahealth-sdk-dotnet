@@ -1,11 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using AthenaHealth.Sdk.Clients.Interfaces;
+﻿using AthenaHealth.Sdk.Clients.Interfaces;
 using AthenaHealth.Sdk.Http;
 using AthenaHealth.Sdk.Models.Request;
-using System.Linq;
 using AthenaHealth.Sdk.Models.Response;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace AthenaHealth.Sdk.Clients
 {
@@ -17,10 +17,10 @@ namespace AthenaHealth.Sdk.Clients
         {
             _connection = connection;
         }
-        
-        public async Task<Patient> GetPatientById(int patientId, GetPatientByIdFilter getPatientByIdFilter = null)
+
+        public async Task<Patient> GetPatientById(int patientId, GetPatientByIdFilter queryParameters = null)
         {
-            var result = await _connection.Get<IEnumerable<Patient>>($"{_connection.PracticeId}/patients/{patientId}", getPatientByIdFilter);
+            var result = await _connection.Get<IEnumerable<Patient>>($"{_connection.PracticeId}/patients/{patientId}", queryParameters);
 
             if (result.Count() == 1)
             {
@@ -30,35 +30,34 @@ namespace AthenaHealth.Sdk.Clients
             throw new Exception("Number of Patients not equals 1.");
         }
 
-
         public async Task<IEnumerable<PatientWithScore>> EnhancedBestmatch(EnhancedBestmatchFilter queryParameters)
         {
             return await _connection.Get< IEnumerable<PatientWithScore>>($"{_connection.PracticeId}/patients/enhancedbestmatch", queryParameters);
         }
 
-
         public async Task<Pharmacy> GetDefaultPharmacy(int patientId, int departmentId)
         {
-            return await _connection.Get<Pharmacy>($"{_connection.PracticeId}/chart/{patientId}/pharmacies/default", new{DepartmentId = departmentId});
-            
+            var queryParameters = new
+            {
+                departmentid = departmentId
+            };
+
+            return await _connection.Get<Pharmacy>($"{_connection.PracticeId}/chart/{patientId}/pharmacies/default", queryParameters);
         }
 
-        public async Task<PharmacyResponse> GetPreferredPharmacies(int patientId, GetPreferredPharmacyFilter getPreferredPharmacyFilter)
+        public async Task<PharmacyResponse> GetPreferredPharmacies(int patientId, GetPreferredPharmacyFilter queryParameters)
         {
-            return await _connection.Get<PharmacyResponse>($"{_connection.PracticeId}/chart/{patientId}/pharmacies/preferred", getPreferredPharmacyFilter);
-            
+            return await _connection.Get<PharmacyResponse>($"{_connection.PracticeId}/chart/{patientId}/pharmacies/preferred", queryParameters);
         }
 
-        public async Task SetDefaultPharmacy(int patientId, SetPharmacyRequest setPharmacyRequest)
+        public async Task SetDefaultPharmacy(int patientId, SetPharmacyRequest request)
         {
-            await _connection.Put($"{_connection.PracticeId}/chart/{patientId}/pharmacies/default", setPharmacyRequest);
-            
+            await _connection.Put($"{_connection.PracticeId}/chart/{patientId}/pharmacies/default", request);
         }
 
-        public async Task AddPreferredPharmacy(int patientId, SetPharmacyRequest setPharmacyRequest)
+        public async Task AddPreferredPharmacy(int patientId, SetPharmacyRequest request)
         {
-            await _connection.Put($"{_connection.PracticeId}/chart/{patientId}/pharmacies/preferred", setPharmacyRequest);
-            
+            await _connection.Put($"{_connection.PracticeId}/chart/{patientId}/pharmacies/preferred", request);
         }
 
         public async Task<PatientResponse> GetPatients(GetPatientsFilter queryParameters)
@@ -74,6 +73,16 @@ namespace AthenaHealth.Sdk.Clients
         public async Task<LabResultResponse> GetLabResults(int patientId, GetLabResultsFilter queryParameters)
         {
             return await _connection.Get<LabResultResponse>($"{_connection.PracticeId}/chart/{patientId}/labresults", queryParameters);
+        }
+
+        public async Task<MedicalHistory> GetMedicalHistory(int patientId, int departmentId)
+        {
+            var queryParameters = new
+            {
+                departmentid = departmentId
+            };
+
+            return await _connection.Get<MedicalHistory>($"{_connection.PracticeId}/chart/{patientId}/medicalhistory", queryParameters);
         }
     }
 }
