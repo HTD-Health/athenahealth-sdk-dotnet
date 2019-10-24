@@ -12,6 +12,18 @@ namespace AthenaHealth.Sdk.Tests.Integration
     public class DictionaryClientTests
     {
         [Fact]
+        public async Task GetProviderTypes_ReturnsRecords()
+        {
+            var client = new DictionaryClient(ConnectionFactory.CreateFromFile(@"Data\Dictionary\GetProviderTypes.json"));
+
+            var response = await client.GetProviderTypes();
+
+            response.ShouldNotBeNull();
+            response.Items.Length.ShouldBeGreaterThan(0);
+            response.Total.ShouldBe(response.Items.Length);
+        }
+
+        [Fact]
         public async Task SearchOrderTypesByName_TwoDigitsNamePart_ReturnsRecords()
         {
             var client = new DictionaryClient(ConnectionFactory.CreateFromFile(@"Data\Dictionary\SearchOrderTypesByName.json"));

@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using AthenaHealth.Sdk.Clients.Interfaces;
 using AthenaHealth.Sdk.Extensions;
 using AthenaHealth.Sdk.Http;
@@ -16,11 +14,6 @@ namespace AthenaHealth.Sdk.Clients
         public ProviderClient(IConnection connection)
         {
             _connection = connection;
-        }
-
-        public async Task<ProviderTypeResponse> GetProviderTypes(BaseLimitFilter filter = null)
-        {
-            return await _connection.Get<ProviderTypeResponse>($"{_connection.PracticeId}/reference/providertypes", filter);
         }
 
         public async Task<ProviderResponse> GetAll(GetProviderFilter filter = null)

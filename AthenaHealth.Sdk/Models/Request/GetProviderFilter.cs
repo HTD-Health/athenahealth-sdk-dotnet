@@ -8,7 +8,7 @@ namespace AthenaHealth.Sdk.Models.Request
 
         /// <summary>
         /// The provider type to filter the results on valid provider type
-        /// values can be found by using <see cref="IProviderClient.GetProviderTypes"/> GET /reference/providertypes.
+        /// values can be found by using <see cref="IDictionaryClient.GetProviderTypes"/> GET /reference/providertypes.
         /// </summary>
         public string ProviderType { get; set; }
 

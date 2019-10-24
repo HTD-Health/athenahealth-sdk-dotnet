@@ -1,10 +1,18 @@
 ﻿using System.Threading.Tasks;
+using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
 
 namespace AthenaHealth.Sdk.Clients.Interfaces
 {
     public interface IDictionaryClient
     {
+        /// <summary>
+        /// Get the list of valid provider types.
+        /// </summary>
+        /// <param name="filter"></param>
+        /// <returns></returns>
+        Task<ProviderTypeResponse> GetProviderTypes(BaseLimitFilter filter = null);
+
         /// <summary>
         /// The list of matching orders alias autocomplete.
         /// </summary>
