@@ -10,19 +10,19 @@ using Xunit;
 
 namespace AthenaHealth.Sdk.Tests.EndToEnd
 {
-    public class OrderTypeClientTests : IClassFixture<AthenaHealthClientFixture>
+    public class DictionaryClientTests : IClassFixture<AthenaHealthClientFixture>
     {
         private readonly IAthenaHealthClient _client;
 
-        public OrderTypeClientTests(AthenaHealthClientFixture athenaHealthClientFixture)
+        public DictionaryClientTests(AthenaHealthClientFixture athenaHealthClientFixture)
         {
             _client = athenaHealthClientFixture.Client;
         }
 
         [Fact]
-        public async Task Search_TwoDigitsName_ReturnsRecords()
+        public async Task SearchOrderTypesByName_TwoDigitsName_ReturnsRecords()
         {
-            OrderType[] response = await _client.OrderTypes.SearchByName("ol");
+            OrderType[] response = await _client.Dictionaries.SearchOrderTypesByName("ol");
 
             response.Length.ShouldBeGreaterThan(0);
             response.All(x => !string.IsNullOrWhiteSpace(x.Name)).ShouldBeTrue();
@@ -30,10 +30,10 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         }
 
         [Fact]
-        public async Task Search_OneDigitName_ReturnsApiValidationException()
+        public async Task SearchOrderTypesByName_OneDigitName_ReturnsApiValidationException()
         {
             ApiValidationException exception = await Assert.ThrowsAsync<ApiValidationException>(() =>
-                _client.OrderTypes.SearchByName("o")
+                _client.Dictionaries.SearchOrderTypesByName("o")
             );
 
             exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
@@ -41,10 +41,10 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         }
 
         [Fact]
-        public async Task Search_NullName_ReturnsApiValidationException()
+        public async Task SearchOrderTypesByName_NullName_ReturnsApiValidationException()
         {
             ApiValidationException exception = await Assert.ThrowsAsync<ApiValidationException>(() =>
-                _client.OrderTypes.SearchByName(null)
+                _client.Dictionaries.SearchOrderTypesByName(null)
             );
 
             exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);

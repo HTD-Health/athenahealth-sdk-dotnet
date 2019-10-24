@@ -64,7 +64,7 @@
     <None Update="Data\InsurancePackage\GetCommon.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Data\OrderType\Search.json">
+    <None Update="Data\Dictionary\SearchOrderTypesByName.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Data\Patient\EnhancedBestmatch_MissingFields.json">
