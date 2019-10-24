@@ -83,6 +83,27 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         }
 
         [Theory]
+        [ClassData(typeof(GetAnalytesData))]
+        public async Task GetAnalytes_AnalytesExists_ShouldNotThrowJsonSerializationException(int patientId)
+        {
+            // Arrange
+            // Act
+            var result = await _client.Patients.GetAnalytes(patientId, new GetAnalytesFilter()
+            {
+                DepartmentId = 1,
+                ShowAbnormalDetails = true,
+                ShowHidden = true,
+                ShowTemplate = true
+            });
+
+            // Assert
+            result.ShouldNotBeNull();
+            result.Items.Length.ShouldBeGreaterThan(0);
+
+            Debug.WriteLine($"yield return new object[] {{ {patientId} }};");
+        }
+
+        [Theory]
         [ClassData(typeof(EnhancedBestmatchData))]
         public async Task EnhancedBestmatch_SearchByFirstNameLastNameAndDob_ShouldNotThrowJsonSerializationException(string firstName, string lastName, string dob)
         {
