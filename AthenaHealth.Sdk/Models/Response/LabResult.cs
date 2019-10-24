@@ -1,7 +1,9 @@
 ﻿using AthenaHealth.Sdk.Models.Converters;
 using AthenaHealth.Sdk.Models.Enums;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using System;
+using System.Runtime.Serialization;
 
 namespace AthenaHealth.Sdk.Models.Response
 {
@@ -299,13 +301,6 @@ namespace AthenaHealth.Sdk.Models.Response
             public string AbnormalHL7Name { get; set; }
 
             /// <summary>
-            /// DEPRECATED -- use "abnormalflag" instead. Status indicator of the measurement relative to normal (low, high, normal, abnormal)
-            /// </summary>
-            [Obsolete]
-            [JsonProperty(PropertyName = "status")]
-            public string Status { get; set; }
-
-            /// <summary>
             /// Reference range of values accepted as normal for this observation
             /// </summary>
             [JsonProperty(PropertyName = "referencerange")]
@@ -316,6 +311,16 @@ namespace AthenaHealth.Sdk.Models.Response
             /// </summary>
             [JsonProperty(PropertyName = "resultstatus")]
             public AnalyteResultStatusEnum? ResultStatus { get; set; }
+
+            [OnError]
+            internal void OnError(StreamingContext context, ErrorContext errorContext)
+            {
+                if (errorContext.Member is string property)
+                {
+                    if (property == "status") // Deprecated property
+                        errorContext.Handled = true;
+                }
+            }
         }
     }
 }

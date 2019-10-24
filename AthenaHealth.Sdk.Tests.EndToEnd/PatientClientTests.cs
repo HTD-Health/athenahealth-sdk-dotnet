@@ -46,6 +46,22 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         }
 
         [Theory]
+        [ClassData(typeof(GetMedicationsData))]
+        public async Task GetMedications_MedicationsExists_ShouldNotThrowJsonSerializationException(int patientId)
+        {
+            // Arrange
+            // Act
+            var result = await _client.Patients.GetMedications(patientId, new GetMedicationsFilter()
+            {
+                DepartmentId = 1
+            });
+
+            // Assert
+            result.ShouldNotBeNull();
+            result.Medications.Length.ShouldBeGreaterThan(0);
+        }
+
+        [Theory]
         [ClassData(typeof(GetPrescriptionsData))]
         public async Task GetPrescriptions_PrescriptionsExists_ShouldNotThrowJsonSerializationException(int patientId)
         {
@@ -99,8 +115,6 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             // Assert
             result.ShouldNotBeNull();
             result.Items.Length.ShouldBeGreaterThan(0);
-
-            Debug.WriteLine($"yield return new object[] {{ {patientId} }};");
         }
 
         [Theory]

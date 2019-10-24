@@ -23,7 +23,14 @@ namespace AthenaHealth.Sdk.Models.Converters
 
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {
-            return DateTime.ParseExact((string)reader.Value, _format, CultureInfo.InvariantCulture);
+            try
+            {
+                return DateTime.ParseExact((string)reader.Value, _format, CultureInfo.InvariantCulture);
+            }
+            catch
+            {
+                return null;
+            }
         }
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
