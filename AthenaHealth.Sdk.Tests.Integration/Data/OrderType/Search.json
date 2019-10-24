@@ -1,0 +1,82 @@
+[
+  {
+    "ordertypeid": 353034,
+    "name": "protein electrophoresis, urine"
+  },
+  {
+    "ordertypeid": 344746,
+    "name": "oligoclonal bands, csf"
+  },
+  {
+    "ordertypeid": 421861,
+    "name": "myelin oligodendrocyte glycoprotein IgG Ab, titer, IFA, serum or plasma"
+  },
+  {
+    "ordertypeid": 353801,
+    "name": "oligoclonal bands, qual, serum and CSF"
+  },
+  {
+    "ordertypeid": 344401,
+    "name": "oligoclonal bands, plasma"
+  },
+  {
+    "ordertypeid": 351482,
+    "name": "olanzapine, serum or plasma"
+  },
+  {
+    "ordertypeid": 350603,
+    "name": "oligoclonal bands, electrophoresis, CSF"
+  },
+  {
+    "ordertypeid": 344560,
+    "name": "olanzapine, quantitative, serum"
+  },
+  {
+    "ordertypeid": 344150,
+    "name": "infertility (Y-deletion), male, blood"
+  },
+  {
+    "ordertypeid": 351564,
+    "name": "black olive IgE Ab, serum"
+  },
+  {
+    "ordertypeid": 345555,
+    "name": "oligosaccharides, urine"
+  },
+  {
+    "ordertypeid": 351436,
+    "name": "olive pollen IgE Ab, serum"
+  },
+  {
+    "ordertypeid": 390979,
+    "name": "oligoclonal bands, QN, serum or plasma"
+  },
+  {
+    "ordertypeid": 356210,
+    "name": "olive IgE Ab, quant, serum"
+  },
+  {
+    "ordertypeid": 353891,
+    "name": "green olive IgE Ab, quan, serum"
+  },
+  {
+    "ordertypeid": 397735,
+    "name": "oligoclonal bands IgG, QL, isoelectric focusing, CSF"
+  },
+  {
+    "ordertypeid": 408947,
+    "name": "olive IgG Ab, QN, serum"
+  },
+  {
+    "ordertypeid": 386913,
+    "name": "protein fractions, oligoclonal bands, IEF, serum or plasma"
+  },
+  {
+    "ordertypeid": 352453,
+    "name": "russian olive IgE Ab, serum"
+  },
+  {
+    "ordertypeid": 409271,
+    "name": "brussel sprouts IgG Ab, QN, serum"
+  }
+]

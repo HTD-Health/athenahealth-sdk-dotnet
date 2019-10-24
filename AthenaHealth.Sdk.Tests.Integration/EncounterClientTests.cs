@@ -16,7 +16,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         [Fact]
         public async Task GetById_ExistingId_ReturnsRecord()
         {
-            var client = new EncounterClient(ConnectionFactory.CreateFromFile(@"Data\Encounter\GetById.json"));
+            var client = new EncounterClient(ConnectionFactory.CreateFromFile(@"Data\Encounters\GetById.json"));
 
             var response = await client.GetById(1);
 
@@ -30,7 +30,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         [Fact]
         public async Task GetSummary_ExistingId_ReturnsRecord()
         {
-            var client = new EncounterClient(ConnectionFactory.CreateFromFile(@"Data\Encounter\GetSummary.json"));
+            var client = new EncounterClient(ConnectionFactory.CreateFromFile(@"Data\Encounters\GetSummary.json"));
 
             var response = await client.GetSummary(1);
 
@@ -41,7 +41,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         [Fact]
         public async Task GetDiagnoses_ExistingId_ReturnsRecords()
         {
-            var client = new EncounterClient(ConnectionFactory.CreateFromFile(@"Data\Encounter\GetDiagnoses.json"));
+            var client = new EncounterClient(ConnectionFactory.CreateFromFile(@"Data\Encounters\GetDiagnoses.json"));
 
             var response = await client.GetDiagnoses(1);
 
@@ -54,7 +54,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         [Fact]
         public async Task CreateDiagnoses_ValidModel_NotThrowsException()
         {
-            var client = new EncounterClient(ConnectionFactory.CreateFromFile(@"Data\Encounter\CreateDiagnoses.json"));
+            var client = new EncounterClient(ConnectionFactory.CreateFromFile(@"Data\Encounters\CreateDiagnoses.json"));
 
             await client.CreateDiagnoses(999, new CreateDiagnoses()
             {
@@ -67,10 +67,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         {
             var client = new EncounterClient(ConnectionFactory.Create(@"{ ""success"": true }"));
 
-            DeleteResponse response = await client.DeleteDiagnoses(183, 15548);
-
-            response.IsSuccess.ShouldBeTrue();
-            response.ErrorMessage.ShouldBeNull();
+            await client.DeleteDiagnoses(183, 15548);
         }
     }
 }
