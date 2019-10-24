@@ -19,5 +19,13 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// <param name="filter"></param>
         /// <returns></returns>
         Task<InsurancePackageResponse<CommonInsurancePackage>> GetCommon(GetCommonInsurancePackageFilter filter);
+
+        /// <summary>
+        /// Search standard insurances based on input criteria.
+        /// Max results returned is 15. Please narrow the search criteria if result is not found.
+        /// </summary>
+        /// <param name="filter"></param>
+        /// <returns></returns>
+        Task<InsurancePackageResponse> Search(SearchInsuranceFilter filter = null);
     }
 }

@@ -1,0 +1,164 @@
+{
+  "insurances": [
+    {
+      "affiliations": [],
+      "insuranceplanname": "PARAMOUNT HEALTH CARE - MULTIPLAN (PPO)",
+      "insurancepackageid": 47700,
+      "addresslist": [
+        "PO BOX 497  TOLEDO OH 43697-0497",
+        "PO BOX 928  TOLEDO OH 43697-0928"
+      ]
+    },
+    {
+      "affiliations": [
+        "Health Exchange"
+      ],
+      "insuranceplanname": "ROCKY MOUNTAIN HEALTH PLANS (PPO)",
+      "insurancepackageid": 47760,
+      "addresslist": [
+        "PO BOX 10600  GRAND JUNCTION CO 81502-5600"
+      ]
+    },
+    {
+      "affiliations": [
+        "View Silver PPO"
+      ],
+      "insuranceplanname": "ROCKY MOUNTAIN HEALTH PLANS - PHCS (PPO)",
+      "insurancepackageid": 60218,
+      "addresslist": [
+        "PO BOX 10600  GRAND JUNCTION CO 81502-5600"
+      ]
+    },
+    {
+      "affiliations": [
+        "Commonwealth Administrative Group",
+        "Fiserv Health of Lexington",
+        "Harrington Health",
+        "Midwest Security",
+        "POMCO",
+        "UHIS",
+        "United Medical Resources",
+        "Wausau Benefits"
+      ],
+      "insuranceplanname": "UMR - ROCKY MOUNTAIN HEALTH PLANS (PPO)",
+      "insurancepackageid": 558091,
+      "addresslist": [
+        "PO BOX 30541  SALT LAKE CITY UT 84130-0541"
+      ]
+    },
+    {
+      "affiliations": [
+        "HPS"
+      ],
+      "insuranceplanname": "HEALTH PAYMENT SYSTEMS INC - EXCEEDENT - MULTIPLAN (PPO)",
+      "insurancepackageid": 387416,
+      "addresslist": [
+        "PO BOX 510620  MILWAUKEE WI 53203-0113"
+      ]
+    },
+    {
+      "affiliations": [
+        "Evercare",
+        "UHC"
+      ],
+      "insuranceplanname": "ROCKY MOUNTAIN HEALTH PLANS - UNITED HEALTHCARE OPTIONS (PPO)",
+      "insurancepackageid": 497135,
+      "addresslist": [
+        "PO BOX 10600  GRAND JUNCTION CO 81502-5600"
+      ]
+    },
+    {
+      "affiliations": [
+        "SIP"
+      ],
+      "insuranceplanname": "SAGAMORE - SELF INSURED BENEFIT ADMINISTRATORS (PPO)",
+      "insurancepackageid": 44838,
+      "addresslist": [
+        "PO BOX 6051  INDIANAPOLIS IN 46206-6051"
+      ]
+    },
+    {
+      "affiliations": [],
+      "insuranceplanname": "SAGAMORE HEALTH NETWORK - CONCERT HEALTH PLAN (PPO)",
+      "insurancepackageid": 99053,
+      "addresslist": [
+        "PO BOX 6051  INDIANAPOLIS IN 46206-6051"
+      ]
+    },
+    {
+      "affiliations": [
+        "Composite Technology Assemblies",
+        "Woodlawn Hospital"
+      ],
+      "insuranceplanname": "SAGAMORE HEALTH NETWORK - EMPLOYEE PLANS (PPO)",
+      "insurancepackageid": 116107,
+      "addresslist": [
+        "PO BOX 6051  INDIANAPOLIS IN 46206-6051"
+      ]
+    },
+    {
+      "affiliations": [],
+      "insuranceplanname": "SAGAMORE HEALTH NETWORK - GROUP PLAN SOLUTIONS (PPO)",
+      "insurancepackageid": 356889,
+      "addresslist": [
+        "SAG 2201 PO BOX 6051 INDIANAPOLIS IN 46206-6051"
+      ]
+    },
+    {
+      "affiliations": [],
+      "insuranceplanname": "SAGAMORE HEALTH NETWORK - LIFESTYLE HEALTH PLANS",
+      "insurancepackageid": 247504,
+      "addresslist": [
+        "PO BOX 6051  INDIANAPOLIS IN 46206-6051",
+        "SAG 2213 PO BOX 6051 INDIANAPOLIS IN 46206-6051"
+      ]
+    },
+    {
+      "affiliations": [],
+      "insuranceplanname": "SAGAMORE HEALTH NETWORK - PREFERRED HEALTH PLAN INC (PPO)",
+      "insurancepackageid": 69475,
+      "addresslist": [
+        "PO BOX 6051  INDIANAPOLIS IN 46206-6051",
+        "SAG 1942 PO BOX 6051 INDIANAPOLIS IN 46206-6051"
+      ]
+    },
+    {
+      "affiliations": [],
+      "insuranceplanname": "SAGAMORE HEALTH NETWORK - TOTAL PLAN (PPO)",
+      "insurancepackageid": 193714,
+      "addresslist": [
+        "SAG 1381 PO BOX 6051 INDIANAPOLIS IN 46206-6051"
+      ]
+    },
+    {
+      "affiliations": [
+        "Be Connected",
+        "Beacon",
+        "ODS",
+        "ODS Health Plan",
+        "OEBB",
+        "Oregon Education Benefit Board",
+        "PHCS",
+        "Synergy"
+      ],
+      "insuranceplanname": "MODA HEALTH (PPO)",
+      "insurancepackageid": 29700,
+      "addresslist": [
+        "PO BOX 40384  PORTLAND OR 97240-0384",
+        "PO BOX 40384  PORTLAND OR 97240",
+        "PO BOX 40169  PORTLAND OR 97240-0169"
+      ]
+    },
+    {
+      "affiliations": [
+        "Gold"
+      ],
+      "insuranceplanname": "ROCKY MOUNTAIN HEALTH PLAN - FIRST HEALTH (PPO)",
+      "insurancepackageid": 411852,
+      "addresslist": [
+        "PO BOX 10600  GRAND JUNCTION CO 81502-5600"
+      ]
+    }
+  ],
+  "totalcount": 15
+}

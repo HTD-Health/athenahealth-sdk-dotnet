@@ -3,6 +3,7 @@ using AthenaHealth.Sdk.Clients.Interfaces;
 using AthenaHealth.Sdk.Http;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
+// ReSharper disable StringLiteralTypo
 
 namespace AthenaHealth.Sdk.Clients
 {
@@ -33,6 +34,17 @@ namespace AthenaHealth.Sdk.Clients
         public async Task<InsurancePackageResponse<CommonInsurancePackage>> GetCommon(GetCommonInsurancePackageFilter filter = null)
         {
             return await _connection.Get<InsurancePackageResponse<CommonInsurancePackage>>($"{_connection.PracticeId}/misc/commoninsurancepackages", filter);
+        }
+
+        /// <summary>
+        /// Search standard insurances based on input criteria.
+        /// Max results returned is 15. Please narrow the search criteria if result is not found.
+        /// </summary>
+        /// <param name="filter"></param>
+        /// <returns></returns>
+        public async Task<InsurancePackageResponse> Search(SearchInsuranceFilter filter)
+        {
+            return await _connection.Get<InsurancePackageResponse>($"{_connection.PracticeId}/insurancepackages", filter);
         }
     }
 }
