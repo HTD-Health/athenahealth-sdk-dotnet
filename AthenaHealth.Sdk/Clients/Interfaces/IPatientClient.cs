@@ -1,7 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using AthenaHealth.Sdk.Models.Request;
+﻿using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
+using System.Threading.Tasks;
 
 namespace AthenaHealth.Sdk.Clients.Interfaces
 {
@@ -9,7 +8,7 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
     {
         Task<Patient> GetPatientById(int patientId, GetPatientByIdFilter queryParameters = null);
 
-        Task<IEnumerable<PatientWithScore>> EnhancedBestmatch(EnhancedBestmatchFilter queryParameters);
+        Task<PatientWithScore[]> EnhancedBestmatch(EnhancedBestmatchFilter queryParameters);
 
         Task<Pharmacy> GetDefaultPharmacy(int patientId, int departmentId);
 
@@ -30,5 +29,7 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         Task<PrescriptionResponse> GetPrescriptions(int patientId, GetPrescriptionsFilter queryParameters);
 
         Task<AnalyteResponse> GetAnalytes(int patientId, GetAnalytesFilter queryParameters);
+
+        Task<PatientMedication> GetMedications(int patientId, GetMedicationsFilter queryParameters);
     }
 }

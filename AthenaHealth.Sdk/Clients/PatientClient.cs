@@ -1,10 +1,8 @@
 ﻿using AthenaHealth.Sdk.Clients.Interfaces;
+using AthenaHealth.Sdk.Extensions;
 using AthenaHealth.Sdk.Http;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace AthenaHealth.Sdk.Clients
@@ -20,19 +18,14 @@ namespace AthenaHealth.Sdk.Clients
 
         public async Task<Patient> GetPatientById(int patientId, GetPatientByIdFilter queryParameters = null)
         {
-            var result = await _connection.Get<IEnumerable<Patient>>($"{_connection.PracticeId}/patients/{patientId}", queryParameters);
+            var result = await _connection.Get<Patient[]>($"{_connection.PracticeId}/patients/{patientId}", queryParameters);
 
-            if (result.Count() == 1)
-            {
-                return result.First();
-            }
-
-            throw new Exception("Number of Patients not equals 1.");
+            return result.FirstOrThrowException();
         }
 
-        public async Task<IEnumerable<PatientWithScore>> EnhancedBestmatch(EnhancedBestmatchFilter queryParameters)
+        public async Task<PatientWithScore[]> EnhancedBestmatch(EnhancedBestmatchFilter queryParameters)
         {
-            return await _connection.Get< IEnumerable<PatientWithScore>>($"{_connection.PracticeId}/patients/enhancedbestmatch", queryParameters);
+            return await _connection.Get<PatientWithScore[]>($"{_connection.PracticeId}/patients/enhancedbestmatch", queryParameters);
         }
 
         public async Task<Pharmacy> GetDefaultPharmacy(int patientId, int departmentId)
@@ -93,6 +86,11 @@ namespace AthenaHealth.Sdk.Clients
         public async Task<AnalyteResponse> GetAnalytes(int patientId, GetAnalytesFilter queryParameters)
         {
             return await _connection.Get<AnalyteResponse>($"{_connection.PracticeId}/chart/{patientId}/analytes", queryParameters);
+        }
+
+        public async Task<PatientMedication> GetMedications(int patientId, GetMedicationsFilter queryParameters)
+        {
+            return await _connection.Get<PatientMedication>($"{_connection.PracticeId}/chart/{patientId}/medications", queryParameters);
         }
     }
 }
