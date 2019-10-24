@@ -63,11 +63,11 @@ namespace AthenaHealth.Sdk.Tests.Integration
         }
 
         [Fact]
-        public async Task DeleteDiagnoses_ExistingId_ReturnsSuccess()
+        public void DeleteDiagnoses_ExistingId_ReturnsSuccess()
         {
             var client = new EncounterClient(ConnectionFactory.Create(@"{ ""success"": true }"));
-
-            await client.DeleteDiagnoses(183, 15548);
+          
+            Should.NotThrow(async () => await client.DeleteDiagnoses(183, 15548));
         }
     }
 }

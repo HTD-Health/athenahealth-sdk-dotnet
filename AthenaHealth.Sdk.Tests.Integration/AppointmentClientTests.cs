@@ -67,5 +67,25 @@ namespace AthenaHealth.Sdk.Tests.Integration
             response.Items.First().Date.ShouldNotBeNull();
             response.Items.First().AppointmentStatus.ShouldNotBeNull();
         }
+
+        [Fact]
+        public async Task GetAppointmentById_ValidId_ReturnsAppointment()
+        {
+            var client = new Clients.AppointmentClient(ConnectionFactory.CreateFromFile(@"Data\Appointment\GetAppointment.json"));
+            GetAppointmentFilter filter = new GetAppointmentFilter
+            {
+                ShowClaimDetail = true,
+                ShowExpectedProcedureCodes = true,
+                ShowCopay = true,
+                ShowPatientDetail = true,
+                ShowInsurance = true,
+            };
+
+            Appointment appointment = await client.GetAppointmentById(997681, filter);
+
+            appointment.ShouldNotBeNull();
+            appointment.DepartmentId.ShouldNotBeNull();
+        }
+
     }
 }

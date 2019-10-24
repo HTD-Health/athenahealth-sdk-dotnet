@@ -37,5 +37,11 @@ namespace AthenaHealth.Sdk.Clients
                 return await _connection.Get<AppointmentResponse>($"{_connection.PracticeId}/appointments/booked/multipledepartment", filter);
             return await _connection.Get<AppointmentResponse>($"{_connection.PracticeId}/appointments/booked", filter);
         }
+
+        public async Task<Appointment> GetAppointmentById(int id, GetAppointmentFilter filter = null)
+        {
+            Appointment[] result = await _connection.Get<Appointment[]>($"{_connection.PracticeId}/appointments/{id}", filter);
+            return result.FirstOrThrowException();
+        }
     }
 }
