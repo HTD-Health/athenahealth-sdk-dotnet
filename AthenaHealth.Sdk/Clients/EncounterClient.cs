@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using AthenaHealth.Sdk.Clients.Interfaces;
+using AthenaHealth.Sdk.Extensions;
 using AthenaHealth.Sdk.Http;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
@@ -20,13 +21,7 @@ namespace AthenaHealth.Sdk.Clients
         public async Task<Encounter> GetById(int encounterId)
         {
             Encounter[] result = await _connection.Get<Encounter[]>($"{_connection.PracticeId}/chart/encounter/{encounterId}");
-
-            if (result.Length == 1)
-            {
-                return result.First();
-            }
-
-            throw new Exception("Number of Items not equals 1.");
+            return result.FirstOrThrowException();
         }
 
         /// <summary>

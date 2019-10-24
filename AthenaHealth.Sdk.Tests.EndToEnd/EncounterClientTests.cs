@@ -142,6 +142,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
                 _client.Encounter.CreateDiagnoses(999, model)
             );
 
+            exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
             exception.Message.ShouldNotContain("Diagnosis with same snomed code already present in encounter.");
             exception.Message.ShouldContain("Encounter not found");
         }
