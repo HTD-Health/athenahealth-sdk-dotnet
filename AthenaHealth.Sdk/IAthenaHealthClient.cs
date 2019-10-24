@@ -1,5 +1,4 @@
-﻿using AthenaHealth.Sdk.Clients;
-using AthenaHealth.Sdk.Clients.Interfaces;
+﻿using AthenaHealth.Sdk.Clients.Interfaces;
 
 namespace AthenaHealth.Sdk
 {
@@ -11,7 +10,8 @@ namespace AthenaHealth.Sdk
         IProviderClient Providers { get; }
         IAppointmentClient Appointments { get; }
         IInsurancePackageClient InsurancePackage { get; }
-        IEncounterClient Encounter { get; }
+        IEncounterClient Encounters { get; }
+        IOrderTypeClient OrderTypes { get; }
 
         int PracticeId { get; set; }
     }

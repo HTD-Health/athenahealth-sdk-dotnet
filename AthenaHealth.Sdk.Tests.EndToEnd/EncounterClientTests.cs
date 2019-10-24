@@ -25,7 +25,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         {
             int encounterId = 1;
 
-            Encounter response = await _client.Encounter.GetById(encounterId);
+            Encounter response = await _client.Encounters.GetById(encounterId);
 
             response.Id.ShouldBe(encounterId);
             response.ShouldNotBeNull();
@@ -35,7 +35,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         public async Task GetById_NotExistingId_ThrowsApiException()
         {
             await Assert.ThrowsAsync<ApiValidationException>(() =>
-                _client.Encounter.GetById(999)
+                _client.Encounters.GetById(999)
                 );
         }
 
@@ -44,7 +44,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         {
             int encounterId = 1;
 
-            EncounterSummary response = await _client.Encounter.GetSummary(encounterId);
+            EncounterSummary response = await _client.Encounters.GetSummary(encounterId);
 
             response.ShouldNotBeNull();
             response.Html.ShouldNotBeNull();
@@ -54,7 +54,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         public async Task GetSummary_NotExistingId_ThrowsApiException()
         {
             await Assert.ThrowsAsync<ApiException>(() =>
-                _client.Encounter.GetSummary(999)
+                _client.Encounters.GetSummary(999)
             );
         }
 
@@ -63,7 +63,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         {
             int encounterId = 1;
 
-            Diagnose[] response = await _client.Encounter.GetDiagnoses(encounterId);
+            Diagnose[] response = await _client.Encounters.GetDiagnoses(encounterId);
 
             response.Length.ShouldBeGreaterThan(0);
             response.All(x => !string.IsNullOrWhiteSpace(x.Description)).ShouldBeTrue();
@@ -75,7 +75,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         public async Task GetDiagnoses_NotExistingId_ThrowsApiException()
         {
             await Assert.ThrowsAsync<ApiValidationException>(() =>
-                _client.Encounter.GetDiagnoses(999)
+                _client.Encounters.GetDiagnoses(999)
             );
         }
 
@@ -86,16 +86,16 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             int encounterId = 183;
             int snomedCode = 52967002;
 
-            Diagnose[] response = await _client.Encounter.GetDiagnoses(encounterId);
+            Diagnose[] response = await _client.Encounters.GetDiagnoses(encounterId);
             Diagnose diagnosisToDelete = response.FirstOrDefault(x => x.SnomedCode == snomedCode);
             if (diagnosisToDelete != null)
             {
-                await _client.Encounter.DeleteDiagnoses(encounterId, diagnosisToDelete.Id);
+                await _client.Encounters.DeleteDiagnoses(encounterId, diagnosisToDelete.Id);
             }
 
 
             // Act.
-            Diagnose createdDiagnose = await _client.Encounter.CreateDiagnoses(encounterId, new CreateDiagnoses()
+            Diagnose createdDiagnose = await _client.Encounters.CreateDiagnoses(encounterId, new CreateDiagnoses()
             {
                 SnomedCode = snomedCode,
                 Laterality = LateralityEnum.Left,
@@ -120,7 +120,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             };
 
             ApiValidationException exception = await Assert.ThrowsAsync<ApiValidationException>(() =>
-                _client.Encounter.CreateDiagnoses(1, model)
+                _client.Encounters.CreateDiagnoses(1, model)
             );
 
             exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
@@ -139,11 +139,11 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             };
 
             ApiValidationException exception = await Assert.ThrowsAsync<ApiValidationException>(() =>
-                _client.Encounter.CreateDiagnoses(999, model)
+                _client.Encounters.CreateDiagnoses(999, model)
             );
 
             exception.Message.ShouldNotContain("Diagnosis with same snomed code already present in encounter.");
-            exception.Message.ShouldContain("Encounter not found");
+            exception.Message.ShouldContain("Encounters not found");
         }
 
         [Fact]
@@ -153,11 +153,11 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             int encounterId = 183;
             int snomedCode = 52967002;
 
-            Diagnose[] response = await _client.Encounter.GetDiagnoses(encounterId);
+            Diagnose[] response = await _client.Encounters.GetDiagnoses(encounterId);
             Diagnose diagnosisToDelete = response.FirstOrDefault(x => x.SnomedCode == snomedCode);
             if (diagnosisToDelete == null)
             {
-                Diagnose createDiagnose = await _client.Encounter.CreateDiagnoses(encounterId, new CreateDiagnoses()
+                Diagnose createDiagnose = await _client.Encounters.CreateDiagnoses(encounterId, new CreateDiagnoses()
                 {
                     SnomedCode = snomedCode,
                     Laterality = LateralityEnum.Left,
@@ -168,7 +168,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
 
 
             // Act.
-            await _client.Encounter.DeleteDiagnoses(encounterId, diagnosisToDelete.Id);
+            await _client.Encounters.DeleteDiagnoses(encounterId, diagnosisToDelete.Id);
         }
 
         [Fact]
@@ -179,7 +179,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             int diagnosisId = 15448;
             try
             {
-                await _client.Encounter.DeleteDiagnoses(encounterId, diagnosisId);
+                await _client.Encounters.DeleteDiagnoses(encounterId, diagnosisId);
             }
             catch (Exception)
             {
@@ -187,7 +187,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             }
 
             ApiValidationException exception = await Assert.ThrowsAsync<ApiValidationException>(() =>
-                   _client.Encounter.DeleteDiagnoses(encounterId, diagnosisId)
+                   _client.Encounters.DeleteDiagnoses(encounterId, diagnosisId)
             );
 
             exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
