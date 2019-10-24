@@ -40,6 +40,9 @@
     <None Update="Data\Department\GetAll_Extended.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Data\Department\SearchFacilities.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Data\Department\GetById_ExistingId.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

@@ -5,6 +5,8 @@ using AthenaHealth.Sdk.Tests.Integration.TestingHelpers;
 using Shouldly;
 using Xunit;
 using AthenaHealth.Sdk.Clients;
+using AthenaHealth.Sdk.Models.Enums;
+using AthenaHealth.Sdk.Models.Request;
 
 namespace AthenaHealth.Sdk.Tests.Integration
 {
@@ -37,6 +39,22 @@ namespace AthenaHealth.Sdk.Tests.Integration
             departmentResponse.Name.ShouldBe("MAIN ST (HUB)");
             departmentResponse.Address.ShouldBe("8762 STONERIDGE CT");
             departmentResponse.City.ShouldBe("CLAXTON");
+        }
+
+        [Fact]
+        public async Task SearchFacilities_ReturnsRecords()
+        {
+            var departmentClient = new DepartmentClient(ConnectionFactory.CreateFromFile(@"Data\Department\SearchFacilities.json"));
+
+            var filter = new SearchFacilitiesFilter(1, "Labcorp", OrderTypeEnum.DurableMedicalEquipment);
+            Facility[] response = await departmentClient.SearchFacilities(filter);
+
+            response.ShouldNotBeNull();
+            response.Length.ShouldBeGreaterThan(0);
+            response.Any(x => x.Id == 12352190).ShouldBeTrue();
+            response.Any(x => x.Id == 12492021).ShouldBeTrue();
+            response.All(x => x.Id > 0).ShouldBeTrue();
+            response.All(x => !string.IsNullOrWhiteSpace(x.Name)).ShouldBeTrue();
         }
     }
 }

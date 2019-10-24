@@ -1,6 +1,8 @@
 ﻿using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using AthenaHealth.Sdk.Exceptions;
+using AthenaHealth.Sdk.Models.Enums;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
 using AthenaHealth.Sdk.Tests.EndToEnd.Fixtures;
@@ -131,6 +133,41 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         public void GetById_NotExistingId_ThrowsApiException()
         {
              Should.Throw<ApiValidationException>(async () => await _client.Departments.GetById(999));
+        }
+
+        [Fact]
+        public async Task SearchFacilities_ValidModel_ReturnsRecords()
+        {
+            var filter = new SearchFacilitiesFilter(1, "Labcorp", OrderTypeEnum.DurableMedicalEquipment);
+
+            Facility[] response = await _client.Departments.SearchFacilities(filter);
+
+            response.ShouldNotBeNull();
+            response.Length.ShouldBeGreaterThan(0);
+            response.All(x => x.Id > 0).ShouldBeTrue();
+            response.All(x => !string.IsNullOrWhiteSpace(x.Name)).ShouldBeTrue();
+        }
+
+        [Fact]
+        public async Task SearchFacilities_InvalidName_ReturnsEmptyResponse()
+        {
+            var filter = new SearchFacilitiesFilter(1, "invalid name for testing", OrderTypeEnum.DurableMedicalEquipment);
+            Facility[] response = await _client.Departments.SearchFacilities(filter);
+
+            response.Length.ShouldBe(0);
+        }
+
+        [Fact]
+        public async Task SearchFacilities_NullName_ReturnsEmptyResponse()
+        {
+            var filter = new SearchFacilitiesFilter(1, null, OrderTypeEnum.DurableMedicalEquipment);
+
+            ApiValidationException exception = await Assert.ThrowsAsync<ApiValidationException>(() =>
+                _client.Departments.SearchFacilities(filter)
+            );
+
+            exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
+            exception.Message.ShouldContain(@"""missingfields"":[""name""]");
         }
     }
 }

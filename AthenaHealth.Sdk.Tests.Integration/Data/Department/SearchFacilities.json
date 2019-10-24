@@ -1,0 +1,328 @@
+[
+  {
+    "distance": "83.5",
+    "state": "GA",
+    "name": "SOUTH DEKALB PRIMARY CARE - LABCORP BACKFILLS",
+    "facilityid": 12352190,
+    "city": "DANVILLE",
+    "zipcode": "31017"
+  },
+  {
+    "distance": "148.9",
+    "state": "SC",
+    "name": "13095- TANDEM HEALTH-LABCORP BACKFILL",
+    "facilityid": 12492021,
+    "city": "SUMTER",
+    "zipcode": "29150"
+  },
+  {
+    "distance": "182.1",
+    "state": "GA",
+    "name": "HIGHLAND URGENT CARE & FAMILY MEDIC - LABCORP BACKFILL",
+    "facilityid": 12401405,
+    "city": "ATLANTA",
+    "zipcode": "30306"
+  },
+  {
+    "distance": "184.5",
+    "state": "FL",
+    "name": "BACKFILLS|LABCORP- 15644",
+    "facilityid": 13261153,
+    "city": "SALEM",
+    "zipcode": "32356"
+  },
+  {
+    "distance": "196.6",
+    "state": "GA",
+    "name": "13157-MARIETTA OBGYN-LABCORP BACKFILLS",
+    "facilityid": 12511029,
+    "city": "MARIETTA",
+    "zipcode": "30060"
+  },
+  {
+    "distance": "225.4",
+    "state": "FL",
+    "name": "14188- WEBSTER MEDICAL CLINIC- LABCORP BACKFILLS",
+    "facilityid": 12545935,
+    "city": "ORANGE CITY",
+    "zipcode": "32763"
+  },
+  {
+    "distance": "240.8",
+    "state": "AL",
+    "name": "13714-SOUTHEAST ALABAMA RURAL HEALTH ASSO-LABCORP BACKFILL",
+    "facilityid": 12519137,
+    "city": "TROY",
+    "zipcode": "36079"
+  },
+  {
+    "distance": "258.7",
+    "state": "NC",
+    "name": "11658 -BAKERSVILLE COMMUNITY MEDICAL CLINI- LABCORP BACKFILLS",
+    "facilityid": 12644559,
+    "city": "BURNSVILLE",
+    "zipcode": "28714"
+  },
+  {
+    "distance": "268.8",
+    "state": "NC",
+    "name": "BAKERSVILLE COMMUNITY MEDICAL - LABCORP BACKFILLS",
+    "facilityid": 12321676,
+    "city": "BAKERSVILLE",
+    "zipcode": "28705"
+  },
+  {
+    "distance": "292.2",
+    "state": "FL",
+    "name": "1438_LABCORPBACKFILL",
+    "facilityid": 12999118,
+    "city": "MELBOURNE",
+    "zipcode": "32901"
+  },
+  {
+    "distance": "292.2",
+    "state": "FL",
+    "name": "16107_LABCORPBACKFILL_GOODHANDS FAMILY",
+    "facilityid": 12998959,
+    "city": "MELBOURNE",
+    "zipcode": "32901"
+  },
+  {
+    "distance": "292.2",
+    "state": "FL",
+    "name": "16547_LABCORPBACKFILL_SOUTHWEST ATLANTA NEPHROLOGY",
+    "facilityid": 13008582,
+    "city": "MELBOURNE",
+    "zipcode": "32901"
+  },
+  {
+    "distance": "292.2",
+    "state": "FL",
+    "name": "16647_LABCORPBACKFILL",
+    "facilityid": 12989306,
+    "city": "MELBOURNE",
+    "zipcode": "32901"
+  },
+  {
+    "distance": "308.5",
+    "state": "FL",
+    "name": "BAY AREA HEART CENTER - LABCORP BACKFILL",
+    "facilityid": 12869350,
+    "city": "SAINT PETERSBURG",
+    "zipcode": "33705"
+  },
+  {
+    "distance": "314",
+    "state": "NC",
+    "name": "14660-LEE, WILLIAM-LABCORP BACKFILLS",
+    "facilityid": 12695772,
+    "city": "RALEIGH",
+    "zipcode": "27607"
+  },
+  {
+    "distance": "330.6",
+    "state": "FL",
+    "name": "9582-ASCENSION-GULF COAST-LABCORP BACKFILL",
+    "facilityid": 12491344,
+    "city": "PENSACOLA",
+    "zipcode": "32504"
+  },
+  {
+    "distance": "382.5",
+    "state": "NC",
+    "name": "12896-ROANOKE VALLEY HEALTH SERVICES-LABCORP BACKFILLS",
+    "facilityid": 12524469,
+    "city": "ROANOKE RAPIDS",
+    "zipcode": "27870"
+  },
+  {
+    "distance": "443.1",
+    "state": "FL",
+    "name": "13023 -TENET FLORIDA-LABCORP BACKFILLS",
+    "facilityid": 12880711,
+    "city": "HIALEAH",
+    "zipcode": "33016"
+  },
+  {
+    "distance": "455",
+    "state": "VA",
+    "name": "2180-LABCORP BACKFILL",
+    "facilityid": 12359073,
+    "city": "RICHMOND",
+    "zipcode": "23230"
+  },
+  {
+    "distance": "536.7",
+    "state": "VA",
+    "name": "13898 -REX, STEPHEN-LABCORP BACKFILLS",
+    "facilityid": 12623451,
+    "city": "ANNANDALE",
+    "zipcode": "22003"
+  },
+  {
+    "distance": "548",
+    "state": "MD",
+    "name": "13741-BETHESDA MEDICAL ASSOCIATES PC-LABCORP BACKFILLS",
+    "facilityid": 12530249,
+    "city": "BETHESDA",
+    "zipcode": "20817"
+  },
+  {
+    "distance": "548.1",
+    "state": "DC",
+    "name": "13305- ELAINE ELLIS CENTER OF HEALTH-LABCORP BACKFILLS",
+    "facilityid": 12549997,
+    "city": "WASHINGTON",
+    "zipcode": "20019"
+  },
+  {
+    "distance": "572",
+    "state": "MD",
+    "name": "12078 -SATTIN, SANDRA GAIL-LABCORP BACKFILL",
+    "facilityid": 12542170,
+    "city": "ELLICOTT CITY",
+    "zipcode": "21042"
+  },
+  {
+    "distance": "583.5",
+    "state": "IN",
+    "name": "14940 - LABCORP BACKFILLS",
+    "facilityid": 12752405,
+    "city": "INDIANAPOLIS",
+    "zipcode": "46282"
+  },
+  {
+    "distance": "666.6",
+    "state": "PA",
+    "name": "2819 -MAZZONI CENTER-LABCORP BACKFILLS",
+    "facilityid": 12767503,
+    "city": "PHILADELPHIA",
+    "zipcode": "19147"
+  },
+  {
+    "distance": "692.2",
+    "state": "PA",
+    "address": "5039 PEACH STREET",
+    "name": "MEDEXPRESS URGENT CARE(LABCORP)",
+    "facilityid": 12327287,
+    "faxnumber": "(814) 866-1990",
+    "city": "ERIE",
+    "zipcode": "16509",
+    "phonenumber": "(814) 866-1443"
+  },
+  {
+    "distance": "720.1",
+    "state": "MI",
+    "name": "MARSHALL MEDICAL ASSOCIATES - LABCORP BACKFILLS",
+    "facilityid": 12324204,
+    "city": "MARSHALL",
+    "zipcode": "49068"
+  },
+  {
+    "distance": "751.3",
+    "state": "IL",
+    "name": "ALEXIAN BROTHERS MEDICAL GROUP-LABCORP BACKFILL",
+    "facilityid": 12403041,
+    "city": "BOLINGBROOK",
+    "zipcode": "60440"
+  },
+  {
+    "distance": "752.3",
+    "state": "NY",
+    "name": "MDVIP LABCORP BACKFILLS",
+    "facilityid": 12351701,
+    "city": "NEW YORK",
+    "zipcode": "10001"
+  },
+  {
+    "distance": "762.7",
+    "state": "IL",
+    "name": "TALCOTT PRIMARY CARE - LABCORP BACKFILL",
+    "facilityid": 12504453,
+    "city": "CHICAGO",
+    "zipcode": "60631"
+  },
+  {
+    "distance": "819.9",
+    "state": "IA",
+    "address": "3625 UTICA RIDGE RD",
+    "name": "LABCORP PSC",
+    "facilityid": 13509563,
+    "faxnumber": "(563) 345-6577",
+    "city": "BETTENDORF",
+    "zipcode": "52722",
+    "phonenumber": "(563) 345-6575"
+  },
+  {
+    "distance": "896",
+    "state": "TX",
+    "name": "MCR HEALTH SERVICES - LABCORP BACKFILLS",
+    "facilityid": 12357564,
+    "city": "WACO",
+    "zipcode": "76708"
+  },
+  {
+    "distance": "944",
+    "state": "MA",
+    "name": "WOMEN'S HEALTH SPECIALISTS - LABCORP BACKFILL",
+    "facilityid": 12809418,
+    "city": "WATERTOWN",
+    "zipcode": "02472"
+  },
+  {
+    "distance": "945.5",
+    "state": "MA",
+    "name": "FRESENIUS MEDICAL CARE - LABCORP BACKFILL",
+    "facilityid": 12717865,
+    "city": "LEXINGTON",
+    "zipcode": "02421"
+  },
+  {
+    "distance": "992.5",
+    "state": "TX",
+    "name": "15462 - FL - TAMPA FAMILY HEALTH CENTERS-LABCORP BACKFILL",
+    "facilityid": 12765854,
+    "city": "SAN ANTONIO",
+    "zipcode": "78224"
+  },
+  {
+    "distance": "1134.8",
+    "state": "ME",
+    "name": "12663-SILVERMAN, JOEL-LABCORP BACKFILL",
+    "facilityid": 12458144,
+    "city": "BELFAST",
+    "zipcode": "04915"
+  },
+  {
+    "distance": "1134.8",
+    "state": "ME",
+    "name": "12893-FAIRVIEW MEDICAL GROUP-LABCORP BACKFILL",
+    "facilityid": 12450169,
+    "city": "BELFAST",
+    "zipcode": "04915"
+  },
+  {
+    "distance": "1134.8",
+    "state": "ME",
+    "name": "14346 -SACHS, BRUCE J-LABCORP BACKFILLS",
+    "facilityid": 12662945,
+    "city": "BELFAST",
+    "zipcode": "04915"
+  },
+  {
+    "distance": "1186.5",
+    "state": "TX",
+    "name": "13690 - RASTOGI, ANJANA-LABCORP BACKFILL",
+    "facilityid": 12493468,
+    "city": "MIDLAND",
+    "zipcode": "79707"
+  },
+  {
+    "distance": "1702.3",
+    "state": "AZ",
+    "name": "600 - TENET ARIZONA - LABCORP BACKFILL",
+    "facilityid": 13008898,
+    "city": "GREEN VALLEY",
+    "zipcode": "85614"
+  }
+]

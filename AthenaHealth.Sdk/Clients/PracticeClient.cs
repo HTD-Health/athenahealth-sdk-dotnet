@@ -1,7 +1,6 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using AthenaHealth.Sdk.Clients.Interfaces;
+using AthenaHealth.Sdk.Extensions;
 using AthenaHealth.Sdk.Http;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
@@ -30,13 +29,7 @@ namespace AthenaHealth.Sdk.Clients
         public async Task<Practice> GetById(int practiceId, BaseLimitFilter filter = null)
         {
             PracticeResponse result = await _connection.Get<PracticeResponse>($"{practiceId}/practiceinfo", filter);
-            
-            if (result.Total == 1)
-            {
-                return result.Items.First();
-            }
-
-            throw new Exception("Number of Items not equals 1.");
+            return result.Items.FirstOrThrowException();
         }
 
         public async Task<PracticeResponse> GetAll(BaseLimitFilter filter = null)
