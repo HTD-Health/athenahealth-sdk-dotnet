@@ -24,5 +24,33 @@ namespace AthenaHealth.Sdk.Tests.Integration
             response.Any(x => x.Name == "oligoclonal bands, csf").ShouldBeTrue();
             response.Any(x => x.Id == 344746).ShouldBeTrue();
         }
+
+        [Fact]
+        public async Task SearchMedicationsByName_TwoDigitsNamePart_ReturnsRecords()
+        {
+            var client = new DictionaryClient(ConnectionFactory.CreateFromFile(@"Data\Dictionary\SearchMedicationsByName.json"));
+
+            var response = await client.SearchMedicationsByName("ol");
+
+            response.ShouldNotBeNull();
+            response.Length.ShouldBeGreaterThan(0);
+            response.Any(x => x.Id == 296232).ShouldBeTrue();
+            response.Any(x => x.Name == "OLANZapine").ShouldBeTrue();
+            response.Any(x => x.Id == 247373).ShouldBeTrue();
+        }
+
+        [Fact]
+        public async Task SearchAllergiesByName_TwoDigitsNamePart_ReturnsRecords()
+        {
+            var client = new DictionaryClient(ConnectionFactory.CreateFromFile(@"Data\Dictionary\SearchAllergiesByName.json"));
+
+            var response = await client.SearchAllergiesByName("ol");
+
+            response.ShouldNotBeNull();
+            response.Length.ShouldBeGreaterThan(0);
+            response.Any(x => x.Id == 16818).ShouldBeTrue();
+            response.Any(x => x.Name == "olaparib").ShouldBeTrue();
+            response.Any(x => x.Id == 91387).ShouldBeTrue();
+        }
     }
 }

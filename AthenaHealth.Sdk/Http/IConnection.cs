@@ -24,7 +24,7 @@ namespace AthenaHealth.Sdk.Http
         /// <param name="relativeUrl">Url relative to <see cref="BaseAddress"/>.</param>
         /// <param name="queryParameters">Query parameters to be added to constructed url.</param>
         /// <returns>Deserialized model</returns>
-        Task<T> Get<T>(string relativeUrl, object queryParameters = null);
+        Task<T> Get<T>(string relativeUrl, object queryParameters = null, bool shouldThrowErrors = true);
 
         /// <summary>
         /// Sends POST request to url constructed from <see cref="BaseAddress"/> and <paramref name="relativeUrl"/>.

@@ -11,5 +11,19 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// <param name="name">A term to search for. Must be at least 2 characters.</param>
         /// <returns></returns>
         Task<OrderType[]> SearchOrderTypesByName(string name);
+
+        /// <summary>
+        /// Return a list of matching medications alias autocomplete.
+        /// </summary>
+        /// <param name="name">A term to search for. Must be at least 2 characters.</param>
+        /// <returns></returns>
+        Task<Medication[]> SearchMedicationsByName(string name);
+
+        /// <summary>
+        /// Return a short list of matching allergies alias autocomplete.
+        /// </summary>
+        /// <param name="name">A term to search for. Must be at least 2 characters.</param>
+        /// <returns></returns>
+        Task<Allergy[]> SearchAllergiesByName(string name);
     }
 }
