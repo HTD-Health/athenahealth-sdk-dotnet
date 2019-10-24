@@ -26,5 +26,7 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         Task<LabResultResponse> GetLabResults(int patientId, GetLabResultsFilter queryParameters);
 
         Task<MedicalHistory> GetMedicalHistory(int patientId, int departmentId);
+
+        Task<PrescriptionResponse> GetPrescriptions(int patientId, GetPrescriptionsFilter queryParameters);
     }
 }
