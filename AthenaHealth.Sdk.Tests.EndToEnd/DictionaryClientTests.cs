@@ -37,7 +37,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             );
 
             exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
-            exception.Message.ShouldContain("Search value must contain at least 2 characters.");
+            exception.Message.ShouldContain("Search value must contain at least 2 characters");
         }
 
         [Fact]
@@ -45,6 +45,70 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         {
             ApiValidationException exception = await Assert.ThrowsAsync<ApiValidationException>(() =>
                 _client.Dictionaries.SearchOrderTypesByName(null)
+            );
+
+            exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
+            exception.Message.ShouldContain("missingfields");
+        }
+
+        [Fact]
+        public async Task SearchMedicationsByName_TwoDigitsName_ReturnsRecords()
+        {
+            Medication[] response = await _client.Dictionaries.SearchMedicationsByName("ol");
+
+            response.Length.ShouldBeGreaterThan(0);
+            response.All(x => !string.IsNullOrWhiteSpace(x.Name)).ShouldBeTrue();
+            response.All(x => x.Id > 0).ShouldBeTrue();
+        }
+
+        [Fact]
+        public async Task SearchMedicationsByName_OneDigitName_ReturnsApiValidationException()
+        {
+            ApiValidationException exception = await Assert.ThrowsAsync<ApiValidationException>(() =>
+                _client.Dictionaries.SearchMedicationsByName("o")
+            );
+
+            exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
+            exception.Message.ShouldContain("Search term must be at least 2 characters in length");
+        }
+
+        [Fact]
+        public async Task SearchMedicationsByName_NullName_ReturnsApiValidationException()
+        {
+            ApiValidationException exception = await Assert.ThrowsAsync<ApiValidationException>(() =>
+                _client.Dictionaries.SearchMedicationsByName(null)
+            );
+
+            exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
+            exception.Message.ShouldContain("missingfields");
+        }
+
+        [Fact]
+        public async Task SearchAllergiesByName_TwoDigitsName_ReturnsRecords()
+        {
+            Allergy[] response = await _client.Dictionaries.SearchAllergiesByName("ol");
+
+            response.Length.ShouldBeGreaterThan(0);
+            response.All(x => !string.IsNullOrWhiteSpace(x.Name)).ShouldBeTrue();
+            response.All(x => x.Id > 0).ShouldBeTrue();
+        }
+
+        [Fact]
+        public async Task SearchAllergiesByName_OneDigitName_ReturnsApiValidationException()
+        {
+            ApiValidationException exception = await Assert.ThrowsAsync<ApiValidationException>(() =>
+                _client.Dictionaries.SearchAllergiesByName("o")
+            );
+
+            exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
+            exception.Message.ShouldContain("Search term must be at least 2 characters in length");
+        }
+
+        [Fact]
+        public async Task SearchAllergiesByName_NullName_ReturnsApiValidationException()
+        {
+            ApiValidationException exception = await Assert.ThrowsAsync<ApiValidationException>(() =>
+                _client.Dictionaries.SearchAllergiesByName(null)
             );
 
             exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);

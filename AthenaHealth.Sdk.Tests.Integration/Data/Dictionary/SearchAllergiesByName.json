@@ -1,0 +1,62 @@
+[
+  {
+    "allergy": "olanzapine",
+    "allergenname": "olanzapine",
+    "allergyid": 16818,
+    "allergenid": 16818
+  },
+  {
+    "allergy": "olaparib",
+    "allergenname": "olaparib",
+    "allergyid": 91387,
+    "allergenid": 91387
+  },
+  {
+    "allergy": "olaratumab",
+    "allergenname": "olaratumab",
+    "allergyid": 94980,
+    "allergenid": 94980
+  },
+  {
+    "allergy": "oleandomycin",
+    "allergenname": "oleandomycin",
+    "allergyid": 14081,
+    "allergenid": 14081
+  },
+  {
+    "allergy": "oleic acid",
+    "allergenname": "oleic acid",
+    "allergyid": 13919,
+    "allergenid": 13919
+  },
+  {
+    "allergy": "olive extract",
+    "allergenname": "olive extract",
+    "allergyid": 19282,
+    "allergenid": 19282
+  },
+  {
+    "allergy": "olive oil",
+    "allergenname": "olive oil",
+    "allergyid": 13457,
+    "allergenid": 13457
+  },
+  {
+    "allergy": "olmesartan",
+    "allergenname": "olmesartan",
+    "allergyid": 19431,
+    "allergenid": 19431
+  },
+  {
+    "allergy": "olodaterol",
+    "allergenname": "olodaterol",
+    "allergyid": 89566,
+    "allergenid": 89566
+  },
+  {
+    "allergy": "olopatadine",
+    "allergenname": "olopatadine",
+    "allergyid": 16946,
+    "allergenid": 16946
+  }
+]

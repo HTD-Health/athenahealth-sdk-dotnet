@@ -23,5 +23,18 @@ namespace AthenaHealth.Sdk.Clients
         {
             return await _connection.Get<OrderType[]>($"{_connection.PracticeId}/reference/order/lab", new { searchValue = name });
         }
+
+        public async Task<Medication[]> SearchMedicationsByName(string name)
+        {
+            return await _connection.Get<Medication[]>($"{_connection.PracticeId}/reference/medications", new {searchValue = name});
+        }
+
+        public async Task<Allergy[]> SearchAllergiesByName(string name)
+        {
+            return await _connection.Get<Allergy[]>(
+                $"{_connection.PracticeId}/reference/allergies", 
+                new { searchValue = name }, 
+                false);
+        }
     }
 }

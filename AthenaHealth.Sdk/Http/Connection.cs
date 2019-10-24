@@ -59,14 +59,15 @@ namespace AthenaHealth.Sdk.Http
         /// <typeparam name="T">Model type</typeparam>
         /// <param name="relativeUrl">Url relative to <see cref="BaseAddress"/>.</param>
         /// <param name="queryParameters">Query parameters to be added to constructed url.</param>
+        /// <param name="shouldThrowErrors">>True: Throws exception if invalid response object.</param>
         /// <returns>Deserialized model</returns>
-        public async Task<T> Get<T>(string relativeUrl, object queryParameters = null)
+        public async Task<T> Get<T>(string relativeUrl, object queryParameters = null, bool shouldThrowErrors = true)
         {
             await RefreshAccessToken();
 
             Response response = await SendData(AddVersion(relativeUrl), queryParameters, HttpMethod.Get);
 
-            T output = response.GetObjectContent<T>(true);
+            T output = response.GetObjectContent<T>(shouldThrowErrors);
             return output;
         }
 
