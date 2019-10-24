@@ -6,7 +6,7 @@ using System;
 namespace AthenaHealth.Sdk.Models.Response
 {
     public class LabResultResponse
-        {
+    {
         [JsonProperty("totalcount")]
         public int Total { get; set; }
 
@@ -130,7 +130,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// The status of the result (e.g., "final", "preliminary", "corrected", etc.)
         /// </summary>
         [JsonProperty(PropertyName = "resultstatus")]
-        public string ResultStatus { get; set; }
+        public LabResultStatusEnum? ResultStatus { get; set; }
 
         public class InterpretationTemplateModel
         {
@@ -301,6 +301,7 @@ namespace AthenaHealth.Sdk.Models.Response
             /// <summary>
             /// DEPRECATED -- use "abnormalflag" instead. Status indicator of the measurement relative to normal (low, high, normal, abnormal)
             /// </summary>
+            [Obsolete]
             [JsonProperty(PropertyName = "status")]
             public string Status { get; set; }
 
@@ -314,7 +315,7 @@ namespace AthenaHealth.Sdk.Models.Response
             /// The status of the result (e.g., "final", "preliminary", "corrected", etc.)
             /// </summary>
             [JsonProperty(PropertyName = "resultstatus")]
-            public LabResultStatusEnum? ResultStatus { get; set; }
+            public AnalyteResultStatusEnum? ResultStatus { get; set; }
         }
     }
 }

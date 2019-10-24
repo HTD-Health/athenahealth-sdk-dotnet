@@ -1,0 +1,5988 @@
+{
+  "analytes": [
+    {
+      "analytename": "CBC",
+      "analyteid": 1,
+      "description": "LOINC",
+      "analytedate": "10\/02\/2009"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "some lab",
+      "analyteid": 121,
+      "analytedate": "10\/09\/2009"
+    },
+    {
+      "labresultstatus": "final",
+      "analytename": "WBC",
+      "analytedate": "01\/17\/2010",
+      "value": "7000",
+      "description": "wbc, auto, blood",
+      "analyteid": 2183
+    },
+    {
+      "analytename": "LDL",
+      "analyteid": 401,
+      "description": "LOINC",
+      "analytedate": "06\/18\/2010"
+    },
+    {
+      "analytename": "HDL",
+      "analyteid": 402,
+      "description": "LOINC",
+      "analytedate": "06\/18\/2010"
+    },
+    {
+      "analytename": "total cholesterol",
+      "analytedate": "09\/17\/2010",
+      "value": "1000",
+      "description": "lipid panel",
+      "analyteid": 481
+    },
+    {
+      "analytename": "triglycerides",
+      "analytedate": "09\/17\/2010",
+      "value": "30",
+      "description": "lipid panel",
+      "analyteid": 482
+    },
+    {
+      "analytename": "HDL",
+      "analytedate": "09\/17\/2010",
+      "value": "500",
+      "description": "lipid panel",
+      "analyteid": 483
+    },
+    {
+      "analytename": "LDL",
+      "analytedate": "09\/17\/2010",
+      "value": "500",
+      "description": "lipid panel",
+      "analyteid": 484
+    },
+    {
+      "labresultstatus": "final",
+      "analytename": "WBC",
+      "analytedate": "01\/17\/2011",
+      "value": "7150",
+      "description": "wbc, auto, blood",
+      "analyteid": 2184
+    },
+    {
+      "analytename": "some lab",
+      "analyteid": 821,
+      "description": "LOINC",
+      "analytedate": "07\/29\/2011"
+    },
+    {
+      "analytename": "test test",
+      "analyteid": 841,
+      "description": "LOINC",
+      "analytedate": "07\/29\/2011"
+    },
+    {
+      "analytename": "foo",
+      "analyteid": 921,
+      "description": "LOINC",
+      "analytedate": "09\/12\/2011"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "test",
+      "analyteid": 941,
+      "analytedate": "09\/15\/2011"
+    },
+    {
+      "analytename": "LDL",
+      "analyteid": 961,
+      "description": "LOINC",
+      "analytedate": "09\/23\/2011"
+    },
+    {
+      "analytename": "HDL",
+      "analyteid": 962,
+      "description": "LOINC",
+      "analytedate": "09\/23\/2011"
+    },
+    {
+      "labresultstatus": "final",
+      "analytename": "INR",
+      "analytedate": "09\/23\/2011",
+      "value": "3",
+      "description": "INR-outside cm clinic",
+      "analyteid": 963
+    },
+    {
+      "labresultstatus": "final",
+      "analytename": "prothrombin time",
+      "analytedate": "09\/23\/2011",
+      "value": "20",
+      "description": "prothrombin time",
+      "analyteid": 964
+    },
+    {
+      "labresultstatus": "final",
+      "analytename": "WBC",
+      "analytedate": "01\/17\/2012",
+      "value": "7100",
+      "description": "wbc, auto, blood",
+      "analyteid": 2185
+    },
+    {
+      "description": "LOINC",
+      "analytename": "death",
+      "analyteid": 1121,
+      "analytedate": "06\/06\/2012"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "death by sms",
+      "analyteid": 1141,
+      "analytedate": "06\/07\/2012"
+    },
+    {
+      "analytename": "test",
+      "analyteid": 1201,
+      "description": "LOINC",
+      "analytedate": "06\/21\/2012"
+    },
+    {
+      "analytename": "insanity",
+      "analyteid": 1221,
+      "description": "LOINC",
+      "analytedate": "06\/22\/2012"
+    },
+    {
+      "analytename": "test",
+      "analyteid": 1241,
+      "description": "LOINC",
+      "analytedate": "06\/23\/2012"
+    },
+    {
+      "labresultstatus": "final",
+      "analytename": "A1C",
+      "analytedate": "08\/20\/2012",
+      "value": "23",
+      "description": "hemoglobin A1C",
+      "analyteid": 1321
+    },
+    {
+      "analytename": "A1C",
+      "analyteid": 1342,
+      "description": "LOINC",
+      "analytedate": "08\/21\/2012"
+    },
+    {
+      "labresultstatus": "final",
+      "analytename": "WBC",
+      "analytedate": "01\/17\/2013",
+      "value": "7200",
+      "description": "wbc, auto, blood",
+      "analyteid": 2186
+    },
+    {
+      "description": "LOINC",
+      "analytename": "albumin",
+      "analyteid": 7240,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "alk phos",
+      "analyteid": 7241,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "ALT(SGPT)",
+      "analyteid": 7242,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "AST(SGOT)",
+      "analyteid": 7243,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "bili total",
+      "analyteid": 7244,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "BUN",
+      "analyteid": 7245,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "calcium",
+      "analyteid": 7246,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "chloride",
+      "analyteid": 7247,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "cholesterol",
+      "analyteid": 7248,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "CO2",
+      "analyteid": 7249,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "albumin",
+      "analyteid": 7250,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "alk phos",
+      "analyteid": 7251,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "bili total",
+      "analyteid": 7252,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "calcium",
+      "analyteid": 7253,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "chloride",
+      "analyteid": 7254,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "cholesterol",
+      "analyteid": 7255,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "analytename": "creatinine",
+      "analyteid": 7256,
+      "description": "LOINC",
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "estimated glomerular filtration rate",
+      "analyteid": 7257,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "glucose",
+      "analyteid": 7258,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "HDL-cholesterol",
+      "analyteid": 7259,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "analytename": "hematocrit",
+      "analyteid": 7260,
+      "description": "LOINC",
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "hemoglobin",
+      "analyteid": 7261,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "LDL",
+      "analyteid": 7262,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "analytename": "platelet-CT",
+      "analyteid": 7263,
+      "description": "LOINC",
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "potassium",
+      "analyteid": 7264,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "sodium",
+      "analyteid": 7265,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "albumin",
+      "analyteid": 7266,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "alk phos",
+      "analyteid": 7267,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "bili total",
+      "analyteid": 7268,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "calcium",
+      "analyteid": 7269,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "chloride",
+      "analyteid": 7270,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "cholesterol",
+      "analyteid": 7271,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "analytename": "creatinine",
+      "analyteid": 7272,
+      "description": "LOINC",
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "estimated glomerular filtration rate",
+      "analyteid": 7273,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "glucose",
+      "analyteid": 7274,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "HDL-cholesterol",
+      "analyteid": 7275,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "analytename": "hematocrit",
+      "analyteid": 7276,
+      "description": "LOINC",
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "hemoglobin",
+      "analyteid": 7277,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "analytename": "platelet-CT",
+      "analyteid": 7278,
+      "description": "LOINC",
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "potassium",
+      "analyteid": 7279,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "sodium",
+      "analyteid": 7280,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "albumin",
+      "analyteid": 7281,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "alk phos",
+      "analyteid": 7282,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "bili total",
+      "analyteid": 7283,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "calcium",
+      "analyteid": 7284,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "chloride",
+      "analyteid": 7285,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "cholesterol",
+      "analyteid": 7286,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "analytename": "creatinine",
+      "analyteid": 7287,
+      "description": "LOINC",
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "estimated glomerular filtration rate",
+      "analyteid": 7288,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "glucose",
+      "analyteid": 7289,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "HDL-cholesterol",
+      "analyteid": 7290,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "analytename": "hematocrit",
+      "analyteid": 7291,
+      "description": "LOINC",
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "hemoglobin",
+      "analyteid": 7292,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "analytename": "platelet-CT",
+      "analyteid": 7293,
+      "description": "LOINC",
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "potassium",
+      "analyteid": 7294,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "sodium",
+      "analyteid": 7295,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "albumin",
+      "analyteid": 7296,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "alk phos",
+      "analyteid": 7297,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "bili total",
+      "analyteid": 7298,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "calcium",
+      "analyteid": 7299,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "chloride",
+      "analyteid": 7300,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "cholesterol",
+      "analyteid": 7301,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "analytename": "creatinine",
+      "analyteid": 7302,
+      "description": "LOINC",
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "estimated glomerular filtration rate",
+      "analyteid": 7303,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "glucose",
+      "analyteid": 7304,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "HDL-cholesterol",
+      "analyteid": 7305,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "analytename": "hematocrit",
+      "analyteid": 7306,
+      "description": "LOINC",
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "hemoglobin",
+      "analyteid": 7307,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "analytename": "platelet-CT",
+      "analyteid": 7308,
+      "description": "LOINC",
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "potassium",
+      "analyteid": 7309,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "sodium",
+      "analyteid": 7310,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "cholesterol",
+      "analyteid": 7311,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "HDL-cholesterol",
+      "analyteid": 7312,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "triglycerides",
+      "analyteid": 7313,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "glucose",
+      "analyteid": 7314,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "sodium",
+      "analyteid": 7315,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "potassium",
+      "analyteid": 7316,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "chloride",
+      "analyteid": 7317,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "analytename": "creatinine",
+      "analyteid": 7318,
+      "description": "LOINC",
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "estimated glomerular filtration rate",
+      "analyteid": 7319,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "calcium",
+      "analyteid": 7320,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "total protein",
+      "analyteid": 7321,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "albumin",
+      "analyteid": 7322,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "bili total",
+      "analyteid": 7323,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "alk phos",
+      "analyteid": 7324,
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "analytename": "WBC",
+      "analyteid": 7325,
+      "description": "LOINC",
+      "analytedate": "04\/23\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "cholesterol",
+      "analyteid": 7326,
+      "analytedate": "08\/26\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "HDL-cholesterol",
+      "analyteid": 7327,
+      "analytedate": "08\/26\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "LDL",
+      "analyteid": 7328,
+      "analytedate": "08\/26\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "triglycerides",
+      "analyteid": 7329,
+      "analytedate": "08\/26\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "glucose",
+      "analyteid": 7330,
+      "analytedate": "08\/26\/2013"
+    },
+    {
+      "analytename": "sodium",
+      "analyteid": 7331,
+      "description": "LOINC",
+      "analytedate": "08\/26\/2013"
+    },
+    {
+      "analytename": "potassium",
+      "analyteid": 7332,
+      "description": "LOINC",
+      "analytedate": "08\/26\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "chloride",
+      "analyteid": 7333,
+      "analytedate": "08\/26\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "CO2",
+      "analyteid": 7334,
+      "analytedate": "08\/26\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "BUN",
+      "analyteid": 7335,
+      "analytedate": "08\/26\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "creatinine",
+      "analyteid": 7336,
+      "analytedate": "08\/26\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "estimated glomerular filtration rate",
+      "analyteid": 7337,
+      "analytedate": "08\/26\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "calcium",
+      "analyteid": 7338,
+      "analytedate": "08\/26\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "total protein",
+      "analyteid": 7339,
+      "analytedate": "08\/26\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "albumin",
+      "analyteid": 7340,
+      "analytedate": "08\/26\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "bili total",
+      "analyteid": 7341,
+      "analytedate": "08\/26\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "alk phos",
+      "analyteid": 7342,
+      "analytedate": "08\/26\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "AST(SGOT)",
+      "analyteid": 7343,
+      "analytedate": "08\/26\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "ALT(SGPT)",
+      "analyteid": 7344,
+      "analytedate": "08\/26\/2013"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "hemoglobin",
+      "analyteid": 7345,
+      "analytedate": "08\/26\/2013"
+    },
+    {
+      "analytename": "glucose",
+      "analytedate": "10\/31\/2013",
+      "value": "94",
+      "description": "Glucose [Mass\/volume] in Serum or Plasma",
+      "loinc": "2345-7",
+      "analyteid": 7544,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "glucose",
+      "analytedate": "10\/31\/2013",
+      "value": "94",
+      "description": "Glucose [Mass\/volume] in Serum or Plasma",
+      "loinc": "2345-7",
+      "analyteid": 7545,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "glucose",
+      "analytedate": "10\/31\/2013",
+      "value": "94",
+      "description": "Glucose [Mass\/volume] in Serum or Plasma",
+      "loinc": "2345-7",
+      "analyteid": 7546,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "urea nitrogen (BUN)",
+      "analytedate": "10\/31\/2013",
+      "value": "14",
+      "description": "Urea nitrogen [Mass\/volume] in Serum or Plasma",
+      "loinc": "3094-0",
+      "analyteid": 7547,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "creatinine",
+      "analytedate": "10\/31\/2013",
+      "value": "0.73",
+      "description": "Creatinine [Mass\/volume] in Serum or Plasma",
+      "loinc": "2160-0",
+      "analyteid": 7548,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "eGFR non-afr. american",
+      "analytedate": "10\/31\/2013",
+      "value": "86",
+      "description": "Glomerular filtration rate\/1.73 sq M.predicted by Creatinine-based formula (MDRD)",
+      "loinc": "33914-3",
+      "analyteid": 7549,
+      "units": "mL\/min\/1.73M2"
+    },
+    {
+      "analytename": "eGFR african american",
+      "analytedate": "10\/31\/2013",
+      "value": "99",
+      "description": "Glomerular filtration rate\/1.73 sq M predicted among blacks by Creatinine-based formula (MDRD)",
+      "loinc": "48643-1",
+      "analyteid": 7550,
+      "units": "mL\/min\/1.73M2"
+    },
+    {
+      "analytename": "sodium",
+      "analytedate": "10\/31\/2013",
+      "value": "138",
+      "description": "Sodium [Moles\/volume] in Serum or Plasma",
+      "loinc": "2951-2",
+      "analyteid": 7551,
+      "units": "mmol\/L"
+    },
+    {
+      "analytename": "potassium",
+      "analytedate": "10\/31\/2013",
+      "value": "4.1",
+      "description": "Potassium [Moles\/volume] in Serum or Plasma",
+      "loinc": "2823-3",
+      "analyteid": 7552,
+      "units": "mmol\/L"
+    },
+    {
+      "analytename": "chloride",
+      "analytedate": "10\/31\/2013",
+      "value": "103",
+      "description": "Chloride [Moles\/volume] in Serum or Plasma",
+      "loinc": "2075-0",
+      "analyteid": 7553,
+      "units": "mmol\/L"
+    },
+    {
+      "analytename": "carbon dioxide",
+      "analytedate": "10\/31\/2013",
+      "value": "26",
+      "description": "Carbon dioxide, total [Moles\/volume] in Serum or Plasma",
+      "loinc": "2028-9",
+      "analyteid": 7554,
+      "units": "mmol\/L"
+    },
+    {
+      "analytename": "calcium",
+      "analytedate": "10\/31\/2013",
+      "value": "9.2",
+      "description": "Calcium [Mass\/volume] in Serum or Plasma",
+      "loinc": "17861-6",
+      "analyteid": 7555,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "protein, total",
+      "analytedate": "10\/31\/2013",
+      "value": "7.7",
+      "description": "Protein [Mass\/volume] in Serum or Plasma",
+      "loinc": "2885-2",
+      "analyteid": 7556,
+      "units": "g\/dL"
+    },
+    {
+      "analytename": "albumin",
+      "analytedate": "10\/31\/2013",
+      "value": "4.4",
+      "description": "Albumin [Mass\/volume] in Serum or Plasma",
+      "loinc": "1751-7",
+      "analyteid": 7557,
+      "units": "g\/dL"
+    },
+    {
+      "analytename": "globulin",
+      "analytedate": "10\/31\/2013",
+      "value": "3.3",
+      "description": "Globulin [Mass\/volume] in Serum by calculation",
+      "loinc": "10834-0",
+      "analyteid": 7558,
+      "units": "g\/dL (calc)"
+    },
+    {
+      "analytename": "albumin\/globulin ratio",
+      "analytedate": "10\/31\/2013",
+      "value": "1.3",
+      "description": "Albumin\/Globulin [Mass Ratio] in Serum or Plasma",
+      "loinc": "1759-0",
+      "analyteid": 7559,
+      "units": "(calc)"
+    },
+    {
+      "analytename": "bilirubin, total",
+      "analytedate": "10\/31\/2013",
+      "value": "0.4",
+      "description": "Bilirubin.total [Mass\/volume] in Serum or Plasma",
+      "loinc": "1975-2",
+      "analyteid": 7560,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "AST",
+      "analytedate": "10\/31\/2013",
+      "value": "16",
+      "description": "Aspartate aminotransferase [Enzymatic activity\/volume] in Serum or Plasma",
+      "loinc": "1920-8",
+      "analyteid": 7561,
+      "units": "U\/L"
+    },
+    {
+      "analytename": "ALT",
+      "analytedate": "10\/31\/2013",
+      "value": "9",
+      "description": "Alanine aminotransferase [Enzymatic activity\/volume] in Serum or Plasma",
+      "loinc": "1742-6",
+      "analyteid": 7562,
+      "units": "U\/L"
+    },
+    {
+      "analytename": "white blood cell count",
+      "analytedate": "10\/31\/2013",
+      "value": "5.4",
+      "description": "Leukocytes [#\/volume] in Blood by Automated count",
+      "loinc": "6690-2",
+      "analyteid": 7563,
+      "units": "thousand\/uL"
+    },
+    {
+      "analytename": "hematocrit",
+      "analytedate": "10\/31\/2013",
+      "value": "35.8",
+      "description": "Hematocrit [Volume Fraction] of Blood by Automated count",
+      "loinc": "4544-3",
+      "analyteid": 7564,
+      "units": "%"
+    },
+    {
+      "analytename": "monocytes",
+      "analytedate": "10\/31\/2013",
+      "value": "4.7",
+      "description": "Monocytes\/100 leukocytes in Blood by Automated count",
+      "loinc": "5905-5",
+      "analyteid": 7565,
+      "units": "%"
+    },
+    {
+      "analytename": "cholesterol, total",
+      "analytedate": "10\/31\/2013",
+      "value": "271",
+      "description": "Cholesterol [Mass\/volume] in Serum or Plasma",
+      "loinc": "2093-3",
+      "analyteid": 7566,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "HDL cholesterol",
+      "analytedate": "10\/31\/2013",
+      "value": "69",
+      "description": "Cholesterol in HDL [Mass\/volume] in Serum or Plasma",
+      "loinc": "2085-9",
+      "analyteid": 7567,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "triglycerides",
+      "analytedate": "10\/31\/2013",
+      "value": "91",
+      "description": "Triglyceride [Mass\/volume] in Serum or Plasma",
+      "loinc": "2571-8",
+      "analyteid": 7568,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "LDL-cholesterol",
+      "analytedate": "10\/31\/2013",
+      "value": "184",
+      "description": "Cholesterol in LDL [Mass\/volume] in Serum or Plasma by calculation",
+      "loinc": "13457-7",
+      "analyteid": 7569,
+      "units": "mg\/dL (calc)"
+    },
+    {
+      "analytename": "chol\/HDLC ratio",
+      "analytedate": "10\/31\/2013",
+      "value": "3.9",
+      "description": "Cholesterol in HDL\/Cholesterol.total [Mass Ratio] in Serum or Plasma",
+      "loinc": "2095-8",
+      "analyteid": 7570,
+      "units": "(calc)"
+    },
+    {
+      "analytename": "non-HDL cholesterol",
+      "analytedate": "10\/31\/2013",
+      "value": "202",
+      "description": "Cholesterol non HDL [Mass\/volume] in Serum or Plasma",
+      "loinc": "43396-1",
+      "analyteid": 7571,
+      "units": "mg\/dL (calc)"
+    },
+    {
+      "analytename": "creatinine, random urine",
+      "analytedate": "10\/31\/2013",
+      "value": "87",
+      "description": "Creatinine [Mass\/volume] in Urine",
+      "loinc": "2161-8",
+      "analyteid": 7572,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "protein\/creatinine ratio",
+      "analytedate": "10\/31\/2013",
+      "value": "46",
+      "description": "Protein\/Creatinine [Mass Ratio] in Urine",
+      "loinc": "2890-2",
+      "analyteid": 7573,
+      "units": "mg\/g creat"
+    },
+    {
+      "analytename": "protein, total, random ur",
+      "analytedate": "10\/31\/2013",
+      "value": "4",
+      "description": "Protein [Mass\/volume] in Urine",
+      "loinc": "2888-6",
+      "analyteid": 7574,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "specific gravity",
+      "analytedate": "10\/31\/2013",
+      "value": "1.012",
+      "description": "Specific gravity of Urine by Test strip",
+      "loinc": "5811-5",
+      "analyteid": 7575
+    },
+    {
+      "analytename": "pH",
+      "analytedate": "10\/31\/2013",
+      "value": "5.5",
+      "description": "pH of Urine by Test strip",
+      "loinc": "5803-2",
+      "analyteid": 7576
+    },
+    {
+      "labresultstatus": "final",
+      "analytename": "INR",
+      "analytedate": "01\/17\/2014",
+      "value": "4",
+      "description": "INR, plasma",
+      "analyteid": 2181
+    },
+    {
+      "labresultstatus": "final",
+      "analytename": "prothrombin time",
+      "analytedate": "01\/17\/2014",
+      "value": "16",
+      "description": "PT\/INR",
+      "analyteid": 2182
+    },
+    {
+      "labresultstatus": "final",
+      "analytename": "WBC",
+      "analytedate": "01\/17\/2014",
+      "value": "7150",
+      "description": "wbc, auto, blood",
+      "analyteid": 2187
+    },
+    {
+      "description": "LOINC",
+      "analytename": "cholesterol",
+      "analyteid": 7346,
+      "analytedate": "07\/01\/2014"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "HDL-cholesterol",
+      "analyteid": 7347,
+      "analytedate": "07\/01\/2014"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "LDL",
+      "analyteid": 7348,
+      "analytedate": "07\/01\/2014"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "triglycerides",
+      "analyteid": 7349,
+      "analytedate": "07\/01\/2014"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "glucose",
+      "analyteid": 7350,
+      "analytedate": "07\/01\/2014"
+    },
+    {
+      "analytename": "sodium",
+      "analyteid": 7351,
+      "description": "LOINC",
+      "analytedate": "07\/01\/2014"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "potassium",
+      "analyteid": 7352,
+      "analytedate": "07\/01\/2014"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "chloride",
+      "analyteid": 7353,
+      "analytedate": "07\/01\/2014"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "CO2",
+      "analyteid": 7354,
+      "analytedate": "07\/01\/2014"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "BUN",
+      "analyteid": 7355,
+      "analytedate": "07\/01\/2014"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "creatinine",
+      "analyteid": 7356,
+      "analytedate": "07\/01\/2014"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "estimated glomerular filtration rate",
+      "analyteid": 7357,
+      "analytedate": "07\/01\/2014"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "calcium",
+      "analyteid": 7358,
+      "analytedate": "07\/01\/2014"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "total protein",
+      "analyteid": 7359,
+      "analytedate": "07\/01\/2014"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "albumin",
+      "analyteid": 7360,
+      "analytedate": "07\/01\/2014"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "bili total",
+      "analyteid": 7361,
+      "analytedate": "07\/01\/2014"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "alk phos",
+      "analyteid": 7362,
+      "analytedate": "07\/01\/2014"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "AST(SGOT)",
+      "analyteid": 7363,
+      "analytedate": "07\/01\/2014"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "ALT(SGPT)",
+      "analyteid": 7364,
+      "analytedate": "07\/01\/2014"
+    },
+    {
+      "analytename": "A1C",
+      "analyteid": 1341,
+      "description": "LOINC",
+      "analytedate": "10\/16\/2014"
+    },
+    {
+      "analytename": "INR",
+      "analyteid": 1381,
+      "description": "LOINC",
+      "analytedate": "10\/16\/2014"
+    },
+    {
+      "analytename": "glucose",
+      "analytedate": "01\/19\/2015",
+      "value": "99",
+      "description": "Glucose [Mass\/volume] in Serum or Plasma",
+      "loinc": "2345-7",
+      "analyteid": 7577,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "urea nitrogen (BUN)",
+      "analytedate": "01\/19\/2015",
+      "value": "12",
+      "description": "Urea nitrogen [Mass\/volume] in Serum or Plasma",
+      "loinc": "3094-0",
+      "analyteid": 7578,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "creatinine",
+      "analytedate": "01\/19\/2015",
+      "value": "0.81",
+      "description": "Creatinine [Mass\/volume] in Serum or Plasma",
+      "loinc": "2160-0",
+      "analyteid": 7579,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "eGFR non-afr. american",
+      "analytedate": "01\/19\/2015",
+      "value": "75",
+      "description": "Glomerular filtration rate\/1.73 sq M.predicted by Creatinine-based formula (MDRD)",
+      "loinc": "33914-3",
+      "analyteid": 7580,
+      "units": "mL\/min\/1.73M2"
+    },
+    {
+      "analytename": "eGFR african american",
+      "analytedate": "01\/19\/2015",
+      "value": "87",
+      "description": "Glomerular filtration rate\/1.73 sq M predicted among blacks by Creatinine-based formula (MDRD)",
+      "loinc": "48643-1",
+      "analyteid": 7581,
+      "units": "mL\/min\/1.73M2"
+    },
+    {
+      "analytename": "sodium",
+      "analytedate": "01\/19\/2015",
+      "value": "140",
+      "description": "Sodium [Moles\/volume] in Serum or Plasma",
+      "loinc": "2951-2",
+      "analyteid": 7582,
+      "units": "mmol\/L"
+    },
+    {
+      "analytename": "potassium",
+      "analytedate": "01\/19\/2015",
+      "value": "4.2",
+      "description": "Potassium [Moles\/volume] in Serum or Plasma",
+      "loinc": "2823-3",
+      "analyteid": 7583,
+      "units": "mmol\/L"
+    },
+    {
+      "analytename": "chloride",
+      "analytedate": "01\/19\/2015",
+      "value": "102",
+      "description": "Chloride [Moles\/volume] in Serum or Plasma",
+      "loinc": "2075-0",
+      "analyteid": 7584,
+      "units": "mmol\/L"
+    },
+    {
+      "analytename": "carbon dioxide",
+      "analytedate": "01\/19\/2015",
+      "value": "31",
+      "description": "Carbon dioxide, total [Moles\/volume] in Serum or Plasma",
+      "loinc": "2028-9",
+      "analyteid": 7585,
+      "units": "mmol\/L"
+    },
+    {
+      "analytename": "protein, total",
+      "analytedate": "01\/19\/2015",
+      "value": "7.8",
+      "description": "Protein [Mass\/volume] in Serum or Plasma",
+      "loinc": "2885-2",
+      "analyteid": 7586,
+      "units": "g\/dL"
+    },
+    {
+      "analytename": "albumin",
+      "analytedate": "01\/19\/2015",
+      "value": "4.4",
+      "description": "Albumin [Mass\/volume] in Serum or Plasma",
+      "loinc": "1751-7",
+      "analyteid": 7587,
+      "units": "g\/dL"
+    },
+    {
+      "analytename": "globulin",
+      "analytedate": "01\/19\/2015",
+      "value": "3.4",
+      "description": "Globulin [Mass\/volume] in Serum by calculation",
+      "loinc": "10834-0",
+      "analyteid": 7588,
+      "units": "g\/dL (calc)"
+    },
+    {
+      "analytename": "albumin\/globulin ratio",
+      "analytedate": "01\/19\/2015",
+      "value": "1.3",
+      "description": "Albumin\/Globulin [Mass Ratio] in Serum or Plasma",
+      "loinc": "1759-0",
+      "analyteid": 7589,
+      "units": "(calc)"
+    },
+    {
+      "analytename": "bilirubin, total",
+      "analytedate": "01\/19\/2015",
+      "value": "0.4",
+      "description": "Bilirubin.total [Mass\/volume] in Serum or Plasma",
+      "loinc": "1975-2",
+      "analyteid": 7590,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "AST",
+      "analytedate": "01\/19\/2015",
+      "value": "20",
+      "description": "Aspartate aminotransferase [Enzymatic activity\/volume] in Serum or Plasma",
+      "loinc": "1920-8",
+      "analyteid": 7591,
+      "units": "U\/L"
+    },
+    {
+      "analytename": "ALT",
+      "analytedate": "01\/19\/2015",
+      "value": "13",
+      "description": "Alanine aminotransferase [Enzymatic activity\/volume] in Serum or Plasma",
+      "loinc": "1742-6",
+      "analyteid": 7592,
+      "units": "U\/L"
+    },
+    {
+      "analytename": "white blood cell count",
+      "analytedate": "01\/19\/2015",
+      "value": "6.8",
+      "description": "Leukocytes [#\/volume] in Blood by Automated count",
+      "loinc": "6690-2",
+      "analyteid": 7593,
+      "units": "thousand\/uL"
+    },
+    {
+      "analytename": "hematocrit",
+      "analytedate": "01\/19\/2015",
+      "value": "34.9",
+      "description": "Hematocrit [Volume Fraction] of Blood by Automated count",
+      "loinc": "4544-3",
+      "analyteid": 7594,
+      "units": "%"
+    },
+    {
+      "analytename": "monocytes",
+      "analytedate": "01\/19\/2015",
+      "value": "5",
+      "description": "Monocytes\/100 leukocytes in Blood by Automated count",
+      "loinc": "5905-5",
+      "analyteid": 7595,
+      "units": "%"
+    },
+    {
+      "analytename": "specific gravity",
+      "analytedate": "01\/19\/2015",
+      "value": "1.018",
+      "description": "Specific gravity of Urine by Test strip",
+      "loinc": "5811-5",
+      "analyteid": 7596
+    },
+    {
+      "analytename": "pH",
+      "analytedate": "01\/19\/2015",
+      "value": "6.5",
+      "description": "pH of Urine by Test strip",
+      "loinc": "5803-2",
+      "analyteid": 7597
+    },
+    {
+      "description": "LOINC",
+      "analytename": "BUN",
+      "analyteid": 7598,
+      "analytedate": "01\/19\/2015"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "estimated glomerular filtration rate",
+      "analyteid": 7599,
+      "analytedate": "01\/19\/2015"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "CO2",
+      "analyteid": 7600,
+      "analytedate": "01\/19\/2015"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "calcium",
+      "analyteid": 7601,
+      "analytedate": "01\/19\/2015"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "total protein",
+      "analyteid": 7602,
+      "analytedate": "01\/19\/2015"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "bili total",
+      "analyteid": 7603,
+      "analytedate": "01\/19\/2015"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "alk phos",
+      "analyteid": 7604,
+      "analytedate": "01\/19\/2015"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "AST(SGOT)",
+      "analyteid": 7605,
+      "analytedate": "01\/19\/2015"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "ALT(SGPT)",
+      "analyteid": 7606,
+      "analytedate": "01\/19\/2015"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "WBC",
+      "analyteid": 7607,
+      "analytedate": "01\/19\/2015"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "hemoglobin",
+      "analyteid": 7608,
+      "analytedate": "01\/19\/2015"
+    },
+    {
+      "analytename": "platelet-CT",
+      "analyteid": 7609,
+      "description": "LOINC",
+      "analytedate": "01\/19\/2015"
+    },
+    {
+      "analytename": "glucose",
+      "analytedate": "03\/23\/2015",
+      "value": "99",
+      "description": "Glucose [Mass\/volume] in Serum or Plasma",
+      "loinc": "2345-7",
+      "analyteid": 7610,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "urea nitrogen (BUN)",
+      "analytedate": "03\/23\/2015",
+      "value": "14",
+      "description": "Urea nitrogen [Mass\/volume] in Serum or Plasma",
+      "loinc": "3094-0",
+      "analyteid": 7611,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "creatinine",
+      "analytedate": "03\/23\/2015",
+      "value": "0.98",
+      "description": "Creatinine [Mass\/volume] in Serum or Plasma",
+      "loinc": "2160-0",
+      "analyteid": 7612,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "eGFR non-afr. american",
+      "analytedate": "03\/23\/2015",
+      "value": "60",
+      "description": "Glomerular filtration rate\/1.73 sq M.predicted by Creatinine-based formula (MDRD)",
+      "loinc": "33914-3",
+      "analyteid": 7613,
+      "units": "mL\/min\/1.73M2"
+    },
+    {
+      "analytename": "eGFR african american",
+      "analytedate": "03\/23\/2015",
+      "value": "69",
+      "description": "Glomerular filtration rate\/1.73 sq M predicted among blacks by Creatinine-based formula (MDRD)",
+      "loinc": "48643-1",
+      "analyteid": 7614,
+      "units": "mL\/min\/1.73M2"
+    },
+    {
+      "analytename": "sodium",
+      "analytedate": "03\/23\/2015",
+      "value": "138",
+      "description": "Sodium [Moles\/volume] in Serum or Plasma",
+      "loinc": "2951-2",
+      "analyteid": 7615,
+      "units": "mmol\/L"
+    },
+    {
+      "analytename": "potassium",
+      "analytedate": "03\/23\/2015",
+      "value": "4.5",
+      "description": "Potassium [Moles\/volume] in Serum or Plasma",
+      "loinc": "2823-3",
+      "analyteid": 7616,
+      "units": "mmol\/L"
+    },
+    {
+      "analytename": "chloride",
+      "analytedate": "03\/23\/2015",
+      "value": "101",
+      "description": "Chloride [Moles\/volume] in Serum or Plasma",
+      "loinc": "2075-0",
+      "analyteid": 7617,
+      "units": "mmol\/L"
+    },
+    {
+      "analytename": "carbon dioxide",
+      "analytedate": "03\/23\/2015",
+      "value": "29",
+      "description": "Carbon dioxide, total [Moles\/volume] in Serum or Plasma",
+      "loinc": "2028-9",
+      "analyteid": 7618,
+      "units": "mmol\/L"
+    },
+    {
+      "analytename": "calcium",
+      "analytedate": "03\/23\/2015",
+      "value": "9.8",
+      "description": "Calcium [Mass\/volume] in Serum or Plasma",
+      "loinc": "17861-6",
+      "analyteid": 7619,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "protein, total",
+      "analytedate": "03\/23\/2015",
+      "value": "7.4",
+      "description": "Protein [Mass\/volume] in Serum or Plasma",
+      "loinc": "2885-2",
+      "analyteid": 7620,
+      "units": "g\/dL"
+    },
+    {
+      "analytename": "albumin",
+      "analytedate": "03\/23\/2015",
+      "value": "4.1",
+      "description": "Albumin [Mass\/volume] in Serum or Plasma",
+      "loinc": "1751-7",
+      "analyteid": 7621,
+      "units": "g\/dL"
+    },
+    {
+      "analytename": "globulin",
+      "analytedate": "03\/23\/2015",
+      "value": "3.3",
+      "description": "Globulin [Mass\/volume] in Serum by calculation",
+      "loinc": "10834-0",
+      "analyteid": 7622,
+      "units": "g\/dL (calc)"
+    },
+    {
+      "analytename": "albumin\/globulin ratio",
+      "analytedate": "03\/23\/2015",
+      "value": "1.2",
+      "description": "Albumin\/Globulin [Mass Ratio] in Serum or Plasma",
+      "loinc": "1759-0",
+      "analyteid": 7623,
+      "units": "(calc)"
+    },
+    {
+      "analytename": "bilirubin, total",
+      "analytedate": "03\/23\/2015",
+      "value": "0.4",
+      "description": "Bilirubin.total [Mass\/volume] in Serum or Plasma",
+      "loinc": "1975-2",
+      "analyteid": 7624,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "AST",
+      "analytedate": "03\/23\/2015",
+      "value": "16",
+      "description": "Aspartate aminotransferase [Enzymatic activity\/volume] in Serum or Plasma",
+      "loinc": "1920-8",
+      "analyteid": 7625,
+      "units": "U\/L"
+    },
+    {
+      "analytename": "ALT",
+      "analytedate": "03\/23\/2015",
+      "value": "9",
+      "description": "Alanine aminotransferase [Enzymatic activity\/volume] in Serum or Plasma",
+      "loinc": "1742-6",
+      "analyteid": 7626,
+      "units": "U\/L"
+    },
+    {
+      "analytename": "white blood cell count",
+      "analytedate": "03\/23\/2015",
+      "value": "6",
+      "description": "Leukocytes [#\/volume] in Blood by Automated count",
+      "loinc": "6690-2",
+      "analyteid": 7627,
+      "units": "thousand\/uL"
+    },
+    {
+      "analytename": "hematocrit",
+      "analytedate": "03\/23\/2015",
+      "value": "34.5",
+      "description": "Hematocrit [Volume Fraction] of Blood by Automated count",
+      "loinc": "4544-3",
+      "analyteid": 7628,
+      "units": "%"
+    },
+    {
+      "analytename": "monocytes",
+      "analytedate": "03\/23\/2015",
+      "value": "6.4",
+      "description": "Monocytes\/100 leukocytes in Blood by Automated count",
+      "loinc": "5905-5",
+      "analyteid": 7629,
+      "units": "%"
+    },
+    {
+      "analytename": "creatinine, random urine",
+      "analytedate": "03\/23\/2015",
+      "value": "182",
+      "description": "Creatinine [Mass\/volume] in Urine",
+      "loinc": "2161-8",
+      "analyteid": 7630,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "protein\/creatinine ratio",
+      "analytedate": "03\/23\/2015",
+      "value": "44",
+      "description": "Protein\/Creatinine [Mass Ratio] in Urine",
+      "loinc": "2890-2",
+      "analyteid": 7631,
+      "units": "mg\/g creat"
+    },
+    {
+      "analytename": "protein, total, random ur",
+      "analytedate": "03\/23\/2015",
+      "value": "8",
+      "description": "Protein [Mass\/volume] in Urine",
+      "loinc": "2888-6",
+      "analyteid": 7632,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "specific gravity",
+      "analytedate": "03\/23\/2015",
+      "value": "1.015",
+      "description": "Specific gravity of Urine by Test strip",
+      "loinc": "5811-5",
+      "analyteid": 7633
+    },
+    {
+      "analytename": "pH",
+      "analytedate": "03\/23\/2015",
+      "value": "5.5",
+      "description": "pH of Urine by Test strip",
+      "loinc": "5803-2",
+      "analyteid": 7634
+    },
+    {
+      "analytename": "glucose",
+      "analytedate": "07\/17\/2015",
+      "value": "98",
+      "description": "Glucose [Mass\/volume] in Serum or Plasma",
+      "loinc": "2345-7",
+      "analyteid": 7635,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "urea nitrogen (BUN)",
+      "analytedate": "07\/17\/2015",
+      "value": "13",
+      "description": "Urea nitrogen [Mass\/volume] in Serum or Plasma",
+      "loinc": "3094-0",
+      "analyteid": 7636,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "creatinine",
+      "analytedate": "07\/17\/2015",
+      "value": "0.9",
+      "description": "Creatinine [Mass\/volume] in Serum or Plasma",
+      "loinc": "2160-0",
+      "analyteid": 7637,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "eGFR non-afr. american",
+      "analytedate": "07\/17\/2015",
+      "value": "66",
+      "description": "Glomerular filtration rate\/1.73 sq M.predicted by Creatinine-based formula (MDRD)",
+      "loinc": "33914-3",
+      "analyteid": 7638,
+      "units": "mL\/min\/1.73M2"
+    },
+    {
+      "analytename": "eGFR african american",
+      "analytedate": "07\/17\/2015",
+      "value": "77",
+      "description": "Glomerular filtration rate\/1.73 sq M predicted among blacks by Creatinine-based formula (MDRD)",
+      "loinc": "48643-1",
+      "analyteid": 7639,
+      "units": "mL\/min\/1.73M2"
+    },
+    {
+      "analytename": "sodium",
+      "analytedate": "07\/17\/2015",
+      "value": "138",
+      "description": "Sodium [Moles\/volume] in Serum or Plasma",
+      "loinc": "2951-2",
+      "analyteid": 7640,
+      "units": "mmol\/L"
+    },
+    {
+      "analytename": "potassium",
+      "analytedate": "07\/17\/2015",
+      "value": "4",
+      "description": "Potassium [Moles\/volume] in Serum or Plasma",
+      "loinc": "2823-3",
+      "analyteid": 7641,
+      "units": "mmol\/L"
+    },
+    {
+      "analytename": "chloride",
+      "analytedate": "07\/17\/2015",
+      "value": "101",
+      "description": "Chloride [Moles\/volume] in Serum or Plasma",
+      "loinc": "2075-0",
+      "analyteid": 7642,
+      "units": "mmol\/L"
+    },
+    {
+      "analytename": "carbon dioxide",
+      "analytedate": "07\/17\/2015",
+      "value": "30",
+      "description": "Carbon dioxide, total [Moles\/volume] in Serum or Plasma",
+      "loinc": "2028-9",
+      "analyteid": 7643,
+      "units": "mmol\/L"
+    },
+    {
+      "analytename": "calcium",
+      "analytedate": "07\/17\/2015",
+      "value": "9.3",
+      "description": "Calcium [Mass\/volume] in Serum or Plasma",
+      "loinc": "17861-6",
+      "analyteid": 7644,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "protein, total",
+      "analytedate": "07\/17\/2015",
+      "value": "7.3",
+      "description": "Protein [Mass\/volume] in Serum or Plasma",
+      "loinc": "2885-2",
+      "analyteid": 7645,
+      "units": "g\/dL"
+    },
+    {
+      "analytename": "albumin",
+      "analytedate": "07\/17\/2015",
+      "value": "4.1",
+      "description": "Albumin [Mass\/volume] in Serum or Plasma",
+      "loinc": "1751-7",
+      "analyteid": 7646,
+      "units": "g\/dL"
+    },
+    {
+      "analytename": "globulin",
+      "analytedate": "07\/17\/2015",
+      "value": "3.2",
+      "description": "Globulin [Mass\/volume] in Serum by calculation",
+      "loinc": "10834-0",
+      "analyteid": 7647,
+      "units": "g\/dL (calc)"
+    },
+    {
+      "analytename": "albumin\/globulin ratio",
+      "analytedate": "07\/17\/2015",
+      "value": "1.3",
+      "description": "Albumin\/Globulin [Mass Ratio] in Serum or Plasma",
+      "loinc": "1759-0",
+      "analyteid": 7648,
+      "units": "(calc)"
+    },
+    {
+      "analytename": "bilirubin, total",
+      "analytedate": "07\/17\/2015",
+      "value": "0.3",
+      "description": "Bilirubin.total [Mass\/volume] in Serum or Plasma",
+      "loinc": "1975-2",
+      "analyteid": 7649,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "AST",
+      "analytedate": "07\/17\/2015",
+      "value": "27",
+      "description": "Aspartate aminotransferase [Enzymatic activity\/volume] in Serum or Plasma",
+      "loinc": "1920-8",
+      "analyteid": 7650,
+      "units": "U\/L"
+    },
+    {
+      "analytename": "ALT",
+      "analytedate": "07\/17\/2015",
+      "value": "16",
+      "description": "Alanine aminotransferase [Enzymatic activity\/volume] in Serum or Plasma",
+      "loinc": "1742-6",
+      "analyteid": 7651,
+      "units": "U\/L"
+    },
+    {
+      "analytename": "creatinine, random urine",
+      "analytedate": "07\/17\/2015",
+      "value": "159",
+      "description": "Creatinine [Mass\/volume] in Urine",
+      "loinc": "2161-8",
+      "analyteid": 7652,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "protein\/creatinine ratio",
+      "analytedate": "07\/17\/2015",
+      "value": "50",
+      "description": "Protein\/Creatinine [Mass Ratio] in Urine",
+      "loinc": "2890-2",
+      "analyteid": 7653,
+      "units": "mg\/g creat"
+    },
+    {
+      "analytename": "protein, total, random ur",
+      "analytedate": "07\/17\/2015",
+      "value": "8",
+      "description": "Protein [Mass\/volume] in Urine",
+      "loinc": "2888-6",
+      "analyteid": 7654,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "white blood cell count",
+      "analytedate": "07\/17\/2015",
+      "value": "5.3",
+      "description": "Leukocytes [#\/volume] in Blood by Automated count",
+      "loinc": "6690-2",
+      "analyteid": 7655,
+      "units": "thousand\/uL"
+    },
+    {
+      "analytename": "hematocrit",
+      "analytedate": "07\/17\/2015",
+      "value": "34",
+      "description": "Hematocrit [Volume Fraction] of Blood by Automated count",
+      "loinc": "4544-3",
+      "analyteid": 7656,
+      "units": "%"
+    },
+    {
+      "analytename": "monocytes",
+      "analytedate": "07\/17\/2015",
+      "value": "5.2",
+      "description": "Monocytes\/100 leukocytes in Blood by Automated count",
+      "loinc": "5905-5",
+      "analyteid": 7657,
+      "units": "%"
+    },
+    {
+      "analytename": "specific gravity",
+      "analytedate": "07\/17\/2015",
+      "value": "1.018",
+      "description": "Specific gravity of Urine by Test strip",
+      "loinc": "5811-5",
+      "analyteid": 7658
+    },
+    {
+      "analytename": "pH",
+      "analytedate": "07\/17\/2015",
+      "value": "6",
+      "description": "pH of Urine by Test strip",
+      "loinc": "5803-2",
+      "analyteid": 7659
+    },
+    {
+      "description": "LOINC",
+      "analytename": "cholesterol total",
+      "analyteid": 7365,
+      "analytedate": "08\/17\/2015"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "HDL-cholesterol",
+      "analyteid": 7366,
+      "analytedate": "08\/17\/2015"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "triglycerides",
+      "analyteid": 7367,
+      "analytedate": "08\/17\/2015"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "LDL direct cholesterol",
+      "analyteid": 7368,
+      "analytedate": "08\/17\/2015"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "glucose",
+      "analyteid": 7369,
+      "analytedate": "08\/17\/2015"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "BUN",
+      "analyteid": 7370,
+      "analytedate": "08\/17\/2015"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "creatinine",
+      "analyteid": 7371,
+      "analytedate": "08\/17\/2015"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "eGFR non-aa",
+      "analyteid": 7372,
+      "analytedate": "08\/17\/2015"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "eGFR afr americ",
+      "analyteid": 7373,
+      "analytedate": "08\/17\/2015"
+    },
+    {
+      "analytename": "sodium",
+      "analyteid": 7374,
+      "description": "LOINC",
+      "analytedate": "08\/17\/2015"
+    },
+    {
+      "analytename": "potassium",
+      "analyteid": 7375,
+      "description": "LOINC",
+      "analytedate": "08\/17\/2015"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "chloride",
+      "analyteid": 7376,
+      "analytedate": "08\/17\/2015"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "CO2",
+      "analyteid": 7377,
+      "analytedate": "08\/17\/2015"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "calcium",
+      "analyteid": 7378,
+      "analytedate": "08\/17\/2015"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "total protein",
+      "analyteid": 7379,
+      "analytedate": "08\/17\/2015"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "albumin",
+      "analyteid": 7380,
+      "analytedate": "08\/17\/2015"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "bili total",
+      "analyteid": 7381,
+      "analytedate": "08\/17\/2015"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "alk phos",
+      "analyteid": 7382,
+      "analytedate": "08\/17\/2015"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "AST(SGOT)",
+      "analyteid": 7383,
+      "analytedate": "08\/17\/2015"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "ALT(SGPT)",
+      "analyteid": 7384,
+      "analytedate": "08\/17\/2015"
+    },
+    {
+      "analytename": "glucose",
+      "analytedate": "10\/08\/2015",
+      "value": "92",
+      "description": "Glucose [Mass\/volume] in Serum or Plasma",
+      "loinc": "2345-7",
+      "analyteid": 7660,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "urea nitrogen (BUN)",
+      "analytedate": "10\/08\/2015",
+      "value": "7",
+      "description": "Urea nitrogen [Mass\/volume] in Serum or Plasma",
+      "loinc": "3094-0",
+      "analyteid": 7661,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "creatinine",
+      "analytedate": "10\/08\/2015",
+      "value": "0.95",
+      "description": "Creatinine [Mass\/volume] in Serum or Plasma",
+      "loinc": "2160-0",
+      "analyteid": 7662,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "eGFR non-afr. american",
+      "analytedate": "10\/08\/2015",
+      "value": "62",
+      "description": "Glomerular filtration rate\/1.73 sq M.predicted by Creatinine-based formula (MDRD)",
+      "loinc": "33914-3",
+      "analyteid": 7663,
+      "units": "mL\/min\/1.73M2"
+    },
+    {
+      "analytename": "eGFR african american",
+      "analytedate": "10\/08\/2015",
+      "value": "71",
+      "description": "Glomerular filtration rate\/1.73 sq M predicted among blacks by Creatinine-based formula (MDRD)",
+      "loinc": "48643-1",
+      "analyteid": 7664,
+      "units": "mL\/min\/1.73M2"
+    },
+    {
+      "analytename": "sodium",
+      "analytedate": "10\/08\/2015",
+      "value": "139",
+      "description": "Sodium [Moles\/volume] in Serum or Plasma",
+      "loinc": "2951-2",
+      "analyteid": 7665,
+      "units": "mmol\/L"
+    },
+    {
+      "analytename": "potassium",
+      "analytedate": "10\/08\/2015",
+      "value": "4.2",
+      "description": "Potassium [Moles\/volume] in Serum or Plasma",
+      "loinc": "2823-3",
+      "analyteid": 7666,
+      "units": "mmol\/L"
+    },
+    {
+      "analytename": "chloride",
+      "analytedate": "10\/08\/2015",
+      "value": "103",
+      "description": "Chloride [Moles\/volume] in Serum or Plasma",
+      "loinc": "2075-0",
+      "analyteid": 7667,
+      "units": "mmol\/L"
+    },
+    {
+      "analytename": "carbon dioxide",
+      "analytedate": "10\/08\/2015",
+      "value": "25",
+      "description": "Carbon dioxide, total [Moles\/volume] in Serum or Plasma",
+      "loinc": "2028-9",
+      "analyteid": 7668,
+      "units": "mmol\/L"
+    },
+    {
+      "analytename": "calcium",
+      "analytedate": "10\/08\/2015",
+      "value": "9.3",
+      "description": "Calcium [Mass\/volume] in Serum or Plasma",
+      "loinc": "17861-6",
+      "analyteid": 7669,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "protein, total",
+      "analytedate": "10\/08\/2015",
+      "value": "7.6",
+      "description": "Protein [Mass\/volume] in Serum or Plasma",
+      "loinc": "2885-2",
+      "analyteid": 7670,
+      "units": "g\/dL"
+    },
+    {
+      "analytename": "albumin",
+      "analytedate": "10\/08\/2015",
+      "value": "4.2",
+      "description": "Albumin [Mass\/volume] in Serum or Plasma",
+      "loinc": "1751-7",
+      "analyteid": 7671,
+      "units": "g\/dL"
+    },
+    {
+      "analytename": "globulin",
+      "analytedate": "10\/08\/2015",
+      "value": "3.4",
+      "description": "Globulin [Mass\/volume] in Serum by calculation",
+      "loinc": "10834-0",
+      "analyteid": 7672,
+      "units": "g\/dL (calc)"
+    },
+    {
+      "analytename": "albumin\/globulin ratio",
+      "analytedate": "10\/08\/2015",
+      "value": "1.2",
+      "description": "Albumin\/Globulin [Mass Ratio] in Serum or Plasma",
+      "loinc": "1759-0",
+      "analyteid": 7673,
+      "units": "(calc)"
+    },
+    {
+      "analytename": "bilirubin, total",
+      "analytedate": "10\/08\/2015",
+      "value": "0.3",
+      "description": "Bilirubin.total [Mass\/volume] in Serum or Plasma",
+      "loinc": "1975-2",
+      "analyteid": 7674,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "AST",
+      "analytedate": "10\/08\/2015",
+      "value": "17",
+      "description": "Aspartate aminotransferase [Enzymatic activity\/volume] in Serum or Plasma",
+      "loinc": "1920-8",
+      "analyteid": 7675,
+      "units": "U\/L"
+    },
+    {
+      "analytename": "ALT",
+      "analytedate": "10\/08\/2015",
+      "value": "9",
+      "description": "Alanine aminotransferase [Enzymatic activity\/volume] in Serum or Plasma",
+      "loinc": "1742-6",
+      "analyteid": 7676,
+      "units": "U\/L"
+    },
+    {
+      "analytename": "white blood cell count",
+      "analytedate": "10\/08\/2015",
+      "value": "6.5",
+      "description": "Leukocytes [#\/volume] in Blood by Automated count",
+      "loinc": "6690-2",
+      "analyteid": 7677,
+      "units": "thousand\/uL"
+    },
+    {
+      "analytename": "hematocrit",
+      "analytedate": "10\/08\/2015",
+      "value": "35.6",
+      "description": "Hematocrit [Volume Fraction] of Blood by Automated count",
+      "loinc": "4544-3",
+      "analyteid": 7678,
+      "units": "%"
+    },
+    {
+      "analytename": "monocytes",
+      "analytedate": "10\/08\/2015",
+      "value": "2.6",
+      "description": "Monocytes\/100 leukocytes in Blood by Automated count",
+      "loinc": "5905-5",
+      "analyteid": 7679,
+      "units": "%"
+    },
+    {
+      "analytename": "creatinine, random urine",
+      "analytedate": "10\/08\/2015",
+      "value": "117",
+      "description": "Creatinine [Mass\/volume] in Urine",
+      "loinc": "2161-8",
+      "analyteid": 7680,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "protein\/creatinine ratio",
+      "analytedate": "10\/08\/2015",
+      "value": "60",
+      "description": "Protein\/Creatinine [Mass Ratio] in Urine",
+      "loinc": "2890-2",
+      "analyteid": 7681,
+      "units": "mg\/g creat"
+    },
+    {
+      "analytename": "protein, total, random ur",
+      "analytedate": "10\/08\/2015",
+      "value": "7",
+      "description": "Protein [Mass\/volume] in Urine",
+      "loinc": "2888-6",
+      "analyteid": 7682,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "specific gravity",
+      "analytedate": "10\/08\/2015",
+      "value": "1.01",
+      "description": "Specific gravity of Urine by Test strip",
+      "loinc": "5811-5",
+      "analyteid": 7683
+    },
+    {
+      "analytename": "pH",
+      "analytedate": "10\/08\/2015",
+      "value": "5.5",
+      "description": "pH of Urine by Test strip",
+      "loinc": "5803-2",
+      "analyteid": 7684
+    },
+    {
+      "description": "LOINC",
+      "analytename": "WBC",
+      "analyteid": 7385,
+      "analytedate": "01\/05\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "hemoglobin",
+      "analyteid": 7386,
+      "analytedate": "01\/05\/2016"
+    },
+    {
+      "analytename": "hematocrit",
+      "analyteid": 7387,
+      "description": "LOINC",
+      "analytedate": "01\/05\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "platelet-CT",
+      "analyteid": 7388,
+      "analytedate": "01\/05\/2016"
+    },
+    {
+      "analytename": "sodium",
+      "analyteid": 7389,
+      "description": "LOINC",
+      "analytedate": "01\/05\/2016"
+    },
+    {
+      "analytename": "potassium",
+      "analyteid": 7390,
+      "description": "LOINC",
+      "analytedate": "01\/05\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "chloride",
+      "analyteid": 7391,
+      "analytedate": "01\/05\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "CO2",
+      "analyteid": 7392,
+      "analytedate": "01\/05\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "anion gap",
+      "analyteid": 7393,
+      "analytedate": "01\/05\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "glucose",
+      "analyteid": 7394,
+      "analytedate": "01\/05\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "BUN",
+      "analyteid": 7395,
+      "analytedate": "01\/05\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "creatinine",
+      "analyteid": 7396,
+      "analytedate": "01\/05\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "calcium",
+      "analyteid": 7397,
+      "analytedate": "01\/05\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "total protein",
+      "analyteid": 7398,
+      "analytedate": "01\/05\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "albumin",
+      "analyteid": 7399,
+      "analytedate": "01\/05\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "alk phos",
+      "analyteid": 7400,
+      "analytedate": "01\/05\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "AST(SGOT)",
+      "analyteid": 7401,
+      "analytedate": "01\/05\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "ALT(SGPT)",
+      "analyteid": 7402,
+      "analytedate": "01\/05\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "bili total",
+      "analyteid": 7403,
+      "analytedate": "01\/05\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "glucose",
+      "analyteid": 7404,
+      "analytedate": "03\/14\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "BUN",
+      "analyteid": 7405,
+      "analytedate": "03\/14\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "creatinine",
+      "analyteid": 7406,
+      "analytedate": "03\/14\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "eGFR non-aa",
+      "analyteid": 7407,
+      "analytedate": "03\/14\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "eGFR afr americ",
+      "analyteid": 7408,
+      "analytedate": "03\/14\/2016"
+    },
+    {
+      "analytename": "sodium",
+      "analyteid": 7409,
+      "description": "LOINC",
+      "analytedate": "03\/14\/2016"
+    },
+    {
+      "analytename": "potassium",
+      "analyteid": 7410,
+      "description": "LOINC",
+      "analytedate": "03\/14\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "chloride",
+      "analyteid": 7411,
+      "analytedate": "03\/14\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "CO2",
+      "analyteid": 7412,
+      "analytedate": "03\/14\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "calcium",
+      "analyteid": 7413,
+      "analytedate": "03\/14\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "total protein",
+      "analyteid": 7414,
+      "analytedate": "03\/14\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "albumin",
+      "analyteid": 7415,
+      "analytedate": "03\/14\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "bili total",
+      "analyteid": 7416,
+      "analytedate": "03\/14\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "alk phos",
+      "analyteid": 7417,
+      "analytedate": "03\/14\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "AST(SGOT)",
+      "analyteid": 7418,
+      "analytedate": "03\/14\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "ALT(SGPT)",
+      "analyteid": 7419,
+      "analytedate": "03\/14\/2016"
+    },
+    {
+      "analytename": "WBC",
+      "analyteid": 7420,
+      "description": "LOINC",
+      "analytedate": "03\/14\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "hemoglobin",
+      "analyteid": 7421,
+      "analytedate": "03\/14\/2016"
+    },
+    {
+      "analytename": "hematocrit",
+      "analyteid": 7422,
+      "description": "LOINC",
+      "analytedate": "03\/14\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "platelet-CT",
+      "analyteid": 7423,
+      "analytedate": "03\/14\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "sed rate,wstrgn",
+      "analyteid": 7424,
+      "analytedate": "03\/14\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "HGB A1C",
+      "analyteid": 7231,
+      "analytedate": "07\/11\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "HGB A1C",
+      "analyteid": 7232,
+      "analytedate": "07\/12\/2016"
+    },
+    {
+      "analytename": "HGB A1C",
+      "analytedate": "07\/12\/2016",
+      "value": "5",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "analyteid": 7233,
+      "units": "%"
+    },
+    {
+      "analytename": "HGB A1C",
+      "analytedate": "07\/24\/2016",
+      "value": "5",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "analyteid": 7234,
+      "units": "%"
+    },
+    {
+      "analytename": "HGB A1C",
+      "analytedate": "07\/25\/2016",
+      "value": "5",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "analyteid": 7235,
+      "units": "%"
+    },
+    {
+      "analytename": "HGB A1C",
+      "analytedate": "07\/27\/2016",
+      "value": "5",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "analyteid": 7236,
+      "units": "%"
+    },
+    {
+      "analytename": "HGB A1C",
+      "analytedate": "07\/28\/2016",
+      "value": "5",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "analyteid": 7237,
+      "units": "%"
+    },
+    {
+      "analytename": "HGB A1C",
+      "analytedate": "07\/29\/2016",
+      "value": "5",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "analyteid": 7238,
+      "units": "%"
+    },
+    {
+      "analytename": "HGB A1C",
+      "analytedate": "07\/30\/2016",
+      "value": "5",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "analyteid": 7239,
+      "units": "%"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "hemoglobin A1C %",
+      "analyteid": 7425,
+      "analytedate": "08\/23\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "cholesterol total",
+      "analyteid": 7426,
+      "analytedate": "08\/23\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "HDL-cholesterol",
+      "analyteid": 7427,
+      "analytedate": "08\/23\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "triglycerides",
+      "analyteid": 7428,
+      "analytedate": "08\/23\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "LDL direct cholesterol",
+      "analyteid": 7429,
+      "analytedate": "08\/23\/2016"
+    },
+    {
+      "valuestatus": "high",
+      "resultstatus": "final",
+      "abnormalhl7name": "High",
+      "analytename": "HGB A1C",
+      "referencerange": "4-6",
+      "analytedate": "11\/08\/2016",
+      "value": "6.4",
+      "abnormalhl7code": "H",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "high",
+      "note": "example note",
+      "analyteid": 5023,
+      "units": "%"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "HGB A1C",
+      "analyteid": 5064,
+      "analytedate": "11\/21\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "HGB A1C",
+      "analyteid": 5065,
+      "analytedate": "11\/21\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "HGB A1C",
+      "analyteid": 5066,
+      "analytedate": "11\/21\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "HGB A1C",
+      "analyteid": 5063,
+      "analytedate": "11\/22\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "creatinine,random urine",
+      "analyteid": 7430,
+      "analytedate": "12\/20\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "microalbumin,random urine",
+      "analyteid": 7431,
+      "analytedate": "12\/20\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "microalbumin\/creatinine ur",
+      "analyteid": 7432,
+      "analytedate": "12\/20\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "cholesterol total",
+      "analyteid": 7433,
+      "analytedate": "12\/20\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "HDL-cholesterol",
+      "analyteid": 7434,
+      "analytedate": "12\/20\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "triglycerides",
+      "analyteid": 7435,
+      "analytedate": "12\/20\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "LDL direct cholesterol",
+      "analyteid": 7436,
+      "analytedate": "12\/20\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "chol\/HDL ratio",
+      "analyteid": 7437,
+      "analytedate": "12\/20\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "glucose",
+      "analyteid": 7438,
+      "analytedate": "12\/20\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "BUN",
+      "analyteid": 7439,
+      "analytedate": "12\/20\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "creatinine",
+      "analyteid": 7440,
+      "analytedate": "12\/20\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "eGFR non-aa",
+      "analyteid": 7441,
+      "analytedate": "12\/20\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "eGFR afr americ",
+      "analyteid": 7442,
+      "analytedate": "12\/20\/2016"
+    },
+    {
+      "analytename": "sodium",
+      "analyteid": 7443,
+      "description": "LOINC",
+      "analytedate": "12\/20\/2016"
+    },
+    {
+      "analytename": "potassium",
+      "analyteid": 7444,
+      "description": "LOINC",
+      "analytedate": "12\/20\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "chloride",
+      "analyteid": 7445,
+      "analytedate": "12\/20\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "CO2",
+      "analyteid": 7446,
+      "analytedate": "12\/20\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "calcium",
+      "analyteid": 7447,
+      "analytedate": "12\/20\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "total protein",
+      "analyteid": 7448,
+      "analytedate": "12\/20\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "albumin",
+      "analyteid": 7449,
+      "analytedate": "12\/20\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "globulin",
+      "analyteid": 7450,
+      "analytedate": "12\/20\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "A\/G ratio",
+      "analyteid": 7451,
+      "analytedate": "12\/20\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "bili total",
+      "analyteid": 7452,
+      "analytedate": "12\/20\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "alk phos",
+      "analyteid": 7453,
+      "analytedate": "12\/20\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "AST(SGOT)",
+      "analyteid": 7454,
+      "analytedate": "12\/20\/2016"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "ALT(SGPT)",
+      "analyteid": 7455,
+      "analytedate": "12\/20\/2016"
+    },
+    {
+      "analytename": "hemoglobin A1C %",
+      "analyteid": 7456,
+      "description": "LOINC",
+      "analytedate": "12\/20\/2016"
+    },
+    {
+      "analytename": "WBC",
+      "analytedate": "03\/20\/2017",
+      "value": "6.3",
+      "description": "Leukocytes [#\/volume] in Blood by Automated count",
+      "loinc": "6690-2",
+      "analyteid": 7685,
+      "units": "x10e3\/uL"
+    },
+    {
+      "analytename": "hematocrit",
+      "analytedate": "03\/20\/2017",
+      "value": "33.4",
+      "description": "Hematocrit [Volume Fraction] of Blood by Automated count",
+      "loinc": "4544-3",
+      "analyteid": 7686,
+      "units": "%"
+    },
+    {
+      "analytename": "monocytes",
+      "analytedate": "03\/20\/2017",
+      "value": "6",
+      "description": "Monocytes\/100 leukocytes in Blood by Automated count",
+      "loinc": "5905-5",
+      "analyteid": 7687,
+      "units": "%"
+    },
+    {
+      "analytename": "immature granulocytes",
+      "analytedate": "03\/20\/2017",
+      "description": "Granulocytes Immature\/100 leukocytes in Blood",
+      "loinc": "38518-7",
+      "analyteid": 7688,
+      "units": "%"
+    },
+    {
+      "analytename": "immature grans (abs)",
+      "analytedate": "03\/20\/2017",
+      "description": "Granulocytes Immature [#\/volume] in Blood",
+      "loinc": "51584-1",
+      "analyteid": 7689,
+      "units": "x10e3\/uL"
+    },
+    {
+      "analytename": "glucose, serum",
+      "analytedate": "03\/20\/2017",
+      "value": "104",
+      "description": "Glucose [Mass\/volume] in Serum or Plasma",
+      "loinc": "2345-7",
+      "analyteid": 7690,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "BUN",
+      "analytedate": "03\/20\/2017",
+      "value": "13",
+      "description": "Urea nitrogen [Mass\/volume] in Serum or Plasma",
+      "loinc": "3094-0",
+      "analyteid": 7691,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "creatinine, serum",
+      "analytedate": "03\/20\/2017",
+      "value": "0.93",
+      "description": "Creatinine [Mass\/volume] in Serum or Plasma",
+      "loinc": "2160-0",
+      "analyteid": 7692,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "eGFR if nonafricn AM",
+      "analytedate": "03\/20\/2017",
+      "value": "63",
+      "description": "Glomerular filtration rate\/1.73 sq M predicted among non-blacks by Creatinine-based formula (MDRD)",
+      "loinc": "48642-3",
+      "analyteid": 7693,
+      "units": "mL\/min\/1.73"
+    },
+    {
+      "analytename": "eGFR if africn AM",
+      "analytedate": "03\/20\/2017",
+      "value": "73",
+      "description": "Glomerular filtration rate\/1.73 sq M predicted among blacks by Creatinine-based formula (MDRD)",
+      "loinc": "48643-1",
+      "analyteid": 7694,
+      "units": "mL\/min\/1.73"
+    },
+    {
+      "analytename": "BUN\/creatinine ratio",
+      "analytedate": "03\/20\/2017",
+      "value": "14",
+      "description": "Urea nitrogen\/Creatinine [Mass Ratio] in Serum or Plasma",
+      "loinc": "3097-3",
+      "analyteid": 7695,
+      "units": "ratio"
+    },
+    {
+      "analytename": "sodium, serum",
+      "analytedate": "03\/20\/2017",
+      "value": "141",
+      "description": "Sodium [Moles\/volume] in Serum or Plasma",
+      "loinc": "2951-2",
+      "analyteid": 7696,
+      "units": "mmol\/L"
+    },
+    {
+      "analytename": "potassium, serum",
+      "analytedate": "03\/20\/2017",
+      "value": "4.2",
+      "description": "Potassium [Moles\/volume] in Serum or Plasma",
+      "loinc": "2823-3",
+      "analyteid": 7697,
+      "units": "mmol\/L"
+    },
+    {
+      "analytename": "chloride, serum",
+      "analytedate": "03\/20\/2017",
+      "value": "99",
+      "description": "Chloride [Moles\/volume] in Serum or Plasma",
+      "loinc": "2075-0",
+      "analyteid": 7698,
+      "units": "mmol\/L"
+    },
+    {
+      "analytename": "carbon dioxide, total",
+      "analytedate": "03\/20\/2017",
+      "value": "25",
+      "description": "Carbon dioxide, total [Moles\/volume] in Serum or Plasma",
+      "loinc": "2028-9",
+      "analyteid": 7699,
+      "units": "mmol\/L"
+    },
+    {
+      "analytename": "calcium, serum",
+      "analytedate": "03\/20\/2017",
+      "value": "9.6",
+      "description": "Calcium [Mass\/volume] in Serum or Plasma",
+      "loinc": "17861-6",
+      "analyteid": 7700,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "protein, total, serum",
+      "analytedate": "03\/20\/2017",
+      "value": "7.7",
+      "description": "Protein [Mass\/volume] in Serum or Plasma",
+      "loinc": "2885-2",
+      "analyteid": 7701,
+      "units": "g\/dL"
+    },
+    {
+      "analytename": "albumin, serum",
+      "analytedate": "03\/20\/2017",
+      "value": "4.2",
+      "description": "Albumin [Mass\/volume] in Serum or Plasma",
+      "loinc": "1751-7",
+      "analyteid": 7702,
+      "units": "g\/dL"
+    },
+    {
+      "analytename": "globulin, total",
+      "analytedate": "03\/20\/2017",
+      "value": "3.5",
+      "description": "Globulin [Mass\/volume] in Serum by calculation",
+      "loinc": "10834-0",
+      "analyteid": 7703,
+      "units": "g\/dL"
+    },
+    {
+      "analytename": "A\/G ratio",
+      "analytedate": "03\/20\/2017",
+      "value": "1.2",
+      "description": "Albumin\/Globulin [Mass Ratio] in Serum or Plasma",
+      "loinc": "1759-0",
+      "analyteid": 7704,
+      "units": "ratio"
+    },
+    {
+      "analytename": "bilirubin, total",
+      "analytedate": "03\/20\/2017",
+      "value": "0.3",
+      "description": "Bilirubin.total [Mass\/volume] in Serum or Plasma",
+      "loinc": "1975-2",
+      "analyteid": 7705,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "AST (SGOT)",
+      "analytedate": "03\/20\/2017",
+      "value": "20",
+      "description": "Aspartate aminotransferase [Enzymatic activity\/volume] in Serum or Plasma",
+      "loinc": "1920-8",
+      "analyteid": 7706,
+      "units": "IU\/L"
+    },
+    {
+      "analytename": "ALT (SGPT)",
+      "analytedate": "03\/20\/2017",
+      "value": "10",
+      "description": "Alanine aminotransferase [Enzymatic activity\/volume] in Serum or Plasma",
+      "loinc": "1742-6",
+      "analyteid": 7707,
+      "units": "IU\/L"
+    },
+    {
+      "analytename": "specific gravity",
+      "analytedate": "03\/20\/2017",
+      "value": "1.011",
+      "description": "Specific gravity of Urine",
+      "loinc": "2965-2",
+      "analyteid": 7708
+    },
+    {
+      "analytename": "pH",
+      "analytedate": "03\/20\/2017",
+      "value": "6",
+      "description": "pH of Urine by Test strip",
+      "loinc": "5803-2",
+      "analyteid": 7709
+    },
+    {
+      "analytename": "urobilinogen,semi-qn",
+      "analytedate": "03\/20\/2017",
+      "value": "0.2",
+      "description": "Urobilinogen [Mass\/volume] in Urine by Test strip",
+      "loinc": "20405-7",
+      "analyteid": 7710,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "creatinine, urine",
+      "analytedate": "03\/20\/2017",
+      "value": "90",
+      "description": "Creatinine [Mass\/volume] in Urine",
+      "loinc": "2161-8",
+      "analyteid": 7711,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "protein,total,urine",
+      "analytedate": "03\/20\/2017",
+      "value": "6.2",
+      "description": "Protein [Mass\/volume] in Urine",
+      "loinc": "2888-6",
+      "analyteid": 7712,
+      "units": "mg\/dL"
+    },
+    {
+      "analytename": "protein\/creat ratio",
+      "analytedate": "03\/20\/2017",
+      "value": "69",
+      "description": "Protein\/Creatinine [Mass Ratio] in Urine",
+      "loinc": "2890-2",
+      "analyteid": 7713,
+      "units": "mg\/g creat"
+    },
+    {
+      "analytename": "cholest serpl-mcnc",
+      "analytedate": "05\/04\/2017",
+      "value": "141.0",
+      "description": "Cholesterol [Mass\/volume] in Serum or Plasma",
+      "loinc": "2093-3",
+      "analyteid": 5334,
+      "units": "mg\/dL"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "glucose",
+      "analyteid": 7457,
+      "analytedate": "06\/27\/2017"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "BUN",
+      "analyteid": 7458,
+      "analytedate": "06\/27\/2017"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "creatinine",
+      "analyteid": 7459,
+      "analytedate": "06\/27\/2017"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "eGFR non-aa",
+      "analyteid": 7460,
+      "analytedate": "06\/27\/2017"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "eGFR afr americ",
+      "analyteid": 7461,
+      "analytedate": "06\/27\/2017"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "BUN\/creat ratio",
+      "analyteid": 7462,
+      "analytedate": "06\/27\/2017"
+    },
+    {
+      "analytename": "sodium",
+      "analyteid": 7463,
+      "description": "LOINC",
+      "analytedate": "06\/27\/2017"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "potassium",
+      "analyteid": 7464,
+      "analytedate": "06\/27\/2017"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "chloride",
+      "analyteid": 7465,
+      "analytedate": "06\/27\/2017"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "CO2",
+      "analyteid": 7466,
+      "analytedate": "06\/27\/2017"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "calcium",
+      "analyteid": 7467,
+      "analytedate": "06\/27\/2017"
+    },
+    {
+      "analytename": "HGB A1C",
+      "analytedate": "10\/03\/2017",
+      "value": "5",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "analyteid": 7229,
+      "units": "%"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "HGB A1C",
+      "analyteid": 7230,
+      "analytedate": "10\/03\/2017"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "glucose",
+      "analyteid": 7468,
+      "analytedate": "10\/05\/2017"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "BUN",
+      "analyteid": 7469,
+      "analytedate": "10\/05\/2017"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "creatinine",
+      "analyteid": 7470,
+      "analytedate": "10\/05\/2017"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "eGFR non-aa",
+      "analyteid": 7471,
+      "analytedate": "10\/05\/2017"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "eGFR afr americ",
+      "analyteid": 7472,
+      "analytedate": "10\/05\/2017"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "BUN\/creat ratio",
+      "analyteid": 7473,
+      "analytedate": "10\/05\/2017"
+    },
+    {
+      "analytename": "sodium",
+      "analyteid": 7474,
+      "description": "LOINC",
+      "analytedate": "10\/05\/2017"
+    },
+    {
+      "analytename": "potassium",
+      "analyteid": 7475,
+      "description": "LOINC",
+      "analytedate": "10\/05\/2017"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "chloride",
+      "analyteid": 7476,
+      "analytedate": "10\/05\/2017"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "CO2",
+      "analyteid": 7477,
+      "analytedate": "10\/05\/2017"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "calcium",
+      "analyteid": 7478,
+      "analytedate": "10\/05\/2017"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "total protein",
+      "analyteid": 7479,
+      "analytedate": "10\/05\/2017"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "albumin",
+      "analyteid": 7480,
+      "analytedate": "10\/05\/2017"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "globulin",
+      "analyteid": 7481,
+      "analytedate": "10\/05\/2017"
+    },
+    {
+      "analytename": "A\/G ratio",
+      "analyteid": 7482,
+      "description": "LOINC",
+      "analytedate": "10\/05\/2017"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "bili total",
+      "analyteid": 7483,
+      "analytedate": "10\/05\/2017"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "alk phos",
+      "analyteid": 7484,
+      "analytedate": "10\/05\/2017"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "AST(SGOT)",
+      "analyteid": 7485,
+      "analytedate": "10\/05\/2017"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "ALT(SGPT)",
+      "analyteid": 7486,
+      "analytedate": "10\/05\/2017"
+    },
+    {
+      "analytename": "urine specific gravity",
+      "analyteid": 7487,
+      "description": "LOINC",
+      "analytedate": "10\/05\/2017"
+    },
+    {
+      "analytename": "urine pH",
+      "analyteid": 7488,
+      "description": "LOINC",
+      "analytedate": "10\/05\/2017"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "urobilinogen",
+      "analyteid": 7489,
+      "analytedate": "10\/05\/2017"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "cholesterol total",
+      "analyteid": 7490,
+      "analytedate": "10\/05\/2017"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "triglycerides",
+      "analyteid": 7491,
+      "analytedate": "10\/05\/2017"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "HDL-cholesterol",
+      "analyteid": 7492,
+      "analytedate": "10\/05\/2017"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "VLDL",
+      "analyteid": 7493,
+      "analytedate": "10\/05\/2017"
+    },
+    {
+      "analytename": "LDL direct cholesterol (calc)",
+      "analyteid": 7494,
+      "description": "LOINC",
+      "analytedate": "10\/05\/2017"
+    },
+    {
+      "analytename": "hemoglobin A1C %",
+      "analyteid": 7495,
+      "description": "LOINC",
+      "analytedate": "10\/05\/2017"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "WBC",
+      "analyteid": 7496,
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "RBC",
+      "analyteid": 7497,
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "hemoglobin",
+      "analyteid": 7498,
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "analytename": "hematocrit",
+      "analyteid": 7499,
+      "description": "LOINC",
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "analytename": "MCV",
+      "analyteid": 7500,
+      "description": "LOINC",
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "MCH",
+      "analyteid": 7501,
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "MCHC",
+      "analyteid": 7502,
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "analytename": "RDW",
+      "analyteid": 7503,
+      "description": "LOINC",
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "platelet-CT",
+      "analyteid": 7504,
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "analytename": "neutrophils",
+      "analyteid": 7505,
+      "description": "LOINC",
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "lymph,man",
+      "analyteid": 7506,
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "monocytes",
+      "analyteid": 7507,
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "eosinophils",
+      "analyteid": 7508,
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "analytename": "basophils",
+      "analyteid": 7509,
+      "description": "LOINC",
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "neutrophils-abs",
+      "analyteid": 7510,
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "analytename": "lymphocytes, absolute",
+      "analyteid": 7511,
+      "description": "LOINC",
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "monocytes-abs",
+      "analyteid": 7512,
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "eosinophils-abs",
+      "analyteid": 7513,
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "analytename": "basophils-abs",
+      "analyteid": 7514,
+      "description": "LOINC",
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "glucose",
+      "analyteid": 7515,
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "BUN",
+      "analyteid": 7516,
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "creatinine",
+      "analyteid": 7517,
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "eGFR non-aa",
+      "analyteid": 7518,
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "eGFR afr americ",
+      "analyteid": 7519,
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "BUN\/creat ratio",
+      "analyteid": 7520,
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "analytename": "sodium",
+      "analyteid": 7521,
+      "description": "LOINC",
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "analytename": "potassium",
+      "analyteid": 7522,
+      "description": "LOINC",
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "chloride",
+      "analyteid": 7523,
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "CO2",
+      "analyteid": 7524,
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "calcium",
+      "analyteid": 7525,
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "total protein",
+      "analyteid": 7526,
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "albumin",
+      "analyteid": 7527,
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "globulin",
+      "analyteid": 7528,
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "analytename": "A\/G ratio",
+      "analyteid": 7529,
+      "description": "LOINC",
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "bili total",
+      "analyteid": 7530,
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "alk phos",
+      "analyteid": 7531,
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "AST(SGOT)",
+      "analyteid": 7532,
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "ALT(SGPT)",
+      "analyteid": 7533,
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "cholesterol total",
+      "analyteid": 7534,
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "triglycerides",
+      "analyteid": 7535,
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "HDL-cholesterol",
+      "analyteid": 7536,
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "VLDL",
+      "analyteid": 7537,
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "analytename": "LDL direct cholesterol (calc)",
+      "analyteid": 7538,
+      "description": "LOINC",
+      "analytedate": "01\/15\/2018"
+    },
+    {
+      "analytename": "dark knight",
+      "analyteid": 6983,
+      "description": "LOINC",
+      "analytedate": "03\/22\/2018"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "03\/22\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 6984,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "03\/22\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 6985,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "03\/28\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 6986,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "03\/28\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 6987,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "03\/28\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 6988,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "03\/28\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 6989,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "03\/28\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 6990,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "03\/28\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 6991,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "03\/28\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 6992,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "03\/28\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 6993,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "03\/28\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 6994,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "03\/28\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 6995,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "03\/28\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 6996,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "03\/28\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 6997,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "03\/28\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 6998,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "03\/28\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 6999,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "03\/28\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7000,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "03\/29\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7001,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "03\/29\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7002,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "03\/29\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7003,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "03\/29\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7004,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "03\/29\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7005,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "03\/29\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7006,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "03\/29\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7007,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "03\/29\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7008,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "03\/29\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7009,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "03\/29\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7010,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "03\/29\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7011,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "03\/29\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7012,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "03\/29\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7013,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "03\/29\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7014,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "03\/29\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7015,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "03\/29\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7016,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "03\/29\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7017,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "03\/29\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7018,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "03\/29\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7019,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "03\/29\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7020,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "03\/29\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7021,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "04\/02\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7022,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "04\/02\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7023,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "04\/02\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7024,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "04\/02\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7025,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "04\/03\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7026,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "04\/03\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7027,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "04\/04\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7028,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "04\/04\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7029,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "04\/05\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7030,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "04\/05\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7031,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "04\/06\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7032,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "04\/06\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7033,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "04\/06\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7034,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "04\/06\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7035,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "04\/06\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7036,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "04\/06\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7037,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "04\/06\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7038,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "04\/06\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7039,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "04\/21\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7043,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "04\/21\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7044,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "04\/24\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7061,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "04\/24\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7062,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "05\/03\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7072,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "05\/03\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7073,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "05\/03\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7074,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "05\/07\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7083,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "05\/07\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7084,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "05\/09\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7087,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "05\/09\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7088,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "05\/09\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7089,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "05\/09\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7090,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "05\/12\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7103,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "05\/12\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7104,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "05\/14\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7105,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "05\/14\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7106,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "05\/14\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7107,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "05\/14\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7108,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "05\/14\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7109,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "05\/14\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7110,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "05\/15\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7111,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "05\/17\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7112,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "05\/18\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7113,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "05\/23\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7129,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "05\/23\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7130,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "06\/29\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7161,
+      "units": "mg \/ mol"
+    },
+    {
+      "analytename": "HGB A1C",
+      "analyteid": 7162,
+      "description": "LOINC",
+      "analytedate": "06\/29\/2018"
+    },
+    {
+      "analytename": "alpha-1-globulin",
+      "analyteid": 7163,
+      "description": "LOINC",
+      "analytedate": "06\/29\/2018"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "HGB A1C",
+      "referencerange": "1-10",
+      "analytedate": "06\/29\/2018",
+      "value": "5",
+      "abnormalhl7code": "A",
+      "description": "Complete blood count (hemogram) panel - Blood by Automated count",
+      "loinc": "58410-2",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7164,
+      "units": "%"
+    },
+    {
+      "valuestatus": "critical high",
+      "resultstatus": "pending",
+      "abnormalhl7name": "High",
+      "analytename": "alpha-1-globulin",
+      "referencerange": "0.05-0.09",
+      "analytedate": "06\/29\/2018",
+      "value": "1.5",
+      "abnormalhl7code": "H",
+      "description": "Cholesterol in LDL [Units\/volume] in Serum or Plasma by Electrophoresis",
+      "loinc": "12773-8",
+      "abnormalflag": "critical high",
+      "note": "example note",
+      "analyteid": 7165,
+      "units": "mg\/mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "HGB A1C",
+      "referencerange": "1-10",
+      "analytedate": "06\/29\/2018",
+      "value": "5",
+      "abnormalhl7code": "A",
+      "description": "Complete blood count (hemogram) panel - Blood by Automated count",
+      "loinc": "58410-2",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7166,
+      "units": "%"
+    },
+    {
+      "valuestatus": "critical high",
+      "resultstatus": "pending",
+      "abnormalhl7name": "High",
+      "analytename": "alpha-1-globulin",
+      "referencerange": "0.05-0.09",
+      "analytedate": "06\/29\/2018",
+      "value": "1.5",
+      "abnormalhl7code": "H",
+      "description": "Cholesterol in LDL [Units\/volume] in Serum or Plasma by Electrophoresis",
+      "loinc": "12773-8",
+      "abnormalflag": "critical high",
+      "note": "example note",
+      "analyteid": 7167,
+      "units": "mg\/mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "HGB A1C",
+      "referencerange": "1-10",
+      "analytedate": "07\/03\/2018",
+      "value": "5",
+      "abnormalhl7code": "A",
+      "description": "Complete blood count (hemogram) panel - Blood by Automated count",
+      "loinc": "58410-2",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7168,
+      "units": "%"
+    },
+    {
+      "valuestatus": "critical high",
+      "resultstatus": "pending",
+      "abnormalhl7name": "High",
+      "analytename": "alpha-1-globulin",
+      "referencerange": "0.05-0.09",
+      "analytedate": "07\/03\/2018",
+      "value": "1.5",
+      "abnormalhl7code": "H",
+      "description": "Cholesterol in LDL [Units\/volume] in Serum or Plasma by Electrophoresis",
+      "loinc": "12773-8",
+      "abnormalflag": "critical high",
+      "note": "example note",
+      "analyteid": 7169,
+      "units": "mg\/mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "HGB A1C",
+      "referencerange": "1-10",
+      "analytedate": "07\/03\/2018",
+      "value": "5",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7220,
+      "units": "%"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "HGB A1C",
+      "referencerange": "1-10",
+      "analytedate": "07\/03\/2018",
+      "value": "5",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7221,
+      "units": "%"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "07\/05\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7170,
+      "units": "mg \/ mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "HGB A1C",
+      "referencerange": "1-10",
+      "analytedate": "07\/05\/2018",
+      "value": "5",
+      "abnormalhl7code": "A",
+      "description": "Complete blood count (hemogram) panel - Blood by Automated count",
+      "loinc": "58410-2",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7171,
+      "units": "%"
+    },
+    {
+      "valuestatus": "critical high",
+      "resultstatus": "pending",
+      "abnormalhl7name": "High",
+      "analytename": "alpha-1-globulin",
+      "referencerange": "0.05-0.09",
+      "analytedate": "07\/05\/2018",
+      "value": "1.5",
+      "abnormalhl7code": "H",
+      "description": "Cholesterol in LDL [Units\/volume] in Serum or Plasma by Electrophoresis",
+      "loinc": "12773-8",
+      "abnormalflag": "critical high",
+      "note": "example note",
+      "analyteid": 7172,
+      "units": "mg\/mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "HGB A1C",
+      "referencerange": "1-10",
+      "analytedate": "07\/05\/2018",
+      "value": "5",
+      "abnormalhl7code": "A",
+      "description": "Complete blood count (hemogram) panel - Blood by Automated count",
+      "loinc": "58410-2",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7173,
+      "units": "%"
+    },
+    {
+      "valuestatus": "critical high",
+      "resultstatus": "pending",
+      "abnormalhl7name": "High",
+      "analytename": "alpha-1-globulin",
+      "referencerange": "0.05-0.09",
+      "analytedate": "07\/05\/2018",
+      "value": "1.5",
+      "abnormalhl7code": "H",
+      "description": "Cholesterol in LDL [Units\/volume] in Serum or Plasma by Electrophoresis",
+      "loinc": "12773-8",
+      "abnormalflag": "critical high",
+      "note": "example note",
+      "analyteid": 7174,
+      "units": "mg\/mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "HGB A1C",
+      "referencerange": "1-10",
+      "analytedate": "07\/05\/2018",
+      "value": "5",
+      "abnormalhl7code": "A",
+      "description": "Complete blood count (hemogram) panel - Blood by Automated count",
+      "loinc": "58410-2",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7175,
+      "units": "%"
+    },
+    {
+      "valuestatus": "critical high",
+      "resultstatus": "pending",
+      "abnormalhl7name": "High",
+      "analytename": "alpha-1-globulin",
+      "referencerange": "0.05-0.09",
+      "analytedate": "07\/05\/2018",
+      "value": "1.5",
+      "abnormalhl7code": "H",
+      "description": "Cholesterol in LDL [Units\/volume] in Serum or Plasma by Electrophoresis",
+      "loinc": "12773-8",
+      "abnormalflag": "critical high",
+      "note": "example note",
+      "analyteid": 7176,
+      "units": "mg\/mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "HGB A1C",
+      "referencerange": "1-10",
+      "analytedate": "07\/05\/2018",
+      "value": "5",
+      "abnormalhl7code": "A",
+      "description": "Complete blood count (hemogram) panel - Blood by Automated count",
+      "loinc": "58410-2",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7177,
+      "units": "%"
+    },
+    {
+      "valuestatus": "critical high",
+      "resultstatus": "pending",
+      "abnormalhl7name": "High",
+      "analytename": "alpha-1-globulin",
+      "referencerange": "0.05-0.09",
+      "analytedate": "07\/05\/2018",
+      "value": "1.5",
+      "abnormalhl7code": "H",
+      "description": "Cholesterol in LDL [Units\/volume] in Serum or Plasma by Electrophoresis",
+      "loinc": "12773-8",
+      "abnormalflag": "critical high",
+      "note": "example note",
+      "analyteid": 7178,
+      "units": "mg\/mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "HGB A1C",
+      "referencerange": "1-10",
+      "analytedate": "07\/05\/2018",
+      "value": "5",
+      "abnormalhl7code": "A",
+      "description": "Complete blood count (hemogram) panel - Blood by Automated count",
+      "loinc": "58410-2",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7179,
+      "units": "%"
+    },
+    {
+      "valuestatus": "critical high",
+      "resultstatus": "pending",
+      "abnormalhl7name": "High",
+      "analytename": "alpha-1-globulin",
+      "referencerange": "0.05-0.09",
+      "analytedate": "07\/05\/2018",
+      "value": "1.5",
+      "abnormalhl7code": "H",
+      "description": "Cholesterol in LDL [Units\/volume] in Serum or Plasma by Electrophoresis",
+      "loinc": "12773-8",
+      "abnormalflag": "critical high",
+      "note": "example note",
+      "analyteid": 7180,
+      "units": "mg\/mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "HGB A1C",
+      "referencerange": "1-10",
+      "analytedate": "07\/05\/2018",
+      "value": "5",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7210,
+      "units": "%"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "HGB A1C",
+      "referencerange": "1-10",
+      "analytedate": "07\/05\/2018",
+      "value": "5",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7211,
+      "units": "%"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "HGB A1C",
+      "referencerange": "1-10",
+      "analytedate": "07\/06\/2018",
+      "value": "5",
+      "abnormalhl7code": "A",
+      "description": "Complete blood count (hemogram) panel - Blood by Automated count",
+      "loinc": "58410-2",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7181,
+      "units": "%"
+    },
+    {
+      "valuestatus": "critical high",
+      "resultstatus": "pending",
+      "abnormalhl7name": "High",
+      "analytename": "alpha-1-globulin",
+      "referencerange": "0.05-0.09",
+      "analytedate": "07\/06\/2018",
+      "value": "1.5",
+      "abnormalhl7code": "H",
+      "description": "Cholesterol in LDL [Units\/volume] in Serum or Plasma by Electrophoresis",
+      "loinc": "12773-8",
+      "abnormalflag": "critical high",
+      "note": "example note",
+      "analyteid": 7182,
+      "units": "mg\/mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "HGB A1C",
+      "referencerange": "1-10",
+      "analytedate": "07\/06\/2018",
+      "value": "5",
+      "abnormalhl7code": "A",
+      "description": "Complete blood count (hemogram) panel - Blood by Automated count",
+      "loinc": "58410-2",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7183,
+      "units": "%"
+    },
+    {
+      "valuestatus": "critical high",
+      "resultstatus": "pending",
+      "abnormalhl7name": "High",
+      "analytename": "alpha-1-globulin",
+      "referencerange": "0.05-0.09",
+      "analytedate": "07\/06\/2018",
+      "value": "1.5",
+      "abnormalhl7code": "H",
+      "description": "Cholesterol in LDL [Units\/volume] in Serum or Plasma by Electrophoresis",
+      "loinc": "12773-8",
+      "abnormalflag": "critical high",
+      "note": "example note",
+      "analyteid": 7184,
+      "units": "mg\/mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "HGB A1C",
+      "referencerange": "1-10",
+      "analytedate": "07\/06\/2018",
+      "value": "5",
+      "abnormalhl7code": "A",
+      "description": "Complete blood count (hemogram) panel - Blood by Automated count",
+      "loinc": "58410-2",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7185,
+      "units": "%"
+    },
+    {
+      "valuestatus": "critical high",
+      "resultstatus": "pending",
+      "abnormalhl7name": "High",
+      "analytename": "alpha-1-globulin",
+      "referencerange": "0.05-0.09",
+      "analytedate": "07\/06\/2018",
+      "value": "1.5",
+      "abnormalhl7code": "H",
+      "description": "Cholesterol in LDL [Units\/volume] in Serum or Plasma by Electrophoresis",
+      "loinc": "12773-8",
+      "abnormalflag": "critical high",
+      "note": "example note",
+      "analyteid": 7186,
+      "units": "mg\/mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "HGB A1C",
+      "referencerange": "1-10",
+      "analytedate": "07\/06\/2018",
+      "value": "5",
+      "abnormalhl7code": "A",
+      "description": "Complete blood count (hemogram) panel - Blood by Automated count",
+      "loinc": "58410-2",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7187,
+      "units": "%"
+    },
+    {
+      "valuestatus": "critical high",
+      "resultstatus": "pending",
+      "abnormalhl7name": "High",
+      "analytename": "alpha-1-globulin",
+      "referencerange": "0.05-0.09",
+      "analytedate": "07\/06\/2018",
+      "value": "1.5",
+      "abnormalhl7code": "H",
+      "description": "Cholesterol in LDL [Units\/volume] in Serum or Plasma by Electrophoresis",
+      "loinc": "12773-8",
+      "abnormalflag": "critical high",
+      "note": "example note",
+      "analyteid": 7188,
+      "units": "mg\/mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "HGB A1C",
+      "referencerange": "1-10",
+      "analytedate": "07\/06\/2018",
+      "value": "5",
+      "abnormalhl7code": "A",
+      "description": "Complete blood count (hemogram) panel - Blood by Automated count",
+      "loinc": "58410-2",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7189,
+      "units": "%"
+    },
+    {
+      "valuestatus": "critical high",
+      "resultstatus": "pending",
+      "abnormalhl7name": "High",
+      "analytename": "alpha-1-globulin",
+      "referencerange": "0.05-0.09",
+      "analytedate": "07\/06\/2018",
+      "value": "1.5",
+      "abnormalhl7code": "H",
+      "description": "Cholesterol in LDL [Units\/volume] in Serum or Plasma by Electrophoresis",
+      "loinc": "12773-8",
+      "abnormalflag": "critical high",
+      "note": "example note",
+      "analyteid": 7190,
+      "units": "mg\/mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "HGB A1C",
+      "referencerange": "1-10",
+      "analytedate": "07\/06\/2018",
+      "value": "5",
+      "abnormalhl7code": "A",
+      "description": "Complete blood count (hemogram) panel - Blood by Automated count",
+      "loinc": "58410-2",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7191,
+      "units": "%"
+    },
+    {
+      "valuestatus": "critical high",
+      "resultstatus": "pending",
+      "abnormalhl7name": "High",
+      "analytename": "alpha-1-globulin",
+      "referencerange": "0.05-0.09",
+      "analytedate": "07\/06\/2018",
+      "value": "1.5",
+      "abnormalhl7code": "H",
+      "description": "Cholesterol in LDL [Units\/volume] in Serum or Plasma by Electrophoresis",
+      "loinc": "12773-8",
+      "abnormalflag": "critical high",
+      "note": "example note",
+      "analyteid": 7192,
+      "units": "mg\/mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "HGB A1C",
+      "referencerange": "1-10",
+      "analytedate": "07\/06\/2018",
+      "value": "5",
+      "abnormalhl7code": "A",
+      "description": "Complete blood count (hemogram) panel - Blood by Automated count",
+      "loinc": "58410-2",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7193,
+      "units": "%"
+    },
+    {
+      "valuestatus": "critical high",
+      "resultstatus": "pending",
+      "abnormalhl7name": "High",
+      "analytename": "alpha-1-globulin",
+      "referencerange": "0.05-0.09",
+      "analytedate": "07\/06\/2018",
+      "value": "1.5",
+      "abnormalhl7code": "H",
+      "description": "Cholesterol in LDL [Units\/volume] in Serum or Plasma by Electrophoresis",
+      "loinc": "12773-8",
+      "abnormalflag": "critical high",
+      "note": "example note",
+      "analyteid": 7194,
+      "units": "mg\/mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "HGB A1C",
+      "referencerange": "1-10",
+      "analytedate": "07\/06\/2018",
+      "value": "5",
+      "abnormalhl7code": "A",
+      "description": "Complete blood count (hemogram) panel - Blood by Automated count",
+      "loinc": "58410-2",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7195,
+      "units": "%"
+    },
+    {
+      "valuestatus": "critical high",
+      "resultstatus": "pending",
+      "abnormalhl7name": "High",
+      "analytename": "alpha-1-globulin",
+      "referencerange": "0.05-0.09",
+      "analytedate": "07\/06\/2018",
+      "value": "1.5",
+      "abnormalhl7code": "H",
+      "description": "Cholesterol in LDL [Units\/volume] in Serum or Plasma by Electrophoresis",
+      "loinc": "12773-8",
+      "abnormalflag": "critical high",
+      "note": "example note",
+      "analyteid": 7196,
+      "units": "mg\/mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "HGB A1C",
+      "referencerange": "1-10",
+      "analytedate": "07\/06\/2018",
+      "value": "5",
+      "abnormalhl7code": "A",
+      "description": "Complete blood count (hemogram) panel - Blood by Automated count",
+      "loinc": "58410-2",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7197,
+      "units": "%"
+    },
+    {
+      "valuestatus": "critical high",
+      "resultstatus": "pending",
+      "abnormalhl7name": "High",
+      "analytename": "alpha-1-globulin",
+      "referencerange": "0.05-0.09",
+      "analytedate": "07\/06\/2018",
+      "value": "1.5",
+      "abnormalhl7code": "H",
+      "description": "Cholesterol in LDL [Units\/volume] in Serum or Plasma by Electrophoresis",
+      "loinc": "12773-8",
+      "abnormalflag": "critical high",
+      "note": "example note",
+      "analyteid": 7198,
+      "units": "mg\/mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "HGB A1C jul4demo",
+      "referencerange": "1-10",
+      "analytedate": "07\/06\/2018",
+      "value": "5",
+      "abnormalhl7code": "A",
+      "description": "Complete blood count (hemogram) panel - Blood by Automated count",
+      "loinc": "58410-2",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7199,
+      "units": "%"
+    },
+    {
+      "valuestatus": "critical high",
+      "resultstatus": "pending",
+      "abnormalhl7name": "High",
+      "analytename": "alpha-1-globulin",
+      "referencerange": "0.05-0.09",
+      "analytedate": "07\/06\/2018",
+      "value": "1.5",
+      "abnormalhl7code": "H",
+      "description": "Cholesterol in LDL [Units\/volume] in Serum or Plasma by Electrophoresis",
+      "loinc": "12773-8",
+      "abnormalflag": "critical high",
+      "note": "example note",
+      "analyteid": 7200,
+      "units": "mg\/mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "HGB A1C jul4demo",
+      "referencerange": "1-10",
+      "analytedate": "07\/06\/2018",
+      "value": "5",
+      "abnormalhl7code": "A",
+      "description": "Complete blood count (hemogram) panel - Blood by Automated count",
+      "loinc": "58410-2",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7201,
+      "units": "%"
+    },
+    {
+      "valuestatus": "critical high",
+      "resultstatus": "pending",
+      "abnormalhl7name": "High",
+      "analytename": "alpha-1-globulin",
+      "referencerange": "0.05-0.09",
+      "analytedate": "07\/06\/2018",
+      "value": "1.5",
+      "abnormalhl7code": "H",
+      "description": "Cholesterol in LDL [Units\/volume] in Serum or Plasma by Electrophoresis",
+      "loinc": "12773-8",
+      "abnormalflag": "critical high",
+      "note": "example note",
+      "analyteid": 7202,
+      "units": "mg\/mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "HGB A1C jul4demo",
+      "referencerange": "1-10",
+      "analytedate": "07\/06\/2018",
+      "value": "5",
+      "abnormalhl7code": "A",
+      "description": "Complete blood count (hemogram) panel - Blood by Automated count",
+      "loinc": "58410-2",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7203,
+      "units": "%"
+    },
+    {
+      "valuestatus": "critical high",
+      "resultstatus": "pending",
+      "abnormalhl7name": "High",
+      "analytename": "alpha-1-globulin",
+      "referencerange": "0.05-0.09",
+      "analytedate": "07\/06\/2018",
+      "value": "1.5",
+      "abnormalhl7code": "H",
+      "description": "Cholesterol in LDL [Units\/volume] in Serum or Plasma by Electrophoresis",
+      "loinc": "12773-8",
+      "abnormalflag": "critical high",
+      "note": "example note",
+      "analyteid": 7204,
+      "units": "mg\/mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "HGB A1C jul4demo",
+      "referencerange": "1-10",
+      "analytedate": "07\/06\/2018",
+      "value": "5",
+      "abnormalhl7code": "A",
+      "description": "Complete blood count (hemogram) panel - Blood by Automated count",
+      "loinc": "58410-2",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7205,
+      "units": "%"
+    },
+    {
+      "valuestatus": "critical high",
+      "resultstatus": "pending",
+      "abnormalhl7name": "High",
+      "analytename": "alpha-1-globulin",
+      "referencerange": "0.05-0.09",
+      "analytedate": "07\/06\/2018",
+      "value": "1.5",
+      "abnormalhl7code": "H",
+      "description": "Cholesterol in LDL [Units\/volume] in Serum or Plasma by Electrophoresis",
+      "loinc": "12773-8",
+      "abnormalflag": "critical high",
+      "note": "example note",
+      "analyteid": 7206,
+      "units": "mg\/mol"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "HGB A1C",
+      "referencerange": "1-10",
+      "analytedate": "07\/06\/2018",
+      "value": "5",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7212,
+      "units": "%"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "HGB A1C",
+      "referencerange": "1-10",
+      "analytedate": "07\/06\/2018",
+      "value": "5",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7213,
+      "units": "%"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "HGB A1C",
+      "referencerange": "1-10",
+      "analytedate": "07\/06\/2018",
+      "value": "5",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7214,
+      "units": "%"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "HGB A1C",
+      "referencerange": "1-10",
+      "analytedate": "07\/06\/2018",
+      "value": "5",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7215,
+      "units": "%"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "HGB A1C",
+      "referencerange": "1-10",
+      "analytedate": "07\/06\/2018",
+      "value": "5",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7216,
+      "units": "%"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "HGB A1C",
+      "referencerange": "1-10",
+      "analytedate": "07\/06\/2018",
+      "value": "5",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7217,
+      "units": "%"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "HGB A1C",
+      "referencerange": "1-10",
+      "analytedate": "07\/06\/2018",
+      "value": "5",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7218,
+      "units": "%"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "HGB A1C",
+      "referencerange": "1-10",
+      "analytedate": "07\/06\/2018",
+      "value": "5",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7219,
+      "units": "%"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "HGB A1C",
+      "referencerange": "1-10",
+      "analytedate": "07\/07\/2018",
+      "value": "5",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7224,
+      "units": "%"
+    },
+    {
+      "analytename": "HGB A1C",
+      "analytedate": "07\/07\/2018",
+      "value": "5",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "analyteid": 7225,
+      "units": "%"
+    },
+    {
+      "analytename": "HGB A1C",
+      "analytedate": "07\/07\/2018",
+      "value": "5",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "analyteid": 7226,
+      "units": "%"
+    },
+    {
+      "analytename": "HGB A1C",
+      "analytedate": "07\/07\/2018",
+      "value": "5",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "analyteid": 7227,
+      "units": "%"
+    },
+    {
+      "analytename": "HGB A1C",
+      "analytedate": "07\/08\/2018",
+      "value": "5",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "analyteid": 7228,
+      "units": "%"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "HGB A1C",
+      "referencerange": "1-10",
+      "analytedate": "07\/09\/2018",
+      "value": "5",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7207,
+      "units": "%"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "HGB A1C",
+      "referencerange": "1-10",
+      "analytedate": "07\/09\/2018",
+      "value": "5",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7208,
+      "units": "%"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "HGB A1C",
+      "referencerange": "1-10",
+      "analytedate": "07\/09\/2018",
+      "value": "5",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7209,
+      "units": "%"
+    },
+    {
+      "valuestatus": "abnormal",
+      "resultstatus": "final",
+      "abnormalhl7name": "Abnormal",
+      "analytename": "goinherit",
+      "referencerange": "1-10",
+      "analytedate": "07\/18\/2018",
+      "value": "420",
+      "abnormalhl7code": "A",
+      "description": "Hemoglobin A1c\/Hemoglobin.total in Blood",
+      "loinc": "4548-4",
+      "abnormalflag": "abnormal",
+      "note": "example note",
+      "analyteid": 7714,
+      "units": "mg \/ mol"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "HGB A1C",
+      "analyteid": 7790,
+      "analytedate": "10\/04\/2018"
+    },
+    {
+      "description": "LOINC",
+      "analytename": "alpha-1-globulin",
+      "analyteid": 7791,
+      "analytedate": "10\/04\/2018"
+    }
+  ],
+  "totalcount": 670
+}

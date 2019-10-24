@@ -43,6 +43,47 @@ namespace AthenaHealth.Sdk.Tests.Integration
         }
 
         [Fact]
+        public async Task GetAnalytes_ValidData_ReturnsAnalytes()
+        {
+            // Arrange
+            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetAnalytes.json"));
+            var queryParameters = new GetAnalytesFilter()
+            {
+                DepartmentId = 1,
+                ShowAbnormalDetails = true,
+                ShowHidden = true,
+                ShowTemplate = true
+            };
+
+            // Act
+            var result = await patientClient.GetAnalytes(1, queryParameters);
+
+            // Assert
+            result.ShouldNotBeNull();
+            result.Items.Count().ShouldBeGreaterThan(0);
+        }
+
+        [Fact]
+        public void GetAnalytes_PatientInDifferentDepartment_ThrowsException()
+        {
+            // Arrange
+            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"detailedmessage\":\"The specified patient does not exist in that department.\",\"error\":\"The specified patient does not exist in that department.\"}", HttpStatusCode.BadRequest));
+            var queryParameters = new GetAnalytesFilter()
+            {
+                DepartmentId = 2,
+                ShowAbnormalDetails = true,
+                ShowHidden = true,
+                ShowTemplate = true
+            };
+
+            // Act
+            ApiException exception = Should.Throw<ApiException>(async () => await patientClient.GetAnalytes(1, queryParameters));
+
+            // Assert
+            exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
+        }
+
+        [Fact]
         public async Task GetMedicalHistory_ValidData_ReturnsMedicalHistory()
         {
             // Arrange
