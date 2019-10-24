@@ -14,7 +14,7 @@ namespace AthenaHealth.Sdk
         public IAppointmentClient Appointments { get; }
         public IInsurancePackageClient InsurancePackage { get; }
         public IEncounterClient Encounters { get; }
-        public IOrderTypeClient OrderTypes { get; }
+        public IDictionaryClient Dictionaries { get; }
 
         private readonly IConnection _connection;
 
@@ -40,7 +40,7 @@ namespace AthenaHealth.Sdk
             Appointments = new AppointmentClient(_connection);
             InsurancePackage = new InsurancePackageClient(_connection);
             Encounters = new EncounterClient(_connection);
-            OrderTypes = new OrderTypeClient(_connection);
+            Dictionaries = new DictionaryClient(_connection);
         }
     }
 }

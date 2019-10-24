@@ -5,11 +5,11 @@ using AthenaHealth.Sdk.Models.Response;
 
 namespace AthenaHealth.Sdk.Clients
 {
-    public class OrderTypeClient : IOrderTypeClient
+    public class DictionaryClient : IDictionaryClient
     {
         private readonly IConnection _connection;
 
-        public OrderTypeClient(IConnection connection)
+        public DictionaryClient(IConnection connection)
         {
             _connection = connection;
         }
@@ -19,7 +19,7 @@ namespace AthenaHealth.Sdk.Clients
         /// </summary>
         /// <param name="name">A term to search for. Must be at least 2 characters.</param>
         /// <returns></returns>
-        public async Task<OrderType[]> SearchByName(string name)
+        public async Task<OrderType[]> SearchOrderTypesByName(string name)
         {
             return await _connection.Get<OrderType[]>($"{_connection.PracticeId}/reference/order/lab", new { searchValue = name });
         }

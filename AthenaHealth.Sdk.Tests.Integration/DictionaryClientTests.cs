@@ -9,14 +9,14 @@ using Xunit;
 // ReSharper disable StringLiteralTypo
 namespace AthenaHealth.Sdk.Tests.Integration
 {
-    public class OrderTypeClientTests
+    public class DictionaryClientTests
     {
         [Fact]
-        public async Task Search_TwoDigitsNamePart_ReturnsRecords()
+        public async Task SearchOrderTypesByName_TwoDigitsNamePart_ReturnsRecords()
         {
-            var client = new OrderTypeClient(ConnectionFactory.CreateFromFile(@"Data\OrderType\Search.json"));
+            var client = new DictionaryClient(ConnectionFactory.CreateFromFile(@"Data\Dictionary\SearchOrderTypesByName.json"));
 
-            OrderType[] response = await client.SearchByName("ol");
+            OrderType[] response = await client.SearchOrderTypesByName("ol");
 
             response.ShouldNotBeNull();
             response.Length.ShouldBeGreaterThan(0);
