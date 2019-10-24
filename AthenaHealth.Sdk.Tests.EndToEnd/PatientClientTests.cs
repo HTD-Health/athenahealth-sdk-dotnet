@@ -33,6 +33,19 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         }
 
         [Theory]
+        [ClassData(typeof(GetMedicalHistoryData))]
+        public async Task GetMedicalHistory_ResultsExists_ShouldNotThrowJsonSerializationException(int patientId)
+        {
+            // Arrange
+            // Act
+            var result = await _client.Patients.GetMedicalHistory(patientId, 1);
+
+            // Assert
+            result.ShouldNotBeNull();
+            result.Questions.Length.ShouldBeGreaterThan(0);
+        }
+
+        [Theory]
         [ClassData(typeof(GetLabResultsData))]
         public async Task GetLabResults_ResultsExists_ShouldNotThrowJsonSerializationException(int patientId)
         {
