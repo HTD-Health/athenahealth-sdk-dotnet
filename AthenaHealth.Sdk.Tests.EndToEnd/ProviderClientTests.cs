@@ -128,48 +128,5 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
                 _client.Providers.GetById(999)
                 );
         }
-
-        [Fact]
-        public async Task GetProviderTypes_ReturnsRecords()
-        {
-            ProviderTypeResponse response = await _client.Providers.GetProviderTypes();
-
-            if (response.Total > 0)
-            {
-                response.Total.ShouldBe(response.Items.Length);
-                response.Items.Count(x => string.IsNullOrWhiteSpace(x.Id)).ShouldBe(0);
-                response.Items.Count(x => string.IsNullOrWhiteSpace(x.Name)).ShouldBe(0);
-            }
-            else
-            {
-                response.Total.ShouldBe(0);
-                response.Items.Length.ShouldBe(0);
-            }
-        }
-
-        [Fact]
-        public async Task GetProviderTypes_LimitEqual5_ReturnsOnly5Records()
-        {
-            ProviderTypeResponse response = await _client.Providers
-                .GetProviderTypes(new BaseLimitFilter() { Limit = 5 });
-
-            if (response.Total > 0)
-            {
-                if (response.Total > 5)
-                {
-                    response.Items.Length.ShouldBe(5);
-                    response.Total.ShouldBeGreaterThan(response.Items.Length);
-                }
-                else
-                {
-                    response.Total.ShouldBe(response.Items.Length);
-                }
-            }
-            else
-            {
-                response.Total.ShouldBe(0);
-                response.Items.Length.ShouldBe(0);
-            }
-        }
     }
 }

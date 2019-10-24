@@ -2,6 +2,7 @@
 using System.Net;
 using System.Threading.Tasks;
 using AthenaHealth.Sdk.Exceptions;
+using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
 using AthenaHealth.Sdk.Tests.EndToEnd.Fixtures;
 using Shouldly;
@@ -113,6 +114,25 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
 
             exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
             exception.Message.ShouldContain("missingfields");
+        }
+
+
+        [Fact]
+        public async Task GetProviderTypes_ReturnsRecords()
+        {
+            ProviderTypeResponse response = await _client.Dictionaries.GetProviderTypes();
+
+            if (response.Total > 0)
+            {
+                response.Total.ShouldBe(response.Items.Length);
+                response.Items.Count(x => string.IsNullOrWhiteSpace(x.Id)).ShouldBe(0);
+                response.Items.Count(x => string.IsNullOrWhiteSpace(x.Name)).ShouldBe(0);
+            }
+            else
+            {
+                response.Total.ShouldBe(0);
+                response.Items.Length.ShouldBe(0);
+            }
         }
     }
 }

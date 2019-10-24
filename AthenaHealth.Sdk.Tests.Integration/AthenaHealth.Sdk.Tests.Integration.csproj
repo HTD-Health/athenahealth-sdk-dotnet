@@ -118,7 +118,7 @@
     <None Update="Data\Provider\GetAll.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Data\Provider\GetProviderTypes.json">
+    <None Update="Data\Dictionary\GetProviderTypes.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Data\Provider\GetById.json">

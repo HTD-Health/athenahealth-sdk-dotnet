@@ -32,17 +32,5 @@ namespace AthenaHealth.Sdk.Tests.Integration
             response.Id.ShouldBe("86");
             response.FirstName.ShouldBe("Terry");
         }
-
-        [Fact]
-        public async Task GetProviderTypes_ReturnsRecords()
-        {
-            var client = new ProviderClient(ConnectionFactory.CreateFromFile(@"Data\Provider\GetProviderTypes.json"));
-
-            var response = await client.GetProviderTypes();
-
-            response.ShouldNotBeNull();
-            response.Items.Length.ShouldBeGreaterThan(0);
-            response.Total.ShouldBe(response.Items.Length);
-        }
     }
 }
