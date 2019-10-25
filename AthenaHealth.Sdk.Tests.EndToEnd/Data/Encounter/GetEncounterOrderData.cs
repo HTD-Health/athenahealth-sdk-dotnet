@@ -1,19 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+
 // ReSharper disable IdentifierTypo
 // ReSharper disable CommentTypo
 // ReSharper disable StringLiteralTypo
 
-namespace AthenaHealth.Sdk.Tests.EndToEnd.Data.Patient
+namespace AthenaHealth.Sdk.Tests.EndToEnd.Data.Encounter
 {
-    public class GetOrdersData : IEnumerable<object[]>
+    public class GetEncounterOrderData : IEnumerable<object[]>
     {
         public IEnumerator<object[]> GetEnumerator()
         {
-            yield return new object[] { 1 };
-            yield return new object[] { 2204 };
-            //yield return new object[] { 410 };
-            //yield return new object[] { 870 };
+            yield return new object[] { 21098 };
+            yield return new object[] { 21099 };
+            yield return new object[] { 21100 };
+            yield return new object[] { 21101 };
         }
 
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();

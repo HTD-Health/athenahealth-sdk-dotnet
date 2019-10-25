@@ -34,5 +34,13 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// <param name="model"></param>
         /// <returns></returns>
         Task<OrderLab> CreateOrderLab(int encounterId, CreateOrderLab model);
+
+        /// <summary>
+        /// Given an encounter returns the list of orders broken down by diagnosis.
+        /// </summary>
+        /// <param name="encounterId"></param>
+        /// <param name="filter"></param>
+        /// <returns></returns>
+        Task<EncounterOrdersResponse[]> GetOrders(int encounterId, GetEncounterOrdersFilter filter = null);
     }
 }

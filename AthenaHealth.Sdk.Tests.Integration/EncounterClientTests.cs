@@ -80,5 +80,27 @@ namespace AthenaHealth.Sdk.Tests.Integration
 
             response.DocumentId.ShouldBe(186347);
         }
+
+        [Fact]
+        public async Task GetOrders_ExistingId_ReturnsRecords()
+        {
+            IEncounterClient client = new EncounterClient(ConnectionFactory.CreateFromFile(@"Data\Encounter\GetOrders.json"));
+
+            EncounterOrdersResponse[] response = await client.GetOrders(1404, new GetEncounterOrdersFilter()
+            {
+                AllowDischargeType = true,
+                ShowClinicalProvider = true,
+                ShowDeclinedOrders = true,
+                ShowExternalCodes = true
+            });
+
+            response.Any().ShouldBeTrue();
+            response.First().Orders.Length.ShouldBeGreaterThan(0);
+            response.All(x => x.Orders.All(o => o.Id > 0)).ShouldBeTrue();
+            response.All(x => x.Orders.Length > 0).ShouldBeTrue();
+            response.All(x => x.DiagnosisSnomed.HasValue).ShouldBeTrue();
+            response.First().Diagnosis.ShouldBe("No Diagnosis");
+            response.First().DiagnosisSnomed.ShouldBe(0);
+        }
     }
 }
