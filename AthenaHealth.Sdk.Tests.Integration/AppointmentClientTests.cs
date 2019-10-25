@@ -98,5 +98,15 @@ namespace AthenaHealth.Sdk.Tests.Integration
             response.Items.All(x => !string.IsNullOrWhiteSpace(x.Text)).ShouldBeTrue();
             response.Items.All(x => int.Parse(x.Id) > 0).ShouldBeTrue();
         }
+
+        [Fact]
+        public void CreateNote_ValidInput_NotThrowsException()
+        {
+            IAppointmentClient client = new Clients.AppointmentClient(ConnectionFactory.CreateFromFile(@"Data\Appointment\GetNotes.json"));
+
+            Should.NotThrow(async () 
+                => await client.CreateNote(100, "testing", true)
+                );
+        }
     }
 }

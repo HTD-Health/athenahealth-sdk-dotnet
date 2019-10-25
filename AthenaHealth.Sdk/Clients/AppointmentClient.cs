@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using AthenaHealth.Sdk.Clients.Interfaces;
 using AthenaHealth.Sdk.Extensions;
@@ -45,6 +46,14 @@ namespace AthenaHealth.Sdk.Clients
         public async Task<AppointmentNotesResponse> GetNotes(int appointmentId, bool showDeleted = false)
         {
            return await _connection.Get<AppointmentNotesResponse>($"{_connection.PracticeId}/appointments/{appointmentId}/notes", showDeleted);
+        }
+
+        public async Task CreateNote(int appointmentId, string text, bool displayOnSchedule = false)
+        {
+            await _connection.Post<BaseResponse>(
+                $"{_connection.PracticeId}/appointments/{appointmentId}/notes", 
+                null, 
+                new { notetext = text, displayonschedule = displayOnSchedule});
         }
     }
 }

@@ -4,11 +4,8 @@
 
 namespace AthenaHealth.Sdk.Models.Response
 {
-    public class DeleteResponse
+    public class DeleteResponse : BaseResponse
     {
-        [JsonProperty("success")]
-        public bool IsSuccess { get; set; }
-
         /// <summary>
         /// If <see cref="IsSuccess"/> is false will contain error message.
         /// </summary>
