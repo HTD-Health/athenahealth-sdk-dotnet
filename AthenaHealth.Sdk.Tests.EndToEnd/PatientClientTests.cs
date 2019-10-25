@@ -23,6 +23,24 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             _client = athenaHealthClientFixture.Client;
         }
 
+        [Theory]
+        [ClassData(typeof(GetDocumentsData))]
+        public async Task GetDocuments_DocumentsExists_ShouldNotThrowJsonSerializationException(int patientId)
+        {
+            // Arrange
+            // Act
+            var result = await _client.Patients.GetDocuments(patientId, new GetDocumentsFilter()
+            {
+                DepartmentId = 1,
+                ShowDeclinedOrders = true,
+                ShowDeleted = true
+            });
+
+            // Assert
+            result.ShouldNotBeNull();
+            result.Items.Count().ShouldBeGreaterThan(0);
+        }
+
         [Fact]
         public void GetDefaultPharmacy_NotExistingPharmacy_ThrowsException()
         {
