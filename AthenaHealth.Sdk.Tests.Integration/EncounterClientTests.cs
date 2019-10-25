@@ -86,7 +86,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         {
             IEncounterClient client = new EncounterClient(ConnectionFactory.CreateFromFile(@"Data\Encounter\GetOrders.json"));
 
-            EncounterOrdersResponse[] response = await client.GetOrders(1404, new GetEncounterOrdersFilter()
+            EncounterOrdersResponse[] response = await client.GetOrders(1404, new EncounterGetOrdersFilter()
             {
                 AllowDischargeType = true,
                 ShowClinicalProvider = true,
@@ -99,8 +99,23 @@ namespace AthenaHealth.Sdk.Tests.Integration
             response.All(x => x.Orders.All(o => o.Id > 0)).ShouldBeTrue();
             response.All(x => x.Orders.Length > 0).ShouldBeTrue();
             response.All(x => x.DiagnosisSnomed.HasValue).ShouldBeTrue();
-            response.First().Diagnosis.ShouldBe("No Diagnosis");
-            response.First().DiagnosisSnomed.ShouldBe(0);
+            response.First().Diagnosis.ShouldBe("Liver function tests abnormal");
+            response.First().DiagnosisSnomed.ShouldBe(166603001);
+        }
+
+        [Fact]
+        public async Task GetOrderById_ExistingId_ReturnsRecords()
+        {
+            IEncounterClient client = new EncounterClient(ConnectionFactory.CreateFromFile(@"Data\Encounter\GetOrderById.json"));
+
+            EncounterOrder response = await client.GetOrderById(1404, 21098, new EncounterGetOrderByIdFilter()
+            {
+                ShowQuestions = true,
+                ShowExternalCodes = true
+            });
+
+            response.Status.ShouldNotBeNullOrEmpty();
+            response.Id.ShouldBe(21098);
         }
     }
 }
