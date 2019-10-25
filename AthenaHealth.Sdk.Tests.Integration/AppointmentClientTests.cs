@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
+using AthenaHealth.Sdk.Clients.Interfaces;
 using AthenaHealth.Sdk.Exceptions;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
@@ -87,5 +88,15 @@ namespace AthenaHealth.Sdk.Tests.Integration
             appointment.DepartmentId.ShouldNotBeNull();
         }
 
+        [Fact]
+        public async Task GetNotes_ValidId_ReturnsEmptyResult()
+        {
+            IAppointmentClient client = new Clients.AppointmentClient(ConnectionFactory.CreateFromFile(@"Data\Appointment\GetNotes.json"));
+            
+            AppointmentNotesResponse response = await client.GetNotes(2, true);
+
+            response.Items.All(x => !string.IsNullOrWhiteSpace(x.Text)).ShouldBeTrue();
+            response.Items.All(x => int.Parse(x.Id) > 0).ShouldBeTrue();
+        }
     }
 }

@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using AthenaHealth.Sdk.Exceptions;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
+using AthenaHealth.Sdk.Tests.EndToEnd.Data.Appointments;
 using AthenaHealth.Sdk.Tests.EndToEnd.Fixtures;
 using Shouldly;
 using Xunit;
@@ -80,7 +82,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
 
             response.Items.ShouldNotBeNull();
             response.Items.ShouldContain(a => a.DepartmentId.HasValue);
-            response.Items.ShouldContain(a=>a.Date != null);
+            response.Items.ShouldContain(a => a.Date != null);
             response.Items.First().AppointmentStatus.ShouldNotBeNull();
         }
 
@@ -128,8 +130,27 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         [Fact]
         public async Task GetAppointmentById_InvalidId_ThrowsException()
         {
-            await Should.ThrowAsync<ApiException>(async ()=> await _client.Appointments.GetAppointmentById(0));
+            await Should.ThrowAsync<ApiException>(async () => await _client.Appointments.GetAppointmentById(0));
         }
 
+        [Theory]
+        [ClassData(typeof(GetNotesAppointmentsData))]
+        public async Task GetNotes_ValidId_ReturnsRecords(int appointmentId)
+        {
+            AppointmentNotesResponse response = await _client.Appointments.GetNotes(appointmentId, true);
+
+            response.Items.All(x => !string.IsNullOrWhiteSpace(x.Text)).ShouldBeTrue();
+            response.Items.All(x => int.Parse(x.Id) > 0).ShouldBeTrue();
+        }
+
+        [Fact]
+        public async Task GetNotes_NotExistingId_ThrowsApiValidationException()
+        {
+            ApiException exception = await Should.ThrowAsync<ApiException>(async ()
+                => await _client.Appointments.GetNotes(1));
+
+            exception.StatusCode.ShouldBe(HttpStatusCode.NotFound);
+            exception.Message.ShouldContain("The appointment is not available");
+        }
     }
 }
