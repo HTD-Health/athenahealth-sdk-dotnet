@@ -26,5 +26,13 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         Task<Diagnose> CreateDiagnoses(int encounterId, CreateDiagnoses model);
 
         Task DeleteDiagnoses(int encounterId, int diagnosisId);
+
+        /// <summary>
+        /// Add a lab order.
+        /// </summary>
+        /// <param name="encounterId">The encounter ID to add this order to.</param>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        Task<OrderLab> CreateOrderLab(int encounterId, CreateOrderLab model);
     }
 }

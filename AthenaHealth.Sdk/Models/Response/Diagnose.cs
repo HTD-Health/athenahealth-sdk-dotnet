@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 // ReSharper disable StringLiteralTypo
 // ReSharper disable CommentTypo
+// ReSharper disable IdentifierTypo
 
 namespace AthenaHealth.Sdk.Models.Response
 {

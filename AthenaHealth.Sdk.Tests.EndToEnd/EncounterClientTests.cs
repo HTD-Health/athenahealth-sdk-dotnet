@@ -194,5 +194,28 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
             exception.Message.ShouldContain("Diagnosis not found");
         }
+
+        [Fact]
+        public async Task CreateOrderLab_ValidModel_ReturnsDocumentId()
+        {
+            var model = new CreateOrderLab(353034, 52967002);
+
+            OrderLab response = await _client.Encounters.CreateOrderLab(1, model);
+            
+            response.DocumentId.ShouldBeGreaterThan(0);
+        }
+
+        [Fact]
+        public async Task CreateOrderLab_InvalidOrderTypeId_ThrowsException()
+        {
+            var model = new CreateOrderLab(0, 52967002);
+
+            ApiValidationException exception = await Assert.ThrowsAsync<ApiValidationException>(() =>
+                _client.Encounters.CreateOrderLab(1, model)
+            );
+
+            exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
+            exception.Message.ShouldContain("You must specify which lab to order, either via the ordertypeid or a LOINC");
+        }
     }
 }
