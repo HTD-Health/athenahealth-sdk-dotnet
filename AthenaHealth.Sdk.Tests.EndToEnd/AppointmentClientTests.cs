@@ -152,5 +152,34 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             exception.StatusCode.ShouldBe(HttpStatusCode.NotFound);
             exception.Message.ShouldContain("The appointment is not available");
         }
+
+        [Fact]
+        public async Task CreateNote_ValidInput_CreatesNote()
+        {
+            int appointmentId = 100;
+            string noteText = "AL testing " + DateTime.Now.ToLongDateString() + DateTime.Now.ToLongTimeString();
+            bool displayOnSchedule = true;
+
+            Should.NotThrow(async ()
+                => await _client.Appointments.CreateNote(appointmentId, noteText, displayOnSchedule)
+            );
+
+            AppointmentNotesResponse notes = await _client.Appointments.GetNotes(appointmentId);
+            AppointmentNote createdNote = notes.Items
+                .FirstOrDefault(x => x.Text == noteText && x.DisplayOnSchedule == displayOnSchedule);
+
+            createdNote.ShouldNotBeNull();
+
+        }
+
+        [Fact]
+        public async Task CreateNote_NullNoteText_ThrowsApiValidationException()
+        {
+            ApiException exception = await Should.ThrowAsync<ApiException>(async ()
+                => await _client.Appointments.GetNotes(100));
+
+            exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
+            exception.Message.ShouldNotContain(@"""missingfields"":[""notetext""]");
+        }
     }
 }
