@@ -108,5 +108,23 @@ namespace AthenaHealth.Sdk.Tests.Integration
                 => await client.CreateNote(100, "testing", true)
                 );
         }
+
+        [Fact]
+        public async Task SearchReminders_ValidFilter_ReturnsRecords()
+        {
+            IAppointmentClient client = new Clients.AppointmentClient(ConnectionFactory.CreateFromFile(@"Data\Appointment\SearchReminders.json"));
+
+            SearchAppointmentRemindersFilter filter = new SearchAppointmentRemindersFilter(
+                1, 
+                new DateTime(2018,1,1), 
+                new DateTime(2019,12,31));
+
+            AppointmentRemindersResponse response = await client.SearchReminders(filter);
+
+            response.Total.ShouldBeGreaterThan(0);
+            response.Items.All(x => x.ApproximateDate != DateTime.MinValue).ShouldBeTrue();
+            response.Items.All(x => x.Id > 0).ShouldBeTrue();
+            response.Items.All(x => x.DepartmentId > 0).ShouldBeTrue();
+        }
     }
 }

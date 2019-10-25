@@ -55,5 +55,11 @@ namespace AthenaHealth.Sdk.Clients
                 null, 
                 new { notetext = text, displayonschedule = displayOnSchedule});
         }
+
+        public async Task<AppointmentRemindersResponse> SearchReminders(SearchAppointmentRemindersFilter filter)
+        {
+            return await _connection.Get<AppointmentRemindersResponse>(
+                $"{_connection.PracticeId}/appointments/appointmentreminders", filter);
+        }
     }
 }

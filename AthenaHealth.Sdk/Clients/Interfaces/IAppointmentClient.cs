@@ -30,5 +30,12 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// <param name="displayOnSchedule">Add appointment note to homepage display (defaults to false)</param>
         /// <returns></returns>
         Task CreateNote(int appointmentId, string text, bool displayOnSchedule = false);
+
+        /// <summary>
+        /// Find appointment reminders for this practice.
+        /// </summary>
+        /// <param name="filter"></param>
+        /// <returns></returns>
+        Task<AppointmentRemindersResponse> SearchReminders(SearchAppointmentRemindersFilter filter);
     }
 }

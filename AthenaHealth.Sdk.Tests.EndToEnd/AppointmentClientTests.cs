@@ -9,6 +9,7 @@ using AthenaHealth.Sdk.Tests.EndToEnd.Data.Appointments;
 using AthenaHealth.Sdk.Tests.EndToEnd.Fixtures;
 using Shouldly;
 using Xunit;
+// ReSharper disable StringLiteralTypo
 
 namespace AthenaHealth.Sdk.Tests.EndToEnd
 {
@@ -180,6 +181,23 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
 
             exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
             exception.Message.ShouldNotContain(@"""missingfields"":[""notetext""]");
+        }
+
+        [Theory]
+        [ClassData(typeof(SearchRemindersData))]
+        public async Task SearchReminders_ValidFilter_ReturnsRecords(int departmentId)
+        {
+            SearchAppointmentRemindersFilter filter = new SearchAppointmentRemindersFilter(
+                departmentId,
+                new DateTime(2018, 1, 1),
+                new DateTime(2019, 12, 31));
+
+            AppointmentRemindersResponse response = await _client.Appointments.SearchReminders(filter);
+
+            response.Total.ShouldBeGreaterThan(0);
+            response.Items.All(x => x.ApproximateDate != DateTime.MinValue).ShouldBeTrue();
+            response.Items.All(x => x.Id > 0).ShouldBeTrue();
+            response.Items.All(x => x.DepartmentId > 0).ShouldBeTrue();
         }
     }
 }

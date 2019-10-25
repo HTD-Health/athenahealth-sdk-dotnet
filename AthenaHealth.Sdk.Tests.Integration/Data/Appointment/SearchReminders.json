@@ -1,0 +1,170 @@
+{
+  "totalcount": 24,
+  "reminders": [
+    {
+      "departmentid": 1,
+      "approximatedate": "08/19/2019",
+      "patientid": 38397,
+      "appointmentreminderid": 15099,
+      "appointmenttypeid": 82,
+      "providerid": 141
+    },
+    {
+      "departmentid": 1,
+      "approximatedate": "05/31/2018",
+      "patientid": 32996,
+      "appointmentreminderid": 14995,
+      "appointmenttypeid": 5,
+      "providerid": 79
+    },
+    {
+      "departmentid": 1,
+      "approximatedate": "05/16/2019",
+      "patientid": 33339,
+      "appointmentreminderid": 15049,
+      "appointmenttypeid": 542,
+      "providerid": 79
+    },
+    {
+      "departmentid": 1,
+      "approximatedate": "05/19/2019",
+      "patientid": 32996,
+      "appointmentreminderid": 14994,
+      "providerid": 79
+    },
+    {
+      "departmentid": 1,
+      "approximatedate": "08/07/2019",
+      "patientid": 33339,
+      "appointmentreminderid": 15079,
+      "appointmenttypeid": 2223,
+      "providerid": 79
+    },
+    {
+      "departmentid": 1,
+      "approximatedate": "02/08/2018",
+      "patientid": 31540,
+      "appointmentreminderid": 14917,
+      "appointmenttypeid": 1941,
+      "providerid": 68
+    },
+    {
+      "departmentid": 1,
+      "approximatedate": "03/25/2018",
+      "patientid": 31503,
+      "appointmentreminderid": 14915,
+      "appointmenttypeid": 443,
+      "providerid": 68
+    },
+    {
+      "departmentid": 1,
+      "approximatedate": "05/30/2019",
+      "patientid": 30501,
+      "appointmentreminderid": 15077,
+      "providerid": 115
+    },
+    {
+      "departmentid": 1,
+      "approximatedate": "04/27/2018",
+      "patientid": 31219,
+      "appointmentreminderid": 14974,
+      "providerid": 70
+    },
+    {
+      "departmentid": 1,
+      "patientinstructions": "Please contact the office",
+      "approximatedate": "02/19/2019",
+      "patientid": 35198,
+      "appointmentreminderid": 15048,
+      "status": "Contact Attempted",
+      "appointmenttypeid": 82,
+      "providerid": 86,
+      "note": "Don't eat 24 hours prior"
+    },
+    {
+      "departmentid": 1,
+      "approximatedate": "01/01/2018",
+      "patientid": 109,
+      "appointmentreminderid": 14671,
+      "appointmenttypeid": 6
+    },
+    {
+      "departmentid": 1,
+      "approximatedate": "03/07/2018",
+      "patientid": 31503,
+      "appointmentreminderid": 14934
+    },
+    {
+      "departmentid": 1,
+      "approximatedate": "03/09/2018",
+      "patientid": 30196,
+      "appointmentreminderid": 14794
+    },
+    {
+      "departmentid": 1,
+      "approximatedate": "03/30/2018",
+      "patientid": 32323,
+      "appointmentreminderid": 14954
+    },
+    {
+      "departmentid": 1,
+      "approximatedate": "04/10/2018",
+      "patientid": 1,
+      "appointmentreminderid": 14579
+    },
+    {
+      "departmentid": 1,
+      "approximatedate": "08/12/2018",
+      "patientid": 14994,
+      "appointmentreminderid": 15016
+    },
+    {
+      "departmentid": 1,
+      "approximatedate": "09/15/2018",
+      "patientid": 13387,
+      "appointmentreminderid": 15017
+    },
+    {
+      "departmentid": 1,
+      "approximatedate": "09/18/2018",
+      "patientid": 13387,
+      "appointmentreminderid": 15018
+    },
+    {
+      "departmentid": 1,
+      "approximatedate": "10/01/2018",
+      "patientid": 1,
+      "appointmentreminderid": 14575
+    },
+    {
+      "departmentid": 1,
+      "approximatedate": "10/01/2018",
+      "patientid": 1,
+      "appointmentreminderid": 14578
+    },
+    {
+      "departmentid": 1,
+      "approximatedate": "10/10/2018",
+      "patientid": 1,
+      "appointmentreminderid": 15050
+    },
+    {
+      "departmentid": 1,
+      "approximatedate": "12/04/2018",
+      "patientid": 26726,
+      "appointmentreminderid": 14593
+    },
+    {
+      "departmentid": 1,
+      "approximatedate": "12/30/2018",
+      "patientid": 34717,
+      "appointmentreminderid": 15037
+    },
+    {
+      "departmentid": 1,
+      "approximatedate": "06/08/2019",
+      "patientid": 36205,
+      "appointmentreminderid": 15078
+    }
+  ]
+}
