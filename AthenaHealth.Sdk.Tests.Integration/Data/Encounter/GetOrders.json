@@ -1,0 +1,221 @@
+[
+  {
+    "diagnosisicd": [],
+    "orders": [
+      {
+        "priority": 2,
+        "status": "CLOSED",
+        "diagnosislist": [
+          {
+            "diagnosiscode": {
+              "codeset": "SNOMED",
+              "description": "Liver function tests abnormal",
+              "code": "166603001"
+            },
+            "snomedicdcodes": []
+          }
+        ],
+        "documentationonly": true,
+        "classdescription": "prescription - new",
+        "dateordered": "08/22/2011 09:50 AM",
+        "externalcodes": [
+          {
+            "codeset": "NDC",
+            "description": "Manufacturer: AUROBINDO PHARM; Package form: bottle(s) of 100",
+            "code": "65862-176-01"
+          },
+          {
+            "codeset": "NDC",
+            "description": "Manufacturer: TEVA USA; Package form: bottle(s) of 100",
+            "code": "0093-1174-01"
+          },
+          {
+            "codeset": "NDC",
+            "description": "Manufacturer: SANDOZ; Package form: bottle(s) of 1000",
+            "code": "0781-1655-10"
+          },
+          {
+            "codeset": "NDC",
+            "description": "Manufacturer: NORTHSTAR RX LL; Package form: bottle(s) of 1000",
+            "code": "16714-235-02"
+          },
+          {
+            "codeset": "NDC",
+            "description": "Manufacturer: SANDOZ; Package form: bottle(s) of 100",
+            "code": "0781-1655-01"
+          },
+          {
+            "codeset": "NDC",
+            "description": "Manufacturer: WEST-WARD/HIKMA; Package form: bottle(s) of 1000",
+            "code": "0143-9836-10"
+          },
+          {
+            "codeset": "NDC",
+            "description": "Manufacturer: RISING PHARM; Package form: bottle(s) of 1000",
+            "code": "57237-041-99"
+          },
+          {
+            "codeset": "NDC",
+            "description": "Manufacturer: TEVA USA; Package form: bottle(s) of 1000",
+            "code": "0093-1174-10"
+          },
+          {
+            "codeset": "NDC",
+            "description": "Manufacturer: NORTHSTAR RX LL; Package form: bottle(s) of 100",
+            "code": "16714-235-01"
+          },
+          {
+            "codeset": "NDC",
+            "description": "Manufacturer: RISING PHARM; Package form: bottle(s) of 500",
+            "code": "57237-041-05"
+          },
+          {
+            "codeset": "NDC",
+            "description": "Manufacturer: RISING PHARM; Package form: bottle(s) of 100",
+            "code": "57237-041-01"
+          },
+          {
+            "codeset": "NDC",
+            "description": "Manufacturer: AUROBINDO PHARM; Package form: bottle(s) of 500",
+            "code": "65862-176-05"
+          },
+          {
+            "codeset": "NDC",
+            "description": "Manufacturer: WEST-WARD/HIKMA; Package form: bottle(s) of 100",
+            "code": "0143-9836-01"
+          },
+          {
+            "codeset": "RXNORM",
+            "description": "Penicillin V Potassium 500 MG Oral Tablet",
+            "code": "834102"
+          }
+        ],
+        "futuresubmitdate": "2011-08-22",
+        "ordertypeid": 197023,
+        "lastmodifieddatetime": "2013-07-26T05:41:09-04:00",
+        "createduser": "jdoe",
+        "description": "penicillin V potassium 500 mg tablet",
+        "orderid": 21098,
+        "orderingprovider": "vehlert0",
+        "class": "PRESCRIPTION",
+        "lastmodifiedby": "jdoe",
+        "ordertype": "Prescription"
+      },
+      {
+        "priority": 2,
+        "status": "FOLLOWUP",
+        "diagnosislist": [
+          {
+            "snomedicdcodes": [],
+            "diagnosiscode": {
+              "codeset": "SNOMED",
+              "description": "Liver function tests abnormal",
+              "code": "166603001"
+            }
+          }
+        ],
+        "documentationonly": false,
+        "classdescription": "order",
+        "assigneduser": "ST FRANCIS HOSP -IN PT STAFF",
+        "dateordered": "08/22/2011 09:50 AM",
+        "externalcodes": [],
+        "futuresubmitdate": "2011-08-08",
+        "ordertypeid": 295031,
+        "departmentid": 102,
+        "clinicalprovider": {
+          "clinicalproviderid": "11224579",
+          "name": "Quest Diagnostics PSC",
+          "faxphonenumber": "(303) 393-6307",
+          "address2": "Basement Level",
+          "state": "CO",
+          "zip": 80220,
+          "city": "Denver",
+          "phonenumber": "(303) 393-1020",
+          "address1": "4567 East 9th Ave"
+        },
+        "clinicalproviderid": 11224579,
+        "lastmodifieddatetime": "2013-07-26T05:41:09-04:00",
+        "createduser": "jdoe",
+        "description": "BMP,CBC,lipid panel,TSH,",
+        "orderid": 21099,
+        "orderingprovider": "vehlert0",
+        "class": "ORDER",
+        "clinicalprovidername": "Quest Diagnostics PSC",
+        "lastmodifiedby": "jdoe",
+        "ordertype": "Lab"
+      },
+      {
+        "priority": 2,
+        "status": "FOLLOWUP",
+        "diagnosislist": [
+          {
+            "snomedicdcodes": [],
+            "diagnosiscode": {
+              "codeset": "SNOMED",
+              "description": "Liver function tests abnormal",
+              "code": "166603001"
+            }
+          }
+        ],
+        "documentationonly": false,
+        "classdescription": "order",
+        "assigneduser": "ST FRANCIS HOSP -IN PT STAFF",
+        "dateordered": "08/22/2011 09:50 AM",
+        "externalcodes": [],
+        "futuresubmitdate": "2011-08-08",
+        "ordertypeid": 274622,
+        "departmentid": 102,
+        "clinicalprovider": {
+          "clinicalproviderid": "11271235",
+          "name": "University Hospital Endocrinologist",
+          "faxphonenumber": "(303) 724-3920",
+          "state": "CO",
+          "zip": 80045,
+          "city": "Aurora",
+          "phonenumber": "(303) 724-3921",
+          "address1": "12801 E 17th Ave"
+        },
+        "clinicalproviderid": 11271235,
+        "lastmodifieddatetime": "2013-07-26T05:41:09-04:00",
+        "createduser": "jdoe",
+        "description": "endoscopic ultrasound",
+        "orderid": 21100,
+        "orderingprovider": "vehlert0",
+        "class": "ORDER",
+        "clinicalprovidername": "University Hospital Endocrinologist",
+        "lastmodifiedby": "jdoe",
+        "ordertype": "Imaging"
+      },
+      {
+        "priority": 2,
+        "status": "CLOSED",
+        "diagnosislist": [
+          {
+            "diagnosiscode": {
+              "codeset": "SNOMED",
+              "description": "Liver function tests abnormal",
+              "code": "166603001"
+            },
+            "snomedicdcodes": []
+          }
+        ],
+        "documentationonly": false,
+        "classdescription": "patient info order",
+        "dateordered": "08/22/2011 09:50 AM",
+        "externalcodes": [],
+        "futuresubmitdate": "2011-08-08",
+        "ordertypeid": 282603,
+        "lastmodifieddatetime": "2013-07-26T05:41:09-04:00",
+        "createduser": "jdoe",
+        "description": "hyperthyroidism in children: care instructions",
+        "orderid": 21101,
+        "orderingprovider": "vehlert0",
+        "class": "PATIENTINFO",
+        "lastmodifiedby": "jdoe",
+        "ordertype": "Patient Info"
+      }
+    ],
+    "diagnosis": "Liver function tests abnormal",
+    "diagnosissnomed": 166603001
+  }
+]

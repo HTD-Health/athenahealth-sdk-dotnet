@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using AthenaHealth.Sdk.Exceptions;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
+using AthenaHealth.Sdk.Tests.EndToEnd.Data.Encounter;
 using AthenaHealth.Sdk.Tests.EndToEnd.Fixtures;
 using Shouldly;
 using Xunit;
@@ -201,12 +202,12 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             var model = new CreateOrderLab(353034, 52967002);
 
             OrderLab response = await _client.Encounters.CreateOrderLab(1, model);
-            
+
             response.DocumentId.ShouldBeGreaterThan(0);
         }
 
         [Fact]
-        public async Task CreateOrderLab_InvalidOrderTypeId_ThrowsException()
+        public async Task CreateOrderLab_InvalidOrderTypeId_ThrowsApiValidationException ()
         {
             var model = new CreateOrderLab(0, 52967002);
 
@@ -216,6 +217,34 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
 
             exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
             exception.Message.ShouldContain("You must specify which lab to order, either via the ordertypeid or a LOINC");
+        }
+
+        [Theory]
+        [ClassData(typeof(GetEncounterOrdersData))]
+        public async Task GetOrders_ExistingId_ReturnsRecords(int encounterId)
+        {
+            //int encounterId = 1;
+
+            var response = await _client.Encounters.GetOrders(encounterId);
+
+            response.Any().ShouldBeTrue();
+            response.First().Orders.Length.ShouldBeGreaterThan(0);
+            response.All(x => x.Orders.All(o => o.Id > 0)).ShouldBeTrue();
+            response.All(x => x.Orders.Length > 0).ShouldBeTrue();
+            response.All(x => x.DiagnosisSnomed.HasValue).ShouldBeTrue();
+        }
+
+        [Fact]
+        public async Task GetOrders_NoExistingEncounter_ThrowsApiValidationException()
+        {
+            int encounterId = 999;
+
+            ApiValidationException exception = await Assert.ThrowsAsync<ApiValidationException>(() =>
+                _client.Encounters.GetOrders(encounterId)
+            );
+
+            exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
+            exception.Message.ShouldContain("Encounter not found");
         }
     }
 }

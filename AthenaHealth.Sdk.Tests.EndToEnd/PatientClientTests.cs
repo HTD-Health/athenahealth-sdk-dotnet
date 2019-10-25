@@ -99,7 +99,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         }
 
         [Theory]
-        [ClassData(typeof(GetAnalytesData))]
+        [ClassData(typeof(GetOrdersData))]
         public async Task GetAnalytes_AnalytesExists_ShouldNotThrowJsonSerializationException(int patientId)
         {
             // Arrange

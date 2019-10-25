@@ -59,5 +59,10 @@ namespace AthenaHealth.Sdk.Clients
         {
             return await _connection.Post<OrderLab>($"{_connection.PracticeId}/chart/encounter/{encounterId}/orders/lab", null, model);
         }
+
+        public async Task<EncounterOrdersResponse[]> GetOrders(int encounterId, GetEncounterOrdersFilter filter = null)
+        {
+            return await _connection.Get<EncounterOrdersResponse[]>($"{_connection.PracticeId}/chart/encounter/{encounterId}/orders");
+        }
     }
 }
