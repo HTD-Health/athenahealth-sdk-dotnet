@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using AthenaHealth.Sdk.Clients.Interfaces;
 using AthenaHealth.Sdk.Extensions;
 using AthenaHealth.Sdk.Http;
@@ -55,6 +53,11 @@ namespace AthenaHealth.Sdk.Clients
             return _connection.Delete<DeleteResponse>(
                 $"{_connection.PracticeId}/chart/encounter/{encounterId}/diagnoses/{diagnosisId}"
             );
+        }
+
+        public async Task<OrderLab> CreateOrderLab(int encounterId, CreateOrderLab model)
+        {
+            return await _connection.Post<OrderLab>($"{_connection.PracticeId}/chart/encounter/{encounterId}/orders/lab", null, model);
         }
     }
 }
