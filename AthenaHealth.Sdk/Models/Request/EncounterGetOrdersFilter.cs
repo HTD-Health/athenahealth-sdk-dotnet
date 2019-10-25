@@ -1,6 +1,6 @@
 ﻿namespace AthenaHealth.Sdk.Models.Request
 {
-    public class GetEncounterOrdersFilter
+    public class EncounterGetOrdersFilter
     {
         /// <summary>
         /// If set, this will allow getting orders for a discharge encounter type.

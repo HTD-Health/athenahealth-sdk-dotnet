@@ -1,0 +1,97 @@
+{
+  "status": "CLOSED",
+  "documents": [],
+  "diagnosislist": [
+    {
+      "snomedicdcodes": [],
+      "diagnosiscode": {
+        "codeset": "ICD9",
+        "description": "Nonspecific abnormal results of function study of liver",
+        "code": "7948"
+      }
+    }
+  ],
+  "documentationonly": true,
+  "classdescription": "prescription - new",
+  "dateordered": "08/22/2011 09:50 AM",
+  "externalcodes": [
+    {
+      "codeset": "NDC",
+      "description": "Manufacturer: AUROBINDO PHARM; Package form: bottle(s) of 100",
+      "code": "65862-176-01"
+    },
+    {
+      "codeset": "NDC",
+      "description": "Manufacturer: TEVA USA; Package form: bottle(s) of 100",
+      "code": "0093-1174-01"
+    },
+    {
+      "codeset": "NDC",
+      "description": "Manufacturer: SANDOZ; Package form: bottle(s) of 1000",
+      "code": "0781-1655-10"
+    },
+    {
+      "codeset": "NDC",
+      "description": "Manufacturer: NORTHSTAR RX LL; Package form: bottle(s) of 1000",
+      "code": "16714-235-02"
+    },
+    {
+      "codeset": "NDC",
+      "description": "Manufacturer: SANDOZ; Package form: bottle(s) of 100",
+      "code": "0781-1655-01"
+    },
+    {
+      "codeset": "NDC",
+      "description": "Manufacturer: WEST-WARD/HIKMA; Package form: bottle(s) of 1000",
+      "code": "0143-9836-10"
+    },
+    {
+      "codeset": "NDC",
+      "description": "Manufacturer: RISING PHARM; Package form: bottle(s) of 1000",
+      "code": "57237-041-99"
+    },
+    {
+      "codeset": "NDC",
+      "description": "Manufacturer: TEVA USA; Package form: bottle(s) of 1000",
+      "code": "0093-1174-10"
+    },
+    {
+      "codeset": "NDC",
+      "description": "Manufacturer: NORTHSTAR RX LL; Package form: bottle(s) of 100",
+      "code": "16714-235-01"
+    },
+    {
+      "codeset": "NDC",
+      "description": "Manufacturer: RISING PHARM; Package form: bottle(s) of 500",
+      "code": "57237-041-05"
+    },
+    {
+      "codeset": "NDC",
+      "description": "Manufacturer: RISING PHARM; Package form: bottle(s) of 100",
+      "code": "57237-041-01"
+    },
+    {
+      "codeset": "NDC",
+      "description": "Manufacturer: AUROBINDO PHARM; Package form: bottle(s) of 500",
+      "code": "65862-176-05"
+    },
+    {
+      "codeset": "NDC",
+      "description": "Manufacturer: WEST-WARD/HIKMA; Package form: bottle(s) of 100",
+      "code": "0143-9836-01"
+    },
+    {
+      "codeset": "RXNORM",
+      "description": "Penicillin V Potassium 500 MG Oral Tablet",
+      "code": "834102"
+    }
+  ],
+  "ordertypeid": 197023,
+  "departmentid": 102,
+  "description": "penicillin V potassium 500 mg tablet",
+  "questions": [],
+  "orderid": 21098,
+  "orderingprovider": "vehlert0",
+  "class": "PRESCRIPTION",
+  "ordertype": "Prescription"
+}

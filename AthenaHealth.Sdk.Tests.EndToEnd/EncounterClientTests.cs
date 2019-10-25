@@ -225,7 +225,13 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         {
             //int encounterId = 1;
 
-            var response = await _client.Encounters.GetOrders(encounterId);
+            var response = await _client.Encounters.GetOrders(encounterId, new EncounterGetOrdersFilter()
+            {
+                AllowDischargeType = true,
+                ShowClinicalProvider = true,
+                ShowDeclinedOrders = true,
+                ShowExternalCodes = true
+            });
 
             response.Any().ShouldBeTrue();
             response.First().Orders.Length.ShouldBeGreaterThan(0);
@@ -245,6 +251,21 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
 
             exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
             exception.Message.ShouldContain("Encounter not found");
+        }
+
+        [Theory]
+        [ClassData(typeof(GetEncounterOrderData))]
+        public async Task GetOrderById_ExistingOrderId_ReturnsRecord(int encounterId, int orderId)
+        {
+            EncounterOrder response = await _client.Encounters.GetOrderById(encounterId, orderId, new EncounterGetOrderByIdFilter()
+            {
+                ShowQuestions = true,
+                ShowExternalCodes = true
+            });
+
+            response.ShouldNotBeNull();
+            response.Id.ShouldBeGreaterThan(0);
+            response.Status.ShouldNotBeNull();
         }
     }
 }
