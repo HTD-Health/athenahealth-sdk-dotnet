@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using AthenaHealth.Sdk.Clients.Interfaces;
 using AthenaHealth.Sdk.Extensions;
@@ -42,6 +40,11 @@ namespace AthenaHealth.Sdk.Clients
         {
             Appointment[] result = await _connection.Get<Appointment[]>($"{_connection.PracticeId}/appointments/{id}", filter);
             return result.FirstOrThrowException();
+        }
+
+        public async Task<AppointmentNotesResponse> GetNotes(int appointmentId, bool showDeleted = false)
+        {
+           return await _connection.Get<AppointmentNotesResponse>($"{_connection.PracticeId}/appointments/{appointmentId}/notes", showDeleted);
         }
     }
 }
