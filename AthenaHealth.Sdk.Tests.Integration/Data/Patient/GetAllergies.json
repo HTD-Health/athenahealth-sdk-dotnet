@@ -1,0 +1,972 @@
+{
+  "nkda": false,
+  "notelastmodifieddatetime": "2019-01-28T11:55:09-05:00",
+  "notelastmodifiedby": "API-9397",
+  "lastmodifieddatetime": "2019-06-13T00:02:58-04:00",
+  "sectionnote": "confirmed",
+  "lastupdated": "06\/13\/2019",
+  "lastmodifiedby": "rcharles6",
+  "allergies": [
+    {
+      "rxnormdescription": "Azasteroid (substance)",
+      "lastmodifieddatetime": "2018-11-12T13:34:41-05:00",
+      "reactions": [],
+      "allergenid": 24329,
+      "allergenname": "5-Alfa Reductase Inhibitor, Azasteroids",
+      "onsetdate": "11\/12\/2018",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "Ala-Cort",
+      "lastmodifieddatetime": "2018-11-01T03:40:44-04:00",
+      "rxnormcode": "215068",
+      "reactions": [],
+      "allergenid": 27972,
+      "allergenname": "Ala-Cort",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "Ala-Quin",
+      "lastmodifieddatetime": "2018-11-01T03:40:44-04:00",
+      "rxnormcode": "215069",
+      "reactions": [],
+      "allergenid": 27488,
+      "allergenname": "Ala-Quin",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "Ala-Scalp",
+      "lastmodifieddatetime": "2018-11-01T03:40:44-04:00",
+      "rxnormcode": "884074",
+      "reactions": [],
+      "allergenid": 27971,
+      "allergenname": "Ala-Scalp",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "Ala Seb",
+      "lastmodifieddatetime": "2018-11-01T03:40:44-04:00",
+      "rxnormcode": "880408",
+      "reactions": [],
+      "allergenid": 22786,
+      "allergenname": "Ala-Seb",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "Ala Seb T",
+      "lastmodifieddatetime": "2018-11-01T03:40:44-04:00",
+      "rxnormcode": "1942753",
+      "reactions": [],
+      "allergenid": 27974,
+      "allergenname": "Ala-Seb-T",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "lastmodifieddatetime": "2018-11-01T03:40:44-04:00",
+      "reactions": [],
+      "allergenid": 18409,
+      "allergenname": "alacepril",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "lastmodifieddatetime": "2018-11-01T03:40:44-04:00",
+      "reactions": [],
+      "allergenid": 94932,
+      "allergenname": "Alahist DM",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "lastmodifieddatetime": "2018-11-01T03:40:44-04:00",
+      "reactions": [],
+      "allergenid": 21095,
+      "allergenname": "Alamag",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "lastmodifieddatetime": "2018-11-01T03:40:44-04:00",
+      "reactions": [],
+      "allergenid": 21783,
+      "allergenname": "Alamast",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "alatrofloxacin",
+      "lastmodifieddatetime": "2018-11-01T03:40:44-04:00",
+      "rxnormcode": "141440",
+      "reactions": [],
+      "allergenid": 82341,
+      "allergenname": "alatrofloxacin",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "Alavert D",
+      "lastmodifieddatetime": "2018-11-09T14:17:26-05:00",
+      "rxnormcode": "608666",
+      "reactions": [],
+      "allergenid": 26890,
+      "allergenname": "Alavert D-12 Allergy-Sinus",
+      "onsetdate": "11\/09\/2018",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "lastmodifieddatetime": "2018-11-09T14:17:26-05:00",
+      "reactions": [],
+      "allergenid": 23055,
+      "allergenname": "All Clear",
+      "onsetdate": "11\/09\/2018",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "lastmodifieddatetime": "2018-11-09T14:17:26-05:00",
+      "reactions": [],
+      "allergenid": 23040,
+      "allergenname": "All Clear AR",
+      "onsetdate": "11\/09\/2018",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "Allantoin",
+      "lastmodifieddatetime": "2018-11-09T14:17:26-05:00",
+      "rxnormcode": "508",
+      "reactions": [],
+      "allergenid": 13549,
+      "allergenname": "allantoin",
+      "onsetdate": "11\/09\/2018",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "lastmodifieddatetime": "2018-11-09T14:17:26-05:00",
+      "reactions": [],
+      "allergenid": 15292,
+      "allergenname": "Allclenz",
+      "onsetdate": "11\/09\/2018",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "Allegra",
+      "lastmodifieddatetime": "2018-11-09T14:17:26-05:00",
+      "rxnormcode": "324026",
+      "reactions": [],
+      "allergenid": 20839,
+      "allergenname": "Allegra",
+      "onsetdate": "11\/09\/2018",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "lastmodifieddatetime": "2018-11-09T14:17:26-05:00",
+      "reactions": [],
+      "allergenid": 89707,
+      "allergenname": "Allegra-D",
+      "onsetdate": "11\/09\/2018",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "Allegra-D",
+      "lastmodifieddatetime": "2018-11-09T14:17:26-05:00",
+      "rxnormcode": "215122",
+      "reactions": [],
+      "allergenid": 16165,
+      "allergenname": "Allegra-D 12 Hour",
+      "onsetdate": "11\/09\/2018",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "Aller-Chlor",
+      "lastmodifieddatetime": "2018-11-09T14:17:26-05:00",
+      "rxnormcode": "215124",
+      "reactions": [],
+      "allergenid": 27896,
+      "allergenname": "Aller-Chlor",
+      "onsetdate": "11\/09\/2018",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "lastmodifieddatetime": "2018-11-09T14:17:26-05:00",
+      "reactions": [],
+      "allergenid": 89617,
+      "allergenname": "Aller-Chlor Decongestant",
+      "onsetdate": "11\/09\/2018",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "Astagraf",
+      "lastmodifieddatetime": "2018-11-12T13:34:41-05:00",
+      "rxnormcode": "1431972",
+      "reactions": [],
+      "allergenid": 88522,
+      "allergenname": "Astagraf XL",
+      "onsetdate": "11\/12\/2018",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "Astelin",
+      "lastmodifieddatetime": "2018-11-12T13:34:41-05:00",
+      "rxnormcode": "215453",
+      "reactions": [],
+      "allergenid": 20947,
+      "allergenname": "Astelin",
+      "onsetdate": "11\/12\/2018",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "Astemizole",
+      "lastmodifieddatetime": "2018-11-12T13:34:41-05:00",
+      "rxnormcode": "42328",
+      "reactions": [],
+      "allergenid": 14507,
+      "allergenname": "astemizole",
+      "onsetdate": "11\/12\/2018",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "Astepro",
+      "lastmodifieddatetime": "2018-11-12T13:34:41-05:00",
+      "rxnormcode": "824962",
+      "reactions": [],
+      "allergenid": 26865,
+      "allergenname": "Astepro",
+      "onsetdate": "11\/12\/2018",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "lastmodifieddatetime": "2018-11-12T13:34:41-05:00",
+      "reactions": [],
+      "allergenid": 94615,
+      "allergenname": "Astero",
+      "onsetdate": "11\/12\/2018",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "Astragalus preparation",
+      "lastmodifieddatetime": "2018-11-12T13:34:41-05:00",
+      "rxnormcode": "319818",
+      "reactions": [],
+      "allergenid": 18166,
+      "allergenname": "Astragalus",
+      "onsetdate": "11\/12\/2018",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "Astramorph",
+      "lastmodifieddatetime": "2018-11-12T13:34:41-05:00",
+      "rxnormcode": "885779",
+      "reactions": [],
+      "allergenid": 18629,
+      "allergenname": "Astramorph-PF",
+      "onsetdate": "11\/12\/2018",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "Astringyn",
+      "lastmodifieddatetime": "2018-11-12T13:34:41-05:00",
+      "rxnormcode": "544861",
+      "reactions": [],
+      "allergenid": 21644,
+      "allergenname": "Astringyn",
+      "onsetdate": "11\/12\/2018",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "lastmodifieddatetime": "2018-11-12T13:34:41-05:00",
+      "reactions": [],
+      "allergenid": 22877,
+      "allergenname": "Astroglide",
+      "onsetdate": "11\/12\/2018",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "lastmodifieddatetime": "2018-12-14T11:54:56-05:00",
+      "reactions": [],
+      "allergenid": 29902,
+      "allergenname": "Benefiber (wheat dextrin)",
+      "onsetdate": "12\/14\/2018",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "lastmodifieddatetime": "2018-12-14T11:54:56-05:00",
+      "reactions": [],
+      "allergenid": 17785,
+      "allergenname": "buckwheat",
+      "onsetdate": "12\/14\/2018",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "Butyrophenone derivative (substance)",
+      "lastmodifieddatetime": "2019-01-28T11:10:00-05:00",
+      "reactions": [],
+      "allergenid": 12333,
+      "allergenname": "Butyrophenones",
+      "onsetdate": "01\/28\/2019",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "Caffeine",
+      "lastmodifieddatetime": "2019-01-28T09:32:16-05:00",
+      "rxnormcode": "1886",
+      "reactions": [],
+      "allergenid": 12498,
+      "allergenname": "caffeine",
+      "onsetdate": "01\/28\/2019",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "Canrenone",
+      "lastmodifieddatetime": "2019-01-28T11:10:00-05:00",
+      "rxnormcode": "1982",
+      "reactions": [],
+      "allergenid": 16640,
+      "allergenname": "canrenone",
+      "onsetdate": "01\/28\/2019",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "lastmodifieddatetime": "2019-01-28T09:32:16-05:00",
+      "reactions": [],
+      "allergenid": 21545,
+      "allergenname": "CCP Caffeine Free",
+      "onsetdate": "01\/28\/2019",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "Chlormezanone",
+      "lastmodifieddatetime": "2019-01-28T11:10:00-05:00",
+      "rxnormcode": "2373",
+      "reactions": [],
+      "allergenid": 13202,
+      "allergenname": "chlormezanone",
+      "onsetdate": "01\/28\/2019",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "Cholecalciferol",
+      "lastmodifieddatetime": "2018-12-14T11:41:42-05:00",
+      "rxnormcode": "2418",
+      "reactions": [],
+      "allergenid": 12828,
+      "allergenname": "cholecalciferol (vitamin D3)",
+      "onsetdate": "12\/14\/2018",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "Crinone",
+      "lastmodifieddatetime": "2019-01-28T11:10:00-05:00",
+      "rxnormcode": "153581",
+      "reactions": [],
+      "allergenid": 14881,
+      "allergenname": "Crinone",
+      "onsetdate": "01\/28\/2019",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "dipipanone",
+      "lastmodifieddatetime": "2019-01-28T11:10:00-05:00",
+      "rxnormcode": "23405",
+      "reactions": [],
+      "allergenid": 14760,
+      "allergenname": "dipipanone",
+      "onsetdate": "01\/28\/2019",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "drospirenone",
+      "lastmodifieddatetime": "2019-01-28T11:10:00-05:00",
+      "rxnormcode": "11636",
+      "reactions": [],
+      "allergenid": 19131,
+      "allergenname": "drospirenone",
+      "onsetdate": "01\/28\/2019",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "lastmodifieddatetime": "2018-12-14T11:41:42-05:00",
+      "reactions": [],
+      "allergenid": 94008,
+      "allergenname": "Emergen-C Vitamin D-Calcium",
+      "onsetdate": "12\/14\/2018",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "eplerenone",
+      "lastmodifieddatetime": "2019-01-28T11:10:00-05:00",
+      "rxnormcode": "298869",
+      "reactions": [],
+      "allergenid": 19516,
+      "allergenname": "eplerenone",
+      "onsetdate": "01\/28\/2019",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "eprazinone",
+      "lastmodifieddatetime": "2019-01-28T11:10:00-05:00",
+      "rxnormcode": "24272",
+      "reactions": [],
+      "allergenid": 16393,
+      "allergenname": "eprazinone",
+      "onsetdate": "01\/28\/2019",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "Ergocalciferol",
+      "lastmodifieddatetime": "2018-12-14T11:41:42-05:00",
+      "rxnormcode": "4018",
+      "reactions": [],
+      "allergenid": 12827,
+      "allergenname": "ergocalciferol (vitamin D2)",
+      "onsetdate": "12\/14\/2018",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "lastmodifieddatetime": "2018-12-14T11:41:42-05:00",
+      "reactions": [],
+      "allergenid": 91103,
+      "allergenname": "Floriva (fluoride-vitamin D3)",
+      "onsetdate": "12\/14\/2018",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "lastmodifieddatetime": "2018-12-14T11:47:36-05:00",
+      "reactions": [],
+      "allergenid": 90776,
+      "allergenname": "Galactose-Alpha-1,3-Galactose (Alpha-Gal)",
+      "onsetdate": "12\/14\/2018",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "Wheat gluten extract",
+      "lastmodifieddatetime": "2018-12-14T11:54:56-05:00",
+      "rxnormcode": "1370781",
+      "reactions": [],
+      "allergenid": 17665,
+      "allergenname": "gluten",
+      "onsetdate": "12\/14\/2018",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "hydroquinone",
+      "lastmodifieddatetime": "2019-01-28T11:10:00-05:00",
+      "rxnormcode": "5509",
+      "reactions": [],
+      "allergenid": 13560,
+      "allergenname": "hydroquinone",
+      "onsetdate": "01\/28\/2019",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "Ibuprofen",
+      "lastmodifieddatetime": "2019-06-12T12:56:00-04:00",
+      "rxnormcode": "5640",
+      "reactions": [],
+      "allergenid": 13785,
+      "allergenname": "ibuprofen",
+      "lastmodifiedby": "API-11294"
+    },
+    {
+      "rxnormdescription": "idebenone",
+      "lastmodifieddatetime": "2019-01-28T11:10:00-05:00",
+      "rxnormcode": "51296",
+      "reactions": [],
+      "allergenid": 17366,
+      "allergenname": "idebenone",
+      "onsetdate": "01\/28\/2019",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "Lactose",
+      "lastmodifieddatetime": "2018-12-14T11:47:36-05:00",
+      "rxnormcode": "6211",
+      "reactions": [],
+      "allergenid": 13834,
+      "allergenname": "lactose",
+      "onsetdate": "12\/14\/2018",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "lastmodifieddatetime": "2018-12-14T11:47:36-05:00",
+      "reactions": [],
+      "allergenid": 91698,
+      "allergenname": "Lactose Fast Acting Relief",
+      "onsetdate": "12\/14\/2018",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "lastmodifieddatetime": "2018-12-14T11:41:42-05:00",
+      "reactions": [],
+      "allergenid": 95636,
+      "allergenname": "Lidotrex (with vitamin E)",
+      "onsetdate": "12\/14\/2018",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "peanut allergenic extract",
+      "lastmodifieddatetime": "2019-06-13T00:02:44-04:00",
+      "rxnormcode": "891658",
+      "reactions": [],
+      "allergenid": 12483,
+      "allergenname": "peanut",
+      "lastmodifiedby": "rcharles6"
+    },
+    {
+      "rxnormdescription": "Pear Preparation",
+      "lastmodifieddatetime": "2019-06-13T00:02:58-04:00",
+      "rxnormcode": "1367125",
+      "reactions": [],
+      "allergenid": 83176,
+      "allergenname": "pear",
+      "lastmodifiedby": "rcharles6"
+    },
+    {
+      "rxnormdescription": "Phrenilin Forte",
+      "lastmodifieddatetime": "2019-01-28T09:32:16-05:00",
+      "rxnormcode": "219239",
+      "reactions": [],
+      "allergenid": 97315,
+      "allergenname": "Phrenilin Forte(with caffeine)",
+      "onsetdate": "01\/28\/2019",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "Vitamin K 1",
+      "lastmodifieddatetime": "2018-12-14T11:41:42-05:00",
+      "rxnormcode": "8308",
+      "reactions": [],
+      "allergenid": 12844,
+      "allergenname": "phytonadione (vitamin K1)",
+      "onsetdate": "12\/14\/2018",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "Schizandra preparation",
+      "lastmodifieddatetime": "2018-08-08T15:25:47-04:00",
+      "rxnormcode": "56084",
+      "reactions": [],
+      "allergenid": 18213,
+      "allergenname": "schisandra",
+      "onsetdate": "12\/31\/2015",
+      "lastmodifiedby": "API-5879"
+    },
+    {
+      "lastmodifieddatetime": "2018-12-14T11:54:56-05:00",
+      "reactions": [],
+      "allergenid": 23884,
+      "allergenname": "Senokot Wheat Bran",
+      "onsetdate": "12\/14\/2018",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "lastmodifieddatetime": "2018-12-05T18:04:55-05:00",
+      "reactions": [],
+      "allergenid": 19092,
+      "allergenname": "tomato",
+      "onsetdate": "12\/05\/2018",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "Wasp Venoms",
+      "lastmodifieddatetime": "2013-07-26T11:38:59-04:00",
+      "rxnormcode": "11291",
+      "reactions": [],
+      "allergenid": 18035,
+      "allergenname": "venom-wasp",
+      "lastmodifiedby": "jdoe"
+    },
+    {
+      "lastmodifieddatetime": "2018-12-14T11:41:42-05:00",
+      "reactions": [],
+      "allergenid": 36675,
+      "allergenname": "Vitamin D2",
+      "onsetdate": "12\/14\/2018",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "lastmodifieddatetime": "2018-12-14T11:41:42-05:00",
+      "reactions": [],
+      "allergenid": 28098,
+      "allergenname": "Vitamin D3",
+      "onsetdate": "12\/14\/2018",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "Vitamin E",
+      "lastmodifieddatetime": "2018-12-14T11:41:42-05:00",
+      "rxnormcode": "11256",
+      "reactions": [],
+      "allergenid": 12834,
+      "allergenname": "vitamin E (d-alpha tocopherol)",
+      "onsetdate": "12\/14\/2018",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "rxnormdescription": "Wheat preparation",
+      "lastmodifieddatetime": "2017-06-15T23:15:11-04:00",
+      "rxnormcode": "1441652",
+      "reactions": [],
+      "allergenid": 28693,
+      "allergenname": "wheat",
+      "lastmodifiedby": "API-5532"
+    },
+    {
+      "rxnormdescription": "WHEAT DEXTRIN",
+      "lastmodifieddatetime": "2018-12-14T11:54:56-05:00",
+      "rxnormcode": "637366",
+      "reactions": [],
+      "allergenid": 25032,
+      "allergenname": "wheat dextrin",
+      "onsetdate": "12\/14\/2018",
+      "lastmodifiedby": "API-9397"
+    },
+    {
+      "lastmodifieddatetime": "2016-05-26T07:57:28-04:00",
+      "reactions": [],
+      "allergenid": 3123123,
+      "allergenname": "deleted\/unknown",
+      "lastmodifiedby": "API-2789"
+    },
+    {
+      "lastmodifieddatetime": "2016-05-26T07:57:14-04:00",
+      "reactions": [],
+      "allergenid": 213123,
+      "allergenname": "deleted\/unknown",
+      "lastmodifiedby": "API-2789"
+    },
+    {
+      "deactivateduser": "API-5879",
+      "lastmodifieddatetime": "2018-05-04T14:15:47-04:00",
+      "reactions": [],
+      "allergenid": 55555,
+      "allergenname": "Daily Vite W\/Minerals",
+      "deactivatedate": "12\/12\/2018",
+      "lastmodifiedby": "API-5879"
+    },
+    {
+      "deactivateduser": "API-5879",
+      "lastmodifieddatetime": "2018-07-02T16:07:48-04:00",
+      "reactions": [],
+      "allergenid": 92192,
+      "allergenname": "ragweed pollen",
+      "deactivatedate": "07\/02\/2018",
+      "onsetdate": "02\/01\/2018",
+      "lastmodifiedby": "API-5879"
+    },
+    {
+      "deactivateduser": "API-8232",
+      "lastmodifieddatetime": "2018-06-06T13:50:19-04:00",
+      "reactions": [
+        {
+          "reactionname": "cough",
+          "snomedcode": 49727002
+        },
+        {
+          "reactionname": "dizziness",
+          "snomedcode": 404640003
+        }
+      ],
+      "allergenid": 14350,
+      "allergenname": "pollen extracts",
+      "deactivatedate": "05\/15\/2018",
+      "onsetdate": "08\/10\/1975",
+      "lastmodifiedby": "API-8232"
+    },
+    {
+      "deactivateduser": "API-5879",
+      "lastmodifieddatetime": "2018-05-16T12:20:14-04:00",
+      "reactions": [
+        {
+          "reactionname": "cough",
+          "snomedcode": 49727002
+        },
+        {
+          "reactionname": "dizziness",
+          "snomedcode": 404640003
+        }
+      ],
+      "allergenid": 93058,
+      "allergenname": "Desgen DM (pseudoephedrine)",
+      "deactivatedate": "05\/11\/2018",
+      "onsetdate": "08\/10\/1987",
+      "lastmodifiedby": "API-5879"
+    },
+    {
+      "deactivateduser": "API-5879",
+      "rxnormdescription": "desirudin",
+      "lastmodifieddatetime": "2018-05-11T10:49:05-04:00",
+      "rxnormcode": "114934",
+      "reactions": [
+        {
+          "reactionname": "anaphylaxis",
+          "snomedcode": 39579001
+        }
+      ],
+      "note": "no longer allergic",
+      "allergenid": 18081,
+      "allergenname": "desirudin",
+      "deactivatedate": "05\/11\/2018",
+      "onsetdate": "08\/01\/2016",
+      "lastmodifiedby": "API-5879"
+    },
+    {
+      "deactivateduser": "API-5879",
+      "lastmodifieddatetime": "2018-05-08T15:59:52-04:00",
+      "reactions": [
+        {
+          "reactionname": "dizziness",
+          "snomedcode": 404640003
+        }
+      ],
+      "allergenid": 18655,
+      "allergenname": "Ceredase",
+      "deactivatedate": "05\/08\/2018",
+      "onsetdate": "08\/01\/2017",
+      "lastmodifiedby": "API-5879"
+    },
+    {
+      "deactivateduser": "API-5879",
+      "rxnormdescription": "Amoxapine",
+      "lastmodifieddatetime": "2018-05-02T14:23:47-04:00",
+      "rxnormcode": "722",
+      "reactions": [],
+      "allergenid": 13244,
+      "allergenname": "amoxapine",
+      "deactivatedate": "05\/02\/2018",
+      "lastmodifiedby": "API-5879"
+    },
+    {
+      "deactivateduser": "API-5879",
+      "lastmodifieddatetime": "2018-05-14T21:33:57-04:00",
+      "reactions": [
+        {
+          "severitysnomedcode": 371924009,
+          "reactionname": "chest pain",
+          "snomedcode": 29857009,
+          "severity": "moderate to severe"
+        }
+      ],
+      "allergenid": 14045,
+      "allergenname": "penicillin G procaine",
+      "deactivatedate": "05\/01\/2018",
+      "lastmodifiedby": "API-5879"
+    },
+    {
+      "deactivateduser": "API-5879",
+      "lastmodifieddatetime": "2018-05-16T12:14:58-04:00",
+      "reactions": [],
+      "note": "cmnts",
+      "allergenid": 92205,
+      "allergenname": "hornet venom",
+      "deactivatedate": "04\/26\/2018",
+      "onsetdate": "01\/01\/2018",
+      "lastmodifiedby": "API-5879"
+    },
+    {
+      "deactivateduser": "API-5879",
+      "lastmodifieddatetime": "2018-05-04T12:45:39-04:00",
+      "reactions": [],
+      "allergenid": 92201,
+      "allergenname": "animal dander",
+      "deactivatedate": "01\/01\/2018",
+      "lastmodifiedby": "API-5879"
+    },
+    {
+      "deactivateduser": "API-5879",
+      "rxnormdescription": "Antara",
+      "lastmodifieddatetime": "2018-05-04T14:06:51-04:00",
+      "rxnormcode": "578784",
+      "reactions": [],
+      "allergenid": 23976,
+      "allergenname": "Antara",
+      "deactivatedate": "01\/01\/2018",
+      "lastmodifiedby": "API-5879"
+    },
+    {
+      "deactivateduser": "API-5879",
+      "rxnormdescription": "cashew nut allergenic extract",
+      "lastmodifieddatetime": "2018-05-04T14:08:39-04:00",
+      "rxnormcode": "892526",
+      "reactions": [],
+      "allergenid": 92178,
+      "allergenname": "cashew nut",
+      "deactivatedate": "01\/01\/2018",
+      "lastmodifiedby": "API-5879"
+    },
+    {
+      "deactivateduser": "API-5879",
+      "lastmodifieddatetime": "2018-05-10T16:27:14-04:00",
+      "reactions": [
+        {
+          "reactionname": "dizziness",
+          "snomedcode": 404640003
+        }
+      ],
+      "note": "delete comment!",
+      "allergenid": 23291,
+      "allergenname": "Cerefolin",
+      "deactivatedate": "01\/01\/2018",
+      "onsetdate": "08\/10\/2016",
+      "lastmodifiedby": "API-5879"
+    },
+    {
+      "deactivateduser": "API-5879",
+      "rxnormdescription": "Deslanoside",
+      "lastmodifieddatetime": "2018-05-14T14:23:41-04:00",
+      "rxnormcode": "3248",
+      "reactions": [
+        {
+          "reactionname": "cough",
+          "snomedcode": 49727002
+        },
+        {
+          "reactionname": "dizziness",
+          "snomedcode": 404640003
+        }
+      ],
+      "allergenid": 12493,
+      "allergenname": "deslanoside",
+      "deactivatedate": "01\/01\/2018",
+      "onsetdate": "05\/11\/2018",
+      "lastmodifiedby": "API-5879"
+    },
+    {
+      "deactivateduser": "API-5879",
+      "lastmodifieddatetime": "2018-05-14T17:28:11-04:00",
+      "reactions": [],
+      "allergenid": 92207,
+      "allergenname": "fire ant",
+      "deactivatedate": "01\/01\/2018",
+      "lastmodifiedby": "API-5879"
+    },
+    {
+      "deactivateduser": "API-5879",
+      "rxnormdescription": "Latex",
+      "lastmodifieddatetime": "2018-05-14T17:35:50-04:00",
+      "rxnormcode": "1314891",
+      "reactions": [],
+      "allergenid": 18939,
+      "allergenname": "latex",
+      "deactivatedate": "01\/01\/2018",
+      "lastmodifiedby": "API-5879"
+    },
+    {
+      "deactivateduser": "API-5879",
+      "rxnormdescription": "Mold Extract",
+      "lastmodifieddatetime": "2018-05-15T11:29:44-04:00",
+      "rxnormcode": "235618",
+      "reactions": [],
+      "allergenid": 92204,
+      "allergenname": "mold",
+      "deactivatedate": "01\/01\/2018",
+      "onsetdate": "01\/02\/2018",
+      "lastmodifiedby": "API-5879"
+    },
+    {
+      "deactivateduser": "API-5879",
+      "rxnormdescription": "No known allergies (situation)",
+      "lastmodifieddatetime": "2018-06-20T13:54:07-04:00",
+      "reactions": [],
+      "allergenid": 24419,
+      "allergenname": "No Known Allergies",
+      "deactivatedate": "01\/01\/2018",
+      "lastmodifiedby": "API-5879"
+    },
+    {
+      "deactivateduser": "API-5879",
+      "lastmodifieddatetime": "2018-07-03T14:56:44-04:00",
+      "reactions": [],
+      "allergenid": 26095,
+      "allergenname": "Refresh Celluvisc",
+      "deactivatedate": "01\/01\/2018",
+      "lastmodifiedby": "API-5879"
+    },
+    {
+      "deactivateduser": "API-5879",
+      "lastmodifieddatetime": "2018-07-03T15:04:10-04:00",
+      "reactions": [],
+      "allergenid": 25168,
+      "allergenname": "shellfish derived",
+      "deactivatedate": "01\/01\/2018",
+      "lastmodifiedby": "API-5879"
+    },
+    {
+      "deactivateduser": "API-5879",
+      "lastmodifieddatetime": "2018-05-03T12:10:36-04:00",
+      "reactions": [],
+      "allergenid": 92193,
+      "allergenname": "weed pollen",
+      "deactivatedate": "01\/01\/2018",
+      "lastmodifiedby": "API-5879"
+    },
+    {
+      "deactivateduser": "kcheng3",
+      "rxnormdescription": "Aspercreme",
+      "lastmodifieddatetime": "2016-10-26T15:08:52-04:00",
+      "rxnormcode": "215427",
+      "reactions": [],
+      "allergenid": 24640,
+      "allergenname": "Aspercreme with Aloe",
+      "deactivatedate": "10\/26\/2016",
+      "lastmodifiedby": "kcheng3"
+    },
+    {
+      "deactivateduser": "mpupienis",
+      "lastmodifieddatetime": "2018-05-04T14:05:17-04:00",
+      "reactions": [],
+      "allergenid": 23462,
+      "allergenname": "Debrisan",
+      "deactivatedate": "08\/24\/2016",
+      "lastmodifiedby": "API-5879"
+    },
+    {
+      "deactivateduser": "API-5879",
+      "lastmodifieddatetime": "2018-05-16T10:21:42-04:00",
+      "reactions": [],
+      "allergenid": 19035,
+      "allergenname": "grass pollen-perennial rye, standard",
+      "deactivatedate": "04\/07\/2003",
+      "onsetdate": "01\/02\/2018",
+      "lastmodifiedby": "API-5879"
+    },
+    {
+      "deactivateduser": "API-5879",
+      "rxnormdescription": "egg extract",
+      "lastmodifieddatetime": "2018-05-04T14:20:55-04:00",
+      "rxnormcode": "1315115",
+      "reactions": [],
+      "allergenid": 17483,
+      "allergenname": "egg",
+      "deactivatedate": "10\/08\/1969",
+      "lastmodifiedby": "API-5879"
+    },
+    {
+      "deactivateduser": "API-5879",
+      "rxnormdescription": "ASPARAGINASE",
+      "lastmodifieddatetime": "2018-05-04T13:40:57-04:00",
+      "rxnormcode": "1156",
+      "reactions": [],
+      "allergenid": 14041,
+      "allergenname": "asparaginase",
+      "deactivatedate": "10\/01\/1969",
+      "lastmodifiedby": "API-5879"
+    },
+    {
+      "deactivateduser": "API-5879",
+      "rxnormdescription": "Bee pollen",
+      "lastmodifieddatetime": "2018-05-04T13:56:29-04:00",
+      "rxnormcode": "253157",
+      "reactions": [],
+      "allergenid": 18214,
+      "allergenname": "bee pollen",
+      "deactivatedate": "10\/01\/1969",
+      "lastmodifiedby": "API-5879"
+    },
+    {
+      "deactivateduser": "API-5879",
+      "rxnormdescription": "Fer-in-Sol",
+      "lastmodifieddatetime": "2018-05-16T12:11:28-04:00",
+      "rxnormcode": "217093",
+      "reactions": [],
+      "allergenid": 16933,
+      "allergenname": "Fer-In-Sol",
+      "deactivatedate": "08\/10\/1969",
+      "onsetdate": "04\/11\/2018",
+      "lastmodifiedby": "API-5879"
+    }
+  ]
+}

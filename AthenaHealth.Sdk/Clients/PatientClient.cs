@@ -92,5 +92,16 @@ namespace AthenaHealth.Sdk.Clients
         {
             return await _connection.Get<PatientMedication>($"{_connection.PracticeId}/chart/{patientId}/medications", queryParameters);
         }
+
+        public async Task<PatientAllergy> GetAllergies(int patientId, int departmentId, bool? showInactive = null)
+        {
+            var queryParameters = new
+            {
+                departmentid = departmentId,
+                showinactive = showInactive
+            };
+
+            return await _connection.Get<PatientAllergy>($"{_connection.PracticeId}/chart/{patientId}/allergies", queryParameters);
+        }
     }
 }
