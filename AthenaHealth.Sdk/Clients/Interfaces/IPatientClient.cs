@@ -31,5 +31,7 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         Task<AnalyteResponse> GetAnalytes(int patientId, GetAnalytesFilter queryParameters);
 
         Task<PatientMedication> GetMedications(int patientId, GetMedicationsFilter queryParameters);
+
+        Task<PatientAllergy> GetAllergies(int patientId, int departmentId, bool? showInactive = null);
     }
 }
