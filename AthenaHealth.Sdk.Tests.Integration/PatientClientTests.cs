@@ -14,6 +14,45 @@ namespace AthenaHealth.Sdk.Tests.Integration
     public class PatientClientTests
     {
         [Fact]
+        public async Task GetDocuments_ValidData_ReturnsDocuments()
+        {
+            // Arrange
+            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetDocuments.json"));
+            var queryParameters = new GetDocumentsFilter()
+            {
+                DepartmentId = 1,
+                ShowDeleted = true,
+                ShowDeclinedOrders = true
+            };
+
+            // Act
+            var result = await patientClient.GetDocuments(1, queryParameters);
+
+            // Assert
+            result.ShouldNotBeNull();
+            result.Items.Count().ShouldBeGreaterThan(0);
+        }
+
+        [Fact]
+        public void GetDocuments_PatientInDifferentDepartment_ThrowsException()
+        {
+            // Arrange
+            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"detailedmessage\":\"The specified patient does not exist in that department.\",\"error\":\"The specified patient does not exist in that department.\"}", HttpStatusCode.BadRequest));
+            var queryParameters = new GetDocumentsFilter()
+            {
+                DepartmentId = 2,
+                ShowDeleted = true,
+                ShowDeclinedOrders = true
+            };
+
+            // Act
+            ApiException exception = Should.Throw<ApiException>(async () => await patientClient.GetDocuments(1, queryParameters));
+
+            // Assert
+            exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
+        }
+
+        [Fact]
         public async Task GetAllergies_ValidData_ReturnsAllergies()
         {
             // Arrange

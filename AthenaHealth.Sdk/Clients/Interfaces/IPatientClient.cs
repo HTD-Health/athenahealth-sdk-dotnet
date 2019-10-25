@@ -37,5 +37,7 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         Task<PatientSocialHistory> GetSocialHistory(int patientId, GetSocialHistoryFilter queryParameters);
 
         Task<PatienSocialHistoryTemplate[]> GetSocialHistoryTemplates(int patientId, int departmentId);
+
+        Task<DocumentResponse> GetDocuments(int patientId, GetDocumentsFilter queryParameters);
     }
 }
