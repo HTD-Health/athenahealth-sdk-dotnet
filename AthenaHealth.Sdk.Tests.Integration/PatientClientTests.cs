@@ -105,6 +105,45 @@ namespace AthenaHealth.Sdk.Tests.Integration
         }
 
         [Fact]
+        public async Task GetSocialHistory_ValidData_ReturnsHistory()
+        {
+            // Arrange
+            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetSocialHistory.json"));
+            var queryParameters = new GetSocialHistoryFilter()
+            {
+                DepartmentId = 1,
+                ShowUnansweredQuestions = true,
+                ShowNotPerformedQuestions = true
+            };
+
+            // Act
+            var result = await patientClient.GetSocialHistory(1, queryParameters);
+
+            // Assert
+            result.ShouldNotBeNull();
+            result.Questions.Count().ShouldBeGreaterThan(0);
+        }
+
+        [Fact]
+        public void GetSocialHistory_PatientInDifferentDepartment_ThrowsException()
+        {
+            // Arrange
+            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"detailedmessage\":\"The specified patient does not exist in that department.\",\"error\":\"The specified patient does not exist in that department.\"}", HttpStatusCode.BadRequest));
+            var queryParameters = new GetSocialHistoryFilter()
+            {
+                DepartmentId = 2,
+                ShowUnansweredQuestions = true,
+                ShowNotPerformedQuestions = true
+            };
+
+            // Act
+            ApiException exception = Should.Throw<ApiException>(async () => await patientClient.GetSocialHistory(1, queryParameters));
+
+            // Assert
+            exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
+        }
+
+        [Fact]
         public async Task GetAnalytes_ValidData_ReturnsAnalytes()
         {
             // Arrange

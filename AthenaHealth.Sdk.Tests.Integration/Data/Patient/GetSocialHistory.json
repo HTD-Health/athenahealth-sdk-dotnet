@@ -1,0 +1,269 @@
+{
+  "questions": [
+    {
+      "templateid": 41,
+      "key": "ADVANCEDIRECTIVE",
+      "question": "Advance directive",
+      "ordering": 16,
+      "questionid": 1772
+    },
+    {
+      "templateid": 41,
+      "key": "ALCOHOL",
+      "question": "Alcohol intake",
+      "ordering": 12,
+      "questionid": 1768
+    },
+    {
+      "templateid": 1,
+      "key": "ALCOHOLUSE",
+      "question": "Alcohol-years of use",
+      "ordering": 16,
+      "questionid": 1630
+    },
+    {
+      "templateid": 1,
+      "key": "CAFFEINEPERDAY",
+      "question": "Caffeine intake",
+      "ordering": 2,
+      "questionid": 1616
+    },
+    {
+      "templateid": 1,
+      "key": "CHEWINGTOBACCO",
+      "question": "Chewing tobacco",
+      "ordering": 3,
+      "questionid": 1617
+    },
+    {
+      "templateid": 1,
+      "key": "CURRENTEMPLOYMENT",
+      "question": "Are you currently employed?",
+      "ordering": 19,
+      "questionid": 1633
+    },
+    {
+      "templateid": 41,
+      "key": "DIABETES",
+      "question": "Diabetes",
+      "ordering": 10,
+      "questionid": 1766
+    },
+    {
+      "templateid": 41,
+      "key": "DIET",
+      "question": "Diet",
+      "ordering": 13,
+      "questionid": 1769
+    },
+    {
+      "templateid": 1,
+      "key": "DRUGS",
+      "question": "Illicit drugs",
+      "ordering": 5,
+      "questionid": 1619
+    },
+    {
+      "templateid": 1,
+      "key": "EDUCATION",
+      "question": "Education",
+      "ordering": 14,
+      "questionid": 1628
+    },
+    {
+      "templateid": 1,
+      "key": "EMPLOYER",
+      "question": "Employer",
+      "ordering": 20,
+      "questionid": 1634
+    },
+    {
+      "templateid": 41,
+      "key": "EMPLOYMENT",
+      "question": "Occupation",
+      "ordering": 14,
+      "questionid": 1770
+    },
+    {
+      "templateid": 41,
+      "socialhistorystatus": "FUNCTIONAL",
+      "key": "EXERCISE",
+      "question": "Exercise level",
+      "ordering": 7,
+      "questionid": 1763
+    },
+    {
+      "templateid": 41,
+      "key": "FAMILYHISTORYHEARTDISEASE",
+      "question": "Family history of heart disease?",
+      "ordering": 1,
+      "questionid": 1757
+    },
+    {
+      "templateid": 41,
+      "key": "HIGHBLOODPRESSURE",
+      "question": "High blood pressure",
+      "ordering": 6,
+      "questionid": 1762
+    },
+    {
+      "templateid": 41,
+      "key": "HIGHCHOLESTEROL",
+      "question": "High Cholesterol",
+      "ordering": 5,
+      "questionid": 1761
+    },
+    {
+      "templateid": 1,
+      "key": "ILLICITDRUGSUSE",
+      "question": "Illicit drugs-years of use",
+      "ordering": 17,
+      "questionid": 1631
+    },
+    {
+      "templateid": 41,
+      "key": "LOCAL.816",
+      "question": "qwerty123",
+      "ordering": 18,
+      "questionid": 1774
+    },
+    {
+      "templateid": 1,
+      "key": "LOCAL.876",
+      "question": "Do you feel pain above and below the waist",
+      "ordering": 21,
+      "questionid": 1635
+    },
+    {
+      "templateid": 1,
+      "key": "LOCAL.877",
+      "question": "Do you feel pain on both sides of your body",
+      "ordering": 22,
+      "questionid": 1636
+    },
+    {
+      "templateid": 1,
+      "key": "LOCAL.878",
+      "question": "I would rate the severity of my pain as",
+      "ordering": 23,
+      "questionid": 1637
+    },
+    {
+      "templateid": 1,
+      "key": "LOCAL.879",
+      "question": "In the last week how many days has pain and fatigue interfered with your daily activities",
+      "ordering": 24,
+      "questionid": 1638
+    },
+    {
+      "templateid": 1,
+      "key": "LOCAL.880",
+      "question": "Readiness to quit smoking",
+      "ordering": 12,
+      "questionid": 1626
+    },
+    {
+      "templateid": 41,
+      "key": "LOCAL.896",
+      "question": "This is my custom question",
+      "ordering": 19,
+      "questionid": 1775
+    },
+    {
+      "templateid": 41,
+      "key": "LOCAL.897",
+      "question": "meat balls",
+      "ordering": 20,
+      "questionid": 1776
+    },
+    {
+      "templateid": 41,
+      "key": "MARITALSTATUS",
+      "question": "Marital status",
+      "ordering": 15,
+      "questionid": 1771
+    },
+    {
+      "templateid": 41,
+      "key": "OBESE",
+      "question": "Obese",
+      "ordering": 9,
+      "questionid": 1765
+    },
+    {
+      "templateid": 41,
+      "key": "OVERWEIGHT",
+      "question": "Overweight",
+      "ordering": 8,
+      "questionid": 1764
+    },
+    {
+      "templateid": 41,
+      "key": "SIBLINGS",
+      "question": "Siblings",
+      "ordering": 17,
+      "questionid": 1773
+    },
+    {
+      "templateid": 1,
+      "key": "SMOKEALARM",
+      "question": "Smoke alarm in home",
+      "ordering": 9,
+      "questionid": 1623
+    },
+    {
+      "templateid": 41,
+      "key": "SMOKEDSINCEAGE",
+      "question": "Has smoked since age",
+      "ordering": 4,
+      "questionid": 1760
+    },
+    {
+      "templateid": 41,
+      "key": "SMOKING",
+      "question": "Smoking - How much?",
+      "ordering": 3,
+      "questionid": 1759
+    },
+    {
+      "answer": "Never",
+      "templateid": 41,
+      "key": "SMOKINGSTATUS",
+      "question": "Tobacco Smoking Status",
+      "ordering": 2,
+      "lastupdated": "01\/27\/2014",
+      "questionid": 1758
+    },
+    {
+      "templateid": 1,
+      "key": "SPORTS",
+      "question": "Sporting activities",
+      "ordering": 18,
+      "questionid": 1632
+    },
+    {
+      "templateid": 41,
+      "key": "STRESSLEVEL",
+      "question": "General stress level",
+      "ordering": 11,
+      "questionid": 1767
+    },
+    {
+      "templateid": 479,
+      "key": "TOBACCOUSE",
+      "question": "Tobacco-years of use",
+      "ordering": 3,
+      "questionid": 1781
+    }
+  ],
+  "templates": [
+    {
+      "templatename": "Portal",
+      "templateid": 1
+    },
+    {
+      "templatename": "Cardiology",
+      "templateid": 41
+    }
+  ]
+}

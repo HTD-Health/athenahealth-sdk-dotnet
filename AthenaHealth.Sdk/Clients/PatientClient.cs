@@ -103,5 +103,10 @@ namespace AthenaHealth.Sdk.Clients
 
             return await _connection.Get<PatientAllergy>($"{_connection.PracticeId}/chart/{patientId}/allergies", queryParameters);
         }
+
+        public async Task<PatientSocialHistory> GetSocialHistory(int patientId, GetSocialHistoryFilter queryParameters)
+        {
+            return await _connection.Get<PatientSocialHistory>($"{_connection.PracticeId}/chart/{patientId}/socialhistory", queryParameters);
+        }
     }
 }
