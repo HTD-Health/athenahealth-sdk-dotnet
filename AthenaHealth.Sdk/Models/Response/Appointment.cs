@@ -1,19 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using AthenaHealth.Sdk.Models.Enums;
+using AthenaHealth.Sdk.Models.Response.Interfaces;
 using Newtonsoft.Json;
 // ReSharper disable StringLiteralTypo
 // ReSharper disable CommentTypo
 
 namespace AthenaHealth.Sdk.Models.Response
 {
-    public class AppointmentResponse
+    public class AppointmentResponse : IPagingResponse<Appointment>
     {
         [JsonProperty("totalcount")]
         public int Total { get; set; }
 
         [JsonProperty("next")]
         public string Next { get; set; }
+
+        [JsonProperty("previous")]
+        public string Previous { get; set; }
 
         [JsonProperty("appointments")]
         public Appointment[] Items { get; set; }

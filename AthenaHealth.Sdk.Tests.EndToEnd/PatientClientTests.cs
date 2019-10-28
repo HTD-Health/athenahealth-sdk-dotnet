@@ -397,7 +397,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         [Fact]
         public async Task GetPreferredPharmacies_ReturnsPharmacy()
         {
-            PharmacyResponse pharmacies = await _client.Patients.GetPreferredPharmacies(300, new GetPreferredPharmacyFilter { DepartmentId = 1 });
+            PharmacyResponse pharmacies = await _client.Patients.GetPreferredPharmacies(300, new GetPreferredPharmacyFilter(1));
 
             pharmacies.ShouldNotBeNull();
             pharmacies.Total.ShouldBeGreaterThan(0);
@@ -409,22 +409,20 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         [Fact]
         public async Task GetPreferredPharmacies_NotExistingPharmacy_ThrowsException()
         {
-            await Should.ThrowAsync<ApiValidationException>(async () => await _client.Patients.GetPreferredPharmacies(300, new GetPreferredPharmacyFilter { DepartmentId = 2 }));
+            await Should.ThrowAsync<ApiValidationException>(async () => await _client.Patients.GetPreferredPharmacies(300, new GetPreferredPharmacyFilter(2)));
         }
 
 
         [Fact]
         public void SetDefaultPharmacy_ValidData_NotThrow()
         {
-            Should.NotThrow(async () => await _client.Patients.SetDefaultPharmacy(5000, new SetPharmacyRequest{DepartmentId = 164, ClinicalProviderId = 11242674}));
+            Should.NotThrow(async () => await _client.Patients.SetDefaultPharmacy(5000, new SetPharmacyRequest(164) { ClinicalProviderId = 11242674 }));
         }
 
         [Fact]
-        public async Task AddPreferredPharmacy_ValidData_NotThrow()
+        public void AddPreferredPharmacy_ValidData_NotThrow()
         {
-            await _client.Patients.AddPreferredPharmacy(5000,
-                new SetPharmacyRequest {DepartmentId = 164, ClinicalProviderId = 11242674});
-            Should.NotThrow(async () => await _client.Patients.AddPreferredPharmacy(5000, new SetPharmacyRequest{DepartmentId = 164, ClinicalProviderId = 11242674}));
+            Should.NotThrow(async () => await _client.Patients.AddPreferredPharmacy(5000, new SetPharmacyRequest(164) { ClinicalProviderId = 11242674 }));
         }
     }
 }

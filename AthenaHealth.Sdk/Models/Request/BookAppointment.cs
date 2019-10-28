@@ -7,6 +7,11 @@ namespace AthenaHealth.Sdk.Models.Request
 {
     public class BookAppointment
     {
+        public BookAppointment(int appointmentId)
+        {
+            AppointmentId = appointmentId;
+        }
+
         /// <summary>
         /// The appointment slot to schedule into.
         /// </summary>

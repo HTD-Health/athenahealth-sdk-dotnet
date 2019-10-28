@@ -673,10 +673,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         {
             // Arrange
             var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetPreferredPharmacies.json", HttpStatusCode.OK));
-            var queryParameters = new GetPreferredPharmacyFilter
-            {
-                DepartmentId = 1
-            };
+            var queryParameters = new GetPreferredPharmacyFilter(1);
 
             // Act
             var result = await patientClient.GetPreferredPharmacies(300, queryParameters);
@@ -715,7 +712,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         {
             var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"success\": true}", HttpStatusCode.OK));
 
-            Should.NotThrow(async () => await patientClient.SetDefaultPharmacy(5000, new SetPharmacyRequest{DepartmentId = 164, ClinicalProviderId = 11242674}));
+            Should.NotThrow(async () => await patientClient.SetDefaultPharmacy(5000, new SetPharmacyRequest(164){ ClinicalProviderId = 11242674}));
         }
         
         [Fact]
@@ -723,7 +720,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         {
             var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"success\": true}", HttpStatusCode.OK));
 
-            Should.NotThrow(async () => await patientClient.AddPreferredPharmacy(5000, new SetPharmacyRequest{DepartmentId = 164, ClinicalProviderId = 11242674}));
+            Should.NotThrow(async () => await patientClient.AddPreferredPharmacy(5000, new SetPharmacyRequest(164){ClinicalProviderId = 11242674}));
         }
     }
 }

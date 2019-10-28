@@ -2,14 +2,22 @@
 using System.ComponentModel.DataAnnotations;
 using AthenaHealth.Sdk.Models.Converters;
 using AthenaHealth.Sdk.Models.Enums;
+using AthenaHealth.Sdk.Models.Request.Interfaces;
 using Newtonsoft.Json;
 // ReSharper disable CommentTypo
 // ReSharper disable StringLiteralTypo
 
 namespace AthenaHealth.Sdk.Models.Request
 {
-    public class GetAppointmentsBookedFilter : GetAppointmentFilter
+    public class GetAppointmentsBookedFilter :  GetAppointmentFilter, IPagingFilter
     {
+        public GetAppointmentsBookedFilter(int[] departmentIds, DateTime startDate, DateTime endDate)
+        {
+            DepartmentIds = departmentIds;
+            StartDate = startDate;
+            EndDate = endDate;
+        }
+
         /// <summary>
         /// Filter appointments by status.
         /// </summary>
@@ -98,5 +106,15 @@ namespace AthenaHealth.Sdk.Models.Request
         /// </summary>
         [JsonProperty(PropertyName = "showremindercalldetail")]
         public bool ShowReminderCallDetail { get; set; }
+
+        /// <summary>
+        /// Number of entries to return (default 1000, max 10000)Please note that this endpoint has a different default and max than normal.
+        /// </summary>
+        public int? Limit { get; set; } = 1000;
+
+        /// <summary>
+        /// Starting point of entries; 0-indexed
+        /// </summary>
+        public int? Offset { get; set; }
     }
 }

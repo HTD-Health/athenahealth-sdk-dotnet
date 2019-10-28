@@ -60,8 +60,11 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         Task DeleteReminderById(int appointmentReminderId);
 
         Task<AppointmentSlotResponse> GetAppointmentSlots(GetAppointmentSlotsFilter filter);
+
         Task<AppointmentSlotCreationResponse> CreateAppointmentSlot(CreateAppointmentSlot slot);
 
         Task<Appointment> BookAppointment(BookAppointment booking);
+
+        Task CancelAppointment(CancelAppointment cancelRequest);
     }
 }

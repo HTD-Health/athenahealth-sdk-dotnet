@@ -20,7 +20,9 @@ namespace AthenaHealth.Sdk.Tests.Integration
         [Fact]
         public async Task GetAppointmentTypes_ReturnsRecords()
         {
-            var client = new Clients.AppointmentClient(ConnectionFactory.CreateFromFile(@"Data\Appointment\GetAppointmentTypes.json"));
+            var client =
+                new Clients.AppointmentClient(
+                    ConnectionFactory.CreateFromFile(@"Data\Appointment\GetAppointmentTypes.json"));
 
             AppointmentTypeResponse response = await client.GetAppointmentTypes();
 
@@ -31,7 +33,9 @@ namespace AthenaHealth.Sdk.Tests.Integration
         [Fact]
         public async Task GetAppointmentType_ValidId_ReturnsAppointmentType()
         {
-            var client = new Clients.AppointmentClient(ConnectionFactory.CreateFromFile(@"Data\Appointment\GetAppointmentType.json"));
+            var client =
+                new Clients.AppointmentClient(
+                    ConnectionFactory.CreateFromFile(@"Data\Appointment\GetAppointmentType.json"));
 
             AppointmentType appointmentType = await client.GetAppointmentType(622);
 
@@ -49,12 +53,14 @@ namespace AthenaHealth.Sdk.Tests.Integration
         [Fact]
         public async Task GetBookedAppointments_ReturnsRecords()
         {
-            var client = new Clients.AppointmentClient(ConnectionFactory.CreateFromFile(@"Data\Appointment\GetBookedAppointments.json"));
-            GetAppointmentsBookedFilter filter = new GetAppointmentsBookedFilter
+            var client =
+                new Clients.AppointmentClient(
+                    ConnectionFactory.CreateFromFile(@"Data\Appointment\GetBookedAppointments.json"));
+            GetAppointmentsBookedFilter filter = new GetAppointmentsBookedFilter(
+                new[] { 1 },
+                new DateTime(2019, 01, 01),
+                new DateTime(2019, 02, 01))
             {
-                StartDate = new DateTime(2019, 01, 01),
-                EndDate = new DateTime(2019, 02, 01),
-                DepartmentIds = new[] { 1 },
                 ShowClaimDetail = true,
                 ShowExpectedProcedureCodes = true,
                 ShowCopay = true,
@@ -75,7 +81,9 @@ namespace AthenaHealth.Sdk.Tests.Integration
         [Fact]
         public async Task GetAppointmentById_ValidId_ReturnsAppointment()
         {
-            var client = new Clients.AppointmentClient(ConnectionFactory.CreateFromFile(@"Data\Appointment\GetAppointment.json"));
+            var client =
+                new Clients.AppointmentClient(
+                    ConnectionFactory.CreateFromFile(@"Data\Appointment\GetAppointment.json"));
             GetAppointmentFilter filter = new GetAppointmentFilter
             {
                 ShowClaimDetail = true,
@@ -94,7 +102,8 @@ namespace AthenaHealth.Sdk.Tests.Integration
         [Fact]
         public async Task GetNotes_ValidId_ReturnsEmptyResult()
         {
-            IAppointmentClient client = new Clients.AppointmentClient(ConnectionFactory.CreateFromFile(@"Data\Appointment\GetNotes.json"));
+            IAppointmentClient client =
+                new Clients.AppointmentClient(ConnectionFactory.CreateFromFile(@"Data\Appointment\GetNotes.json"));
 
             AppointmentNotesResponse response = await client.GetNotes(2, true);
 
@@ -105,22 +114,25 @@ namespace AthenaHealth.Sdk.Tests.Integration
         [Fact]
         public void CreateNote_ValidInput_NotThrowsException()
         {
-            IAppointmentClient client = new Clients.AppointmentClient(ConnectionFactory.CreateFromFile(@"Data\Appointment\GetNotes.json"));
+            IAppointmentClient client =
+                new Clients.AppointmentClient(ConnectionFactory.CreateFromFile(@"Data\Appointment\GetNotes.json"));
 
             Should.NotThrow(async ()
                 => await client.CreateNote(100, "testing", true)
-                );
+            );
         }
 
         [Fact]
         public async Task SearchReminders_ValidFilter_ReturnsRecords()
         {
-            IAppointmentClient client = new Clients.AppointmentClient(ConnectionFactory.CreateFromFile(@"Data\Appointment\SearchReminders.json"));
+            IAppointmentClient client =
+                new Clients.AppointmentClient(
+                    ConnectionFactory.CreateFromFile(@"Data\Appointment\SearchReminders.json"));
 
             SearchAppointmentRemindersFilter filter = new SearchAppointmentRemindersFilter(
-                1, 
-                new DateTime(2018,1,1), 
-                new DateTime(2019,12,31));
+                1,
+                new DateTime(2018, 1, 1),
+                new DateTime(2019, 12, 31));
 
             AppointmentRemindersResponse response = await client.SearchReminders(filter);
 
@@ -133,7 +145,9 @@ namespace AthenaHealth.Sdk.Tests.Integration
         [Fact]
         public async Task GetReminderById_ExistingId_ReturnsRecord()
         {
-            IAppointmentClient client = new Clients.AppointmentClient(ConnectionFactory.CreateFromFile(@"Data\Appointment\GetReminderById.json"));
+            IAppointmentClient client =
+                new Clients.AppointmentClient(
+                    ConnectionFactory.CreateFromFile(@"Data\Appointment\GetReminderById.json"));
 
             var response = await client.GetReminderById(15042);
 
@@ -146,10 +160,12 @@ namespace AthenaHealth.Sdk.Tests.Integration
         [Fact]
         public async Task CreateReminder_ValidModel_ReturnsCreatedReminder()
         {
-            IAppointmentClient client = new Clients.AppointmentClient(ConnectionFactory.CreateFromFile(@"Data\Appointment\CreateReminder.json"));
+            IAppointmentClient client =
+                new Clients.AppointmentClient(
+                    ConnectionFactory.CreateFromFile(@"Data\Appointment\CreateReminder.json"));
 
             var model = new CreateAppointmentReminder(
-                new DateTime(2019,10, 28), 
+                new DateTime(2019, 10, 28),
                 82,
                 31014,
                 144);
@@ -163,7 +179,8 @@ namespace AthenaHealth.Sdk.Tests.Integration
         [Fact]
         public void DeleteReminderById_ValidAppointmentReminderId_NotThrowsException()
         {
-            IAppointmentClient client = new Clients.AppointmentClient(ConnectionFactory.Create(@"{ ""success"": true }"));
+            IAppointmentClient client =
+                new Clients.AppointmentClient(ConnectionFactory.Create(@"{ ""success"": true }"));
 
             Should.NotThrow(async ()
                 => await client.DeleteReminderById(15128)
@@ -173,12 +190,11 @@ namespace AthenaHealth.Sdk.Tests.Integration
         [Fact]
         public async Task GetOpenAppointments_ReturnsRecords()
         {
-            var client = new Clients.AppointmentClient(ConnectionFactory.CreateFromFile(@"Data\Appointment\GetAppointmentSlots.json"));
+            var client =
+                new Clients.AppointmentClient(
+                    ConnectionFactory.CreateFromFile(@"Data\Appointment\GetAppointmentSlots.json"));
 
-            GetAppointmentSlotsFilter filter = new GetAppointmentSlotsFilter
-            {
-                DepartmentId = new int[] { 1 }
-            };
+            GetAppointmentSlotsFilter filter = new GetAppointmentSlotsFilter(new int[] { 1 });
 
             AppointmentSlotResponse response = await client.GetAppointmentSlots(filter);
             response.Total.ShouldBe(131);
@@ -193,15 +209,14 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public async Task CreateAppointmentSlot_ValidData_IdReturned()
         {
             var client = new Clients.AppointmentClient(
-                    ConnectionFactory.Create("{\"appointmentids\": {\"1205956\": \"16:00\"}}"));
-            CreateAppointmentSlot slot = new CreateAppointmentSlot
+                ConnectionFactory.Create("{\"appointmentids\": {\"1205956\": \"16:00\"}}"));
+            CreateAppointmentSlot slot = new CreateAppointmentSlot(
+                1,
+                86,
+                new DateTime(2020, 1, 1),
+                new ClockTime[] { new ClockTime(16, 00) })
             {
-                DepartmentId = 1,
-                AppointmentDate = new DateTime(2020, 1, 1),
-                AppointmentTime = new ClockTime[] { new ClockTime(16, 00) },
-                ProviderId = 86,
                 ReasonId = 962
-
             };
 
             AppointmentSlotCreationResponse response = await client.CreateAppointmentSlot(slot);
@@ -210,14 +225,13 @@ namespace AthenaHealth.Sdk.Tests.Integration
         }
 
         [Fact]
-        public async Task BookAppointment_ValidData_NoExceptionIsThrown()
+        public async Task BookAppointment_ValidData_ReturnsAppointment()
         {
             var client = new Clients.AppointmentClient(
                 ConnectionFactory.CreateFromFile(@"Data\Appointment\BookAppointment.json"));
 
-            BookAppointment booking = new BookAppointment()
+            BookAppointment booking = new BookAppointment(1205967)
             {
-                AppointmentId = 1205967,
                 PatientId = 1,
                 ReasonId = 962,
                 IgnoreSchedulablePermission = true
@@ -226,6 +240,16 @@ namespace AthenaHealth.Sdk.Tests.Integration
             Appointment appointment = await client.BookAppointment(booking);
             appointment.Id = 1205967;
             appointment.Date.ShouldNotBeNull();
+        }
+
+        [Fact]
+        public void CancelAppointment_ValidData_NoExceptionIsThrown()
+        {
+            var client = new Clients.AppointmentClient(ConnectionFactory.Create(""));
+
+            CancelAppointment cancelRequest = new CancelAppointment(1, 1, "test");
+
+            Should.NotThrow(() => client.CancelAppointment(cancelRequest));
         }
     }
 }
