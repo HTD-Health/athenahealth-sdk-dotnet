@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 
 namespace AthenaHealth.Sdk.Models.Request
 {
-    public class GetBookedAppointmentsFilter : GetAppointmentFilter
+    public class GetAppointmentsBookedFilter : GetAppointmentFilter
     {
         /// <summary>
         /// Filter appointments by status.

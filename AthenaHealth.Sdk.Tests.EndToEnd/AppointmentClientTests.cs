@@ -66,7 +66,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         [Fact]
         public async Task GetBookedAppointments_SingleDepartment_ReturnsRecords()
         {
-            GetBookedAppointmentsFilter filter = new GetBookedAppointmentsFilter
+            GetAppointmentsBookedFilter filter = new GetAppointmentsBookedFilter
             {
                 StartDate = new DateTime(2019, 01, 01),
                 EndDate = new DateTime(2019, 02, 01),
@@ -90,7 +90,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         [Fact]
         public async Task GetBookedAppointments_MultipleDepartments_ReturnsRecords()
         {
-            GetBookedAppointmentsFilter filter = new GetBookedAppointmentsFilter
+            GetAppointmentsBookedFilter filter = new GetAppointmentsBookedFilter
             {
                 StartDate = new DateTime(2019, 01, 01),
                 EndDate = new DateTime(2019, 02, 01),
@@ -278,6 +278,22 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
 
             exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
             exception.Message.ShouldContain("That appointment reminder has already been deleted");
+        }
+
+        [Fact]
+        public async Task GetAppointmentSlots_ReturnsRecords()
+        {
+            GetAppointmentSlotsFilter filter = new GetAppointmentSlotsFilter
+            {
+                DepartmentId = Enumerable.Range(1, 999).ToArray()
+            };
+
+            AppointmentSlotResponse response = await _client.Appointments.GetAppointmentSlots(filter);
+            response.Total.ShouldBe(0); //TODO: Endpoint always returns 0 items. To be corrected when there will be more items returned.
+//            response.Total.ShouldBeGreaterThan(0);
+//            response.Items.ShouldNotBeNull();
+//            response.Items.ShouldContain(a => a.DepartmentId.HasValue);
+//            response.Items.First().Date.ShouldNotBeNull();
         }
     }
 }

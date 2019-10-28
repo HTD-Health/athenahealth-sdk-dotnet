@@ -10,7 +10,7 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
 
         Task<AppointmentType> GetAppointmentType(int appointmentTypeId);
 
-        Task<AppointmentResponse> GetBookedAppointments(GetBookedAppointmentsFilter filter);
+        Task<AppointmentResponse> GetBookedAppointments(GetAppointmentsBookedFilter filter);
 
         Task<Appointment> GetAppointmentById(int id, GetAppointmentFilter filter = null);
 
@@ -58,5 +58,7 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// <param name="appointmentReminderId"></param>
         /// <returns></returns>
         Task DeleteReminderById(int appointmentReminderId);
+
+        Task<AppointmentSlotResponse> GetAppointmentSlots(GetAppointmentSlotsFilter filter);
     }
 }
