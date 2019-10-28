@@ -70,6 +70,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// The athenaNet provider ID.  Multiple IDs (either as a comma delimited list or multiple POSTed values) are allowed.
         /// </summary>
         [JsonProperty(PropertyName = "providerid")]
+        [JsonConverter(typeof(CustomArrayToStringConverter), ",")]
         public int[] ProviderId { get; set; }
 
         /// <summary>

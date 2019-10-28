@@ -3,6 +3,7 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using AthenaHealth.Sdk.Exceptions;
+using AthenaHealth.Sdk.Models;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
 using AthenaHealth.Sdk.Tests.EndToEnd.Data.Appointments;
@@ -285,31 +286,37 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         {
             GetAppointmentSlotsFilter filter = new GetAppointmentSlotsFilter
             {
-                DepartmentId = Enumerable.Range(1, 999).ToArray()
+                DepartmentId = Enumerable.Range(1, 999).ToArray(),
+                StartDate = new DateTime(2019, 01, 01),
+                EndDate = new DateTime(2019, 04, 01),
+                IgnoreSchedulablePermission = true,
+                AppointmentTypeId = 82,
+                ProviderId = new[] {71}
             };
 
             AppointmentSlotResponse response = await _client.Appointments.GetAppointmentSlots(filter);
-            response.Total.ShouldBe(0); //TODO: Endpoint always returns 0 items. To be corrected when there will be more items returned.
-//            response.Total.ShouldBeGreaterThan(0);
-//            response.Items.ShouldNotBeNull();
-//            response.Items.ShouldContain(a => a.DepartmentId.HasValue);
-//            response.Items.First().Date.ShouldNotBeNull();
+            response.Total.ShouldBeGreaterThan(0);
+            response.Items.ShouldNotBeNull();
+            response.Items.ShouldContain(a => a.DepartmentId.HasValue);
+            response.Items.First().Date.ShouldNotBeNull();
         }
 
         [Fact]
-        public async Task GetAppointmentSlots_ReturnsRecords()
+        public async Task CreateAppointmentSlot_ValidData_IdReturned()
         {
-            GetAppointmentSlotsFilter filter = new GetAppointmentSlotsFilter
+            CreateAppointmentSlot slot = new CreateAppointmentSlot
             {
-                DepartmentId = Enumerable.Range(1, 999).ToArray()
+                DepartmentId = 1,
+                AppointmentDate = new DateTime(2020, 1, 1),
+                AppointmentTime = new ClockTime[] { new ClockTime(16, 00) },
+                ProviderId = 86,
+                ReasonId = 962
+
             };
 
-            AppointmentSlotResponse response = await _client.Appointments.GetAppointmentSlots(filter);
-            response.Total.ShouldBe(0); //TODO: Endpoint always returns 0 items. To be corrected when there will be more items returned.
-//            response.Total.ShouldBeGreaterThan(0);
-//            response.Items.ShouldNotBeNull();
-//            response.Items.ShouldContain(a => a.DepartmentId.HasValue);
-//            response.Items.First().Date.ShouldNotBeNull();
+            AppointmentSlotCreationResponse response = await _client.Appointments.CreateAppointmentSlot(slot);
+
+            response.AppointmentIds.First(a => a.Value == "16:00").Key.ShouldNotBeNullOrEmpty();
         }
     }
 }
