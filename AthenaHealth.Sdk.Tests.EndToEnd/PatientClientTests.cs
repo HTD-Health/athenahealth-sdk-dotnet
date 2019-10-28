@@ -107,6 +107,23 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         }
 
         [Theory]
+        [ClassData(typeof(GetPatientInsurancesData))]
+        public async Task GetPatientInsurances_InsurancesExists_ShouldNotThrowJsonSerializationException(int patientId)
+        {
+            // Arrange
+            // Act
+            var result = await _client.Patients.GetPatientInsurances(patientId, new GetPatientInsurancesFilter()
+            {
+                ShowCancelled = true,
+                ShowFullSSN = true
+            });
+
+            // Assert
+            result.ShouldNotBeNull();
+            result.Items.Length.ShouldBeGreaterThan(0);
+        }
+
+        [Theory]
         [ClassData(typeof(GetSocialHistoryTemplatesData))]
         public async Task GetSocialHistoryTemplates_TemplateExists_ShouldNotThrowJsonSerializationException(int patientId)
         {
