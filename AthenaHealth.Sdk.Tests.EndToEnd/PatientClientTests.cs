@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using AthenaHealth.Sdk.Tests.EndToEnd.Data.Patient;
 using Xunit;
 using System.Diagnostics;
+using System.Net;
 
 // ReSharper disable StringLiteralTypo
 namespace AthenaHealth.Sdk.Tests.EndToEnd
@@ -79,6 +80,30 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             // Assert
             result.ShouldNotBeNull();
             result.Questions.Length.ShouldBeGreaterThan(0);
+        }
+
+        [Theory]
+        [ClassData(typeof(GetDefaultLaboratoryData))]
+        public async Task GetDefaultLaboratory_LaboratoryExists_ShouldNotThrowJsonSerializationException(int patientId)
+        {
+            // Arrange
+            // Act
+            var result = await _client.Patients.GetDefaultLaboratory(patientId, 1);
+
+            // Assert
+            result.ShouldNotBeNull();
+        }
+
+        [Fact]
+        public void GetDefaultLaboratory_NotExistingLaboratory_ThrowsException()
+        {
+            // Arrange
+            // Act
+            // Assert
+            var exception = Should.Throw<ApiValidationException>(async () => await _client.Patients.GetDefaultLaboratory(10054, 1));
+
+            exception.Message.ShouldContain("Default lab not found.");
+            exception.StatusCode.ShouldBe(HttpStatusCode.NotFound);
         }
 
         [Theory]
