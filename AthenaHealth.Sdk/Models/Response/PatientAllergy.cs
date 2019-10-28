@@ -138,13 +138,13 @@ namespace AthenaHealth.Sdk.Models.Response
                 /// SNOMED code for the severity of this reaction
                 /// </summary>
                 [JsonProperty(PropertyName = "severitysnomedcode")]
-                public int? SeveritySnomedCode { get; set; }
+                public string SeveritySnomedCode { get; set; }
 
                 /// <summary>
                 /// SNOMED code for this reaction
                 /// </summary>
                 [JsonProperty(PropertyName = "snomedcode")]
-                public int? SnomedCode { get; set; }
+                public string SnomedCode { get; set; }
 
                 /// <summary>
                 /// Name of the reaction

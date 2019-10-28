@@ -15,7 +15,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// </summary>
         [Required]
         [JsonProperty("snomedcode")]
-        public int SnomedCode { get; set; }
+        public string SnomedCode { get; set; }
 
         /// <summary>
         /// ICD-10 code(s) for this diagnosis.

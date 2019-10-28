@@ -1,10 +1,23 @@
-﻿using System;
+﻿using AthenaHealth.Sdk.Models.Response.Interfaces;
 using Newtonsoft.Json;
+using System;
+
 // ReSharper disable StringLiteralTypo
 // ReSharper disable CommentTypo
-
 namespace AthenaHealth.Sdk.Models.Response
 {
+    public class PatientEncounterResponse : IPagingResponse<Encounter>
+    {
+        public int Total { get; set; }
+
+        public string Next { get; set; }
+
+        public string Previous { get; set; }
+
+        [JsonProperty("encounters")]
+        public Encounter[] Items { get; set; }
+    }
+
     public class Encounter
     {
         /// <summary>
@@ -12,6 +25,9 @@ namespace AthenaHealth.Sdk.Models.Response
         /// </summary>
         [JsonProperty("encounterid")]
         public int Id { get; set; }
+
+        [JsonProperty("appointmentstartdate")]
+        public DateTime? AppointmentStartDate { get; set; }
 
         /// <summary>
         /// The date the encounter was last reopened. The field will not be present if the encounter has not be closed.

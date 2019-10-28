@@ -85,7 +85,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         {
             // Arrange. Make sure there is no diagnosis with the same SnomedCode.
             int encounterId = 183;
-            int snomedCode = 52967002;
+            string snomedCode = "52967002";
 
             Diagnose[] response = await _client.Encounters.GetDiagnoses(encounterId);
             Diagnose diagnosisToDelete = response.FirstOrDefault(x => x.SnomedCode == snomedCode);
@@ -115,7 +115,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         {
             var model = new CreateDiagnoses()
             {
-                SnomedCode = 52967002,
+                SnomedCode = "52967002",
                 Laterality = LateralityEnum.Left,
                 Note = "testing"
             };
@@ -134,7 +134,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         {
             var model = new CreateDiagnoses()
             {
-                SnomedCode = 52967002,
+                SnomedCode = "52967002",
                 Laterality = LateralityEnum.Left,
                 Note = "testing"
             };
@@ -153,7 +153,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         {
             // Arrange. Make sure there is no diagnosis with the same SnomedCode.
             int encounterId = 183;
-            int snomedCode = 52967002;
+            string snomedCode = "52967002";
 
             Diagnose[] response = await _client.Encounters.GetDiagnoses(encounterId);
             Diagnose diagnosisToDelete = response.FirstOrDefault(x => x.SnomedCode == snomedCode);
@@ -199,7 +199,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         [Fact]
         public async Task CreateOrderLab_ValidModel_ReturnsDocumentId()
         {
-            var model = new CreateOrderLab(353034, 52967002);
+            var model = new CreateOrderLab(353034, "52967002");
 
             OrderLab response = await _client.Encounters.CreateOrderLab(1, model);
 
@@ -209,7 +209,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         [Fact]
         public async Task CreateOrderLab_InvalidOrderTypeId_ThrowsApiValidationException ()
         {
-            var model = new CreateOrderLab(0, 52967002);
+            var model = new CreateOrderLab(0, "52967002");
 
             ApiValidationException exception = await Assert.ThrowsAsync<ApiValidationException>(() =>
                 _client.Encounters.CreateOrderLab(1, model)
@@ -223,8 +223,6 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         [ClassData(typeof(GetEncounterOrdersData))]
         public async Task GetOrders_ExistingId_ReturnsRecords(int encounterId)
         {
-            //int encounterId = 1;
-
             var response = await _client.Encounters.GetOrders(encounterId, new EncounterGetOrdersFilter()
             {
                 AllowDischargeType = true,
@@ -237,7 +235,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             response.First().Orders.Length.ShouldBeGreaterThan(0);
             response.All(x => x.Orders.All(o => o.Id > 0)).ShouldBeTrue();
             response.All(x => x.Orders.Length > 0).ShouldBeTrue();
-            response.All(x => x.DiagnosisSnomed.HasValue).ShouldBeTrue();
+            response.All(x => !string.IsNullOrEmpty(x.DiagnosisSnomed)).ShouldBeTrue();
         }
 
         [Fact]
