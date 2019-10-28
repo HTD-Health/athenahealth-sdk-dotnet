@@ -133,5 +133,10 @@ namespace AthenaHealth.Sdk.Clients
 
             return await _connection.Get<Laboratory>($"{_connection.PracticeId}/chart/{patientId}/labs/default", queryParameters);
         }
+
+        public async Task<PatientInsuranceResponse> GetPatientInsurances(int patientId, GetPatientInsurancesFilter queryParameters)
+        {
+            return await _connection.Get<PatientInsuranceResponse>($"{_connection.PracticeId}/patients/{patientId}/insurances", queryParameters);
+        }
     }
 }

@@ -41,5 +41,7 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         Task<DocumentResponse> GetDocuments(int patientId, GetDocumentsFilter queryParameters);
 
         Task<Laboratory> GetDefaultLaboratory(int patientId, int departmentId);
+
+        Task<PatientInsuranceResponse> GetPatientInsurances(int patientId, GetPatientInsurancesFilter queryParameters);
     }
 }

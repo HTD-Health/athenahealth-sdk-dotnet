@@ -649,6 +649,27 @@ namespace AthenaHealth.Sdk.Tests.Integration
         }
 
         [Fact]
+        public async Task GetPatientInsurances_ReturnsInsurances()
+        {
+            // Arrange
+            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetPatientInsurances.json", HttpStatusCode.OK));
+            var queryParameters = new GetPatientInsurancesFilter
+            {
+              ShowFullSSN = true,
+              ShowCancelled = true
+            };
+
+            // Act
+            var result = await patientClient.GetPatientInsurances(1, queryParameters);
+
+            // Assert
+            result.ShouldNotBeNull();
+            result.Total.ShouldBe(33);
+            result.Items.ShouldNotBeNull();
+            result.Items.Length.ShouldBe(33);
+        }
+
+        [Fact]
         public void SetDefaultPharmacy_ValidData_NotThrow()
         {
             var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"success\": true}", HttpStatusCode.OK));
