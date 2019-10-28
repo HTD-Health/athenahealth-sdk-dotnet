@@ -1,14 +1,20 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using AthenaHealth.Sdk.Models.Converters;
+using AthenaHealth.Sdk.Models.Request.Interfaces;
 using Newtonsoft.Json;
 // ReSharper disable CommentTypo
 // ReSharper disable StringLiteralTypo
 
 namespace AthenaHealth.Sdk.Models.Request
 {
-    public class GetAppointmentSlotsFilter
+    public class GetAppointmentSlotsFilter : IPagingFilter
     {
+        public GetAppointmentSlotsFilter(int[] departmentId)
+        {
+            DepartmentId = departmentId;
+        }
+
         /// <summary>
         /// Normally, an appointment reason ID should be used which will map to the correct underlying appointment type in athenaNet. This field will ignore the practice's existing setup for what should be scheduled. Please consult with athenahealth before using. Either an appointmenttypeid or a reasonid must be specified or no results will be returned.
         /// </summary>
@@ -70,6 +76,14 @@ namespace AthenaHealth.Sdk.Models.Request
         [JsonProperty(PropertyName = "startdate")]
         public DateTime? StartDate { get; set; }
 
+        /// <summary>
+        /// Number of entries to return (default 1000, max 10000)Please note that this endpoint has a different default and max than normal.
+        /// </summary>
+        public int? Limit { get; set; } = 1000;
 
+        /// <summary>
+        /// Starting point of entries; 0-indexed
+        /// </summary>
+        public int? Offset { get; set; }
     }
 }

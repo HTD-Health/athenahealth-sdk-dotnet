@@ -99,6 +99,13 @@ namespace AthenaHealth.Sdk.Clients
                 booking);
             return result.FirstOrThrowException();
         }
+
+        public async Task CancelAppointment(CancelAppointment cancelRequest)
+        {
+            await _connection.Put<object>(
+                $"{_connection.PracticeId}/appointments/{cancelRequest.AppointmentId}/cancel",
+                cancelRequest);
+        }
         
     }
 }

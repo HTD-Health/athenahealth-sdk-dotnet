@@ -135,8 +135,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             Should.Throw<ApiValidationException>(async () => await _client.InsurancePackage.GetCommon(new GetCommonInsurancePackageFilter(999)));
         }
 
-#warning Below test is slow, takes around ~9.7 seconds to run it. So in order to do that uncomment <see cref="FactAttribute"/>.
-        // [Fact]
+        [Fact(Skip = "Below test is slow, takes around ~9.7 seconds to run it")]
         public async Task Search_ValidModel_ReturnsRecords()
         {
             SearchInsuranceFilter model = new SearchInsuranceFilter("PAYMENT PLAN", "1")

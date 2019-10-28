@@ -9,6 +9,14 @@ namespace AthenaHealth.Sdk.Models.Request
 {
     public class CreateAppointmentSlot
     {
+        public CreateAppointmentSlot(int departmentId, int providerId, DateTime appointmentDate, ClockTime[] appointmentTime)
+        {
+            DepartmentId = departmentId;
+            ProviderId = providerId;
+            AppointmentDate = appointmentDate;
+            AppointmentTime = appointmentTime;
+        }
+
         /// <summary>
         /// The appointment date for the new open appointment slot (mm/dd/yyyy).
         /// </summary>

@@ -67,10 +67,10 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         [Fact]
         public async Task GetBookedAppointments_SingleDepartment_ReturnsRecords()
         {
-            GetAppointmentsBookedFilter filter = new GetAppointmentsBookedFilter
+            GetAppointmentsBookedFilter filter = new GetAppointmentsBookedFilter(departmentIds: new[] { 1 },
+                                                                                 startDate:new DateTime(2019, 01, 01),
+                                                                                 endDate: new DateTime(2019, 02, 01))
             {
-                StartDate = new DateTime(2019, 01, 01),
-                EndDate = new DateTime(2019, 02, 01),
                 DepartmentIds = new[] { 1 },
                 ShowClaimDetail = true,
                 ShowExpectedProcedureCodes = true,
@@ -91,11 +91,11 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         [Fact]
         public async Task GetBookedAppointments_MultipleDepartments_ReturnsRecords()
         {
-            GetAppointmentsBookedFilter filter = new GetAppointmentsBookedFilter
+            GetAppointmentsBookedFilter filter = new GetAppointmentsBookedFilter(
+                new[] { 1, 21 }, 
+                new DateTime(2019, 01, 01),
+                new DateTime(2019, 02, 01))
             {
-                StartDate = new DateTime(2019, 01, 01),
-                EndDate = new DateTime(2019, 02, 01),
-                DepartmentIds = new[] { 1, 21 },
                 ShowClaimDetail = true,
                 ShowExpectedProcedureCodes = true,
                 ShowCopay = true,
@@ -284,9 +284,8 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         [Fact]
         public async Task GetAppointmentSlots_ReturnsRecords()
         {
-            GetAppointmentSlotsFilter filter = new GetAppointmentSlotsFilter
+            GetAppointmentSlotsFilter filter = new GetAppointmentSlotsFilter(Enumerable.Range(1, 999).ToArray())
             {
-                DepartmentId = Enumerable.Range(1, 999).ToArray(),
                 StartDate = new DateTime(2019, 01, 01),
                 EndDate = new DateTime(2019, 04, 01),
                 IgnoreSchedulablePermission = true,
@@ -304,14 +303,13 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         [Fact]
         public async Task CreateAppointmentSlot_ValidData_IdReturned()
         {
-            CreateAppointmentSlot slot = new CreateAppointmentSlot
+            CreateAppointmentSlot slot = new CreateAppointmentSlot(
+                1, 
+                86,
+                new DateTime(2020, 1, 1),
+                new ClockTime[] { new ClockTime(16, 00) })
             {
-                DepartmentId = 1,
-                AppointmentDate = new DateTime(2020, 1, 1),
-                AppointmentTime = new ClockTime[] { new ClockTime(16, 00) },
-                ProviderId = 86,
                 ReasonId = 962
-
             };
 
             AppointmentSlotCreationResponse response = await _client.Appointments.CreateAppointmentSlot(slot);
@@ -320,38 +318,45 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         }
 
 
-        [Fact]
-        public async Task BookAppointment_ValidData_ReturnsAppointment()
+        /// <summary>
+        /// This method tests both: booking and cancellation, but before it creates new appointment slot
+        /// </summary>
+        /// <returns></returns>
+        [Fact(Skip = "Below test is slow - takes more than 10 seconds to run")]
+        public async Task BookAndCancelAppointment_ValidData_ReturnsAppointment()
         {
-            // Arrange
+            int patientId = 1;
             //Create new appointment slot
-            CreateAppointmentSlot slot = new CreateAppointmentSlot
+            CreateAppointmentSlot slot = new CreateAppointmentSlot(
+                1, 
+                86,
+                new DateTime(2020, 1, 1),
+                new ClockTime[] { new ClockTime(16, 00) })
+
             {
-                DepartmentId = 1,
-                AppointmentDate = new DateTime(2020, 1, 1),
-                AppointmentTime = new ClockTime[] { new ClockTime(16, 00) },
-                ProviderId = 86,
                 ReasonId = 962
 
             };
             AppointmentSlotCreationResponse response = await _client.Appointments.CreateAppointmentSlot(slot);
             int appointmentId = int.Parse(response.AppointmentIds.First().Key);
 
-
-            BookAppointment booking = new BookAppointment()
+            //Book appointment
+            BookAppointment booking = new BookAppointment(appointmentId)
             {
-                AppointmentId = appointmentId,
-                PatientId = 1,
+                PatientId = patientId,
                 ReasonId = 962,
                 IgnoreSchedulablePermission = true
             };
-
-            // Act
             Appointment appointment = await _client.Appointments.BookAppointment(booking);
-            
-            // Assert
+
+            //Assert booking
             appointment.Id = appointmentId;
             appointment.Date.ShouldNotBeNull();
+
+            //Cancel appointment
+            CancelAppointment cancelRequest = new CancelAppointment(appointmentId, patientId, "test");
+
+            Should.NotThrow(() => _client.Appointments.CancelAppointment(cancelRequest));
         }
     }
 }

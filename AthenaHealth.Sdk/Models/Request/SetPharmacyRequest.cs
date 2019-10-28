@@ -7,6 +7,10 @@ namespace AthenaHealth.Sdk.Models.Request
 {
     public class SetPharmacyRequest
     {
+        public SetPharmacyRequest(int departmentId)
+        {
+            DepartmentId = departmentId;
+        }
         /// <summary>
         /// The clinical provider ID that you wish to set as the default pharmacy or add as a preferred pharmacy. This or the NCPDPID must be provided.
         /// </summary>
