@@ -110,7 +110,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         }
 
         [Fact]
-        public async Task RemindersSearch_ValidFilter_ReturnsRecords()
+        public async Task SearchReminders_ValidFilter_ReturnsRecords()
         {
             IAppointmentClient client = new Clients.AppointmentClient(ConnectionFactory.CreateFromFile(@"Data\Appointment\SearchReminders.json"));
 
@@ -128,7 +128,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         }
 
         [Fact]
-        public async Task ReminderGetById_ExistingId_ReturnsRecord()
+        public async Task GetReminderById_ExistingId_ReturnsRecord()
         {
             IAppointmentClient client = new Clients.AppointmentClient(ConnectionFactory.CreateFromFile(@"Data\Appointment\GetReminderById.json"));
 
@@ -138,6 +138,23 @@ namespace AthenaHealth.Sdk.Tests.Integration
             response.Id.ShouldBe(15042);
             response.DepartmentId.ShouldBe(150);
             response.PatientId.ShouldBe(33339);
+        }
+
+        [Fact]
+        public async Task CreateReminder_ValidModel_ReturnsCreatedReminder()
+        {
+            IAppointmentClient client = new Clients.AppointmentClient(ConnectionFactory.CreateFromFile(@"Data\Appointment\CreateReminder.json"));
+
+            var model = new CreateAppointmentReminder(
+                new DateTime(2019,10, 28), 
+                82,
+                31014,
+                144);
+            CreatedAppointmentReminder response = await client.CreateReminder(model);
+
+            response.ShouldNotBeNull();
+            response.Id.ShouldBe(15123);
+            response.IsSuccess.ShouldBeTrue();
         }
     }
 }

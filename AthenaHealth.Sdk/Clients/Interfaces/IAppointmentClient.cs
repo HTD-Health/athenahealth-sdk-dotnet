@@ -44,5 +44,12 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// <param name="appointmentReminderId"></param>
         /// <returns></returns>
         Task<AppointmentReminder> GetReminderById(int appointmentReminderId);
+
+        /// <summary>
+        /// Results for adding an appointment reminder for this practice.
+        /// </summary>
+        /// <param name="reminder"></param>
+        /// <returns></returns>
+        Task<CreatedAppointmentReminder> CreateReminder(CreateAppointmentReminder reminder);
     }
 }

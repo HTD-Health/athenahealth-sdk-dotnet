@@ -211,5 +211,35 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             response.DepartmentId.ShouldBeGreaterThan(0);
             response.ApproximateDate.ShouldNotBe(DateTime.MinValue);
         }
+
+        [Fact]
+        public async Task CreateReminder_ValidModel_ReturnsCreatedReminderId()
+        {
+            var model = new CreateAppointmentReminder(
+                new DateTime(2019, 10, 28),
+                82,
+                31014,
+                144);
+            CreatedAppointmentReminder response = await _client.Appointments.CreateReminder(model);
+
+            response.ShouldNotBeNull();
+            response.Id.ShouldBeGreaterThan(0);
+            response.IsSuccess.ShouldBeTrue();
+        }
+
+        [Fact]
+        public async Task CreateReminder_InvalidPatientId_ThrowsApiValidationException()
+        {
+            var model = new CreateAppointmentReminder(
+                new DateTime(2019, 10, 28),
+                82,
+                0,
+                144);
+            ApiException exception = await Should.ThrowAsync<ApiException>(async ()
+                => await _client.Appointments.CreateReminder(model));
+
+            exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
+            exception.Message.ShouldContain("A patient ID must be provided");
+        }
     }
 }

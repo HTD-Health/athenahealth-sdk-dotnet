@@ -65,5 +65,13 @@ namespace AthenaHealth.Sdk.Clients
             return await _connection.Get<AppointmentReminder>(
                 $"{_connection.PracticeId}/appointments/appointmentreminders/{appointmentReminderId}");
         }
+
+        public async Task<CreatedAppointmentReminder> CreateReminder(CreateAppointmentReminder reminder)
+        {
+            return await _connection.Post<CreatedAppointmentReminder>(
+                $"{_connection.PracticeId}/appointments/appointmentreminders",
+                null,
+                reminder);
+        }
     }
 }
