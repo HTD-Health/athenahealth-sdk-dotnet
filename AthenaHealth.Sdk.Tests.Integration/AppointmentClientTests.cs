@@ -156,5 +156,15 @@ namespace AthenaHealth.Sdk.Tests.Integration
             response.Id.ShouldBe(15123);
             response.IsSuccess.ShouldBeTrue();
         }
+
+        [Fact]
+        public void DeleteReminderById_ValidAppointmentReminderId_NotThrowsException()
+        {
+            IAppointmentClient client = new Clients.AppointmentClient(ConnectionFactory.Create(@"{ ""success"": true }"));
+
+            Should.NotThrow(async ()
+                => await client.DeleteReminderById(15128)
+            );
+        }
     }
 }

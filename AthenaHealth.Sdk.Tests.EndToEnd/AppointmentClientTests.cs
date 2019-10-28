@@ -241,5 +241,43 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
             exception.Message.ShouldContain("A patient ID must be provided");
         }
+
+        [Fact]
+        public async Task DeleteReminderById_ValidAppointmentReminderId_NotThrowsException()
+        {
+            var model = new CreateAppointmentReminder(
+                new DateTime(2019, 10, 28),
+                82,
+                31014,
+                144);
+            CreatedAppointmentReminder creationResponse = await _client.Appointments.CreateReminder(model);
+
+            Should.NotThrow(async ()
+                => await _client.Appointments.DeleteReminderById(creationResponse.Id)
+            );
+        }
+
+        [Fact]
+        public async Task DeleteReminderById_AlreadyDeletedReminder_ThrowsBadRequest()
+        {
+            // Arrange. Make sure such diagnosis not exists.
+            int appointmentReminderId = 15128;
+
+            try
+            {
+                await _client.Appointments.DeleteReminderById(appointmentReminderId);
+            }
+            catch (Exception)
+            {
+                // ignored
+            }
+
+            ApiValidationException exception = await Assert.ThrowsAsync<ApiValidationException>(() =>
+                    _client.Appointments.DeleteReminderById(appointmentReminderId)
+            );
+
+            exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
+            exception.Message.ShouldContain("That appointment reminder has already been deleted");
+        }
     }
 }

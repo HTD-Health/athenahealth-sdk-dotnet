@@ -73,5 +73,12 @@ namespace AthenaHealth.Sdk.Clients
                 null,
                 reminder);
         }
+
+        public Task DeleteReminderById(int appointmentReminderId)
+        {
+            return _connection.Delete<DeleteResponse>(
+                $"{_connection.PracticeId}/appointments/appointmentreminders/{appointmentReminderId}"
+            );
+        }
     }
 }
