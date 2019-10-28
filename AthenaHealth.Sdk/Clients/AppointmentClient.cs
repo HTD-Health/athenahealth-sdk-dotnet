@@ -85,5 +85,11 @@ namespace AthenaHealth.Sdk.Clients
         {
             return await _connection.Get<AppointmentSlotResponse>($"{_connection.PracticeId}/appointments/open", filter);
         } 
+
+        public async Task<AppointmentSlotCreationResponse> CreateAppointmentSlot(CreateAppointmentSlot slot)
+        {
+            return await _connection.Post<AppointmentSlotCreationResponse>($"{_connection.PracticeId}/appointments/open",null, slot);
+        } 
+        
     }
 }

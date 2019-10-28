@@ -3,9 +3,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using AthenaHealth.Sdk.Clients.Interfaces;
 using AthenaHealth.Sdk.Exceptions;
+using AthenaHealth.Sdk.Models;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
 using AthenaHealth.Sdk.Tests.Integration.TestingHelpers;
+using Castle.Core.Internal;
 using Shouldly;
 using Xunit;
 
@@ -183,6 +185,27 @@ namespace AthenaHealth.Sdk.Tests.Integration
             response.Items.Length.ShouldBe(131);
             response.Items.ShouldContain(a => a.DepartmentId.HasValue);
             response.Items.First().Date.ShouldNotBeNull();
+            response.Items.First(a => a.StartTime != null).StartTime.ToString().IsNullOrEmpty();
+        }
+
+        [Fact]
+        public async Task CreateAppointmentSlot_ValidData_IdReturned()
+        {
+            var client = new Clients.AppointmentClient(
+                    ConnectionFactory.Create("{\"appointmentids\": {\"1205956\": \"16:00\"}}"));
+            CreateAppointmentSlot slot = new CreateAppointmentSlot
+            {
+                DepartmentId = 1,
+                AppointmentDate = new DateTime(2020, 1, 1),
+                AppointmentTime = new ClockTime[] { new ClockTime(16, 00) },
+                ProviderId = 86,
+                ReasonId = 962
+
+            };
+
+            AppointmentSlotCreationResponse response = await client.CreateAppointmentSlot(slot);
+
+            response.AppointmentIds.First(a => a.Key == "1205956" && a.Value == "16:00").ShouldNotBeNull();
         }
     }
 }
