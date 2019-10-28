@@ -19,20 +19,8 @@ namespace AthenaHealth.Sdk.Models.Response
         public Appointment[] Items { get; set; }
     }
 
-    public class Appointment
+    public class Appointment : AppointmentBase
     {
-        /// <summary>
-        /// Appointment ID of the booked appointment
-        /// </summary>
-        [JsonProperty(PropertyName = "appointmentid")]
-        public int Id { get; set; }
-
-        /// <summary>
-        /// A list of reason IDs that could be used for this slot.  Only present if multiple reason IDs are requested.
-        /// </summary>
-        [JsonProperty(PropertyName = "reasonid")]
-        public int? ReasonId { get; set; }
-
         /// <summary>
         /// An array of appointment notes for this appointment.
         /// </summary>
@@ -43,7 +31,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// The athenaNet appointment status. There are several possible statuses.  x=cancelled. f=future. (It can include appointments where were never checked in, even if the appointment date is in the past. It is up to a practice to cancel appointments as a no show when appropriate to do so.)  o=open. 2=checked in. 3=checked out. 4=charge entered (i.e. a past appointment).
         /// </summary>
         [JsonProperty(PropertyName = "appointmentstatus")]
-        public AppointmentStatusEnum AppointmentStatus{ get; set; }
+        public AppointmentStatusEnum AppointmentStatus { get; set; }
 
         /// <summary>
         /// The time (mm/dd/yyyy hh24:mi:ss; Eastern time) that this appointment was cancelled (if cancelled)
@@ -80,12 +68,6 @@ namespace AthenaHealth.Sdk.Models.Response
         /// </summary>
         [JsonProperty(PropertyName = "lastmodified")]
         public DateTime? LastModified { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [JsonProperty(PropertyName = "departmentid")]
-        public int? DepartmentId { get; set; }
 
         /// <summary>
         /// The time (mm/dd/yyyy hh24:mi:ss) that the appointment was checked out.
@@ -136,24 +118,6 @@ namespace AthenaHealth.Sdk.Models.Response
         public string EncounterStatus { get; set; }
 
         /// <summary>
-        /// If true, this appointment slot is frozen
-        /// </summary>
-        [JsonProperty(PropertyName = "frozen")]
-        public bool Frozen { get; set; }
-
-        /// <summary>
-        /// The practice-friendly (not patient friendly) name for this appointment type.  Note that this may not be the same as the booked appointment because of "generic" slots.
-        /// </summary>
-        [JsonProperty(PropertyName = "appointmenttype")]
-        public string AppointmentType { get; set; }
-
-        /// <summary>
-        /// This is the ID for the appointment type.   Note that this may not be the same as the booked appointment because of "generic" slots.
-        /// </summary>
-        [JsonProperty(PropertyName = "appointmenttypeid")]
-        public int? AppointmentTypeId { get; set; }
-
-        /// <summary>
         /// If the appointment was cancelled, the numeric ID (local to the practice) for the cancel reason.
         /// </summary>
         [JsonProperty(PropertyName = "cancelreasonid")]
@@ -176,12 +140,6 @@ namespace AthenaHealth.Sdk.Models.Response
         /// </summary>
         [JsonProperty(PropertyName = "coordinatorenterprise")]
         public bool CoordinatorEnterprise { get; set; }
-
-        /// <summary>
-        /// In minutes
-        /// </summary>
-        [JsonProperty(PropertyName = "duration")]
-        public int? Duration { get; set; }
 
         /// <summary>
         /// The time (mm/dd/yyyy hh24:mi:ss; Eastern time) that this appointment was scheduled.
@@ -220,12 +178,6 @@ namespace AthenaHealth.Sdk.Models.Response
         public AppointmentCopayModel[] AppointmentCopay { get; set; }
 
         /// <summary>
-        /// The appointment date.
-        /// </summary>
-        [JsonProperty(PropertyName = "date")]
-        public DateTime? Date { get; set; }
-
-        /// <summary>
         /// See /patients for details
         /// </summary>
         [JsonProperty(PropertyName = "patient")]
@@ -256,40 +208,16 @@ namespace AthenaHealth.Sdk.Models.Response
         public string LastModifiedBy { get; set; }
 
         /// <summary>
-        /// The patient-friendly name for this appointment type.  Note that this may not be the same as the booked appointment because of "generic" slots.
-        /// </summary>
-        [JsonProperty(PropertyName = "patientappointmenttypename")]
-        public string PatientAppointmentTypeName { get; set; }
-
-        /// <summary>
-        /// As HH:MM (where HH is the 0-23 hour and MM is the minute).  This time is local to the department.
-        /// </summary>
-        [JsonProperty(PropertyName = "starttime")]
-        public string StartTime { get; set; } //todo:   
-
-        /// <summary>
         /// The timestamp when the check-in process was finished for this appointment.
         /// </summary>
         [JsonProperty(PropertyName = "stopcheckin")]
         public string StopCheckIn { get; set; }
 
         /// <summary>
-        /// 
-        /// </summary>
-        [JsonProperty(PropertyName = "providerid")]
-        public int? ProviderId { get; set; }
-
-        /// <summary>
         /// The time (mm/dd/yyyy hh24:mi:ss) that the exam was completed.
         /// </summary>
         [JsonProperty(PropertyName = "stopexamdatetime")]
         public DateTime? StopExamDateTime { get; set; }
-
-        /// <summary>
-        /// The rendering provider ID.
-        /// </summary>
-        [JsonProperty(PropertyName = "renderingproviderid")]
-        public int? RenderingProviderId { get; set; }
 
         /// <summary>
         /// The supervising provider ID.
@@ -541,7 +469,7 @@ namespace AthenaHealth.Sdk.Models.Response
                 /// </summary>
                 [JsonProperty(PropertyName = "status")]
                 public string Status { get; set; }
-                
+
                 [JsonProperty(PropertyName = "primarypatientinsuranceid")]
                 public string PrimaryPatientInsuranceId { get; set; }
 

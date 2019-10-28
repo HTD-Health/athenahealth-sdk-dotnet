@@ -30,7 +30,7 @@ namespace AthenaHealth.Sdk.Clients
             return result.FirstOrThrowException();
         }
 
-        public async Task<AppointmentResponse> GetBookedAppointments(GetBookedAppointmentsFilter filter)
+        public async Task<AppointmentResponse> GetBookedAppointments(GetAppointmentsBookedFilter filter)
         {
             if (filter.DepartmentIds != null && filter.DepartmentIds.Length > 1)
                 return await _connection.Get<AppointmentResponse>($"{_connection.PracticeId}/appointments/booked/multipledepartment", filter);
@@ -55,5 +55,10 @@ namespace AthenaHealth.Sdk.Clients
                 null, 
                 new { notetext = text, displayonschedule = displayOnSchedule});
         }
+
+        public async Task<AppointmentSlotResponse> GetAppointmentSlots(GetAppointmentSlotsFilter filter)
+        {
+            return await _connection.Get<AppointmentSlotResponse>($"{_connection.PracticeId}/appointments/open", filter);
+        } 
     }
 }

@@ -37,7 +37,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         }
 
         [Fact]
-        public  async Task GetAppointmentType_InvalidId_ThrowException()
+        public async Task GetAppointmentType_InvalidId_ThrowException()
         {
             var client = new Clients.AppointmentClient(ConnectionFactory.Create("[]"));
             await Should.ThrowAsync<ApiValidationException>(async () => await client.GetAppointmentType(5000000));
@@ -47,11 +47,11 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public async Task GetBookedAppointments_ReturnsRecords()
         {
             var client = new Clients.AppointmentClient(ConnectionFactory.CreateFromFile(@"Data\Appointment\GetBookedAppointments.json"));
-            GetBookedAppointmentsFilter filter = new GetBookedAppointmentsFilter
+            GetAppointmentsBookedFilter filter = new GetAppointmentsBookedFilter
             {
                 StartDate = new DateTime(2019, 01, 01),
                 EndDate = new DateTime(2019, 02, 01),
-                DepartmentIds = new [] {1},
+                DepartmentIds = new[] { 1 },
                 ShowClaimDetail = true,
                 ShowExpectedProcedureCodes = true,
                 ShowCopay = true,
@@ -92,7 +92,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public async Task GetNotes_ValidId_ReturnsEmptyResult()
         {
             IAppointmentClient client = new Clients.AppointmentClient(ConnectionFactory.CreateFromFile(@"Data\Appointment\GetNotes.json"));
-            
+
             AppointmentNotesResponse response = await client.GetNotes(2, true);
 
             response.Items.All(x => !string.IsNullOrWhiteSpace(x.Text)).ShouldBeTrue();
@@ -104,9 +104,27 @@ namespace AthenaHealth.Sdk.Tests.Integration
         {
             IAppointmentClient client = new Clients.AppointmentClient(ConnectionFactory.CreateFromFile(@"Data\Appointment\GetNotes.json"));
 
-            Should.NotThrow(async () 
+            Should.NotThrow(async ()
                 => await client.CreateNote(100, "testing", true)
                 );
+        }
+
+        [Fact]
+        public async Task GetOpenAppointments_ReturnsRecords()
+        {
+            var client = new Clients.AppointmentClient(ConnectionFactory.CreateFromFile(@"Data\Appointment\GetAppointmentSlots.json"));
+
+            GetAppointmentSlotsFilter filter = new GetAppointmentSlotsFilter
+            {
+                DepartmentId = new int[] { 1 }
+            };
+
+            AppointmentSlotResponse response = await client.GetAppointmentSlots(filter);
+            response.Total.ShouldBe(131);
+            response.Items.ShouldNotBeNull();
+            response.Items.Length.ShouldBe(131);
+            response.Items.ShouldContain(a => a.DepartmentId.HasValue);
+            response.Items.First().Date.ShouldNotBeNull();
         }
     }
 }
