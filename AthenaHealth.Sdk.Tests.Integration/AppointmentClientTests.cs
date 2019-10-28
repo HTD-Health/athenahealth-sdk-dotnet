@@ -110,7 +110,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         }
 
         [Fact]
-        public async Task SearchReminders_ValidFilter_ReturnsRecords()
+        public async Task RemindersSearch_ValidFilter_ReturnsRecords()
         {
             IAppointmentClient client = new Clients.AppointmentClient(ConnectionFactory.CreateFromFile(@"Data\Appointment\SearchReminders.json"));
 
@@ -125,6 +125,19 @@ namespace AthenaHealth.Sdk.Tests.Integration
             response.Items.All(x => x.ApproximateDate != DateTime.MinValue).ShouldBeTrue();
             response.Items.All(x => x.Id > 0).ShouldBeTrue();
             response.Items.All(x => x.DepartmentId > 0).ShouldBeTrue();
+        }
+
+        [Fact]
+        public async Task ReminderGetById_ExistingId_ReturnsRecord()
+        {
+            IAppointmentClient client = new Clients.AppointmentClient(ConnectionFactory.CreateFromFile(@"Data\Appointment\GetReminderById.json"));
+
+            var response = await client.GetReminderById(15042);
+
+            response.ShouldNotBeNull();
+            response.Id.ShouldBe(15042);
+            response.DepartmentId.ShouldBe(150);
+            response.PatientId.ShouldBe(33339);
         }
     }
 }

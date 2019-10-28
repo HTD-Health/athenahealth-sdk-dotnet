@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace AthenaHealth.Sdk.Tests.EndToEnd.Data.Appointments
 {
-    public class SearchRemindersData : IEnumerable<object[]>
+    public class RemindersSearchData : IEnumerable<object[]>
     {
         public IEnumerator<object[]> GetEnumerator()
         {

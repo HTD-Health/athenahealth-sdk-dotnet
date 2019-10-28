@@ -1,6 +1,4 @@
-﻿using System;
-using System.Net.Http.Headers;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using AthenaHealth.Sdk.Clients.Interfaces;
 using AthenaHealth.Sdk.Extensions;
 using AthenaHealth.Sdk.Http;
@@ -60,6 +58,12 @@ namespace AthenaHealth.Sdk.Clients
         {
             return await _connection.Get<AppointmentRemindersResponse>(
                 $"{_connection.PracticeId}/appointments/appointmentreminders", filter);
+        }
+
+        public async Task<AppointmentReminder> GetReminderById(int appointmentReminderId)
+        {
+            return await _connection.Get<AppointmentReminder>(
+                $"{_connection.PracticeId}/appointments/appointmentreminders/{appointmentReminderId}");
         }
     }
 }

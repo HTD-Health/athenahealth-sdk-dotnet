@@ -177,14 +177,14 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         public async Task CreateNote_NullNoteText_ThrowsApiValidationException()
         {
             ApiException exception = await Should.ThrowAsync<ApiException>(async ()
-                => await _client.Appointments.GetNotes(100));
+                => await _client.Appointments.CreateNote(100, null));
 
             exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
-            exception.Message.ShouldNotContain(@"""missingfields"":[""notetext""]");
+            exception.Message.ShouldContain(@"""missingfields"":[""notetext""]");
         }
 
         [Theory]
-        [ClassData(typeof(SearchRemindersData))]
+        [ClassData(typeof(RemindersSearchData))]
         public async Task SearchReminders_ValidFilter_ReturnsRecords(int departmentId)
         {
             SearchAppointmentRemindersFilter filter = new SearchAppointmentRemindersFilter(
@@ -198,6 +198,18 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             response.Items.All(x => x.ApproximateDate != DateTime.MinValue).ShouldBeTrue();
             response.Items.All(x => x.Id > 0).ShouldBeTrue();
             response.Items.All(x => x.DepartmentId > 0).ShouldBeTrue();
+        }
+
+        [Theory]
+        [ClassData(typeof(ReminderGetByIdData))]
+        public async Task GetReminderById_ValidId_ReturnsRecord(int appointmentReminderId)
+        {
+            AppointmentReminder response = await _client.Appointments.GetReminderById(appointmentReminderId);
+
+            response.ShouldNotBeNull();
+            response.Id.ShouldBeGreaterThan(0);
+            response.DepartmentId.ShouldBeGreaterThan(0);
+            response.ApproximateDate.ShouldNotBe(DateTime.MinValue);
         }
     }
 }

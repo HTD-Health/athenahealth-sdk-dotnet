@@ -37,5 +37,12 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// <param name="filter"></param>
         /// <returns></returns>
         Task<AppointmentRemindersResponse> SearchReminders(SearchAppointmentRemindersFilter filter);
+
+        /// <summary>
+        /// Get a single appointment reminder for this practice.
+        /// </summary>
+        /// <param name="appointmentReminderId"></param>
+        /// <returns></returns>
+        Task<AppointmentReminder> GetReminderById(int appointmentReminderId);
     }
 }
