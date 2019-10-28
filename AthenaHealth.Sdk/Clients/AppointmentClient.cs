@@ -76,7 +76,7 @@ namespace AthenaHealth.Sdk.Clients
 
         public Task DeleteReminderById(int appointmentReminderId)
         {
-            return _connection.Delete<DeleteResponse>(
+            return _connection.Delete<StatusResponse>(
                 $"{_connection.PracticeId}/appointments/appointmentreminders/{appointmentReminderId}"
             );
         }
@@ -88,8 +88,17 @@ namespace AthenaHealth.Sdk.Clients
 
         public async Task<AppointmentSlotCreationResponse> CreateAppointmentSlot(CreateAppointmentSlot slot)
         {
-            return await _connection.Post<AppointmentSlotCreationResponse>($"{_connection.PracticeId}/appointments/open",null, slot);
+            return await _connection.Post<AppointmentSlotCreationResponse>(
+                $"{_connection.PracticeId}/appointments/open",null, slot);
         } 
+
+        public async Task<Appointment> BookAppointment(BookAppointment booking)
+        {
+            Appointment[] result =  await _connection.Put<Appointment[]>(
+                $"{_connection.PracticeId}/appointments/{booking.AppointmentId}",
+                booking);
+            return result.FirstOrThrowException();
+        }
         
     }
 }

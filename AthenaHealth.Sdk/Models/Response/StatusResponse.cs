@@ -4,7 +4,7 @@
 
 namespace AthenaHealth.Sdk.Models.Response
 {
-    public class DeleteResponse : BaseResponse
+    public class StatusResponse : BaseResponse
     {
         /// <summary>
         /// If <see cref="BaseResponse.IsSuccess"/> is false will contain error message.

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using AthenaHealth.Sdk.Clients.Interfaces;
 using AthenaHealth.Sdk.Exceptions;
@@ -206,6 +207,25 @@ namespace AthenaHealth.Sdk.Tests.Integration
             AppointmentSlotCreationResponse response = await client.CreateAppointmentSlot(slot);
 
             response.AppointmentIds.First(a => a.Key == "1205956" && a.Value == "16:00").ShouldNotBeNull();
+        }
+
+        [Fact]
+        public async Task BookAppointment_ValidData_NoExceptionIsThrown()
+        {
+            var client = new Clients.AppointmentClient(
+                ConnectionFactory.CreateFromFile(@"Data\Appointment\BookAppointment.json"));
+
+            BookAppointment booking = new BookAppointment()
+            {
+                AppointmentId = 1205967,
+                PatientId = 1,
+                ReasonId = 962,
+                IgnoreSchedulablePermission = true
+            };
+
+            Appointment appointment = await client.BookAppointment(booking);
+            appointment.Id = 1205967;
+            appointment.Date.ShouldNotBeNull();
         }
     }
 }

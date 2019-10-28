@@ -25,6 +25,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Data\Appointment\BookAppointment.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Data\Appointment\CreateReminder.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

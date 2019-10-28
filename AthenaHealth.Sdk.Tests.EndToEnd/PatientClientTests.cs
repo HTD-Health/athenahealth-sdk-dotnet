@@ -420,8 +420,10 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         }
 
         [Fact]
-        public void AddPreferredPharmacy_ValidData_NotThrow()
+        public async Task AddPreferredPharmacy_ValidData_NotThrow()
         {
+            await _client.Patients.AddPreferredPharmacy(5000,
+                new SetPharmacyRequest {DepartmentId = 164, ClinicalProviderId = 11242674});
             Should.NotThrow(async () => await _client.Patients.AddPreferredPharmacy(5000, new SetPharmacyRequest{DepartmentId = 164, ClinicalProviderId = 11242674}));
         }
     }

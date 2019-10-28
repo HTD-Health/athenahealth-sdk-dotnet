@@ -45,12 +45,12 @@ namespace AthenaHealth.Sdk.Clients
 
         public async Task SetDefaultPharmacy(int patientId, SetPharmacyRequest request)
         {
-            await _connection.Put($"{_connection.PracticeId}/chart/{patientId}/pharmacies/default", request);
+            await _connection.Put<StatusResponse>($"{_connection.PracticeId}/chart/{patientId}/pharmacies/default", request);
         }
 
         public async Task AddPreferredPharmacy(int patientId, SetPharmacyRequest request)
         {
-            await _connection.Put($"{_connection.PracticeId}/chart/{patientId}/pharmacies/preferred", request);
+            await _connection.Put<StatusResponse>($"{_connection.PracticeId}/chart/{patientId}/pharmacies/preferred", request);
         }
 
         public async Task<PatientResponse> GetPatients(GetPatientsFilter queryParameters)
