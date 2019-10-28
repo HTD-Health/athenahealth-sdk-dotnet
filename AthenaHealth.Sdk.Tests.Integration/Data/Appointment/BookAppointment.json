@@ -1,0 +1,16 @@
+[
+  {
+    "date": "01\/01\/2020",
+    "appointmentid": "1205967",
+    "starttime": "16:00",
+    "departmentid": "1",
+    "appointmentstatus": "f",
+    "patientid": "1",
+    "duration": 15,
+    "appointmenttypeid": "42",
+    "appointmenttype": "Established",
+    "providerid": "86",
+    "chargeentrynotrequired": false,
+    "patientappointmenttypename": "Established Visit"
+  }
+]

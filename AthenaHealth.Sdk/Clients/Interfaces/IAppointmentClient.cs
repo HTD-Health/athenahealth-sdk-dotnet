@@ -61,5 +61,7 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
 
         Task<AppointmentSlotResponse> GetAppointmentSlots(GetAppointmentSlotsFilter filter);
         Task<AppointmentSlotCreationResponse> CreateAppointmentSlot(CreateAppointmentSlot slot);
+
+        Task<Appointment> BookAppointment(BookAppointment booking);
     }
 }

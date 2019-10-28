@@ -42,7 +42,8 @@ namespace AthenaHealth.Sdk.Http
         /// <param name="relativeUrl">Url relative to <see cref="BaseAddress"/>.</param>
         /// <param name="queryParameters">Query parameters to be added to constructed url.</param>
         /// <param name="body">Request content</param>
-        Task Put(string relativeUrl, object queryParameters = null, object body = null);
+        /// <returns>Deserialized model</returns>
+        Task<T> Put<T>(string relativeUrl, object queryParameters = null, object body = null);
 
         /// <summary>
         /// Sends DELETE request to url constructed from <see cref="BaseAddress"/> and <paramref name="relativeUrl"/>.

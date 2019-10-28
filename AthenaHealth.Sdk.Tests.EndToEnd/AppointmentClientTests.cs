@@ -318,5 +318,40 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
 
             response.AppointmentIds.First(a => a.Value == "16:00").Key.ShouldNotBeNullOrEmpty();
         }
+
+
+        [Fact]
+        public async Task BookAppointment_ValidData_ReturnsAppointment()
+        {
+            // Arrange
+            //Create new appointment slot
+            CreateAppointmentSlot slot = new CreateAppointmentSlot
+            {
+                DepartmentId = 1,
+                AppointmentDate = new DateTime(2020, 1, 1),
+                AppointmentTime = new ClockTime[] { new ClockTime(16, 00) },
+                ProviderId = 86,
+                ReasonId = 962
+
+            };
+            AppointmentSlotCreationResponse response = await _client.Appointments.CreateAppointmentSlot(slot);
+            int appointmentId = int.Parse(response.AppointmentIds.First().Key);
+
+
+            BookAppointment booking = new BookAppointment()
+            {
+                AppointmentId = appointmentId,
+                PatientId = 1,
+                ReasonId = 962,
+                IgnoreSchedulablePermission = true
+            };
+
+            // Act
+            Appointment appointment = await _client.Appointments.BookAppointment(booking);
+            
+            // Assert
+            appointment.Id = appointmentId;
+            appointment.Date.ShouldNotBeNull();
+        }
     }
 }

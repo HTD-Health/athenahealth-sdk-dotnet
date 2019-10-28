@@ -50,7 +50,7 @@ namespace AthenaHealth.Sdk.Clients
 
         public Task DeleteDiagnoses(int encounterId, int diagnosisId)
         {
-            return _connection.Delete<DeleteResponse>(
+            return _connection.Delete<StatusResponse>(
                 $"{_connection.PracticeId}/chart/encounter/{encounterId}/diagnoses/{diagnosisId}"
             );
         }

@@ -94,11 +94,14 @@ namespace AthenaHealth.Sdk.Http
         /// <param name="relativeUrl">Url relative to <see cref="BaseAddress"/>.</param>
         /// <param name="queryParameters">Query parameters to be added to constructed url.</param>
         /// <param name="body">Request content</param>
-        public async Task Put(string relativeUrl, object queryParameters = null, object body = null)
+        /// <returns>Deserialized model</returns>
+        public async Task<T> Put<T>(string relativeUrl, object queryParameters = null, object body = null)
         {
             await RefreshAccessToken();
 
             Response response = await SendData(AddVersion(relativeUrl), queryParameters, HttpMethod.Put, ContentConverter.ToJson(body));
+
+            return response.GetObjectContent<T>();
         }
 
         /// <summary>
