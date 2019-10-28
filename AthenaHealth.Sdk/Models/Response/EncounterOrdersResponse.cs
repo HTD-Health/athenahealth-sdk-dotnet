@@ -24,7 +24,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// The SNOMED code for this diagnosis. 0 means No Diagnosis.
         /// </summary>
         [JsonProperty(PropertyName = "diagnosissnomed")]
-        public int? DiagnosisSnomed { get; set; }
+        public string DiagnosisSnomed { get; set; }
 
         /// <summary>
         /// The name of the diagnosis

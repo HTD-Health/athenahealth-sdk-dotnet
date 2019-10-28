@@ -11,13 +11,13 @@ namespace AthenaHealth.Sdk.Models.Request
 {
     public class CreateOrderLab
     {
-        public CreateOrderLab(int orderTypeId, int diagnosisSnomedCode)
+        public CreateOrderLab(int orderTypeId, string diagnosisSnomedCode)
         {
             OrderTypeId = orderTypeId;
             DiagnosisSnomedCode = diagnosisSnomedCode;
         }
 
-        public CreateOrderLab(string loinc, int diagnosisSnomedCode)
+        public CreateOrderLab(string loinc, string diagnosisSnomedCode)
         {
             Loinc = loinc;
             DiagnosisSnomedCode = diagnosisSnomedCode;
@@ -28,7 +28,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// </summary>
         [JsonProperty("diagnosissnomedcode")]
         [Required]
-        public int DiagnosisSnomedCode { get; set; }
+        public string DiagnosisSnomedCode { get; set; }
 
         /// <summary>
         /// The LOINC of the lab you wish to order.

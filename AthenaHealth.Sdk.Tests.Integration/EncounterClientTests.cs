@@ -59,7 +59,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
 
             await client.CreateDiagnoses(999, new CreateDiagnoses()
             {
-                SnomedCode = 52967002
+                SnomedCode = "52967002"
             });
         }
 
@@ -76,7 +76,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         {
             IEncounterClient client = new EncounterClient(ConnectionFactory.Create(@"{""success"": true, ""documentid"": 186347}"));
 
-            OrderLab response = await client.CreateOrderLab(999, new CreateOrderLab(353034, 52967002));
+            OrderLab response = await client.CreateOrderLab(999, new CreateOrderLab(353034, "52967002"));
 
             response.DocumentId.ShouldBe(186347);
         }
@@ -98,9 +98,9 @@ namespace AthenaHealth.Sdk.Tests.Integration
             response.First().Orders.Length.ShouldBeGreaterThan(0);
             response.All(x => x.Orders.All(o => o.Id > 0)).ShouldBeTrue();
             response.All(x => x.Orders.Length > 0).ShouldBeTrue();
-            response.All(x => x.DiagnosisSnomed.HasValue).ShouldBeTrue();
+            response.All(x => !string.IsNullOrEmpty(x.DiagnosisSnomed)).ShouldBeTrue();
             response.First().Diagnosis.ShouldBe("Liver function tests abnormal");
-            response.First().DiagnosisSnomed.ShouldBe(166603001);
+            response.First().DiagnosisSnomed.ShouldBe("166603001");
         }
 
         [Fact]

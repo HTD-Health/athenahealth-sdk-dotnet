@@ -29,7 +29,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// SNOMED Code for this diagnosis
         /// </summary>
         [JsonProperty(PropertyName = "snomedcode")]
-        public int? SnomedCode { get; set; }
+        public string SnomedCode { get; set; }
 
         /// <summary>
         /// Brief description for this SNOMED Code
