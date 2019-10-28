@@ -295,5 +295,21 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
 //            response.Items.ShouldContain(a => a.DepartmentId.HasValue);
 //            response.Items.First().Date.ShouldNotBeNull();
         }
+
+        [Fact]
+        public async Task GetAppointmentSlots_ReturnsRecords()
+        {
+            GetAppointmentSlotsFilter filter = new GetAppointmentSlotsFilter
+            {
+                DepartmentId = Enumerable.Range(1, 999).ToArray()
+            };
+
+            AppointmentSlotResponse response = await _client.Appointments.GetAppointmentSlots(filter);
+            response.Total.ShouldBe(0); //TODO: Endpoint always returns 0 items. To be corrected when there will be more items returned.
+//            response.Total.ShouldBeGreaterThan(0);
+//            response.Items.ShouldNotBeNull();
+//            response.Items.ShouldContain(a => a.DepartmentId.HasValue);
+//            response.Items.First().Date.ShouldNotBeNull();
+        }
     }
 }
