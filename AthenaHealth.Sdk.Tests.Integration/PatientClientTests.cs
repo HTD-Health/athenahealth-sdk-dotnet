@@ -589,6 +589,45 @@ namespace AthenaHealth.Sdk.Tests.Integration
         }
 
         [Fact]
+        public async Task GetDefaultLaboratory_ValidId_ReturnsDefaultLaboratory()
+        {
+            // Arrange
+            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetDefaultLaboratory.json"));
+
+            // Act
+            var result = await patientClient.GetDefaultLaboratory(1, 1);
+
+            // Assert
+            result.ShouldNotBeNull();
+        }
+
+        [Fact]
+        public void GetDefaultLaboratory_PatientInDifferentDepartment_ThrowsException()
+        {
+            // Arrange
+            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"detailedmessage\":\"The specified patient does not exist in that department.\",\"error\":\"The specified patient does not exist in that department.\"}", HttpStatusCode.BadRequest));
+
+            // Act
+            ApiException exception = Should.Throw<ApiException>(async () => await patientClient.GetDefaultLaboratory(1, 2));
+
+            // Assert
+            exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
+        }
+
+        [Fact]
+        public void GetDefaultLaboratory_NoDefalultLaboratory_ThrowsException()
+        {
+            // Arrange
+            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"error\":\"Default lab not found.\"}", HttpStatusCode.NotFound));
+
+            // Act
+            ApiException exception = Should.Throw<ApiException>(async () => await patientClient.GetDefaultLaboratory(1, 2));
+
+            // Assert
+            exception.StatusCode.ShouldBe(HttpStatusCode.NotFound);
+        }
+
+        [Fact]
         public async Task GetPreferredPharmacies_ReturnsPreferredPharmacies()
         {
             // Arrange
