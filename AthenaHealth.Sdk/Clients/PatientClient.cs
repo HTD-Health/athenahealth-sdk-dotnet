@@ -158,5 +158,17 @@ namespace AthenaHealth.Sdk.Clients
         {
             return await _connection.Get<AppointmentResponse>($"{_connection.PracticeId}/patients/{patientId}/appointments", filter);
         }
+
+       public async Task<LabResultDetail> GetLabResultDetails(int patientId, int labResultId, bool? showTemplate = null)
+        {
+            var queryParameters = new
+            {
+                showtemplate = showTemplate
+            };
+
+            var result = await _connection.Get<LabResultDetail[]>($"{_connection.PracticeId}/patients/{patientId}/documents/labresult/{labResultId}", queryParameters);
+
+            return result.FirstOrThrowException();
+        }
     }
 }

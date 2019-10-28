@@ -345,6 +345,32 @@ namespace AthenaHealth.Sdk.Tests.Integration
         }
 
         [Fact]
+        public async Task GetLabResultDetails_ValidData_ReturnsLabResult()
+        {
+            // Arrange
+            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetLabResultDetails.json"));
+
+            // Act
+            var result = await patientClient.GetLabResultDetails(1, 1, true);
+
+            // Assert
+            result.ShouldNotBeNull();
+        }
+
+        [Fact]
+        public void GetLabResultDetails_NoResult_ThrowsException()
+        {
+            // Arrange
+            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"detailedmessage\":\"Document not found\",\"error\":\"The requested ID does not exist.\"}", HttpStatusCode.NotFound));
+
+            // Act
+            ApiException exception = Should.Throw<ApiException>(async () => await patientClient.GetLabResultDetails(1, 22308, true));
+
+            // Assert
+            exception.StatusCode.ShouldBe(HttpStatusCode.NotFound);
+        }
+
+        [Fact]
         public async Task GetLabResults_ValidData_ReturnsLabResultCollection()
         {
             // Arrange

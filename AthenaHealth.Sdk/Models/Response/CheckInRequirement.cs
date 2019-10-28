@@ -9,7 +9,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// Detailed information about the requirements for each section and their status.
         /// </summary>
         [JsonProperty("fields")]
-        [JsonConverter(typeof(SingleElementToArrayConverter), typeof(CheckInField))]
+        [JsonConverter(typeof(SingleElementToArrayConverter))]
         public CheckInField[] Fields { get; set; }
 
         /// <summary>

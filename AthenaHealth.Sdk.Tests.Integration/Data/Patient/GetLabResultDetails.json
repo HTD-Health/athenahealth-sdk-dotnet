@@ -1,0 +1,53 @@
+[
+  {
+    "priority": "2",
+    "assignedto": "MAIN ST (HUB) STAFF",
+    "documentclass": "LABRESULT",
+    "createddatetime": "2018-05-16T10:23:43-04:00",
+    "departmentid": "1",
+    "labresultid": 144498,
+    "observations": [],
+    "createduser": "API-8351",
+    "description": "lab result",
+    "documentroute": "FAX",
+    "documentsource": "INTERFACE",
+    "createddate": "05\/16\/2018",
+    "pages": [
+      {
+        "pageordering": 1,
+        "href": "https:\/\/api.athenahealth.com\/preview1\/195900\/patients\/1\/documents\/labresult\/144498\/pages\/78661",
+        "pageid": "78661",
+        "contenttype": "image\/png"
+      },
+      {
+        "pageordering": 2,
+        "href": "https:\/\/api.athenahealth.com\/preview1\/195900\/patients\/1\/documents\/labresult\/144498\/pages\/78662",
+        "pageid": "78662",
+        "contenttype": "image\/png"
+      },
+      {
+        "pageordering": 3,
+        "href": "https:\/\/api.athenahealth.com\/preview1\/195900\/patients\/1\/documents\/labresult\/144498\/pages\/78663",
+        "pageid": "78663",
+        "contenttype": "image\/png"
+      },
+      {
+        "pageordering": 4,
+        "href": "https:\/\/api.athenahealth.com\/preview1\/195900\/patients\/1\/documents\/labresult\/144498\/pages\/78664",
+        "pageid": "78664",
+        "contenttype": "image\/png"
+      },
+      {
+        "pageordering": 5,
+        "href": "https:\/\/api.athenahealth.com\/preview1\/195900\/patients\/1\/documents\/labresult\/144498\/pages\/78665",
+        "pageid": "78665",
+        "contenttype": "image\/png"
+      }
+    ],
+    "lastmodifieduser": "API-8351",
+    "status": "REVIEW",
+    "encounterdate": "05\/16\/2018",
+    "lastmodifieddatetime": "2018-05-16T10:23:51-04:00",
+    "lastmodifieddate": "05\/16\/2018"
+  }
+]
