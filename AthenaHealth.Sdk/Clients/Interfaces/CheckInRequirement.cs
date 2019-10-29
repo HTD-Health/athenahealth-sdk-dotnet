@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using AthenaHealth.Sdk.Models.Converters;
+using Newtonsoft.Json;
 
 namespace AthenaHealth.Sdk.Clients.Interfaces
 {
@@ -6,10 +7,10 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
     {
         /// <summary>
         /// Detailed information about the requirements for each section and their status.
-        /// TODO: Create CustomDeserializationConverter to handle such case.
         /// </summary>
         [JsonProperty("fields")]
-        public object Fields { get; set; }
+        [JsonConverter(typeof(SingleElementToArrayConverter), typeof(CheckInField))]
+        public CheckInField[] Fields { get; set; }
 
         /// <summary>
         /// Name of the group of requirements.
