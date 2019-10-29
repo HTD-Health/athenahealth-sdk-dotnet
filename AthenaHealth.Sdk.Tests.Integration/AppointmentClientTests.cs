@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Linq;
-using System.Net;
 using System.Threading.Tasks;
 using AthenaHealth.Sdk.Clients.Interfaces;
 using AthenaHealth.Sdk.Exceptions;
 using AthenaHealth.Sdk.Models;
+using AthenaHealth.Sdk.Models.Enums;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
 using AthenaHealth.Sdk.Tests.Integration.TestingHelpers;
 using Castle.Core.Internal;
-using Castle.DynamicProxy.Generators.Emitters.SimpleAST;
 using Shouldly;
 using Xunit;
 
@@ -309,7 +308,21 @@ namespace AthenaHealth.Sdk.Tests.Integration
 
             response.Total.ShouldBe(1);
             response.Items.ShouldNotBeNull();
-            response.Items.First().InsurancePolicyHolderCountryCode.ShouldBe("");
+            response.Items.First().InsurancePolicyHolderCountryCode.ShouldBe("USA");
+        }
+
+        [Fact]
+        public async Task GetAppointmentReasons_Type_ReturnsRecords()
+        {
+            IAppointmentClient client = new Clients.AppointmentClient(ConnectionFactory.CreateFromFile(@"Data\Appointment\GetAppointmentReasons.json"));
+            GetAppointmentReasonsFilter filter = new GetAppointmentReasonsFilter(1, 86);
+
+            AppointmentReasonResponse response = await client.GetAppointmentReasons(filter);
+
+            response.Total.ShouldBeGreaterThan(0);
+            response.Items.ShouldNotBeNull();
+            response.Items.ShouldContain(a => a.ReasonType == AppointmentReasonTypeEnum.Existing);
+            response.Items.ShouldContain(a => a.Reason == "Sick Visit");
         }
     }
 }

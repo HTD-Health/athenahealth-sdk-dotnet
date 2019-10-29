@@ -1,7 +1,9 @@
-﻿using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Threading.Tasks;
 using AthenaHealth.Sdk.Clients.Interfaces;
 using AthenaHealth.Sdk.Extensions;
 using AthenaHealth.Sdk.Http;
+using AthenaHealth.Sdk.Models.Enums;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
 // ReSharper disable StringLiteralTypo
@@ -84,7 +86,7 @@ namespace AthenaHealth.Sdk.Clients
         public async Task<AppointmentSlotResponse> GetAppointmentSlots(GetAppointmentSlotsFilter filter)
         {
             return await _connection.Get<AppointmentSlotResponse>($"{_connection.PracticeId}/appointments/open", filter);
-        } 
+        }
 
         public async Task<AppointmentSlotCreationResponse> CreateAppointmentSlot(CreateAppointmentSlot slot)
         {
@@ -98,7 +100,7 @@ namespace AthenaHealth.Sdk.Clients
 
         public async Task<Appointment> BookAppointment(BookAppointment booking)
         {
-            Appointment[] result =  await _connection.Put<Appointment[]>(
+            Appointment[] result = await _connection.Put<Appointment[]>(
                 $"{_connection.PracticeId}/appointments/{booking.AppointmentId}",
                 booking);
             return result.FirstOrThrowException();
@@ -110,7 +112,7 @@ namespace AthenaHealth.Sdk.Clients
                 $"{_connection.PracticeId}/appointments/{cancelRequest.AppointmentId}/cancel",
                 cancelRequest);
         }
-        
+
 
         public async Task CompleteCheckIn(int appointmentId)
         {
@@ -130,6 +132,24 @@ namespace AthenaHealth.Sdk.Clients
         public async Task<InsuranceResponse> GetAppointmentInsurances(GetAppointmentInsurancesFilter filter)
         {
             return await _connection.Get<InsuranceResponse>($"{_connection.PracticeId}/appointments/{filter.AppointmentId}/insurances", filter);
+        }
+
+        public async Task<AppointmentReasonResponse> GetAppointmentReasons(GetAppointmentReasonsFilter filter)
+        {
+            string url = "";
+            switch (filter.Type)
+            {
+                case AppointmentReasonTypeEnum.All:
+                    url = $"{_connection.PracticeId}/patientappointmentreasons";
+                    break;
+                case AppointmentReasonTypeEnum.New:
+                    url = $"{_connection.PracticeId}/patientappointmentreasons/newpatient";
+                    break;
+                case AppointmentReasonTypeEnum.Existing:
+                    url = $"{_connection.PracticeId}/patientappointmentreasons/existingpatient";
+                    break;
+            }
+            return await _connection.Get<AppointmentReasonResponse>(url, filter);
         }
     }
 }
