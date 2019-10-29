@@ -30,9 +30,8 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         {
             // Arrange
             // Act
-            var result = await _client.Patients.GetDocuments(patientId, new GetDocumentsFilter()
+            var result = await _client.Patients.GetDocuments(patientId, new GetDocumentsFilter(1)
             {
-                DepartmentId = 1,
                 ShowDeclinedOrders = true,
                 ShowDeleted = true
             });
@@ -70,9 +69,8 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         {
             // Arrange
             // Act
-            var result = await _client.Patients.GetSocialHistory(patientId, new GetSocialHistoryFilter()
+            var result = await _client.Patients.GetSocialHistory(patientId, new GetSocialHistoryFilter(1)
             {
-                DepartmentId = 1,
                 ShowNotPerformedQuestions = true,
                 ShowUnansweredQuestions = true
             });
@@ -129,9 +127,8 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         {
             // Arrange
             // Act
-            var result = await _client.Patients.GetPatientEncounters(patientId, new GetPatientEncountersFilter()
+            var result = await _client.Patients.GetPatientEncounters(patientId, new GetPatientEncountersFilter(1)
             {
-                DepartmentId = 1,
                 ShowAllStatuses = true,
                 ShowAllTypes = true,
                 ShowDiagnoses = true
@@ -174,10 +171,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         {
             // Arrange
             // Act
-            var result = await _client.Patients.GetMedications(patientId, new GetMedicationsFilter()
-            {
-                DepartmentId = 1
-            });
+            var result = await _client.Patients.GetMedications(patientId, new GetMedicationsFilter(1));
 
             // Assert
             result.ShouldNotBeNull();
@@ -190,9 +184,8 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         {
             // Arrange
             // Act
-            var result = await _client.Patients.GetPrescriptions(patientId, new GetPrescriptionsFilter()
+            var result = await _client.Patients.GetPrescriptions(patientId, new GetPrescriptionsFilter(1)
             {
-                DepartmentId = 1,
                 ShowDeclinedOrders = true,
                 ShowDeleted = true
             });
@@ -208,9 +201,8 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         {
             // Arrange
             // Act
-            var result = await _client.Patients.GetLabResults(patientId, new GetLabResultsFilter()
+            var result = await _client.Patients.GetLabResults(patientId, new GetLabResultsFilter(1)
             {
-                DepartmentId = 1,
                 ShowAbnormalDetails = true,
                 ShowHidden = true,
                 ShowTemplate = true
@@ -227,9 +219,8 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         {
             // Arrange
             // Act
-            var result = await _client.Patients.GetAnalytes(patientId, new GetAnalytesFilter()
+            var result = await _client.Patients.GetAnalytes(patientId, new GetAnalytesFilter(1)
             {
-                DepartmentId = 1,
                 ShowAbnormalDetails = true,
                 ShowHidden = true,
                 ShowTemplate = true
@@ -248,11 +239,8 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             DateTime dateOfBirth = DateTime.ParseExact(dob, "MM/dd/yyyy", CultureInfo.InvariantCulture);
 
             // Act
-            var result = await _client.Patients.EnhancedBestmatch(new EnhancedBestmatchFilter()
+            var result = await _client.Patients.EnhancedBestmatch(new EnhancedBestmatchFilter(dateOfBirth, firstName, lastName)
             {
-                DateOfBirth = dateOfBirth,
-                FirstName = firstName,
-                LastName = lastName,
                 ShowAllClaims = true,
                 ShowAllPatientDepartmentStatus = true,
                 ShowBalanceDetails = true,
@@ -297,9 +285,8 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         {
             // Arrange
             // Act
-            var result = await _client.Patients.GetPatientProblems(patientId, new GetPatientProblemsFilter()
+            var result = await _client.Patients.GetPatientProblems(patientId, new GetPatientProblemsFilter(1)
             {
-                DepartmentId = 1,
                 ShowDiagnosisInfo = true,
                 ShowInactive = true
             });
@@ -363,11 +350,8 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             DateTime dateOfBirth = DateTime.ParseExact("01/01/1982", "MM/dd/yyyy", CultureInfo.InvariantCulture);
 
             // Act
-            var result = await _client.Patients.EnhancedBestmatch(new EnhancedBestmatchFilter()
+            var result = await _client.Patients.EnhancedBestmatch(new EnhancedBestmatchFilter(dateOfBirth, "InvalidName", "InvalidName")
             {
-                DateOfBirth = dateOfBirth,
-                FirstName = "InvalidName",
-                LastName = "InvalidName",
                 ShowAllClaims = true,
                 ShowAllPatientDepartmentStatus = true,
                 ShowBalanceDetails = true,

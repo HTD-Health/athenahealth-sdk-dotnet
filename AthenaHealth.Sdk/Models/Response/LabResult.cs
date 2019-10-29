@@ -1,5 +1,6 @@
 ﻿using AthenaHealth.Sdk.Models.Converters;
 using AthenaHealth.Sdk.Models.Enums;
+using AthenaHealth.Sdk.Models.Response.Interfaces;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System;
@@ -7,15 +8,12 @@ using System.Runtime.Serialization;
 
 namespace AthenaHealth.Sdk.Models.Response
 {
-    public class LabResultResponse
+    public class LabResultResponse : IPagingResponse<LabResult>
     {
-        [JsonProperty("totalcount")]
         public int Total { get; set; }
 
-        [JsonProperty("next")]
         public string Next { get; set; }
 
-        [JsonProperty("previous")]
         public string Previous { get; set; }
 
         [JsonProperty("results")]
@@ -55,14 +53,16 @@ namespace AthenaHealth.Sdk.Models.Response
         public bool? AttachmentExists { get; set; }
 
         /// <summary>
-        /// The observation date and time associated with this lab result. Returned in mm/dd/yyyy hh24:mi:ss format.
+        /// The observation date and time associated with this lab result. Returned in mm/dd/yyyy
+        /// hh24:mi:ss format.
         /// </summary>
         [JsonProperty(PropertyName = "labresultdatetime")]
         [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy HH:mm:ss")]
         public DateTime? LabResultDateTime { get; set; }
 
         /// <summary>
-        /// Document priority, when available. 1 is high, 2 is normal. Some labs use other numbers or characters that are lab-specific.
+        /// Document priority, when available. 1 is high, 2 is normal. Some labs use other numbers or
+        /// characters that are lab-specific.
         /// </summary>
         [JsonProperty(PropertyName = "priority")]
         public string Priority { get; set; }
@@ -86,7 +86,9 @@ namespace AthenaHealth.Sdk.Models.Response
         public Analyte[] Analytes { get; set; }
 
         /// <summary>
-        /// The ID of the clinical provider associated with this clinical document. Clinical providers are a master list of providers throughout the country. These include providers as well as radiology centers, labs and pharmacies.
+        /// The ID of the clinical provider associated with this clinical document. Clinical
+        /// providers are a master list of providers throughout the country. These include providers
+        /// as well as radiology centers, labs and pharmacies.
         /// </summary>
         [JsonProperty(PropertyName = "facilityid")]
         public int? FacilityId { get; set; }
@@ -227,7 +229,8 @@ namespace AthenaHealth.Sdk.Models.Response
         public class Analyte
         {
             /// <summary>
-            /// The date and time when this observation was recorded. Returned in mm/dd/yyyy hh24:mi:ss format.
+            /// The date and time when this observation was recorded. Returned in mm/dd/yyyy
+            /// hh24:mi:ss format.
             /// </summary>
             [JsonProperty(PropertyName = "analytedatetime")]
             [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy HH:mm:ss")]

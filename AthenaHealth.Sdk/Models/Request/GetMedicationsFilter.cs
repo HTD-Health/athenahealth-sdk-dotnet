@@ -2,10 +2,7 @@
 // ReSharper disable StringLiteralTypo
 // ReSharper disable CommentTypo
 
-using AthenaHealth.Sdk.Models.Converters;
-using AthenaHealth.Sdk.Models.Enums;
 using Newtonsoft.Json;
-using System;
 
 namespace AthenaHealth.Sdk.Models.Request
 {
@@ -44,6 +41,9 @@ namespace AthenaHealth.Sdk.Models.Request
         [JsonProperty(PropertyName = "showrxnorm")]
         public bool? ShowRxNorm { get; set; }
 
-
+        public GetMedicationsFilter(int departmentId)
+        {
+            DepartmentId = departmentId;
+        }
     }
 }

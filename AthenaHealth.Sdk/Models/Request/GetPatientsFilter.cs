@@ -1,19 +1,12 @@
 ﻿using AthenaHealth.Sdk.Models.Converters;
 using AthenaHealth.Sdk.Models.Enums;
+using AthenaHealth.Sdk.Models.Request.Interfaces;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
-using System.Runtime.Serialization;
 
 namespace AthenaHealth.Sdk.Models.Request
 {
-    public class GetPatientsFilter
+    public class GetPatientsFilter : IPagingFilter
     {
-        /// <summary>
-        /// If the patient is homebound, this is true.
-        /// </summary>
-        [JsonProperty("offset")]
-        public int? Offset { get; set; }
-
         /// <summary>
         /// If present, the date on which a patient died.
         /// </summary>
@@ -830,5 +823,16 @@ namespace AthenaHealth.Sdk.Models.Request
         /// </summary>
         [JsonProperty("contactpreference_lab_phone")]
         public bool? ContactPreferenceLabPhone { get; set; }
+
+        /// <summary>
+        /// Number of entries to return (default 10, max 1000). Please note that this endpoint has a
+        /// different default and max than normal.
+        /// </summary>
+        public int? Limit { get; set; }
+
+        /// <summary>
+        /// Starting point of entries; 0-indexed
+        /// </summary>
+        public int? Offset { get; set; }
     }
 }

@@ -1,8 +1,5 @@
 ﻿using AthenaHealth.Sdk.Models.Enums;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace AthenaHealth.Sdk.Models.Request
 {
@@ -33,6 +30,9 @@ namespace AthenaHealth.Sdk.Models.Request
         [JsonProperty(PropertyName = "showunansweredquestions")]
         public bool? ShowUnansweredQuestions { get; set; }
 
-
+        public GetSocialHistoryFilter(int departmentId)
+        {
+            DepartmentId = departmentId;
+        }
     }
 }

@@ -4,12 +4,13 @@
 
 using AthenaHealth.Sdk.Models.Converters;
 using AthenaHealth.Sdk.Models.Enums;
+using AthenaHealth.Sdk.Models.Request.Interfaces;
 using Newtonsoft.Json;
 using System;
 
 namespace AthenaHealth.Sdk.Models.Request
 {
-    public class GetLabResultsFilter
+    public class GetLabResultsFilter : IPagingFilter
     {
         /// <summary>
         /// ID used to return lab results for a specific encounter.
@@ -92,13 +93,16 @@ namespace AthenaHealth.Sdk.Models.Request
         /// Number of entries to return (default 1000, max 10000). Please note that this endpoint has
         /// a different default and max than normal.
         /// </summary>
-        [JsonProperty(PropertyName = "limit")]
         public int? Limit { get; set; }
 
         /// <summary>
         /// Starting point of entries; 0-indexed
         /// </summary>
-        [JsonProperty(PropertyName = "offset")]
         public int? Offset { get; set; }
+
+        public GetLabResultsFilter(int departmentId)
+        {
+            DepartmentId = departmentId;
+        }
     }
 }

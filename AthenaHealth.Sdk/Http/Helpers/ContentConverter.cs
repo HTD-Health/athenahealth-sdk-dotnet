@@ -1,13 +1,11 @@
-﻿using Newtonsoft.Json;
+﻿using AthenaHealth.Sdk.Models.Converters;
+using Newtonsoft.Json;
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
 using System.Net.Http;
 using System.Reflection;
 using System.Text;
-using AthenaHealth.Sdk.Models.Converters;
 
 namespace AthenaHealth.Sdk.Http.Helpers
 {
@@ -52,7 +50,7 @@ namespace AthenaHealth.Sdk.Http.Helpers
                     if (stringValue == null)
                         continue;
 
-                    JsonConverterAttribute jsonConverterAttribute = item.GetCustomAttribute<JsonConverterAttribute>();
+                    JsonConverterAttribute jsonConverterAttribute = item.GetAttribute<JsonConverterAttribute>();
 
                     if (jsonConverterAttribute != null)
                     {
@@ -62,7 +60,7 @@ namespace AthenaHealth.Sdk.Http.Helpers
                             .Trim('"');
                     }
 
-                    JsonPropertyAttribute jsonPropertyAttribute = item.GetCustomAttribute<JsonPropertyAttribute>();
+                    JsonPropertyAttribute jsonPropertyAttribute = item.GetAttribute<JsonPropertyAttribute>();
 
                     string key = item.Name;
                     if (jsonPropertyAttribute != null)
@@ -75,6 +73,27 @@ namespace AthenaHealth.Sdk.Http.Helpers
             return dictionary;
         }
 
+        /// <summary>
+        /// Gets custom attribute directly from property or from implemented interface property attribute.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="property"></param>
+        /// <returns></returns>
+        private static T GetAttribute<T>(this PropertyInfo property) where T : Attribute
+        {
+            T attribute = property.GetCustomAttribute<T>(true);
 
+            if (attribute != null)
+                return attribute;
+
+            property = property.DeclaringType.GetInterfaces()
+                 .Select(x => x.GetProperty(property.Name))
+                 .FirstOrDefault();
+
+            if (property == null)
+                return null;
+
+            return property.GetCustomAttribute<T>(true);
+        }
     }
 }

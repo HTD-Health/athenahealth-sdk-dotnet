@@ -4,12 +4,12 @@
 
 using AthenaHealth.Sdk.Models.Converters;
 using AthenaHealth.Sdk.Models.Enums;
+using AthenaHealth.Sdk.Models.Request.Interfaces;
 using Newtonsoft.Json;
-using System;
 
 namespace AthenaHealth.Sdk.Models.Request
 {
-    public class GetPrescriptionsFilter
+    public class GetPrescriptionsFilter : IPagingFilter
     {
         /// <summary>
         /// The athenaNet department id.
@@ -42,7 +42,7 @@ namespace AthenaHealth.Sdk.Models.Request
         public bool? ShowDeclinedOrders { get; set; }
 
         /// <summary>
-        /// By default, deleted documents are not listed.  Set to list these.
+        /// By default, deleted documents are not listed. Set to list these.
         /// </summary>
         [JsonProperty(PropertyName = "showdeleted")]
         public bool ShowDeleted { get; set; } = false;
@@ -57,13 +57,16 @@ namespace AthenaHealth.Sdk.Models.Request
         /// <summary>
         /// Number of entries to return (default 1500, max 5000)
         /// </summary>
-        [JsonProperty(PropertyName = "limit")]
         public int? Limit { get; set; }
 
         /// <summary>
         /// Starting point of entries; 0-indexed
         /// </summary>
-        [JsonProperty(PropertyName = "offset")]
         public int? Offset { get; set; }
+
+        public GetPrescriptionsFilter(int departmentId)
+        {
+            DepartmentId = departmentId;
+        }
     }
 }

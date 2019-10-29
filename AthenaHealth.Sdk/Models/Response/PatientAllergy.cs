@@ -22,16 +22,6 @@ namespace AthenaHealth.Sdk.Models.Response
         [JsonProperty(PropertyName = "sectionnote")]
         public string SectionNote { get; set; }
 
-        [OnError]
-        internal void OnError(StreamingContext context, ErrorContext errorContext)
-        {
-            if (errorContext.Member is string property)
-            {
-                if (property == "lastupdated") // Deprecated property
-                    errorContext.Handled = true;
-            }
-        }
-
         /// <summary>
         /// Allergies
         /// </summary>
@@ -45,7 +35,8 @@ namespace AthenaHealth.Sdk.Models.Response
         public string LastModifiedBy { get; set; }
 
         /// <summary>
-        /// Whether the patient has no known drug allergies. This is an explicit statement separate from a patient with no documented allergies so far.
+        /// Whether the patient has no known drug allergies. This is an explicit statement separate
+        /// from a patient with no documented allergies so far.
         /// </summary>
         [JsonProperty(PropertyName = "nkda")]
         public bool? NoKnownDrugAllergies { get; set; }
@@ -62,6 +53,16 @@ namespace AthenaHealth.Sdk.Models.Response
         [JsonProperty(PropertyName = "notelastmodifiedby")]
         public string NoteLastModifiedBy { get; set; }
 
+        [OnError]
+        internal void OnError(StreamingContext context, ErrorContext errorContext)
+        {
+            if (errorContext.Member is string property)
+            {
+                if (property == "lastupdated") // Deprecated property
+                    errorContext.Handled = true;
+            }
+        }
+
         public class Allergy
         {
             /// <summary>
@@ -70,11 +71,11 @@ namespace AthenaHealth.Sdk.Models.Response
             [JsonProperty(PropertyName = "deactivatedate")]
             [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
             public DateTime? DeactivateDate { get; set; }
-           
+
             [JsonProperty(PropertyName = "rxnormdescription")]
             public string RxNormDescription { get; set; }
 
-             [JsonProperty(PropertyName = "rxnormcode")]
+            [JsonProperty(PropertyName = "rxnormcode")]
             public string RxNormCode { get; set; }
 
             /// <summary>
