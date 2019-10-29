@@ -99,5 +99,7 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         Task CancelCheckIn(int appointmentId);
 
         Task<InsuranceResponse> GetAppointmentInsurances(GetAppointmentInsurancesFilter filter);
+
+        Task<AppointmentReasonResponse> GetAppointmentReasons(GetAppointmentReasonsFilter filter);
     }
 }

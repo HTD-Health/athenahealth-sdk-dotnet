@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using AthenaHealth.Sdk.Clients.Interfaces;
 using AthenaHealth.Sdk.Exceptions;
 using AthenaHealth.Sdk.Models;
+using AthenaHealth.Sdk.Models.Enums;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
 using AthenaHealth.Sdk.Tests.EndToEnd.Data.Appointments;
@@ -426,9 +427,29 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             };
 
             InsuranceResponse response = await _client.Appointments.GetAppointmentInsurances(filter);
+
             response.Total.ShouldBeGreaterThan(0);
             response.Items.ShouldNotBeNull();
             response.Items.ShouldContain(a => a.InsurancePolicyHolder != null);
+        }
+
+        [Theory]
+        [InlineData(AppointmentReasonTypeEnum.All)]
+        [InlineData(AppointmentReasonTypeEnum.New)]
+        [InlineData(AppointmentReasonTypeEnum.Existing)]
+        public async Task GetAppointmentReasons_Type_ReturnsRecords(AppointmentReasonTypeEnum type)
+        {
+            GetAppointmentReasonsFilter filter = new GetAppointmentReasonsFilter(1, 86)
+            {
+                Type = type
+            };
+
+            AppointmentReasonResponse response = await _client.Appointments.GetAppointmentReasons(filter);
+
+            response.Total.ShouldBeGreaterThan(0);
+            response.Items.ShouldNotBeNull();
+            response.Items.ShouldNotContain(a => a.Id == 0);
+            response.Items.ShouldContain(a => !string.IsNullOrEmpty(a.Reason));
         }
     }
 }
