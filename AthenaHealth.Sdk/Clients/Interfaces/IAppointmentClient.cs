@@ -73,5 +73,12 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// <param name="appointmentId"></param>
         /// <returns></returns>
         Task<CheckInRequirement[]> GetCheckInRequirements(int appointmentId);
+
+        /// <summary>
+        /// Check in this appointment.
+        /// </summary>
+        /// <param name="appointmentId"></param>
+        /// <returns></returns>
+        Task CheckIn(int appointmentId);
     }
 }
