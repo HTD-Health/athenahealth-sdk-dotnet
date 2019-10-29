@@ -414,5 +414,21 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             exception.StatusCode.ShouldBe(HttpStatusCode.NotFound);
             exception.Message.ShouldContain("This appointment has already been checked in");
         }
+
+        [Theory]
+        [ClassData(typeof(GetAppointmentInsurancesData))]
+        public async Task GetAppointmentInsurances_ReturnsRecords(int appointmentId)
+        {
+            GetAppointmentInsurancesFilter filter = new GetAppointmentInsurancesFilter(appointmentId)
+            {
+                ShowCancelled = true,
+                ShowFullSsn = true
+            };
+
+            InsuranceResponse response = await _client.Appointments.GetAppointmentInsurances(filter);
+            response.Total.ShouldBeGreaterThan(0);
+            response.Items.ShouldNotBeNull();
+            response.Items.ShouldContain(a => a.InsurancePolicyHolder != null);
+        }
     }
 }

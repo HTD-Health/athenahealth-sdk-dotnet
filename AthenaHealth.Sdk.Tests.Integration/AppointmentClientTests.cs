@@ -294,5 +294,22 @@ namespace AthenaHealth.Sdk.Tests.Integration
                 => await client.CancelCheckIn(2267)
             );
         }
+
+        [Fact]
+        public async Task GetAppointmentInsurances_ReturnsRecords()
+        {
+            IAppointmentClient client = new Clients.AppointmentClient(ConnectionFactory.CreateFromFile(@"Data\Appointment\GetAppointmentInsurances.json"));
+            GetAppointmentInsurancesFilter filter = new GetAppointmentInsurancesFilter(23133)
+            {
+                ShowCancelled = true,
+                ShowFullSsn = true
+            };
+
+            InsuranceResponse response = await client.GetAppointmentInsurances(filter);
+
+            response.Total.ShouldBe(1);
+            response.Items.ShouldNotBeNull();
+            response.Items.First().InsurancePolicyHolderCountryCode.ShouldBe("");
+        }
     }
 }

@@ -1,0 +1,42 @@
+{
+  "insurances": [
+    {
+      "insurancepolicyholdercountrycode": "USA",
+      "sequencenumber": 1,
+      "insurancepolicyholderssn": "333224444",
+      "insurancepolicyholderlastname": "DOE",
+      "insuredentitytypeid": 1,
+      "insuranceidnumber": "1234",
+      "insurancepolicyholderstate": "IL",
+      "insurancepolicyholderzip": "65432",
+      "insurancepolicyholderdob": "01\/01\/1970",
+      "issuedate": "01\/01\/2018",
+      "relationshiptoinsured": "Self",
+      "eligibilitystatus": "Unverified",
+      "policynumber": "12345",
+      "expirationdate": "12\/31\/2020",
+      "insurancepolicyholderaddress1": "12345 1ST ST",
+      "insurancepackageaddress1": "PO BOX 981106",
+      "insurancepolicyholdersex": "F",
+      "eligibilityreason": "Athena",
+      "ircname": "Aetna & Aetna\/US Healthcare",
+      "insuranceplanname": "AETNA",
+      "insurancetype": "Commercial",
+      "insurancephone": "(888) 632-3862",
+      "insurancepackagestate": "TX",
+      "insurancepackagecity": "EL PASO",
+      "insurancepolicyholderaddress2": "UNIT 5",
+      "relationshiptoinsuredid": 1,
+      "insuranceid": "23133",
+      "insurancepolicyholder": "KATHY DOE",
+      "eligibilitylastchecked": "12\/31\/2018",
+      "insurancepolicyholderfirstname": "KATHY",
+      "insurancepackageid": 1352,
+      "insurancepolicyholdercountryiso3166": "US",
+      "insuranceplandisplayname": "Aetna",
+      "insurancepolicyholdercity": "OAK BROOK",
+      "insurancepackagezip": "79998-1106"
+    }
+  ],
+  "totalcount": 1
+}

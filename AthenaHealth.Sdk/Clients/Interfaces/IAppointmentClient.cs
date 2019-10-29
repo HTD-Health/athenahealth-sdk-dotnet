@@ -97,5 +97,7 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// <param name="appointmentId"></param>
         /// <returns></returns>
         Task CancelCheckIn(int appointmentId);
+
+        Task<InsuranceResponse> GetAppointmentInsurances(GetAppointmentInsurancesFilter filter);
     }
 }
