@@ -7,7 +7,7 @@ using System;
 // ReSharper disable StringLiteralTypo
 namespace AthenaHealth.Sdk.Models.Response
 {
-    public class PatientInsuranceResponse : IPagingResponse<Insurance>
+    public class InsuranceResponse : IPagingResponse<Insurance>
     {
         public int Total { get; set; }
 

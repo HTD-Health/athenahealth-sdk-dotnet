@@ -42,7 +42,7 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
 
         Task<Laboratory> GetDefaultLaboratory(int patientId, int departmentId);
 
-        Task<PatientInsuranceResponse> GetPatientInsurances(int patientId, GetPatientInsurancesFilter queryParameters);
+        Task<InsuranceResponse> GetPatientInsurances(int patientId, GetPatientInsurancesFilter queryParameters);
 
         Task<PatientEncounterResponse> GetPatientEncounters(int patientId, GetPatientEncountersFilter queryParameters);
     }

@@ -126,5 +126,10 @@ namespace AthenaHealth.Sdk.Clients
         {
             await _connection.Post<BaseResponse>($"{_connection.PracticeId}/appointments/{appointmentId}/cancelcheckin");
         }
+
+        public async Task<InsuranceResponse> GetAppointmentInsurances(GetAppointmentInsurancesFilter filter)
+        {
+            return await _connection.Get<InsuranceResponse>($"{_connection.PracticeId}/appointments/{filter.AppointmentId}/insurances", filter);
+        }
     }
 }
