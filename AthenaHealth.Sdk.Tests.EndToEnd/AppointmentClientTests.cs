@@ -372,9 +372,10 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             response.All(x => !string.IsNullOrEmpty(x.Name)).ShouldBeTrue();
         }
 
-        [Theory(Skip = "Skipped. Reason: Test execution takes ~32.55 seconds.")]
+        [Theory(Skip = "Skipped. Reason: Test execution takes ~32.55 seconds. " +
+                       "Once checkedin appointment can't be re checkedin.")]
         [ClassData(typeof(GetCheckInRequirementsData))]
-        public void CheckIn_ValidId_NotThrowsException(int appointmentId)
+        public void CompleteCheckIn_ValidId_NotThrowsException(int appointmentId)
         {
             Should.NotThrow(async ()
                 => await _client.Appointments.GetCheckInRequirements(appointmentId)
@@ -382,10 +383,32 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         }
 
         [Fact]
-        public async Task CheckIn_AlreadyCheckedIn_ThrowsException()
+        public async Task CompleteCheckIn_AlreadyCheckedIn_ThrowsException()
         {
             ApiValidationException exception = await Assert.ThrowsAsync<ApiValidationException>(() =>
-                _client.Appointments.CheckIn(2267)
+                _client.Appointments.CompleteCheckIn(2267)
+            );
+
+            exception.StatusCode.ShouldBe(HttpStatusCode.NotFound);
+            exception.Message.ShouldContain("This appointment has already been checked in");
+        }
+
+        [Fact]
+        public async Task StartCheckIn_AlreadyCheckedIn_ThrowsException()
+        {
+            ApiValidationException exception = await Assert.ThrowsAsync<ApiValidationException>(() =>
+                _client.Appointments.StartCheckIn(2267)
+            );
+
+            exception.StatusCode.ShouldBe(HttpStatusCode.NotFound);
+            exception.Message.ShouldContain("This appointment has already been checked in");
+        }
+
+        [Fact]
+        public async Task CancelCheckIn_AlreadyCheckedIn_ThrowsException()
+        {
+            ApiValidationException exception = await Assert.ThrowsAsync<ApiValidationException>(() =>
+                _client.Appointments.CancelCheckIn(2267)
             );
 
             exception.StatusCode.ShouldBe(HttpStatusCode.NotFound);

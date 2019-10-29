@@ -266,12 +266,32 @@ namespace AthenaHealth.Sdk.Tests.Integration
         }
 
         [Fact]
-        public void CheckIn_ExistingId_NotThrowsException()
+        public void CompleteCheckIn_ExistingId_NotThrowsException()
         {
             IAppointmentClient client = new Clients.AppointmentClient(ConnectionFactory.Create(@"{ ""success"": true }"));
 
             Should.NotThrow(async ()
-                => await client.CheckIn(2267)
+                => await client.CompleteCheckIn(2267)
+            );
+        }
+
+        [Fact]
+        public void StartCheckIn_ExistingId_NotThrowsException()
+        {
+            IAppointmentClient client = new Clients.AppointmentClient(ConnectionFactory.Create(@"{ ""success"": true }"));
+
+            Should.NotThrow(async ()
+                => await client.StartCheckIn(2267)
+            );
+        }
+
+        [Fact]
+        public void CancelCheckIn_ExistingId_NotThrowsException()
+        {
+            IAppointmentClient client = new Clients.AppointmentClient(ConnectionFactory.Create(@"{ ""success"": true }"));
+
+            Should.NotThrow(async ()
+                => await client.CancelCheckIn(2267)
             );
         }
     }
