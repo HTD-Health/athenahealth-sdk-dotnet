@@ -9,6 +9,7 @@ using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
 using AthenaHealth.Sdk.Tests.Integration.TestingHelpers;
 using Castle.Core.Internal;
+using Castle.DynamicProxy.Generators.Emitters.SimpleAST;
 using Shouldly;
 using Xunit;
 
@@ -262,6 +263,16 @@ namespace AthenaHealth.Sdk.Tests.Integration
             response.ShouldNotBeNull();
             response.All(x => x.Fields != null).ShouldBeTrue();
             response.All(x => !string.IsNullOrEmpty(x.Name)).ShouldBeTrue();
+        }
+
+        [Fact]
+        public void CheckIn_ExistingId_NotThrowsException()
+        {
+            IAppointmentClient client = new Clients.AppointmentClient(ConnectionFactory.Create(@"{ ""success"": true }"));
+
+            Should.NotThrow(async ()
+                => await client.CheckIn(2267)
+            );
         }
     }
 }

@@ -111,5 +111,10 @@ namespace AthenaHealth.Sdk.Clients
                 cancelRequest);
         }
         
+
+        public async Task CheckIn(int appointmentId)
+        {
+            await _connection.Post<BaseResponse>($"{_connection.PracticeId}/appointments/{appointmentId}/checkin");
+        }
     }
 }

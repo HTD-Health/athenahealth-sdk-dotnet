@@ -371,5 +371,25 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             response.All(x => x.Fields != null).ShouldBeTrue();
             response.All(x => !string.IsNullOrEmpty(x.Name)).ShouldBeTrue();
         }
+
+        [Theory(Skip = "Skipped. Reason: Test execution takes ~32.55 seconds.")]
+        [ClassData(typeof(GetCheckInRequirementsData))]
+        public void CheckIn_ValidId_NotThrowsException(int appointmentId)
+        {
+            Should.NotThrow(async ()
+                => await _client.Appointments.GetCheckInRequirements(appointmentId)
+            );
+        }
+
+        [Fact]
+        public async Task CheckIn_AlreadyCheckedIn_ThrowsException()
+        {
+            ApiValidationException exception = await Assert.ThrowsAsync<ApiValidationException>(() =>
+                _client.Appointments.CheckIn(2267)
+            );
+
+            exception.StatusCode.ShouldBe(HttpStatusCode.NotFound);
+            exception.Message.ShouldContain("This appointment has already been checked in");
+        }
     }
 }
