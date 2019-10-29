@@ -75,10 +75,27 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         Task<CheckInRequirement[]> GetCheckInRequirements(int appointmentId);
 
         /// <summary>
-        /// Check in this appointment.
+        /// Completes the check in process for this appointment.
+        /// Can NOT be called after <see cref="CancelCheckIn"/>.
         /// </summary>
         /// <param name="appointmentId"></param>
         /// <returns></returns>
-        Task CheckIn(int appointmentId);
+        Task CompleteCheckIn(int appointmentId);
+
+        /// <summary>
+        /// The check-in process was started.
+        /// </summary>
+        /// <param name="appointmentId"></param>
+        /// <returns></returns>
+        Task StartCheckIn(int appointmentId);
+
+        /// <summary>
+        /// Note that the check-in process was stopped and/or canceled.
+        /// Likely called after <see cref="StartCheckIn(int)"/>.
+        /// Can NOT be called after <see cref="CompleteCheckIn"/>.
+        /// </summary>
+        /// <param name="appointmentId"></param>
+        /// <returns></returns>
+        Task CancelCheckIn(int appointmentId);
     }
 }
