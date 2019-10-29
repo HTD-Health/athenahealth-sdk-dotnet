@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+using AthenaHealth.Sdk.Clients.Interfaces;
 using AthenaHealth.Sdk.Exceptions;
 using AthenaHealth.Sdk.Models;
 using AthenaHealth.Sdk.Models.Request;
@@ -202,7 +203,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         }
 
         [Theory]
-        [ClassData(typeof(ReminderGetByIdData))]
+        [ClassData(typeof(GetReminderByIdData))]
         public async Task GetReminderById_ValidId_ReturnsRecord(int appointmentReminderId)
         {
             AppointmentReminder response = await _client.Appointments.GetReminderById(appointmentReminderId);
@@ -357,6 +358,18 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             CancelAppointment cancelRequest = new CancelAppointment(appointmentId, patientId, "test");
 
             Should.NotThrow(() => _client.Appointments.CancelAppointment(cancelRequest));
+        }
+
+        [Theory]
+        [ClassData(typeof(GetCheckInRequirementsData))]
+        public async Task GetCheckInRequirements_ValidId_ReturnsRecord(int appointmentId)
+        {
+            CheckInRequirement[] response = 
+                await _client.Appointments.GetCheckInRequirements(appointmentId);
+
+            response.ShouldNotBeNull();
+            response.All(x => x.Fields != null).ShouldBeTrue();
+            response.All(x => !string.IsNullOrEmpty(x.Name)).ShouldBeTrue();
         }
     }
 }

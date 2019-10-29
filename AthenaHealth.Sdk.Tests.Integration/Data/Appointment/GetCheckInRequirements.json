@@ -1,0 +1,129 @@
+[
+  {
+    "fields": {
+      "status": "Before Check In"
+    },
+    "required": false,
+    "name": "Check In",
+    "complete": true
+  },
+  {
+    "fields": [
+      {
+        "valid": true,
+        "field": "dob"
+      },
+      {
+        "valid": true,
+        "field": "sex"
+      },
+      {
+        "valid": true,
+        "field": "address1"
+      },
+      {
+        "valid": true,
+        "field": "zip"
+      },
+      {
+        "valid": true,
+        "field": "city"
+      },
+      {
+        "error": "A State is required.",
+        "valid": false,
+        "field": "state"
+      },
+      {
+        "error": "A home phone number is required.",
+        "valid": false,
+        "field": "homephone"
+      },
+      {
+        "valid": true,
+        "field": "primarydepartmentid"
+      },
+      {
+        "valid": true,
+        "field": "maritalstatus"
+      },
+      {
+        "valid": true,
+        "field": "primaryproviderid"
+      },
+      {
+        "error": "An email is required.",
+        "valid": false,
+        "field": "email"
+      },
+      {
+        "error": "Documenting the patient's ethnicity is required to satisfy Meaningful Use.",
+        "valid": false,
+        "field": "ethnicitycode"
+      },
+      {
+        "error": "Documenting the patient's language is required to satisfy Meaningful Use.",
+        "valid": false,
+        "field": "language6392code"
+      },
+      {
+        "valid": true,
+        "field": "raceid"
+      },
+      {
+        "error": "A mobile phone number is required.",
+        "valid": false,
+        "field": "mobilephone"
+      },
+      {
+        "valid": true,
+        "field": "firstname"
+      },
+      {
+        "valid": true,
+        "field": "lastname"
+      },
+      {
+        "valid": true,
+        "field": "ssn"
+      }
+    ],
+    "required": true,
+    "name": "Demographics",
+    "complete": true
+  },
+  {
+    "fields": [
+      {}
+    ],
+    "required": true,
+    "name": "Insurance",
+    "complete": true
+  },
+  {
+    "fields": [
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {}
+    ],
+    "required": false,
+    "name": "Health History Forms",
+    "complete": false
+  },
+  {
+    "fields": [
+      {
+        "status": "Incomplete",
+        "formname": "Privacy Notice, Release of Billing Information and Assignment of Benefits"
+      }
+    ],
+    "required": false,
+    "name": "Privacy and Consent Forms",
+    "complete": false
+  }
+]

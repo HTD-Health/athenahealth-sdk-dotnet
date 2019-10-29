@@ -43,15 +43,15 @@ namespace AthenaHealth.Sdk.Clients
 
         public async Task<AppointmentNotesResponse> GetNotes(int appointmentId, bool showDeleted = false)
         {
-           return await _connection.Get<AppointmentNotesResponse>($"{_connection.PracticeId}/appointments/{appointmentId}/notes", showDeleted);
+            return await _connection.Get<AppointmentNotesResponse>($"{_connection.PracticeId}/appointments/{appointmentId}/notes", showDeleted);
         }
 
         public async Task CreateNote(int appointmentId, string text, bool displayOnSchedule = false)
         {
             await _connection.Post<BaseResponse>(
-                $"{_connection.PracticeId}/appointments/{appointmentId}/notes", 
-                null, 
-                new { notetext = text, displayonschedule = displayOnSchedule});
+                $"{_connection.PracticeId}/appointments/{appointmentId}/notes",
+                null,
+                new { notetext = text, displayonschedule = displayOnSchedule });
         }
 
         public async Task<AppointmentRemindersResponse> SearchReminders(SearchAppointmentRemindersFilter filter)
@@ -88,9 +88,13 @@ namespace AthenaHealth.Sdk.Clients
 
         public async Task<AppointmentSlotCreationResponse> CreateAppointmentSlot(CreateAppointmentSlot slot)
         {
-            return await _connection.Post<AppointmentSlotCreationResponse>(
-                $"{_connection.PracticeId}/appointments/open",null, slot);
-        } 
+            return await _connection.Post<AppointmentSlotCreationResponse>($"{_connection.PracticeId}/appointments/open", null, slot);
+        }
+
+        public async Task<CheckInRequirement[]> GetCheckInRequirements(int appointmentId)
+        {
+            return await _connection.Get<CheckInRequirement[]>($"{_connection.PracticeId}/appointments/{appointmentId}/checkin");
+        }
 
         public async Task<Appointment> BookAppointment(BookAppointment booking)
         {

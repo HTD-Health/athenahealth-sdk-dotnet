@@ -251,5 +251,17 @@ namespace AthenaHealth.Sdk.Tests.Integration
 
             Should.NotThrow(() => client.CancelAppointment(cancelRequest));
         }
+
+        [Fact]
+        public async Task GetCheckInRequirements_ExistingId_ReturnsRecords()
+        {
+            IAppointmentClient client = new Clients.AppointmentClient(ConnectionFactory.CreateFromFile(@"Data\Appointment\GetCheckInRequirements.json"));
+
+            var response = await client.GetCheckInRequirements(1313);
+
+            response.ShouldNotBeNull();
+            response.All(x => x.Fields != null).ShouldBeTrue();
+            response.All(x => !string.IsNullOrEmpty(x.Name)).ShouldBeTrue();
+        }
     }
 }
