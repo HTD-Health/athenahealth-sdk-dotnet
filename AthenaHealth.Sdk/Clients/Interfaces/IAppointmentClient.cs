@@ -66,5 +66,12 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         Task<Appointment> BookAppointment(BookAppointment booking);
 
         Task CancelAppointment(CancelAppointment cancelRequest);
+
+        /// <summary>
+        /// Returns the list of conditions required before check-in.
+        /// </summary>
+        /// <param name="appointmentId"></param>
+        /// <returns></returns>
+        Task<CheckInRequirement[]> GetCheckInRequirements(int appointmentId);
     }
 }

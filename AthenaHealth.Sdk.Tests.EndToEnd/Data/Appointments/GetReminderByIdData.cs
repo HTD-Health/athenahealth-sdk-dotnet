@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace AthenaHealth.Sdk.Tests.EndToEnd.Data.Appointments
 {
-    public class ReminderGetByIdData : IEnumerable<object[]>
+    public class GetReminderByIdData : IEnumerable<object[]>
     {
         public IEnumerator<object[]> GetEnumerator()
         {
