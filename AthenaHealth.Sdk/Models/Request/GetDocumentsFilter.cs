@@ -1,11 +1,12 @@
 ﻿using AthenaHealth.Sdk.Models.Enums;
+using AthenaHealth.Sdk.Models.Request.Interfaces;
 using Newtonsoft.Json;
 
 // ReSharper disable StringLiteralTypo
 // ReSharper disable CommentTypo
 namespace AthenaHealth.Sdk.Models.Request
 {
-    public class GetDocumentsFilter
+    public class GetDocumentsFilter : IPagingFilter
     {
         /// <summary>
         /// The athenaNet department id.
@@ -53,13 +54,16 @@ namespace AthenaHealth.Sdk.Models.Request
         /// Number of entries to return (default 1000, max 10000). Please note that this endpoint has
         /// a different default and max than normal.
         /// </summary>
-        [JsonProperty(PropertyName = "limit")]
         public int? Limit { get; set; }
 
         /// <summary>
         /// Starting point of entries; 0-indexed
         /// </summary>
-        [JsonProperty(PropertyName = "offset")]
         public int? Offset { get; set; }
+
+        public GetDocumentsFilter(int departmentId)
+        {
+            DepartmentId = departmentId;
+        }
     }
 }

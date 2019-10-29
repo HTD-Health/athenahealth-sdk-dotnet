@@ -1,7 +1,6 @@
 ﻿using AthenaHealth.Sdk.Models.Converters;
 using Newtonsoft.Json;
 using System;
-using System.ComponentModel.DataAnnotations;
 
 namespace AthenaHealth.Sdk.Models.Request
 {
@@ -10,7 +9,6 @@ namespace AthenaHealth.Sdk.Models.Request
         /// <summary>
         /// Patient's DOB (mm/dd/yyyy).
         /// </summary>
-        [Required]
         [JsonProperty("dob")]
         [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
         public DateTime DateOfBirth { get; set; }
@@ -18,14 +16,12 @@ namespace AthenaHealth.Sdk.Models.Request
         /// <summary>
         /// Patient's first name.
         /// </summary>
-        [Required]
         [JsonProperty("firstname")]
         public string FirstName { get; set; }
 
         /// <summary>
         /// Patient's last name.
         /// </summary>
-        [Required]
         [JsonProperty("lastname")]
         public string LastName { get; set; }
 
@@ -188,5 +184,12 @@ namespace AthenaHealth.Sdk.Models.Request
         /// </summary>
         [JsonProperty("zip")]
         public string Zip { get; set; }
+
+        public EnhancedBestmatchFilter(DateTime dateOfBirth, string firstName, string lastName)
+        {
+            DateOfBirth = dateOfBirth;
+            FirstName = firstName;
+            LastName = lastName;
+        }
     }
 }

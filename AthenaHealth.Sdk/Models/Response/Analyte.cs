@@ -1,5 +1,6 @@
 ﻿using AthenaHealth.Sdk.Models.Converters;
 using AthenaHealth.Sdk.Models.Enums;
+using AthenaHealth.Sdk.Models.Response.Interfaces;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System;
@@ -7,15 +8,12 @@ using System.Runtime.Serialization;
 
 namespace AthenaHealth.Sdk.Models.Response
 {
-    public class AnalyteResponse
+    public class AnalyteResponse : IPagingResponse<Analyte>
     {
-        [JsonProperty("totalcount")]
         public int Total { get; set; }
 
-        [JsonProperty("next")]
         public string Next { get; set; }
 
-        [JsonProperty("previous")]
         public string Previous { get; set; }
 
         [JsonProperty("analytes")]

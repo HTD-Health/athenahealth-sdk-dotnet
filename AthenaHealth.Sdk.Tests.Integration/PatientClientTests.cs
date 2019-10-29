@@ -18,9 +18,8 @@ namespace AthenaHealth.Sdk.Tests.Integration
         {
             // Arrange
             var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetDocuments.json"));
-            var queryParameters = new GetDocumentsFilter()
+            var queryParameters = new GetDocumentsFilter(1)
             {
-                DepartmentId = 1,
                 ShowDeleted = true,
                 ShowDeclinedOrders = true
             };
@@ -38,9 +37,8 @@ namespace AthenaHealth.Sdk.Tests.Integration
         {
             // Arrange
             var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"detailedmessage\":\"The specified patient does not exist in that department.\",\"error\":\"The specified patient does not exist in that department.\"}", HttpStatusCode.BadRequest));
-            var queryParameters = new GetDocumentsFilter()
+            var queryParameters = new GetDocumentsFilter(2)
             {
-                DepartmentId = 2,
                 ShowDeleted = true,
                 ShowDeclinedOrders = true
             };
@@ -111,9 +109,8 @@ namespace AthenaHealth.Sdk.Tests.Integration
         {
             // Arrange
             var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetPatientEncounters.json"));
-            var queryParameters = new GetPatientEncountersFilter()
+            var queryParameters = new GetPatientEncountersFilter(1)
             {
-                DepartmentId = 1,
                 ShowDiagnoses = true,
                 ShowAllStatuses = true,
                 ShowAllTypes = true
@@ -132,9 +129,8 @@ namespace AthenaHealth.Sdk.Tests.Integration
         {
             // Arrange
             var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"detailedmessage\":\"The specified patient does not exist in that department.\",\"error\":\"The specified patient does not exist in that department.\"}", HttpStatusCode.BadRequest));
-            var queryParameters = new GetPatientEncountersFilter()
+            var queryParameters = new GetPatientEncountersFilter(2)
             {
-                DepartmentId = 2,
                 ShowDiagnoses = true,
                 ShowAllStatuses = true,
                 ShowAllTypes = true
@@ -181,10 +177,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         {
             // Arrange
             var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetMedications.json"));
-            var queryParameters = new GetMedicationsFilter()
-            {
-                DepartmentId = 1
-            };
+            var queryParameters = new GetMedicationsFilter(1);
 
             // Act
             var result = await patientClient.GetMedications(1, queryParameters);
@@ -199,10 +192,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         {
             // Arrange
             var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"detailedmessage\":\"The specified patient does not exist in that department.\",\"error\":\"The specified patient does not exist in that department.\"}", HttpStatusCode.BadRequest));
-            var queryParameters = new GetMedicationsFilter()
-            {
-                DepartmentId = 1
-            };
+            var queryParameters = new GetMedicationsFilter(1);
 
             // Act
             ApiException exception = Should.Throw<ApiException>(async () => await patientClient.GetMedications(1, queryParameters));
@@ -216,9 +206,8 @@ namespace AthenaHealth.Sdk.Tests.Integration
         {
             // Arrange
             var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetSocialHistory.json"));
-            var queryParameters = new GetSocialHistoryFilter()
+            var queryParameters = new GetSocialHistoryFilter(1)
             {
-                DepartmentId = 1,
                 ShowUnansweredQuestions = true,
                 ShowNotPerformedQuestions = true
             };
@@ -236,9 +225,8 @@ namespace AthenaHealth.Sdk.Tests.Integration
         {
             // Arrange
             var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"detailedmessage\":\"The specified patient does not exist in that department.\",\"error\":\"The specified patient does not exist in that department.\"}", HttpStatusCode.BadRequest));
-            var queryParameters = new GetSocialHistoryFilter()
+            var queryParameters = new GetSocialHistoryFilter(2)
             {
-                DepartmentId = 2,
                 ShowUnansweredQuestions = true,
                 ShowNotPerformedQuestions = true
             };
@@ -255,9 +243,8 @@ namespace AthenaHealth.Sdk.Tests.Integration
         {
             // Arrange
             var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetAnalytes.json"));
-            var queryParameters = new GetAnalytesFilter()
+            var queryParameters = new GetAnalytesFilter(1)
             {
-                DepartmentId = 1,
                 ShowAbnormalDetails = true,
                 ShowHidden = true,
                 ShowTemplate = true
@@ -276,9 +263,8 @@ namespace AthenaHealth.Sdk.Tests.Integration
         {
             // Arrange
             var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"detailedmessage\":\"The specified patient does not exist in that department.\",\"error\":\"The specified patient does not exist in that department.\"}", HttpStatusCode.BadRequest));
-            var queryParameters = new GetAnalytesFilter()
+            var queryParameters = new GetAnalytesFilter(2)
             {
-                DepartmentId = 2,
                 ShowAbnormalDetails = true,
                 ShowHidden = true,
                 ShowTemplate = true
@@ -323,9 +309,8 @@ namespace AthenaHealth.Sdk.Tests.Integration
         {
             // Arrange
             var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetPrescriptions.json"));
-            var queryParameters = new GetPrescriptionsFilter()
+            var queryParameters = new GetPrescriptionsFilter(1)
             {
-                DepartmentId = 1,
                 ShowDeleted = true,
                 ShowDeclinedOrders = true
             };
@@ -343,9 +328,8 @@ namespace AthenaHealth.Sdk.Tests.Integration
         {
             // Arrange
             var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"detailedmessage\":\"The specified patient does not exist in that department.\",\"error\":\"The specified patient does not exist in that department.\"}", HttpStatusCode.BadRequest));
-            var queryParameters = new GetPrescriptionsFilter()
+            var queryParameters = new GetPrescriptionsFilter(2)
             {
-                DepartmentId = 2,
                 ShowDeleted = true,
                 ShowDeclinedOrders = true
             };
@@ -362,9 +346,8 @@ namespace AthenaHealth.Sdk.Tests.Integration
         {
             // Arrange
             var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetLabResults.json"));
-            var queryParameters = new GetLabResultsFilter()
+            var queryParameters = new GetLabResultsFilter(1)
             {
-                DepartmentId = 1,
                 ShowAbnormalDetails = true,
                 ShowHidden = true,
                 ShowTemplate = true
@@ -383,9 +366,8 @@ namespace AthenaHealth.Sdk.Tests.Integration
         {
             // Arrange
             var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"error\":\"The Patient ID or Department ID is invalid.\"}", HttpStatusCode.NotFound));
-            var queryParameters = new GetLabResultsFilter()
+            var queryParameters = new GetLabResultsFilter(2)
             {
-                DepartmentId = 2,
                 ShowAbnormalDetails = true,
                 ShowHidden = true,
                 ShowTemplate = true
@@ -403,9 +385,8 @@ namespace AthenaHealth.Sdk.Tests.Integration
         {
             // Arrange
             var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetPatientProblems.json"));
-            var queryParameters = new GetPatientProblemsFilter()
+            var queryParameters = new GetPatientProblemsFilter(1)
             {
-                DepartmentId = 1,
                 ShowDiagnosisInfo = true,
                 ShowInactive = true
             };
@@ -423,9 +404,8 @@ namespace AthenaHealth.Sdk.Tests.Integration
         {
             // Arrange
             var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"error\":\"Invalid departmentid or departmentid / patientid combination.\"}", HttpStatusCode.BadRequest));
-            var queryParameters = new GetPatientProblemsFilter()
+            var queryParameters = new GetPatientProblemsFilter(2)
             {
-                DepartmentId = 2,
                 ShowDiagnosisInfo = true,
                 ShowInactive = true
             };
@@ -506,11 +486,8 @@ namespace AthenaHealth.Sdk.Tests.Integration
         {
             // Arrange
             var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\EnhancedBestmatch.json"));
-            var queryParameters = new EnhancedBestmatchFilter()
+            var queryParameters = new EnhancedBestmatchFilter(new DateTime(1989, 09, 07), "Peter", "Tots")
             {
-                DateOfBirth = new DateTime(1989, 09, 07),
-                FirstName = "Peter",
-                LastName = "Tots",
                 ShowAllClaims = true,
                 ShowAllPatientDepartmentStatus = true,
                 ShowBalanceDetails = true,
@@ -535,11 +512,8 @@ namespace AthenaHealth.Sdk.Tests.Integration
         {
             // Arrange
             var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("[]"));
-            var queryParameters = new EnhancedBestmatchFilter()
+            var queryParameters = new EnhancedBestmatchFilter(new DateTime(1989, 09, 07), "Peter", "Tots")
             {
-                DateOfBirth = new DateTime(1989, 09, 07),
-                FirstName = "Peter",
-                LastName = "Tots",
                 ShowAllClaims = true,
                 ShowAllPatientDepartmentStatus = true,
                 ShowBalanceDetails = true,
@@ -564,11 +538,8 @@ namespace AthenaHealth.Sdk.Tests.Integration
         {
             // Arrange
             var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\EnhancedBestmatch_InvalidDateOfBirthFormat.json", HttpStatusCode.BadRequest));
-            var queryParameters = new EnhancedBestmatchFilter()
+            var queryParameters = new EnhancedBestmatchFilter(new DateTime(01, 09, 07), "Peter", "Tots")
             {
-                DateOfBirth = new DateTime(01, 09, 07),
-                FirstName = "Peter",
-                LastName = "Tots",
                 ShowAllClaims = true,
                 ShowAllPatientDepartmentStatus = true,
                 ShowBalanceDetails = true,
@@ -592,10 +563,8 @@ namespace AthenaHealth.Sdk.Tests.Integration
         {
             // Arrange
             var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\EnhancedBestmatch_MissingFields.json", HttpStatusCode.BadRequest));
-            var queryParameters = new EnhancedBestmatchFilter()
+            var queryParameters = new EnhancedBestmatchFilter(new DateTime(1989, 09, 07), "", "Tots")
             {
-                DateOfBirth = new DateTime(1989, 09, 07),
-                LastName = "Tots",
                 ShowAllClaims = true,
                 ShowAllPatientDepartmentStatus = true,
                 ShowBalanceDetails = true,

@@ -1,11 +1,24 @@
-﻿using System;
-using AthenaHealth.Sdk.Models.Converters;
+﻿using AthenaHealth.Sdk.Models.Converters;
 using AthenaHealth.Sdk.Models.Enums;
+using AthenaHealth.Sdk.Models.Response.Interfaces;
 using Newtonsoft.Json;
-// ReSharper disable StringLiteralTypo
+using System;
 
+// ReSharper disable StringLiteralTypo
 namespace AthenaHealth.Sdk.Models.Response
 {
+    public class PatientInsuranceResponse : IPagingResponse<Insurance>
+    {
+        public int Total { get; set; }
+
+        public string Next { get; set; }
+
+        public string Previous { get; set; }
+
+        [JsonProperty("insurances")]
+        public Insurance[] Items { get; set; }
+    }
+
     public class Insurance
     {
         [JsonProperty("id")]
@@ -73,8 +86,8 @@ namespace AthenaHealth.Sdk.Models.Response
         public string InsurancePolicyHolderAddress2 { get; set; }
 
         /// <summary>
-        /// CASE POLICY FIELD - Date of the injury. Required for auto insurance, legal, and
-        /// worker's comp case policies.
+        /// CASE POLICY FIELD - Date of the injury. Required for auto insurance, legal, and worker's
+        /// comp case policies.
         /// </summary>
         [JsonProperty("caseinjurydate")]
         public string CaseInjuryDate { get; set; }
@@ -111,29 +124,28 @@ namespace AthenaHealth.Sdk.Models.Response
         public SexEnum? InsurancePolicyHolderSex { get; set; }
 
         /// <summary>
-        /// 1 = primary, 2 = secondary, 3 = tertiary, etc. Must have a primary before a secondary
-        /// and a secondary before a tertiary, etc.
+        /// 1 = primary, 2 = secondary, 3 = tertiary, etc. Must have a primary before a secondary and
+        /// a secondary before a tertiary, etc.
         /// </summary>
         [JsonProperty("sequencenumber")]
         public int? SequenceNumber { get; set; }
 
         /// <summary>
-        /// CASE POLICY FIELD - First name of the adjuster on this case policy. Only available
-        /// for auto insurance or worker's comp case policies.
+        /// CASE POLICY FIELD - First name of the adjuster on this case policy. Only available for
+        /// auto insurance or worker's comp case policies.
         /// </summary>
         [JsonProperty("adjusterfirstname")]
         public string AdjusterFirstName { get; set; }
 
         /// <summary>
-        /// CASE POLICY FIELD - Boolean field indicating if another party was responsible for
-        /// this accident.
+        /// CASE POLICY FIELD - Boolean field indicating if another party was responsible for this accident.
         /// </summary>
         [JsonProperty("anotherpartyresponsible")]
         public bool? AnotherPartyResponsible { get; set; }
 
         /// <summary>
-        /// CASE POLICY FIELD - A description of the injury. Only available for auto insurance
-        /// and worker's comp case policies.
+        /// CASE POLICY FIELD - A description of the injury. Only available for auto insurance and
+        /// worker's comp case policies.
         /// </summary>
         [JsonProperty("descriptionofinjury")]
         public string DescriptionOfInjury { get; set; }
@@ -151,8 +163,8 @@ namespace AthenaHealth.Sdk.Models.Response
         public string ICD10Codes { get; set; }
 
         /// <summary>
-        /// CASE POLICY FIELD - A list of ICD9 accepted diagnosis codes. Only available for
-        /// worker's comp case policies.
+        /// CASE POLICY FIELD - A list of ICD9 accepted diagnosis codes. Only available for worker's
+        /// comp case policies.
         /// </summary>
         [JsonProperty("icd9codes")]
         public string ICD9Codes { get; set; }
@@ -251,15 +263,15 @@ namespace AthenaHealth.Sdk.Models.Response
         public string RelationshipToInsured { get; set; }
 
         /// <summary>
-        /// CASE POLICY FIELD - Two-letter state abbreviation for the state this injury was
-        /// reported in. Only available for worker's comp case policies.
+        /// CASE POLICY FIELD - Two-letter state abbreviation for the state this injury was reported
+        /// in. Only available for worker's comp case policies.
         /// </summary>
         [JsonProperty("stateofreportedinjury")]
         public string StateOfReportedInjury { get; set; }
 
         /// <summary>
-        /// CASE POLICY FIELD - Boolean field indicating whether this case policy is related to
-        /// an auto accident.
+        /// CASE POLICY FIELD - Boolean field indicating whether this case policy is related to an
+        /// auto accident.
         /// </summary>
         [JsonProperty("relatedtoautoaccident")]
         public bool? RelatedToAutoAccident { get; set; }
@@ -277,8 +289,8 @@ namespace AthenaHealth.Sdk.Models.Response
         public string InsuranceIdNumber { get; set; }
 
         /// <summary>
-        /// CASE POLICY FIELD - Phone number/other contact info for the adjuster on this case
-        /// policy. Only available for auto insurance or worker's comp case policies.
+        /// CASE POLICY FIELD - Phone number/other contact info for the adjuster on this case policy.
+        /// Only available for auto insurance or worker's comp case policies.
         /// </summary>
         [JsonProperty("adjusterphone")]
         public string AdjusterPhone { get; set; }
@@ -302,8 +314,8 @@ namespace AthenaHealth.Sdk.Models.Response
         public int? CcmStatusId { get; set; }
 
         /// <summary>
-        /// The coinsurance percentage for this insurance. If you've just POSTed a new insurance
-        /// you will have to wait for the auto eligbility check before this field populates.
+        /// The coinsurance percentage for this insurance. If you've just POSTed a new insurance you
+        /// will have to wait for the auto eligbility check before this field populates.
         /// </summary>
         [JsonProperty("coinsurancepercent")]
         public decimal? CoinsurancePercent { get; set; }
@@ -321,8 +333,8 @@ namespace AthenaHealth.Sdk.Models.Response
         public int? InsuredPrimaryCarePhisicanNationalProviderId { get; set; }
 
         /// <summary>
-        /// CASE POLICY FIELD - Text field for describing the injured body part. Only available
-        /// for auto insurance and worker's comp case policies.
+        /// CASE POLICY FIELD - Text field for describing the injured body part. Only available for
+        /// auto insurance and worker's comp case policies.
         /// </summary>
         [JsonProperty("injuredbodypart")]
         public string InjuredBodyPart { get; set; }
@@ -343,8 +355,8 @@ namespace AthenaHealth.Sdk.Models.Response
         public string InsurancePackageAddress2 { get; set; }
 
         /// <summary>
-        /// CASE POLICY FIELD - Two-letter abbreviation for the state in which the auto accident
-        /// took place. Only meaningful for auto insurance case policies.
+        /// CASE POLICY FIELD - Two-letter abbreviation for the state in which the auto accident took
+        /// place. Only meaningful for auto insurance case policies.
         /// </summary>
         [JsonProperty("autoaccidentstate")]
         public string AutoAccidentState { get; set; }
@@ -400,8 +412,7 @@ namespace AthenaHealth.Sdk.Models.Response
         public string CasePolicyTypeName { get; set; }
 
         /// <summary>
-        /// CASE POLICY FIELD - Phone number for the repricer. Only available for worker's comp
-        /// case policies.
+        /// CASE POLICY FIELD - Phone number for the repricer. Only available for worker's comp case policies.
         /// </summary>
         [JsonProperty("repricerphone")]
         public string RepricerPhone { get; set; }
@@ -431,16 +442,16 @@ namespace AthenaHealth.Sdk.Models.Response
         public string EligibilityStatus { get; set; }
 
         /// <summary>
-        /// CASE POLICY FIELD - Boolean field indicating whether this case policy is related to
-        /// the patient's employer.
+        /// CASE POLICY FIELD - Boolean field indicating whether this case policy is related to the
+        /// patient's employer.
         /// </summary>
         [JsonProperty("relatedtoemployment")]
         public bool? RelatedToEmployment { get; set; }
 
         /// <summary>
-        /// The phone number for the insurance company. Note: This defaults to the insurance
-        /// package phone number. If this is set, it will override it. Likewise if blanked out,
-        /// it will go back to default.
+        /// The phone number for the insurance company. Note: This defaults to the insurance package
+        /// phone number. If this is set, it will override it. Likewise if blanked out, it will go
+        /// back to default.
         /// </summary>
         [JsonProperty("insurancephone")]
         public string InsurancePhone { get; set; }

@@ -1,18 +1,16 @@
-﻿using Newtonsoft.Json;
+﻿using AthenaHealth.Sdk.Models.Response.Interfaces;
+using Newtonsoft.Json;
 
 // ReSharper disable StringLiteralTypo
 // ReSharper disable CommentTypo
 namespace AthenaHealth.Sdk.Models.Response
 {
-    public class DocumentResponse
+    public class DocumentResponse : IPagingResponse<Document>
     {
-        [JsonProperty("totalcount")]
         public int Total { get; set; }
 
-        [JsonProperty("next")]
         public string Next { get; set; }
 
-        [JsonProperty("previous")]
         public string Previous { get; set; }
 
         [JsonProperty("documents")]
@@ -82,7 +80,8 @@ namespace AthenaHealth.Sdk.Models.Response
         public int? TieToOrderId { get; set; }
 
         /// <summary>
-        /// ID for the document. Note that in documents/{documentclass} calls, this will become an ID named after the document class (e.g. rtoid or letterid).
+        /// ID for the document. Note that in documents/{documentclass} calls, this will become an ID
+        /// named after the document class (e.g. rtoid or letterid).
         /// </summary>
         [JsonProperty(PropertyName = "documentid")]
         public string DocumentId { get; set; }
@@ -382,7 +381,8 @@ namespace AthenaHealth.Sdk.Models.Response
         public string InternalNote { get; set; }
 
         /// <summary>
-        /// Explains method by which the document was entered into the AthenaNet (INTERFACE (digital), FAX, etc.)
+        /// Explains method by which the document was entered into the AthenaNet (INTERFACE
+        /// (digital), FAX, etc.)
         /// </summary>
         [JsonProperty(PropertyName = "documentroute")]
         public string DocumentRoute { get; set; }
@@ -400,13 +400,11 @@ namespace AthenaHealth.Sdk.Models.Response
         public string ReceiverNote { get; set; }
 
         /// <summary>
-        /// 
         /// </summary>
         [JsonProperty(PropertyName = "declinedreasontext")]
         public string DeclinedReasonText { get; set; }
 
         /// <summary>
-        /// 
         /// </summary>
         [JsonProperty(PropertyName = "declinedreason")]
         public DeclinedReason[] DeclinedReasons { get; set; }
@@ -414,19 +412,16 @@ namespace AthenaHealth.Sdk.Models.Response
         public class DeclinedReason
         {
             /// <summary>
-            /// 
             /// </summary>
             [JsonProperty(PropertyName = "code")]
             public string Code { get; set; }
 
             /// <summary>
-            /// 
             /// </summary>
             [JsonProperty(PropertyName = "codeset")]
             public string Codeset { get; set; }
 
             /// <summary>
-            /// 
             /// </summary>
             [JsonProperty(PropertyName = "description")]
             public string Description { get; set; }

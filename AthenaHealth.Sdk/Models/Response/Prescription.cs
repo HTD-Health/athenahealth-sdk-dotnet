@@ -1,17 +1,15 @@
 ﻿using AthenaHealth.Sdk.Models.Enums;
+using AthenaHealth.Sdk.Models.Response.Interfaces;
 using Newtonsoft.Json;
 
 namespace AthenaHealth.Sdk.Models.Response
 {
-    public class PrescriptionResponse
+    public class PrescriptionResponse : IPagingResponse<Prescription>
     {
-        [JsonProperty("totalcount")]
         public int Total { get; set; }
 
-        [JsonProperty("next")]
         public string Next { get; set; }
 
-        [JsonProperty("previous")]
         public string Previous { get; set; }
 
         [JsonProperty("prescriptions")]
@@ -87,7 +85,8 @@ namespace AthenaHealth.Sdk.Models.Response
         public string DocumentDescription { get; set; }
 
         /// <summary>
-        /// Explains method by which the document was entered into the AthenaNet (INTERFACE (digital), FAX, etc.)
+        /// Explains method by which the document was entered into the AthenaNet (INTERFACE
+        /// (digital), FAX, etc.)
         /// </summary>
         [JsonProperty(PropertyName = "documentroute")]
         public string DocumentRoute { get; set; }
@@ -111,7 +110,8 @@ namespace AthenaHealth.Sdk.Models.Response
         public int? EncounterId { get; set; }
 
         /// <summary>
-        /// Document priority, when available. 1 is high, 2 is normal. Some labs use other numbers or characters that are lab-specific.
+        /// Document priority, when available. 1 is high, 2 is normal. Some labs use other numbers or
+        /// characters that are lab-specific.
         /// </summary>
         [JsonProperty(PropertyName = "priority")]
         public string Priority { get; set; }
@@ -129,7 +129,8 @@ namespace AthenaHealth.Sdk.Models.Response
         public string Subject { get; set; }
 
         /// <summary>
-        /// List of codes indicating why the order was not given. If this field is not present, the order was not declined. If the array is empty, no reason has been chosen.
+        /// List of codes indicating why the order was not given. If this field is not present, the
+        /// order was not declined. If the array is empty, no reason has been chosen.
         /// </summary>
         [JsonProperty(PropertyName = "declinedreason")]
         public Reason[] DeclinedReason { get; set; }
@@ -171,7 +172,6 @@ namespace AthenaHealth.Sdk.Models.Response
         public int? DocumentTypeId { get; set; }
 
         /// <summary>
-        /// 
         /// </summary>
         [JsonProperty(PropertyName = "observationdate")]
         public string ObservationDate { get; set; }
@@ -189,7 +189,7 @@ namespace AthenaHealth.Sdk.Models.Response
         public string DocumentClass { get; set; }
 
         /// <summary>
-        /// Ordering Mode for a prescription.  One of Prescribe, Adminster, Dispense
+        /// Ordering Mode for a prescription. One of Prescribe, Adminster, Dispense
         /// </summary>
         [JsonProperty(PropertyName = "orderingmode")]
         public string OrderingMode { get; set; }
@@ -213,7 +213,9 @@ namespace AthenaHealth.Sdk.Models.Response
         public int? TieToOrderId { get; set; }
 
         /// <summary>
-        /// The ID of the clinical provider associated with this clinical document. Clinical providers are a master list of providers throughout the country.  These include providers as well as radiology centers, labs and pharmacies.
+        /// The ID of the clinical provider associated with this clinical document. Clinical
+        /// providers are a master list of providers throughout the country. These include providers
+        /// as well as radiology centers, labs and pharmacies.
         /// </summary>
         [JsonProperty(PropertyName = "facilityid")]
         public int? FacilityId { get; set; }

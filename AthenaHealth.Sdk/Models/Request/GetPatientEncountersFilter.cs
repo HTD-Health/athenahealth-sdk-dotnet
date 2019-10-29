@@ -1,10 +1,11 @@
 ﻿using AthenaHealth.Sdk.Models.Converters;
+using AthenaHealth.Sdk.Models.Request.Interfaces;
 using Newtonsoft.Json;
 using System;
 
 namespace AthenaHealth.Sdk.Models.Request
 {
-    public class GetPatientEncountersFilter
+    public class GetPatientEncountersFilter : IPagingFilter
     {
         /// <summary>
         /// Find the encounter for this appointment.
@@ -16,7 +17,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// The athenaNet department id.
         /// </summary>
         [JsonProperty(PropertyName = "departmentid")]
-        public int? DepartmentId { get; set; }
+        public int DepartmentId { get; set; }
 
         /// <summary>
         /// Omit any encounters later than this date
@@ -61,13 +62,16 @@ namespace AthenaHealth.Sdk.Models.Request
         /// Number of entries to return (default 1000, max 10000). Please note that this endpoint has
         /// a different default and max than normal.
         /// </summary>
-        [JsonProperty(PropertyName = "limit")]
         public int? Limit { get; set; }
 
         /// <summary>
         /// Starting point of entries; 0-indexed
         /// </summary>
-        [JsonProperty(PropertyName = "offset")]
         public int? Offset { get; set; }
+
+        public GetPatientEncountersFilter(int departmentId)
+        {
+            DepartmentId = departmentId;
+        }
     }
 }

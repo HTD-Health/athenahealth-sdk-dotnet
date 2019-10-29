@@ -1,26 +1,21 @@
 ﻿using AthenaHealth.Sdk.Models.Converters;
-using AthenaHealth.Sdk.Models.Enums;
+using AthenaHealth.Sdk.Models.Response.Interfaces;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
 using System;
 
 namespace AthenaHealth.Sdk.Models.Response
 {
-    public class PatientResponse
+    public class PatientResponse : IPagingResponse<Patient>
     {
-        [JsonProperty("totalcount")]
         public int Total { get; set; }
 
-        [JsonProperty("next")]
-        public string Next { get; set; } 
-        
-        [JsonProperty("previous")]
+        public string Next { get; set; }
+
         public string Previous { get; set; }
 
         [JsonProperty("patients")]
         public Patient[] Items { get; set; }
     }
-
 
     public class Patient
     {
@@ -403,8 +398,6 @@ namespace AthenaHealth.Sdk.Models.Response
         [JsonProperty("contactpreference_appointment_phone")]
         public bool? ContactPreferenceAppointmentPhone { get; set; }
 
-   
-
         /// <summary>
         /// Patient's DOB (mm/dd/yyyy)
         /// </summary>
@@ -578,7 +571,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// Patient's sex (M/F).
         /// </summary>
         [JsonProperty("sex")]
-        public string Sex { get; set; } // string type (not SexEnum), because AthenaHealth API may returned non M/F values (returned "N")
+        public string Sex { get; set; }
 
         /// <summary>
         /// Marital Status (D=Divorced, M=Married, S=Single, U=Unknown, W=Widowed, X=Separated, P=Partner)
@@ -1125,8 +1118,6 @@ namespace AthenaHealth.Sdk.Models.Response
             [JsonProperty("entitytodisplay")]
             public string EntityToDisplay { get; set; }
         }
-
- 
 
         public class Balance
         {
