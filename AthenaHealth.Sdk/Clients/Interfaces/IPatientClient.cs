@@ -81,5 +81,11 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// <param name="request"></param>
         /// <returns></returns>
         Task SetAllergies(SetPatientAllergies request);
+
+        Task<CreatePatientResponse> CreatePatient(CreatePatient request);
+
+        Task<UpdatePatientResponse> UpdatePatient(int patientId, UpdatePatient request);
+
+        Task<UpdatePatientResponse> DeletePatient(int patientId);
     }
 }

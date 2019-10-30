@@ -99,7 +99,7 @@ namespace AthenaHealth.Sdk.Http
         {
             await RefreshAccessToken();
 
-            Response response = await SendData(AddVersion(relativeUrl), queryParameters, HttpMethod.Put, ContentConverter.ToJson(body));
+            Response response = await SendData(AddVersion(relativeUrl), queryParameters, HttpMethod.Put, ContentConverter.ToUrlEncoded(body));
 
             return response.GetObjectContent<T>();
         }
