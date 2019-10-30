@@ -45,5 +45,13 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         Task<InsuranceResponse> GetPatientInsurances(int patientId, GetPatientInsurancesFilter queryParameters);
 
         Task<PatientEncounterResponse> GetPatientEncounters(int patientId, GetPatientEncountersFilter queryParameters);
+
+        /// <summary>
+        /// Output of adding a historical medication to patient chart.
+        /// </summary>
+        /// <param name="patientId"></param>
+        /// <param name="medication"></param>
+        /// <returns></returns>
+        Task<MedicationAddedResponse> AddMedication(int patientId, AddMedication medication);
     }
 }
