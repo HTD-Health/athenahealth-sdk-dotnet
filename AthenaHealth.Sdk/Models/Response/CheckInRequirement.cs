@@ -1,7 +1,7 @@
 ﻿using AthenaHealth.Sdk.Models.Converters;
 using Newtonsoft.Json;
 
-namespace AthenaHealth.Sdk.Clients.Interfaces
+namespace AthenaHealth.Sdk.Models.Response
 {
     public class CheckInRequirement
     {

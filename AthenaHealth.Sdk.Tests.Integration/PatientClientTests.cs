@@ -2,8 +2,10 @@
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+using AthenaHealth.Sdk.Clients;
 using AthenaHealth.Sdk.Exceptions;
 using AthenaHealth.Sdk.Models.Request;
+using AthenaHealth.Sdk.Models.Response;
 using AthenaHealth.Sdk.Tests.Integration.TestingHelpers;
 using Shouldly;
 using Xunit;
@@ -625,7 +627,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         }
 
         [Fact]
-        public void GetDefaultLaboratory_NoDefalultLaboratory_ThrowsException()
+        public void GetDefaultLaboratory_NoDefaultLaboratory_ThrowsException()
         {
             // Arrange
             var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"error\":\"Default lab not found.\"}", HttpStatusCode.NotFound));
@@ -690,6 +692,17 @@ namespace AthenaHealth.Sdk.Tests.Integration
             var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"success\": true}", HttpStatusCode.OK));
 
             Should.NotThrow(async () => await patientClient.AddPreferredPharmacy(5000, new SetPharmacyRequest(164){ClinicalProviderId = 11242674}));
+        }
+
+        [Fact]
+        public async Task AddMedication_ValidData_ReturnsCreatedId()
+        {
+            var patientClient = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\AddMedication.json", HttpStatusCode.OK));
+
+            MedicationAddedResponse response = await patientClient.AddMedication(100, new AddMedication(1, 296232));
+
+            response.MedicationEntryId.ShouldNotBeNullOrWhiteSpace();
+            response.IsSuccess.ShouldBeTrue();
         }
     }
 }

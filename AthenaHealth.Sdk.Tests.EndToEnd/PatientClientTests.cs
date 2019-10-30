@@ -408,5 +408,25 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         {
             Should.NotThrow(async () => await _client.Patients.AddPreferredPharmacy(5000, new SetPharmacyRequest(164) { ClinicalProviderId = 11242674 }));
         }
+
+
+        [Fact]
+        public async Task AddMedication_ValidData_ReturnsCreatedId()
+        {
+            MedicationAddedResponse response = await _client.Patients.AddMedication(100, new AddMedication(1, 296232));
+
+            response.MedicationEntryId.ShouldNotBeNullOrWhiteSpace();
+            response.IsSuccess.ShouldBeTrue();
+        }
+
+        [Fact]
+        public async Task AddMedication_InvalidMedicationId_ReturnsErrorMessage()
+        {
+            int medicationId = 1;
+            MedicationAddedResponse response = await _client.Patients.AddMedication(100, new AddMedication(1, medicationId));
+
+            response.IsSuccess.ShouldBeFalse();
+            response.ErrorMessage.ShouldContain($"MedicationID {medicationId} does not match any known medications.");
+        }
     }
 }
