@@ -1,4 +1,5 @@
 ﻿using AthenaHealth.Sdk.Models.Converters;
+using AthenaHealth.Sdk.Models.Enums;
 using AthenaHealth.Sdk.Models.Response.Interfaces;
 using Newtonsoft.Json;
 using System;
@@ -103,7 +104,8 @@ namespace AthenaHealth.Sdk.Models.Response
         /// If present, the date on which a patient died.
         /// </summary>
         [JsonProperty("deceaseddate")]
-        public string DeceasedDate { get; set; }
+        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+        public DateTime? DeceasedDate { get; set; }
 
         /// <summary>
         /// The first appointment for this patient, excluding cancelled or no-show appointments.
@@ -183,7 +185,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// The "status" of the patient, one of active, inactive, prospective, or deleted.
         /// </summary>
         [JsonProperty("status")]
-        public string Status { get; set; }
+        public StatusEnum? Status { get; set; }
 
         /// <summary>
         /// This flag is set if the patient's privacy information has been verified. Privacy

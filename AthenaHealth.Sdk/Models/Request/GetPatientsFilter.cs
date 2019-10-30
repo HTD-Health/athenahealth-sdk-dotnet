@@ -2,6 +2,7 @@
 using AthenaHealth.Sdk.Models.Enums;
 using AthenaHealth.Sdk.Models.Request.Interfaces;
 using Newtonsoft.Json;
+using System;
 
 namespace AthenaHealth.Sdk.Models.Request
 {
@@ -11,7 +12,8 @@ namespace AthenaHealth.Sdk.Models.Request
         /// If present, the date on which a patient died.
         /// </summary>
         [JsonProperty("deceaseddate")]
-        public string DeceasedDate { get; set; }
+        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+        public DateTime? DeceasedDate { get; set; }
 
         /// <summary>
         /// The expiration date of the patient's driver's license.

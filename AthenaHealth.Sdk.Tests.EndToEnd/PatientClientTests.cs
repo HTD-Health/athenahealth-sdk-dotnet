@@ -1,16 +1,17 @@
 ﻿using AthenaHealth.Sdk.Exceptions;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
+using AthenaHealth.Sdk.Tests.EndToEnd.Data.Patient;
 using AthenaHealth.Sdk.Tests.EndToEnd.Fixtures;
+using Bogus;
+using Bogus.DataSets;
 using Shouldly;
 using System;
 using System.Globalization;
 using System.Linq;
-using System.Threading.Tasks;
-using AthenaHealth.Sdk.Tests.EndToEnd.Data.Patient;
-using Xunit;
-using System.Diagnostics;
 using System.Net;
+using System.Threading.Tasks;
+using Xunit;
 
 // ReSharper disable StringLiteralTypo
 namespace AthenaHealth.Sdk.Tests.EndToEnd
@@ -291,6 +292,154 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             result.ShouldNotBeNull();
         }
 
+        [Fact(Skip = "This test is slow (about 23 seconds) and creates user every time is run")]
+        public async Task UpdatePatient_AddressChanged_PatientUpdated()
+        {
+            // Arrange
+            Faker<CreatePatient> createPatientFaker = new Faker<CreatePatient>()
+                .CustomInstantiator(f =>
+                {
+                    return new CreatePatient(
+                        1,
+                        f.Date.Past(80).Date,
+                        CultureInfo.CurrentCulture.TextInfo.ToTitleCase(f.Name.FirstName(Name.Gender.Male).ToLower()),
+                        CultureInfo.CurrentCulture.TextInfo.ToTitleCase(f.Name.LastName(Name.Gender.Male).ToLower()));
+                }).RuleFor(x => x.Email, (f, u) => f.Internet.Email(u.FirstName, u.LastName).ToLower());
+
+            CreatePatient request = createPatientFaker.Generate();
+
+            var createResult = await _client.Patients.CreatePatient(request);
+
+            var getPatientResultBeforeUpdate = await _client.Patients.GetPatientById(createResult.PatientId.Value);
+
+            // Act
+            var updateResult = await _client.Patients.UpdatePatient(createResult.PatientId.Value, new UpdatePatient()
+            {
+                Address1 = "Sample Address"
+            });
+
+            // Assert
+            updateResult.ShouldNotBeNull();
+
+            var getPatientResultAfterUpdate = await _client.Patients.GetPatientById(createResult.PatientId.Value);
+
+            getPatientResultBeforeUpdate.Address1.ShouldBeNullOrEmpty();
+            getPatientResultAfterUpdate.Address1.ShouldBe("Sample Address");
+        }
+
+        [Fact(Skip = "This test is slow (about 23 seconds) and creates user every time is run")]
+        public async Task DeletePatient_StatusChanged_PatientDeleted()
+        {
+            // Arrange
+            Faker<CreatePatient> createPatientFaker = new Faker<CreatePatient>()
+                .CustomInstantiator(f =>
+                {
+                    return new CreatePatient(
+                        1,
+                        f.Date.Past(80).Date,
+                        CultureInfo.CurrentCulture.TextInfo.ToTitleCase(f.Name.FirstName(Name.Gender.Male).ToLower()),
+                        CultureInfo.CurrentCulture.TextInfo.ToTitleCase(f.Name.LastName(Name.Gender.Male).ToLower()))
+                    {
+                        Status = Models.Enums.StatusEnum.Active
+                    };
+                }).RuleFor(x => x.Email, (f, u) => f.Internet.Email(u.FirstName, u.LastName).ToLower());
+
+            CreatePatient request = createPatientFaker.Generate();
+
+            var createResult = await _client.Patients.CreatePatient(request);
+
+            var getPatientResultBeforeDelete = await _client.Patients.GetPatientById(createResult.PatientId.Value);
+
+            // Act
+            var deleteResult = await _client.Patients.DeletePatient(createResult.PatientId.Value);
+
+            // Assert
+            deleteResult.ShouldNotBeNull();
+
+            var getPatientResultAfterDelete = await _client.Patients.GetPatientById(createResult.PatientId.Value);
+
+            getPatientResultBeforeDelete.Status.ShouldBe(Models.Enums.StatusEnum.Active);
+            getPatientResultAfterDelete.Status.ShouldBe(Models.Enums.StatusEnum.Inactive);
+        }
+
+        [Fact(Skip = "This test is slow (about 12 seconds) and creates user every time is run")]
+        public async Task CreatePatient_RequiredFieldsProvidedPatientDoesNotExist_PatientCreated()
+        {
+            // Arrange
+            Faker<CreatePatient> createPatientFaker = new Faker<CreatePatient>()
+                .CustomInstantiator(f =>
+                {
+                    return new CreatePatient(
+                        1,
+                        f.Date.Past(80).Date,
+                        CultureInfo.CurrentCulture.TextInfo.ToTitleCase(f.Name.FirstName(Name.Gender.Male).ToLower()),
+                        CultureInfo.CurrentCulture.TextInfo.ToTitleCase(f.Name.LastName(Name.Gender.Male).ToLower()));
+                }).RuleFor(x => x.Email, (f, u) => f.Internet.Email(u.FirstName, u.LastName).ToLower());
+
+            CreatePatient request = createPatientFaker.Generate();
+
+            // Act
+            var result = await _client.Patients.CreatePatient(request);
+
+            // Assert
+            result.ShouldNotBeNull();
+            result.PatientId.HasValue.ShouldBeTrue();
+
+            var getPatientResult = await _client.Patients.GetPatientById(result.PatientId.Value);
+
+            getPatientResult.FirstName.ShouldBe(request.FirstName);
+            getPatientResult.LastName.ShouldBe(request.LastName);
+            getPatientResult.DateOfBirth.ShouldBe(request.DateOfBirth);
+            getPatientResult.DepartmentId.ShouldBe(request.DepartmentId);
+            getPatientResult.Email.ShouldBe(request.Email);
+        }
+
+        [Fact]
+        public async Task CreatePatient_RequiredFieldsProvidedPatientExists_PatientNotCreated()
+        {
+            // Arrange
+            CreatePatient request = new CreatePatient(1, new DateTime(1992, 01, 02), "Jan", "Kowalski")
+            {
+                Email = "kowal234@gmail.com"
+            };
+
+            // Act
+            var result = await _client.Patients.CreatePatient(request);
+
+            // Assert
+            result.ShouldNotBeNull();
+            result.PatientId.HasValue.ShouldBeTrue();
+            result.PatientId.Value.ShouldBe(42000);
+            result.ErrorMessage.ShouldBeNullOrEmpty();
+
+            var getPatientResult = await _client.Patients.GetPatientById(result.PatientId.Value);
+
+            getPatientResult.FirstName.ShouldBe(request.FirstName);
+            getPatientResult.LastName.ShouldBe(request.LastName);
+            getPatientResult.DateOfBirth.ShouldBe(request.DateOfBirth);
+            getPatientResult.DepartmentId.ShouldBe(request.DepartmentId);
+            getPatientResult.Email.ShouldBe(request.Email);
+        }
+
+        [Fact]
+        public async Task CreatePatient_RequiredFieldsProvidedPatientExistsFlagToShowErrors_PatientNotCreated()
+        {
+            // Arrange
+            CreatePatient request = new CreatePatient(1, new DateTime(1992, 01, 02), "Jan", "Kowalski")
+            {
+                Email = "kowal234@gmail.com",
+                ShowErrorMessage = true
+            };
+
+            // Act
+            var result = await _client.Patients.CreatePatient(request);
+
+            // Assert
+            result.ShouldNotBeNull();
+            result.PatientId.HasValue.ShouldBeFalse();
+            result.ErrorMessage.ShouldNotBeNullOrEmpty();
+        }
+
         [Theory]
         [ClassData(typeof(GetPatientProblemsData))]
         public async Task GetPatientProblems_PatientExists_ShouldNotThrowJsonSerializationException(int patientId)
@@ -408,7 +557,6 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             await Should.ThrowAsync<ApiValidationException>(async () => await _client.Patients.GetPreferredPharmacies(300, new GetPreferredPharmacyFilter(2)));
         }
 
-
         [Fact]
         public void SetDefaultPharmacy_ValidData_NotThrow()
         {
@@ -420,7 +568,6 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         {
             Should.NotThrow(async () => await _client.Patients.AddPreferredPharmacy(5000, new SetPharmacyRequest(164) { ClinicalProviderId = 11242674 }));
         }
-
 
         [Fact]
         public async Task AddMedication_ValidData_ReturnsCreatedId()

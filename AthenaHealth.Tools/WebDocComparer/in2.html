@@ -4,66 +4,1891 @@
             <th class="outputnameheader">Name</th>
             <th class="outputtypeheader">Type</th>
             <th class="outputtypeheader">Description</th>
+            <th class="outputtypeheader">Default</th>
+            <th class="outputtypeheader">Values</th>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">address1</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 100)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">address2</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 100)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">agriculturalworker</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 1)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">
+                <table class="table-responsive">
+                    <tbody>
+                        <tr>
+                            <th>Submitted Value</th>
+                            <th>Display Value</th>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value"></td>
+                            <td data-label="Display Value">(null)</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">N</td>
+                            <td data-label="Display Value">No</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">P</td>
+                            <td data-label="Display Value">Patient Declined</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">Y</td>
+                            <td data-label="Display Value">Yes</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">agriculturalworkertype</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 20)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">
+                <table class="table-responsive">
+                    <tbody>
+                        <tr>
+                            <th>Submitted Value</th>
+                            <th>Display Value</th>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value"></td>
+                            <td data-label="Display Value">(null)</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">MIGRANT</td>
+                            <td data-label="Display Value"></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">SEASONAL</td>
+                            <td data-label="Display Value"></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">UNSPECIFIED</td>
+                            <td data-label="Display Value"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">altfirstname</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">Alternate first name that differs from legal name. This is only available in practices with the appropriate practice settings.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">assignedsexatbirth</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">Sex that this patient was assigned at birth. This is only available in practices with the appropriate practice settings.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">
+                <table class="table-responsive">
+                    <tbody>
+                        <tr>
+                            <th>Submitted Value</th>
+                            <th>Display Value</th>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value"></td>
+                            <td data-label="Display Value"></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">F</td>
+                            <td data-label="Display Value">Female</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">M</td>
+                            <td data-label="Display Value">Male</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">N</td>
+                            <td data-label="Display Value">Choose not to disclose</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">U</td>
+                            <td data-label="Display Value">Unknown</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">caresummarydeliverypreference</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 50)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">
+                <table class="table-responsive">
+                    <tbody>
+                        <tr>
+                            <th>Submitted Value</th>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">PAPER</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">PORTAL</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">city</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 30)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">clinicalordertypegroupid</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">The clinical order type group of the clinical provider (Prescription: 10, Lab: 11, Vaccinations: 16).</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">consenttocall</td>
+            <td class="outputname" data-label="Type">boolean</td>
+            <td class="outputname" data-label="Description">(Max length: 1)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">consenttotext</td>
+            <td class="outputname" data-label="Type">boolean</td>
+            <td class="outputname" data-label="Description">(Max length: 1)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">contacthomephone</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 20)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">contactmobilephone</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 20)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">contactname</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 50)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">contactpreference</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 20)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">
+                <table class="table-responsive">
+                    <tbody>
+                        <tr>
+                            <th>Submitted Value</th>
+                            <th>Display Value</th>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">HOMEPHONE</td>
+                            <td data-label="Display Value">Home Phone</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">MAIL</td>
+                            <td data-label="Display Value"></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">MOBILEPHONE</td>
+                            <td data-label="Display Value">Mobile Phone</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">PORTAL</td>
+                            <td data-label="Display Value"></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">WORKPHONE</td>
+                            <td data-label="Display Value">Work Phone</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">contactpreference_announcement_email</td>
+            <td class="outputname" data-label="Type">boolean</td>
+            <td class="outputname" data-label="Description">If set, the patient has indicated a preference to get or not get "announcement" communications delivered via email.  Note that this will not be present if the practice or patient has not set it.For completeness, turning email off is supported via the API, but it is discouraged. When email is off, patients may not not get messages from the patient portal.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">contactpreference_announcement_phone</td>
+            <td class="outputname" data-label="Type">boolean</td>
+            <td class="outputname" data-label="Description">If set, the patient has indicated a preference to get or not get "announcement" communications delivered via phone.  Note that this will not be present if the practice or patient has not set it.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">contactpreference_announcement_sms</td>
+            <td class="outputname" data-label="Type">boolean</td>
+            <td class="outputname" data-label="Description">If set, the patient has indicated a preference to get or not get "announcement" communications delivered via SMS.  Note that this will not be present if the practice or patient has not set it.For SMS, there is specific terms of service language that must be used when displaying this as an option to be turned on.  Turning on must be an action by the patient, not a practice user.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">contactpreference_appointment_email</td>
+            <td class="outputname" data-label="Type">boolean</td>
+            <td class="outputname" data-label="Description">If set, the patient has indicated a preference to get or not get "appointment" communications delivered via email.  Note that this will not be present if the practice or patient has not set it.For completeness, turning email off is supported via the API, but it is discouraged. When email is off, patients may not not get messages from the patient portal.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">contactpreference_appointment_phone</td>
+            <td class="outputname" data-label="Type">boolean</td>
+            <td class="outputname" data-label="Description">If set, the patient has indicated a preference to get or not get "appointment" communications delivered via phone.  Note that this will not be present if the practice or patient has not set it.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">contactpreference_appointment_sms</td>
+            <td class="outputname" data-label="Type">boolean</td>
+            <td class="outputname" data-label="Description">If set, the patient has indicated a preference to get or not get "appointment" communications delivered via SMS.  Note that this will not be present if the practice or patient has not set it.For SMS, there is specific terms of service language that must be used when displaying this as an option to be turned on.  Turning on must be an action by the patient, not a practice user.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">contactpreference_billing_email</td>
+            <td class="outputname" data-label="Type">boolean</td>
+            <td class="outputname" data-label="Description">If set, the patient has indicated a preference to get or not get "billing" communications delivered via email.  Note that this will not be present if the practice or patient has not set it.For completeness, turning email off is supported via the API, but it is discouraged. When email is off, patients may not not get messages from the patient portal.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">contactpreference_billing_phone</td>
+            <td class="outputname" data-label="Type">boolean</td>
+            <td class="outputname" data-label="Description">If set, the patient has indicated a preference to get or not get "billing" communications delivered via phone.  Note that this will not be present if the practice or patient has not set it.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">contactpreference_billing_sms</td>
+            <td class="outputname" data-label="Type">boolean</td>
+            <td class="outputname" data-label="Description">If set, the patient has indicated a preference to get or not get "billing" communications delivered via SMS.  Note that this will not be present if the practice or patient has not set it.For SMS, there is specific terms of service language that must be used when displaying this as an option to be turned on.  Turning on must be an action by the patient, not a practice user.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">contactpreference_lab_email</td>
+            <td class="outputname" data-label="Type">boolean</td>
+            <td class="outputname" data-label="Description">If set, the patient has indicated a preference to get or not get "lab" communications delivered via email.  Note that this will not be present if the practice or patient has not set it.For completeness, turning email off is supported via the API, but it is discouraged. When email is off, patients may not not get messages from the patient portal.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">contactpreference_lab_phone</td>
+            <td class="outputname" data-label="Type">boolean</td>
+            <td class="outputname" data-label="Description">If set, the patient has indicated a preference to get or not get "lab" communications delivered via phone.  Note that this will not be present if the practice or patient has not set it.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">contactpreference_lab_sms</td>
+            <td class="outputname" data-label="Type">boolean</td>
+            <td class="outputname" data-label="Description">If set, the patient has indicated a preference to get or not get "lab" communications delivered via SMS.  Note that this will not be present if the practice or patient has not set it.For SMS, there is specific terms of service language that must be used when displaying this as an option to be turned on.  Turning on must be an action by the patient, not a practice user.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">contactrelationship</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 10)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">
+                <table class="table-responsive">
+                    <tbody>
+                        <tr>
+                            <th>Submitted Value</th>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value"></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">CHILD</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">COUSIN</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">FRIEND</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">GUARDIAN</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">OTHER</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">PARENT</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">SIBLING</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">SPOUSE</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">countrycode3166</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">Patient's country code (ISO 3166-1)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">deceaseddate</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">If present, the date on which a patient died.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">defaultpharmacyncpdpid</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">The NCPDP ID of the patient's preferred pharmacy.  See http://www.ncpdp.org/ for details. Note: if updating this field, please make sure to have a CLINICALORDERTYPEGROUPID field as well.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
         </tr>
         <tr>
             <td class="outputname" data-label="Name">departmentid</td>
-            <td class="outputname" data-label="Type">array</td>
-            <td class="outputname" data-label="Description">Department ID. Multiple departments are allowed, either comma separated or with multiple values.</td>
+            <td class="outputname" data-label="Type">integer</td>
+            <td class="outputname" data-label="Description">Primary (registration) department ID.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">dob</td>
+            <td class="outputname" data-label="Type">date</td>
+            <td class="outputname" data-label="Description">Patient's DOB (mm/dd/yyyy)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">donotcallyn</td>
+            <td class="outputname" data-label="Type">boolean</td>
+            <td class="outputname" data-label="Description">Warning! This patient will not receive any communication from the practice if this field is set to true. This field should only be used if you are absolutely certain that's what you want to do.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">driverslicenseexpirationdate</td>
+            <td class="outputname" data-label="Type">date</td>
+            <td class="outputname" data-label="Description">The expiration date of the patient's driver's license.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">driverslicensenumber</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">The number of the patient's driver's license</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">driverslicensestateid</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">The state of the patient's driver's license. This is in the form of a 2 letter state code.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">
+                <table class="table-responsive">
+                    <tbody>
+                        <tr>
+                            <th>Submitted Value</th>
+                            <th>Display Value</th>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value"></td>
+                            <td data-label="Display Value"></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">AA</td>
+                            <td data-label="Display Value">AA-Armed Forces Americas</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">AE</td>
+                            <td data-label="Display Value">AE-Armed Forces Africa</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">AK</td>
+                            <td data-label="Display Value">AK-Alaska</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">AL</td>
+                            <td data-label="Display Value">AL-Alabama</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">AP</td>
+                            <td data-label="Display Value">AP-Armed Forces Pacific</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">AR</td>
+                            <td data-label="Display Value">AR-Arkansas</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">AS</td>
+                            <td data-label="Display Value">AS-American Samoa</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">AZ</td>
+                            <td data-label="Display Value">AZ-Arizona</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">CA</td>
+                            <td data-label="Display Value">CA-California</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">CO</td>
+                            <td data-label="Display Value">CO-Colorado</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">CT</td>
+                            <td data-label="Display Value">CT-Connecticut</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">DC</td>
+                            <td data-label="Display Value">DC-District of Columbia</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">DE</td>
+                            <td data-label="Display Value">DE-Delaware</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">FL</td>
+                            <td data-label="Display Value">FL-Florida</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">FM</td>
+                            <td data-label="Display Value">FM-Federated States of Micronesia</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">GA</td>
+                            <td data-label="Display Value">GA-Georgia</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">GU</td>
+                            <td data-label="Display Value">GU-Guam</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">HI</td>
+                            <td data-label="Display Value">HI-Hawaii</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">IA</td>
+                            <td data-label="Display Value">IA-Iowa</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">ID</td>
+                            <td data-label="Display Value">ID-Idaho</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">IL</td>
+                            <td data-label="Display Value">IL-Illinois</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">IN</td>
+                            <td data-label="Display Value">IN-Indiana</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">KS</td>
+                            <td data-label="Display Value">KS-Kansas</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">KY</td>
+                            <td data-label="Display Value">KY-Kentucky</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">LA</td>
+                            <td data-label="Display Value">LA-Louisiana</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">MA</td>
+                            <td data-label="Display Value">MA-Massachusetts</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">MD</td>
+                            <td data-label="Display Value">MD-Maryland</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">ME</td>
+                            <td data-label="Display Value">ME-Maine</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">MH</td>
+                            <td data-label="Display Value">MH-Marshall Islands</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">MI</td>
+                            <td data-label="Display Value">MI-Michigan</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">MN</td>
+                            <td data-label="Display Value">MN-Minnesota</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">MO</td>
+                            <td data-label="Display Value">MO-Missouri</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">MP</td>
+                            <td data-label="Display Value">MP-Northern Mariana Islands</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">MS</td>
+                            <td data-label="Display Value">MS-Mississippi</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">MT</td>
+                            <td data-label="Display Value">MT-Montana</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">NC</td>
+                            <td data-label="Display Value">NC-North Carolina</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">ND</td>
+                            <td data-label="Display Value">ND-North Dakota</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">NE</td>
+                            <td data-label="Display Value">NE-Nebraska</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">NH</td>
+                            <td data-label="Display Value">NH-New Hampshire</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">NJ</td>
+                            <td data-label="Display Value">NJ-New Jersey</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">NM</td>
+                            <td data-label="Display Value">NM-New Mexico</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">NV</td>
+                            <td data-label="Display Value">NV-Nevada</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">NY</td>
+                            <td data-label="Display Value">NY-New York</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">OH</td>
+                            <td data-label="Display Value">OH-Ohio</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">OK</td>
+                            <td data-label="Display Value">OK-Oklahoma</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">OR</td>
+                            <td data-label="Display Value">OR-Oregon</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">PA</td>
+                            <td data-label="Display Value">PA-Pennsylvania</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">PR</td>
+                            <td data-label="Display Value">PR-Puerto Rico</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">PW</td>
+                            <td data-label="Display Value">PW-Palau</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">RI</td>
+                            <td data-label="Display Value">RI-Rhode Island</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">SC</td>
+                            <td data-label="Display Value">SC-South Carolina</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">SD</td>
+                            <td data-label="Display Value">SD-South Dakota</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">TN</td>
+                            <td data-label="Display Value">TN-Tennessee</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">TX</td>
+                            <td data-label="Display Value">TX-Texas</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">UT</td>
+                            <td data-label="Display Value">UT-Utah</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">VA</td>
+                            <td data-label="Display Value">VA-Virginia</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">VI</td>
+                            <td data-label="Display Value">VI-Virgin Islands</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">VT</td>
+                            <td data-label="Display Value">VT-Vermont</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">WA</td>
+                            <td data-label="Display Value">WA-Washington</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">WI</td>
+                            <td data-label="Display Value">WI-Wisconsin</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">WV</td>
+                            <td data-label="Display Value">WV-West Virginia</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">WY</td>
+                            <td data-label="Display Value">WY-Wyoming</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">email</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 50)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">employerid</td>
+            <td class="outputname" data-label="Type">integer</td>
+            <td class="outputname" data-label="Description">The patient's employer's ID (from /employers call)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">employerphone</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 20)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">ethnicitycode</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">Ethnicity of the patient, using the 2.16.840.1.113883.5.50 codeset. See http://www.hl7.org/implement/standards/fhir/terminologies-v3.html Special case: use "declined" to indicate that the patient declined to answer.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">firstname</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 35)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">genderidentity</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">Gender this patient identifies with. This is only available in practices with the appropriate practice settings. To see the available options for this input, please see GET /configuration/patients/genderidentity</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">genderidentityother</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">Only valid when used in conjunction with a gender identity choice that allows the patient to describe their identity (if it doesn't conform to any other choice).</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">guarantoraddress1</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 100)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">guarantoraddress2</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 100)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">guarantoraddresssameaspatient</td>
+            <td class="outputname" data-label="Type">boolean</td>
+            <td class="outputname" data-label="Description">If set, the address of the guarantor is the same as the patient.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">guarantorcity</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 30)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">guarantorcountrycode3166</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">Guarantor's country code (ISO 3166-1)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">guarantordob</td>
+            <td class="outputname" data-label="Type">date</td>
+            <td class="outputname" data-label="Description">Guarantor's DOB (mm/dd/yyyy)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">guarantoremail</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 50)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">guarantoremployerid</td>
+            <td class="outputname" data-label="Type">integer</td>
+            <td class="outputname" data-label="Description">The guaranror's employer's ID (from /employers call)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">guarantorfirstname</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 35)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">guarantorlastname</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 60)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">guarantormiddlename</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 25)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">guarantorphone</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 20)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">guarantorrelationshiptopatient</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">The guarantor's relationship to the patient</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">
+                <table class="table-responsive">
+                    <tbody>
+                        <tr>
+                            <th>Submitted Value</th>
+                            <th>Display Value</th>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value"></td>
+                            <td data-label="Display Value"></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">1</td>
+                            <td data-label="Display Value">Self</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">10</td>
+                            <td data-label="Display Value">Ward</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">11</td>
+                            <td data-label="Display Value">Stepson or Stepdaughter</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">12</td>
+                            <td data-label="Display Value">Employee</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">13</td>
+                            <td data-label="Display Value">Unknown</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">14</td>
+                            <td data-label="Display Value">Handicapped Dependent</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">15</td>
+                            <td data-label="Display Value">Sponsored Dependent</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">16</td>
+                            <td data-label="Display Value">Dependent of a Minor Dependent</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">17</td>
+                            <td data-label="Display Value">Significant Other</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">18</td>
+                            <td data-label="Display Value">Mother</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">19</td>
+                            <td data-label="Display Value">Father</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">2</td>
+                            <td data-label="Display Value">Spouse</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">21</td>
+                            <td data-label="Display Value">Emancipated Minor</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">22</td>
+                            <td data-label="Display Value">Organ Donor</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">23</td>
+                            <td data-label="Display Value">Cadaver Donor</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">24</td>
+                            <td data-label="Display Value">Injured Plaintiff</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">25</td>
+                            <td data-label="Display Value">Child (Ins. not Financially Respons.)</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">26</td>
+                            <td data-label="Display Value">Life Partner</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">27</td>
+                            <td data-label="Display Value">Child (Mother's Insurance)</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">28</td>
+                            <td data-label="Display Value">Child (Father's Insurance)</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">29</td>
+                            <td data-label="Display Value">Child (Mother's Ins., Ins. not Financially Respons.)</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">3</td>
+                            <td data-label="Display Value">Child</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">30</td>
+                            <td data-label="Display Value">Child (Father's Ins., Ins. not Financially Respons.)</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">31</td>
+                            <td data-label="Display Value">Stepson or Stepdaughter (Stepmother's Insurance)</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">32</td>
+                            <td data-label="Display Value">Stepson or Stepdaughter (Stepfather's Insurance)</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">4</td>
+                            <td data-label="Display Value">Other</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">5</td>
+                            <td data-label="Display Value">Grandparent</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">6</td>
+                            <td data-label="Display Value">Grandchild</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">7</td>
+                            <td data-label="Display Value">Nephew or Niece</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">9</td>
+                            <td data-label="Display Value">Foster Child</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">guarantorssn</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 13)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">guarantorstate</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 10)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">guarantorsuffix</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 10)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">guarantorzip</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 10)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">guardianfirstname</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 35)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">guardianlastname</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 60)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">guardianmiddlename</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 25)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">guardiansuffix</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 10)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">hasmobileyn</td>
+            <td class="outputname" data-label="Type">boolean</td>
+            <td class="outputname" data-label="Description">(Max length: 1)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">homeboundyn</td>
+            <td class="outputname" data-label="Type">boolean</td>
+            <td class="outputname" data-label="Description">(Max length: 1)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">homeless</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 1)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">
+                <table class="table-responsive">
+                    <tbody>
+                        <tr>
+                            <th>Submitted Value</th>
+                            <th>Display Value</th>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value"></td>
+                            <td data-label="Display Value">(null)</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">N</td>
+                            <td data-label="Display Value">No</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">P</td>
+                            <td data-label="Display Value">Patient Declined</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">Y</td>
+                            <td data-label="Display Value">Yes</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">homelesstype</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 30)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">
+                <table class="table-responsive">
+                    <tbody>
+                        <tr>
+                            <th>Submitted Value</th>
+                            <th>Display Value</th>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value"></td>
+                            <td data-label="Display Value">(null)</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">DOUBLINGUP</td>
+                            <td data-label="Display Value">Doubling Up</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">OTHER</td>
+                            <td data-label="Display Value"></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">PERMANENT</td>
+                            <td data-label="Display Value">Permanent Supportive Housing</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">SHELTER</td>
+                            <td data-label="Display Value">Homeless Shelter</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">STREET</td>
+                            <td data-label="Display Value"></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">TRANSITIONAL</td>
+                            <td data-label="Display Value"></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">UNKNOWN</td>
+                            <td data-label="Display Value"></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">UNSPECIFIED</td>
+                            <td data-label="Display Value"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">homephone</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 20)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
         </tr>
         <tr>
             <td class="outputname" data-label="Name">ignorerestrictions</td>
             <td class="outputname" data-label="Type">boolean</td>
-            <td class="outputname" data-label="Description">When showing patient detail for appointments, the patient information for patients with record restrictions and blocked patients will not be shown.  Setting this flag to true will show that information for those patients.</td>
+            <td class="outputname" data-label="Description">Set to true to allow ability to find patients with record restrictions and blocked patients. This should only be used when there is no reflection to the patient at all that a match was found or not found.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
         </tr>
         <tr>
-            <td class="outputname" data-label="Name">leaveunprocessed</td>
-            <td class="outputname" data-label="Type">boolean</td>
-            <td class="outputname" data-label="Description">For testing purposes, do not mark records as processed.</td>
-        </tr>
-        <tr>
-            <td class="outputname" data-label="Name">patientid</td>
-            <td class="outputname" data-label="Type">array</td>
-            <td class="outputname" data-label="Description">Patient ID. Multiple Patient IDs are allowed, either comma separated or with multiple values.</td>
-        </tr>
-        <tr>
-            <td class="outputname" data-label="Name">providerid</td>
-            <td class="outputname" data-label="Type">array</td>
-            <td class="outputname" data-label="Description">Provider ID.  Multiple providers are allowed using comma separated values.</td>
-        </tr>
-        <tr>
-            <td class="outputname" data-label="Name">showclaimdetail</td>
-            <td class="outputname" data-label="Type">boolean</td>
-            <td class="outputname" data-label="Description">Include claim information, if available, associated with an appointment.</td>
-        </tr>
-        <tr>
-            <td class="outputname" data-label="Name">showcopay</td>
-            <td class="outputname" data-label="Type">boolean</td>
-            <td class="outputname" data-label="Description">Return copay information with the appointment data.</td>
-        </tr>
-        <tr>
-            <td class="outputname" data-label="Name">showinsurance</td>
-            <td class="outputname" data-label="Type">boolean</td>
-            <td class="outputname" data-label="Description">Include patient insurance information. Shows insurance packages for the appointment if any are selected, and all patient packages otherwise.</td>
-        </tr>
-        <tr>
-            <td class="outputname" data-label="Name">showpatientdetail</td>
-            <td class="outputname" data-label="Type">boolean</td>
-            <td class="outputname" data-label="Description">Include patient information for each patient associated with an appointment.</td>
-        </tr>
-        <tr>
-            <td class="outputname" data-label="Name">showprocessedenddatetime</td>
+            <td class="outputname" data-label="Name">industrycode</td>
             <td class="outputname" data-label="Type">string</td>
-            <td class="outputname" data-label="Description">See showprocessedstartdatetime.</td>
+            <td class="outputname" data-label="Description">Industry of the patient, using the US Census industry code (code system 2.16.840.1.113883.6.310).  "other" can be used as well.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
         </tr>
         <tr>
-            <td class="outputname" data-label="Name">showprocessedstartdatetime</td>
+            <td class="outputname" data-label="Name">language6392code</td>
             <td class="outputname" data-label="Type">string</td>
-            <td class="outputname" data-label="Description">Show already processed changes.  This will show changes that you previously retrieved at some point after this datetime mm/dd/yyyy hh24:mi:ss (Eastern). Can be used to refetch data if there was an error, such as a timeout, and records are marked as already retrieved. This is intended to be used with showprocessedenddatetime and for a short period of time only. Also note that all messages will eventually be deleted.</td>
+            <td class="outputname" data-label="Description">Language of the patient, using the ISO 639.2 code. (http://www.loc.gov/standards/iso639-2/php/code_list.php; "T" or terminology code) Special case: use "declined" to indicate that the patient declined to answer.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
         </tr>
         <tr>
-            <td class="outputname" data-label="Name">showremindercalldetail</td>
+            <td class="outputname" data-label="Name">lastname</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 60)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">lookupdepartmentid</td>
+            <td class="outputname" data-label="Type">integer</td>
+            <td class="outputname" data-label="Description">Use this in practices that register copies of patients in different departments in order to make sure you are updating the correct version of the patient.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">maritalstatus</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 1)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">
+                <table class="table-responsive">
+                    <tbody>
+                        <tr>
+                            <th>Submitted Value</th>
+                            <th>Display Value</th>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">D</td>
+                            <td data-label="Display Value">DIVORCED</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">M</td>
+                            <td data-label="Display Value">MARRIED</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">P</td>
+                            <td data-label="Display Value">PARTNER</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">S</td>
+                            <td data-label="Display Value">SINGLE</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">U</td>
+                            <td data-label="Display Value">UNKNOWN</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">W</td>
+                            <td data-label="Display Value">WIDOWED</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">X</td>
+                            <td data-label="Display Value">SEPARATED</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">middlename</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 25)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">mobilecarrierid</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">The ID of the mobile carrier, from /mobilecarriers or the list below.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">
+                <table class="table-responsive">
+                    <tbody>
+                        <tr>
+                            <th>Submitted Value</th>
+                            <th>Display Value</th>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value"></td>
+                            <td data-label="Display Value">(none)</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">21</td>
+                            <td data-label="Display Value">ACS Wireless</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">22</td>
+                            <td data-label="Display Value">Alltel</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">23</td>
+                            <td data-label="Display Value">Appalachian Wireless</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">24</td>
+                            <td data-label="Display Value">AT&amp;T Cingular</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">25</td>
+                            <td data-label="Display Value">Bluegrass Cellular</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">26</td>
+                            <td data-label="Display Value">Boost (iDEN)</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">27</td>
+                            <td data-label="Display Value">Boost Unlimited (CDMA)</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">28</td>
+                            <td data-label="Display Value">Cellcom</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">29</td>
+                            <td data-label="Display Value">Cellular One from Dobson</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">30</td>
+                            <td data-label="Display Value">Cellular One of East Central Illinois</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">32</td>
+                            <td data-label="Display Value">Cellular South</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">33</td>
+                            <td data-label="Display Value">Centennial Wireless</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">34</td>
+                            <td data-label="Display Value">Cincinnati Bell</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">35</td>
+                            <td data-label="Display Value">Cricket Communications</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">36</td>
+                            <td data-label="Display Value">GCI Communications</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">37</td>
+                            <td data-label="Display Value">Golden State Cellular</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">38</td>
+                            <td data-label="Display Value">Illinois Valley Cellular</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">39</td>
+                            <td data-label="Display Value">Immix Wireless</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">40</td>
+                            <td data-label="Display Value">Inland Cellular</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">41</td>
+                            <td data-label="Display Value">Nex-Tech Wireless</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">43</td>
+                            <td data-label="Display Value">nTelos Wireless</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">44</td>
+                            <td data-label="Display Value">Sprint</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">45</td>
+                            <td data-label="Display Value">Thumb Cellular</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">46</td>
+                            <td data-label="Display Value">T-Mobile</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">47</td>
+                            <td data-label="Display Value">Unicel</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">48</td>
+                            <td data-label="Display Value">United Wireless</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">49</td>
+                            <td data-label="Display Value">US Cellular</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">50</td>
+                            <td data-label="Display Value">Verizon Wireless</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">51</td>
+                            <td data-label="Display Value">Viaero Wireless</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">52</td>
+                            <td data-label="Display Value">Virgin Mobile USA</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">53</td>
+                            <td data-label="Display Value">West Central Wireless</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">54</td>
+                            <td data-label="Display Value">Bell Mobility</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">55</td>
+                            <td data-label="Display Value">Fido</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">56</td>
+                            <td data-label="Display Value">MTS Mobility</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">57</td>
+                            <td data-label="Display Value">Rogers Wireless</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">58</td>
+                            <td data-label="Display Value">SaskTel Mobility</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">59</td>
+                            <td data-label="Display Value">Telus Mobility</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">60</td>
+                            <td data-label="Display Value">Virgin Mobile</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">81</td>
+                            <td data-label="Display Value">MetroPCS</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">mobilephone</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 20)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">nextkinname</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 50)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">nextkinphone</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 20)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">nextkinrelationship</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 10)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">
+                <table class="table-responsive">
+                    <tbody>
+                        <tr>
+                            <th>Submitted Value</th>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value"></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">CHILD</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">COUSIN</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">FRIEND</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">GUARDIAN</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">OTHER</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">PARENT</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">SIBLING</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">SPOUSE</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">notes</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 4000)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">occupationcode</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">Occupation of the patient, using the US Census occupation code (code system 2.16.840.1.113883.6.240).  "other" can be used as well.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">onlinestatementonlyyn</td>
             <td class="outputname" data-label="Type">boolean</td>
-            <td class="outputname" data-label="Description">Include all remindercall related results, if available, associated with an appointment.</td>
+            <td class="outputname" data-label="Description">(Max length: 1)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">{patientid}</td>
+            <td class="outputname" data-label="Type">integer</td>
+            <td class="outputname" data-label="Description">The athenaNet patient ID</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">portalaccessgiven</td>
+            <td class="outputname" data-label="Type">boolean</td>
+            <td class="outputname" data-label="Description">(Max length: 1)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">povertylevelcalculated</td>
+            <td class="outputname" data-label="Type">number</td>
+            <td class="outputname" data-label="Description">Patient's poverty level (% of the Federal Poverty Level), as calculated from family size, income per pay period, pay period, and state. Typically only valued if client has Federal Poverty Level fields turned on.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">
+                <table class="table-responsive">
+                    <tbody>
+                        <tr>
+                            <th>Submitted Value</th>
+                            <th>Display Value</th>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">100</td>
+                            <td data-label="Display Value">100% and below</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">125</td>
+                            <td data-label="Display Value">101% - 150%</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">175</td>
+                            <td data-label="Display Value">151% - 200%</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">250</td>
+                            <td data-label="Display Value">Over 200%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">povertylevelfamilysize</td>
+            <td class="outputname" data-label="Type">number</td>
+            <td class="outputname" data-label="Description">Patient's family size (used for determining poverty level). Only settable if client has Federal Poverty Level fields turned on.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">povertylevelfamilysizedeclined</td>
+            <td class="outputname" data-label="Type">boolean</td>
+            <td class="outputname" data-label="Description">(Max length: 1)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">povertylevelincomedeclined</td>
+            <td class="outputname" data-label="Type">boolean</td>
+            <td class="outputname" data-label="Description">(Max length: 1)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">povertylevelincomepayperiod</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 20)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">
+                <table class="table-responsive">
+                    <tbody>
+                        <tr>
+                            <th>Submitted Value</th>
+                            <th>Display Value</th>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value"></td>
+                            <td data-label="Display Value">(null)</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">BIWEEK</td>
+                            <td data-label="Display Value">2 Weeks</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">MONTH</td>
+                            <td data-label="Display Value"></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">WEEK</td>
+                            <td data-label="Display Value"></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">YEAR</td>
+                            <td data-label="Display Value"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">povertylevelincomeperpayperiod</td>
+            <td class="outputname" data-label="Type">integer</td>
+            <td class="outputname" data-label="Description">Patient's income per specified pay period (used for determining poverty level). Only settable if client has Federal Poverty Level fields turned on.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">povertylevelincomerangedeclined</td>
+            <td class="outputname" data-label="Type">boolean</td>
+            <td class="outputname" data-label="Description">Indicates whether or not the patient declines to provide an income level (povertylevelcalculated).</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">preferredname</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 35)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">preferredpronouns</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">Pronoun this patient uses.  This is only available in practices with the appropriate practice settings.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">
+                <table class="table-responsive">
+                    <tbody>
+                        <tr>
+                            <th>Submitted Value</th>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value"></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">he/him</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">she/her</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">they/them</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">primarydepartmentid</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">The patient's "current" department. This field is not always set by the practice.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">primaryproviderid</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">The "primary" provider for this patient, if set.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">publichousing</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 1)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">
+                <table class="table-responsive">
+                    <tbody>
+                        <tr>
+                            <th>Submitted Value</th>
+                            <th>Display Value</th>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value"></td>
+                            <td data-label="Display Value">(null)</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">N</td>
+                            <td data-label="Display Value">No</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">P</td>
+                            <td data-label="Display Value">Patient Declined</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">Y</td>
+                            <td data-label="Display Value">Yes</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">race</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">The patient race, using the 2.16.840.1.113883.5.104 codeset. See http://www.hl7.org/implement/standards/fhir/terminologies-v3.html Special case: use "declined" to indicate that the patient declined to answer. Multiple values or a tab-seperated list of codes is acceptable for multiple races for input. The first race will be considered "primary".  Note: you must update all values at once if you update any.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">referralsourceid</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">The referral / "how did you hear about us" ID.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">referralsourceother</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 100)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">registerpatientindepartment</td>
+            <td class="outputname" data-label="Type">boolean</td>
+            <td class="outputname" data-label="Description">If you use LOOKUPDEPARTMENTID to get the local copy of a patient to update, and if the patient is not currently registered in that department, setting this flag will register a new copy of this patient in that department.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">schoolbasedhealthcenter</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 1)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">
+                <table class="table-responsive">
+                    <tbody>
+                        <tr>
+                            <th>Submitted Value</th>
+                            <th>Display Value</th>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value"></td>
+                            <td data-label="Display Value">(null)</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">N</td>
+                            <td data-label="Display Value">No</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">P</td>
+                            <td data-label="Display Value">Patient Declined</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">Y</td>
+                            <td data-label="Display Value">Yes</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">sex</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 1)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">
+                <table class="table-responsive">
+                    <tbody>
+                        <tr>
+                            <th>Submitted Value</th>
+                            <th>Display Value</th>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value"></td>
+                            <td data-label="Display Value"></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">F</td>
+                            <td data-label="Display Value">Female</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">M</td>
+                            <td data-label="Display Value">Male</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">sexualorientation</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">Sexual orientation of this patient. This is only available in practices with the appropriate practice settings.</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">
+                <table class="table-responsive">
+                    <tbody>
+                        <tr>
+                            <th>Submitted Value</th>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value"></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">Bisexual</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">Choose not to disclose</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">Don't know</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">Lesbian, gay or homosexual</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">Something else</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">Something else, please describe</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">Straight or heterosexual</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">sexualorientationother</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">Only valid when used in conjunction with a sexual orientation choice that allows the patient to describe their orientation (if it doesn't conform to any other choice).</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">ssn</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 13)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">state</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 10)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">status</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 1)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">
+                <table class="table-responsive">
+                    <tbody>
+                        <tr>
+                            <th>Submitted Value</th>
+                            <th>Display Value</th>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">a</td>
+                            <td data-label="Display Value">active</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">i</td>
+                            <td data-label="Display Value">inactive</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">p</td>
+                            <td data-label="Display Value">prospective</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">suffix</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 10)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">veteran</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 1)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">
+                <table class="table-responsive">
+                    <tbody>
+                        <tr>
+                            <th>Submitted Value</th>
+                            <th>Display Value</th>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value"></td>
+                            <td data-label="Display Value">(null)</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">N</td>
+                            <td data-label="Display Value">No</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">P</td>
+                            <td data-label="Display Value">Patient Declined</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Submitted Value">Y</td>
+                            <td data-label="Display Value">Yes</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">workphone</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 20)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="outputname" data-label="Name">zip</td>
+            <td class="outputname" data-label="Type">string</td>
+            <td class="outputname" data-label="Description">(Max length: 10)</td>
+            <td class="outputname" data-label="Default">&nbsp;</td>
+            <td class="outputname" data-label="Values">&nbsp;</td>
         </tr>
     </tbody>
 </table>

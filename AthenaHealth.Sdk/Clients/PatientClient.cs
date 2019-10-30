@@ -186,5 +186,34 @@ namespace AthenaHealth.Sdk.Clients
         {
             await _connection.Put<StatusResponse>($"{_connection.PracticeId}/chart/{request.PatientId}/allergies", request);
         }
+
+        public async Task<CreatePatientResponse> CreatePatient(CreatePatient request)
+        {
+            var result = await _connection.Post<CreatePatientResponse[]>($"{_connection.PracticeId}/patients", body: request);
+
+            return result.FirstOrThrowException();
+        }
+
+        public async Task<UpdatePatientResponse> UpdatePatient(int patientId, UpdatePatient request)
+        {
+            var result = await _connection.Put<UpdatePatientResponse[]>($"{_connection.PracticeId}/patients/{patientId}", body: request);
+
+            return result.FirstOrThrowException();
+        }
+
+        /// <summary>
+        /// Sets patient status to inactive
+        /// </summary>
+        /// <param name="patientId"></param>
+        /// <returns></returns>
+        public async Task<UpdatePatientResponse> DeletePatient(int patientId)
+        {
+            UpdatePatient request = new UpdatePatient()
+            {
+                Status = Models.Enums.StatusEnum.Inactive
+            };
+
+            return await UpdatePatient(patientId, request);
+        }
     }
 }
