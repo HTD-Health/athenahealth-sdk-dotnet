@@ -53,5 +53,13 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// <param name="medication"></param>
         /// <returns></returns>
         Task<MedicationAddedResponse> AddMedication(int patientId, AddMedication medication);
+
+        /// <summary>
+        /// Update the section wide note and no medications reported flag.
+        /// </summary>
+        /// <param name="patientId"></param>
+        /// <param name="setting"></param>
+        /// <returns></returns>
+        Task SetMedicationSettings(int patientId, MedicationSetting setting);
     }
 }

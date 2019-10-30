@@ -428,5 +428,11 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             response.IsSuccess.ShouldBeFalse();
             response.ErrorMessage.ShouldContain($"MedicationID {medicationId} does not match any known medications.");
         }
+
+        [Fact]
+        public void SetMedicationSettings_ValidModel_NotThrowsException()
+        {
+            Should.NotThrow(async () => await _client.Patients.SetMedicationSettings(100, new MedicationSetting(1, "Test 123")));
+        }
     }
 }

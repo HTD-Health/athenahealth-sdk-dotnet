@@ -148,5 +148,10 @@ namespace AthenaHealth.Sdk.Clients
         {
             return await _connection.Post<MedicationAddedResponse>($"{_connection.PracticeId}/chart/{patientId}/medications", null, medication);
         }
+
+        public async Task SetMedicationSettings(int patientId, MedicationSetting setting)
+        {
+            await _connection.Put<BaseResponse>($"{_connection.PracticeId}/chart/{patientId}/medications", setting);
+        }
     }
 }
