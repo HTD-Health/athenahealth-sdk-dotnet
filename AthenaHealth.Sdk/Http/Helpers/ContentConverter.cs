@@ -29,9 +29,10 @@ namespace AthenaHealth.Sdk.Http.Helpers
 
         /// <summary>
         /// Performs conversion from object to dictionary.
+        /// Name of the property becomes a dictionary key. Value of the property becomes dictionary value. 
         /// </summary>
         /// <param name="obj">Object to be converted</param>
-        /// <returns>Converted object.</returns>
+        /// <returns>Converted object as dictionary</returns>
         public static IDictionary<string, string> ConvertObjectToDictionary(object obj)
         {
             IDictionary<string, string> dictionary = new Dictionary<string, string>();
@@ -45,7 +46,7 @@ namespace AthenaHealth.Sdk.Http.Helpers
                     if (value == null)
                         continue;
 
-                    string stringValue = ObjectToDelimitedStringConverter.Convert(value);
+                    string stringValue = ObjectToStringOrDelimitedStringConverter.Convert(value);
 
                     if (stringValue == null)
                         continue;
