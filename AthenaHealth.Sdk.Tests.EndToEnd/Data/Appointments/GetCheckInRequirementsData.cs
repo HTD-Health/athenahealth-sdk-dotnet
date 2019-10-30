@@ -13,7 +13,6 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd.Data.Appointments
         {
             yield return new object[] { 123 };
             yield return new object[] { 1266 };
-            yield return new object[] { 1313 };
             //yield return new object[] { 1350 };
             //yield return new object[] { 1376 };
             //yield return new object[] { 1485 };

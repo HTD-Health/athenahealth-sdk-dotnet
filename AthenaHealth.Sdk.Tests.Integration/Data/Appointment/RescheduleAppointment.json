@@ -1,0 +1,11 @@
+[
+  {
+    "appointmentid": "1206017",
+    "departmentid": "1",
+    "providerid": "",
+    "appointmentstatus": "f",
+    "duration": 15,
+    "patientid": "1",
+    "appointmenttypeid": "42"
+  }
+]

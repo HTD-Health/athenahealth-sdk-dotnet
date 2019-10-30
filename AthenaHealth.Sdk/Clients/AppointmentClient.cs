@@ -151,5 +151,11 @@ namespace AthenaHealth.Sdk.Clients
             }
             return await _connection.Get<AppointmentReasonResponse>(url, filter);
         }
+
+        public async Task<Appointment> RescheduleAppointment(RescheduleAppointment rescheduledAppointment)
+        {
+            Appointment[] result =  await _connection.Put<Appointment[]>($"{_connection.PracticeId}/appointments/{rescheduledAppointment.AppointmentId}/reschedule", rescheduledAppointment);
+            return result.FirstOrThrowException();
+        }
     }
 }

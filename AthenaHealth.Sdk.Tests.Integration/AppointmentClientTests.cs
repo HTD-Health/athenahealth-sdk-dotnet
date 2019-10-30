@@ -324,5 +324,18 @@ namespace AthenaHealth.Sdk.Tests.Integration
             response.Items.ShouldContain(a => a.ReasonType == AppointmentReasonTypeEnum.Existing);
             response.Items.ShouldContain(a => a.Reason == "Sick Visit");
         }
+
+        [Fact]
+        public async Task RescheduleAppointment()
+        {
+            IAppointmentClient client = new Clients.AppointmentClient(ConnectionFactory.CreateFromFile(@"Data\Appointment\RescheduleAppointment.json"));
+            RescheduleAppointment rescheduleRequest = new RescheduleAppointment(1, 1206017, 1, "test");
+
+            Appointment appointmentRescheduled = await client.RescheduleAppointment(rescheduleRequest);
+
+            appointmentRescheduled.ShouldNotBeNull();
+            appointmentRescheduled.Id.ShouldBe(1206017);
+            appointmentRescheduled.PatientId.ShouldBe(1);
+        }
     }
 }

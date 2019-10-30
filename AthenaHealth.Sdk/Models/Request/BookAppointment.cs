@@ -15,7 +15,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// <summary>
         /// The appointment slot to schedule into.
         /// </summary>
-        [JsonProperty(PropertyName = "{appointmentid}")]
+        [JsonProperty(PropertyName = "appointmentid")]
         [Required]
         public int AppointmentId { get; set; }
 
