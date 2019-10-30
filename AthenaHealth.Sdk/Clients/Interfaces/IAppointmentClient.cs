@@ -101,5 +101,7 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         Task<InsuranceResponse> GetAppointmentInsurances(GetAppointmentInsurancesFilter filter);
 
         Task<AppointmentReasonResponse> GetAppointmentReasons(GetAppointmentReasonsFilter filter);
+
+        Task<Appointment> RescheduleAppointment(RescheduleAppointment rescheduledAppointment);
     }
 }

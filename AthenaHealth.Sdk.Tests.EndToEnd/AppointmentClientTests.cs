@@ -451,5 +451,56 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             response.Items.ShouldNotContain(a => a.Id == 0);
             response.Items.ShouldContain(a => !string.IsNullOrEmpty(a.Reason));
         }
+
+
+        [Fact(Skip = "Below test is slow - takes around 45 seconds to run")]
+        public async Task RescheduleAppointment()
+        {
+            int patientId = 1;
+            //Create new appointment slot 1
+            CreateAppointmentSlot slot1 = new CreateAppointmentSlot(
+                1, 
+                86,
+                new DateTime(2020, 1, 1),
+                new ClockTime[] { new ClockTime(16, 00) })
+            {
+                ReasonId = 962
+
+            };
+            AppointmentSlotCreationResponse response = await _client.Appointments.CreateAppointmentSlot(slot1);
+            int slot1Id = int.Parse(response.AppointmentIds.First().Key);
+
+            //Create new appointment slot 2
+            CreateAppointmentSlot slot2 = new CreateAppointmentSlot(
+                1, 
+                86,
+                new DateTime(2020, 1, 2),
+                new ClockTime[] { new ClockTime(17, 00) })
+            {
+                ReasonId = 962
+
+            };
+            response = await _client.Appointments.CreateAppointmentSlot(slot2);
+            int slot2Id = int.Parse(response.AppointmentIds.First().Key);
+
+            
+            //Book appointment on slot 1
+            BookAppointment booking = new BookAppointment(slot1Id)
+            {
+                PatientId = patientId,
+                ReasonId = 962,
+                IgnoreSchedulablePermission = true
+            };
+            Appointment appointment = await _client.Appointments.BookAppointment(booking);
+
+            //Reschedule appointment
+            RescheduleAppointment rescheduleRequest = new RescheduleAppointment(slot1Id, slot2Id, patientId, "test");
+
+            Appointment appointmentRescheduled = await _client.Appointments.RescheduleAppointment(rescheduleRequest);
+
+            appointmentRescheduled.ShouldNotBeNull();
+            appointmentRescheduled.Id.ShouldBe(slot2Id);
+            appointmentRescheduled.PatientId.ShouldBe(1);
+        }
     }
 }

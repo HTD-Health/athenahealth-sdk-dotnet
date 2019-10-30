@@ -46,6 +46,9 @@
     <None Update="Data\Appointment\CreateNote.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Data\Appointment\RescheduleAppointment.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Data\Appointment\SearchReminders.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
