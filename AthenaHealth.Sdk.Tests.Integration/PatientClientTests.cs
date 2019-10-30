@@ -3,6 +3,7 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using AthenaHealth.Sdk.Clients;
+using AthenaHealth.Sdk.Clients.Interfaces;
 using AthenaHealth.Sdk.Exceptions;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
@@ -697,12 +698,22 @@ namespace AthenaHealth.Sdk.Tests.Integration
         [Fact]
         public async Task AddMedication_ValidData_ReturnsCreatedId()
         {
-            var patientClient = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\AddMedication.json", HttpStatusCode.OK));
+            IPatientClient patientClient = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\AddMedication.json", HttpStatusCode.OK));
 
             MedicationAddedResponse response = await patientClient.AddMedication(100, new AddMedication(1, 296232));
 
             response.MedicationEntryId.ShouldNotBeNullOrWhiteSpace();
             response.IsSuccess.ShouldBeTrue();
+        }
+
+        [Fact]
+        public void SetMedicationSettings_ValidData_NotThrowsException()
+        {
+            IPatientClient patientClient = new PatientClient(ConnectionFactory.Create("{\"success\": true}", HttpStatusCode.OK));
+
+            Should.NotThrow(async () 
+                => await patientClient.SetMedicationSettings(100, new MedicationSetting(1, "Test 123", false))
+                );
         }
     }
 }
