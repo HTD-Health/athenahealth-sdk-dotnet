@@ -37,7 +37,7 @@ namespace AthenaHealth.Sdk.Tests.Helpers
             dict[nameof(obj.varDouble)].ShouldBe("0.4");
             dict[nameof(obj.varFloat)].ShouldBe("0.4");
             dict[nameof(obj.varDecimal)].ShouldBe("0.4");
-            dict[nameof(obj.varBool)].ShouldBe("True");
+            dict[nameof(obj.varBool)].ShouldBe("true");
 
             dict.ShouldNotContainKey(nameof(obj.varNullableInt));
             dict.ShouldNotContainKey(nameof(obj.varNullableString));
@@ -68,9 +68,31 @@ namespace AthenaHealth.Sdk.Tests.Helpers
             dict[nameof(obj.varDouble)].ShouldBe("[0.4,0.5]");
             dict[nameof(obj.varFloat)].ShouldBe("[0.4,0.5]");
             dict[nameof(obj.varDecimal)].ShouldBe("[0.4,0.5]");
-            dict[nameof(obj.varBool)].ShouldBe("[True,False]");
+            dict[nameof(obj.varBool)].ShouldBe("[true,false]");
 
             dict.ShouldNotContainKey(nameof(obj.varEmpty));
+        }
+
+        /// <summary>
+        /// This is more theoretical case rather than business need. Test has been created to check how it behaves with nested objects. 
+        /// </summary>
+        [Fact]
+        public void ConvertObjectToDictionary_NestedProperties_ReturnsNestedAsJson()
+        {
+            var obj = new
+            {
+                name = "a",
+                address = new
+                {
+                    street = "b",
+                    number = 1
+                }
+            };
+
+            var dict = ContentConverter.ConvertObjectToDictionary(obj);
+            
+            dict[nameof(obj.name)].ShouldBe("a");
+            dict[nameof(obj.address)].ShouldBe("{ street = b, number = 1 }"); //This gives the following result for nested json. Not sure what is the expected result in real life.
         }
     }
 }
