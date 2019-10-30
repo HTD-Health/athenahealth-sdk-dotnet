@@ -434,5 +434,34 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         {
             Should.NotThrow(async () => await _client.Patients.SetMedicationSettings(100, new MedicationSetting(1, "Test 123")));
         }
+
+        [Fact]
+        public async Task GetPatientAppointments_WithFilter_ReturnsAppointments()
+        {
+            GetPatientAppointmentFilter filter = new GetPatientAppointmentFilter
+            {
+                ShowCancelled = true,
+                ShowExpectedProcedureCodes = true,
+                ShowPast = true,
+                Limit = 500
+            };
+            AppointmentResponse response = await _client.Patients.GetPatientAppointments(1, filter);
+
+            response.Total.ShouldBeGreaterThan(0);
+            response.Items.ShouldNotBeNull();
+            response.Items.Length.ShouldBeGreaterThan(0);
+            response.Items.ShouldContain(a=>a.Date != null);
+        }
+
+        [Fact]
+        public async Task GetPatientAppointments_NoFilter_ReturnsAppointments()
+        {
+            AppointmentResponse response = await _client.Patients.GetPatientAppointments(1);
+
+            response.Total.ShouldBeGreaterThan(0);
+            response.Items.ShouldNotBeNull();
+            response.Items.Length.ShouldBeGreaterThan(0);
+            response.Items.ShouldContain(a=>a.Date != null);
+        }
     }
 }

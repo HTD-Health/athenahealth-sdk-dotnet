@@ -61,5 +61,7 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// <param name="setting"></param>
         /// <returns></returns>
         Task SetMedicationSettings(int patientId, MedicationSetting setting);
+
+        Task<AppointmentResponse> GetPatientAppointments(int patientId, GetPatientAppointmentFilter filter = null);
     }
 }

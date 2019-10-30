@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using HtmlAgilityPack;
 
@@ -88,6 +90,7 @@ namespace AthenaHealth.Tools.WebDocParser
         }
 
 
+        [DebuggerDisplay("{Name,nq} | {Type,nq} | {Description,nq}")]
         public class Item
         {
             public string Name;
