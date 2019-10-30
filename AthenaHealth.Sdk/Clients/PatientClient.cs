@@ -153,5 +153,10 @@ namespace AthenaHealth.Sdk.Clients
         {
             await _connection.Put<BaseResponse>($"{_connection.PracticeId}/chart/{patientId}/medications", setting);
         }
+
+        public async Task<AppointmentResponse> GetPatientAppointments(int patientId, GetPatientAppointmentFilter filter = null)
+        {
+            return await _connection.Get<AppointmentResponse>($"{_connection.PracticeId}/patients/{patientId}/appointments", filter);
+        }
     }
 }

@@ -696,6 +696,21 @@ namespace AthenaHealth.Sdk.Tests.Integration
         }
 
         [Fact]
+        public async Task GetPatientAppointments_ReturnsAppointments()
+        {
+            // Arrange
+            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetPatientAppointments.json"));
+            
+            // Act
+            var result = await patientClient.GetPatientAppointments(1);
+
+            // Assert
+            result.ShouldNotBeNull();
+            result.Total.ShouldBe(2205);
+            result.Items.ShouldContain(a=>a.PatientAppointmentTypeName == "Office Visit");
+        }
+
+        [Fact]
         public async Task AddMedication_ValidData_ReturnsCreatedId()
         {
             IPatientClient patientClient = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\AddMedication.json", HttpStatusCode.OK));

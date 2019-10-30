@@ -22,10 +22,10 @@ namespace AthenaHealth.Tools.WebDocComparer
             }
 
             Console.WriteLine("Scanning in2 against in1...");
-            foreach (var item in in1)
+            foreach (var item in in2)
             {
-                if (!in2.Contains(item))
-                    Console.WriteLine($"{item.Name} ({item.Type}) exists in in1.html, but not exists in in2.html");
+                if (!in1.Contains(item))
+                    Console.WriteLine($"{item.Name} ({item.Type}) exists in in2.html, but not exists in in1.html");
             }
 
             Console.ReadKey();

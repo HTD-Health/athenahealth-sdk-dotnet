@@ -352,7 +352,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             Appointment appointment = await _client.Appointments.BookAppointment(booking);
 
             //Assert booking
-            appointment.Id = appointmentId;
+            appointment.Id.ShouldBe(appointmentId);
             appointment.Date.ShouldNotBeNull();
 
             //Cancel appointment
@@ -426,7 +426,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
                 ShowFullSsn = true
             };
 
-            InsuranceResponse response = await _client.Appointments.GetAppointmentInsurances(filter);
+            InsuranceResponse response = await _client.Appointments.GetAppointmentInsurances(filter);   
 
             response.Total.ShouldBeGreaterThan(0);
             response.Items.ShouldNotBeNull();

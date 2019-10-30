@@ -289,6 +289,13 @@ namespace AthenaHealth.Sdk.Models.Response
         [JsonProperty(PropertyName = "patientid")]
         public int? PatientId { get; set; }
 
+        /// <summary>
+        /// If true, encounter prep has been started for the encounter associated with this appointment.
+        /// </summary>
+        [JsonProperty(PropertyName = "encounterprep")]
+        public bool? EncounterPrep { get; set; }
+
+
         public class AppointmentNote
         {
             /// <summary>
