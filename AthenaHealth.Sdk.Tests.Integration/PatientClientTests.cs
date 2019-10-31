@@ -756,5 +756,13 @@ namespace AthenaHealth.Sdk.Tests.Integration
                 => await patientClient.SetMedicationSettings(100, new MedicationSetting(1, "Test 123", false))
                 );
         }
+
+        [Fact]
+        public void SetPatientDefaultLaboratory_NotThrowsException()
+        {
+            IPatientClient patientClient = new PatientClient(ConnectionFactory.Create("{\"success\": true}", HttpStatusCode.OK));
+
+            Should.NotThrow(async () => await patientClient.SetPatientDefaultLaboratory(1, 1, 10943173));
+        }
     }
 }
