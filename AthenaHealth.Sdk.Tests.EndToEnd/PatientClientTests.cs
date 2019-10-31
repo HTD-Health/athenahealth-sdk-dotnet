@@ -483,18 +483,18 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         }
 
         [Fact]
-        public void SetPatientDAllergies_NotThrowsException()
+        public void SetAllergies_NotThrowsException()
         {
             SetPatientAllergies request = new SetPatientAllergies(1, 111)
             {
-                SectionNote = "test",
+                SectionNote = "test2",
                 Allergies = new[]
                 {
                     new SetPatientAllergies.Allergy
                     {
-                        Id = 27488,
-                        AllergenName = "Ala-Quin",
-                        Note = "allergy test",
+                        Id = 13549,
+                        AllergenName = "Allantoin",
+                        Note = "allergy test 3",
                         Reactions = new[]
                         {
                             new SetPatientAllergies.Allergy.Reaction()
