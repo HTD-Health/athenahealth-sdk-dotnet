@@ -1,4 +1,9 @@
-﻿using AthenaHealth.Sdk.Http.Helpers;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+using AthenaHealth.Sdk.Http.Helpers;
+using AthenaHealth.Sdk.Models;
+using AthenaHealth.Sdk.Models.Converters;
+using Newtonsoft.Json;
 using Shouldly;
 using Xunit;
 
@@ -90,9 +95,81 @@ namespace AthenaHealth.Sdk.Tests.Helpers
             };
 
             var dict = ContentConverter.ConvertObjectToDictionary(obj);
-            
+
             dict[nameof(obj.name)].ShouldBe("a");
-            dict[nameof(obj.address)].ShouldBe("{ street = b, number = 1 }"); //This gives the following result for nested json. Not sure what is the expected result in real life.
+            dict[nameof(obj.address)].ShouldBe("{\"street\":\"b\",\"number\":1}"); //This gives the following result for nested json. Not sure what is the expected result in real life.
+        }
+
+
+        class TestClassWithJsonConverter
+        {
+            [JsonProperty("dob")]
+            [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+            public DateTime? DateOfBirth { get; set; }
+        }
+
+        [Fact]
+        public void ConvertObjectToDictionary_PropertyWithJsonConverterAttribute_ResultWithoutQuotes()
+        {
+            var obj = new TestClassWithJsonConverter
+            {
+                DateOfBirth = new DateTime(2019, 01, 02)
+            };
+
+            var dict = ContentConverter.ConvertObjectToDictionary(obj);
+
+            dict["dob"].ShouldBe("01/02/2019");
+        }
+
+        [Fact]
+        public void ConvertObjectToDictionary_PropertyWithJsonConverterAttributeButNull_NoResult()
+        {
+            var obj = new TestClassWithJsonConverter
+            {
+                DateOfBirth = null
+            };
+
+            var dict = ContentConverter.ConvertObjectToDictionary(obj);
+
+            dict.ShouldBeEmpty();
+        }
+
+        [Fact]
+        public void ConvertObjectToDictionary_Date_CorrectOutput()
+        {
+            var obj = new
+            {
+                date = new DateTime(2019, 01, 01)
+            };
+
+            var dict = ContentConverter.ConvertObjectToDictionary(obj);
+
+            dict[nameof(obj.date)].ShouldBe("01/01/2019 00:00:00");
+        }
+
+
+        class TestClassClockTimeArray
+        {
+            [JsonProperty(PropertyName = "appointmenttime")]
+            [JsonConverter(typeof(CustomArrayToStringConverter), ",")]
+            public ClockTime[] AppointmentTime { get; set; }
+        }
+
+        [Fact]
+        public void ConvertObjectToDictionary_ClockTimeArray_CorrectOutput()
+        {
+            TestClassClockTimeArray obj = new TestClassClockTimeArray
+            {
+                AppointmentTime = new ClockTime[]
+                {
+                    new ClockTime(17,00),
+                    new ClockTime(18,00)
+                }
+            };
+
+            var dict = ContentConverter.ConvertObjectToDictionary(obj);
+
+            dict["appointmenttime"].ShouldBe("17:00,18:00");
         }
     }
 }

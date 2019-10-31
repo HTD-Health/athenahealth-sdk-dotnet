@@ -309,7 +309,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
                 1, 
                 86,
                 new DateTime(2020, 1, 1),
-                new ClockTime[] { new ClockTime(16, 00) })
+                new ClockTime[] { new ClockTime(16, 00), new ClockTime(17, 00) })
             {
                 ReasonId = 962
             };

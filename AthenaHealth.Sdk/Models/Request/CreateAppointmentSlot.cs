@@ -28,7 +28,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// <summary>
         /// The time (hh24:mi) for the new appointment slot.  Multiple times (either as a comma delimited list or multiple POSTed values) are allowed.  24 hour time.
         /// </summary>
-        [JsonProperty(PropertyName = "appointmenttime", ItemConverterType = typeof(ClockTime))]
+        [JsonProperty(PropertyName = "appointmenttime")]
         [JsonConverter(typeof(CustomArrayToStringConverter), ",")]
         [Required]
         public ClockTime[] AppointmentTime { get; set; }
