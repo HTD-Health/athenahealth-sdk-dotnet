@@ -66,6 +66,20 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
 
         Task<AppointmentResponse> GetPatientAppointments(int patientId, GetPatientAppointmentFilter filter = null);
 
+        /// <summary>
+        /// Sets patient default laboratory
+        /// </summary>
+        /// <param name="patientId"></param>
+        /// <param name="departmentId"></param>
+        /// <param name="clinicalProviderId"></param>
+        /// <returns></returns>
         Task SetPatientDefaultLaboratory(int patientId, int departmentId, int clinicalProviderId);
+
+        /// <summary>
+        /// Updates patient allergy information
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        Task SetAllergies(SetPatientAllergies request);
     }
 }

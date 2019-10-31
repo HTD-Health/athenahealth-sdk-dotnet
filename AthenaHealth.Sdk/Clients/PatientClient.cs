@@ -181,5 +181,10 @@ namespace AthenaHealth.Sdk.Clients
             };
             await _connection.Put<StatusResponse>($"{_connection.PracticeId}/chart/{patientId}/labs/default", queryParameters);
         }
+
+        public async Task SetAllergies(SetPatientAllergies request)
+        {
+            await _connection.Put<StatusResponse>($"{_connection.PracticeId}/chart/{request.PatientId}/allergies", request);
+        }
     }
 }
