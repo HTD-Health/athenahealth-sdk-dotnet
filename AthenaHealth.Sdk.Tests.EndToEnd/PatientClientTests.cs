@@ -481,5 +481,35 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         {
             Should.NotThrow(async () => await _client.Patients.SetPatientDefaultLaboratory(1, 1, 10943173));
         }
+
+        [Fact]
+        public void SetPatientDAllergies_NotThrowsException()
+        {
+            SetPatientAllergies request = new SetPatientAllergies(1, 111)
+            {
+                SectionNote = "test",
+                Allergies = new[]
+                {
+                    new SetPatientAllergies.Allergy
+                    {
+                        Id = 27488,
+                        AllergenName = "Ala-Quin",
+                        Note = "allergy test",
+                        Reactions = new[]
+                        {
+                            new SetPatientAllergies.Allergy.Reaction()
+                            {
+                                ReactionName = "chest pain",
+                                Severity = "moderate to severe",
+                                SeveritySnomedCode = "371924009",
+                                SnomedCode = "29857009"
+                            }
+                        }
+                    }
+                }
+            };
+
+            Should.NotThrow(async () => await _client.Patients.SetAllergies(request));
+        }
     }
 }
