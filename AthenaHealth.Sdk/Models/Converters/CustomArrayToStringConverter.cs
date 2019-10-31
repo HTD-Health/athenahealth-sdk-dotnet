@@ -35,7 +35,7 @@ namespace AthenaHealth.Sdk.Models.Converters
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
-            var joinedString = ObjectToStringOrDelimitedStringConverter.Convert(value, _delimiter.ToString(), false);
+            var joinedString = ObjectToStringOrDelimitedStringConverter.Convert(value, _delimiter, false);
             writer.WriteValue(joinedString);
         }
     }

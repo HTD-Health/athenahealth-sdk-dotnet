@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using Newtonsoft.Json;
 
 namespace AthenaHealth.Sdk.Models.Converters
 {
@@ -11,7 +13,7 @@ namespace AthenaHealth.Sdk.Models.Converters
         /// If array, converts object to string delimited with the given delimiter with or without enclosing square brackets.
         /// E.g. new int[] {1, 2} converts to "1,2" or "[1,2]"
         ///      new string[] {"a", "b"} converts to "a,b" or "[a,b]"
-        /// Otherwise, performs simple ToString conversion.
+        /// Otherwise, performs json serialization.
         /// </summary>
         /// <param name="value">Object to be converted</param>
         /// <param name="delimiter">Delimiter</param>
@@ -46,6 +48,14 @@ namespace AthenaHealth.Sdk.Models.Converters
             {
                 return boolValue.ToString(CultureInfo.InvariantCulture).ToLower();
             }
+            if (value is DateTime dateTimeValue)
+            {
+                return dateTimeValue.ToString(CultureInfo.InvariantCulture);
+            }
+            if (value is ClockTime clockTimeValue)
+            {
+                return clockTimeValue.ToString();
+            }
             if (value is IEnumerable collection)
             {
                 var list = collection
@@ -60,7 +70,7 @@ namespace AthenaHealth.Sdk.Models.Converters
             }
 
             // Everything which does not suit rules above is converted that way
-            return value.ToString();
+            return JsonConvert.SerializeObject(value);
         }
 
         private static string JoinStringArray(IEnumerable<string> list, string delimiter, bool encloseArrayInSquareBrackets)

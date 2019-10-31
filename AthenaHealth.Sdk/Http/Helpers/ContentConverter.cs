@@ -29,7 +29,10 @@ namespace AthenaHealth.Sdk.Http.Helpers
 
         /// <summary>
         /// Performs conversion from object to dictionary.
-        /// Name of the property becomes a dictionary key. Value of the property becomes dictionary value. 
+        /// Name of the property becomes a dictionary key. Value of the property becomes dictionary value.
+        /// If JsonConvert attribute is set up, converter is used.
+        /// If value is an array, it is converted to delimited string
+        /// If value is neither an array nor simple type, it is serialized to JSON
         /// </summary>
         /// <param name="obj">Object to be converted</param>
         /// <returns>Converted object as dictionary</returns>
@@ -37,41 +40,77 @@ namespace AthenaHealth.Sdk.Http.Helpers
         {
             IDictionary<string, string> dictionary = new Dictionary<string, string>();
 
-            if (obj != null)
+            if (obj == null) 
+                return dictionary;
+
+            foreach (var item in obj.GetType().GetProperties())
             {
-                foreach (var item in obj.GetType().GetProperties())
-                {
-                    object value = item.GetValue(obj);
+                var key = GetKey(item);
 
-                    if (value == null)
-                        continue;
+                string value = GetValue(obj, item);
 
-                    string stringValue = ObjectToStringOrDelimitedStringConverter.Convert(value);
+                if (value != null) 
+                    dictionary[key] = value;
+            }
+            return dictionary;
+        }
 
-                    if (stringValue == null)
-                        continue;
+        
 
-                    JsonConverterAttribute jsonConverterAttribute = item.GetAttribute<JsonConverterAttribute>();
-
-                    if (jsonConverterAttribute != null)
-                    {
-                        JsonConverter converter = (JsonConverter)Activator.CreateInstance(jsonConverterAttribute.ConverterType, jsonConverterAttribute.ConverterParameters);
-
-                        stringValue = JsonConvert.SerializeObject(value, converter)
-                            .Trim('"');
-                    }
-
-                    JsonPropertyAttribute jsonPropertyAttribute = item.GetAttribute<JsonPropertyAttribute>();
-
-                    string key = item.Name;
-                    if (jsonPropertyAttribute != null)
-                        key = jsonPropertyAttribute.PropertyName;
-
-                    dictionary[key] = stringValue;
-                }
+        /// <summary>
+        /// Get value of an object in different cases
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <param name="item"></param>
+        /// <returns></returns>
+        private static string GetValue(object obj, PropertyInfo item)
+        {
+            object value = item.GetValue(obj);
+            if (value == null)
+                return null;
+            
+            //if JsonConverter attribute is set up
+            JsonConverterAttribute jsonConverterAttribute = item.GetAttribute<JsonConverterAttribute>();
+            if (jsonConverterAttribute != null)
+            {
+                return GetValueWithJsonConverter(jsonConverterAttribute, value);
             }
 
-            return dictionary;
+            return ObjectToStringOrDelimitedStringConverter.Convert(value);
+        }
+
+        /// <summary>
+        /// Gets value of an object using JsonConverter
+        /// </summary>
+        /// <param name="jsonConverterAttribute"></param>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        private static string GetValueWithJsonConverter(JsonConverterAttribute jsonConverterAttribute, object value)
+        {
+            JsonConverter converter = (JsonConverter)Activator.CreateInstance(jsonConverterAttribute.ConverterType,
+                jsonConverterAttribute.ConverterParameters);
+
+            string stringValue = JsonConvert.SerializeObject(value, converter)
+                .Trim('"');
+
+            return stringValue;
+        }
+
+
+        /// <summary>
+        /// Get item's key for dictionary
+        /// If item has JsonPropertyAttribute, name is get from the attribute
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
+        private static string GetKey(PropertyInfo item)
+        {
+            JsonPropertyAttribute jsonPropertyAttribute = item.GetAttribute<JsonPropertyAttribute>();
+
+            string key = item.Name;
+            if (jsonPropertyAttribute != null)
+                key = jsonPropertyAttribute.PropertyName;
+            return key;
         }
 
         /// <summary>
