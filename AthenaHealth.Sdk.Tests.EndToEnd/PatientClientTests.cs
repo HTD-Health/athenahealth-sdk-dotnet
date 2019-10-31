@@ -462,7 +462,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             response.Total.ShouldBeGreaterThan(0);
             response.Items.ShouldNotBeNull();
             response.Items.Length.ShouldBeGreaterThan(0);
-            response.Items.ShouldContain(a=>a.Date != null);
+            response.Items.ShouldContain(a => a.Date != null);
         }
 
         [Fact]
@@ -473,7 +473,13 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             response.Total.ShouldBeGreaterThan(0);
             response.Items.ShouldNotBeNull();
             response.Items.Length.ShouldBeGreaterThan(0);
-            response.Items.ShouldContain(a=>a.Date != null);
+            response.Items.ShouldContain(a => a.Date != null);
+        }
+
+        [Fact]
+        public void SetPatientDefaultLaboratory_NotThrowsException()
+        {
+            Should.NotThrow(async () => await _client.Patients.SetPatientDefaultLaboratory(1, 1, 10943173));
         }
     }
 }

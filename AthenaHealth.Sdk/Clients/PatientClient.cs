@@ -159,7 +159,7 @@ namespace AthenaHealth.Sdk.Clients
             return await _connection.Get<AppointmentResponse>($"{_connection.PracticeId}/patients/{patientId}/appointments", filter);
         }
 
-       public async Task<LabResultDetail> GetLabResultDetails(int patientId, int labResultId, bool? showTemplate = null)
+        public async Task<LabResultDetail> GetLabResultDetails(int patientId, int labResultId, bool? showTemplate = null)
         {
             var queryParameters = new
             {
@@ -169,6 +169,17 @@ namespace AthenaHealth.Sdk.Clients
             var result = await _connection.Get<LabResultDetail[]>($"{_connection.PracticeId}/patients/{patientId}/documents/labresult/{labResultId}", queryParameters);
 
             return result.FirstOrThrowException();
+        }
+
+        public async Task SetPatientDefaultLaboratory(int patientId, int departmentId, int clinicalProviderId)
+        {
+            var queryParameters = new
+            {
+                patientid = patientId,
+                departmentid = departmentId,
+                clinicalproviderid = clinicalProviderId
+            };
+            await _connection.Put<StatusResponse>($"{_connection.PracticeId}/chart/{patientId}/labs/default", queryParameters);
         }
     }
 }

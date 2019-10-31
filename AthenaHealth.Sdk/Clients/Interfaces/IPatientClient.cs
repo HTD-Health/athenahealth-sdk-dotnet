@@ -65,5 +65,7 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         Task SetMedicationSettings(int patientId, MedicationSetting setting);
 
         Task<AppointmentResponse> GetPatientAppointments(int patientId, GetPatientAppointmentFilter filter = null);
+
+        Task SetPatientDefaultLaboratory(int patientId, int departmentId, int clinicalProviderId);
     }
 }
