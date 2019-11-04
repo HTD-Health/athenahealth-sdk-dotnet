@@ -672,5 +672,43 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             exception.Message.ShouldContain("An existing insurance package exists. Use PUT to update or DELETE to deactivate.");
 
         }
+
+        [Fact(Skip = "This test is slow (about 12 seconds) and creates user every time is run")]
+        public async Task AddPatientProblem_RequiredFieldsProvided_ProblemAdded()
+        {
+            // Arrange
+            Faker<CreatePatient> createPatientFaker = new Faker<CreatePatient>()
+                .CustomInstantiator(f =>
+                {
+                    return new CreatePatient(
+                        1,
+                        f.Date.Past(80).Date,
+                        CultureInfo.CurrentCulture.TextInfo.ToTitleCase(f.Name.FirstName(Name.Gender.Male).ToLower()),
+                        CultureInfo.CurrentCulture.TextInfo.ToTitleCase(f.Name.LastName(Name.Gender.Male).ToLower()));
+                }).RuleFor(x => x.Email, (f, u) => f.Internet.Email(u.FirstName, u.LastName).ToLower());
+
+            var createPatientResult = await _client.Patients.CreatePatient(createPatientFaker.Generate());
+
+            // Act
+            var result = await _client.Patients.AddProblem(createPatientResult.PatientId.Value, new AddProblem(1, "52967002")
+            {
+                Laterality = LateralityEnum.Bilateral,
+                Note = "note",
+                StartDate = DateTime.Today,
+                Status = ProblemStatusEnum.Chronic
+            });
+
+            // Assert
+            result.ShouldNotBeNull();
+            result.ProblemId.HasValue.ShouldBeTrue();
+
+            var getPatientProblemsResponse = await _client.Patients.GetPatientProblems(createPatientResult.PatientId.Value, new GetPatientProblemsFilter(1));
+
+            getPatientProblemsResponse.Problems.Length.ShouldBe(1);
+            getPatientProblemsResponse.Problems.First().Code.ShouldBe("52967002");
+            getPatientProblemsResponse.Problems.First().Events.First().Note.ShouldBe("note");
+            getPatientProblemsResponse.Problems.First().Events.First().Laterality.ShouldBe(LateralityEnum.Bilateral);
+            getPatientProblemsResponse.Problems.First().Events.First().Status.ShouldBe(ProblemStatusEnum.Chronic);
+        }
     }
 }

@@ -3,6 +3,7 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using AthenaHealth.Sdk.Exceptions;
+using AthenaHealth.Sdk.Models.Enums;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
 using AthenaHealth.Sdk.Tests.EndToEnd.Data.Encounter;

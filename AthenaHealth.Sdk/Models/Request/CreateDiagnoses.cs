@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using AthenaHealth.Sdk.Models.Converters;
+using AthenaHealth.Sdk.Models.Enums;
 using Newtonsoft.Json;
 // ReSharper disable StringLiteralTypo
 // ReSharper disable CommentTypo
@@ -41,15 +42,5 @@ namespace AthenaHealth.Sdk.Models.Request
         [JsonProperty("laterality")]
         [JsonConverter(typeof(CustomEnumConverter))]
         public LateralityEnum? Laterality { get; set; }
-    }
-
-    public enum LateralityEnum
-    {
-        [EnumMember(Value = "LEFT")]
-        Left,
-        [EnumMember(Value = "RIGHT")]
-        Right,
-        [EnumMember(Value = "BILATERAL")]
-        Bilateral
     }
 }
