@@ -807,5 +807,13 @@ namespace AthenaHealth.Sdk.Tests.Integration
 
             response.InsuranceId.HasValue.ShouldBeTrue();
         }
+
+        [Fact]
+        public void DeleteInsurance_NotThrowsException()
+        {
+            IPatientClient patientClient = new PatientClient(ConnectionFactory.Create("{\"success\": true}", HttpStatusCode.OK));
+           
+            Should.NotThrow(async () => await patientClient.DeleteInsurance(100, SequenceEnum.Primary));
+        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
 using System.Threading.Tasks;
+using AthenaHealth.Sdk.Models.Enums;
 
 namespace AthenaHealth.Sdk.Clients.Interfaces
 {
@@ -51,6 +52,16 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// <param name="insurance"></param>
         /// <returns></returns>
         Task<Insurance> CreateInsurance(int patientId, CreateInsurance insurance);
+
+        /// <summary>
+        /// Deletes patient's insurance.
+        /// </summary>
+        /// <param name="patientId">The athenaNet patient ID.</param>
+        /// <param name="sequenceNumber"></param>
+        /// <param name="departmentId">If set, we will use the department id in an attempt to cancel insurance for the local patient.</param>
+        /// <param name="cancellationNote">Optional note as to why this is being cancelled.</param>
+        /// <returns></returns>
+        Task DeleteInsurance(int patientId, SequenceEnum sequenceNumber, int? departmentId = null, string cancellationNote = null);
 
         Task<LabResultDetail> GetLabResultDetails(int patientId, int labResultId, bool? showTemplate = null);
 
