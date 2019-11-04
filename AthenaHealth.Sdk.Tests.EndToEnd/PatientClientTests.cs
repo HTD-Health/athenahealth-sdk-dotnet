@@ -15,6 +15,7 @@ using Xunit;
 using System.Diagnostics;
 using System.Net;
 using AthenaHealth.Sdk.Models.Enums;
+using System.IO;
 
 // ReSharper disable StringLiteralTypo
 namespace AthenaHealth.Sdk.Tests.EndToEnd
@@ -808,6 +809,32 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             }
 
             await _client.Patients.UpdateInsurance(100, insurance);
+        }
+
+        [Fact(Skip = "This test is slow (about 14 seconds) and creates user every time is run")]
+        public async Task AddDocument_DocumentWithFile_DocumentCreated()
+        {
+            // Arrange
+            Faker<CreatePatient> createPatientFaker = new Faker<CreatePatient>()
+                .CustomInstantiator(f =>
+                {
+                    return new CreatePatient(
+                        1,
+                        f.Date.Past(80).Date,
+                        CultureInfo.CurrentCulture.TextInfo.ToTitleCase(f.Name.FirstName(Name.Gender.Male).ToLower()),
+                        CultureInfo.CurrentCulture.TextInfo.ToTitleCase(f.Name.LastName(Name.Gender.Male).ToLower()));
+                }).RuleFor(x => x.Email, (f, u) => f.Internet.Email(u.FirstName, u.LastName).ToLower());
+
+            CreatePatient request = createPatientFaker.Generate();
+
+            var createResult = await _client.Patients.CreatePatient(request);
+
+            // Act
+            var result = await _client.Patients.AddDocument(createResult.PatientId.Value, new AddDocument(1, new FileInfo(@"Data\Patient\document.pdf"), DocumentSubclassEnum.Consent));
+
+            // Assert
+            result.ShouldNotBeNull();
+            result.DocumentId.HasValue.ShouldBeTrue();
         }
     }
 }

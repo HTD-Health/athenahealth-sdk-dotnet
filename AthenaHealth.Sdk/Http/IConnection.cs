@@ -33,8 +33,9 @@ namespace AthenaHealth.Sdk.Http
         /// <param name="relativeUrl">Url relative to <see cref="BaseAddress"/>.</param>
         /// <param name="queryParameters">Query parameters to be added to constructed url.</param>
         /// <param name="body">Request content</param>
+        /// <param name="asMultipart">Content should be sent as multipart</param>
         /// <returns>Deserialized model</returns>
-        Task<T> Post<T>(string relativeUrl, object queryParameters = null, object body = null);
+        Task<T> Post<T>(string relativeUrl, object queryParameters = null, object body = null, bool asMultipart = false);
 
         /// <summary>
         /// Sends PUT request to url constructed from <see cref="BaseAddress"/> and <paramref name="relativeUrl"/>.

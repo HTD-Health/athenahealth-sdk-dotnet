@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Reflection;
@@ -27,6 +28,45 @@ namespace AthenaHealth.Sdk.Http.Helpers
             return new FormUrlEncodedContent(ConvertObjectToDictionary(obj));
         }
 
+        public static HttpContent ToMultipart(object obj)
+        {
+            var content = new MultipartFormDataContent();
+
+            foreach (var item in ConvertObjectToDictionary(obj))
+            {
+                content.Add(new StringContent(item.Value), $"\"{item.Key}\"");
+            }
+
+            foreach (var item in GetFilesDictionary(obj))
+            {
+                byte[] fileBytes = File.ReadAllBytes(item.Value.FullName);
+                content.Add(new ByteArrayContent(fileBytes), $"\"{item.Key}\"", $"\"{item.Value.Name}\"");
+            }
+
+            return content;
+        }
+
+        public static IDictionary<string, FileInfo> GetFilesDictionary(object obj)
+        {
+            IDictionary<string, FileInfo> dictionary = new Dictionary<string, FileInfo>();
+
+            if (obj == null)
+                return dictionary;
+
+            foreach (var item in obj.GetType().GetProperties())
+            {
+                if (!typeof(FileInfo).IsAssignableFrom(item.PropertyType))
+                    continue;
+
+                var key = GetKey(item);
+
+                if (item.GetValue(obj) is FileInfo value)
+                    dictionary[key] = value;
+            }
+
+            return dictionary;
+        }
+
         /// <summary>
         /// Performs conversion from object to dictionary.
         /// Name of the property becomes a dictionary key. Value of the property becomes dictionary value.
@@ -40,7 +80,7 @@ namespace AthenaHealth.Sdk.Http.Helpers
         {
             IDictionary<string, string> dictionary = new Dictionary<string, string>();
 
-            if (obj == null) 
+            if (obj == null)
                 return dictionary;
 
             foreach (var item in obj.GetType().GetProperties())
@@ -49,13 +89,12 @@ namespace AthenaHealth.Sdk.Http.Helpers
 
                 string value = GetValue(obj, item);
 
-                if (value != null) 
+                if (value != null)
                     dictionary[key] = value;
             }
+
             return dictionary;
         }
-
-        
 
         /// <summary>
         /// Get value of an object in different cases
@@ -68,7 +107,7 @@ namespace AthenaHealth.Sdk.Http.Helpers
             object value = item.GetValue(obj);
             if (value == null)
                 return null;
-            
+
             //if JsonConverter attribute is set up
             JsonConverterAttribute jsonConverterAttribute = item.GetAttribute<JsonConverterAttribute>();
             if (jsonConverterAttribute != null)
@@ -96,10 +135,8 @@ namespace AthenaHealth.Sdk.Http.Helpers
             return stringValue;
         }
 
-
         /// <summary>
-        /// Get item's key for dictionary
-        /// If item has JsonPropertyAttribute, name is get from the attribute
+        /// Get item's key for dictionary. If item has JsonPropertyAttribute, name is get from the attribute.
         /// </summary>
         /// <param name="item"></param>
         /// <returns></returns>

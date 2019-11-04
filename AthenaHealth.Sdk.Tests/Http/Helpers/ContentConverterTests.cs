@@ -1,13 +1,12 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using AthenaHealth.Sdk.Http.Helpers;
+﻿using AthenaHealth.Sdk.Http.Helpers;
 using AthenaHealth.Sdk.Models;
 using AthenaHealth.Sdk.Models.Converters;
 using Newtonsoft.Json;
 using Shouldly;
+using System;
 using Xunit;
 
-namespace AthenaHealth.Sdk.Tests.Helpers
+namespace AthenaHealth.Sdk.Tests.Http.Helpers
 {
     public class ContentConverterTests
     {
@@ -100,14 +99,6 @@ namespace AthenaHealth.Sdk.Tests.Helpers
             dict[nameof(obj.address)].ShouldBe("{\"street\":\"b\",\"number\":1}"); //This gives the following result for nested json. Not sure what is the expected result in real life.
         }
 
-
-        class TestClassWithJsonConverter
-        {
-            [JsonProperty("dob")]
-            [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
-            public DateTime? DateOfBirth { get; set; }
-        }
-
         [Fact]
         public void ConvertObjectToDictionary_PropertyWithJsonConverterAttribute_ResultWithoutQuotes()
         {
@@ -147,14 +138,6 @@ namespace AthenaHealth.Sdk.Tests.Helpers
             dict[nameof(obj.date)].ShouldBe("01/01/2019 00:00:00");
         }
 
-
-        class TestClassClockTimeArray
-        {
-            [JsonProperty(PropertyName = "appointmenttime")]
-            [JsonConverter(typeof(CustomArrayToStringConverter), ",")]
-            public ClockTime[] AppointmentTime { get; set; }
-        }
-
         [Fact]
         public void ConvertObjectToDictionary_ClockTimeArray_CorrectOutput()
         {
@@ -170,6 +153,20 @@ namespace AthenaHealth.Sdk.Tests.Helpers
             var dict = ContentConverter.ConvertObjectToDictionary(obj);
 
             dict["appointmenttime"].ShouldBe("17:00,18:00");
+        }
+
+        public class TestClassWithJsonConverter
+        {
+            [JsonProperty("dob")]
+            [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+            public DateTime? DateOfBirth { get; set; }
+        }
+
+        public class TestClassClockTimeArray
+        {
+            [JsonProperty(PropertyName = "appointmenttime")]
+            [JsonConverter(typeof(CustomArrayToStringConverter), ",")]
+            public ClockTime[] AppointmentTime { get; set; }
         }
     }
 }
