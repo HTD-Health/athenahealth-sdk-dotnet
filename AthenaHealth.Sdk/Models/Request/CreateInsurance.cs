@@ -35,7 +35,8 @@ namespace AthenaHealth.Sdk.Models.Request
         /// Set the date that the insurance will expire. This is usually a date within the next year and not in the past.
         /// </summary>
         [JsonProperty(PropertyName = "expirationdate")]
-        public DateTime ExpirationDate { get; set; }
+        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+        public DateTime? ExpirationDate { get; set; }
 
         /// <summary>
         /// The insurance policy ID number (as presented on the insurance card itself).
@@ -154,7 +155,8 @@ namespace AthenaHealth.Sdk.Models.Request
         /// Set the date that the insurance was issued. This is usually a date in the past year and not in the future.
         /// </summary>
         [JsonProperty(PropertyName = "issuedate")]
-        public DateTime IssueDate { get; set; }
+        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+        public DateTime? IssueDate { get; set; }
 
         /// <summary>
         /// The insurance group number.  This is sometimes present on an insurance card.

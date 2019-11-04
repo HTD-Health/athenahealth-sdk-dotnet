@@ -663,14 +663,95 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         }
 
         [Fact]
-        public void CreateInsurance_ExistingInsurance_ThrowsApiValidationException()
+        public async Task CreateInsurance_ExistingInsurance_ThrowsApiValidationException()
         {
+            // Arrange.
+            try
+            {
+                await _client.Patients.CreateInsurance(100,
+                    new CreateInsurance(31724, SequenceEnum.Primary, "1842", "Test1", "Test2", SexEnum.Male));
+            }
+            catch
+            {
+                // ignored
+            }
+
             var exception = Should.Throw<ApiValidationException>(async () => await _client.Patients.CreateInsurance(100,
                 new CreateInsurance(31724, SequenceEnum.Primary, "1842", "Test1", "Test2", SexEnum.Male)));
 
             exception.StatusCode.ShouldBe(HttpStatusCode.Conflict);
             exception.Message.ShouldContain("An existing insurance package exists. Use PUT to update or DELETE to deactivate.");
 
+        }
+
+        [Fact(Skip = "It takes ~22 seconds to complete.")]
+        public async Task CreateInsurance_NotExistingInsurance_NotThrowsException()
+        {
+            // Arrange.
+            try
+            {
+                await _client.Patients.DeleteInsurance(100, SequenceEnum.Primary);
+            }
+            catch
+            {
+                // ignored
+            }
+
+            // Act.
+           Insurance response = await _client.Patients.CreateInsurance(100,
+                new CreateInsurance(
+                    31724, 
+                    SequenceEnum.Primary, 
+                    "1842", 
+                    "Test1", 
+                    "Test2", 
+                    SexEnum.Male)
+                );
+
+           response.InsuranceId.HasValue.ShouldBeTrue();
+           response.InsuranceIdNumber.Length.ShouldBeGreaterThan(0);
+        }
+
+        [Fact(Skip = "It takes ~21 seconds to complete.")]
+        public async Task DeleteInsurance_ExistingInsurance_NotThrowsException()
+        {
+            // Arrange.
+            try
+            {
+                await _client.Patients.CreateInsurance(100,
+                        new CreateInsurance(31724, SequenceEnum.Primary, "1842", "Test1", "Test2", SexEnum.Male));
+            }
+            catch
+            {
+                // ignored
+            }
+
+            // Act.
+            await _client.Patients.DeleteInsurance(100, SequenceEnum.Primary);
+
+            // Assert - if exception is not thrown tests is successful.
+        }
+
+        [Fact]
+        public async Task DeleteInsurance_NotExistingInsurance_NotThrowsException()
+        {
+            // Arrange.
+            try
+            {
+                await _client.Patients.DeleteInsurance(100, SequenceEnum.Primary);
+            }
+            catch
+            {
+                // ignored
+            }
+
+            // Act.
+            ApiValidationException exception = Should.Throw<ApiValidationException>(async () =>
+                await _client.Patients.DeleteInsurance(100, SequenceEnum.Primary));
+
+            // Assert.
+            exception.StatusCode.ShouldBe(HttpStatusCode.NotFound);
+            exception.Message.ShouldContain("No insurance package is active at the sequence number given.");
         }
 
         [Fact(Skip = "This test is slow (about 12 seconds) and creates user every time is run")]

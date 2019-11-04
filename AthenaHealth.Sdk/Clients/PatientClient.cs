@@ -4,6 +4,7 @@ using AthenaHealth.Sdk.Http;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
 using System.Threading.Tasks;
+using AthenaHealth.Sdk.Models.Enums;
 
 namespace AthenaHealth.Sdk.Clients
 {
@@ -143,6 +144,20 @@ namespace AthenaHealth.Sdk.Clients
         {
             Insurance[] response = await _connection.Post<Insurance[]>($"{_connection.PracticeId}/patients/{patientId}/insurances", null, insurance);
             return response.FirstOrThrowException();
+        }
+
+        public async Task DeleteInsurance(int patientId, SequenceEnum sequenceNumber, int? departmentId = null,
+            string cancellationNote = null)
+        {
+            var filter = new
+            {
+                sequenceNumber = (int) sequenceNumber,
+                departmentId,
+                cancellationNote
+            };
+
+            await _connection.Delete<StatusResponse>(
+                $"{_connection.PracticeId}/patients/{patientId}/insurances", filter);
         }
 
         public async Task<PatientEncounterResponse> GetPatientEncounters(int patientId, GetPatientEncountersFilter queryParameters)
