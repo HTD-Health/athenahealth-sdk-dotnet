@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using AthenaHealth.Sdk.Clients;
 using AthenaHealth.Sdk.Clients.Interfaces;
 using AthenaHealth.Sdk.Exceptions;
+using AthenaHealth.Sdk.Models.Enums;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
 using AthenaHealth.Sdk.Tests.Integration.TestingHelpers;
@@ -755,6 +756,17 @@ namespace AthenaHealth.Sdk.Tests.Integration
             Should.NotThrow(async () 
                 => await patientClient.SetMedicationSettings(100, new MedicationSetting(1, "Test 123", false))
                 );
+        }
+
+        [Fact]
+        public async Task CreateInsurance_ValidData_ReturnsInsurance()
+        {
+            IPatientClient patientClient = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\CreateInsurance.json", HttpStatusCode.OK));
+
+            Insurance response = await patientClient.CreateInsurance(100,
+                new CreateInsurance(31724, SequenceEnum.Primary, "1842", "Test1", "Test2", SexEnum.Male));
+
+            response.InsuranceId.HasValue.ShouldBeTrue();
         }
     }
 }

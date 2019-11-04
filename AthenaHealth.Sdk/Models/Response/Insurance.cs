@@ -327,10 +327,10 @@ namespace AthenaHealth.Sdk.Models.Response
         public string InsurancePolicyHolderSuffix { get; set; }
 
         /// <summary>
-        /// The national provider id of the primary care physcian assicated with the insurance.
+        /// The national provider id of the primary care physician associated with the insurance.
         /// </summary>
         [JsonProperty("insuredpcpnpi")]
-        public int? InsuredPrimaryCarePhisicanNationalProviderId { get; set; }
+        public int? InsuredPrimaryCarePhysicianNationalProviderId { get; set; }
 
         /// <summary>
         /// CASE POLICY FIELD - Text field for describing the injured body part. Only available for
@@ -346,7 +346,7 @@ namespace AthenaHealth.Sdk.Models.Response
         public string EligibilityLastChecked { get; set; }
 
         [JsonProperty("insuredpcp")]
-        public string InsuredPrimaryCarePhisican { get; set; }
+        public string InsuredPrimaryCarePhysician { get; set; }
 
         /// <summary>
         /// Address 2 for the AthenaNet insurance Package.
@@ -370,7 +370,7 @@ namespace AthenaHealth.Sdk.Models.Response
 
         /// <summary>
         /// Details about the copays for this insurance package. If you've just POSTed a new
-        /// insurance you will have to wait for the auto eligbility check before these populate.
+        /// insurance you will have to wait for the auto eligibility check before these populate.
         /// </summary>
         [JsonProperty("copays")]
         public Copay[] Copays { get; set; }
