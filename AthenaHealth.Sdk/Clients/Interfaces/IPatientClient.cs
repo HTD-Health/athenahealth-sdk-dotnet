@@ -53,6 +53,8 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// <returns></returns>
         Task<Insurance> CreateInsurance(int patientId, CreateInsurance insurance);
 
+        Task UpdateInsurance(int patientId, CreateInsurance insurance);
+
         /// <summary>
         /// Deletes patient's insurance.
         /// </summary>

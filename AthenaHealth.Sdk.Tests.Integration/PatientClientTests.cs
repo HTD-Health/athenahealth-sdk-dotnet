@@ -815,5 +815,15 @@ namespace AthenaHealth.Sdk.Tests.Integration
            
             Should.NotThrow(async () => await patientClient.DeleteInsurance(100, SequenceEnum.Primary));
         }
+
+        [Fact]
+        public void UpdateInsurance_NotThrowsException()
+        {
+            IPatientClient patientClient = new PatientClient(ConnectionFactory.Create("{\"success\": true}", HttpStatusCode.OK));
+
+            var insurance = new CreateInsurance(31724, SequenceEnum.Primary, "1842", "Test1", "Test2", SexEnum.Male);
+
+            Should.NotThrow(async () => await patientClient.UpdateInsurance(100, insurance));
+        }
     }
 }

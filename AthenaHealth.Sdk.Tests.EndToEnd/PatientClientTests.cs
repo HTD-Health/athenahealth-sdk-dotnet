@@ -791,5 +791,23 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             getPatientProblemsResponse.Problems.First().Events.First().Laterality.ShouldBe(LateralityEnum.Bilateral);
             getPatientProblemsResponse.Problems.First().Events.First().Status.ShouldBe(ProblemStatusEnum.Chronic);
         }
+
+        [Fact]
+        public async Task UpdateInsurance_ExistingInsurance_NotThrowsException()
+        {
+            // Arrange.
+            var insurance = new CreateInsurance(31724, SequenceEnum.Primary, "1842", "Test1", "Test2", SexEnum.Male);
+
+            try
+            {
+                await _client.Patients.CreateInsurance(100, insurance);
+            }
+            catch
+            {
+                // ignored
+            }
+
+            await _client.Patients.UpdateInsurance(100, insurance);
+        }
     }
 }

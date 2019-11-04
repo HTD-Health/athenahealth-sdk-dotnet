@@ -146,6 +146,11 @@ namespace AthenaHealth.Sdk.Clients
             return response.FirstOrThrowException();
         }
 
+        public async Task UpdateInsurance(int patientId, CreateInsurance insurance)
+        {
+            await _connection.Put<StatusResponse>($"{_connection.PracticeId}/patients/{patientId}/insurances", null, insurance);
+        }
+
         public async Task DeleteInsurance(int patientId, SequenceEnum sequenceNumber, int? departmentId = null,
             string cancellationNote = null)
         {
