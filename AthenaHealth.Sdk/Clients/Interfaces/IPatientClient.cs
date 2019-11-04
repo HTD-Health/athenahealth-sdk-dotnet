@@ -44,6 +44,14 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
 
         Task<InsuranceResponse> GetPatientInsurances(int patientId, GetPatientInsurancesFilter queryParameters);
 
+        /// <summary>
+        /// Creates patient insurances for a specified patient.
+        /// </summary>
+        /// <param name="patientId"></param>
+        /// <param name="insurance"></param>
+        /// <returns></returns>
+        Task<Insurance> CreateInsurance(int patientId, CreateInsurance insurance);
+
         Task<LabResultDetail> GetLabResultDetails(int patientId, int labResultId, bool? showTemplate = null);
 
         Task<PatientEncounterResponse> GetPatientEncounters(int patientId, GetPatientEncountersFilter queryParameters);

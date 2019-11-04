@@ -1,0 +1,27 @@
+[
+  {
+    "insurancepolicyholdercountrycode": "USA",
+    "sequencenumber": 1,
+    "insuranceplanname": "HUMANA (PPO)",
+    "insurancetype": "Commercial",
+    "insurancepolicyholderlastname": "TEST2",
+    "insurancephone": "(800) 558-4444",
+    "insurancepackagestate": "KY",
+    "insurancepackagecity": "LEXINGTON",
+    "insuredentitytypeid": 1,
+    "insuranceidnumber": "1842",
+    "relationshiptoinsuredid": 1,
+    "insuranceid": "23993",
+    "insurancepolicyholder": "TEST1 TEST2",
+    "relationshiptoinsured": "Self",
+    "eligibilitystatus": "Unverified",
+    "insurancepolicyholderfirstname": "TEST1",
+    "insurancepackageid": 31724,
+    "insurancepackageaddress1": "PO BOX 14601",
+    "insurancepolicyholdersex": "M",
+    "insurancepolicyholdercountryiso3166": "US",
+    "insuranceplandisplayname": "Humana (PPO)",
+    "ircname": "Humana",
+    "insurancepackagezip": "40512-4601"
+  }
+]

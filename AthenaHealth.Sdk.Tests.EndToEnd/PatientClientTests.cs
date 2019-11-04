@@ -12,6 +12,9 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using Xunit;
+using System.Diagnostics;
+using System.Net;
+using AthenaHealth.Sdk.Models.Enums;
 
 // ReSharper disable StringLiteralTypo
 namespace AthenaHealth.Sdk.Tests.EndToEnd
@@ -657,6 +660,17 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             };
 
             Should.NotThrow(async () => await _client.Patients.SetAllergies(request));
+        }
+
+        [Fact]
+        public void CreateInsurance_ExistingInsurance_ThrowsApiValidationException()
+        {
+            var exception = Should.Throw<ApiValidationException>(async () => await _client.Patients.CreateInsurance(100,
+                new CreateInsurance(31724, SequenceEnum.Primary, "1842", "Test1", "Test2", SexEnum.Male)));
+
+            exception.StatusCode.ShouldBe(HttpStatusCode.Conflict);
+            exception.Message.ShouldContain("An existing insurance package exists. Use PUT to update or DELETE to deactivate.");
+
         }
     }
 }
