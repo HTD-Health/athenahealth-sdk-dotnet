@@ -79,11 +79,13 @@ namespace AthenaHealth.Sdk.Http
         /// <param name="queryParameters">Query parameters to be added to constructed url.</param>
         /// <param name="body">Request content</param>
         /// <returns>Deserialized model</returns>
-        public async Task<T> Post<T>(string relativeUrl, object queryParameters = null, object body = null)
+        public async Task<T> Post<T>(string relativeUrl, object queryParameters = null, object body = null, bool asMultipart = false)
         {
             await RefreshAccessToken();
 
-            Response response = await SendData(AddVersion(relativeUrl), queryParameters, HttpMethod.Post, ContentConverter.ToUrlEncoded(body));
+            HttpContent content = asMultipart ? ContentConverter.ToMultipart(body) : ContentConverter.ToUrlEncoded(body);
+
+            Response response = await SendData(AddVersion(relativeUrl), queryParameters, HttpMethod.Post, content);
 
             return response.GetObjectContent<T>();
         }

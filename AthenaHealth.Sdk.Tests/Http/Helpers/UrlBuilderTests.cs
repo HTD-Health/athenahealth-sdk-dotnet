@@ -4,7 +4,7 @@ using AthenaHealth.Sdk.Http.Helpers;
 using Shouldly;
 using Xunit;
 
-namespace AthenaHealth.Sdk.Tests.Helpers
+namespace AthenaHealth.Sdk.Tests.Http.Helpers
 {
     public class UrlBuilderTests
     {

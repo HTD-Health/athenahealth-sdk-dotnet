@@ -125,6 +125,11 @@ namespace AthenaHealth.Sdk.Clients
             return await _connection.Get<DocumentResponse>($"{_connection.PracticeId}/patients/{patientId}/documents", queryParameters);
         }
 
+        public async Task<AddDocumentResponse> AddDocument(int patientId, AddDocument request)
+        {
+            return await _connection.Post<AddDocumentResponse>($"{_connection.PracticeId}/patients/{patientId}/documents", body: request, asMultipart: true);
+        }
+
         public async Task<Laboratory> GetDefaultLaboratory(int patientId, int departmentId)
         {
             var queryParameters = new
