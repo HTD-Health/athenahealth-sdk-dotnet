@@ -1,4 +1,5 @@
 ﻿using AthenaHealth.Sdk.Models.Converters;
+using AthenaHealth.Sdk.Models.Enums;
 using Newtonsoft.Json;
 using System;
 
@@ -154,7 +155,7 @@ namespace AthenaHealth.Sdk.Models.Response
                 /// The status of this problem event: CHRONIC or ACUTE
                 /// </summary>
                 [JsonProperty(PropertyName = "status")]
-                public string Status { get; set; }
+                public ProblemStatusEnum? Status { get; set; }
 
                 /// <summary>
                 /// The specified onset date for this problem, as entered by the practice. If available this is more accurate than the start date.
@@ -188,7 +189,7 @@ namespace AthenaHealth.Sdk.Models.Response
                 /// The laterality of this problem. Can be null, LEFT, RIGHT, or BILATERAL.
                 /// </summary>
                 [JsonProperty(PropertyName = "laterality")]
-                public string Laterality { get; set; }
+                public LateralityEnum? Laterality { get; set; }
 
                 /// <summary>
                 /// The note attached to this event.

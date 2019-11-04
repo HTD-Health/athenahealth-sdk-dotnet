@@ -207,6 +207,11 @@ namespace AthenaHealth.Sdk.Clients
             return result.FirstOrThrowException();
         }
 
+        public async Task<AddProblemResponse> AddProblem(int patientId, AddProblem request)
+        {
+            return await _connection.Post<AddProblemResponse>($"{_connection.PracticeId}/chart/{patientId}/problems", body: request);
+        }
+
         /// <summary>
         /// Sets patient status to inactive
         /// </summary>

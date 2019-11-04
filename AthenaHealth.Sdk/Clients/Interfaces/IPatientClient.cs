@@ -95,5 +95,7 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         Task<UpdatePatientResponse> UpdatePatient(int patientId, UpdatePatient request);
 
         Task<UpdatePatientResponse> DeletePatient(int patientId);
+
+        Task<AddProblemResponse> AddProblem(int patientId, AddProblem request);
     }
 }
