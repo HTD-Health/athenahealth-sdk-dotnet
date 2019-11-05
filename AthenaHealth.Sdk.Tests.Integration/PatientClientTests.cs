@@ -839,5 +839,28 @@ namespace AthenaHealth.Sdk.Tests.Integration
             result.ShouldNotBeNull();
             result.NumberOfCheckboxesConfigured.ShouldBe(1);
         }
+
+        [Fact]
+        public async Task SetPrivacyInformation_ValidRequest_ReturnsPatientId()
+        {
+            // Arrange
+            IPatientClient patientClient = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\SetPrivacyInformation.json", HttpStatusCode.OK));
+
+            SetPrivacyInformation request = new SetPrivacyInformation(
+                1,
+                new DateTime(2019, 11, 5, 14, 53, 0),
+                "TestSignature"
+            );
+
+            int patientId = 34772;
+
+
+            // Act
+            var result = await patientClient.SetPrivacyInformation(patientId, request);
+
+            // Assert
+            result.ShouldNotBeNull();
+            result.PatientId.ShouldBe(patientId);
+        }
     }
 }

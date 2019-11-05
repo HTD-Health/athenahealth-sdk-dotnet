@@ -123,5 +123,22 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// <param name="departmentId">The ID of the department where the privacy information was verified.</param>
         /// <returns></returns>
         Task<PrivacyInformationResponse> GetPrivacyInformation(int patientId, int departmentId);
+
+
+        /// <summary>
+        /// Please read the Privacy Information Verification documentation before using this API.
+        /// This API flags the patient privacy information (Privacy Notice, Release of Billing Information, and Assignment of Benefits) as having been verified.
+        /// If none of the three flags:
+        /// (<see cref="SetPrivacyInformation.PrivacyNotice"/>,
+        /// <see cref="SetPrivacyInformation.PatientSignature"/>, and
+        /// <see cref="SetPrivacyInformation.InsuredSignature"/>)
+        /// are set to true, then this call will mark all three by default.
+        /// The three flags can be used in any combination. Note: This call can only be used to set the checkboxes.
+        /// There is currently no API to unset them.
+        /// </summary>
+        /// <param name="patientId"></param>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        Task<SetPrivacyInformationResponse> SetPrivacyInformation(int patientId, SetPrivacyInformation request);
     }
 }
