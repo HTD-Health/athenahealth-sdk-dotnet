@@ -121,6 +121,9 @@
     <None Update="Data\Dictionary\SearchOrderTypesByName.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Data\Patient\GetPrivacyInformation.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Data\Patient\EnhancedBestmatch_MissingFields.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

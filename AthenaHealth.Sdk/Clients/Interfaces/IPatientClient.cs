@@ -112,5 +112,16 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         Task<AddProblemResponse> AddProblem(int patientId, AddProblem request);
 
         Task<AddDocumentResponse> AddDocument(int patientId, AddDocument request);
+
+        /// <summary>
+        /// In athenaNet, a practice has the flexibility to configure their patient registration page to display the Privacy Notice,
+        /// Release of Billing Information, and Assignment of Benefits consent forms as 1, 2, or 3
+        /// confirmation check boxes. This API returns a count of how many consent check boxes,
+        /// and the associated labels, that a practice has configured in athenaNet.
+        /// </summary>
+        /// <param name="patientId">The athena ID of the patient whose privacy information was verified.</param>
+        /// <param name="departmentId">The ID of the department where the privacy information was verified.</param>
+        /// <returns></returns>
+        Task<PrivacyInformationResponse> GetPrivacyInformation(int patientId, int departmentId);
     }
 }

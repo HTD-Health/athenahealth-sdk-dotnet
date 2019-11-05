@@ -825,5 +825,19 @@ namespace AthenaHealth.Sdk.Tests.Integration
 
             Should.NotThrow(async () => await patientClient.UpdateInsurance(100, insurance));
         }
+
+        [Fact]
+        public async Task GetPrivacyInformation_ReturnsResult()
+        {
+            // Arrange
+            IPatientClient patientClient = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetPrivacyInformation.json", HttpStatusCode.OK));
+
+            // Act
+            var result = await patientClient.GetPrivacyInformation(34772, 1);
+
+            // Assert
+            result.ShouldNotBeNull();
+            result.NumberOfCheckboxesConfigured.ShouldBe(1);
+        }
     }
 }

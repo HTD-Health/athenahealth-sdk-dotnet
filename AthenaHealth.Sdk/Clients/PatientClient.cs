@@ -130,6 +130,16 @@ namespace AthenaHealth.Sdk.Clients
             return await _connection.Post<AddDocumentResponse>($"{_connection.PracticeId}/patients/{patientId}/documents", body: request, asMultipart: true);
         }
 
+        public async Task<PrivacyInformationResponse> GetPrivacyInformation(int patientId, int departmentId)
+        {
+            return await _connection.Get<PrivacyInformationResponse>(
+                $"{_connection.PracticeId}/patients/{patientId}/privacyinformationverified",
+                new
+                {
+                    departmentId
+                });
+        }
+
         public async Task<Laboratory> GetDefaultLaboratory(int patientId, int departmentId)
         {
             var queryParameters = new
@@ -161,7 +171,7 @@ namespace AthenaHealth.Sdk.Clients
         {
             var filter = new
             {
-                sequenceNumber = (int) sequenceNumber,
+                sequenceNumber = (int)sequenceNumber,
                 departmentId,
                 cancellationNote
             };

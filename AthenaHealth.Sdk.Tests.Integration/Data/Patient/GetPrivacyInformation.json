@@ -1,0 +1,12 @@
+{
+  "patientsignature": {
+    "ispatientsignatureonfile": false
+  },
+  "privacynotice": {
+    "isprivacynoticeonfile": false
+  },
+  "insuredsignature": {
+    "isinsuredsignatureonfile": false
+  },
+  "checkboxesconfigured": 1
+}
