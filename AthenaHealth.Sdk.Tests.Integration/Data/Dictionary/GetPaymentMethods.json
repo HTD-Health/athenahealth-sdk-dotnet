@@ -1,0 +1,25 @@
+{
+  "paymentmethods": [
+    {
+      "name": "American Express",
+      "paymentmethod": "AMEX"
+    },
+    {
+      "name": "Discover",
+      "paymentmethod": "DISCOVER"
+    },
+    {
+      "name": "MasterCard and Visa",
+      "paymentmethod": "MC\/VISA"
+    },
+    {
+      "name": "Non-IPP MC",
+      "paymentmethod": "NON-IPP MC"
+    },
+    {
+      "name": "Old Mastercard\/Visa",
+      "paymentmethod": "OLD MC\/VIS"
+    }
+  ],
+  "totalcount": 5
+}
