@@ -134,5 +134,23 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
                 response.Items.Length.ShouldBe(0);
             }
         }
+
+        [Fact]
+        public async Task GetPaymentMethods_ReturnsRecords()
+        {
+            PaymentMethodResponse response = await _client.Dictionaries.GetPaymentMethods();
+
+            if (response.Total > 0)
+            {
+                response.Total.ShouldBe(response.Items.Length);
+                response.Items.Count(x => string.IsNullOrWhiteSpace(x.IdentifierName)).ShouldBe(0);
+                response.Items.Count(x => string.IsNullOrWhiteSpace(x.Name)).ShouldBe(0);
+            }
+            else
+            {
+                response.Total.ShouldBe(0);
+                response.Items.Length.ShouldBe(0);
+            }
+        }
     }
 }

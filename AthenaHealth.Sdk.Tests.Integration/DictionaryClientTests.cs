@@ -24,6 +24,18 @@ namespace AthenaHealth.Sdk.Tests.Integration
         }
 
         [Fact]
+        public async Task GetPaymentMethods_ReturnsRecords()
+        {
+            var client = new DictionaryClient(ConnectionFactory.CreateFromFile(@"Data\Dictionary\GetPaymentMethods.json"));
+
+            var response = await client.GetPaymentMethods();
+
+            response.ShouldNotBeNull();
+            response.Items.Length.ShouldBeGreaterThan(0);
+            response.Total.ShouldBe(response.Items.Length);
+        }
+
+        [Fact]
         public async Task SearchOrderTypesByName_TwoDigitsNamePart_ReturnsRecords()
         {
             var client = new DictionaryClient(ConnectionFactory.CreateFromFile(@"Data\Dictionary\SearchOrderTypesByName.json"));

@@ -1,10 +1,10 @@
 ﻿using AthenaHealth.Sdk.Clients.Interfaces;
 using AthenaHealth.Sdk.Extensions;
 using AthenaHealth.Sdk.Http;
+using AthenaHealth.Sdk.Models.Enums;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
 using System.Threading.Tasks;
-using AthenaHealth.Sdk.Models.Enums;
 
 namespace AthenaHealth.Sdk.Clients
 {
@@ -235,6 +235,18 @@ namespace AthenaHealth.Sdk.Clients
         public async Task<AddProblemResponse> AddProblem(int patientId, AddProblem request)
         {
             return await _connection.Post<AddProblemResponse>($"{_connection.PracticeId}/chart/{patientId}/problems", body: request);
+        }
+
+        /// <summary>
+        /// TODO: Not ready for usage. EndToEnd & Integration tests are needed.
+        /// In order to test that Claim is required.
+        /// </summary>
+        /// <param name="patientId"></param>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        public async Task RecordPayment(int patientId, RecordPayment request)
+        {
+            await _connection.Post<StatusResponse>($"{_connection.PracticeId}/patients/{patientId}/recordpayment", body: request);
         }
 
         /// <summary>

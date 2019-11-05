@@ -20,6 +20,11 @@ namespace AthenaHealth.Sdk.Clients
             return await _connection.Get<ProviderTypeResponse>($"{_connection.PracticeId}/reference/providertypes", filter);
         }
 
+        public async Task<PaymentMethodResponse> GetPaymentMethods(BaseLimitFilter filter = null)
+        {
+            return await _connection.Get<PaymentMethodResponse>($"{_connection.PracticeId}/configuration/validnonccpcreditcardmethods", filter);
+        }
+
         public async Task<OrderType[]> SearchOrderTypesByName(string name)
         {
             return await _connection.Get<OrderType[]>($"{_connection.PracticeId}/reference/order/lab", new { searchValue = name });

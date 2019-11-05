@@ -14,6 +14,13 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         Task<ProviderTypeResponse> GetProviderTypes(BaseLimitFilter filter = null);
 
         /// <summary>
+        /// Retrieves a list of valid credit card methods for practices not using CCP for use with <see cref="IPatientClient.RecordPayment"/>
+        /// </summary>
+        /// <param name="filter"></param>
+        /// <returns></returns>
+        Task<PaymentMethodResponse> GetPaymentMethods(BaseLimitFilter filter = null);
+
+        /// <summary>
         /// The list of matching orders alias autocomplete.
         /// </summary>
         /// <param name="name">A term to search for. Must be at least 2 characters.</param>
