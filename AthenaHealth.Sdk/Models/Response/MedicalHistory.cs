@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using AthenaHealth.Sdk.Models.Enums;
+using Newtonsoft.Json;
 
 namespace AthenaHealth.Sdk.Models.Response
 {
@@ -34,7 +35,7 @@ namespace AthenaHealth.Sdk.Models.Response
             /// The answer given by the patient to the question
             /// </summary>
             [JsonProperty(PropertyName = "answer")]
-            public string Answer { get; set; }
+            public AnswerEnum? Answer { get; set; }
 
             /// <summary>
             /// Any special notes

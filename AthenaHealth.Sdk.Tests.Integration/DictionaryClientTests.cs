@@ -1,10 +1,10 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
-using AthenaHealth.Sdk.Clients;
+﻿using AthenaHealth.Sdk.Clients;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
 using AthenaHealth.Sdk.Tests.Integration.TestingHelpers;
 using Shouldly;
+using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
 
 // ReSharper disable StringLiteralTypo
