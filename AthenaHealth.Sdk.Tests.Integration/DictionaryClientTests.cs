@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
 using AthenaHealth.Sdk.Clients;
+using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
 using AthenaHealth.Sdk.Tests.Integration.TestingHelpers;
 using Shouldly;
@@ -29,6 +30,21 @@ namespace AthenaHealth.Sdk.Tests.Integration
             var client = new DictionaryClient(ConnectionFactory.CreateFromFile(@"Data\Dictionary\GetPaymentMethods.json"));
 
             var response = await client.GetPaymentMethods();
+
+            response.ShouldNotBeNull();
+            response.Items.Length.ShouldBeGreaterThan(0);
+            response.Total.ShouldBe(response.Items.Length);
+        }
+
+        [Fact]
+        public async Task GetMedicalHistoryQuestions_ReturnsRecords()
+        {
+            var client = new DictionaryClient(ConnectionFactory.CreateFromFile(@"Data\Dictionary\GetMedicalHistoryQuestions.json"));
+
+            var response = await client.GetMedicalHistoryQuestions(new GetMedicalHistoryQuestionsFilter()
+            {
+                ShowDeleted = true
+            });
 
             response.ShouldNotBeNull();
             response.Items.Length.ShouldBeGreaterThan(0);

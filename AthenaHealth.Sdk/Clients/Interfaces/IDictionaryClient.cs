@@ -40,5 +40,12 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// <param name="name">A term to search for. Must be at least 2 characters.</param>
         /// <returns></returns>
         Task<Allergy[]> SearchAllergiesByName(string name);
+
+        /// <summary>
+        /// Return a list of medical history questions.
+        /// </summary>
+        /// <param name="filter"></param>
+        /// <returns></returns>
+        Task<MedicalHistoryQuestionResponse> GetMedicalHistoryQuestions(GetMedicalHistoryQuestionsFilter filter = null);
     }
 }
