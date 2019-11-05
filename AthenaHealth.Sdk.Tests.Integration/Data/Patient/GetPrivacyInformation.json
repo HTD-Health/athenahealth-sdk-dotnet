@@ -1,12 +1,15 @@
 {
   "patientsignature": {
-    "ispatientsignatureonfile": false
+    "ispatientsignatureonfile": true,
+    "patientsignatureeffectivedate": "11/05/2019"
   },
   "privacynotice": {
-    "isprivacynoticeonfile": false
+    "privacynoticegivendate": "11/05/2019",
+    "isprivacynoticeonfile": true
   },
   "insuredsignature": {
-    "isinsuredsignatureonfile": false
+    "isinsuredsignatureonfile": true,
+    "insuredsignatureeffectivedate": "11/05/2019"
   },
   "checkboxesconfigured": 1
 }

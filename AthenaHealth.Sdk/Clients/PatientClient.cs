@@ -140,6 +140,17 @@ namespace AthenaHealth.Sdk.Clients
                 });
         }
 
+        public async Task<SetPrivacyInformationResponse> SetPrivacyInformation(int patientId, SetPrivacyInformation request)
+        {
+            var response = await _connection.Post<SetPrivacyInformationResponse[]>(
+                $"{_connection.PracticeId}/patients/{patientId}/privacyinformationverified",
+                null, 
+                request
+                );
+
+            return response.FirstOrThrowException();
+        }
+
         public async Task<Laboratory> GetDefaultLaboratory(int patientId, int departmentId)
         {
             var queryParameters = new

@@ -12,8 +12,6 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using Xunit;
-using System.Diagnostics;
-using System.Net;
 using AthenaHealth.Sdk.Models.Enums;
 using System.IO;
 
@@ -843,6 +841,27 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             var result = await _client.Patients.GetPrivacyInformation(34772, 1);
 
             result.ShouldNotBeNull();
+        }
+
+        [Fact(Skip = "It takes approximately ~11 seconds for the test to complete.")]
+        public async Task SetPrivacyInformation_ValidRequest_ReturnsPatientId()
+        {
+            // Arrange
+            SetPrivacyInformation request = new SetPrivacyInformation(
+                1,
+                new DateTime(2019, 11, 5, 14, 53, 0),
+                "TestSignature"
+            );
+
+            int patientId = 34772;
+
+
+            // Act
+            var result = await _client.Patients.SetPrivacyInformation(patientId, request);
+
+            // Assert
+            result.ShouldNotBeNull();
+            result.PatientId.ShouldBe(patientId);
         }
     }
 }
