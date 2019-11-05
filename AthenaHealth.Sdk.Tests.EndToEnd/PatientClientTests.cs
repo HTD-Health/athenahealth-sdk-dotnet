@@ -836,5 +836,13 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             result.ShouldNotBeNull();
             result.DocumentId.HasValue.ShouldBeTrue();
         }
+
+        [Fact]
+        public async Task GetPrivacyInformation_ValidRequest_ReturnsRecord()
+        {
+            var result = await _client.Patients.GetPrivacyInformation(34772, 1);
+
+            result.ShouldNotBeNull();
+        }
     }
 }
