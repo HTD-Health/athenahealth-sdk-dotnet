@@ -1,0 +1,381 @@
+{
+  "totalcount": 75,
+  "questions": [
+    {
+      "question": "Sea Sickness",
+      "ordering": 1,
+      "deleted": false,
+      "questionid": 161
+    },
+    {
+      "question": "<b> Eyes <b>",
+      "deleted": false,
+      "questionid": 181
+    },
+    {
+      "question": "Alzheimers Dementia",
+      "deleted": false,
+      "questionid": 44
+    },
+    {
+      "question": "Anemia",
+      "deleted": false,
+      "questionid": 48
+    },
+    {
+      "question": "Anxiety Disorder",
+      "deleted": false,
+      "questionid": 21
+    },
+    {
+      "question": "Aortic Aneurysm",
+      "deleted": false,
+      "questionid": 121
+    },
+    {
+      "question": "Arrhythmia",
+      "deleted": false,
+      "questionid": 122
+    },
+    {
+      "question": "Arthritis",
+      "deleted": false,
+      "questionid": 22
+    },
+    {
+      "question": "Asthma",
+      "deleted": false,
+      "questionid": 123
+    },
+    {
+      "question": "Atrial Fibrillation",
+      "deleted": false,
+      "questionid": 144
+    },
+    {
+      "question": "Atrial Flutter",
+      "deleted": false,
+      "questionid": 146
+    },
+    {
+      "question": "Bleeding Disorder",
+      "deleted": false,
+      "questionid": 23
+    },
+    {
+      "question": "Blood Clot",
+      "deleted": false,
+      "questionid": 147
+    },
+    {
+      "question": "Breast Cancer",
+      "deleted": false,
+      "questionid": 183
+    },
+    {
+      "question": "COPD",
+      "deleted": false,
+      "questionid": 128
+    },
+    {
+      "question": "Cancer",
+      "deleted": false,
+      "questionid": 24
+    },
+    {
+      "question": "Cardiomyopathy",
+      "deleted": false,
+      "questionid": 125
+    },
+    {
+      "question": "Carotid Disease",
+      "deleted": false,
+      "questionid": 148
+    },
+    {
+      "question": "Cataracts",
+      "deleted": false,
+      "questionid": 35
+    },
+    {
+      "question": "Celiac Disease",
+      "deleted": false,
+      "questionid": 61
+    },
+    {
+      "question": "Chronic Back Pain",
+      "deleted": false,
+      "questionid": 41
+    },
+    {
+      "question": "Chronic ear infections",
+      "deleted": false,
+      "questionid": 154
+    },
+    {
+      "question": "Colon Cancer",
+      "deleted": false,
+      "questionid": 182
+    },
+    {
+      "question": "Congenital Heart Disease",
+      "deleted": false,
+      "questionid": 126
+    },
+    {
+      "question": "Congestive Heart Failure",
+      "deleted": false,
+      "questionid": 36
+    },
+    {
+      "question": "Congestive Heart Failure (CHF)",
+      "deleted": false,
+      "questionid": 127
+    },
+    {
+      "question": "Coronary Artery Disease",
+      "deleted": false,
+      "questionid": 124
+    },
+    {
+      "question": "Deep Vein Thrombosis",
+      "deleted": false,
+      "questionid": 37
+    },
+    {
+      "question": "Depression",
+      "deleted": false,
+      "questionid": 47
+    },
+    {
+      "question": "Diabetes",
+      "deleted": false,
+      "questionid": 129
+    },
+    {
+      "question": "Diabetes",
+      "deleted": false,
+      "questionid": 1
+    },
+    {
+      "question": "Diabetes Type I",
+      "deleted": false,
+      "questionid": 45
+    },
+    {
+      "question": "Diabetes Type II",
+      "deleted": false,
+      "questionid": 46
+    },
+    {
+      "question": "Difficulty swallowing",
+      "deleted": false,
+      "questionid": 156
+    },
+    {
+      "question": "Diverticulitis",
+      "deleted": false,
+      "questionid": 33
+    },
+    {
+      "question": "Erectile Dysfunction",
+      "deleted": false,
+      "questionid": 43
+    },
+    {
+      "question": "Fibromyalgia",
+      "deleted": false,
+      "questionid": 42
+    },
+    {
+      "question": "GERD",
+      "deleted": false,
+      "questionid": 39
+    },
+    {
+      "question": "GERD/Reflux",
+      "deleted": false,
+      "questionid": 153
+    },
+    {
+      "question": "Gastrointestinal Disease",
+      "deleted": false,
+      "questionid": 130
+    },
+    {
+      "question": "Genitourinary Disease",
+      "deleted": false,
+      "questionid": 143
+    },
+    {
+      "question": "Gout",
+      "deleted": false,
+      "questionid": 30
+    },
+    {
+      "question": "Has Pacemaker",
+      "deleted": false,
+      "questionid": 31
+    },
+    {
+      "question": "Have you had cancer?",
+      "deleted": false,
+      "questionid": 184
+    },
+    {
+      "question": "Heart Disease",
+      "deleted": false,
+      "questionid": 141
+    },
+    {
+      "question": "Heart Murmur",
+      "deleted": false,
+      "questionid": 29
+    },
+    {
+      "question": "Heart Valve Replacement",
+      "deleted": false,
+      "questionid": 49
+    },
+    {
+      "question": "Hematologic Disease",
+      "deleted": false,
+      "questionid": 131
+    },
+    {
+      "question": "High Blood Pressure",
+      "deleted": false,
+      "questionid": 28
+    },
+    {
+      "question": "High Cholesterol",
+      "deleted": false,
+      "questionid": 142
+    },
+    {
+      "question": "Hyperlipidemia",
+      "deleted": false,
+      "questionid": 132
+    },
+    {
+      "question": "Hypertension",
+      "deleted": false,
+      "questionid": 133
+    },
+    {
+      "question": "Kidney Disease",
+      "deleted": false,
+      "questionid": 134
+    },
+    {
+      "question": "Liver Disease",
+      "deleted": false,
+      "questionid": 25
+    },
+    {
+      "question": "Meniere's disease",
+      "deleted": false,
+      "questionid": 155
+    },
+    {
+      "question": "Myocardial Infarction",
+      "deleted": false,
+      "questionid": 151
+    },
+    {
+      "question": "Nasal polyps",
+      "deleted": false,
+      "questionid": 157
+    },
+    {
+      "question": "Neurologic Disorder",
+      "deleted": false,
+      "questionid": 135
+    },
+    {
+      "question": "OTHER",
+      "deleted": false,
+      "questionid": 81
+    },
+    {
+      "question": "Osteoporosis",
+      "deleted": false,
+      "questionid": 26
+    },
+    {
+      "question": "Overactive Thyroid",
+      "deleted": false,
+      "questionid": 32
+    },
+    {
+      "question": "Pacemaker",
+      "deleted": false,
+      "questionid": 136
+    },
+    {
+      "question": "Peptic Ulcer Disease",
+      "deleted": false,
+      "questionid": 40
+    },
+    {
+      "question": "Peripheral Arterial Disease",
+      "deleted": false,
+      "questionid": 137
+    },
+    {
+      "question": "Sleep Apnea",
+      "deleted": false,
+      "questionid": 145
+    },
+    {
+      "question": "Sleep Disorder",
+      "deleted": false,
+      "questionid": 138
+    },
+    {
+      "question": "Stroke",
+      "deleted": false,
+      "questionid": 34
+    },
+    {
+      "question": "TIA",
+      "deleted": false,
+      "questionid": 149
+    },
+    {
+      "question": "Thyroid Disease",
+      "deleted": false,
+      "questionid": 150
+    },
+    {
+      "question": "Tuberculosis",
+      "deleted": false,
+      "questionid": 27
+    },
+    {
+      "question": "Valvular Abnormalities",
+      "deleted": false,
+      "questionid": 139
+    },
+    {
+      "question": "Valvular Heart Disease",
+      "deleted": false,
+      "questionid": 152
+    },
+    {
+      "question": "Venous Insuffiency",
+      "deleted": false,
+      "questionid": 38
+    },
+    {
+      "question": "Warfarin Management",
+      "deleted": false,
+      "questionid": 140
+    },
+    {
+      "question": "dementia",
+      "deleted": false,
+      "questionid": 101
+    }
+  ]
+}

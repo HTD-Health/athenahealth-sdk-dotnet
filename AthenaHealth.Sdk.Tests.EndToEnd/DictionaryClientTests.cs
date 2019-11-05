@@ -21,6 +21,19 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         }
 
         [Fact]
+        public async Task GetMedicalHistoryQuestions_ShowDeleted_ReturnsRecords()
+        {
+            MedicalHistoryQuestionResponse response = await _client.Dictionaries.GetMedicalHistoryQuestions(new GetMedicalHistoryQuestionsFilter()
+            {
+                ShowDeleted = true
+            });
+
+            response.ShouldNotBeNull();
+            response.Items.Length.ShouldBeGreaterThan(0);
+            response.Items.ShouldAllBe(x => x.QuestionId != 0);
+        }
+
+        [Fact]
         public async Task SearchOrderTypesByName_TwoDigitsName_ReturnsRecords()
         {
             OrderType[] response = await _client.Dictionaries.SearchOrderTypesByName("ol");

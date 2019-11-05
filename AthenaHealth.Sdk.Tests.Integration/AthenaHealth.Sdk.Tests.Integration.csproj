@@ -82,6 +82,9 @@
     <None Update="Data\Dictionary\GetPaymentMethods.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Data\Dictionary\GetMedicalHistoryQuestions.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Data\Dictionary\SearchAllergiesByName.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
