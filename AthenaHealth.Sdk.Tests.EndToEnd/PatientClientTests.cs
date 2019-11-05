@@ -863,5 +863,98 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             result.ShouldNotBeNull();
             result.PatientId.ShouldBe(patientId);
         }
+
+        [Fact(Skip = "This test is slow (about 12 seconds) and creates user every time is run")]
+        public async Task UpdateMedicalHistory_AddingAnswers_HistoryUpdated()
+        {
+            // Arrange
+            var faker = new Faker();
+
+            Faker<CreatePatient> createPatientFaker = new Faker<CreatePatient>()
+                .CustomInstantiator(f =>
+                {
+                    return new CreatePatient(
+                        1,
+                        f.Date.Past(80).Date,
+                        CultureInfo.CurrentCulture.TextInfo.ToTitleCase(f.Name.FirstName(Name.Gender.Male).ToLower()),
+                        CultureInfo.CurrentCulture.TextInfo.ToTitleCase(f.Name.LastName(Name.Gender.Male).ToLower()));
+                }).RuleFor(x => x.Email, (f, u) => f.Internet.Email(u.FirstName, u.LastName).ToLower());
+
+            CreatePatient request = createPatientFaker.Generate();
+
+            var createResult = await _client.Patients.CreatePatient(request);
+
+            var medicalHistoryQuestions = await _client.Dictionaries.GetMedicalHistoryQuestions(new GetMedicalHistoryQuestionsFilter());
+
+            var medicalHistoryBefore = await _client.Patients.GetMedicalHistory(createResult.PatientId.Value, 1);
+
+            var answers = medicalHistoryQuestions.Items.Select(x => new UpdateMedicalHistory.Question(x.QuestionId)
+            {
+                Answer = faker.PickRandom(new AnswerEnum?[] { AnswerEnum.Yes, AnswerEnum.No, AnswerEnum.Unspecified, null })
+            }).ToArray();
+            
+            // Act
+            await _client.Patients.UpdateMedicalHistory(createResult.PatientId.Value, new UpdateMedicalHistory(1)
+            {
+                Questions = answers
+            });
+
+            // Assert
+            var medicalHistoryAfter = await _client.Patients.GetMedicalHistory(createResult.PatientId.Value, 1);
+
+            medicalHistoryAfter.Questions.Length.ShouldBe(answers.Where(x => x.Answer.HasValue).Count(x => x.Answer.Value != AnswerEnum.Unspecified));
+            medicalHistoryAfter.Questions.ShouldAllBe(x => answers.Any(y => y.Id == x.Id && y.Answer == x.Answer));
+        }
+
+        [Fact(Skip = "This test is slow (about 12 seconds) and creates user every time is run")]
+        public async Task UpdateMedicalHistory_DeletingAnswers_HistoryUpdated()
+        {
+            // Arrange
+            var faker = new Faker();
+
+            Faker<CreatePatient> createPatientFaker = new Faker<CreatePatient>()
+                .CustomInstantiator(f =>
+                {
+                    return new CreatePatient(
+                        1,
+                        f.Date.Past(80).Date,
+                        CultureInfo.CurrentCulture.TextInfo.ToTitleCase(f.Name.FirstName(Name.Gender.Male).ToLower()),
+                        CultureInfo.CurrentCulture.TextInfo.ToTitleCase(f.Name.LastName(Name.Gender.Male).ToLower()));
+                }).RuleFor(x => x.Email, (f, u) => f.Internet.Email(u.FirstName, u.LastName).ToLower());
+
+            CreatePatient request = createPatientFaker.Generate();
+
+            var createResult = await _client.Patients.CreatePatient(request);
+
+            var medicalHistoryQuestions = await _client.Dictionaries.GetMedicalHistoryQuestions(new GetMedicalHistoryQuestionsFilter());
+
+            var medicalHistoryBefore = await _client.Patients.GetMedicalHistory(createResult.PatientId.Value, 1);
+
+            var answers = medicalHistoryQuestions.Items.Select(x => new UpdateMedicalHistory.Question(x.QuestionId)
+            {
+                Answer = faker.PickRandom(new AnswerEnum?[] { AnswerEnum.Yes, AnswerEnum.No })
+            }).ToArray();
+
+            await _client.Patients.UpdateMedicalHistory(createResult.PatientId.Value, new UpdateMedicalHistory(1)
+            {
+                Questions = answers
+            });
+
+            foreach (var answer in answers)
+            {
+                answer.Delete = true;
+            }
+
+            // Act
+            await _client.Patients.UpdateMedicalHistory(createResult.PatientId.Value, new UpdateMedicalHistory(1)
+            {
+                Questions = answers
+            });
+
+            // Assert
+            var medicalHistoryAfter = await _client.Patients.GetMedicalHistory(createResult.PatientId.Value, 1);
+
+            medicalHistoryAfter.Questions.Length.ShouldBe(0);
+        }
     }
 }
