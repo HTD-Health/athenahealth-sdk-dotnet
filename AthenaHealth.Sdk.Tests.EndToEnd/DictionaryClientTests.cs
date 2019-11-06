@@ -21,6 +21,16 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         }
 
         [Fact]
+        public async Task GetSocialHistoryTemplates_ReturnsRecords()
+        {
+            SocialHistoryTemplate[] response = await _client.Dictionaries.GetSocialHistoryTemplates();
+
+            response.ShouldNotBeNull();
+            response.Length.ShouldBeGreaterThan(0);
+            response.ShouldAllBe(x => x.Id != 0);
+        }
+
+        [Fact]
         public async Task GetMedicalHistoryQuestions_ShowDeleted_ReturnsRecords()
         {
             MedicalHistoryQuestionResponse response = await _client.Dictionaries.GetMedicalHistoryQuestions(new GetMedicalHistoryQuestionsFilter()
