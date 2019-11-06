@@ -350,5 +350,21 @@ namespace AthenaHealth.Sdk.Tests.Integration
             response.Items.ShouldAllBe(x => x.PatientId > 0);
             response.Items.ShouldAllBe(x => !string.IsNullOrWhiteSpace(x.Created));
         }
+
+        [Fact]
+        public async Task AddToWaitList_ReturnsCreatedRecordId()
+        {
+            IAppointmentClient client = new Clients.AppointmentClient(ConnectionFactory.CreateFromFile(@"Data\Appointment\AddToWaitList.json"));
+
+            AddToWaitListRequest request = new AddToWaitListRequest(100, 1)
+            {
+                Note = "Just testing",
+                Priority = PriorityEnum.Low
+            };
+            AddToWaitListResponse response = await client.AddToWaitList(request);
+
+            response.ShouldNotBeNull();
+            response.WaitListId.ShouldBeGreaterThan(0);
+        }
     }
 }

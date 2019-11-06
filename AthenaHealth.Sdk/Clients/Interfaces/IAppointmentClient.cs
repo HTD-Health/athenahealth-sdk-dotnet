@@ -104,6 +104,18 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
 
         Task<Appointment> RescheduleAppointment(RescheduleAppointment rescheduledAppointment);
 
+        /// <summary>
+        /// Returns entries on the wait list
+        /// </summary>
+        /// <param name="filter"></param>
+        /// <returns></returns>
         Task<WaitListResponse> GetWaitList(GetWaitlistFilter filter = null);
+
+        /// <summary>
+        /// Adds a wait list entry.
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        Task<AddToWaitListResponse> AddToWaitList(AddToWaitListRequest request);
     }
 }
