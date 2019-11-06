@@ -2,7 +2,6 @@
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
-using AthenaHealth.Sdk.Clients.Interfaces;
 using AthenaHealth.Sdk.Exceptions;
 using AthenaHealth.Sdk.Models;
 using AthenaHealth.Sdk.Models.Enums;
@@ -501,6 +500,17 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             appointmentRescheduled.ShouldNotBeNull();
             appointmentRescheduled.Id.ShouldBe(slot2Id);
             appointmentRescheduled.PatientId.ShouldBe(1);
+        }
+
+        [Fact]
+        public async Task GetWaitList_ReturnsRecords()
+        {
+            var response = await _client.Appointments.GetWaitList();
+
+            response.ShouldNotBeNull();
+            response.Items.ShouldAllBe(x => x.Id > 0);
+            response.Items.ShouldAllBe(x => x.PatientId > 0);
+            response.Items.ShouldAllBe(x => !string.IsNullOrWhiteSpace(x.Created));
         }
     }
 }

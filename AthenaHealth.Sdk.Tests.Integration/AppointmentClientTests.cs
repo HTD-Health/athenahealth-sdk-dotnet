@@ -337,5 +337,18 @@ namespace AthenaHealth.Sdk.Tests.Integration
             appointmentRescheduled.Id.ShouldBe(1206017);
             appointmentRescheduled.PatientId.ShouldBe(1);
         }
+
+        [Fact]
+        public async Task GetWaitList_ReturnsRecords()
+        {
+            IAppointmentClient client = new Clients.AppointmentClient(ConnectionFactory.CreateFromFile(@"Data\Appointment\GetWaitList.json"));
+
+            var response = await client.GetWaitList();
+
+            response.ShouldNotBeNull();
+            response.Items.ShouldAllBe(x => x.Id > 0);
+            response.Items.ShouldAllBe(x => x.PatientId > 0);
+            response.Items.ShouldAllBe(x => !string.IsNullOrWhiteSpace(x.Created));
+        }
     }
 }
