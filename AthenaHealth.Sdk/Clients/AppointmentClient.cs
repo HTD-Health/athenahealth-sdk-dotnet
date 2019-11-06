@@ -162,5 +162,10 @@ namespace AthenaHealth.Sdk.Clients
         {
             return await _connection.Get<WaitListResponse>($"{_connection.PracticeId}/appointments/waitlist", filter);
         }
+
+        public async Task<AddToWaitListResponse> AddToWaitList(AddToWaitListRequest request)
+        {
+            return await _connection.Post<AddToWaitListResponse>($"{_connection.PracticeId}/appointments/waitlist", null, request);
+        }
     }
 }
