@@ -52,6 +52,17 @@ namespace AthenaHealth.Sdk.Tests.Integration
         }
 
         [Fact]
+        public async Task GetSocialHistoryTemplates_ReturnsRecords()
+        {
+            var client = new DictionaryClient(ConnectionFactory.CreateFromFile(@"Data\Dictionary\GetSocialHistoryTemplates.json"));
+
+            var response = await client.GetSocialHistoryTemplates();
+
+            response.ShouldNotBeNull();
+            response.Length.ShouldBeGreaterThan(0);
+        }
+
+        [Fact]
         public async Task SearchOrderTypesByName_TwoDigitsNamePart_ReturnsRecords()
         {
             var client = new DictionaryClient(ConnectionFactory.CreateFromFile(@"Data\Dictionary\SearchOrderTypesByName.json"));

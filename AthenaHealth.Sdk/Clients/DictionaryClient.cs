@@ -47,5 +47,10 @@ namespace AthenaHealth.Sdk.Clients
         {
             return await _connection.Get<MedicalHistoryQuestionResponse>($"{_connection.PracticeId}/chart/configuration/medicalhistory", filter);
         }
+
+        public async Task<SocialHistoryTemplate[]> GetSocialHistoryTemplates()
+        {
+            return await _connection.Get<SocialHistoryTemplate[]>($"{_connection.PracticeId}/chart/configuration/socialhistory");
+        }
     }
 }

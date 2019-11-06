@@ -1,0 +1,1732 @@
+[
+  {
+    "templatename": "Portal",
+    "templateid": 1,
+    "questions": [
+      {
+        "question": "Alcohol intake",
+        "ordering": 1,
+        "options": [
+          { "none": "None" },
+          { "occasional": "Occasional" },
+          { "moderate": "Moderate" },
+          { "heavy": "Heavy" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1615,
+        "key": "ALCOHOL"
+      },
+      {
+        "question": "Caffeine intake",
+        "ordering": 2,
+        "options": [
+          { "none": "None" },
+          { "occasional": "Occasional" },
+          { "moderate": "Moderate" },
+          { "heavy": "Heavy" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1616,
+        "key": "CAFFEINEPERDAY"
+      },
+      {
+        "question": "Chewing tobacco",
+        "ordering": 3,
+        "options": [
+          { "none": "none" },
+          { "1\/day": "1\/day" },
+          { "2-4\/day": "2-4\/day" },
+          { "5+\/day": "5+\/day" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1617,
+        "key": "CHEWINGTOBACCO"
+      },
+      {
+        "question": "Diet",
+        "ordering": 4,
+        "options": [
+          { "regular": "Regular" },
+          { "vegetarian": "Vegetarian" },
+          { "vegan": "Vegan" },
+          { "glutenfree": "Gluten free" },
+          { "specific": "Specific" },
+          { "carbohydrate": "Carbohydrate" },
+          { "cardiac": "Cardiac" },
+          { "diabetic": "Diabetic" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1618,
+        "key": "DIET"
+      },
+      {
+        "question": "Illicit drugs",
+        "ordering": 5,
+        "options": [],
+        "inputtype": "FREETEXT",
+        "questionid": 1619,
+        "key": "DRUGS"
+      },
+      {
+        "question": "Occupation",
+        "ordering": 6,
+        "options": [],
+        "inputtype": "FREETEXT",
+        "questionid": 1620,
+        "key": "EMPLOYMENT"
+      },
+      {
+        "question": "Exercise level",
+        "ordering": 7,
+        "options": [
+          { "none": "None" },
+          { "occasional": "Occasional" },
+          { "moderate": "Moderate" },
+          { "heavy": "Heavy" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1621,
+        "key": "EXERCISE"
+      },
+      {
+        "question": "Marital status",
+        "ordering": 8,
+        "options": [
+          { "unknown": "Unknown" },
+          { "married": "Married" },
+          { "single": "Single" },
+          { "divorced": "Divorced" },
+          { "separated": "Separated" },
+          { "widowed": "Widowed" },
+          { "domestic partner": "Domestic Partner" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1622,
+        "key": "MARITALSTATUS"
+      },
+      {
+        "question": "Smoke alarm in home",
+        "ordering": 9,
+        "options": [
+          { "y": "Y" },
+          { "n": "N" }
+        ],
+        "inputtype": "YESNO",
+        "questionid": 1623,
+        "key": "SMOKEALARM"
+      },
+      {
+        "question": "Smoking - How much?",
+        "ordering": 10,
+        "options": [
+          { "n": "None" },
+          { "1 ppw": "1 PPW" },
+          { "2 ppw": "2 PPW" },
+          { "0.25 ppd": "1\/4 PPD" },
+          { "0.5 ppd": "1\/2 PPD" },
+          { "1 ppd": "1 PPD" },
+          { "1.5 ppd": "1 1\/2 PPD" },
+          { "2 ppd": "2 PPD" },
+          { "3+ ppd": "3+ PPD" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1624,
+        "key": "SMOKING"
+      },
+      {
+        "question": "Has smoked since age",
+        "ordering": 11,
+        "options": [],
+        "inputtype": "NUMERIC",
+        "questionid": 1625,
+        "key": "SMOKEDSINCEAGE"
+      },
+      {
+        "question": "Readiness to quit smoking",
+        "ordering": 12,
+        "options": [
+          { "0 - not ready to quit": "0 - not ready to quit" },
+          { "1": "1" },
+          { "2": "2" },
+          { "3": "3" },
+          { "4": "4" },
+          { "5": "5" },
+          { "6": "6" },
+          { "7": "7" },
+          { "8": "8" },
+          { "9": "9" },
+          { "10 - ready to quit": "10 - ready to quit" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1626,
+        "key": "LOCAL.880"
+      },
+      {
+        "question": "General stress level",
+        "ordering": 13,
+        "options": [
+          { "low": "Low" },
+          { "medium": "Medium" },
+          { "high": "High" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1627,
+        "key": "STRESSLEVEL"
+      },
+      {
+        "question": "Education",
+        "ordering": 14,
+        "options": [
+          { "less than 8th grade": "Less than 8th Grade" },
+          { "8": "8" },
+          { "9": "9" },
+          { "10": "10" },
+          { "11": "11" },
+          { "12": "12" },
+          { "2 year college": "2 Year College" },
+          { "4 year college": "4 Year College" },
+          { "post graduate": "Post Graduate" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1628,
+        "key": "EDUCATION"
+      },
+      {
+        "question": "Tobacco-years of use",
+        "ordering": 15,
+        "options": [],
+        "inputtype": "NUMERIC",
+        "questionid": 1629,
+        "key": "TOBACCOUSE"
+      },
+      {
+        "question": "Alcohol-years of use",
+        "ordering": 16,
+        "options": [],
+        "inputtype": "NUMERIC",
+        "questionid": 1630,
+        "key": "ALCOHOLUSE"
+      },
+      {
+        "question": "Illicit drugs-years of use",
+        "ordering": 17,
+        "options": [],
+        "inputtype": "NUMERIC",
+        "questionid": 1631,
+        "key": "ILLICITDRUGSUSE"
+      },
+      {
+        "question": "Sporting activities",
+        "ordering": 18,
+        "options": [],
+        "inputtype": "FREETEXT",
+        "questionid": 1632,
+        "key": "SPORTS"
+      },
+      {
+        "question": "Are you currently employed?",
+        "ordering": 19,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1633,
+        "key": "CURRENTEMPLOYMENT"
+      },
+      {
+        "question": "Employer",
+        "ordering": 20,
+        "options": [],
+        "inputtype": "FREETEXT",
+        "questionid": 1634,
+        "key": "EMPLOYER"
+      },
+      {
+        "question": "Do you feel pain above and below the waist",
+        "ordering": 21,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1635,
+        "key": "LOCAL.876"
+      },
+      {
+        "question": "Do you feel pain on both sides of your body",
+        "ordering": 22,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1636,
+        "key": "LOCAL.877"
+      },
+      {
+        "question": "I would rate the severity of my pain as",
+        "ordering": 23,
+        "options": [
+          { "0 - no pain": "0 - no pain" },
+          { "1": "1" },
+          { "2": "2" },
+          { "3": "3" },
+          { "4": "4" },
+          { "5": "5" },
+          { "6": "6" },
+          { "7": "7" },
+          { "8": "8" },
+          { "9": "9" },
+          { "10 - most pain": "10 - most pain" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1637,
+        "key": "LOCAL.878"
+      },
+      {
+        "question": "In the last week how many days has pain and fatigue interfered with your daily activities",
+        "ordering": 24,
+        "options": [
+          { "0": "0" },
+          { "1": "1" },
+          { "2": "2" },
+          { "3": "3" },
+          { "4": "4" },
+          { "5": "5" },
+          { "6": "6" },
+          { "7": "7" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1638,
+        "key": "LOCAL.879"
+      }
+    ]
+  },
+  {
+    "templatename": "EPDS2",
+    "templateid": 142,
+    "questions": []
+  },
+  {
+    "templatename": "test1126",
+    "templateid": 361,
+    "questions": []
+  },
+  {
+    "templatename": "Kurt Test",
+    "templateid": 21,
+    "questions": [
+      {
+        "question": "Advance directive",
+        "ordering": 1,
+        "options": [
+          { "y": "Y" },
+          { "n": "N" }
+        ],
+        "inputtype": "YESNO",
+        "questionid": 1026,
+        "key": "ADVANCEDIRECTIVE"
+      },
+      {
+        "question": "Alcohol intake",
+        "ordering": 2,
+        "options": [
+          { "none": "None" },
+          { "occasional": "Occasional" },
+          { "moderate": "Moderate" },
+          { "heavy": "Heavy" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1027,
+        "key": "ALCOHOL"
+      },
+      {
+        "question": "Caffeine intake",
+        "ordering": 3,
+        "options": [
+          { "none": "None" },
+          { "occasional": "Occasional" },
+          { "moderate": "Moderate" },
+          { "heavy": "Heavy" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1028,
+        "key": "CAFFEINEPERDAY"
+      },
+      {
+        "question": "Chewing tobacco",
+        "ordering": 4,
+        "options": [
+          { "none": "none" },
+          { "1\/day": "1\/day" },
+          { "2-4\/day": "2-4\/day" },
+          { "5+\/day": "5+\/day" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1029,
+        "key": "CHEWINGTOBACCO"
+      },
+      {
+        "question": "Diet",
+        "ordering": 5,
+        "options": [
+          { "regular": "Regular" },
+          { "vegetarian": "Vegetarian" },
+          { "vegan": "Vegan" },
+          { "glutenfree": "Gluten free" },
+          { "specific": "Specific" },
+          { "carbohydrate": "Carbohydrate" },
+          { "cardiac": "Cardiac" },
+          { "diabetic": "Diabetic" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1030,
+        "key": "DIET"
+      },
+      {
+        "question": "Illicit drugs",
+        "ordering": 6,
+        "options": [],
+        "inputtype": "FREETEXT",
+        "questionid": 1031,
+        "key": "DRUGS"
+      },
+      {
+        "question": "Occupation",
+        "ordering": 7,
+        "options": [],
+        "inputtype": "FREETEXT",
+        "questionid": 1032,
+        "key": "EMPLOYMENT"
+      },
+      {
+        "question": "Exercise level",
+        "ordering": 8,
+        "options": [
+          { "none": "None" },
+          { "occasional": "Occasional" },
+          { "moderate": "Moderate" },
+          { "heavy": "Heavy" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1033,
+        "key": "EXERCISE"
+      },
+      {
+        "question": "Guns present in home",
+        "ordering": 9,
+        "options": [
+          { "y": "Y" },
+          { "n": "N" }
+        ],
+        "inputtype": "YESNO",
+        "questionid": 1034,
+        "key": "GUNSINHOME"
+      },
+      {
+        "question": "Marital status",
+        "ordering": 10,
+        "options": [
+          { "unknown": "Unknown" },
+          { "married": "Married" },
+          { "single": "Single" },
+          { "divorced": "Divorced" },
+          { "separated": "Separated" },
+          { "widowed": "Widowed" },
+          { "domestic partner": "Domestic Partner" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1035,
+        "key": "MARITALSTATUS"
+      },
+      {
+        "question": "Mosquito repellent used routinely",
+        "ordering": 11,
+        "options": [
+          { "y": "Y" },
+          { "n": "N" }
+        ],
+        "inputtype": "YESNO",
+        "questionid": 1036,
+        "key": "MOSQUITOREPELLENT"
+      },
+      {
+        "question": "Number of children",
+        "ordering": 12,
+        "options": [
+          { "0": "0" },
+          { "1": "1" },
+          { "2": "2" },
+          { "3": "3" },
+          { "4": "4" },
+          { "5": "5" },
+          { "6": "6" },
+          { "7": "7" },
+          { "8": "8" },
+          { "9+": "9+" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1037,
+        "key": "NUMCHILDREN"
+      },
+      {
+        "question": "Occupational health risks",
+        "ordering": 13,
+        "options": [],
+        "inputtype": "FREETEXT",
+        "questionid": 1038,
+        "key": "OCCUPATIONRISK"
+      },
+      {
+        "question": "Seat belts used routinely",
+        "ordering": 14,
+        "options": [
+          { "y": "Y" },
+          { "n": "N" }
+        ],
+        "inputtype": "YESNO",
+        "questionid": 1039,
+        "key": "SEATBELTS"
+      },
+      {
+        "question": "Sexual orientation",
+        "ordering": 15,
+        "options": [
+          { "heterosexual": "Heterosexual" },
+          { "homosexual": "Homosexual" },
+          { "bisexual": "Bisexual" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1040,
+        "key": "SEXUALORIENTATION"
+      },
+      {
+        "question": "Smoke alarm in home",
+        "ordering": 16,
+        "options": [
+          { "y": "Y" },
+          { "n": "N" }
+        ],
+        "inputtype": "YESNO",
+        "questionid": 1041,
+        "key": "SMOKEALARM"
+      },
+      {
+        "question": "Has smoked since age",
+        "ordering": 17,
+        "options": [],
+        "inputtype": "NUMERIC",
+        "questionid": 1042,
+        "key": "SMOKEDSINCEAGE"
+      },
+      {
+        "question": "Smoking - How much?",
+        "ordering": 18,
+        "options": [
+          { "n": "None" },
+          { "1 ppw": "1 PPW" },
+          { "2 ppw": "2 PPW" },
+          { "0.25 ppd": "1\/4 PPD" },
+          { "0.5 ppd": "1\/2 PPD" },
+          { "1 ppd": "1 PPD" },
+          { "1.5 ppd": "1 1\/2 PPD" },
+          { "2 ppd": "2 PPD" },
+          { "3+ ppd": "3+ PPD" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1043,
+        "key": "SMOKING"
+      },
+      {
+        "question": "General stress level",
+        "ordering": 19,
+        "options": [
+          { "low": "Low" },
+          { "medium": "Medium" },
+          { "high": "High" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1044,
+        "key": "STRESSLEVEL"
+      },
+      {
+        "question": "Sunscreen used routinely",
+        "ordering": 20,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1045,
+        "key": "SUNSCREEN"
+      },
+      {
+        "question": "Education",
+        "ordering": 21,
+        "options": [
+          { "less than 8th grade": "Less than 8th Grade" },
+          { "8": "8" },
+          { "9": "9" },
+          { "10": "10" },
+          { "11": "11" },
+          { "12": "12" },
+          { "2 year college": "2 Year College" },
+          { "4 year college": "4 Year College" },
+          { "post graduate": "Post Graduate" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1046,
+        "key": "EDUCATION"
+      },
+      {
+        "question": "Alcohol pre-pregnancy",
+        "ordering": 22,
+        "options": [
+          { "none": "None" },
+          { "occasional": "Occasional" },
+          { "moderate": "Moderate" },
+          { "heavy": "Heavy" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1047,
+        "key": "ALCOHOLPREPREG"
+      },
+      {
+        "question": "Smoking pre-pregnancy",
+        "ordering": 23,
+        "options": [
+          { "no": "No" },
+          { "yes": "Yes" },
+          { "1 ppw": "1 PPW" },
+          { "2 ppw": "2 PPW" },
+          { ".25 ppd": ".25 PPD" },
+          { ".5 ppd": ".5 PPD" },
+          { "1 ppd": "1 PPD" },
+          { "1.5 ppd": "1.5 PPD" },
+          { "2 ppd": "2 PPD" },
+          { "3 ppd": "3 PPD" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1048,
+        "key": "SMOKINGPREPREG"
+      },
+      {
+        "question": "Illicit drugs pre-pregnancy",
+        "ordering": 24,
+        "options": [],
+        "inputtype": "FREETEXT",
+        "questionid": 1049,
+        "key": "ILLICITDRUGSPREPREG"
+      },
+      {
+        "question": "Tobacco-years of use",
+        "ordering": 25,
+        "options": [],
+        "inputtype": "NUMERIC",
+        "questionid": 1050,
+        "key": "TOBACCOUSE"
+      },
+      {
+        "question": "Alcohol-years of use",
+        "ordering": 26,
+        "options": [],
+        "inputtype": "NUMERIC",
+        "questionid": 1051,
+        "key": "ALCOHOLUSE"
+      },
+      {
+        "question": "Illicit drugs-years of use",
+        "ordering": 27,
+        "options": [],
+        "inputtype": "NUMERIC",
+        "questionid": 1052,
+        "key": "ILLICITDRUGSUSE"
+      },
+      {
+        "question": "Is blood transfusion acceptable in an emergency?",
+        "ordering": 28,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1053,
+        "key": "BLOODTRANSFUSION"
+      },
+      {
+        "question": "Is anesthesia consult planned?",
+        "ordering": 29,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1054,
+        "key": "ANESTHESIA"
+      },
+      {
+        "question": "Live alone or with others?",
+        "ordering": 30,
+        "options": [
+          { "alone": "alone" },
+          { "with others": "with others" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1055,
+        "key": "LIVINGSITUATION"
+      },
+      {
+        "question": "Single or multi-level home\/work?",
+        "ordering": 31,
+        "options": [
+          { "single level home": "single level home" },
+          { "multi level home": "multi level home" },
+          { "single level work": "single level work" },
+          { "multi level work": "multi level work" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1056,
+        "key": "HOME"
+      },
+      {
+        "question": "Sporting activities",
+        "ordering": 32,
+        "options": [],
+        "inputtype": "FREETEXT",
+        "questionid": 1057,
+        "key": "SPORTS"
+      },
+      {
+        "question": "Sexually active?",
+        "ordering": 33,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1058,
+        "key": "SEXUALACTIVITY"
+      },
+      {
+        "question": "Hand Dominance",
+        "ordering": 34,
+        "options": [
+          { "right": "Right" },
+          { "left": "Left" },
+          { "bilateral": "Bilateral" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1059,
+        "key": "HANDDOMINANCE"
+      },
+      {
+        "question": "Are you currently employed?",
+        "ordering": 35,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1060,
+        "key": "CURRENTEMPLOYMENT"
+      },
+      {
+        "question": "Employer",
+        "ordering": 36,
+        "options": [],
+        "inputtype": "FREETEXT",
+        "questionid": 1061,
+        "key": "EMPLOYER"
+      },
+      {
+        "question": "Work related injury?",
+        "ordering": 37,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1062,
+        "key": "WORKRELATEDINJURY"
+      },
+      {
+        "question": "Auto related injury?",
+        "ordering": 38,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1063,
+        "key": "AUTOINJURY"
+      },
+      {
+        "question": "If injured, is litigation ongoing?",
+        "ordering": 39,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1064,
+        "key": "ONGOINGLITIGATION"
+      },
+      {
+        "question": "Type of noise exposure",
+        "ordering": 40,
+        "options": [
+          { "industrial": "Industrial" },
+          { "firearms": "Firearms" },
+          { "explosions": "Explosions or Blasts" },
+          { "other": "Other" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1065,
+        "key": "TYPEOFNOISE"
+      },
+      {
+        "question": "Able to Care for Self",
+        "ordering": 41,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1066,
+        "key": "ABLETOCAREFORSELF"
+      },
+      {
+        "question": "Swim Often",
+        "ordering": 42,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1067,
+        "key": "SWIMOFTEN"
+      },
+      {
+        "question": "How often do you travel on an airplane?",
+        "ordering": 43,
+        "options": [],
+        "inputtype": "FREETEXT",
+        "questionid": 1068,
+        "key": "AIRPLANETRAVEL"
+      },
+      {
+        "question": "Parents' marital status",
+        "ordering": 44,
+        "options": [
+          { "married": "Married" },
+          { "unmarried": "Unmarried" },
+          { "separated": "Separated" },
+          { "divorced": "Divorced" },
+          { "widowed": "Widowed" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1069,
+        "key": "PARENTSMARITALSTATUS"
+      },
+      {
+        "question": "Home situation",
+        "ordering": 45,
+        "options": [
+          { "both parents": "Both parents" },
+          { "mother": "Mother" },
+          { "father": "Father" },
+          { "relatives": "Relatives" },
+          { "adoptive parents": "Adoptive parents" },
+          { "foster parents": "Foster parents" },
+          { "other": "Other" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1070,
+        "key": "HOMESITUATION"
+      },
+      {
+        "question": "Siblings",
+        "ordering": 46,
+        "options": [],
+        "inputtype": "FREETEXT",
+        "questionid": 1071,
+        "key": "SIBLINGS"
+      },
+      {
+        "question": "Childcare?",
+        "ordering": 47,
+        "options": [
+          { "none": "None" },
+          { "relative": "Relative" },
+          { "private sitter": "Private sitter" },
+          { "daycare\/preschool": "Daycare\/preschool" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1072,
+        "key": "CHILDCARE"
+      },
+      {
+        "question": "Animal exposure?",
+        "ordering": 48,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1073,
+        "key": "ANIMALEXPOSURE"
+      },
+      {
+        "question": "Passive smoke exposure?",
+        "ordering": 49,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1074,
+        "key": "SMOKEEXPOSURE"
+      },
+      {
+        "question": "Smoke\/CO detectors in home?",
+        "ordering": 50,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1075,
+        "key": "SMOKEDETECTOR"
+      },
+      {
+        "question": "Seat belt\/car seat used routinely?",
+        "ordering": 51,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1076,
+        "key": "SEATBELTCARSEAT"
+      },
+      {
+        "question": "Insect repellent used routinely?",
+        "ordering": 52,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1077,
+        "key": "INSECTREPELLENT"
+      },
+      {
+        "question": "Year in school",
+        "ordering": 53,
+        "options": [
+          { "pre-k": "Pre-K" },
+          { "kindergarten": "Kindergarten" },
+          { "1": "1" },
+          { "2": "2" },
+          { "3": "3" },
+          { "4": "4" },
+          { "5": "5" },
+          { "6": "6" },
+          { "7": "7" },
+          { "8": "8" },
+          { "9": "9" },
+          { "10": "10" },
+          { "11": "11" },
+          { "12": "12" },
+          { "hs grad": "HS Grad" },
+          { "college": "College" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1078,
+        "key": "YEARINSCHOOL"
+      },
+      {
+        "question": "School name",
+        "ordering": 54,
+        "options": [],
+        "inputtype": "FREETEXT",
+        "questionid": 1079,
+        "key": "SCHOOLNAME"
+      },
+      {
+        "question": "Number of sexual partners",
+        "ordering": 55,
+        "options": [],
+        "inputtype": "NUMERIC",
+        "questionid": 1080,
+        "key": "SEXUALPARTNERS"
+      },
+      {
+        "question": "Protected sex?",
+        "ordering": 56,
+        "options": [
+          { "always": "Always" },
+          { "usually": "Usually" },
+          { "no": "No" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1081,
+        "key": "PROTECTEDSEX"
+      },
+      {
+        "question": "Family history of heart disease?",
+        "ordering": 57,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1082,
+        "key": "FAMILYHISTORYHEARTDISEASE"
+      },
+      {
+        "question": "High Cholesterol",
+        "ordering": 58,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1083,
+        "key": "HIGHCHOLESTEROL"
+      },
+      {
+        "question": "High blood pressure",
+        "ordering": 59,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1084,
+        "key": "HIGHBLOODPRESSURE"
+      },
+      {
+        "question": "Overweight",
+        "ordering": 60,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1085,
+        "key": "OVERWEIGHT"
+      },
+      {
+        "question": "Obese",
+        "ordering": 61,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1086,
+        "key": "OBESE"
+      },
+      {
+        "question": "Diabetes",
+        "ordering": 62,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1087,
+        "key": "DIABETES"
+      },
+      {
+        "question": "Tobacco Smoking Status",
+        "ordering": 63,
+        "options": [
+          { "never": "Never smoker" },
+          { "formerly": "Former smoker" },
+          { "currentlyeveryday": "Current every day smoker" },
+          { "currentlysomedays": "Current some day smoker" },
+          { "currentstatusunknown": "Smoker - current status unknown" },
+          { "unknownifever": "Unknown if ever smoked" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1088,
+        "key": "SMOKINGSTATUS"
+      },
+      {
+        "question": "Love athena?",
+        "ordering": 64,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1089,
+        "key": "LOCAL.16"
+      },
+      {
+        "question": "Love athenaCommunicator",
+        "ordering": 65,
+        "options": [],
+        "inputtype": "FREETEXT",
+        "questionid": 1090,
+        "key": "LOCAL.17"
+      },
+      {
+        "question": "Snorkel\/SCUBA",
+        "ordering": 66,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1091,
+        "key": "SNORKELSCUBA"
+      }
+    ]
+  },
+  {
+    "templatename": "Cardiology",
+    "templateid": 41,
+    "questions": [
+      {
+        "question": "Family history of heart disease?",
+        "ordering": 1,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1757,
+        "key": "FAMILYHISTORYHEARTDISEASE"
+      },
+      {
+        "question": "Tobacco Smoking Status",
+        "ordering": 2,
+        "options": [
+          { "never": "Never smoker" },
+          { "formerly": "Former smoker" },
+          { "currentlyeveryday": "Current every day smoker" },
+          { "currentlysomedays": "Current some day smoker" },
+          { "currentstatusunknown": "Smoker - current status unknown" },
+          { "unknownifever": "Unknown if ever smoked" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1758,
+        "key": "SMOKINGSTATUS"
+      },
+      {
+        "question": "Smoking - How much?",
+        "ordering": 3,
+        "options": [
+          { "n": "None" },
+          { "1 ppw": "1 PPW" },
+          { "2 ppw": "2 PPW" },
+          { "0.25 ppd": "1\/4 PPD" },
+          { "0.5 ppd": "1\/2 PPD" },
+          { "1 ppd": "1 PPD" },
+          { "1.5 ppd": "1 1\/2 PPD" },
+          { "2 ppd": "2 PPD" },
+          { "3+ ppd": "3+ PPD" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1759,
+        "key": "SMOKING"
+      },
+      {
+        "question": "Has smoked since age",
+        "ordering": 4,
+        "options": [],
+        "inputtype": "NUMERIC",
+        "questionid": 1760,
+        "key": "SMOKEDSINCEAGE"
+      },
+      {
+        "question": "High Cholesterol",
+        "ordering": 5,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1761,
+        "key": "HIGHCHOLESTEROL"
+      },
+      {
+        "question": "High blood pressure",
+        "ordering": 6,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1762,
+        "key": "HIGHBLOODPRESSURE"
+      },
+      {
+        "question": "Exercise level",
+        "ordering": 7,
+        "options": [
+          { "none": "None" },
+          { "occasional": "Occasional" },
+          { "moderate": "Moderate" },
+          { "heavy": "Heavy" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1763,
+        "key": "EXERCISE"
+      },
+      {
+        "question": "Overweight",
+        "ordering": 8,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1764,
+        "key": "OVERWEIGHT"
+      },
+      {
+        "question": "Obese",
+        "ordering": 9,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1765,
+        "key": "OBESE"
+      },
+      {
+        "question": "Diabetes",
+        "ordering": 10,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1766,
+        "key": "DIABETES"
+      },
+      {
+        "question": "General stress level",
+        "ordering": 11,
+        "options": [
+          { "low": "Low" },
+          { "medium": "Medium" },
+          { "high": "High" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1767,
+        "key": "STRESSLEVEL"
+      },
+      {
+        "question": "Alcohol intake",
+        "ordering": 12,
+        "options": [
+          { "none": "None" },
+          { "occasional": "Occasional" },
+          { "moderate": "Moderate" },
+          { "heavy": "Heavy" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1768,
+        "key": "ALCOHOL"
+      },
+      {
+        "question": "Diet",
+        "ordering": 13,
+        "options": [
+          { "regular": "Regular" },
+          { "vegetarian": "Vegetarian" },
+          { "vegan": "Vegan" },
+          { "glutenfree": "Gluten free" },
+          { "specific": "Specific" },
+          { "carbohydrate": "Carbohydrate" },
+          { "cardiac": "Cardiac" },
+          { "diabetic": "Diabetic" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1769,
+        "key": "DIET"
+      },
+      {
+        "question": "Occupation",
+        "ordering": 14,
+        "options": [],
+        "inputtype": "FREETEXT",
+        "questionid": 1770,
+        "key": "EMPLOYMENT"
+      },
+      {
+        "question": "Marital status",
+        "ordering": 15,
+        "options": [
+          { "unknown": "Unknown" },
+          { "married": "Married" },
+          { "single": "Single" },
+          { "divorced": "Divorced" },
+          { "separated": "Separated" },
+          { "widowed": "Widowed" },
+          { "domestic partner": "Domestic Partner" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1771,
+        "key": "MARITALSTATUS"
+      },
+      {
+        "question": "Advance directive",
+        "ordering": 16,
+        "options": [
+          { "y": "Y" },
+          { "n": "N" }
+        ],
+        "inputtype": "YESNO",
+        "questionid": 1772,
+        "key": "ADVANCEDIRECTIVE"
+      },
+      {
+        "question": "Siblings",
+        "ordering": 17,
+        "options": [],
+        "inputtype": "FREETEXT",
+        "questionid": 1773,
+        "key": "SIBLINGS"
+      },
+      {
+        "question": "qwerty123",
+        "ordering": 18,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1774,
+        "key": "LOCAL.816"
+      },
+      {
+        "question": "This is my custom question",
+        "ordering": 19,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1775,
+        "key": "LOCAL.896"
+      },
+      {
+        "question": "meat balls",
+        "ordering": 20,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1776,
+        "key": "LOCAL.897"
+      }
+    ]
+  },
+  {
+    "templatename": "Meaningful Use - Optional",
+    "templateid": 161,
+    "questions": [
+      {
+        "question": "Deaf or serious difficulty hearing",
+        "ordering": 1,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1105,
+        "key": "DEAFHARDHEARING"
+      },
+      {
+        "question": "Blind or serious difficulty seeing",
+        "ordering": 2,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1101,
+        "key": "BLINDBADEYESIGHT"
+      },
+      {
+        "question": "Difficulty concentrating, remembering or making decisions",
+        "ordering": 3,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1103,
+        "key": "MENTALFOCUS"
+      },
+      {
+        "question": "Difficulty walking or climbing stairs",
+        "ordering": 4,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1104,
+        "key": "WALKINGSTAIRS"
+      },
+      {
+        "question": "Difficulty dressing or bathing",
+        "ordering": 5,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1106,
+        "key": "DRESSBATHING"
+      },
+      {
+        "question": "Difficulty doing errands alone",
+        "ordering": 6,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1102,
+        "key": "ERRANDSALONE"
+      }
+    ]
+  },
+  {
+    "templatename": "Jsp Portal Questions",
+    "templateid": 101,
+    "questions": [
+      {
+        "question": "Current Concerns",
+        "ordering": 1,
+        "options": [],
+        "inputtype": "FREETEXT",
+        "questionid": 721,
+        "key": "LOCAL.756"
+      }
+    ]
+  },
+  {
+    "templatename": "EPDS1",
+    "templateid": 141,
+    "questions": [
+      {
+        "question": "EPDS1: I have been able to laugh and see the funny side of things",
+        "ordering": 1,
+        "options": [
+          { "as much as i always could": "As much as I always could" },
+          { "not quite so much now": "Not quite so much now" },
+          { "not at all": "Not at all" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1777,
+        "key": "LOCAL.796"
+      },
+      {
+        "question": "EPDS2. I have looked forward with enjoyment to things",
+        "ordering": 2,
+        "options": [
+          { "as much as i ever did": "As much as I ever did" },
+          { "rather less than i used to": "rather less than I used to" },
+          { "hardly at all": "Hardly at all" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1778,
+        "key": "LOCAL.797"
+      }
+    ]
+  },
+  {
+    "templatename": "General IM",
+    "templateid": 201,
+    "questions": [
+      {
+        "question": "Occupation",
+        "ordering": 1,
+        "options": [],
+        "inputtype": "FREETEXT",
+        "questionid": 1864,
+        "key": "EMPLOYMENT"
+      },
+      {
+        "question": "Education",
+        "ordering": 2,
+        "options": [
+          { "less than 8th grade": "Less than 8th Grade" },
+          { "8": "8" },
+          { "9": "9" },
+          { "10": "10" },
+          { "11": "11" },
+          { "12": "12" },
+          { "2 year college": "2 Year College" },
+          { "4 year college": "4 Year College" },
+          { "post graduate": "Post Graduate" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1865,
+        "key": "EDUCATION"
+      },
+      {
+        "question": "Marital status",
+        "ordering": 3,
+        "options": [
+          { "unknown": "Unknown" },
+          { "married": "Married" },
+          { "single": "Single" },
+          { "divorced": "Divorced" },
+          { "separated": "Separated" },
+          { "widowed": "Widowed" },
+          { "domestic partner": "Domestic Partner" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1866,
+        "key": "MARITALSTATUS"
+      },
+      {
+        "question": "Sexual orientation",
+        "ordering": 4,
+        "options": [
+          { "heterosexual": "Heterosexual" },
+          { "homosexual": "Homosexual" },
+          { "bisexual": "Bisexual" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1867,
+        "key": "SEXUALORIENTATION"
+      },
+      {
+        "question": "Exercise level",
+        "ordering": 5,
+        "options": [
+          { "none": "None" },
+          { "occasional": "Occasional" },
+          { "moderate": "Moderate" },
+          { "heavy": "Heavy" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1868,
+        "key": "EXERCISE"
+      },
+      {
+        "question": "Diet",
+        "ordering": 6,
+        "options": [
+          { "regular": "Regular" },
+          { "vegetarian": "Vegetarian" },
+          { "vegan": "Vegan" },
+          { "glutenfree": "Gluten free" },
+          { "specific": "Specific" },
+          { "carbohydrate": "Carbohydrate" },
+          { "cardiac": "Cardiac" },
+          { "diabetic": "Diabetic" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1869,
+        "key": "DIET"
+      },
+      {
+        "question": "General stress level",
+        "ordering": 7,
+        "options": [
+          { "low": "Low" },
+          { "medium": "Medium" },
+          { "high": "High" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1870,
+        "key": "STRESSLEVEL"
+      },
+      {
+        "question": "Tobacco Smoking Status",
+        "ordering": 8,
+        "options": [
+          { "never": "Never smoker" },
+          { "formerly": "Former smoker" },
+          { "currentlyeveryday": "Current every day smoker" },
+          { "currentlysomedays": "Current some day smoker" },
+          { "currentstatusunknown": "Smoker - current status unknown" },
+          { "unknownifever": "Unknown if ever smoked" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1871,
+        "key": "SMOKINGSTATUS"
+      },
+      {
+        "question": "Smoking - How much?",
+        "ordering": 9,
+        "options": [
+          { "n": "None" },
+          { "1 ppw": "1 PPW" },
+          { "2 ppw": "2 PPW" },
+          { "0.25 ppd": "1\/4 PPD" },
+          { "0.5 ppd": "1\/2 PPD" },
+          { "1 ppd": "1 PPD" },
+          { "1.5 ppd": "1 1\/2 PPD" },
+          { "2 ppd": "2 PPD" },
+          { "3+ ppd": "3+ PPD" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1872,
+        "key": "SMOKING"
+      },
+      {
+        "question": "Has smoked since age",
+        "ordering": 10,
+        "options": [],
+        "inputtype": "NUMERIC",
+        "questionid": 1873,
+        "key": "SMOKEDSINCEAGE"
+      },
+      {
+        "question": "Alcohol intake",
+        "ordering": 11,
+        "options": [
+          { "none": "None" },
+          { "occasional": "Occasional" },
+          { "moderate": "Moderate" },
+          { "heavy": "Heavy" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1874,
+        "key": "ALCOHOL"
+      },
+      {
+        "question": "Caffeine intake",
+        "ordering": 12,
+        "options": [
+          { "none": "None" },
+          { "occasional": "Occasional" },
+          { "moderate": "Moderate" },
+          { "heavy": "Heavy" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1875,
+        "key": "CAFFEINEPERDAY"
+      },
+      {
+        "question": "Chewing tobacco",
+        "ordering": 13,
+        "options": [
+          { "none": "none" },
+          { "1\/day": "1\/day" },
+          { "2-4\/day": "2-4\/day" },
+          { "5+\/day": "5+\/day" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1876,
+        "key": "CHEWINGTOBACCO"
+      },
+      {
+        "question": "Illicit drugs",
+        "ordering": 14,
+        "options": [],
+        "inputtype": "FREETEXT",
+        "questionid": 1877,
+        "key": "DRUGS"
+      },
+      {
+        "question": "Guns present in home",
+        "ordering": 15,
+        "options": [
+          { "y": "Y" },
+          { "n": "N" }
+        ],
+        "inputtype": "YESNO",
+        "questionid": 1878,
+        "key": "GUNSINHOME"
+      },
+      {
+        "question": "Seat belts used routinely",
+        "ordering": 16,
+        "options": [
+          { "y": "Y" },
+          { "n": "N" }
+        ],
+        "inputtype": "YESNO",
+        "questionid": 1879,
+        "key": "SEATBELTS"
+      },
+      {
+        "question": "Sunscreen used routinely",
+        "ordering": 17,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1880,
+        "key": "SUNSCREEN"
+      },
+      {
+        "question": "Smoke alarm in home",
+        "ordering": 18,
+        "options": [
+          { "y": "Y" },
+          { "n": "N" }
+        ],
+        "inputtype": "YESNO",
+        "questionid": 1881,
+        "key": "SMOKEALARM"
+      },
+      {
+        "question": "Advance directive",
+        "ordering": 19,
+        "options": [
+          { "y": "Y" },
+          { "n": "N" }
+        ],
+        "inputtype": "YESNO",
+        "questionid": 1882,
+        "key": "ADVANCEDIRECTIVE"
+      },
+      {
+        "question": "Performs monthly self-breast exam",
+        "ordering": 20,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1883,
+        "key": "PERFORMSMONTHLYSELFBREASTEXAM"
+      },
+      {
+        "question": "Legally blind in one or both eyes?",
+        "ordering": 21,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1884,
+        "key": "LEGALLYBLINDONEBOTHEYES"
+      },
+      {
+        "question": "Hard of hearing or deaf in one or both ears?",
+        "ordering": 22,
+        "options": [],
+        "inputtype": "YESNO",
+        "questionid": 1885,
+        "key": "HARDHEARINGONEBOTHEARS"
+      },
+      {
+        "question": "Is aforrest's test successful?",
+        "ordering": 23,
+        "options": [],
+        "inputtype": "FREETEXT",
+        "questionid": 1886,
+        "key": "LOCAL.1017"
+      }
+    ]
+  },
+  {
+    "templatename": "Meaningful Use - Always Shown",
+    "templateid": 479,
+    "questions": [
+      {
+        "question": "Tobacco Smoking Status",
+        "ordering": 1,
+        "options": [
+          { "never": "Never smoker" },
+          { "formerly": "Former smoker" },
+          { "currentlyeveryday": "Current every day smoker" },
+          { "currentlysomedays": "Current some day smoker" },
+          { "currentstatusunknown": "Smoker - current status unknown" },
+          { "unknownifever": "Unknown if ever smoked" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1782,
+        "key": "SMOKINGSTATUS"
+      },
+      {
+        "question": "Smoking - How much?",
+        "ordering": 2,
+        "options": [
+          { "n": "None" },
+          { "1 ppw": "1 PPW" },
+          { "2 ppw": "2 PPW" },
+          { "0.25 ppd": "1\/4 PPD" },
+          { "0.5 ppd": "1\/2 PPD" },
+          { "1 ppd": "1 PPD" },
+          { "1.5 ppd": "1 1\/2 PPD" },
+          { "2 ppd": "2 PPD" },
+          { "3+ ppd": "3+ PPD" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1821,
+        "key": "SMOKING"
+      },
+      {
+        "question": "Tobacco-years of use",
+        "ordering": 3,
+        "options": [],
+        "inputtype": "NUMERIC",
+        "questionid": 1781,
+        "key": "TOBACCOUSE"
+      }
+    ]
+  },
+  {
+    "templatename": "Transgender Patient",
+    "templateid": 862,
+    "questions": [
+      {
+        "question": "Gender identity?",
+        "ordering": 0,
+        "options": [
+          { "male": "Identifies as Male" },
+          { "female": "Identifies as Female" },
+          { "transgender male\/female-to-male (ftm)": "Transgender Male\/Female-to-Male (FTM)" },
+          { "transgender female\/male-to-female (mtf)": "Transgender Female\/Male-to-Female (MTF)" },
+          { "genderqueer (neither exclusively male nor female)": "Gender non-conforming (neither exclusively male nor female)" },
+          { "additional gender category or other": "Additional gender category\/other, please specify" },
+          { "choose not to disclose": "Choose not to disclose" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1822,
+        "key": "GENDERIDENTITY"
+      },
+      {
+        "question": "Assigned sex at birth?",
+        "ordering": 1,
+        "options": [
+          { "male": "Male" },
+          { "female": "Female" },
+          { "choose not to disclose": "Choose not to disclose" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1823,
+        "key": "ASSIGNEDSEX"
+      },
+      {
+        "question": "Chromosomal sex?",
+        "ordering": 2,
+        "options": [
+          { "xy": "XY" },
+          { "xx": "XX" },
+          { "x": "X" },
+          { "xxy": "XXY" },
+          { "xxx": "XXX" },
+          { "xxyy": "XXYY" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1824,
+        "key": "CHROMOSOMALSEX"
+      },
+      {
+        "question": "Name used",
+        "ordering": 3,
+        "options": [],
+        "inputtype": "FREETEXT",
+        "questionid": 1825,
+        "key": "NAMEUSED"
+      },
+      {
+        "question": "Pronouns",
+        "ordering": 4,
+        "options": [
+          { "she\/her": "she\/her" },
+          { "he\/him": "he\/him" },
+          { "they\/them": "they\/them" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1826,
+        "key": "PRONOUNS"
+      },
+      {
+        "question": "Sexual orientation?",
+        "ordering": 5,
+        "options": [
+          { "lesbian or gay or homosexual": "Lesbian, gay or homosexual" },
+          { "straight or heterosexual": "Straight or heterosexual" },
+          { "bisexual": "Bisexual" },
+          { "something else": "Something else, please describe" },
+          { "don't know": "Don't know" },
+          { "choose not to disclose": "Choose not to disclose" }
+        ],
+        "inputtype": "DROPDOWN",
+        "questionid": 1827,
+        "key": "SEXUALORIENTATIONTRANS"
+      }
+    ]
+  }
+]
