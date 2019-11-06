@@ -1,0 +1,276 @@
+{
+  "totalcount": 30,
+  "waitlistentries": [
+    {
+      "priority": "HIGH",
+      "departmentid": 1,
+      "waitlistid": 984,
+      "hourto": 13,
+      "dayofweekids": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "hourfrom": 9,
+      "patientid": 2526,
+      "created": "06/14/2017 05:38:36"
+    },
+    {
+      "departmentid": 150,
+      "waitlistid": 1003,
+      "patientid": 5273,
+      "created": "06/28/2017 16:53:24"
+    },
+    {
+      "departmentid": 1,
+      "waitlistid": 1023,
+      "patientid": 1,
+      "created": "08/25/2017 16:50:51"
+    },
+    {
+      "departmentid": 1,
+      "waitlistid": 1043,
+      "patientid": 30898,
+      "created": "10/19/2017 04:43:40"
+    },
+    {
+      "departmentid": 1,
+      "waitlistid": 1044,
+      "patientid": 30898,
+      "created": "10/19/2017 04:45:44"
+    },
+    {
+      "departmentid": 1,
+      "waitlistid": 1064,
+      "patientid": 30577,
+      "note": "test",
+      "created": "01/23/2018 00:56:32"
+    },
+    {
+      "departmentid": 1,
+      "waitlistid": 1083,
+      "patientid": 76,
+      "created": "02/05/2018 15:50:33"
+    },
+    {
+      "appointmentid": 895161,
+      "departmentid": 1,
+      "waitlistid": 1103,
+      "hourto": 10,
+      "hourfrom": 9,
+      "patientid": 31096,
+      "created": "02/20/2018 04:29:59"
+    },
+    {
+      "appointmentid": 895161,
+      "departmentid": 1,
+      "waitlistid": 1104,
+      "providerid": 23,
+      "hourto": 16,
+      "hourfrom": 15,
+      "patientid": 31096,
+      "created": "02/20/2018 07:46:49"
+    },
+    {
+      "departmentid": 1,
+      "waitlistid": 1143,
+      "patientid": 34140,
+      "created": "10/24/2018 18:15:07"
+    },
+    {
+      "priority": "NORMAL",
+      "waitlistid": 1163,
+      "hourto": 12,
+      "dayofweekids": [
+        "1",
+        "3",
+        "5"
+      ],
+      "hourfrom": 8,
+      "patientid": 37,
+      "note": "Something",
+      "created": "01/09/2019 06:21:52"
+    },
+    {
+      "priority": "NORMAL",
+      "waitlistid": 1164,
+      "hourto": 12,
+      "dayofweekids": [
+        "1",
+        "3",
+        "5"
+      ],
+      "hourfrom": 8,
+      "patientid": 37,
+      "note": "Something",
+      "created": "01/09/2019 06:47:03"
+    },
+    {
+      "priority": "NORMAL",
+      "waitlistid": 1165,
+      "hourto": 12,
+      "dayofweekids": [
+        "1",
+        "3",
+        "5"
+      ],
+      "hourfrom": 8,
+      "patientid": 37,
+      "note": "Something",
+      "created": "01/09/2019 07:39:02"
+    },
+    {
+      "priority": "NORMAL",
+      "departmentid": 1,
+      "waitlistid": 1166,
+      "hourto": 11,
+      "hourfrom": 8,
+      "patientid": 7,
+      "note": "I am asking for several calls, I have a hearing problem.",
+      "created": "01/09/2019 08:04:46"
+    },
+    {
+      "priority": "NORMAL",
+      "departmentid": 1,
+      "waitlistid": 1167,
+      "hourto": 11,
+      "hourfrom": 8,
+      "patientid": 7,
+      "note": "I am asking for several calls, I have a hearing problem.",
+      "created": "01/09/2019 08:09:58"
+    },
+    {
+      "priority": "NORMAL",
+      "departmentid": 1,
+      "waitlistid": 1168,
+      "hourto": 11,
+      "hourfrom": 8,
+      "patientid": 7,
+      "note": "I am asking for several calls, I have a hearing problem.",
+      "created": "01/09/2019 09:18:13"
+    },
+    {
+      "priority": "NORMAL",
+      "departmentid": 1,
+      "waitlistid": 1169,
+      "hourto": 11,
+      "hourfrom": 8,
+      "patientid": 7,
+      "note": "I am asking for several calls, I have a hearing problem.",
+      "created": "01/09/2019 09:25:48"
+    },
+    {
+      "priority": "NORMAL",
+      "departmentid": 1,
+      "waitlistid": 1170,
+      "hourto": 11,
+      "hourfrom": 8,
+      "patientid": 7,
+      "note": "I am asking for several calls, I have a hearing problem.",
+      "created": "01/09/2019 09:27:14"
+    },
+    {
+      "priority": "NORMAL",
+      "departmentid": 1,
+      "waitlistid": 1171,
+      "hourto": 11,
+      "hourfrom": 8,
+      "patientid": 7,
+      "note": "I am asking for several calls, I have a hearing problem.",
+      "created": "01/09/2019 09:29:48"
+    },
+    {
+      "priority": "NORMAL",
+      "departmentid": 1,
+      "waitlistid": 1172,
+      "hourto": 11,
+      "hourfrom": 8,
+      "patientid": 7,
+      "note": "I am asking for several calls, I have a hearing problem.",
+      "created": "01/09/2019 09:30:24"
+    },
+    {
+      "priority": "NORMAL",
+      "departmentid": 1,
+      "waitlistid": 1173,
+      "hourto": 11,
+      "hourfrom": 8,
+      "patientid": 7,
+      "note": "I am asking for several calls, I have a hearing problem.",
+      "created": "01/09/2019 09:31:07"
+    },
+    {
+      "priority": "NORMAL",
+      "departmentid": 1,
+      "waitlistid": 1174,
+      "hourto": 11,
+      "hourfrom": 8,
+      "patientid": 7,
+      "note": "I am asking for several calls, I have a hearing problem.",
+      "created": "01/09/2019 09:31:34"
+    },
+    {
+      "departmentid": 1,
+      "waitlistid": 1175,
+      "patientid": 35097,
+      "created": "02/06/2019 06:50:08"
+    },
+    {
+      "departmentid": 1,
+      "waitlistid": 1176,
+      "patientid": 37,
+      "created": "02/14/2019 09:22:12"
+    },
+    {
+      "departmentid": 1,
+      "waitlistid": 1183,
+      "providerid": 72,
+      "patientid": 1,
+      "created": "04/24/2019 11:55:10"
+    },
+    {
+      "appointmenttypeid": 2,
+      "departmentid": 144,
+      "waitlistid": 1203,
+      "providerid": 79,
+      "patientid": 25179,
+      "created": "06/10/2019 11:35:14"
+    },
+    {
+      "departmentid": 1,
+      "waitlistid": 1204,
+      "patientid": 1,
+      "created": "09/19/2019 09:31:09"
+    },
+    {
+      "departmentid": 1,
+      "waitlistid": 1205,
+      "patientid": 40156,
+      "created": "09/23/2019 09:07:44"
+    },
+    {
+      "departmentid": 1,
+      "waitlistid": 1206,
+      "providerid": 101,
+      "patientid": 41439,
+      "created": "10/20/2019 19:30:25"
+    },
+    {
+      "priority": "NORMAL",
+      "appointmenttypeid": 2,
+      "departmentid": 1,
+      "waitlistid": 1207,
+      "providerid": 71,
+      "hourto": 2,
+      "dayofweekids": [
+        "1",
+        "2"
+      ],
+      "hourfrom": 1,
+      "patientid": 1,
+      "note": "This is a test note",
+      "created": "11/05/2019 01:38:11"
+    }
+  ]
+}
