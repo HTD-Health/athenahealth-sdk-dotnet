@@ -21,10 +21,23 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
     public class PatientClientTests : IClassFixture<AthenaHealthClientFixture>
     {
         private readonly IAthenaHealthClient _client;
+        private readonly Faker _faker;
+        private readonly Faker<CreatePatient> _createPatientFaker;
 
         public PatientClientTests(AthenaHealthClientFixture athenaHealthClientFixture)
         {
             _client = athenaHealthClientFixture.Client;
+
+            _faker = new Faker();
+            _createPatientFaker = new Faker<CreatePatient>()
+                .CustomInstantiator(f =>
+                {
+                    return new CreatePatient(
+                        1,
+                        f.Date.Past(80).Date,
+                        CultureInfo.CurrentCulture.TextInfo.ToTitleCase(f.Name.FirstName(Name.Gender.Male).ToLower()),
+                        CultureInfo.CurrentCulture.TextInfo.ToTitleCase(f.Name.LastName(Name.Gender.Male).ToLower()));
+                }).RuleFor(x => x.Email, (f, u) => f.Internet.Email(u.FirstName, u.LastName).ToLower());
         }
 
         [Theory]
@@ -153,6 +166,92 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             // Assert
             result.ShouldNotBeNull();
             result.Length.ShouldBeGreaterThan(0);
+        }
+
+        [Fact]
+        public async Task UpdateSocialHistoryTemplates_TemplateExists_TemplatesAdded()
+        {
+            // Arrange
+            CreatePatient request = _createPatientFaker.Generate();
+
+            var createResult = await _client.Patients.CreatePatient(request);
+
+            var socialHistoryTemplates = await _client.Dictionaries.GetSocialHistoryTemplates();
+
+            var templateIds = socialHistoryTemplates
+                .Where(x => _faker.Random.Bool())
+                .Select(x => x.Id)
+                .ToArray();
+
+            // Act
+            await _client.Patients.UpdateSocialHistoryTemplates(createResult.PatientId.Value, new UpdateSocialHistoryTemplates(1, templateIds));
+
+            // Assert
+            var socialHistoryTemplatesAfter = await _client.Patients.GetSocialHistoryTemplates(createResult.PatientId.Value, 1);
+
+            socialHistoryTemplatesAfter.ShouldNotBeNull();
+            socialHistoryTemplatesAfter.Length.ShouldBe(templateIds.Length);
+            socialHistoryTemplatesAfter.ShouldAllBe(x => templateIds.Any(y => y == x.Id));
+        }
+
+        [Fact]
+        public async Task UpdateSocialHistoryTemplates_TemplateExists_TemplatesRemoved()
+        {
+            // Arrange
+            CreatePatient request = _createPatientFaker.Generate();
+
+            var createResult = await _client.Patients.CreatePatient(request);
+
+            var socialHistoryTemplates = await _client.Dictionaries.GetSocialHistoryTemplates();
+
+            var templateIds = socialHistoryTemplates
+                .Where(x => _faker.Random.Bool())
+                .Select(x => x.Id)
+                .ToArray();
+
+            await _client.Patients.UpdateSocialHistoryTemplates(createResult.PatientId.Value, new UpdateSocialHistoryTemplates(1, templateIds));
+
+            // Act
+            await _client.Patients.UpdateSocialHistoryTemplates(createResult.PatientId.Value, new UpdateSocialHistoryTemplates(1, Array.Empty<int>()));
+
+            // Assert
+            var socialHistoryTemplatesAfter = await _client.Patients.GetSocialHistoryTemplates(createResult.PatientId.Value, 1);
+
+            socialHistoryTemplatesAfter.ShouldNotBeNull();
+            socialHistoryTemplatesAfter.Length.ShouldBe(0);
+        }
+
+        [Fact]
+        public async Task UpdateSocialHistoryTemplates_TemplateExists_TemplatesChanged()
+        {
+            // Arrange
+            CreatePatient request = _createPatientFaker.Generate();
+
+            var createResult = await _client.Patients.CreatePatient(request);
+
+            var socialHistoryTemplates = await _client.Dictionaries.GetSocialHistoryTemplates();
+
+            var templateIds = socialHistoryTemplates
+                .Where(x => _faker.Random.Bool())
+                .Select(x => x.Id)
+                .ToArray();
+
+            await _client.Patients.UpdateSocialHistoryTemplates(createResult.PatientId.Value, new UpdateSocialHistoryTemplates(1, templateIds));
+
+            templateIds = socialHistoryTemplates
+                .Where(x => _faker.Random.Bool())
+                .Select(x => x.Id)
+                .ToArray();
+
+            // Act
+            await _client.Patients.UpdateSocialHistoryTemplates(createResult.PatientId.Value, new UpdateSocialHistoryTemplates(1, templateIds));
+
+            // Assert
+            var socialHistoryTemplatesAfter = await _client.Patients.GetSocialHistoryTemplates(createResult.PatientId.Value, 1);
+
+            socialHistoryTemplatesAfter.ShouldNotBeNull();
+            socialHistoryTemplatesAfter.Length.ShouldBe(templateIds.Length);
+            socialHistoryTemplatesAfter.ShouldAllBe(x => templateIds.Any(y => y == x.Id));
         }
 
         [Theory]
@@ -298,17 +397,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         public async Task UpdatePatient_AddressChanged_PatientUpdated()
         {
             // Arrange
-            Faker<CreatePatient> createPatientFaker = new Faker<CreatePatient>()
-                .CustomInstantiator(f =>
-                {
-                    return new CreatePatient(
-                        1,
-                        f.Date.Past(80).Date,
-                        CultureInfo.CurrentCulture.TextInfo.ToTitleCase(f.Name.FirstName(Name.Gender.Male).ToLower()),
-                        CultureInfo.CurrentCulture.TextInfo.ToTitleCase(f.Name.LastName(Name.Gender.Male).ToLower()));
-                }).RuleFor(x => x.Email, (f, u) => f.Internet.Email(u.FirstName, u.LastName).ToLower());
-
-            CreatePatient request = createPatientFaker.Generate();
+            CreatePatient request = _createPatientFaker.Generate();
 
             var createResult = await _client.Patients.CreatePatient(request);
 
@@ -333,20 +422,9 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         public async Task DeletePatient_StatusChanged_PatientDeleted()
         {
             // Arrange
-            Faker<CreatePatient> createPatientFaker = new Faker<CreatePatient>()
-                .CustomInstantiator(f =>
-                {
-                    return new CreatePatient(
-                        1,
-                        f.Date.Past(80).Date,
-                        CultureInfo.CurrentCulture.TextInfo.ToTitleCase(f.Name.FirstName(Name.Gender.Male).ToLower()),
-                        CultureInfo.CurrentCulture.TextInfo.ToTitleCase(f.Name.LastName(Name.Gender.Male).ToLower()))
-                    {
-                        Status = Models.Enums.StatusEnum.Active
-                    };
-                }).RuleFor(x => x.Email, (f, u) => f.Internet.Email(u.FirstName, u.LastName).ToLower());
+            _createPatientFaker.RuleFor(x => x.Status, (f, u) => StatusEnum.Active);
 
-            CreatePatient request = createPatientFaker.Generate();
+            CreatePatient request = _createPatientFaker.Generate();
 
             var createResult = await _client.Patients.CreatePatient(request);
 
@@ -360,25 +438,15 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
 
             var getPatientResultAfterDelete = await _client.Patients.GetPatientById(createResult.PatientId.Value);
 
-            getPatientResultBeforeDelete.Status.ShouldBe(Models.Enums.StatusEnum.Active);
-            getPatientResultAfterDelete.Status.ShouldBe(Models.Enums.StatusEnum.Inactive);
+            getPatientResultBeforeDelete.Status.ShouldBe(StatusEnum.Active);
+            getPatientResultAfterDelete.Status.ShouldBe(StatusEnum.Inactive);
         }
 
         [Fact(Skip = "This test is slow (about 12 seconds) and creates user every time is run")]
         public async Task CreatePatient_RequiredFieldsProvidedPatientDoesNotExist_PatientCreated()
         {
             // Arrange
-            Faker<CreatePatient> createPatientFaker = new Faker<CreatePatient>()
-                .CustomInstantiator(f =>
-                {
-                    return new CreatePatient(
-                        1,
-                        f.Date.Past(80).Date,
-                        CultureInfo.CurrentCulture.TextInfo.ToTitleCase(f.Name.FirstName(Name.Gender.Male).ToLower()),
-                        CultureInfo.CurrentCulture.TextInfo.ToTitleCase(f.Name.LastName(Name.Gender.Male).ToLower()));
-                }).RuleFor(x => x.Email, (f, u) => f.Internet.Email(u.FirstName, u.LastName).ToLower());
-
-            CreatePatient request = createPatientFaker.Generate();
+            CreatePatient request = _createPatientFaker.Generate();
 
             // Act
             var result = await _client.Patients.CreatePatient(request);
@@ -757,17 +825,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         public async Task AddPatientProblem_RequiredFieldsProvided_ProblemAdded()
         {
             // Arrange
-            Faker<CreatePatient> createPatientFaker = new Faker<CreatePatient>()
-                .CustomInstantiator(f =>
-                {
-                    return new CreatePatient(
-                        1,
-                        f.Date.Past(80).Date,
-                        CultureInfo.CurrentCulture.TextInfo.ToTitleCase(f.Name.FirstName(Name.Gender.Male).ToLower()),
-                        CultureInfo.CurrentCulture.TextInfo.ToTitleCase(f.Name.LastName(Name.Gender.Male).ToLower()));
-                }).RuleFor(x => x.Email, (f, u) => f.Internet.Email(u.FirstName, u.LastName).ToLower());
-
-            var createPatientResult = await _client.Patients.CreatePatient(createPatientFaker.Generate());
+            var createPatientResult = await _client.Patients.CreatePatient(_createPatientFaker.Generate());
 
             // Act
             var result = await _client.Patients.AddProblem(createPatientResult.PatientId.Value, new AddProblem(1, "52967002")
@@ -813,17 +871,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         public async Task AddDocument_DocumentWithFile_DocumentCreated()
         {
             // Arrange
-            Faker<CreatePatient> createPatientFaker = new Faker<CreatePatient>()
-                .CustomInstantiator(f =>
-                {
-                    return new CreatePatient(
-                        1,
-                        f.Date.Past(80).Date,
-                        CultureInfo.CurrentCulture.TextInfo.ToTitleCase(f.Name.FirstName(Name.Gender.Male).ToLower()),
-                        CultureInfo.CurrentCulture.TextInfo.ToTitleCase(f.Name.LastName(Name.Gender.Male).ToLower()));
-                }).RuleFor(x => x.Email, (f, u) => f.Internet.Email(u.FirstName, u.LastName).ToLower());
-
-            CreatePatient request = createPatientFaker.Generate();
+            CreatePatient request = _createPatientFaker.Generate();
 
             var createResult = await _client.Patients.CreatePatient(request);
 
@@ -868,19 +916,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         public async Task UpdateMedicalHistory_AddingAnswers_HistoryUpdated()
         {
             // Arrange
-            var faker = new Faker();
-
-            Faker<CreatePatient> createPatientFaker = new Faker<CreatePatient>()
-                .CustomInstantiator(f =>
-                {
-                    return new CreatePatient(
-                        1,
-                        f.Date.Past(80).Date,
-                        CultureInfo.CurrentCulture.TextInfo.ToTitleCase(f.Name.FirstName(Name.Gender.Male).ToLower()),
-                        CultureInfo.CurrentCulture.TextInfo.ToTitleCase(f.Name.LastName(Name.Gender.Male).ToLower()));
-                }).RuleFor(x => x.Email, (f, u) => f.Internet.Email(u.FirstName, u.LastName).ToLower());
-
-            CreatePatient request = createPatientFaker.Generate();
+            CreatePatient request = _createPatientFaker.Generate();
 
             var createResult = await _client.Patients.CreatePatient(request);
 
@@ -890,7 +926,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
 
             var answers = medicalHistoryQuestions.Items.Select(x => new UpdateMedicalHistory.Question(x.QuestionId)
             {
-                Answer = faker.PickRandom(new AnswerEnum?[] { AnswerEnum.Yes, AnswerEnum.No, AnswerEnum.Unspecified, null })
+                Answer = _faker.PickRandom(new AnswerEnum?[] { AnswerEnum.Yes, AnswerEnum.No, AnswerEnum.Unspecified, null })
             }).ToArray();
             
             // Act
@@ -910,19 +946,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         public async Task UpdateMedicalHistory_DeletingAnswers_HistoryUpdated()
         {
             // Arrange
-            var faker = new Faker();
-
-            Faker<CreatePatient> createPatientFaker = new Faker<CreatePatient>()
-                .CustomInstantiator(f =>
-                {
-                    return new CreatePatient(
-                        1,
-                        f.Date.Past(80).Date,
-                        CultureInfo.CurrentCulture.TextInfo.ToTitleCase(f.Name.FirstName(Name.Gender.Male).ToLower()),
-                        CultureInfo.CurrentCulture.TextInfo.ToTitleCase(f.Name.LastName(Name.Gender.Male).ToLower()));
-                }).RuleFor(x => x.Email, (f, u) => f.Internet.Email(u.FirstName, u.LastName).ToLower());
-
-            CreatePatient request = createPatientFaker.Generate();
+            CreatePatient request = _createPatientFaker.Generate();
 
             var createResult = await _client.Patients.CreatePatient(request);
 
@@ -932,7 +956,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
 
             var answers = medicalHistoryQuestions.Items.Select(x => new UpdateMedicalHistory.Question(x.QuestionId)
             {
-                Answer = faker.PickRandom(new AnswerEnum?[] { AnswerEnum.Yes, AnswerEnum.No })
+                Answer = _faker.PickRandom(new AnswerEnum?[] { AnswerEnum.Yes, AnswerEnum.No })
             }).ToArray();
 
             await _client.Patients.UpdateMedicalHistory(createResult.PatientId.Value, new UpdateMedicalHistory(1)
