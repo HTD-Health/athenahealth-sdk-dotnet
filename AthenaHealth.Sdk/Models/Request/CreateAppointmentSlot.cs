@@ -20,7 +20,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// <summary>
         /// The appointment date for the new open appointment slot (mm/dd/yyyy).
         /// </summary>
-        [JsonProperty(PropertyName = "appointmentdate")]
+        [JsonProperty("appointmentdate")]
         [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
         [Required]
         public DateTime AppointmentDate { get; set; }
@@ -28,7 +28,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// <summary>
         /// The time (hh24:mi) for the new appointment slot.  Multiple times (either as a comma delimited list or multiple POSTed values) are allowed.  24 hour time.
         /// </summary>
-        [JsonProperty(PropertyName = "appointmenttime")]
+        [JsonProperty("appointmenttime")]
         [JsonConverter(typeof(CustomArrayToStringConverter), ",")]
         [Required]
         public ClockTime[] AppointmentTime { get; set; }
@@ -36,27 +36,27 @@ namespace AthenaHealth.Sdk.Models.Request
         /// <summary>
         /// The appointment type ID to be created.  Either this or a reason must be provided.
         /// </summary>
-        [JsonProperty(PropertyName = "appointmenttypeid")]
+        [JsonProperty("appointmenttypeid")]
         public int? AppointmentTypeId { get; set; }
 
         /// <summary>
         /// The athenaNet department ID.
         /// </summary>
-        [JsonProperty(PropertyName = "departmentid")]
+        [JsonProperty("departmentid")]
         [Required]
         public int DepartmentId { get; set; }
 
         /// <summary>
         /// The athenaNet provider ID.
         /// </summary>
-        [JsonProperty(PropertyName = "providerid")]
+        [JsonProperty("providerid")]
         [Required]
         public int ProviderId { get; set; }
 
         /// <summary>
         /// The appointment reason (/patientappointmentreasons) to be created. Either this or a raw appointment type ID must be provided.
         /// </summary>
-        [JsonProperty(PropertyName = "reasonid")]
+        [JsonProperty("reasonid")]
         public int? ReasonId { get; set; }
 
 

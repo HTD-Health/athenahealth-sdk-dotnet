@@ -10,39 +10,39 @@ namespace AthenaHealth.Sdk.Models.Request
         /// <summary>
         /// The athenaNet department id.
         /// </summary>
-        [JsonProperty(PropertyName = "departmentid")]
+        [JsonProperty("departmentid")]
         public int DepartmentId { get; set; }
 
         /// <summary>
         /// Update the laterality of this problem. Can be null, LEFT, RIGHT, or BILATERAL.
         /// </summary>
-        [JsonProperty(PropertyName = "laterality")]
+        [JsonProperty("laterality")]
         [JsonConverter(typeof(CustomEnumConverter))]
         public LateralityEnum? Laterality { get; set; }
 
         /// <summary>
         /// The note to be attached to this problem.
         /// </summary>
-        [JsonProperty(PropertyName = "note")]
+        [JsonProperty("note")]
         public string Note { get; set; }
 
         /// <summary>
         /// The SNOMED code of the problem you are adding.
         /// </summary>
-        [JsonProperty(PropertyName = "snomedcode")]
+        [JsonProperty("snomedcode")]
         public string SnomedCode { get; set; }
 
         /// <summary>
         /// The onset date to be updated for this problem in MM/DD/YYYY format.
         /// </summary>
-        [JsonProperty(PropertyName = "startdate")]
+        [JsonProperty("startdate")]
         [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
         public DateTime? StartDate { get; set; }
 
         /// <summary>
         /// Whether the problem is chronic or acute.
         /// </summary>
-        [JsonProperty(PropertyName = "status")]
+        [JsonProperty("status")]
         [JsonConverter(typeof(CustomEnumConverter))]
         public ProblemStatusEnum? Status { get; set; }
 

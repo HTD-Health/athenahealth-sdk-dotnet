@@ -96,6 +96,57 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             result.Questions.Length.ShouldBeGreaterThan(0);
         }
 
+        [Fact]
+        public async Task UpdateSocialHistory_AddingAnswers_HistoryUpdated()
+        {
+            // Arrange
+            CreatePatient request = _createPatientFaker.Generate();
+
+            var createResult = await _client.Patients.CreatePatient(request);
+
+            var socialHistoryTemplates = await _client.Dictionaries.GetSocialHistoryTemplates();
+
+            var distinctQuestions = socialHistoryTemplates
+                .SelectMany(x => x.Questions)
+                .GroupBy(x => x.Key)
+                .Select(x => x.First())
+                .ToList();
+
+            var templateIds = socialHistoryTemplates
+                .Select(x => x.Id)
+                .ToArray();
+
+            await _client.Patients.UpdateSocialHistoryTemplates(createResult.PatientId.Value, new UpdateSocialHistoryTemplates(1, templateIds));
+
+            var answers = distinctQuestions.Select(x =>
+            {
+                var question = new UpdateSocialHistory.Question(x.Key);
+
+                if (x.InputType == InputTypeEnum.YesNo)
+                    question.Answer = _faker.PickRandom(new string[] { "y", "n" });
+                if (x.InputType == InputTypeEnum.FreeText)
+                    question.Answer = _faker.Lorem.Sentence(10, 20);
+                if (x.InputType == InputTypeEnum.Numeric)
+                    question.Answer = _faker.Random.Int(0, 20).ToString();
+                if (x.InputType == InputTypeEnum.DropDown)
+                    question.Answer = _faker.PickRandom(x.Options.Keys);
+
+                return question;
+            }).ToArray();
+
+            // Act
+            await _client.Patients.UpdateSocialHistory(createResult.PatientId.Value, new UpdateSocialHistory(1)
+            {
+                Questions = answers
+            });
+
+            // Assert
+            var socialHistory = await _client.Patients.GetSocialHistory(createResult.PatientId.Value, new GetSocialHistoryFilter(1));
+
+            socialHistory.Questions.Length.ShouldBe(answers.Length);
+            socialHistory.Questions.ShouldAllBe(x => answers.Any(y => y.Key == x.Key && y.Answer == x.Answer));
+        }
+
         [Theory]
         [ClassData(typeof(GetDefaultLaboratoryData))]
         public async Task GetDefaultLaboratory_LaboratoryExists_ShouldNotThrowJsonSerializationException(int patientId)
@@ -920,7 +971,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
 
             var createResult = await _client.Patients.CreatePatient(request);
 
-            var medicalHistoryQuestions = await _client.Dictionaries.GetMedicalHistoryQuestions(new GetMedicalHistoryQuestionsFilter());
+            var medicalHistoryQuestions = await _client.Dictionaries.GetMedicalHistoryQuestions();
 
             var medicalHistoryBefore = await _client.Patients.GetMedicalHistory(createResult.PatientId.Value, 1);
 
@@ -950,7 +1001,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
 
             var createResult = await _client.Patients.CreatePatient(request);
 
-            var medicalHistoryQuestions = await _client.Dictionaries.GetMedicalHistoryQuestions(new GetMedicalHistoryQuestionsFilter());
+            var medicalHistoryQuestions = await _client.Dictionaries.GetMedicalHistoryQuestions();
 
             var medicalHistoryBefore = await _client.Patients.GetMedicalHistory(createResult.PatientId.Value, 1);
 

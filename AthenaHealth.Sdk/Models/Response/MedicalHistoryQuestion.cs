@@ -20,31 +20,31 @@ namespace AthenaHealth.Sdk.Models.Response
         /// <summary>
         /// Athena ID for the question
         /// </summary>
-        [JsonProperty(PropertyName = "questionid")]
+        [JsonProperty("questionid")]
         public int QuestionId { get; set; }
 
         /// <summary>
         /// Disease being inquired about
         /// </summary>
-        [JsonProperty(PropertyName = "question")]
+        [JsonProperty("question")]
         public string Question { get; set; }
 
         /// <summary>
         /// Diagnosis code for the disease, if provided
         /// </summary>
-        [JsonProperty(PropertyName = "diagnosiscode")]
+        [JsonProperty("diagnosiscode")]
         public string DiagnosisCode { get; set; }
 
         /// <summary>
         /// True if this question has been deleted
         /// </summary>
-        [JsonProperty(PropertyName = "deleted")]
+        [JsonProperty("deleted")]
         public bool? Deleted { get; set; }
 
         /// <summary>
         /// Used for re-ordering questions
         /// </summary>
-        [JsonProperty(PropertyName = "ordering")]
+        [JsonProperty("ordering")]
         public int? Ordering { get; set; }
     }
 }

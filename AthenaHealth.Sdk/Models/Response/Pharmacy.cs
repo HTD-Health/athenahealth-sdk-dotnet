@@ -25,79 +25,79 @@ namespace AthenaHealth.Sdk.Models.Response
         /// <summary>
         /// The athenaNet clinical provider ID.
         /// </summary>
-        [JsonProperty(PropertyName = "clinicalproviderid")]
+        [JsonProperty("clinicalproviderid")]
         public int ClinicalProviderId { get; set; }
 
         /// <summary>
         /// The pharmacy name
         /// </summary>
-        [JsonProperty(PropertyName = "clinicalprovidername")]
+        [JsonProperty("clinicalprovidername")]
         public string ClinicalProviderName { get; set; }
 
         /// <summary>
         /// Address line 1 of the pharmacy
         /// </summary>
-        [JsonProperty(PropertyName = "address1")]
+        [JsonProperty("address1")]
         public string Address1 { get; set; }
 
         /// <summary>
         /// Address line 2 of the pharmacy
         /// </summary>
-        [JsonProperty(PropertyName = "address2")]
+        [JsonProperty("address2")]
         public string Address2 { get; set; }
 
         /// <summary>
         /// City of the pharmacy
         /// </summary>
-        [JsonProperty(PropertyName = "city")]
+        [JsonProperty("city")]
         public string City { get; set; }
 
         /// <summary>
         /// State of the pharmacy
         /// </summary>
-        [JsonProperty(PropertyName = "state")]
+        [JsonProperty("state")]
         public string State { get; set; }
 
         /// <summary>
         /// Zip code of the pharmacy
         /// </summary>
-        [JsonProperty(PropertyName = "zip")]
+        [JsonProperty("zip")]
         public string Zip { get; set; }
 
         /// <summary>
         /// Phone number of the pharmacy
         /// </summary>
-        [JsonProperty(PropertyName = "phonenumber")]
+        [JsonProperty("phonenumber")]
         public string PhoneNumber { get; set; }
 
         /// <summary>
         /// Fax number of the pharmacy
         /// </summary>
-        [JsonProperty(PropertyName = "faxnumber")]
+        [JsonProperty("faxnumber")]
         public string FaxNumber { get; set; }
 
         /// <summary>
         /// Flag representing if the pharmacy accepts fax
         /// </summary>
-        [JsonProperty(PropertyName = "acceptfax")]
+        [JsonProperty("acceptfax")]
         public bool AcceptFax { get; set; }
 
         /// <summary>
         /// Type of pharmacy (retail, mailorder)
         /// </summary>
-        [JsonProperty(PropertyName = "pharmacytype")]
+        [JsonProperty("pharmacytype")]
         public string PharmacyType { get; set; }
 
         /// <summary>
         /// Receiver type
         /// </summary>
-        [JsonProperty(PropertyName = "receivertype")]
+        [JsonProperty("receivertype")]
         public string ReceiverType { get; set; }
 
         /// <summary>
         /// If flagged true, this is the default pharmacy for the patient
         /// </summary>
-        [JsonProperty(PropertyName = "defaultpharmacy")]
+        [JsonProperty("defaultpharmacy")]
         public bool DefaultPharmacy { get; set; }
 
 

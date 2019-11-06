@@ -11,7 +11,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// Key - contains Id of created slot
         /// Value - contains time of created slot
         /// </summary>
-        [JsonProperty(PropertyName = "appointmentids")]
+        [JsonProperty("appointmentids")]
         public Dictionary<string, string> AppointmentIds { get; set; }
     }
 }

@@ -8,7 +8,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// <summary>
         /// If successful, the athena ID of the newly created historical medication.
         /// </summary>
-        [JsonProperty(PropertyName = "medicationentryid")]
+        [JsonProperty("medicationentryid")]
         public string MedicationEntryId { get; set; }
     }
 }

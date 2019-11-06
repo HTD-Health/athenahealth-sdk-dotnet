@@ -39,6 +39,8 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
 
         Task<PatientSocialHistory> GetSocialHistory(int patientId, GetSocialHistoryFilter queryParameters);
 
+        Task<UpdateSocialHistoryResponse> UpdateSocialHistory(int patientId, UpdateSocialHistory request);
+
         Task<PatienSocialHistoryTemplate[]> GetSocialHistoryTemplates(int patientId, int departmentId);
 
         Task<UpdateSocialHistoryTemplatesResponse> UpdateSocialHistoryTemplates(int patientId, UpdateSocialHistoryTemplates request);

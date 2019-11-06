@@ -8,19 +8,19 @@ namespace AthenaHealth.Sdk.Models.Request
         /// <summary>
         /// If set, we will use the department id in an attempt to find the local patient.
         /// </summary>
-        [JsonProperty(PropertyName = "departmentid")]
+        [JsonProperty("departmentid")]
         public int? DepartmentId { get; set; }
 
         /// <summary>
         /// If set, include cancelled and expired insurances.
         /// </summary>
-        [JsonProperty(PropertyName = "showcancelled")]
+        [JsonProperty("showcancelled")]
         public bool? ShowCancelled { get; set; }
 
         /// <summary>
         /// If set, will show full SSN instead of a masked number.
         /// </summary>
-        [JsonProperty(PropertyName = "showfullssn")]
+        [JsonProperty("showfullssn")]
         public bool? ShowFullSSN { get; set; }
 
         /// <summary>

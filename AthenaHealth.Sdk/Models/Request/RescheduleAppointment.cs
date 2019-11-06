@@ -17,7 +17,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// <summary>
         /// The appointment slot to schedule into.
         /// </summary>
-        [JsonProperty(PropertyName = "appointmentid")]
+        [JsonProperty("appointmentid")]
         [Required]
         public int AppointmentId { get; set; }
 
@@ -25,7 +25,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// By default, we allow booking of appointments marked as schedulable via the web.
         /// This flag allows you to bypass that restriction for booking.
         /// </summary>
-        [JsonProperty(PropertyName = "ignoreschedulablepermission")]
+        [JsonProperty("ignoreschedulablepermission")]
         // ReSharper disable once IdentifierTypo
         public bool? IgnoreSchedulablePermission { get; set; }
 
@@ -33,7 +33,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// The appointment ID of the new appointment.
         /// (The appointment ID in the URL is the ID of the currently scheduled appointment.)
         /// </summary>
-        [JsonProperty(PropertyName = "newappointmentid")]
+        [JsonProperty("newappointmentid")]
         [Required]
         public int NewAppointmentId{ get; set; }
 
@@ -41,13 +41,13 @@ namespace AthenaHealth.Sdk.Models.Request
         /// By default, we create a patient case upon booking an appointment for new patients.
         /// Setting this to true bypasses that patient case.
         /// </summary>
-        [JsonProperty(PropertyName = "nopatientcase")]
+        [JsonProperty("nopatientcase")]
         public bool? NoPatientCase { get; set; }
 
         /// <summary>
         /// The athenaNet patient ID.
         /// </summary>
-        [JsonProperty(PropertyName = "patientid")]
+        [JsonProperty("patientid")]
         [Required]
         public int PatientId{ get; set; }
 
@@ -58,13 +58,13 @@ namespace AthenaHealth.Sdk.Models.Request
         /// In addition, appointment availability when using -1 does not account for the ability to not allow appointments to be scheduled
         /// too close to the current time (because that limit is set on a per appointment reason basis).
         /// </summary>
-        [JsonProperty(PropertyName = "reasonid")]
+        [JsonProperty("reasonid")]
         public int? ReasonId { get; set; }
 
         /// <summary>
         /// A text explanation why the appointment is being rescheduled
         /// </summary>
-        [JsonProperty(PropertyName = "reschedulereason")]
+        [JsonProperty("reschedulereason")]
         public string RescheduleReason { get; set; }
     }
 }

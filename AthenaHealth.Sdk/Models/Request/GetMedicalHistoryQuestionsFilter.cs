@@ -8,7 +8,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// <summary>
         /// The appointment slot to schedule into.
         /// </summary>
-        [JsonProperty(PropertyName = "showdeleted")]
+        [JsonProperty("showdeleted")]
         public bool? ShowDeleted { get; set; }
 
         /// <summary>

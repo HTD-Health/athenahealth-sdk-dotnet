@@ -16,13 +16,13 @@ namespace AthenaHealth.Sdk.Models.Request
         /// <summary>
         /// The athenaNet department ID.
         /// </summary>
-        [JsonProperty(PropertyName = "departmentid")]
+        [JsonProperty("departmentid")]
         public int DepartmentId { get; set; }
 
         /// <summary>
         /// The athenaNet provider ID.
         /// </summary>
-        [JsonProperty(PropertyName = "providerid")]
+        [JsonProperty("providerid")]
         public int ProviderId { get; set; }
 
         public AppointmentReasonTypeEnum Type { get; set; } = AppointmentReasonTypeEnum.New;

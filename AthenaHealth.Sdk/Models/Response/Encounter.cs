@@ -32,121 +32,121 @@ namespace AthenaHealth.Sdk.Models.Response
         /// <summary>
         /// The date the encounter was last reopened. The field will not be present if the encounter has not be closed.
         /// </summary>
-        [JsonProperty(PropertyName = "lastreopened")]
+        [JsonProperty("lastreopened")]
         public DateTime LastReopened { get; set; }
 
         /// <summary>
         /// List of diagnoses for this encounter
         /// </summary>
-        [JsonProperty(PropertyName = "diagnoses")]
+        [JsonProperty("diagnoses")]
         public DiagnoseForEncounter[] Diagnoses { get; set; }
 
         /// <summary>
         /// The athena department ID of this encounter
         /// </summary>
-        [JsonProperty(PropertyName = "departmentid")]
+        [JsonProperty("departmentid")]
         public int? DepartmentId { get; set; }
 
         /// <summary>
         /// Athena appointment ID resulting in this encounter
         /// </summary>
-        [JsonProperty(PropertyName = "appointmentid")]
+        [JsonProperty("appointmentid")]
         public int? AppointmentId { get; set; }
 
         /// <summary>
         /// The visit name for this encounter
         /// </summary>
-        [JsonProperty(PropertyName = "encountervisitname")]
+        [JsonProperty("encountervisitname")]
         public string EncounterVisitName { get; set; }
 
         /// <summary>
         /// Type of encounter (FLOWSHEET, ORDERSONLY, VISIT, etc.). By default only VISIT and ORDERSONLY are shown, use INCLUDEALLtypeS flag to see others.
         /// </summary>
-        [JsonProperty(PropertyName = "encountertype")]
+        [JsonProperty("encountertype")]
         public string EncounterType { get; set; }
 
         /// <summary>
         /// Status of this encounter (CLOSED, OPEN, PEND). By default only OPEN, CLOSED, and REVIEW statuses are shown, use INCLUDEALLSTATUSES flag to see others.
         /// </summary>
-        [JsonProperty(PropertyName = "status")]
+        [JsonProperty("status")]
         public string Status { get; set; }
 
         /// <summary>
         /// Athena ID for the patient location
         /// </summary>
-        [JsonProperty(PropertyName = "patientlocationid")]
+        [JsonProperty("patientlocationid")]
         public int? PatientlocationId { get; set; }
 
         /// <summary>
         /// Patient location
         /// </summary>
-        [JsonProperty(PropertyName = "patientlocation")]
+        [JsonProperty("patientlocation")]
         public string PatientLocation { get; set; }
 
         /// <summary>
         /// Athena ID for the patient status
         /// </summary>
-        [JsonProperty(PropertyName = "patientstatusid")]
+        [JsonProperty("patientstatusid")]
         public int? PatientStatusId { get; set; }
 
         /// <summary>
         /// Patient status
         /// </summary>
-        [JsonProperty(PropertyName = "patientstatus")]
+        [JsonProperty("patientstatus")]
         public string PatientStatus { get; set; }
 
         /// <summary>
         /// Date when this encounter occured
         /// </summary>
-        [JsonProperty(PropertyName = "encounterdate")]
+        [JsonProperty("encounterdate")]
         public DateTime EncounterDate { get; set; }
 
         /// <summary>
         /// Last stage of the encounter
         /// </summary>
-        [JsonProperty(PropertyName = "stage")]
+        [JsonProperty("stage")]
         public string Stage { get; set; }
 
         /// <summary>
         /// The ID of the provider for this encounter
         /// </summary>
-        [JsonProperty(PropertyName = "providerid")]
+        [JsonProperty("providerid")]
         public int? ProviderId { get; set; }
 
         /// <summary>
         /// First name of the provider for this encounter
         /// </summary>
-        [JsonProperty(PropertyName = "providerfirstname")]
+        [JsonProperty("providerfirstname")]
         public string ProviderFirstName { get; set; }
 
         /// <summary>
         /// Last name of the provider for this encounter
         /// </summary>
-        [JsonProperty(PropertyName = "providerlastname")]
+        [JsonProperty("providerlastname")]
         public string ProviderLastName { get; set; }
 
         /// <summary>
         /// Phone number of the provider for this encounter
         /// </summary>
-        [JsonProperty(PropertyName = "providerphone")]
+        [JsonProperty("providerphone")]
         public string ProviderPhone { get; set; }
 
         /// <summary>
         /// Username of the provider who closed this encounter
         /// </summary>
-        [JsonProperty(PropertyName = "closeduser")]
+        [JsonProperty("closeduser")]
         public string ClosedUser { get; set; }
 
         /// <summary>
         /// date when this encounter was closed
         /// </summary>
-        [JsonProperty(PropertyName = "closeddate")]
+        [JsonProperty("closeddate")]
         public string ClosedDate { get; set; }
 
         /// <summary>
         /// The date the encounter was last updated
         /// </summary>
-        [JsonProperty(PropertyName = "lastupdated")]
+        [JsonProperty("lastupdated")]
         public DateTime LastUpdated { get; set; }
     }
 
@@ -155,25 +155,25 @@ namespace AthenaHealth.Sdk.Models.Response
         /// <summary>
         /// Codeset for this code (ICD9 or ICD10)
         /// </summary>
-        [JsonProperty(PropertyName = "codeset")]
+        [JsonProperty("codeset")]
         public string Codeset { get; set; }
 
         /// <summary>
         /// Actual ICD code for this diagnosis
         /// </summary>
-        [JsonProperty(PropertyName = "code")]
+        [JsonProperty("code")]
         public string Code { get; set; }
 
         /// <summary>
         /// Brief description for this code
         /// </summary>
-        [JsonProperty(PropertyName = "description")]
+        [JsonProperty("description")]
         public string Description { get; set; }
 
         /// <summary>
         /// Optional. Same as <see cref="Code"/>, but without ".", for ex. Code = "289.89", DiagnosisCode = "28989"
         /// </summary>
-        [JsonProperty(PropertyName = "diagnosiscode")]
+        [JsonProperty("diagnosiscode")]
         public string DiagnosisCode { get; set; }
     }
 }

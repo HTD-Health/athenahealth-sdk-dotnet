@@ -7,19 +7,19 @@ namespace AthenaHealth.Sdk.Models.Response
         /// <summary>
         /// The paragraphs in the template.
         /// </summary>
-        [JsonProperty(PropertyName = "paragraphs")]
+        [JsonProperty("paragraphs")]
         public Paragraph[] Paragraphs { get; set; }
 
         /// <summary>
         /// The interpretation note.
         /// </summary>
-        [JsonProperty(PropertyName = "interpretationtemplatenote")]
+        [JsonProperty("interpretationtemplatenote")]
         public string Note { get; set; }
 
         /// <summary>
         /// The name of the interpretation template.
         /// </summary>
-        [JsonProperty(PropertyName = "interpretationtemplatename")]
+        [JsonProperty("interpretationtemplatename")]
         public string Name { get; set; }
 
         public class Paragraph
@@ -27,13 +27,13 @@ namespace AthenaHealth.Sdk.Models.Response
             /// <summary>
             /// The sentences in the paragraph.
             /// </summary>
-            [JsonProperty(PropertyName = "sentences")]
+            [JsonProperty("sentences")]
             public Sentence[] Sentences { get; set; }
 
             /// <summary>
             /// The name of the interpretation paragraph.
             /// </summary>
-            [JsonProperty(PropertyName = "paragraphname")]
+            [JsonProperty("paragraphname")]
             public string Name { get; set; }
 
             public class Sentence
@@ -41,19 +41,19 @@ namespace AthenaHealth.Sdk.Models.Response
                 /// <summary>
                 /// The note that goes along with this sentence.
                 /// </summary>
-                [JsonProperty(PropertyName = "sentencenote")]
+                [JsonProperty("sentencenote")]
                 public string Note { get; set; }
 
                 /// <summary>
                 /// The findings in the sentence
                 /// </summary>
-                [JsonProperty(PropertyName = "findings")]
+                [JsonProperty("findings")]
                 public Finding[] Findings { get; set; }
 
                 /// <summary>
                 /// The name of the sentence in the paragraph.
                 /// </summary>
-                [JsonProperty(PropertyName = "sentencename")]
+                [JsonProperty("sentencename")]
                 public string Name { get; set; }
 
                 public class Finding
@@ -61,31 +61,31 @@ namespace AthenaHealth.Sdk.Models.Response
                     /// <summary>
                     /// The note for the finding selected.
                     /// </summary>
-                    [JsonProperty(PropertyName = "findingnote")]
+                    [JsonProperty("findingnote")]
                     public string Note { get; set; }
 
                     /// <summary>
                     /// Describes the finding - either NORMAL, ABNORMAL, or NEUTRAL.
                     /// </summary>
-                    [JsonProperty(PropertyName = "findingtype")]
+                    [JsonProperty("findingtype")]
                     public string Type { get; set; }
 
                     /// <summary>
                     /// The option in the finding that was selected by the user.
                     /// </summary>
-                    [JsonProperty(PropertyName = "selectedoptions")]
+                    [JsonProperty("selectedoptions")]
                     public string SelectedOptions { get; set; }
 
                     /// <summary>
                     /// The name of the finding.
                     /// </summary>
-                    [JsonProperty(PropertyName = "findingname")]
+                    [JsonProperty("findingname")]
                     public string Name { get; set; }
 
                     /// <summary>
                     /// Freetext that could be associated with this finding.
                     /// </summary>
-                    [JsonProperty(PropertyName = "freetext")]
+                    [JsonProperty("freetext")]
                     public string Text { get; set; }
                 }
             }
