@@ -26,6 +26,6 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// </summary>
         /// <param name="filter"></param>
         /// <returns></returns>
-        Task<InsurancePackageResponse> Search(SearchInsuranceFilter filter = null);
+        Task<InsurancePackageResponse> Search(SearchInsuranceFilter filter);
     }
 }

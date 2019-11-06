@@ -12,7 +12,7 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
 
         Task<AppointmentResponse> GetBookedAppointments(GetAppointmentsBookedFilter filter);
 
-        Task<Appointment> GetAppointmentById(int id, GetAppointmentFilter filter = null);
+        Task<Appointment> GetById(int appointmentId, GetAppointmentFilter filter = null);
 
         /// <summary>
         /// Retrieve notes for this appointment.

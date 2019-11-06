@@ -113,7 +113,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         }
 
         [Fact]
-        public async Task GetAppointmentById_ValidId_ReturnsAppointment()
+        public async Task GetById_ValidId_ReturnsAppointment()
         {
             GetAppointmentFilter filter = new GetAppointmentFilter
             {
@@ -124,16 +124,16 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
                 ShowInsurance = true,
             };
 
-            Appointment appointment = await _client.Appointments.GetAppointmentById(997681, filter);
+            Appointment appointment = await _client.Appointments.GetById(997681, filter);
 
             appointment.ShouldNotBeNull();
             appointment.DepartmentId.ShouldNotBeNull();
         }
 
         [Fact]
-        public async Task GetAppointmentById_InvalidId_ThrowsException()
+        public async Task GetById_InvalidId_ThrowsException()
         {
-            await Should.ThrowAsync<ApiException>(async () => await _client.Appointments.GetAppointmentById(0));
+            await Should.ThrowAsync<ApiException>(async () => await _client.Appointments.GetById(0));
         }
 
         [Theory]
