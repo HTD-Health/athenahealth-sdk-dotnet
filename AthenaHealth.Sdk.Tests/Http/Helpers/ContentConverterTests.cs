@@ -164,7 +164,7 @@ namespace AthenaHealth.Sdk.Tests.Http.Helpers
 
         public class TestClassClockTimeArray
         {
-            [JsonProperty(PropertyName = "appointmenttime")]
+            [JsonProperty("appointmenttime")]
             [JsonConverter(typeof(CustomArrayToStringConverter), ",")]
             public ClockTime[] AppointmentTime { get; set; }
         }

@@ -7,10 +7,10 @@ namespace AthenaHealth.Sdk.Models.Response
 {
     public class Diagnose : DiagnoseForEncounter
     {
-        [JsonProperty(PropertyName = "supportslaterality")]
+        [JsonProperty("supportslaterality")]
         public bool SupportsLaterality { get; set; }
 
-        [JsonProperty(PropertyName = "ranking")]
+        [JsonProperty("ranking")]
         public int Ranking { get; set; }
 
         [JsonProperty("laterality")]

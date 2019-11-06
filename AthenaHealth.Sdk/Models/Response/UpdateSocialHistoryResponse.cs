@@ -1,20 +1,19 @@
 ﻿using Newtonsoft.Json;
-using System.ComponentModel.DataAnnotations;
 
 namespace AthenaHealth.Sdk.Models.Response
 {
-    public class UpdateMedicalHistoryResponse
+    public class UpdateSocialHistoryResponse
     {
         /// <summary>
-        /// Whether the operation was successful or not.
+        /// Whether the operation was successfull.
         /// </summary>
         [JsonProperty("success")]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// If the operation failed, this will contain any error messages.
+        /// On failure, the reason for failure
         /// </summary>
-        [JsonProperty("error")]
+        [JsonProperty("message")]
         public string Error { get; set; }
     }
 }

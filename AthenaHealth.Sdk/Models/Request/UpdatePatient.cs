@@ -8,7 +8,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// Use this in practices that register copies of patients in different departments in order
         /// to make sure you are updating the correct version of the patient.
         /// </summary>
-        [JsonProperty(PropertyName = "lookupdepartmentid")]
+        [JsonProperty("lookupdepartmentid")]
         public int? LookupDepartmentId { get; set; }
 
         /// <summary>
@@ -16,7 +16,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// patient is not currently registered in that department, setting this flag will register a
         /// new copy of this patient in that department.
         /// </summary>
-        [JsonProperty(PropertyName = "registerpatientindepartment")]
+        [JsonProperty("registerpatientindepartment")]
         public bool? RegisterPatientInDepartment { get; set; }
     }
 }

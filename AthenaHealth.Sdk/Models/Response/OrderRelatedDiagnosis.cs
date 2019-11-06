@@ -7,13 +7,13 @@ namespace AthenaHealth.Sdk.Models.Response
 {
     public class OrderRelatedDiagnosis
     {
-        [JsonProperty(PropertyName = "diagnosiscode")]
+        [JsonProperty("diagnosiscode")]
         public IcdCode DiagnosisCode { get; set; }
 
         /// <summary>
         /// ICD equivalent Codes for the SNOMED Code.
         /// </summary>
-        [JsonProperty(PropertyName = "snomedicdcodes")]
+        [JsonProperty("snomedicdcodes")]
         public SnomedIcdCode[] SnomedIcdCodes { get; set; }
     }
 
@@ -31,19 +31,19 @@ namespace AthenaHealth.Sdk.Models.Response
         /// <summary>
         /// Code set the ICD10 code belongs to.
         /// </summary>
-        [JsonProperty(PropertyName = "codeset")]
+        [JsonProperty("codeset")]
         public string CodeSet { get; set; }
 
         /// <summary>
         /// ICD 10 Code.
         /// </summary>
-        [JsonProperty(PropertyName = "code")]
+        [JsonProperty("code")]
         public string Code { get; set; }
 
         /// <summary>
         /// Brief description for this code.
         /// </summary>
-        [JsonProperty(PropertyName = "description")]
+        [JsonProperty("description")]
         public string Description { get; set; }
     }
 }

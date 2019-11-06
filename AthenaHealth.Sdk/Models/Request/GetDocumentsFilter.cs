@@ -11,43 +11,43 @@ namespace AthenaHealth.Sdk.Models.Request
         /// <summary>
         /// The athenaNet department id.
         /// </summary>
-        [JsonProperty(PropertyName = "departmentid")]
+        [JsonProperty("departmentid")]
         public int DepartmentId { get; set; }
 
         /// <summary>
         /// The class(es) of document(s) comma separated.
         /// </summary>
-        [JsonProperty(PropertyName = "documentclass")]
+        [JsonProperty("documentclass")]
         public string DocumentClass { get; set; }
 
         /// <summary>
         /// The document subclass to filter document results.
         /// </summary>
-        [JsonProperty(PropertyName = "documentsubclass")]
+        [JsonProperty("documentsubclass")]
         public string DocumentSubclass { get; set; }
 
         /// <summary>
         /// Show only documents attached to this encounter.
         /// </summary>
-        [JsonProperty(PropertyName = "encounterid")]
+        [JsonProperty("encounterid")]
         public int? EncounterId { get; set; }
 
         /// <summary>
         /// If set, include orders that were declined
         /// </summary>
-        [JsonProperty(PropertyName = "showdeclinedorders")]
+        [JsonProperty("showdeclinedorders")]
         public bool? ShowDeclinedOrders { get; set; }
 
         /// <summary>
         /// By default, deleted documents are not listed. Set to list these.
         /// </summary>
-        [JsonProperty(PropertyName = "showdeleted")]
+        [JsonProperty("showdeleted")]
         public bool? ShowDeleted { get; set; } = false;
 
         /// <summary>
         /// The status of the task to filter document results.
         /// </summary>
-        [JsonProperty(PropertyName = "status")]
+        [JsonProperty("status")]
         public DocumentStatusEnum? Status { get; set; }
 
         /// <summary>

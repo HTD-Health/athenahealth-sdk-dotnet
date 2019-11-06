@@ -14,20 +14,20 @@ namespace AthenaHealth.Sdk.Models.Request
         /// <summary>
         /// The clinical provider ID that you wish to set as the default pharmacy or add as a preferred pharmacy. This or the NCPDPID must be provided.
         /// </summary>
-        [JsonProperty(PropertyName = "clinicalproviderid")]
+        [JsonProperty("clinicalproviderid")]
         public int? ClinicalProviderId { get; set; }
 
         /// <summary>
         /// The athenaNet department id.
         /// </summary>
         [Required]
-        [JsonProperty(PropertyName = "departmentid")]
+        [JsonProperty("departmentid")]
         public int DepartmentId { get; set; }
 
         /// <summary>
         /// The NCPDP ID of the clinical provider. Can be used instead of clinicalproviderid. Only one can be used.
         /// </summary>
-        [JsonProperty(PropertyName = "ncpdpid")]
+        [JsonProperty("ncpdpid")]
         // ReSharper disable once IdentifierTypo
         public int? NcpdpId { get; set; }
     }

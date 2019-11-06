@@ -10,13 +10,13 @@ namespace AthenaHealth.Sdk.Models.Response
         /// <summary>
         /// Whether the operation was successfull.
         /// </summary>
-        [JsonProperty(PropertyName = "success")]
+        [JsonProperty("success")]
         public bool? Success { get; set; }
 
         /// <summary>
         /// On failure, the reason for failure
         /// </summary>
-        [JsonProperty(PropertyName = "message")]
+        [JsonProperty("message")]
         public string Error { get; set; }
     }
 }

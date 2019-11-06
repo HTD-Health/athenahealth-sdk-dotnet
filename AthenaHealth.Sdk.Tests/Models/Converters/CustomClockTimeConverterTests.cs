@@ -58,7 +58,7 @@ namespace AthenaHealth.Sdk.Tests.Models.Converters
 
     public class TestClass
     {
-        [JsonProperty(PropertyName = "time")]
+        [JsonProperty("time")]
         [JsonConverter(typeof(CustomClockTimeConverter))]
         public ClockTime? Time { get; set; }
         

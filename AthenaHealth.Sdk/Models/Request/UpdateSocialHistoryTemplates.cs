@@ -17,13 +17,13 @@ namespace AthenaHealth.Sdk.Models.Request
         /// <summary>
         /// The athenaNet department id.
         /// </summary>
-        [JsonProperty(PropertyName = "departmentid")]
+        [JsonProperty("departmentid")]
         public int DepartmentId { get; set; }
 
         /// <summary>
         /// A comma separated list of template IDs to subscribe to.
         /// </summary>
-        [JsonProperty(PropertyName = "templateids")]
+        [JsonProperty("templateids")]
         [JsonConverter(typeof(CustomArrayToStringConverter), ",", true)]
         public int[] TemplateIds { get; set; }
     }

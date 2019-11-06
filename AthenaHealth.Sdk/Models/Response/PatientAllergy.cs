@@ -13,44 +13,44 @@ namespace AthenaHealth.Sdk.Models.Response
         /// <summary>
         /// The date and time the note was last updated.
         /// </summary>
-        [JsonProperty(PropertyName = "notelastmodifieddatetime")]
+        [JsonProperty("notelastmodifieddatetime")]
         public DateTime? NoteLastModifiedDateTime { get; set; }
 
         /// <summary>
         /// A section-wide note
         /// </summary>
-        [JsonProperty(PropertyName = "sectionnote")]
+        [JsonProperty("sectionnote")]
         public string SectionNote { get; set; }
 
         /// <summary>
         /// Allergies
         /// </summary>
-        [JsonProperty(PropertyName = "allergies")]
+        [JsonProperty("allergies")]
         public Allergy[] Allergies { get; set; }
 
         /// <summary>
         /// The username of the user who last modified the note, nkda, or allergies.
         /// </summary>
-        [JsonProperty(PropertyName = "lastmodifiedby")]
+        [JsonProperty("lastmodifiedby")]
         public string LastModifiedBy { get; set; }
 
         /// <summary>
         /// Whether the patient has no known drug allergies. This is an explicit statement separate
         /// from a patient with no documented allergies so far.
         /// </summary>
-        [JsonProperty(PropertyName = "nkda")]
+        [JsonProperty("nkda")]
         public bool? NoKnownDrugAllergies { get; set; }
 
         /// <summary>
         /// The date and time the note, nkda, or allergies were last updated.
         /// </summary>
-        [JsonProperty(PropertyName = "lastmodifieddatetime")]
+        [JsonProperty("lastmodifieddatetime")]
         public DateTime? LastModifiedDateTime { get; set; }
 
         /// <summary>
         /// The username of the user who last modified the note.
         /// </summary>
-        [JsonProperty(PropertyName = "notelastmodifiedby")]
+        [JsonProperty("notelastmodifiedby")]
         public string NoteLastModifiedBy { get; set; }
 
         [OnError]
@@ -68,63 +68,63 @@ namespace AthenaHealth.Sdk.Models.Response
             /// <summary>
             /// Date of allergy deactivation. Set to deactivate the allergy
             /// </summary>
-            [JsonProperty(PropertyName = "deactivatedate")]
+            [JsonProperty("deactivatedate")]
             [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
             public DateTime? DeactivateDate { get; set; }
 
-            [JsonProperty(PropertyName = "rxnormdescription")]
+            [JsonProperty("rxnormdescription")]
             public string RxNormDescription { get; set; }
 
-            [JsonProperty(PropertyName = "rxnormcode")]
+            [JsonProperty("rxnormcode")]
             public string RxNormCode { get; set; }
 
             /// <summary>
             /// The name of the allergen.
             /// </summary>
-            [JsonProperty(PropertyName = "allergenname")]
+            [JsonProperty("allergenname")]
             public string AllergenName { get; set; }
 
             /// <summary>
             /// Athena ID for this allergen.
             /// </summary>
-            [JsonProperty(PropertyName = "allergenid")]
+            [JsonProperty("allergenid")]
             public int? AllergenId { get; set; }
 
             /// <summary>
             /// The username of the user who last modified this allergy.
             /// </summary>
-            [JsonProperty(PropertyName = "lastmodifiedby")]
+            [JsonProperty("lastmodifiedby")]
             public string LastModifiedBy { get; set; }
 
             /// <summary>
             /// Note about this allergy
             /// </summary>
-            [JsonProperty(PropertyName = "note")]
+            [JsonProperty("note")]
             public string Note { get; set; }
 
             /// <summary>
             /// List of documented reactions
             /// </summary>
-            [JsonProperty(PropertyName = "reactions")]
+            [JsonProperty("reactions")]
             public Reaction[] Reactions { get; set; }
 
             /// <summary>
             /// Date of allergy onset
             /// </summary>
-            [JsonProperty(PropertyName = "onsetdate")]
+            [JsonProperty("onsetdate")]
             [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
             public DateTime? OnsetDate { get; set; }
 
             /// <summary>
             /// The date and time the allergy was last modified.
             /// </summary>
-            [JsonProperty(PropertyName = "lastmodifieddatetime")]
+            [JsonProperty("lastmodifieddatetime")]
             public DateTime? LastModifiedDateTime { get; set; }
 
             /// <summary>
             /// The name of the user who deactivated the allergy.
             /// </summary>
-            [JsonProperty(PropertyName = "deactivateduser")]
+            [JsonProperty("deactivateduser")]
             public string DeactivatedUser { get; set; }
 
             public class Reaction
@@ -132,25 +132,25 @@ namespace AthenaHealth.Sdk.Models.Response
                 /// <summary>
                 /// Severity of the reaction
                 /// </summary>
-                [JsonProperty(PropertyName = "severity")]
+                [JsonProperty("severity")]
                 public string Severity { get; set; }
 
                 /// <summary>
                 /// SNOMED code for the severity of this reaction
                 /// </summary>
-                [JsonProperty(PropertyName = "severitysnomedcode")]
+                [JsonProperty("severitysnomedcode")]
                 public string SeveritySnomedCode { get; set; }
 
                 /// <summary>
                 /// SNOMED code for this reaction
                 /// </summary>
-                [JsonProperty(PropertyName = "snomedcode")]
+                [JsonProperty("snomedcode")]
                 public string SnomedCode { get; set; }
 
                 /// <summary>
                 /// Name of the reaction
                 /// </summary>
-                [JsonProperty(PropertyName = "reactionname")]
+                [JsonProperty("reactionname")]
                 public string ReactionName { get; set; }
             }
         }

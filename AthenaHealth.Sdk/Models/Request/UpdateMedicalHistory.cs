@@ -11,19 +11,19 @@ namespace AthenaHealth.Sdk.Models.Request
         /// The athenaNet department ID.
         /// </summary>
         [Required]
-        [JsonProperty(PropertyName = "departmentid")]
+        [JsonProperty("departmentid")]
         public int DepartmentId { get; set; }
 
         /// <summary>
         /// JSON array of:
         /// </summary>
-        [JsonProperty(PropertyName = "questions")]
+        [JsonProperty("questions")]
         public Question[] Questions { get; set; }
 
         /// <summary>
         /// Any additional section notes
         /// </summary>
-        [JsonProperty(PropertyName = "sectionnote")]
+        [JsonProperty("sectionnote")]
         public string SectionNote { get; set; }
 
         public UpdateMedicalHistory(int departmentId)
@@ -36,27 +36,27 @@ namespace AthenaHealth.Sdk.Models.Request
             /// <summary>
             /// Answer to this question
             /// </summary>
-            [JsonProperty(PropertyName = "answer")]
+            [JsonProperty("answer")]
             [JsonConverter(typeof(CustomEnumConverter))]
             public AnswerEnum? Answer { get; set; }
 
             /// <summary>
             /// Remove the answer to this question
             /// </summary>
-            [JsonProperty(PropertyName = "delete")]
+            [JsonProperty("delete")]
             public bool? Delete { get; set; }
 
             /// <summary>
             /// Any additional notes
             /// </summary>
-            [JsonProperty(PropertyName = "note")]
+            [JsonProperty("note")]
             public string Note { get; set; }
 
             /// <summary>
             /// The athenaNet question id.
             /// </summary>
             [Required]
-            [JsonProperty(PropertyName = "questionid")]
+            [JsonProperty("questionid")]
             public int Id { get; set; }
 
             public Question(int id)

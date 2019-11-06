@@ -34,44 +34,44 @@ namespace AthenaHealth.Sdk.Models.Request
         /// The LOINC of the lab you wish to order.
         /// Either this or <see cref="OrderTypeId"/> can be used, but not both.
         /// </summary>
-        [JsonProperty(PropertyName = "loinc")]
+        [JsonProperty("loinc")]
         public string Loinc { get; set; }
 
         /// <summary>
         /// The athena ID of the lab to order. Get the IDs using <see cref="IDictionaryClient.SearchOrderTypesByName"/>
         /// Either this or <see cref="Loinc"/> can be used, but not both.
         /// </summary>
-        [JsonProperty(PropertyName = "ordertypeid")]
+        [JsonProperty("ordertypeid")]
         public int? OrderTypeId { get; set; }
 
         /// <summary>
         /// The athena ID of the lab you want to send the order to. Get a localized list using /chart/configuration/facilities.
         /// </summary>
-        [JsonProperty(PropertyName = "facilityid")]
+        [JsonProperty("facilityid")]
         public int? FacilityId { get; set; }
 
         /// <summary>
         /// A note to send to the lab.
         /// </summary>
-        [JsonProperty(PropertyName = "facilitynote")]
+        [JsonProperty("facilitynote")]
         public string FacilityNote { get; set; }
 
         /// <summary>
         /// The date the order should be sent. Defaults to today.
         /// </summary>
-        [JsonProperty(PropertyName = "futuresubmitdate")]
+        [JsonProperty("futuresubmitdate")]
         public DateTime? FutureSubmitDate { get; set; }
 
         /// <summary>
         /// If true, then the order should be sent STAT.
         /// </summary>
-        [JsonProperty(PropertyName = "highpriority")]
+        [JsonProperty("highpriority")]
         public bool HighPriority { get; set; }
 
         /// <summary>
         /// An internal note for the provider or staff.
         /// </summary>
-        [JsonProperty(PropertyName = "providernote")]
+        [JsonProperty("providernote")]
         public string ProviderNote { get; set; }
     }
 }

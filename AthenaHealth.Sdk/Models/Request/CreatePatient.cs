@@ -8,7 +8,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// <summary>
         /// If set to true returns error message on patient match (Defaults to false).
         /// </summary>
-        [JsonProperty(PropertyName = "showerrormessage")]
+        [JsonProperty("showerrormessage")]
         public bool? ShowErrorMessage { get; set; } = false;
 
         public CreatePatient(int departmentId, DateTime dateOfBirth, string firstName, string lastName)

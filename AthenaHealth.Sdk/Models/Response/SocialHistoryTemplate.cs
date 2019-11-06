@@ -11,60 +11,60 @@ namespace AthenaHealth.Sdk.Models.Response
         /// <summary>
         /// List of questions contained by this template
         /// </summary>
-        [JsonProperty(PropertyName = "questions")]
+        [JsonProperty("questions")]
         public Question[] Questions { get; set; }
 
         /// <summary>
         /// ID for this social history template
         /// </summary>
-        [JsonProperty(PropertyName = "templateid")]
+        [JsonProperty("templateid")]
         public int Id { get; set; }
 
         /// <summary>
         /// Name for this social history template
         /// </summary>
-        [JsonProperty(PropertyName = "templatename")]
+        [JsonProperty("templatename")]
         public string TemplateName { get; set; }
 
         public class Question
         {
-            [JsonProperty(PropertyName = "options")]
+            [JsonProperty("options")]
             private IList<IDictionary<string, string>> _options;
 
             /// <summary>
             /// Unique ID for this question within this template.
             /// </summary>
-            [JsonProperty(PropertyName = "questionid")]
+            [JsonProperty("questionid")]
             public int Id { get; set; }
 
             /// <summary>
             /// Unique key for this question, can exist in multiple templates.
             /// </summary>
-            [JsonProperty(PropertyName = "key")]
+            [JsonProperty("key")]
             public string Key { get; set; }
 
             /// <summary>
             /// Human readable question
             /// </summary>
-            [JsonProperty(PropertyName = "question")]
+            [JsonProperty("question")]
             public string QuestionText { get; set; }
 
             /// <summary>
             /// Display ordering for this question within this template
             /// </summary>
-            [JsonProperty(PropertyName = "ordering")]
+            [JsonProperty("ordering")]
             public int? Ordering { get; set; }
 
             /// <summary>
             /// Input type for this question. Valid values are DROPDOWN, NUMERIC, FREETEXT, YESNO, and DATE
             /// </summary>
-            [JsonProperty(PropertyName = "inputtype")]
+            [JsonProperty("inputtype")]
             public InputTypeEnum InputType { get; set; }
 
             /// <summary>
             /// Indicate category of question MENTAL, FUNCTIONAL etc.
             /// </summary>
-            [JsonProperty(PropertyName = "socialhistorystatus")]
+            [JsonProperty("socialhistorystatus")]
             public string SocialHistoryStatus { get; set; }
 
             /// <summary>

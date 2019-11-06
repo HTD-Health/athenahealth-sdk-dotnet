@@ -90,19 +90,19 @@ namespace AthenaHealth.Sdk.Models.Response
         /// <summary>
         /// Details about the provider the order is sent to.
         /// </summary>
-        [JsonProperty(PropertyName = "clinicalprovider")]
+        [JsonProperty("clinicalprovider")]
         public string ClinicalProvider { get; set; }
 
         /// <summary>
         /// ID of the clinical provider
         /// </summary>
-        [JsonProperty(PropertyName = "clinicalproviderid")]
+        [JsonProperty("clinicalproviderid")]
         public int? ClinicalProviderId { get; set; }
 
         /// <summary>
         /// Gives the location of the clinical specimen collected if any.
         /// </summary>
-        [JsonProperty(PropertyName = "specimencollectionsite")]
+        [JsonProperty("specimencollectionsite")]
         public string SpecimenCollectionSite { get; set; }
     }
 

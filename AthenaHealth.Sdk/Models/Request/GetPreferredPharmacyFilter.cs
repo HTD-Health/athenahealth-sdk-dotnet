@@ -13,7 +13,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// <summary>
         /// The athenaNet department id.
         /// </summary>
-        [JsonProperty(PropertyName = "departmentid")]
+        [JsonProperty("departmentid")]
         public int DepartmentId { get; set; }
 
         /// <summary>

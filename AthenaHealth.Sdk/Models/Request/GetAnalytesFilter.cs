@@ -15,20 +15,20 @@ namespace AthenaHealth.Sdk.Models.Request
         /// <summary>
         /// The athenaNet department id.
         /// </summary>
-        [JsonProperty(PropertyName = "departmentid")]
+        [JsonProperty("departmentid")]
         public int DepartmentId { get; set; }
 
         /// <summary>
         /// ID used to return lab results for a specific encounter.
         /// </summary>
-        [JsonProperty(PropertyName = "allresultsbyencounterid")]
+        [JsonProperty("allresultsbyencounterid")]
         public int? AllResultsByEncounterId { get; set; }
 
         /// <summary>
         /// Filter the results based on the analyte's result status. Since the result status is a
         /// free text field, this list is not exhaustive, but does represent a majority of the used statuses.
         /// </summary>
-        [JsonProperty(PropertyName = "analyteresultstatus")]
+        [JsonProperty("analyteresultstatus")]
         [JsonConverter(typeof(CustomEnumConverter))]
         public AnalyteResultStatusEnum? AnalyteResultStatus { get; set; }
 
@@ -37,41 +37,41 @@ namespace AthenaHealth.Sdk.Models.Request
         /// enddate=1/21/2018. If no enddate is specified, all lab orders found since startdate will
         /// be included if specified.
         /// </summary>
-        [JsonProperty(PropertyName = "enddate")]
+        [JsonProperty("enddate")]
         [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
         public DateTime? EndDate { get; set; }
 
         /// <summary>
         /// ID used when the lab results sends the exact same result multiple times.
         /// </summary>
-        [JsonProperty(PropertyName = "exactduplicatedocumentid")]
+        [JsonProperty("exactduplicatedocumentid")]
         public int? ExactDuplicateDocumentId { get; set; }
 
         /// <summary>
         /// Filter the results based on the lab result's result status. Since the result status is a
         /// free text field, this list is not exhaustive, but does represent a majority of the used statuses.
         /// </summary>
-        [JsonProperty(PropertyName = "labresultstatus")]
+        [JsonProperty("labresultstatus")]
         [JsonConverter(typeof(CustomEnumConverter))]
         public LabResultStatusEnum? LabResultStatus { get; set; }
 
         /// <summary>
         /// Include the translation of the abnormalflag into HL7 code standards.
         /// </summary>
-        [JsonProperty(PropertyName = "showabnormaldetails")]
+        [JsonProperty("showabnormaldetails")]
         public bool ShowAbnormalDetails { get; set; }
 
         /// <summary>
         /// Includes the lab results and analytes marked as hidden. Hidden lab results and analytes
         /// are created when they are manually entered, for example on the qm tab or in flowsheets.
         /// </summary>
-        [JsonProperty(PropertyName = "showhidden")]
+        [JsonProperty("showhidden")]
         public bool ShowHidden { get; set; }
 
         /// <summary>
         /// If true, interpretation template added to the document is also returned.
         /// </summary>
-        [JsonProperty(PropertyName = "showtemplate")]
+        [JsonProperty("showtemplate")]
         public bool ShowTemplate { get; set; }
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// startdate=6/21/2015. If no startdate is specified, all prior lab orders will be included
         /// until enddate if specified.
         /// </summary>
-        [JsonProperty(PropertyName = "startdate")]
+        [JsonProperty("startdate")]
         [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
         public DateTime? StartDate { get; set; }
 
@@ -87,7 +87,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// ID used when the lab sends a result and later sends a more complete version of the result
         /// with additional information.
         /// </summary>
-        [JsonProperty(PropertyName = "supersededdocumentid")]
+        [JsonProperty("supersededdocumentid")]
         public int? SupersedEdDocumentId { get; set; }
 
         /// <summary>

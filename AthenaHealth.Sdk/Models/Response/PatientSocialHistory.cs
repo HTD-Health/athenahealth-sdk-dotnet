@@ -10,19 +10,19 @@ namespace AthenaHealth.Sdk.Models.Response
         /// <summary>
         /// The selected social history templates for this patient.
         /// </summary>
-        [JsonProperty(PropertyName = "templates")]
+        [JsonProperty("templates")]
         public Template[] Templates { get; set; }
 
         /// <summary>
         /// The social history questions and answers for this patient.
         /// </summary>
-        [JsonProperty(PropertyName = "questions")]
+        [JsonProperty("questions")]
         public Question[] Questions { get; set; }
 
         /// <summary>
         /// A section-wide note.
         /// </summary>
-        [JsonProperty(PropertyName = "sectionnote")]
+        [JsonProperty("sectionnote")]
         public string SectionNote { get; set; }
 
         public class Template
@@ -30,82 +30,82 @@ namespace AthenaHealth.Sdk.Models.Response
             /// <summary>
             /// ID for this social history template
             /// </summary>
-            [JsonProperty(PropertyName = "templateid")]
+            [JsonProperty("templateid")]
             public int? Id { get; set; }
 
             /// <summary>
             /// Name for this social history template
             /// </summary>
-            [JsonProperty(PropertyName = "templatename")]
+            [JsonProperty("templatename")]
             public string Name { get; set; }
         }
 
         public class Question
         {
-            [JsonProperty(PropertyName = "socialhistorystatus")]
+            [JsonProperty("socialhistorystatus")]
             public string SocialHistoryStatus { get; set; }
 
 
             /// <summary>
             /// The patient answer to this question
             /// </summary>
-            [JsonProperty(PropertyName = "answer")]
+            [JsonProperty("answer")]
             public string Answer { get; set; }
 
             /// <summary>
             /// Unique ID for this question within this template.
             /// </summary>
-            [JsonProperty(PropertyName = "questionid")]
+            [JsonProperty("questionid")]
             public int? Id { get; set; }
 
             /// <summary>
             /// Unique key for this question, can exist in multiple templates.
             /// </summary>
-            [JsonProperty(PropertyName = "key")]
+            [JsonProperty("key")]
             public string Key { get; set; }
 
             /// <summary>
             /// Human readable question
             /// </summary>
-            [JsonProperty(PropertyName = "question")]
+            [JsonProperty("question")]
             public string QuestionText { get; set; }
 
             /// <summary>
             /// Display ordering for this question within this template
             /// </summary>
-            [JsonProperty(PropertyName = "ordering")]
+            [JsonProperty("ordering")]
             public int? Ordering { get; set; }
 
             /// <summary>
             /// The template where this question is listed. If it exists on multiple templates, then only one of them.
             /// </summary>
-            [JsonProperty(PropertyName = "templateid")]
+            [JsonProperty("templateid")]
             public int? TemplateId { get; set; }
 
             /// <summary>
             /// The notes associated with this question.
             /// </summary>
-            [JsonProperty(PropertyName = "note")]
+            [JsonProperty("note")]
             public string Note { get; set; }
 
             /// <summary>
             /// The date this answer was last updated (or first answered if never updated).
             /// </summary>
-            [JsonProperty(PropertyName = "lastupdated")]
+            [JsonProperty("lastupdated")]
             [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
             public DateTime? LastUpdated { get; set; }
 
             /// <summary>
             /// The date this note was last updated (or first added if never updated).
             /// </summary>
-            [JsonProperty(PropertyName = "notelastupdateddate")]
+            [JsonProperty("notelastupdateddate")]
             [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
             public DateTime? NoteLastUpdatedDate { get; set; }
 
             /// <summary>
             /// The reason this question was not performed.
             /// </summary>
-            [JsonProperty(PropertyName = "notperformedreason")]
+            [JsonProperty("notperformedreason")]
             public Reason NotPerformedReason { get; set; }
 
             public class Reason
@@ -113,13 +113,13 @@ namespace AthenaHealth.Sdk.Models.Response
                 /// <summary>
                 /// SNOMED code for the not performed reason, or 1 if there is no reason
                 /// </summary>
-                [JsonProperty(PropertyName = "code")]
+                [JsonProperty("code")]
                 public int? Code { get; set; }
 
                 /// <summary>
                 /// Human-readable text for the not performed reason.
                 /// </summary>
-                [JsonProperty(PropertyName = "text")]
+                [JsonProperty("text")]
                 public string Text { get; set; }
             }
         }

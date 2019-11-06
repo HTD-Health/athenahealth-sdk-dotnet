@@ -11,25 +11,25 @@ namespace AthenaHealth.Sdk.Models.Response
         /// <summary>
         /// The list of medications
         /// </summary>
-        [JsonProperty(PropertyName = "medications")]
+        [JsonProperty("medications")]
         public Medication[][] Medications { get; set; }
 
         /// <summary>
         /// Whether the patient explicitly has no reported medications
         /// </summary>
-        [JsonProperty(PropertyName = "nomedicationsreported")]
+        [JsonProperty("nomedicationsreported")]
         public bool NoMedicationsReported { get; set; }
 
         /// <summary>
         /// A section-wide note
         /// </summary>
-        [JsonProperty(PropertyName = "sectionnote")]
+        [JsonProperty("sectionnote")]
         public string SectionNote { get; set; }
 
         /// <summary>
         /// The last time any of the medications were updated
         /// </summary>
-        [JsonProperty(PropertyName = "lastupdated")]
+        [JsonProperty("lastupdated")]
         [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
         public DateTime? LastUpdated { get; set; }
 
@@ -37,7 +37,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// Whether or not the patient has consented to have their medication history downloaded.
         /// There are plans to deprecate this field.
         /// </summary>
-        [JsonProperty(PropertyName = "patientdownloadconsent")]
+        [JsonProperty("patientdownloadconsent")]
         public bool PatientDownloadConsent { get; set; }
 
         /// <summary>
@@ -48,87 +48,87 @@ namespace AthenaHealth.Sdk.Models.Response
         /// regardless of this setting, medication history that has already been downloaded will
         /// remain available.
         /// </summary>
-        [JsonProperty(PropertyName = "patientneedsdownloadconsent")]
+        [JsonProperty("patientneedsdownloadconsent")]
         public bool PatientNeedsDownloadConsent { get; set; }
 
         /// <summary>
         /// The time of the last attempted medication history download from SureScripts.
         /// </summary>
-        [JsonProperty(PropertyName = "lastdownloadeddate")]
+        [JsonProperty("lastdownloadeddate")]
         public string LastDownloadedDate { get; set; }
 
         /// <summary>
         /// BETA FIELD: Whether or not the last medication history download was denied.
         /// </summary>
-        [JsonProperty(PropertyName = "lastdownloaddenied")]
+        [JsonProperty("lastdownloaddenied")]
         public bool LastDownloadDenied { get; set; }
 
         /// <summary>
         /// BETA FIELD: The reason the last medication history download was denied.
         /// </summary>
-        [JsonProperty(PropertyName = "lastdownloaddenialreason")]
+        [JsonProperty("lastdownloaddenialreason")]
         public string LastDownloadDenialReason { get; set; }
 
         public class Medication
         {
-            [JsonProperty(PropertyName = "clinicalordertypeid")]
+            [JsonProperty("clinicalordertypeid")]
             public string ClinicalOrderTypeId { get; set; } 
 
-             [JsonProperty(PropertyName = "lastmodifieddate")]
+             [JsonProperty("lastmodifieddate")]
             [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
             public DateTime? LastModifiedDate { get; set; } 
             
-             [JsonProperty(PropertyName = "lastmodifiedby")]
+             [JsonProperty("lastmodifiedby")]
             public string LastModifiedBy { get; set; } 
 
-            [JsonProperty(PropertyName = "fdbmedicationid")]
+            [JsonProperty("fdbmedicationid")]
             public string FdbMedicationId { get; set; } 
 
-             [JsonProperty(PropertyName = "fdbgenericmedicationnameid")]
+             [JsonProperty("fdbgenericmedicationnameid")]
             public string FdbGenericMedicationNameId { get; set; } 
             
             /// <summary>
             /// The list of events for this medication. Can be START, END, ORDER, ENTER, FILL, or HIDE.
             /// </summary>
-            [JsonProperty(PropertyName = "events")]
+            [JsonProperty("events")]
             public Event[] Events { get; set; }
 
             /// <summary>
             /// Components of the structured sig.
             /// </summary>
-            [JsonProperty(PropertyName = "structuredsig")]
+            [JsonProperty("structuredsig")]
             public StructuredSigModel StructuredSig { get; set; }
 
             /// <summary>
             /// Primary ID for this medication entry. Those starting with C are clinical
             /// prescriptions, and those starting with H are historical (entered, downloaded, etc).
             /// </summary>
-            [JsonProperty(PropertyName = "medicationentryid")]
+            [JsonProperty("medicationentryid")]
             public string MedicationEntryId { get; set; }
 
             /// <summary>
             /// Athena ID for this medication.
             /// </summary>
-            [JsonProperty(PropertyName = "medicationid")]
+            [JsonProperty("medicationid")]
             public int? MedicationId { get; set; }
 
             /// <summary>
             /// The name of the medication.
             /// </summary>
-            [JsonProperty(PropertyName = "medication")]
+            [JsonProperty("medication")]
             public string Name { get; set; }
 
             /// <summary>
             /// Whether the sig for this entry is structured.
             /// </summary>
-            [JsonProperty(PropertyName = "isstructuredsig")]
+            [JsonProperty("isstructuredsig")]
             public bool IsStructuredSig { get; set; }
 
             /// <summary>
             /// The unstructured sig for this medication, if any. If there is a structured sig, this
             /// will contain the formatted version of that sig.
             /// </summary>
-            [JsonProperty(PropertyName = "unstructuredsig")]
+            [JsonProperty("unstructuredsig")]
             public string UnstructuredSig { get; set; }
 
             /// <summary>
@@ -136,144 +136,144 @@ namespace AthenaHealth.Sdk.Models.Response
             /// history download (express scripts, medco, etc), ATHENA (which means it was entered
             /// manually), etc.
             /// </summary>
-            [JsonProperty(PropertyName = "source")]
+            [JsonProperty("source")]
             public string Source { get; set; }
 
             /// <summary>
             /// The status of this medication. Medications in PEND status are associated with
             /// approved future orders and have not yet been submitted.
             /// </summary>
-            [JsonProperty(PropertyName = "status")]
+            [JsonProperty("status")]
             public string Status { get; set; }
 
             /// <summary>
             /// The organ class for this medication. This is equivalent to a medication class.
             /// </summary>
-            [JsonProperty(PropertyName = "organclass")]
+            [JsonProperty("organclass")]
             public string OrganClass { get; set; }
 
             /// <summary>
             /// The therapeutic class for this medication. This is equivalent to a medication subclass.
             /// </summary>
-            [JsonProperty(PropertyName = "therapeuticclass")]
+            [JsonProperty("therapeuticclass")]
             public string TherapeuticClass { get; set; }
 
             /// <summary>
             /// The date a medication will be submitted. Included if the medication is in PEND status
             /// and attached to a approved future order.
             /// </summary>
-            [JsonProperty(PropertyName = "futuresubmitdate")]
+            [JsonProperty("futuresubmitdate")]
             public string FutureSubmitDate { get; set; }
 
             /// <summary>
             /// If this was a prescription, this contains the ID of the encounter where it was
             /// ordered or administered
             /// </summary>
-            [JsonProperty(PropertyName = "encounterid")]
+            [JsonProperty("encounterid")]
             public int? EncounterId { get; set; }
 
             /// <summary>
             /// The athenaNet username of the person who entered or ordered the medication.
             /// Downloaded medications have INTERFACE for this field.
             /// </summary>
-            [JsonProperty(PropertyName = "createdby")]
+            [JsonProperty("createdby")]
             public string CreatedBy { get; set; }
 
             /// <summary>
             /// For clinical prescriptions, the athenaNet username of the person who approved this prescription.
             /// </summary>
-            [JsonProperty(PropertyName = "approvedby")]
+            [JsonProperty("approvedby")]
             public string ApprovedBy { get; set; }
 
             /// <summary>
             /// The billing NDC code for this medication.
             /// </summary>
-            [JsonProperty(PropertyName = "billingndc")]
+            [JsonProperty("billingndc")]
             public string BillingNDC { get; set; }
 
             /// <summary>
             /// The ordering mode for prescriptions. Can be PRESCRIBE, DISPENSE, or ADMINISTER.
             /// </summary>
-            [JsonProperty(PropertyName = "orderingmode")]
+            [JsonProperty("orderingmode")]
             public string OrderingMode { get; set; }
 
             /// <summary>
             /// The total quantity prescribed, dispensed, administered. This is not currently
             /// available for historical (downloaded) medications.
             /// </summary>
-            [JsonProperty(PropertyName = "quantity")]
+            [JsonProperty("quantity")]
             public int? Quantity { get; set; }
 
             /// <summary>
             /// The unit of the quantity. Example: tablets, sprays, etc.
             /// </summary>
-            [JsonProperty(PropertyName = "quantityunit")]
+            [JsonProperty("quantityunit")]
             public string QuantityUnit { get; set; }
 
             /// <summary>
             /// The number of refills allowed when this medication was ordered.
             /// </summary>
-            [JsonProperty(PropertyName = "refillsallowed")]
+            [JsonProperty("refillsallowed")]
             public int? RefillsAllowed { get; set; }
 
             /// <summary>
             /// </summary>
-            [JsonProperty(PropertyName = "issafetorenew")]
+            [JsonProperty("issafetorenew")]
             public bool IsSafeToRenew { get; set; }
 
             /// <summary>
             /// The reason why this medication was stopped.
             /// </summary>
-            [JsonProperty(PropertyName = "stopreason")]
+            [JsonProperty("stopreason")]
             public string StopReason { get; set; }
 
             /// <summary>
             /// Non-patient facing note for ths prescription. Labeled "internal note" in the UI.
             /// </summary>
-            [JsonProperty(PropertyName = "providernote")]
+            [JsonProperty("providernote")]
             public string ProviderNote { get; set; }
 
             /// <summary>
             /// Patient-facing note for this prescription. Labeled "note" in the UI.
             /// </summary>
-            [JsonProperty(PropertyName = "patientnote")]
+            [JsonProperty("patientnote")]
             public string PatientNote { get; set; }
 
             /// <summary>
             /// The name of the pharmacy where this medication was filled.
             /// </summary>
-            [JsonProperty(PropertyName = "pharmacy")]
+            [JsonProperty("pharmacy")]
             public string Pharmacy { get; set; }
 
             /// <summary>
             /// The NCPDP ID of the pharmacy for this medication.. See http://www.ncpdp.org/ for details.
             /// </summary>
-            [JsonProperty(PropertyName = "pharmacyncpdpid")]
+            [JsonProperty("pharmacyncpdpid")]
             public string PharmacyNcpdpId { get; set; }
 
             /// <summary>
             /// The user who prescribed this medication.
             /// </summary>
-            [JsonProperty(PropertyName = "prescribedby")]
+            [JsonProperty("prescribedby")]
             public string PrescribedBy { get; set; }
 
             /// <summary>
             /// The list of NDC numbers that correspond to this medication.
             /// </summary>
-            [JsonProperty(PropertyName = "ndcoptions")]
+            [JsonProperty("ndcoptions")]
             public string[] NdcOptions { get; set; }
 
             /// <summary>
             /// The list of RxNorm Identifiers that correspond to this medication. This list may
             /// contain both branded and generic identifiers
             /// </summary>
-            [JsonProperty(PropertyName = "rxnorm")]
+            [JsonProperty("rxnorm")]
             public string[] RxNorm { get; set; }
 
             /// <summary>
             /// The route for the prescription.
             /// </summary>
-            [JsonProperty(PropertyName = "route")]
+            [JsonProperty("route")]
             public string Route { get; set; }
 
             public class Event
@@ -281,20 +281,20 @@ namespace AthenaHealth.Sdk.Models.Response
                 /// <summary>
                 /// The event type. Can be START, END, ORDER, ENTER, FILL, or HIDE.
                 /// </summary>
-                [JsonProperty(PropertyName = "type")]
+                [JsonProperty("type")]
                 public string Type { get; set; }
 
                 /// <summary>
                 /// The date this event occurred
                 /// </summary>
-                [JsonProperty(PropertyName = "eventdate")]
+                [JsonProperty("eventdate")]
                 [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
                 public DateTime? EventDate { get; set; }
 
                 /// <summary>
                 /// The display name for the user most relevant for this event. May be null.
                 /// </summary>
-                [JsonProperty(PropertyName = "userdisplayname")]
+                [JsonProperty("userdisplayname")]
                 public string UserDisplayName { get; set; }
             }
 
@@ -303,61 +303,61 @@ namespace AthenaHealth.Sdk.Models.Response
                 /// <summary>
                 /// How the medication is taken. Examples are Chew, Take, Inhale, etc.
                 /// </summary>
-                [JsonProperty(PropertyName = "dosageaction")]
+                [JsonProperty("dosageaction")]
                 public string DosageAction { get; set; }
 
                 /// <summary>
                 /// How many of this med is taken.
                 /// </summary>
-                [JsonProperty(PropertyName = "dosagequantityvalue")]
+                [JsonProperty("dosagequantityvalue")]
                 public int? DosageQuantityValue { get; set; }
 
                 /// <summary>
                 /// The unit of the quantity. Example: tablets, sprays, etc.
                 /// </summary>
-                [JsonProperty(PropertyName = "dosagequantityunit")]
+                [JsonProperty("dosagequantityunit")]
                 public string DosageQuantityUnit { get; set; }
 
                 /// <summary>
                 /// How many times (in the given time unit) this should be taken.
                 /// </summary>
-                [JsonProperty(PropertyName = "dosagefrequencyvalue")]
+                [JsonProperty("dosagefrequencyvalue")]
                 public double? DosageFrequencyBalue { get; set; }
 
                 /// <summary>
                 /// The unit of the frequency. Example: per day, per week.
                 /// </summary>
-                [JsonProperty(PropertyName = "dosagefrequencyunit")]
+                [JsonProperty("dosagefrequencyunit")]
                 public string DosageFrequencyUnit { get; set; }
 
                 /// <summary>
                 /// A standardized patient-friendly frequency. Example: 6 per day becomes "every 4 hours".
                 /// </summary>
-                [JsonProperty(PropertyName = "dosagefrequencydescription")]
+                [JsonProperty("dosagefrequencydescription")]
                 public string DosageFrequencyDescription { get; set; }
 
                 /// <summary>
                 /// How this medication is taken. Example: oral, inhalation, intranasal, etc.
                 /// </summary>
-                [JsonProperty(PropertyName = "dosageroute")]
+                [JsonProperty("dosageroute")]
                 public string DosageRoute { get; set; }
 
                 /// <summary>
                 /// Additional instructions. Example: with meals
                 /// </summary>
-                [JsonProperty(PropertyName = "dosageadditionalinstructions")]
+                [JsonProperty("dosageadditionalinstructions")]
                 public string DosageAdditionalInstructions { get; set; }
 
                 /// <summary>
                 /// How many duration time units this medication should be taken for.
                 /// </summary>
-                [JsonProperty(PropertyName = "dosagedurationvalue")]
+                [JsonProperty("dosagedurationvalue")]
                 public int? DosageDurationValue { get; set; }
 
                 /// <summary>
                 /// The unit of the duration. Example: days. So take this for days.
                 /// </summary>
-                [JsonProperty(PropertyName = "dosagedurationunit")]
+                [JsonProperty("dosagedurationunit")]
                 public string DosageDurationUnit { get; set; }
             }
         }
