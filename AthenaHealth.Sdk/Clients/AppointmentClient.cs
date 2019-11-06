@@ -1,5 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using AthenaHealth.Sdk.Clients.Interfaces;
 using AthenaHealth.Sdk.Extensions;
 using AthenaHealth.Sdk.Http;
@@ -37,9 +36,9 @@ namespace AthenaHealth.Sdk.Clients
             return await _connection.Get<AppointmentResponse>($"{_connection.PracticeId}/appointments/booked", filter);
         }
 
-        public async Task<Appointment> GetAppointmentById(int id, GetAppointmentFilter filter = null)
+        public async Task<Appointment> GetById(int appointmentId, GetAppointmentFilter filter = null)
         {
-            Appointment[] result = await _connection.Get<Appointment[]>($"{_connection.PracticeId}/appointments/{id}", filter);
+            Appointment[] result = await _connection.Get<Appointment[]>($"{_connection.PracticeId}/appointments/{appointmentId}", filter);
             return result.FirstOrThrowException();
         }
 

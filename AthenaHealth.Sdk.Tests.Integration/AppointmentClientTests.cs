@@ -79,7 +79,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         }
 
         [Fact]
-        public async Task GetAppointmentById_ValidId_ReturnsAppointment()
+        public async Task GetById_ValidId_ReturnsAppointment()
         {
             var client =
                 new Clients.AppointmentClient(
@@ -93,7 +93,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
                 ShowInsurance = true,
             };
 
-            Appointment appointment = await client.GetAppointmentById(997681, filter);
+            Appointment appointment = await client.GetById(997681, filter);
 
             appointment.ShouldNotBeNull();
             appointment.DepartmentId.ShouldNotBeNull();
