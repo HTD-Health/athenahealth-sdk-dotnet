@@ -2,6 +2,7 @@
 using AthenaHealth.Sdk.Models.Response;
 using System.Threading.Tasks;
 using AthenaHealth.Sdk.Models.Enums;
+using System.IO;
 
 namespace AthenaHealth.Sdk.Clients.Interfaces
 {
@@ -146,5 +147,31 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// <param name="request"></param>
         /// <returns></returns>
         Task<SetPrivacyInformationResponse> SetPrivacyInformation(int patientId, SetPrivacyInformation request);
+
+        /// <summary>
+        /// Gets patient photo
+        /// </summary>
+        /// <param name="patientId"></param>
+        /// <param name="jpegOutput">
+        /// If set to true, or if Accept header is image/jpeg, returns the image directly. (The
+        /// image may be scaled.)
+        /// </param>
+        /// <returns></returns>
+        Task<byte[]> GetPhoto(int patientId, bool? jpegOutput = null);
+
+        /// <summary>
+        /// Updates patient photo
+        /// </summary>
+        /// <param name="patientId"></param>
+        /// <param name="image"></param>
+        /// <returns></returns>
+        Task<BaseResponse> UpdatePhoto(int patientId, FileInfo image);
+
+        /// <summary>
+        /// Deletes patient photo
+        /// </summary>
+        /// <param name="patientId"></param>
+        /// <returns></returns>
+        Task<BaseResponse> DeletePhoto(int patientId);
     }
 }

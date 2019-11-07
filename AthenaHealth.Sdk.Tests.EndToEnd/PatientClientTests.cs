@@ -1,4 +1,5 @@
 ﻿using AthenaHealth.Sdk.Exceptions;
+using AthenaHealth.Sdk.Models.Enums;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
 using AthenaHealth.Sdk.Tests.EndToEnd.Data.Patient;
@@ -8,12 +9,11 @@ using Bogus.DataSets;
 using Shouldly;
 using System;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using Xunit;
-using AthenaHealth.Sdk.Models.Enums;
-using System.IO;
 
 // ReSharper disable StringLiteralTypo
 namespace AthenaHealth.Sdk.Tests.EndToEnd
@@ -21,7 +21,9 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
     public class PatientClientTests : IClassFixture<AthenaHealthClientFixture>
     {
         private readonly IAthenaHealthClient _client;
+
         private readonly Faker _faker;
+
         private readonly Faker<CreatePatient> _createPatientFaker;
 
         public PatientClientTests(AthenaHealthClientFixture athenaHealthClientFixture)
@@ -799,7 +801,6 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
 
             exception.StatusCode.ShouldBe(HttpStatusCode.Conflict);
             exception.Message.ShouldContain("An existing insurance package exists. Use PUT to update or DELETE to deactivate.");
-
         }
 
         [Fact(Skip = "It takes ~22 seconds to complete.")]
@@ -816,18 +817,18 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             }
 
             // Act.
-           Insurance response = await _client.Patients.CreateInsurance(100,
-                new CreateInsurance(
-                    31724, 
-                    SequenceEnum.Primary, 
-                    "1842", 
-                    "Test1", 
-                    "Test2", 
-                    SexEnum.Male)
-                );
+            Insurance response = await _client.Patients.CreateInsurance(100,
+                 new CreateInsurance(
+                     31724,
+                     SequenceEnum.Primary,
+                     "1842",
+                     "Test1",
+                     "Test2",
+                     SexEnum.Male)
+                 );
 
-           response.InsuranceId.HasValue.ShouldBeTrue();
-           response.InsuranceIdNumber.Length.ShouldBeGreaterThan(0);
+            response.InsuranceId.HasValue.ShouldBeTrue();
+            response.InsuranceIdNumber.Length.ShouldBeGreaterThan(0);
         }
 
         [Fact(Skip = "It takes ~21 seconds to complete.")]
@@ -846,8 +847,6 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
 
             // Act.
             await _client.Patients.DeleteInsurance(100, SequenceEnum.Primary);
-
-            // Assert - if exception is not thrown tests is successful.
         }
 
         [Fact]
@@ -979,7 +978,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             {
                 Answer = _faker.PickRandom(new AnswerEnum?[] { AnswerEnum.Yes, AnswerEnum.No, AnswerEnum.Unspecified, null })
             }).ToArray();
-            
+
             // Act
             await _client.Patients.UpdateMedicalHistory(createResult.PatientId.Value, new UpdateMedicalHistory(1)
             {
@@ -1030,6 +1029,96 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             var medicalHistoryAfter = await _client.Patients.GetMedicalHistory(createResult.PatientId.Value, 1);
 
             medicalHistoryAfter.Questions.Length.ShouldBe(0);
+        }
+
+        [Fact]
+        public async Task UpdatePhoto_ImageProvided_PhotoUpdated()
+        {
+            // Arrange
+            CreatePatient request = _createPatientFaker.Generate();
+
+            var createResult = await _client.Patients.CreatePatient(request);
+
+            // Act
+            await _client.Patients.UpdatePhoto(createResult.PatientId.Value, new FileInfo(@"Data\Patient\photo.png"));
+
+            // Assert
+            var photoBytes = await _client.Patients.GetPhoto(createResult.PatientId.Value, true);
+
+            photoBytes.ShouldNotBeNull();
+            photoBytes.Length.ShouldBeGreaterThan(0);
+        }
+
+        [Fact]
+        public async Task GetPhoto_PhotoAvailable_PhotoBytesDownloaded()
+        {
+            // Arrange
+            CreatePatient request = _createPatientFaker.Generate();
+
+            var createResult = await _client.Patients.CreatePatient(request);
+
+            await _client.Patients.UpdatePhoto(createResult.PatientId.Value, new FileInfo(@"Data\Patient\photo.png"));
+
+            // Act
+            var photoBytes = await _client.Patients.GetPhoto(createResult.PatientId.Value, true);
+
+            // Assert
+            photoBytes.ShouldNotBeNull();
+            photoBytes.Length.ShouldBeGreaterThan(0);
+        }
+
+        [Fact]
+        public async Task GetPhoto_PhotoNotAvailable_PhotoBytesDownloaded()
+        {
+            // Arrange
+            CreatePatient request = _createPatientFaker.Generate();
+
+            var createResult = await _client.Patients.CreatePatient(request);
+
+            // Act
+            ApiException exception = Should.Throw<ApiException>(async () => await _client.Patients.GetPhoto(createResult.PatientId.Value, true));
+
+            // Assert
+            exception.StatusCode.ShouldBe(HttpStatusCode.NotFound);
+            exception.Message.ShouldContain("No valid image was found.");
+        }
+
+        [Fact]
+        public async Task DeletePhoto_PhotoAvailable_PhotoDeleted()
+        {
+            // Arrange
+            CreatePatient request = _createPatientFaker.Generate();
+
+            var createResult = await _client.Patients.CreatePatient(request);
+
+            await _client.Patients.UpdatePhoto(createResult.PatientId.Value, new FileInfo(@"Data\Patient\photo.png"));
+
+            // Act
+            await _client.Patients.DeletePhoto(createResult.PatientId.Value);
+
+            // Assert
+            ApiException exception = Should.Throw<ApiException>(async () => await _client.Patients.GetPhoto(createResult.PatientId.Value, true));
+
+            exception.StatusCode.ShouldBe(HttpStatusCode.NotFound);
+            exception.Message.ShouldContain("No valid image was found.");
+        }
+
+        [Fact]
+        public async Task DeletePhoto_PhotoNotAvailable_PhotoDeleted()
+        {
+            // Arrange
+            CreatePatient request = _createPatientFaker.Generate();
+
+            var createResult = await _client.Patients.CreatePatient(request);
+
+            // Act
+            await _client.Patients.DeletePhoto(createResult.PatientId.Value);
+
+            // Assert
+            ApiException exception = Should.Throw<ApiException>(async () => await _client.Patients.GetPhoto(createResult.PatientId.Value, true));
+
+            exception.StatusCode.ShouldBe(HttpStatusCode.NotFound);
+            exception.Message.ShouldContain("No valid image was found.");
         }
     }
 }
