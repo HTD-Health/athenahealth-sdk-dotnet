@@ -163,9 +163,9 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// Updates patient photo
         /// </summary>
         /// <param name="patientId"></param>
-        /// <param name="image"></param>
+        /// <param name="request"></param>
         /// <returns></returns>
-        Task<BaseResponse> UpdatePhoto(int patientId, FileInfo image);
+        Task<BaseResponse> UpdatePhoto(int patientId, UpdatePhoto request);
 
         /// <summary>
         /// Deletes patient photo
@@ -173,5 +173,34 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// <param name="patientId"></param>
         /// <returns></returns>
         Task<BaseResponse> DeletePhoto(int patientId);
+
+        /// <summary>
+        /// Gets patient insurance card photo
+        /// </summary>
+        /// <param name="patientId"></param>
+        /// <param name="insuranceId"></param>
+        /// <param name="jpegOutput">
+        /// If set to true, or if Accept header is image/jpeg, returns the image directly. (The
+        /// image may be scaled.)
+        /// </param>
+        /// <returns>Image bytes</returns>
+        Task<byte[]> GetInsuranceCardPhoto(int patientId, int insuranceId, bool? jpegOutput = null);
+
+        /// <summary>
+        /// Updates patient insurance card photo
+        /// </summary>
+        /// <param name="patientId"></param>
+        /// <param name="insuranceId"></param>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        Task<BaseResponse> UpdateInsuranceCardPhoto(int patientId, int insuranceId, UpdateInsuranceCardPhoto request);
+
+        /// <summary>
+        /// Deletes patient insurance card photo
+        /// </summary>
+        /// <param name="patientId"></param>
+        /// <param name="insuranceId"></param>
+        /// <returns></returns>
+        Task<BaseResponse> DeleteInsuranceCardPhoto(int patientId, int insuranceId);
     }
 }
