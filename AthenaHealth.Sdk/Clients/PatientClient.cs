@@ -4,6 +4,8 @@ using AthenaHealth.Sdk.Http;
 using AthenaHealth.Sdk.Models.Enums;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
+using System;
+using System.IO;
 using System.Threading.Tasks;
 
 namespace AthenaHealth.Sdk.Clients
@@ -298,6 +300,53 @@ namespace AthenaHealth.Sdk.Clients
             };
 
             return await UpdatePatient(patientId, request);
+        }
+
+        /// <summary>
+        /// Gets patient photo
+        /// </summary>
+        /// <param name="patientId"></param>
+        /// <param name="jpegOutput">
+        /// If set to true, or if Accept header is image/jpeg, returns the image directly. (The
+        /// image may be scaled.)
+        /// </param>
+        /// <returns>Image bytes</returns>
+        public async Task<byte[]> GetPhoto(int patientId, bool? jpegOutput = null)
+        {
+            var queryParameters = new
+            {
+                //jpegoutput = jpegOutput // Information: This flag is not used, as it implies returning byte[] instead of JSON
+            };
+
+            var response = await _connection.Get<GetPhotoResponse>($"{_connection.PracticeId}/patients/{patientId}/photo", queryParameters);
+
+            return Convert.FromBase64String(response.Image);
+        }
+
+        /// <summary>
+        /// Updates patient photo
+        /// </summary>
+        /// <param name="patientId"></param>
+        /// <param name="image"></param>
+        /// <returns></returns>
+        public async Task<BaseResponse> UpdatePhoto(int patientId, FileInfo image)
+        {
+            var request = new
+            {
+                image
+            };
+
+            return await _connection.Post<BaseResponse>($"{_connection.PracticeId}/patients/{patientId}/photo", body: request, asMultipart: true);
+        }
+
+        /// <summary>
+        /// Deletes patient photo
+        /// </summary>
+        /// <param name="patientId"></param>
+        /// <returns></returns>
+        public async Task<BaseResponse> DeletePhoto(int patientId)
+        {
+            return await _connection.Delete<BaseResponse>($"{_connection.PracticeId}/patients/{patientId}/photo");
         }
     }
 }
