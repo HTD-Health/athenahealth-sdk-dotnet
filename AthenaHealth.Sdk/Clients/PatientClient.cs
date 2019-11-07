@@ -327,15 +327,10 @@ namespace AthenaHealth.Sdk.Clients
         /// Updates patient photo
         /// </summary>
         /// <param name="patientId"></param>
-        /// <param name="image"></param>
+        /// <param name="request"></param>
         /// <returns></returns>
-        public async Task<BaseResponse> UpdatePhoto(int patientId, FileInfo image)
+        public async Task<BaseResponse> UpdatePhoto(int patientId, UpdatePhoto request)
         {
-            var request = new
-            {
-                image
-            };
-
             return await _connection.Post<BaseResponse>($"{_connection.PracticeId}/patients/{patientId}/photo", body: request, asMultipart: true);
         }
 
@@ -347,6 +342,51 @@ namespace AthenaHealth.Sdk.Clients
         public async Task<BaseResponse> DeletePhoto(int patientId)
         {
             return await _connection.Delete<BaseResponse>($"{_connection.PracticeId}/patients/{patientId}/photo");
+        }
+
+        /// <summary>
+        /// Gets patient insurance card photo
+        /// </summary>
+        /// <param name="patientId"></param>
+        /// <param name="insuranceId"></param>
+        /// <param name="jpegOutput">
+        /// If set to true, or if Accept header is image/jpeg, returns the image directly. (The
+        /// image may be scaled.)
+        /// </param>
+        /// <returns>Image bytes</returns>
+        public async Task<byte[]> GetInsuranceCardPhoto(int patientId, int insuranceId, bool? jpegOutput = null)
+        {
+            var queryParameters = new
+            {
+                //jpegoutput = jpegOutput // Information: This flag is not used, as it implies returning byte[] instead of JSON
+            };
+
+            var response = await _connection.Get<GetPhotoResponse>($"{_connection.PracticeId}/patients/{patientId}/insurances/{insuranceId}/image", queryParameters);
+
+            return Convert.FromBase64String(response.Image);
+        }
+
+        /// <summary>
+        /// Updates patient insurance card photo
+        /// </summary>
+        /// <param name="patientId"></param>
+        /// <param name="insuranceId"></param>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        public async Task<BaseResponse> UpdateInsuranceCardPhoto(int patientId, int insuranceId, UpdateInsuranceCardPhoto request)
+        {
+            return await _connection.Post<BaseResponse>($"{_connection.PracticeId}/patients/{patientId}/insurances/{insuranceId}/image", body: request, asMultipart: true);
+        }
+
+        /// <summary>
+        /// Deletes patient insurance card photo
+        /// </summary>
+        /// <param name="patientId"></param>
+        /// <param name="insuranceId"></param>
+        /// <returns></returns>
+        public async Task<BaseResponse> DeleteInsuranceCardPhoto(int patientId, int insuranceId)
+        {
+            return await _connection.Delete<BaseResponse>($"{_connection.PracticeId}/patients/{patientId}/insurances/{insuranceId}/image");
         }
     }
 }
