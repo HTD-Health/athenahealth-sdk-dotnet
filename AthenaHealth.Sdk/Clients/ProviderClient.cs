@@ -16,11 +16,13 @@ namespace AthenaHealth.Sdk.Clients
             _connection = connection;
         }
 
+        [Endpoint("GET /providers")]
         public async Task<ProviderResponse> GetAll(GetProviderFilter filter = null)
         {
             return await _connection.Get<ProviderResponse>($"{_connection.PracticeId}/providers", filter);
         }
 
+        [Endpoint("GET /providers/{providerid}")]
         public async Task<ProviderExtended> GetById(int providerId, GetByIdProviderFilter filter = null)
         {
             var result = await _connection.Get<ProviderExtended[]>($"{_connection.PracticeId}/providers/{providerId}", filter);
