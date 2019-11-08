@@ -45,7 +45,7 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// Return a list of medical history questions.
         /// </summary>
         /// <param name="filter"></param>
-        /// <returns></returns>
+        /// <returns><see cref="MedicalHistoryQuestionResponse"/></returns>
         Task<MedicalHistoryQuestionResponse> GetMedicalHistoryQuestions(GetMedicalHistoryQuestionsFilter filter = null);
 
         Task<SocialHistoryTemplate[]> GetSocialHistoryTemplates();
