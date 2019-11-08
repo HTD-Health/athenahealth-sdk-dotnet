@@ -1,6 +1,6 @@
-﻿using System.Threading.Tasks;
-using AthenaHealth.Sdk.Models.Request;
+﻿using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
+using System.Threading.Tasks;
 
 namespace AthenaHealth.Sdk.Clients.Interfaces
 {
@@ -18,7 +18,10 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// Retrieve notes for this appointment.
         /// </summary>
         /// <param name="appointmentId">The athenaNet Appointment ID.</param>
-        /// <param name="showDeleted">By default, we prevent deleted appointment notes from being returned via the API. This flag allows you to show deleted notes in the set of results returned.</param>
+        /// <param name="showDeleted">
+        /// By default, we prevent deleted appointment notes from being returned via the API. This
+        /// flag allows you to show deleted notes in the set of results returned.
+        /// </param>
         /// <returns></returns>
         Task<AppointmentNotesResponse> GetNotes(int appointmentId, bool showDeleted = false);
 
@@ -27,7 +30,9 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// </summary>
         /// <param name="appointmentId">The athenaNet Appointment ID.</param>
         /// <param name="text">The note text.</param>
-        /// <param name="displayOnSchedule">Add appointment note to homepage display (defaults to false)</param>
+        /// <param name="displayOnSchedule">
+        /// Add appointment note to homepage display (defaults to false)
+        /// </param>
         /// <returns></returns>
         Task CreateNote(int appointmentId, string text, bool displayOnSchedule = false);
 
@@ -75,8 +80,7 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         Task<CheckInRequirement[]> GetCheckInRequirements(int appointmentId);
 
         /// <summary>
-        /// Completes the check in process for this appointment.
-        /// Can NOT be called after <see cref="CancelCheckIn"/>.
+        /// Completes the check in process for this appointment. Can NOT be called after <see cref="CancelCheckIn"/>.
         /// </summary>
         /// <param name="appointmentId"></param>
         /// <returns></returns>
@@ -90,9 +94,8 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         Task StartCheckIn(int appointmentId);
 
         /// <summary>
-        /// Note that the check-in process was stopped and/or canceled.
-        /// Likely called after <see cref="StartCheckIn(int)"/>.
-        /// Can NOT be called after <see cref="CompleteCheckIn"/>.
+        /// Note that the check-in process was stopped and/or canceled. Likely called after <see
+        /// cref="StartCheckIn(int)"/>. Can NOT be called after <see cref="CompleteCheckIn"/>.
         /// </summary>
         /// <param name="appointmentId"></param>
         /// <returns></returns>
@@ -117,5 +120,13 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// <param name="request"></param>
         /// <returns></returns>
         Task<AddToWaitListResponse> AddToWaitList(AddToWaitListRequest request);
+
+        Task<AppointmentSubscriptionEvent> GetAppointmentSubscriptionEvents();
+
+        Task<AppointmentSubscriptionEvent> GetAppointmentSubscriptions(GetAppointmentSubscriptionsFilter queryParameters = null);
+
+        Task<BaseResponse> SubscribeToEvent(SubscribeToEvent request = null);
+
+        Task<BaseResponse> UnsubscribeFromEvent(UnsubscribeFromEvent queryParameters = null);
     }
 }

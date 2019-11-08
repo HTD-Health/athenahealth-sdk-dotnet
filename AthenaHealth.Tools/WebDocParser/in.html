@@ -4,170 +4,21 @@
             <th class="outputnameheader">Name</th>
             <th class="outputtypeheader">Type</th>
             <th class="outputtypeheader">Description</th>
-            <th class="outputtypeheader">Default</th>
-            <th class="outputtypeheader">Values</th>
         </tr>
         <tr>
-            <td class="outputname" data-label="Name">appointmentstatus</td>
+            <td class="outputname" data-label="Name">eventname</td>
             <td class="outputname" data-label="Type">string</td>
-            <td class="outputname" data-label="Description">Filter appointments by status.</td>
-            <td class="outputname" data-label="Default">&nbsp;</td>
-            <td class="outputname" data-label="Values">
-                <table class="table-responsive">
-                    <tbody>
-                        <tr>
-                            <th>Submitted Value</th>
-                            <th>Display Value</th>
-                        </tr>
-                        <tr>
-                            <td data-label="Submitted Value">2</td>
-                            <td data-label="Display Value">Checked in</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Submitted Value">3</td>
-                            <td data-label="Display Value">Checked out</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Submitted Value">4</td>
-                            <td data-label="Display Value">Charges entered</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Submitted Value">f</td>
-                            <td data-label="Display Value">Filled appointments</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Submitted Value">x</td>
-                            <td data-label="Display Value">Canceled appointments</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
+            <td class="outputname" data-label="Description">By default, you are unsubscribed from all possible events.  If you only wish to unsubscribe from an individual event, pass the event name with this argument.</td>
         </tr>
         <tr>
-            <td class="outputname" data-label="Name">appointmenttypeid</td>
-            <td class="outputname" data-label="Type">integer</td>
-            <td class="outputname" data-label="Description">Filter by appointment type ID.</td>
-            <td class="outputname" data-label="Default">&nbsp;</td>
-            <td class="outputname" data-label="Values">&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="outputname" data-label="Name">departmentid</td>
-            <td class="outputname" data-label="Type">integer</td>
-            <td class="outputname" data-label="Description">The athenaNet department ID.</td>
-            <td class="outputname" data-label="Default">&nbsp;</td>
-            <td class="outputname" data-label="Values">&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="outputname required" data-label="Name">enddate (required)</td>
-            <td class="outputname" data-label="Type">string</td>
-            <td class="outputname" data-label="Description">End of the appointment search date range (mm/dd/yyyy).  Inclusive.</td>
-            <td class="outputname" data-label="Default">&nbsp;</td>
-            <td class="outputname" data-label="Values">&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="outputname" data-label="Name">endlastmodified</td>
-            <td class="outputname" data-label="Type">string</td>
-            <td class="outputname" data-label="Description">Identify appointments modified prior to this date/time (mm/dd/yyyy hh:mi:ss).  Inclusive. Note: This can only be used if a startlastmodified value is supplied as well.</td>
-            <td class="outputname" data-label="Default">&nbsp;</td>
-            <td class="outputname" data-label="Values">&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="outputname" data-label="Name">ignorerestrictions</td>
+            <td class="outputname" data-label="Name">includeremindercall</td>
             <td class="outputname" data-label="Type">boolean</td>
-            <td class="outputname" data-label="Description">When showing patient detail for appointments, the patient information for patients with record restrictions and blocked patients will not be shown.  Setting this flag to true will show that information for those patients.</td>
-            <td class="outputname" data-label="Default">0</td>
-            <td class="outputname" data-label="Values">&nbsp;</td>
+            <td class="outputname" data-label="Description">If this is set, we will include the UpdateRemiderCall event as if it is one of the default events. Otherwise we will ignore that it exists.</td>
         </tr>
         <tr>
-            <td class="outputname" data-label="Name">patientid</td>
-            <td class="outputname" data-label="Type">integer</td>
-            <td class="outputname" data-label="Description">The athenaNet patient ID.  If operating in a Provider Group Enterprise practice, this should be the enterprise patient ID.</td>
-            <td class="outputname" data-label="Default">&nbsp;</td>
-            <td class="outputname" data-label="Values">&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="outputname" data-label="Name">providerid</td>
-            <td class="outputname" data-label="Type">array</td>
-            <td class="outputname" data-label="Description">The athenaNet provider ID.  Multiple IDs (either as a comma delimited list or multiple POSTed values) are allowed.</td>
-            <td class="outputname" data-label="Default">&nbsp;</td>
-            <td class="outputname" data-label="Values">&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="outputname" data-label="Name">scheduledenddate</td>
-            <td class="outputname" data-label="Type">string</td>
-            <td class="outputname" data-label="Description">End of the appointment scheduled search date range (mm/dd/yyyy).  Inclusive.</td>
-            <td class="outputname" data-label="Default">&nbsp;</td>
-            <td class="outputname" data-label="Values">&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="outputname" data-label="Name">scheduledstartdate</td>
-            <td class="outputname" data-label="Type">string</td>
-            <td class="outputname" data-label="Description">Start of the appointment scheduled search date range (mm/dd/yyyy).  Inclusive.</td>
-            <td class="outputname" data-label="Default">&nbsp;</td>
-            <td class="outputname" data-label="Values">&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="outputname" data-label="Name">showcancelled</td>
+            <td class="outputname" data-label="Name">includesuggestedoverbooking</td>
             <td class="outputname" data-label="Type">boolean</td>
-            <td class="outputname" data-label="Description">Include appointments that have been cancelled.</td>
-            <td class="outputname" data-label="Default">0</td>
-            <td class="outputname" data-label="Values">&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="outputname" data-label="Name">showclaimdetail</td>
-            <td class="outputname" data-label="Type">boolean</td>
-            <td class="outputname" data-label="Description">Include claim information, if available, associated with an appointment.</td>
-            <td class="outputname" data-label="Default">0</td>
-            <td class="outputname" data-label="Values">&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="outputname" data-label="Name">showcopay</td>
-            <td class="outputname" data-label="Type">boolean</td>
-            <td class="outputname" data-label="Description">By default, the expected co-pay is returned. For performance purposes, you can set this to false and copay will not be populated.</td>
-            <td class="outputname" data-label="Default">1</td>
-            <td class="outputname" data-label="Values">&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="outputname" data-label="Name">showexpectedprocedurecodes</td>
-            <td class="outputname" data-label="Type">boolean</td>
-            <td class="outputname" data-label="Description">Show the expetcted procedurecodes.</td>
-            <td class="outputname" data-label="Default">&nbsp;</td>
-            <td class="outputname" data-label="Values">&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="outputname" data-label="Name">showinsurance</td>
-            <td class="outputname" data-label="Type">boolean</td>
-            <td class="outputname" data-label="Description">Include patient insurance information. Shows insurance packages for the appointment if any are selected, and all patient packages otherwise.</td>
-            <td class="outputname" data-label="Default">0</td>
-            <td class="outputname" data-label="Values">&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="outputname" data-label="Name">showpatientdetail</td>
-            <td class="outputname" data-label="Type">boolean</td>
-            <td class="outputname" data-label="Description">Include patient information for each patient associated with an appointment.</td>
-            <td class="outputname" data-label="Default">0</td>
-            <td class="outputname" data-label="Values">&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="outputname" data-label="Name">showremindercalldetail</td>
-            <td class="outputname" data-label="Type">boolean</td>
-            <td class="outputname" data-label="Description">Include all remindercall related results, if available, associated with an appointment.</td>
-            <td class="outputname" data-label="Default">0</td>
-            <td class="outputname" data-label="Values">&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="outputname required" data-label="Name">startdate (required)</td>
-            <td class="outputname" data-label="Type">string</td>
-            <td class="outputname" data-label="Description">Start of the appointment search date range (mm/dd/yyyy).  Inclusive.</td>
-            <td class="outputname" data-label="Default">&nbsp;</td>
-            <td class="outputname" data-label="Values">&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="outputname" data-label="Name">startlastmodified</td>
-            <td class="outputname" data-label="Type">string</td>
-            <td class="outputname" data-label="Description">Identify appointments modified after this date/time (mm/dd/yyyy hh:mi:ss).  Inclusive.</td>
-            <td class="outputname" data-label="Default">&nbsp;</td>
-            <td class="outputname" data-label="Values">&nbsp;</td>
+            <td class="outputname" data-label="Description">If this is set, we will include the UpdateSuggestedOverbooking event as if it is one of the default events. Otherwise we will ignore that it exists.</td>
         </tr>
     </tbody>
 </table>

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Net;
-using System.Threading.Tasks;
-using AthenaHealth.Sdk.Exceptions;
+﻿using AthenaHealth.Sdk.Exceptions;
 using AthenaHealth.Sdk.Models;
 using AthenaHealth.Sdk.Models.Enums;
 using AthenaHealth.Sdk.Models.Request;
@@ -10,9 +6,13 @@ using AthenaHealth.Sdk.Models.Response;
 using AthenaHealth.Sdk.Tests.EndToEnd.Data.Appointments;
 using AthenaHealth.Sdk.Tests.EndToEnd.Fixtures;
 using Shouldly;
+using System;
+using System.Linq;
+using System.Net;
+using System.Threading.Tasks;
 using Xunit;
-// ReSharper disable StringLiteralTypo
 
+// ReSharper disable StringLiteralTypo
 namespace AthenaHealth.Sdk.Tests.EndToEnd
 {
     public class AppointmentClientTests : IClassFixture<AthenaHealthClientFixture>
@@ -68,9 +68,10 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         [Fact]
         public async Task GetBookedAppointments_SingleDepartment_ReturnsRecords()
         {
-            GetAppointmentsBookedFilter filter = new GetAppointmentsBookedFilter(departmentIds: new[] { 1 },
-                                                                                 startDate:new DateTime(2019, 01, 01),
-                                                                                 endDate: new DateTime(2019, 02, 01))
+            GetAppointmentsBookedFilter filter = new GetAppointmentsBookedFilter(
+                new[] { 1 },
+                new DateTime(2019, 01, 01),
+                new DateTime(2019, 02, 01))
             {
                 DepartmentIds = new[] { 1 },
                 ShowClaimDetail = true,
@@ -93,7 +94,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         public async Task GetBookedAppointments_MultipleDepartments_ReturnsRecords()
         {
             GetAppointmentsBookedFilter filter = new GetAppointmentsBookedFilter(
-                new[] { 1, 21 }, 
+                new[] { 1, 21 },
                 new DateTime(2019, 01, 01),
                 new DateTime(2019, 02, 01))
             {
@@ -172,7 +173,6 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
                 .FirstOrDefault(x => x.Text == noteText && x.DisplayOnSchedule == displayOnSchedule);
 
             createdNote.ShouldNotBeNull();
-
         }
 
         [Fact]
@@ -291,7 +291,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
                 EndDate = new DateTime(2019, 04, 01),
                 IgnoreSchedulablePermission = true,
                 AppointmentTypeId = 82,
-                ProviderId = new[] {71}
+                ProviderId = new[] { 71 }
             };
 
             AppointmentSlotResponse response = await _client.Appointments.GetAppointmentSlots(filter);
@@ -305,7 +305,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         public async Task CreateAppointmentSlot_ValidData_IdReturned()
         {
             CreateAppointmentSlot slot = new CreateAppointmentSlot(
-                1, 
+                1,
                 86,
                 new DateTime(2020, 1, 1),
                 new ClockTime[] { new ClockTime(16, 00), new ClockTime(17, 00) })
@@ -318,7 +318,6 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             response.AppointmentIds.First(a => a.Value == "16:00").Key.ShouldNotBeNullOrEmpty();
         }
 
-
         /// <summary>
         /// This method tests both: booking and cancellation, but before it creates new appointment slot
         /// </summary>
@@ -329,7 +328,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             int patientId = 1;
             //Create new appointment slot
             CreateAppointmentSlot slot = new CreateAppointmentSlot(
-                1, 
+                1,
                 86,
                 new DateTime(2020, 1, 1),
                 new ClockTime[] { new ClockTime(16, 00) })
@@ -364,7 +363,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         [ClassData(typeof(GetCheckInRequirementsData))]
         public async Task GetCheckInRequirements_ValidId_ReturnsRecord(int appointmentId)
         {
-            CheckInRequirement[] response = 
+            CheckInRequirement[] response =
                 await _client.Appointments.GetCheckInRequirements(appointmentId);
 
             response.ShouldNotBeNull();
@@ -425,7 +424,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
                 ShowFullSsn = true
             };
 
-            InsuranceResponse response = await _client.Appointments.GetAppointmentInsurances(filter);   
+            InsuranceResponse response = await _client.Appointments.GetAppointmentInsurances(filter);
 
             response.Total.ShouldBeGreaterThan(0);
             response.Items.ShouldNotBeNull();
@@ -451,14 +450,13 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             response.Items.ShouldContain(a => !string.IsNullOrEmpty(a.Reason));
         }
 
-
         [Fact(Skip = "Below test is slow - takes around 45 seconds to run")]
         public async Task RescheduleAppointment()
         {
             int patientId = 1;
             //Create new appointment slot 1
             CreateAppointmentSlot slot1 = new CreateAppointmentSlot(
-                1, 
+                1,
                 86,
                 new DateTime(2020, 1, 1),
                 new ClockTime[] { new ClockTime(16, 00) })
@@ -471,7 +469,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
 
             //Create new appointment slot 2
             CreateAppointmentSlot slot2 = new CreateAppointmentSlot(
-                1, 
+                1,
                 86,
                 new DateTime(2020, 1, 2),
                 new ClockTime[] { new ClockTime(17, 00) })
@@ -482,7 +480,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             response = await _client.Appointments.CreateAppointmentSlot(slot2);
             int slot2Id = int.Parse(response.AppointmentIds.First().Key);
 
-            
+
             //Book appointment on slot 1
             BookAppointment booking = new BookAppointment(slot1Id)
             {
@@ -525,6 +523,15 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
 
             response.ShouldNotBeNull();
             response.WaitListId.ShouldBeGreaterThan(0);
+        }
+
+        [Fact]
+        public async Task GetAppointmentSubscriptionEvents_ReturnsEvents()
+        {
+            var response = await _client.Appointments.GetAppointmentSubscriptionEvents();
+
+            response.ShouldNotBeNull();
+            response.Subscriptions.Length.ShouldBeGreaterThan(0);
         }
     }
 }

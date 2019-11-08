@@ -5,7 +5,6 @@ using AthenaHealth.Sdk.Models.Enums;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
 using System;
-using System.IO;
 using System.Threading.Tasks;
 
 namespace AthenaHealth.Sdk.Clients
@@ -161,7 +160,7 @@ namespace AthenaHealth.Sdk.Clients
         {
             var response = await _connection.Post<SetPrivacyInformationResponse[]>(
                 $"{_connection.PracticeId}/patients/{patientId}/privacyinformationverified",
-                null, 
+                null,
                 request
                 );
 
