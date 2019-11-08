@@ -21,6 +21,7 @@ namespace AthenaHealth.Sdk.Clients
         /// </summary>
         /// <param name="filter"></param>
         /// <returns></returns>
+        [Endpoint("GET /misc/topinsurancepackages")]
         public async Task<InsurancePackageResponse<TopInsurancePackage>> GetTop(GetTopInsurancePackageFilter filter = null)
         {
             return await _connection.Get<InsurancePackageResponse<TopInsurancePackage>>($"{_connection.PracticeId}/misc/topinsurancepackages", filter);
@@ -31,6 +32,7 @@ namespace AthenaHealth.Sdk.Clients
         /// </summary>
         /// <param name="filter"></param>
         /// <returns></returns>
+        [Endpoint("GET /misc/commoninsurancepackages")]
         public async Task<InsurancePackageResponse<CommonInsurancePackage>> GetCommon(GetCommonInsurancePackageFilter filter = null)
         {
             return await _connection.Get<InsurancePackageResponse<CommonInsurancePackage>>($"{_connection.PracticeId}/misc/commoninsurancepackages", filter);
@@ -42,6 +44,7 @@ namespace AthenaHealth.Sdk.Clients
         /// </summary>
         /// <param name="filter"></param>
         /// <returns></returns>
+        [Endpoint("GET /insurancepackages")]
         public async Task<InsurancePackageResponse> Search(SearchInsuranceFilter filter)
         {
             return await _connection.Get<InsurancePackageResponse>($"{_connection.PracticeId}/insurancepackages", filter);

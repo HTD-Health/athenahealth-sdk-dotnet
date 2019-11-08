@@ -6,12 +6,17 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
 {
     public interface IAppointmentClient
     {
+        [Endpoint("GET /appointmenttypes")]
         Task<AppointmentTypeResponse> GetAppointmentTypes(GetAppointmentTypeFilter filter = null);
 
+        [Endpoint("GET /appointmenttypes/{appointmenttypeid}")]
         Task<AppointmentType> GetAppointmentType(int appointmentTypeId);
 
+        [Endpoint("GET /appointments/booked")]
+        [Endpoint("GET /appointments/booked/multipledepartment")]
         Task<AppointmentResponse> GetBookedAppointments(GetAppointmentsBookedFilter filter);
 
+        [Endpoint("GET /appointments/{appointmentid}")]
         Task<Appointment> GetById(int appointmentId, GetAppointmentFilter filter = null);
 
         /// <summary>
@@ -23,6 +28,7 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// flag allows you to show deleted notes in the set of results returned.
         /// </param>
         /// <returns></returns>
+        [Endpoint("GET /appointments/{appointmentid}/notes")]
         Task<AppointmentNotesResponse> GetNotes(int appointmentId, bool showDeleted = false);
 
         /// <summary>
@@ -34,6 +40,7 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// Add appointment note to homepage display (defaults to false)
         /// </param>
         /// <returns></returns>
+        [Endpoint("POST /appointments/{appointmentid}/notes")]
         Task CreateNote(int appointmentId, string text, bool displayOnSchedule = false);
 
         /// <summary>
@@ -41,6 +48,7 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// </summary>
         /// <param name="filter"></param>
         /// <returns></returns>
+        [Endpoint("GET /appointments/appointmentreminders")]
         Task<AppointmentRemindersResponse> SearchReminders(SearchAppointmentRemindersFilter filter);
 
         /// <summary>
@@ -48,6 +56,7 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// </summary>
         /// <param name="appointmentReminderId"></param>
         /// <returns></returns>
+        [Endpoint("GET /appointments/appointmentreminders/{appointmentreminderid}")]
         Task<AppointmentReminder> GetReminderById(int appointmentReminderId);
 
         /// <summary>
@@ -55,6 +64,7 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// </summary>
         /// <param name="reminder"></param>
         /// <returns></returns>
+        [Endpoint("POST /appointments/appointmentreminders")]
         Task<CreatedAppointmentReminder> CreateReminder(CreateAppointmentReminder reminder);
 
         /// <summary>
@@ -62,28 +72,35 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// </summary>
         /// <param name="appointmentReminderId"></param>
         /// <returns></returns>
+        [Endpoint("DELETE /appointments/appointmentreminders/{appointmentreminderid}")]
         Task DeleteReminderById(int appointmentReminderId);
 
+        [Endpoint("GET /appointments/open")]
         Task<AppointmentSlotResponse> GetAppointmentSlots(GetAppointmentSlotsFilter filter);
 
+        [Endpoint("POST /appointments/open")]
         Task<AppointmentSlotCreationResponse> CreateAppointmentSlot(CreateAppointmentSlot slot);
-
-        Task<Appointment> BookAppointment(BookAppointment booking);
-
-        Task CancelAppointment(CancelAppointment cancelRequest);
 
         /// <summary>
         /// Returns the list of conditions required before check-in.
         /// </summary>
         /// <param name="appointmentId"></param>
         /// <returns></returns>
+        [Endpoint("GET /appointments/{appointmentid}/checkin")]
         Task<CheckInRequirement[]> GetCheckInRequirements(int appointmentId);
+
+        [Endpoint("PUT /appointments/{appointmentid}")]
+        Task<Appointment> BookAppointment(BookAppointment booking);
+
+        [Endpoint("PUT /appointments/{appointmentid}/cancel")]
+        Task CancelAppointment(CancelAppointment cancelRequest);
 
         /// <summary>
         /// Completes the check in process for this appointment. Can NOT be called after <see cref="CancelCheckIn"/>.
         /// </summary>
         /// <param name="appointmentId"></param>
         /// <returns></returns>
+        [Endpoint("POST /appointments/{appointmentid}/checkin")]
         Task CompleteCheckIn(int appointmentId);
 
         /// <summary>
@@ -91,6 +108,7 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// </summary>
         /// <param name="appointmentId"></param>
         /// <returns></returns>
+        [Endpoint("POST /appointments/{appointmentid}/startcheckin")]
         Task StartCheckIn(int appointmentId);
 
         /// <summary>
@@ -99,12 +117,16 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// </summary>
         /// <param name="appointmentId"></param>
         /// <returns></returns>
+        [Endpoint("POST /appointments/{appointmentid}/cancelcheckin")]
         Task CancelCheckIn(int appointmentId);
 
+        [Endpoint("GET /appointments/{appointmentid}/insurances")]
         Task<InsuranceResponse> GetAppointmentInsurances(GetAppointmentInsurancesFilter filter);
 
+        [Endpoint("GET /patientappointmentreasons")]
         Task<AppointmentReasonResponse> GetAppointmentReasons(GetAppointmentReasonsFilter filter);
 
+        [Endpoint("PUT /appointments/{appointmentid}/reschedule")]
         Task<Appointment> RescheduleAppointment(RescheduleAppointment rescheduledAppointment);
 
         /// <summary>
@@ -112,6 +134,7 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// </summary>
         /// <param name="filter"></param>
         /// <returns></returns>
+        [Endpoint("GET /appointments/waitlist")]
         Task<WaitListResponse> GetWaitList(GetWaitlistFilter filter = null);
 
         /// <summary>
@@ -119,14 +142,19 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
+        [Endpoint("POST /appointments/waitlist")]
         Task<AddToWaitListResponse> AddToWaitList(AddToWaitListRequest request);
 
+        [Endpoint("GET /appointments/changed/subscription/events")]
         Task<AppointmentSubscriptionEvent> GetAppointmentSubscriptionEvents();
 
+        [Endpoint("GET /appointments/changed/subscription")]
         Task<AppointmentSubscriptionEvent> GetAppointmentSubscriptions(GetAppointmentSubscriptionsFilter queryParameters = null);
 
+        [Endpoint("POST /appointments/changed/subscription")]
         Task<BaseResponse> SubscribeToEvent(SubscribeToEvent request = null);
 
+        [Endpoint("DELETE /appointments/changed/subscription")]
         Task<BaseResponse> UnsubscribeFromEvent(UnsubscribeFromEvent queryParameters = null);
     }
 }

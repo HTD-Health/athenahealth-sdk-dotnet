@@ -1,11 +1,12 @@
-﻿using System.Threading.Tasks;
-using AthenaHealth.Sdk.Models.Request;
+﻿using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
+using System.Threading.Tasks;
 
 namespace AthenaHealth.Sdk.Clients.Interfaces
 {
     public interface IEncounterClient
     {
+        [Endpoint("GET /chart/encounter/{encounterid}")]
         Task<Encounter> GetById(int encounterId);
 
         /// <summary>
@@ -14,6 +15,7 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// <param name="encounterId"></param>
         /// <param name="filter"></param>
         /// <returns></returns>
+        [Endpoint("GET /chart/encounters/{encounterid}/summary")]
         Task<EncounterSummary> GetSummary(int encounterId, GetEncounterSummaryFilter filter = null);
 
         /// <summary>
@@ -21,10 +23,13 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// </summary>
         /// <param name="encounterId"></param>
         /// <returns></returns>
+        [Endpoint("GET /chart/encounter/{encounterid}/diagnoses")]
         Task<Diagnose[]> GetDiagnoses(int encounterId);
 
+        [Endpoint("POST /chart/encounter/{encounterid}/diagnoses")]
         Task<Diagnose> CreateDiagnoses(int encounterId, CreateDiagnoses model);
 
+        [Endpoint("DELETE /chart/encounter/{encounterid}/diagnoses/{diagnosisid}")]
         Task DeleteDiagnoses(int encounterId, int diagnosisId);
 
         /// <summary>
@@ -33,6 +38,7 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// <param name="encounterId">The encounter ID to add this order to.</param>
         /// <param name="model"></param>
         /// <returns></returns>
+        [Endpoint("POST /chart/encounter/{encounterid}/orders/lab")]
         Task<OrderLab> CreateOrderLab(int encounterId, CreateOrderLab model);
 
         /// <summary>
@@ -41,16 +47,18 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// <param name="encounterId"></param>
         /// <param name="filter"></param>
         /// <returns></returns>
+        [Endpoint("GET /chart/encounter/{encounterid}/orders")]
         Task<EncounterOrdersResponse[]> GetOrders(int encounterId, EncounterGetOrdersFilter filter = null);
 
         /// <summary>
-        /// Retrieve some data regarding an order, including the list of documents attached to the order.
-        /// Useful for finding attached letters, prescription renewal chains, and lab/imaging results.
+        /// Retrieve some data regarding an order, including the list of documents attached to the
+        /// order. Useful for finding attached letters, prescription renewal chains, and lab/imaging results.
         /// </summary>
         /// <param name="encounterId"></param>
         /// <param name="orderId"></param>
         /// <param name="filter"></param>
         /// <returns></returns>
+        [Endpoint("GET /chart/encounter/{encounterid}/orders/{orderid}")]
         Task<EncounterOrder> GetOrderById(int encounterId, int orderId, EncounterGetOrderByIdFilter filter = null);
     }
 }
