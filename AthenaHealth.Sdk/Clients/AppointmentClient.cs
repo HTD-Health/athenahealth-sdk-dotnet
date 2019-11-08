@@ -166,5 +166,25 @@ namespace AthenaHealth.Sdk.Clients
         {
             return await _connection.Post<AddToWaitListResponse>($"{_connection.PracticeId}/appointments/waitlist", null, request);
         }
+
+        public async Task<AppointmentSubscriptionEvent> GetAppointmentSubscriptionEvents()
+        {
+            return await _connection.Get<AppointmentSubscriptionEvent>($"{_connection.PracticeId}/appointments/changed/subscription/events");
+        }
+
+        public async Task<AppointmentSubscriptionEvent> GetAppointmentSubscriptions(GetAppointmentSubscriptionsFilter queryParameters = null)
+        {
+            return await _connection.Get<AppointmentSubscriptionEvent>($"{_connection.PracticeId}/appointments/changed/subscription", queryParameters);
+        }
+
+        public async Task<BaseResponse> SubscribeToEvent(SubscribeToEvent request = null)
+        {
+            return await _connection.Post<BaseResponse>($"{_connection.PracticeId}/appointments/changed/subscription", body: request);
+        }
+
+        public async Task<BaseResponse> UnsubscribeFromEvent(UnsubscribeFromEvent queryParameters = null)
+        {
+            return await _connection.Delete<BaseResponse>($"{_connection.PracticeId}/appointments/changed/subscription", queryParameters);
+        }
     }
 }
