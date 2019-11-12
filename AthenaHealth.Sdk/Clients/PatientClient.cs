@@ -170,21 +170,18 @@ namespace AthenaHealth.Sdk.Clients
         [Endpoint("GET /patients/{patientid}/privacyinformationverified")]
         public async Task<PrivacyInformationResponse> GetPrivacyInformation(int patientId, int departmentId)
         {
-            return await _connection.Get<PrivacyInformationResponse>(
-                $"{_connection.PracticeId}/patients/{patientId}/privacyinformationverified",
-                new
-                {
-                    departmentId
-                });
+            var queryParameters = new
+            {
+                departmentid = departmentId
+            };
+
+            return await _connection.Get<PrivacyInformationResponse>($"{_connection.PracticeId}/patients/{patientId}/privacyinformationverified", queryParameters);
         }
 
+        [Endpoint("POST /patients/{patientid}/privacyinformationverified")]
         public async Task<SetPrivacyInformationResponse> SetPrivacyInformation(int patientId, SetPrivacyInformation request)
         {
-            var response = await _connection.Post<SetPrivacyInformationResponse[]>(
-                $"{_connection.PracticeId}/patients/{patientId}/privacyinformationverified",
-                null,
-                request
-                );
+            var response = await _connection.Post<SetPrivacyInformationResponse[]>($"{_connection.PracticeId}/patients/{patientId}/privacyinformationverified", null, request);
 
             return response.FirstOrThrowException();
         }
@@ -220,8 +217,7 @@ namespace AthenaHealth.Sdk.Clients
         }
 
         [Endpoint("DELETE /patients/{patientid}/insurances")]
-        public async Task DeleteInsurance(int patientId, SequenceEnum sequenceNumber, int? departmentId = null,
-            string cancellationNote = null)
+        public async Task DeleteInsurance(int patientId, SequenceEnum sequenceNumber, int? departmentId = null, string cancellationNote = null)
         {
             var filter = new
             {
@@ -230,8 +226,7 @@ namespace AthenaHealth.Sdk.Clients
                 cancellationNote
             };
 
-            await _connection.Delete<StatusResponse>(
-                $"{_connection.PracticeId}/patients/{patientId}/insurances", filter);
+            await _connection.Delete<StatusResponse>($"{_connection.PracticeId}/patients/{patientId}/insurances", filter);
         }
 
         [Endpoint("GET /chart/{patientid}/encounters")]
@@ -280,13 +275,14 @@ namespace AthenaHealth.Sdk.Clients
                 departmentid = departmentId,
                 clinicalproviderid = clinicalProviderId
             };
+
             await _connection.Put<StatusResponse>($"{_connection.PracticeId}/chart/{patientId}/labs/default", queryParameters);
         }
 
         [Endpoint("PUT /chart/{patientid}/allergies")]
-        public async Task SetAllergies(SetPatientAllergies request)
+        public async Task SetAllergies(int patientId, SetPatientAllergies request)
         {
-            await _connection.Put<StatusResponse>($"{_connection.PracticeId}/chart/{request.PatientId}/allergies", request);
+            await _connection.Put<StatusResponse>($"{_connection.PracticeId}/chart/{patientId}/allergies", request);
         }
 
         [Endpoint("POST /patients")]
@@ -322,21 +318,6 @@ namespace AthenaHealth.Sdk.Clients
         public async Task RecordPayment(int patientId, RecordPayment request)
         {
             await _connection.Post<StatusResponse>($"{_connection.PracticeId}/patients/{patientId}/recordpayment", body: request);
-        }
-
-        /// <summary>
-        /// Sets patient status to inactive
-        /// </summary>
-        /// <param name="patientId"></param>
-        /// <returns></returns>
-        public async Task<UpdatePatientResponse> DeletePatient(int patientId)
-        {
-            UpdatePatient request = new UpdatePatient()
-            {
-                Status = Models.Enums.StatusEnum.Inactive
-            };
-
-            return await UpdatePatient(patientId, request);
         }
 
         /// <summary>
@@ -430,6 +411,21 @@ namespace AthenaHealth.Sdk.Clients
         public async Task<BaseResponse> DeleteInsuranceCardPhoto(int patientId, int insuranceId)
         {
             return await _connection.Delete<BaseResponse>($"{_connection.PracticeId}/patients/{patientId}/insurances/{insuranceId}/image");
+        }
+
+        /// <summary>
+        /// Sets patient status to inactive
+        /// </summary>
+        /// <param name="patientId"></param>
+        /// <returns></returns>
+        public async Task<UpdatePatientResponse> DeletePatient(int patientId)
+        {
+            UpdatePatient request = new UpdatePatient()
+            {
+                Status = Models.Enums.StatusEnum.Inactive
+            };
+
+            return await UpdatePatient(patientId, request);
         }
     }
 }

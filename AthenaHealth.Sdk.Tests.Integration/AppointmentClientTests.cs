@@ -1,7 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
-using AthenaHealth.Sdk.Clients.Interfaces;
+﻿using AthenaHealth.Sdk.Clients.Interfaces;
 using AthenaHealth.Sdk.Exceptions;
 using AthenaHealth.Sdk.Models;
 using AthenaHealth.Sdk.Models.Enums;
@@ -10,6 +7,9 @@ using AthenaHealth.Sdk.Models.Response;
 using AthenaHealth.Sdk.Tests.Integration.TestingHelpers;
 using Castle.Core.Internal;
 using Shouldly;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
 
 // ReSharper disable StringLiteralTypo
@@ -230,14 +230,14 @@ namespace AthenaHealth.Sdk.Tests.Integration
             var client = new Clients.AppointmentClient(
                 ConnectionFactory.CreateFromFile(@"Data\Appointment\BookAppointment.json"));
 
-            BookAppointment booking = new BookAppointment(1205967)
+            BookAppointment booking = new BookAppointment()
             {
                 PatientId = 1,
                 ReasonId = 962,
                 IgnoreSchedulablePermission = true
             };
 
-            Appointment appointment = await client.BookAppointment(booking);
+            Appointment appointment = await client.BookAppointment(1205967, booking);
             appointment.Id = 1205967;
             appointment.Date.ShouldNotBeNull();
         }
@@ -247,9 +247,9 @@ namespace AthenaHealth.Sdk.Tests.Integration
         {
             var client = new Clients.AppointmentClient(ConnectionFactory.Create(""));
 
-            CancelAppointment cancelRequest = new CancelAppointment(1, 1, "test");
+            CancelAppointment cancelRequest = new CancelAppointment(1, "test");
 
-            Should.NotThrow(() => client.CancelAppointment(cancelRequest));
+            Should.NotThrow(() => client.CancelAppointment(1, cancelRequest));
         }
 
         [Fact]
@@ -312,7 +312,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         }
 
         [Fact]
-        public async Task GetAppointmentReasons_Type_ReturnsRecords()
+        public async Task GetAppointmentReasons_ReturnsRecords()
         {
             IAppointmentClient client = new Clients.AppointmentClient(ConnectionFactory.CreateFromFile(@"Data\Appointment\GetAppointmentReasons.json"));
             GetAppointmentReasonsFilter filter = new GetAppointmentReasonsFilter(1, 86);
@@ -321,17 +321,44 @@ namespace AthenaHealth.Sdk.Tests.Integration
 
             response.Total.ShouldBeGreaterThan(0);
             response.Items.ShouldNotBeNull();
+            response.Items.ShouldContain(a => a.ReasonType == AppointmentReasonTypeEnum.All);
             response.Items.ShouldContain(a => a.ReasonType == AppointmentReasonTypeEnum.Existing);
-            response.Items.ShouldContain(a => a.Reason == "Sick Visit");
+            response.Items.ShouldContain(a => a.ReasonType == AppointmentReasonTypeEnum.New);
+        }
+
+        [Fact]
+        public async Task GetAppointmentReasonsForNewPatient_ReturnsRecords()
+        {
+            IAppointmentClient client = new Clients.AppointmentClient(ConnectionFactory.CreateFromFile(@"Data\Appointment\GetAppointmentReasonsForNewPatient.json"));
+            GetAppointmentReasonsFilter filter = new GetAppointmentReasonsFilter(1, 86);
+
+            AppointmentReasonResponse response = await client.GetAppointmentReasonsForNewPatient(filter);
+
+            response.Total.ShouldBeGreaterThan(0);
+            response.Items.ShouldNotBeNull();
+            response.Items.ShouldAllBe(a => a.ReasonType != AppointmentReasonTypeEnum.Existing);
+        }
+
+        [Fact]
+        public async Task GetAppointmentReasonsForExistingPatient_ReturnsRecords()
+        {
+            IAppointmentClient client = new Clients.AppointmentClient(ConnectionFactory.CreateFromFile(@"Data\Appointment\GetAppointmentReasonsForExistingPatient.json"));
+            GetAppointmentReasonsFilter filter = new GetAppointmentReasonsFilter(1, 86);
+
+            AppointmentReasonResponse response = await client.GetAppointmentReasonsForExistingPatient(filter);
+
+            response.Total.ShouldBeGreaterThan(0);
+            response.Items.ShouldNotBeNull();
+            response.Items.ShouldAllBe(a => a.ReasonType != AppointmentReasonTypeEnum.New);
         }
 
         [Fact]
         public async Task RescheduleAppointment()
         {
             IAppointmentClient client = new Clients.AppointmentClient(ConnectionFactory.CreateFromFile(@"Data\Appointment\RescheduleAppointment.json"));
-            RescheduleAppointment rescheduleRequest = new RescheduleAppointment(1, 1206017, 1, "test");
+            RescheduleAppointment rescheduleRequest = new RescheduleAppointment(1206017, 1, "test");
 
-            Appointment appointmentRescheduled = await client.RescheduleAppointment(rescheduleRequest);
+            Appointment appointmentRescheduled = await client.RescheduleAppointment(1, rescheduleRequest);
 
             appointmentRescheduled.ShouldNotBeNull();
             appointmentRescheduled.Id.ShouldBe(1206017);

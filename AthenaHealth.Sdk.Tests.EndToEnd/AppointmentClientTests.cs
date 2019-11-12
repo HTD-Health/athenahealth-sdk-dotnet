@@ -341,22 +341,22 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             int appointmentId = int.Parse(response.AppointmentIds.First().Key);
 
             //Book appointment
-            BookAppointment booking = new BookAppointment(appointmentId)
+            BookAppointment booking = new BookAppointment()
             {
                 PatientId = patientId,
                 ReasonId = 962,
                 IgnoreSchedulablePermission = true
             };
-            Appointment appointment = await _client.Appointments.BookAppointment(booking);
+            Appointment appointment = await _client.Appointments.BookAppointment(appointmentId, booking);
 
             //Assert booking
             appointment.Id.ShouldBe(appointmentId);
             appointment.Date.ShouldNotBeNull();
 
             //Cancel appointment
-            CancelAppointment cancelRequest = new CancelAppointment(appointmentId, patientId, "test");
+            CancelAppointment cancelRequest = new CancelAppointment(patientId, "test");
 
-            Should.NotThrow(() => _client.Appointments.CancelAppointment(cancelRequest));
+            Should.NotThrow(() => _client.Appointments.CancelAppointment(appointmentId, cancelRequest));
         }
 
         [Theory]
@@ -431,18 +431,38 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             response.Items.ShouldContain(a => a.InsurancePolicyHolder != null);
         }
 
-        [Theory]
-        [InlineData(AppointmentReasonTypeEnum.All)]
-        [InlineData(AppointmentReasonTypeEnum.New)]
-        [InlineData(AppointmentReasonTypeEnum.Existing)]
-        public async Task GetAppointmentReasons_Type_ReturnsRecords(AppointmentReasonTypeEnum type)
+        [Fact]
+        public async Task GetAppointmentReasons_ReturnsRecords()
         {
-            GetAppointmentReasonsFilter filter = new GetAppointmentReasonsFilter(1, 86)
-            {
-                Type = type
-            };
+            GetAppointmentReasonsFilter filter = new GetAppointmentReasonsFilter(1, 86);
 
             AppointmentReasonResponse response = await _client.Appointments.GetAppointmentReasons(filter);
+
+            response.Total.ShouldBeGreaterThan(0);
+            response.Items.ShouldNotBeNull();
+            response.Items.ShouldNotContain(a => a.Id == 0);
+            response.Items.ShouldContain(a => !string.IsNullOrEmpty(a.Reason));
+        }
+
+        [Fact]
+        public async Task GetAppointmentReasonsForExistingPatient_ReturnsRecords()
+        {
+            GetAppointmentReasonsFilter filter = new GetAppointmentReasonsFilter(1, 86);
+
+            AppointmentReasonResponse response = await _client.Appointments.GetAppointmentReasonsForExistingPatient(filter);
+
+            response.Total.ShouldBeGreaterThan(0);
+            response.Items.ShouldNotBeNull();
+            response.Items.ShouldNotContain(a => a.Id == 0);
+            response.Items.ShouldContain(a => !string.IsNullOrEmpty(a.Reason));
+        }
+
+        [Fact]
+        public async Task GetAppointmentReasonsForNewPatient_ReturnsRecords()
+        {
+            GetAppointmentReasonsFilter filter = new GetAppointmentReasonsFilter(1, 86);
+
+            AppointmentReasonResponse response = await _client.Appointments.GetAppointmentReasonsForNewPatient(filter);
 
             response.Total.ShouldBeGreaterThan(0);
             response.Items.ShouldNotBeNull();
@@ -482,18 +502,18 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
 
 
             //Book appointment on slot 1
-            BookAppointment booking = new BookAppointment(slot1Id)
+            BookAppointment booking = new BookAppointment()
             {
                 PatientId = patientId,
                 ReasonId = 962,
                 IgnoreSchedulablePermission = true
             };
-            Appointment appointment = await _client.Appointments.BookAppointment(booking);
+            Appointment appointment = await _client.Appointments.BookAppointment(slot1Id, booking);
 
             //Reschedule appointment
-            RescheduleAppointment rescheduleRequest = new RescheduleAppointment(slot1Id, slot2Id, patientId, "test");
+            RescheduleAppointment rescheduleRequest = new RescheduleAppointment(slot2Id, patientId, "test");
 
-            Appointment appointmentRescheduled = await _client.Appointments.RescheduleAppointment(rescheduleRequest);
+            Appointment appointmentRescheduled = await _client.Appointments.RescheduleAppointment(slot1Id, rescheduleRequest);
 
             appointmentRescheduled.ShouldNotBeNull();
             appointmentRescheduled.Id.ShouldBe(slot2Id);

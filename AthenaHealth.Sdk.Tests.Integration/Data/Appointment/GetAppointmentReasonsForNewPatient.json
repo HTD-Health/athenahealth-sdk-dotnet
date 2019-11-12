@@ -1,0 +1,21 @@
+{
+  "totalcount": 2,
+  "patientappointmentreasons": [
+    {
+      "schedulingminhours": 48,
+      "reasontype": "all",
+      "reason": "Exam",
+      "description": "I need my provider to examine me or do a procedure.",
+      "reasonid": 761,
+      "schedulingmaxdays": 90
+    },
+    {
+      "schedulingminhours": 1,
+      "reasontype": "new",
+      "reason": "New Patient",
+      "description": "I am a new patient and I would like to schedule my first visit.",
+      "reasonid": 541,
+      "schedulingmaxdays": 90
+    }
+  ]
+}

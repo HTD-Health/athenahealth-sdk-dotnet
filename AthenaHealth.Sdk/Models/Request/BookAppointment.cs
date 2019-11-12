@@ -7,18 +7,6 @@ namespace AthenaHealth.Sdk.Models.Request
 {
     public class BookAppointment
     {
-        public BookAppointment(int appointmentId)
-        {
-            AppointmentId = appointmentId;
-        }
-
-        /// <summary>
-        /// The appointment slot to schedule into.
-        /// </summary>
-        [JsonProperty("appointmentid")]
-        [Required]
-        public int AppointmentId { get; set; }
-
         /// <summary>
         /// The appointment type to be booked.  This field should never be used for booking appointments for web-based scheduling. The use of this field is reserved for digital check-in (aka "kiosk") or an application used by practice staff.  One of this or reasonid is required.
         /// </summary>

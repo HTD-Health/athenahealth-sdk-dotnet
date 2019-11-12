@@ -755,7 +755,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         [Fact]
         public void SetAllergies_NotThrowsException()
         {
-            SetPatientAllergies request = new SetPatientAllergies(1, 111)
+            SetPatientAllergies request = new SetPatientAllergies(1)
             {
                 SectionNote = "test2",
                 Allergies = new[]
@@ -779,7 +779,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
                 }
             };
 
-            Should.NotThrow(async () => await _client.Patients.SetAllergies(request));
+            Should.NotThrow(async () => await _client.Patients.SetAllergies(111, request));
         }
 
         [Fact]

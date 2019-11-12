@@ -770,7 +770,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public void SetAllergies_NotThrowsException()
         {
             IPatientClient patientClient = new PatientClient(ConnectionFactory.Create("{\"success\": true}", HttpStatusCode.OK));
-            SetPatientAllergies request = new SetPatientAllergies(1, 111)
+            SetPatientAllergies request = new SetPatientAllergies(1)
             {
                 SectionNote = "test",
                 Allergies = new[]
@@ -794,7 +794,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
                 }
             };
 
-            Should.NotThrow(async () => await patientClient.SetAllergies(request));
+            Should.NotThrow(async () => await patientClient.SetAllergies(111, request));
         }
 
         [Fact]

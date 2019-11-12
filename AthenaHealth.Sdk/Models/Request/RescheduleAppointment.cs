@@ -7,19 +7,12 @@ namespace AthenaHealth.Sdk.Models.Request
 {
     public class RescheduleAppointment
     {
-        public RescheduleAppointment(int appointmentId, int newAppointmentId, int patientId, string rescheduleReason)
+        public RescheduleAppointment(int newAppointmentId, int patientId, string rescheduleReason)
         {
-            AppointmentId = appointmentId;
             NewAppointmentId = newAppointmentId;
             PatientId = patientId;
             RescheduleReason = rescheduleReason;
         }
-        /// <summary>
-        /// The appointment slot to schedule into.
-        /// </summary>
-        [JsonProperty("appointmentid")]
-        [Required]
-        public int AppointmentId { get; set; }
 
         /// <summary>
         /// By default, we allow booking of appointments marked as schedulable via the web.

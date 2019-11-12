@@ -25,8 +25,6 @@ namespace AthenaHealth.Sdk.Models.Request
         [JsonProperty("providerid")]
         public int ProviderId { get; set; }
 
-        public AppointmentReasonTypeEnum Type { get; set; } = AppointmentReasonTypeEnum.New;
-
         /// <summary>
         /// Number of entries to return (default 1500, max 5000)
         /// </summary>

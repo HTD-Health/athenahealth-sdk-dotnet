@@ -1,8 +1,8 @@
-﻿using System.Threading.Tasks;
-using AthenaHealth.Sdk.Clients.Interfaces;
+﻿using AthenaHealth.Sdk.Clients.Interfaces;
 using AthenaHealth.Sdk.Http;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
+using System.Threading.Tasks;
 
 namespace AthenaHealth.Sdk.Clients
 {
@@ -42,7 +42,7 @@ namespace AthenaHealth.Sdk.Clients
         [Endpoint("GET /reference/allergies")]
         public async Task<Allergy[]> SearchAllergiesByName(string name)
         {
-            return await _connection.Get<Allergy[]>( $"{_connection.PracticeId}/reference/allergies", new { searchValue = name }, false);
+            return await _connection.Get<Allergy[]>($"{_connection.PracticeId}/reference/allergies", new { searchValue = name }, false);
         }
 
         [Endpoint("GET /chart/configuration/medicalhistory")]

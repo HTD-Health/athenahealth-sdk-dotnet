@@ -1,12 +1,11 @@
-﻿using System.Threading.Tasks;
-using AthenaHealth.Sdk.Clients.Interfaces;
+﻿using AthenaHealth.Sdk.Clients.Interfaces;
 using AthenaHealth.Sdk.Extensions;
 using AthenaHealth.Sdk.Http;
-using AthenaHealth.Sdk.Models.Enums;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
-// ReSharper disable StringLiteralTypo
+using System.Threading.Tasks;
 
+// ReSharper disable StringLiteralTypo
 namespace AthenaHealth.Sdk.Clients
 {
     public class AppointmentClient : IAppointmentClient
@@ -56,38 +55,31 @@ namespace AthenaHealth.Sdk.Clients
         [Endpoint("POST /appointments/{appointmentid}/notes")]
         public async Task CreateNote(int appointmentId, string text, bool displayOnSchedule = false)
         {
-            await _connection.Post<BaseResponse>( $"{_connection.PracticeId}/appointments/{appointmentId}/notes", null, new { notetext = text, displayonschedule = displayOnSchedule });
+            await _connection.Post<BaseResponse>($"{_connection.PracticeId}/appointments/{appointmentId}/notes", null, new { notetext = text, displayonschedule = displayOnSchedule });
         }
 
         [Endpoint("GET /appointments/appointmentreminders")]
         public async Task<AppointmentRemindersResponse> SearchReminders(SearchAppointmentRemindersFilter filter)
         {
-            return await _connection.Get<AppointmentRemindersResponse>(
-                $"{_connection.PracticeId}/appointments/appointmentreminders", filter);
+            return await _connection.Get<AppointmentRemindersResponse>($"{_connection.PracticeId}/appointments/appointmentreminders", filter);
         }
 
         [Endpoint("GET /appointments/appointmentreminders/{appointmentreminderid}")]
         public async Task<AppointmentReminder> GetReminderById(int appointmentReminderId)
         {
-            return await _connection.Get<AppointmentReminder>(
-                $"{_connection.PracticeId}/appointments/appointmentreminders/{appointmentReminderId}");
+            return await _connection.Get<AppointmentReminder>($"{_connection.PracticeId}/appointments/appointmentreminders/{appointmentReminderId}");
         }
 
         [Endpoint("POST /appointments/appointmentreminders")]
         public async Task<CreatedAppointmentReminder> CreateReminder(CreateAppointmentReminder reminder)
         {
-            return await _connection.Post<CreatedAppointmentReminder>(
-                $"{_connection.PracticeId}/appointments/appointmentreminders",
-                null,
-                reminder);
+            return await _connection.Post<CreatedAppointmentReminder>($"{_connection.PracticeId}/appointments/appointmentreminders", body: reminder);
         }
 
         [Endpoint("DELETE /appointments/appointmentreminders/{appointmentreminderid}")]
         public Task DeleteReminderById(int appointmentReminderId)
         {
-            return _connection.Delete<StatusResponse>(
-                $"{_connection.PracticeId}/appointments/appointmentreminders/{appointmentReminderId}"
-            );
+            return _connection.Delete<StatusResponse>($"{_connection.PracticeId}/appointments/appointmentreminders/{appointmentReminderId}");
         }
 
         [Endpoint("GET /appointments/open")]
@@ -109,20 +101,16 @@ namespace AthenaHealth.Sdk.Clients
         }
 
         [Endpoint("PUT /appointments/{appointmentid}")]
-        public async Task<Appointment> BookAppointment(BookAppointment booking)
+        public async Task<Appointment> BookAppointment(int appointmentId, BookAppointment booking)
         {
-            Appointment[] result = await _connection.Put<Appointment[]>(
-                $"{_connection.PracticeId}/appointments/{booking.AppointmentId}",
-                booking);
+            Appointment[] result = await _connection.Put<Appointment[]>($"{_connection.PracticeId}/appointments/{appointmentId}", booking);
             return result.FirstOrThrowException();
         }
 
         [Endpoint("PUT /appointments/{appointmentid}/cancel")]
-        public async Task CancelAppointment(CancelAppointment cancelRequest)
+        public async Task CancelAppointment(int appointmentId, CancelAppointment cancelRequest)
         {
-            await _connection.Put<object>(
-                $"{_connection.PracticeId}/appointments/{cancelRequest.AppointmentId}/cancel",
-                cancelRequest);
+            await _connection.Put<object>($"{_connection.PracticeId}/appointments/{appointmentId}/cancel", cancelRequest);
         }
 
         [Endpoint("POST /appointments/{appointmentid}/checkin")]
@@ -152,26 +140,25 @@ namespace AthenaHealth.Sdk.Clients
         [Endpoint("GET /patientappointmentreasons")]
         public async Task<AppointmentReasonResponse> GetAppointmentReasons(GetAppointmentReasonsFilter filter)
         {
-            string url = "";
-            switch (filter.Type)
-            {
-                case AppointmentReasonTypeEnum.All:
-                    url = $"{_connection.PracticeId}/patientappointmentreasons";
-                    break;
-                case AppointmentReasonTypeEnum.New:
-                    url = $"{_connection.PracticeId}/patientappointmentreasons/newpatient";
-                    break;
-                case AppointmentReasonTypeEnum.Existing:
-                    url = $"{_connection.PracticeId}/patientappointmentreasons/existingpatient";
-                    break;
-            }
-            return await _connection.Get<AppointmentReasonResponse>(url, filter);
+            return await _connection.Get<AppointmentReasonResponse>($"{_connection.PracticeId}/patientappointmentreasons", filter);
+        }
+
+        [Endpoint("GET /patientappointmentreasons/newpatient")]
+        public async Task<AppointmentReasonResponse> GetAppointmentReasonsForNewPatient(GetAppointmentReasonsFilter filter)
+        {
+            return await _connection.Get<AppointmentReasonResponse>($"{_connection.PracticeId}/patientappointmentreasons/newpatient", filter);
+        }
+
+        [Endpoint("GET /patientappointmentreasons/existingpatient")]
+        public async Task<AppointmentReasonResponse> GetAppointmentReasonsForExistingPatient(GetAppointmentReasonsFilter filter)
+        {
+            return await _connection.Get<AppointmentReasonResponse>($"{_connection.PracticeId}/patientappointmentreasons/existingpatient", filter);
         }
 
         [Endpoint("PUT /appointments/{appointmentid}/reschedule")]
-        public async Task<Appointment> RescheduleAppointment(RescheduleAppointment rescheduledAppointment)
+        public async Task<Appointment> RescheduleAppointment(int appointmentId, RescheduleAppointment rescheduledAppointment)
         {
-            Appointment[] result =  await _connection.Put<Appointment[]>($"{_connection.PracticeId}/appointments/{rescheduledAppointment.AppointmentId}/reschedule", rescheduledAppointment);
+            Appointment[] result = await _connection.Put<Appointment[]>($"{_connection.PracticeId}/appointments/{appointmentId}/reschedule", rescheduledAppointment);
             return result.FirstOrThrowException();
         }
 
