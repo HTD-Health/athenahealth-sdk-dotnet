@@ -862,5 +862,19 @@ namespace AthenaHealth.Sdk.Tests.Integration
             result.ShouldNotBeNull();
             result.PatientId.ShouldBe(patientId);
         }
+
+        [Fact]
+        public async Task CreateOrderGroup_ValidRequest_ReturnsEncounterId()
+        {
+            // Arrange
+            IPatientClient patientClient = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\CreateOrderGroup.json", HttpStatusCode.OK));
+
+            // Act
+            var result = await patientClient.CreateOrderGroup(34772, new CreateOrderGroup(1));
+
+            // Assert
+            result.ShouldNotBeNull();
+            result.EncounterId.ShouldBe(36480);
+        }
     }
 }

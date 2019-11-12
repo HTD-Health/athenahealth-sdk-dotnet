@@ -427,5 +427,17 @@ namespace AthenaHealth.Sdk.Clients
 
             return await UpdatePatient(patientId, request);
         }
+
+        /// <summary>
+        /// Adds an order group, and if successful returns its ID.
+        /// </summary>
+        /// <param name="patientId">The patient for this order group.</param>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        [Endpoint("POST /chart/{patientid}/ordergroups")]
+        public async Task<CreateOrderResponse> CreateOrderGroup(int patientId, CreateOrderGroup request)
+        {
+            return await _connection.Post<CreateOrderResponse>($"{_connection.PracticeId}/chart/{patientId}/ordergroups", body: request);
+        }
     }
 }

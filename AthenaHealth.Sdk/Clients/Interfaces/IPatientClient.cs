@@ -263,5 +263,14 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// <param name="patientId"></param>
         /// <returns></returns>
         Task<UpdatePatientResponse> DeletePatient(int patientId);
+
+        /// <summary>
+        /// Adds an order group, and if successful returns its ID.
+        /// </summary>
+        /// <param name="patientId">The patient for this order group.</param>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        [Endpoint("POST /chart/{patientid}/ordergroups")]
+        Task<CreateOrderResponse> CreateOrderGroup(int patientId, CreateOrderGroup request);
     }
 }
