@@ -1,11 +1,9 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
-using AthenaHealth.Sdk.Clients.Interfaces;
+﻿using AthenaHealth.Sdk.Clients.Interfaces;
 using AthenaHealth.Sdk.Extensions;
 using AthenaHealth.Sdk.Http;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
+using System.Threading.Tasks;
 
 namespace AthenaHealth.Sdk.Clients
 {

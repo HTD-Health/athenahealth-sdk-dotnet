@@ -10,10 +10,9 @@ namespace AthenaHealth.Sdk.Models.Request
 {
     public class SetPatientAllergies
     {
-        public SetPatientAllergies(int departmentId, int patientId)
+        public SetPatientAllergies(int departmentId)
         {
             DepartmentId = departmentId;
-            PatientId = patientId;
         }
         /// <summary>
         /// The ID of the department for this patient. A patient may have multiple charts, and the department determines which chart to use.
@@ -21,13 +20,6 @@ namespace AthenaHealth.Sdk.Models.Request
         [JsonProperty("departmentid")]
         [Required]
         public int DepartmentId  { get; set; }
-
-        /// <summary>
-        /// The ID of the patient
-        /// </summary>
-        [JsonProperty("patientid")]
-        [Required]
-        public int PatientId  { get; set; }
         
         /// <summary>
         /// Allergies

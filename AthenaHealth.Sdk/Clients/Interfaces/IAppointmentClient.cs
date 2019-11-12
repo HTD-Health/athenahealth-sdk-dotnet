@@ -90,10 +90,10 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         Task<CheckInRequirement[]> GetCheckInRequirements(int appointmentId);
 
         [Endpoint("PUT /appointments/{appointmentid}")]
-        Task<Appointment> BookAppointment(BookAppointment booking);
+        Task<Appointment> BookAppointment(int appointmentId, BookAppointment booking);
 
         [Endpoint("PUT /appointments/{appointmentid}/cancel")]
-        Task CancelAppointment(CancelAppointment cancelRequest);
+        Task CancelAppointment(int appointmentId, CancelAppointment cancelRequest);
 
         /// <summary>
         /// Completes the check in process for this appointment. Can NOT be called after <see cref="CancelCheckIn"/>.
@@ -126,8 +126,14 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         [Endpoint("GET /patientappointmentreasons")]
         Task<AppointmentReasonResponse> GetAppointmentReasons(GetAppointmentReasonsFilter filter);
 
+        [Endpoint("GET /patientappointmentreasons/newpatient")]
+        Task<AppointmentReasonResponse> GetAppointmentReasonsForNewPatient(GetAppointmentReasonsFilter filter);
+
+        [Endpoint("GET /patientappointmentreasons/existingpatient")]
+        Task<AppointmentReasonResponse> GetAppointmentReasonsForExistingPatient(GetAppointmentReasonsFilter filter);
+
         [Endpoint("PUT /appointments/{appointmentid}/reschedule")]
-        Task<Appointment> RescheduleAppointment(RescheduleAppointment rescheduledAppointment);
+        Task<Appointment> RescheduleAppointment(int appointmentId, RescheduleAppointment rescheduledAppointment);
 
         /// <summary>
         /// Returns entries on the wait list

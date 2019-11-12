@@ -7,9 +7,8 @@ namespace AthenaHealth.Sdk.Models.Request
 {
     public class CancelAppointment
     {
-        public CancelAppointment(int appointmentId, int patientId, string cancellationReason)
+        public CancelAppointment(int patientId, string cancellationReason)
         {
-            AppointmentId = appointmentId;
             PatientId = patientId;
             CancellationReason = cancellationReason;
         }
@@ -19,13 +18,6 @@ namespace AthenaHealth.Sdk.Models.Request
         /// </summary>
         [JsonProperty("appointmentcancelreasonid")]
         public int? AppointmentCancelReasonId { get; set; }
-
-        /// <summary>
-        /// The appointment slot to schedule into.
-        /// </summary>
-        [Required]
-        [JsonProperty("appointmentid")]
-        public int AppointmentId { get; set; }
 
         /// <summary>
         /// A text explanation why the appointment is being cancelled

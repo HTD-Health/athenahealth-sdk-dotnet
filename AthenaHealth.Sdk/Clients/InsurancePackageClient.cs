@@ -1,10 +1,10 @@
-﻿using System.Threading.Tasks;
-using AthenaHealth.Sdk.Clients.Interfaces;
+﻿using AthenaHealth.Sdk.Clients.Interfaces;
 using AthenaHealth.Sdk.Http;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
-// ReSharper disable StringLiteralTypo
+using System.Threading.Tasks;
 
+// ReSharper disable StringLiteralTypo
 namespace AthenaHealth.Sdk.Clients
 {
     public class InsurancePackageClient : IInsurancePackageClient
