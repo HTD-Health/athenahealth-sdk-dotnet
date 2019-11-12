@@ -1220,5 +1220,16 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             exception.StatusCode.ShouldBe(HttpStatusCode.NotFound);
             exception.Message.ShouldContain("No valid image was found.");
         }
+
+        [Fact]
+        public async Task CreateOrderGroup_ValidRequest_ReturnsEncounterId()
+        {
+            // Act
+            var result = await _client.Patients.CreateOrderGroup(34772, new CreateOrderGroup(1));
+
+            // Assert
+            result.ShouldNotBeNull();
+            result.EncounterId.ShouldBeGreaterThan(0);
+        }
     }
 }
