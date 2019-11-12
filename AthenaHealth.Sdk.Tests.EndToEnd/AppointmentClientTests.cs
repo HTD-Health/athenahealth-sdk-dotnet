@@ -553,5 +553,18 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             response.ShouldNotBeNull();
             response.Subscriptions.Length.ShouldBeGreaterThan(0);
         }
+
+        [Fact]
+        public async Task GetChangedAppointmentSlots_ReturnsRecords()
+        {
+            ChangedAppointmentsSlotResponse response = await _client.Appointments.GetChangedAppointmentSlots();
+
+            response.ShouldNotBeNull();
+            response.Items.ShouldAllBe(x => x.AppointmentId > 0);
+            response.Items.ShouldAllBe(x => x.Date != DateTime.MinValue);
+            response.Items.ShouldAllBe(x => x.StartTime.HasValue);
+            response.Items.ShouldAllBe(x => x.DepartmentId.HasValue);
+            response.Items.ShouldAllBe(x => x.Duration > 0);
+        }
     }
 }

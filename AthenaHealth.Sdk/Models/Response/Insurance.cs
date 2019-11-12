@@ -115,7 +115,8 @@ namespace AthenaHealth.Sdk.Models.Response
         /// The date in which the insurance was marked cancelled.
         /// </summary>
         [JsonProperty("cancelled")]
-        public string Cancelled { get; set; }
+        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+        public DateTime? Cancelled { get; set; }
 
         /// <summary>
         /// The sex of the insurance policy holder. Except for self-pay, required for new policies.

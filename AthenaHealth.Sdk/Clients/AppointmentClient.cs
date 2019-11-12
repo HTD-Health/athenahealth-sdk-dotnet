@@ -197,5 +197,11 @@ namespace AthenaHealth.Sdk.Clients
         {
             return await _connection.Delete<BaseResponse>($"{_connection.PracticeId}/appointments/changed/subscription", queryParameters);
         }
+
+        [Endpoint("GET /appointments/changed")]
+        public async Task<ChangedAppointmentsSlotResponse> GetChangedAppointmentSlots(GetChangedAppointmentSlotsFilter filter = null)
+        {
+            return await _connection.Get<ChangedAppointmentsSlotResponse>($"{_connection.PracticeId}/appointments/changed", filter);
+        }
     }
 }
