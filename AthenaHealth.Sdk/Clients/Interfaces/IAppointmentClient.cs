@@ -162,5 +162,14 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
 
         [Endpoint("DELETE /appointments/changed/subscription")]
         Task<BaseResponse> UnsubscribeFromEvent(UnsubscribeFromEvent queryParameters = null);
+
+        /// <summary>
+        /// This path provides access to booked appointments
+        /// Note: This endpoint may rely on specific settings to be enabled in athenaNet Production to function properly that are not required in other environments.
+        /// </summary>
+        /// <param name="filter"></param>
+        /// <returns></returns>
+        [Endpoint("GET /appointments/changed")]
+        Task<ChangedAppointmentsSlotResponse> GetChangedAppointmentSlots(GetChangedAppointmentSlotsFilter filter = null);
     }
 }

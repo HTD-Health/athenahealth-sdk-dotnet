@@ -1,56 +1,63 @@
 ﻿using System;
-using System.Collections.Generic;
-using AthenaHealth.Sdk.Models.Enums;
+using AthenaHealth.Sdk.Models.Converters;
 using AthenaHealth.Sdk.Models.Response.Interfaces;
 using Newtonsoft.Json;
 // ReSharper disable StringLiteralTypo
-// ReSharper disable CommentTypo
 
 namespace AthenaHealth.Sdk.Models.Response
 {
-    public class AppointmentResponse : IPagingResponse<Appointment>
+    public class ChangedAppointmentsSlotResponse : IPagingResponse<ChangedAppointmentSlot>
     {
-        [JsonProperty("totalcount")]
         public int Total { get; set; }
-
-        [JsonProperty("next")]
         public string Next { get; set; }
-
-        [JsonProperty("previous")]
         public string Previous { get; set; }
 
         [JsonProperty("appointments")]
-        public Appointment[] Items { get; set; }
+        public ChangedAppointmentSlot[] Items { get; set; }
     }
 
-    public class Appointment : AppointmentBase
+    public class ChangedAppointmentSlot
     {
+        /// <summary>
+        /// A list of reason IDs that could be used for this slot.  Only present if multiple reason IDs are requested.
+        /// </summary>
+        [JsonProperty("reasonid")]
+        public int[] ReasonId { get; set; }
+
         /// <summary>
         /// An array of appointment notes for this appointment.
         /// </summary>
         [JsonProperty("appointmentnotes")]
-        public AppointmentNote[] AppointmentNotes { get; set; }
+        public object AppointmentNotes { get; set; }
+
+        /// <summary>
+        /// Whether the note should be displayed on the schedule.
+        /// </summary>
+        [JsonProperty("displayonschedule")]
+        public AppointmentNoteDisplayedOnSchedule DisplayOnSchedule { get; set; }
 
         /// <summary>
         /// The athenaNet appointment status. There are several possible statuses.  x=cancelled. f=future. (It can include appointments where were never checked in, even if the appointment date is in the past. It is up to a practice to cancel appointments as a no show when appropriate to do so.)  o=open. 2=checked in. 3=checked out. 4=charge entered (i.e. a past appointment).
         /// </summary>
         [JsonProperty("appointmentstatus")]
-        public AppointmentStatusEnum AppointmentStatus { get; set; }
+        public string AppointmentStatus { get; set; }
 
         /// <summary>
         /// The time (mm/dd/yyyy hh24:mi:ss; Eastern time) that this appointment was cancelled (if cancelled)
         /// </summary>
         [JsonProperty("cancelleddatetime")]
-        public DateTime? CancelledDateTime { get; set; }
+        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy HH:mm:ss")]
+        public DateTime CancelledDateTime { get; set; }
 
         /// <summary>
         /// This field will tell if an appointment has been marked as not requiring change entry.
         /// </summary>
         [JsonProperty("chargeentrynotrequired")]
-        public bool ChargeEntryNotRequired { get; set; }
+        public bool? ChargeEntryNotRequired { get; set; }
 
         /// <summary>
-        /// This is the raw provider ID that should be used ONLY if using this appointment in conjunction with an HL7 message and with athenahealth's prior guidance. It is only available in some situations.
+        /// This is the raw provider ID that should be used ONLY if using this appointment in conjunction with an HL7 message and with athenahealth's prior guidance.
+        /// It is only available in some situations.
         /// </summary>
         [JsonProperty("hl7providerid")]
         public int? Hl7ProviderId { get; set; }
@@ -68,15 +75,25 @@ namespace AthenaHealth.Sdk.Models.Response
         public string ChargeEntryNotRequiredReason { get; set; }
 
         /// <summary>
-        /// The date/time when the appointment was last modified. Note: It may be possible for the lastmodified field to be updated without any other field in the API call being changed. This occurs when appointment fields not included in the API output are updated.
+        /// The date/time when the appointment was last modified.
+        /// Note: It may be possible for the field to be updated without any other field in the API call being changed.
+        /// This occurs when appointment fields not included in the API output are updated.
         /// </summary>
         [JsonProperty("lastmodified")]
+        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
         public DateTime? LastModified { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("departmentid")]
+        public int? DepartmentId { get; set; }
 
         /// <summary>
         /// The time (mm/dd/yyyy hh24:mi:ss) that the appointment was checked out.
         /// </summary>
         [JsonProperty("checkoutdatetime")]
+        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy HH:mm:ss")]
         public DateTime? CheckoutDateTime { get; set; }
 
         /// <summary>
@@ -101,6 +118,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// The time (mm/dd/yyyy hh24:mi:ss) that the appointment was checked in.
         /// </summary>
         [JsonProperty("checkindatetime")]
+        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy HH:mm:ss")]
         public DateTime? CheckInDateTime { get; set; }
 
         /// <summary>
@@ -113,13 +131,33 @@ namespace AthenaHealth.Sdk.Models.Response
         /// The time (mm/dd/yyyy hh24:mi:ss) that the intake process was completed.
         /// </summary>
         [JsonProperty("stopintakedatetime")]
+        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy HH:mm:ss")]
         public DateTime? StopIntakeDateTime { get; set; }
 
         /// <summary>
-        /// The status of this patient in the encounter (READYFORSTAFF, WITHSTAFF, READFORPROVIDER, CHECKEDOUT). Only present for appointments with Clinicals that have been checked in.
+        /// The status of this patient in the encounter (READYFORSTAFF, WITHSTAFF, READFORPROVIDER, CHECKEDOUT).
+        /// Only present for appointments with Clinics that have been checked in.
         /// </summary>
         [JsonProperty("encounterstatus")]
         public string EncounterStatus { get; set; }
+
+        /// <summary>
+        /// If true, this appointment slot is frozen
+        /// </summary>
+        [JsonProperty("frozen")]
+        public bool Frozen { get; set; }
+
+        /// <summary>
+        /// The practice-friendly (not patient friendly) name for this appointment type.  Note that this may not be the same as the booked appointment because of "generic" slots.
+        /// </summary>
+        [JsonProperty("appointmenttype")]
+        public string AppointmentType { get; set; }
+
+        /// <summary>
+        /// This is the ID for the appointment type.   Note that this may not be the same as the booked appointment because of "generic" slots.
+        /// </summary>
+        [JsonProperty("appointmenttypeid")]
+        public int? AppointmentTypeId { get; set; }
 
         /// <summary>
         /// If the appointment was cancelled, the numeric ID (local to the practice) for the cancel reason.
@@ -131,24 +169,31 @@ namespace AthenaHealth.Sdk.Models.Response
         /// If the appointment was cancelled, if the cancel reason is marked as a no show reason.
         /// </summary>
         [JsonProperty("cancelreasonnoshow")]
-        public bool CancelReasonNoShow { get; set; }
+        public bool? CancelReasonNoShow { get; set; }
 
         /// <summary>
         /// If the appointment was cancelled, if the cancel reason is marked as a slot available reason.
         /// </summary>
         [JsonProperty("cancelreasonslotavailable")]
-        public bool CancelReasonSlotAvailable { get; set; }
+        public bool? CancelReasonSlotAvailable { get; set; }
 
         /// <summary>
         /// If true, the appointment was booked through athenaCoordinator Enterprise.
         /// </summary>
         [JsonProperty("coordinatorenterprise")]
-        public bool CoordinatorEnterprise { get; set; }
+        public bool? CoordinatorEnterprise { get; set; }
+
+        /// <summary>
+        /// In minutes
+        /// </summary>
+        [JsonProperty("duration")]
+        public int Duration { get; set; }
 
         /// <summary>
         /// The time (mm/dd/yyyy hh24:mi:ss; Eastern time) that this appointment was scheduled.
         /// </summary>
         [JsonProperty("scheduleddatetime")]
+        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy HH:mm:ss")]
         public DateTime? ScheduledDateTime { get; set; }
 
         /// <summary>
@@ -158,10 +203,11 @@ namespace AthenaHealth.Sdk.Models.Response
         public bool Urgent { get; set; }
 
         /// <summary>
-        /// The timestamp when the appointment started the check in process. If this is set while an appointment is still in status 'f', it means that the check-in process has begun but is not yet completed.
+        /// The timestamp when the appointment started the check in process.
+        /// If this is set while an appointment is still in status 'f', it means that the check-in process has begun but is not yet completed.
         /// </summary>
         [JsonProperty("startcheckin")]
-        public DateTime? StartCheckIn { get; set; }
+        public string StartCheckIn { get; set; }
 
         /// <summary>
         /// If there is an appointment confirmation result for this appointment, the numeric ID (global to athenaNet).
@@ -176,22 +222,38 @@ namespace AthenaHealth.Sdk.Models.Response
         public string SuggestedOverBooking { get; set; }
 
         /// <summary>
-        /// Detailed information about the copay for this appointment.  Gives more detail than the COPAY field.  Note: this information is not yet available in all practices, we are rolling this out slowly.
+        /// Detailed information about the copay for this appointment.
+        /// Gives more detail than the COPAY field.
+        /// Note: this information is not yet available in all practices, we are rolling this out slowly.
         /// </summary>
         [JsonProperty("appointmentcopay")]
-        public AppointmentCopay[] AppointmentCopay { get; set; }
+        public AppointmentCopay AppointmentCopay { get; set; }
 
         /// <summary>
-        /// See /patients for details
+        /// Appointment ID of the booked appointment
+        /// </summary>
+        [JsonProperty("appointmentid")]
+        public int? AppointmentId { get; set; }
+
+        /// <summary>
+        /// The appointment date.
+        /// </summary>
+        [JsonProperty("date")]
+        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+        public DateTime Date { get; set; }
+
+        /// <summary>
+        /// See /patients for details.
         /// </summary>
         [JsonProperty("patient")]
-        public Patient Patient { get; set; }
+        public string Patient { get; set; }
 
         /// <summary>
         /// The time (mm/dd/yyyy hh24:mi:ss) that the appointment check-out was started.
         /// </summary>
         [JsonProperty("startcheckoutdatetime")]
-        public DateTime? StartCheckOutDateTime { get; set; }
+        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy HH:mm:ss")]
+        public DateTime? StartCheckoutDateTime { get; set; }
 
         /// <summary>
         /// If there is an appointment confirmation result for this appointment, the name (global to athenaNet).
@@ -203,7 +265,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// An array of expected procedure codes attached to this appointment.
         /// </summary>
         [JsonProperty("useexpectedprocedurecodes")]
-        public ExpectedProcedureCode[] UseExpectedProcedureCodes { get; set; }
+        public ExpectedProcedureCode UseExpectedProcedureCodes { get; set; }
 
         /// <summary>
         /// The user who last modified the appointment.
@@ -212,16 +274,42 @@ namespace AthenaHealth.Sdk.Models.Response
         public string LastModifiedBy { get; set; }
 
         /// <summary>
+        /// The patient-friendly name for this appointment type.  Note that this may not be the same as the booked appointment because of "generic" slots.
+        /// </summary>
+        [JsonProperty("patientappointmenttypename")]
+        public string PatientAppointmentTypeName { get; set; }
+
+        /// <summary>
+        /// As HH:MM (where HH is the 0-23 hour and MM is the minute).  This time is local to the department.
+        /// </summary>
+        [JsonProperty("starttime")]
+        [JsonConverter(typeof(CustomDateConverter), "HH:mm")]
+        public DateTime? StartTime { get; set; }
+
+        /// <summary>
         /// The timestamp when the check-in process was finished for this appointment.
         /// </summary>
         [JsonProperty("stopcheckin")]
         public string StopCheckIn { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("providerid")]
+        public int? ProviderId { get; set; }
+
+        /// <summary>
         /// The time (mm/dd/yyyy hh24:mi:ss) that the exam was completed.
         /// </summary>
         [JsonProperty("stopexamdatetime")]
+        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy HH:mm:ss")]
         public DateTime? StopExamDateTime { get; set; }
+
+        /// <summary>
+        /// The rendering provider ID.
+        /// </summary>
+        [JsonProperty("renderingproviderid")]
+        public int? RenderingProviderId { get; set; }
 
         /// <summary>
         /// The supervising provider ID.
@@ -248,7 +336,7 @@ namespace AthenaHealth.Sdk.Models.Response
         public int? PatientLocationId { get; set; }
 
         /// <summary>
-        /// The status of the clinical encounter associated with this appointment (OPEN, CLOSED, DELETED, PEND, etc.). This differs from encounterstatus, which refers to the status of the patient in the encounter.
+        /// The status of the clinical encounter associated with this appointment (OPEN, CLOSED, DELETED, PEND, etc.). This differs from <see cref="EncounterStatus"/>, which refers to the status of the patient in the encounter.
         /// </summary>
         [JsonProperty("encounterstate")]
         public string EncounterState { get; set; }
@@ -269,7 +357,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// Detailed ReminderCall information made for this appointment.
         /// </summary>
         [JsonProperty("reminderdetails")]
-        public ReminderDetail[] ReminderDetails { get; set; }
+        public ReminderCall ReminderDetails { get; set; }
 
         /// <summary>
         /// The original appointment type for this slot. This can change for generic appointments.
@@ -288,167 +376,68 @@ namespace AthenaHealth.Sdk.Models.Response
         /// </summary>
         [JsonProperty("patientid")]
         public int? PatientId { get; set; }
-
-        /// <summary>
-        /// If true, encounter prep has been started for the encounter associated with this appointment.
-        /// </summary>
-        [JsonProperty("encounterprep")]
-        public bool? EncounterPrep { get; set; }
-
-
-        public class AppointmentNote
-        {
-            /// <summary>
-            /// The id of the appointment note.
-            /// </summary>
-            [JsonProperty("id")]
-            public int Id { get; set; }
-
-            /// <summary>
-            /// Whether the note should be displayed on the schedule.
-            /// </summary>
-            [JsonProperty("displayonschedule")]
-            public bool DisplayOnSchedule { get; set; }
-
-            /// <summary>
-            /// The note associated with the appointment.
-            /// </summary>
-            [JsonProperty("text")]
-            public string Text { get; set; }
-        }
-
-        public class ExpectedProcedureCode
-        {
-            /// <summary>
-            /// The ID of the code.
-            /// </summary>
-            [JsonProperty("procedurecode")]
-            public string ProcedureCode { get; set; }
-
-            /// <summary>
-            /// The description of the code.
-            /// </summary>
-            [JsonProperty("procedurecodedescription")]
-            public string ProcedureCodeDescription { get; set; }
-        }
-
-        public class ReminderDetail
-        {
-            /// <summary>
-            /// The type of message that was attempted.
-            /// </summary>
-            [JsonProperty("messagetype")]
-            public string MessageType { get; set; }
-
-            /// <summary>
-            /// Date and time of the call attempt.
-            /// </summary>
-            [JsonProperty("calltime")]
-            public string CallTime { get; set; }
-
-            /// <summary>
-            /// Id of the message attempt.
-            /// </summary>
-            [JsonProperty("messageresultid")]
-            public int? MessageResultId { get; set; }
-
-            /// <summary>
-            /// A description of what happened during the call attempt.
-            /// </summary>
-            [JsonProperty("result")]
-            public string Result { get; set; }
-        }
-
-        public class Diagnosis
-        {
-            /// <summary>
-            /// A unique ID related to this diagnosis.
-            /// </summary>
-            [JsonProperty("diagnosisid")]
-            public int Id { get; set; }
-
-            /// <summary>
-            /// A description of this diagnosis.
-            /// </summary>
-            [JsonProperty("diagnosisdescription")]
-            public string DiagnosisDescription { get; set; }
-
-            /// <summary>
-            /// The raw ICD-9 code.  This will migrate to ICD-10 in the future.
-            /// </summary>
-            [JsonProperty("diagnosisrawcode")]
-            public string DiagnosisRawCode { get; set; }
-
-            /// <summary>
-            /// The category for this diagnosis.
-            /// </summary>
-            [JsonProperty("diagnosiscategory")]
-            public string DiagnosisCategory { get; set; }
-
-            /// <summary>
-            /// In certain cases, diagnoses may be added and then removed from a particular claim.  In normal circumstances, this will be false.  However, if a diagnosis was removed, this will be true.
-            /// </summary>
-            [JsonProperty("deleteddiagnosis")]
-            public string DeletedDiagnosis { get; set; }
-
-            /// <summary>
-            /// Either ICD9 or ICD10.
-            /// </summary>
-            [JsonProperty("diagnosiscodeset")]
-            public string DiagnosisCodeSet { get; set; }
-        }
-
-        public class Procedure
-        {
-            /// <summary>
-            /// The category name associated with this procedure.
-            /// </summary>
-            [JsonProperty("procedurecategory")]
-            public string ProcedureCategory { get; set; }
-
-            /// <summary>
-            /// The minimum amount expected from payer for all services from this procedure.
-            /// </summary>
-            [JsonProperty("allowablemin")]
-            public string AllowableMin { get; set; }
-
-            /// <summary>
-            /// A description of this procedure.
-            /// </summary>
-            [JsonProperty("proceduredescription")]
-            public string ProcedureDescription { get; set; }
-
-            /// <summary>
-            /// The amount charged for this procedure.
-            /// </summary>
-            [JsonProperty("chargeamount")]
-            public string ChargeAmount { get; set; }
-
-            /// <summary>
-            /// The ID of the last transaction associated with the claim.
-            /// </summary>
-            [JsonProperty("transactionid")]
-            public int? TransactionId { get; set; }
-
-            /// <summary>
-            /// The CPT code associated with this procedure.
-            /// </summary>
-            [JsonProperty("procedurecode")]
-            public string ProcedureCode { get; set; }
-
-            /// <summary>
-            /// The maximum amount expected from payer for all services from this procedure.
-            /// </summary>
-            [JsonProperty("allowablemax")]
-            public string AllowableMax { get; set; }
-
-            /// <summary>
-            /// The total amount expected from payer for all services from this procedure.
-            /// </summary>
-            [JsonProperty("allowableamount")]
-            public string AllowableAmount { get; set; }
-        }
     }
 
+    public class ReminderCall
+    {
+        /// <summary>
+        /// The type of message that was attempted.
+        /// </summary>
+        [JsonProperty("messagetype")]
+        public string MessageType { get; set; }
 
+        /// <summary>
+        /// Date and time of the call attempt.
+        /// </summary>
+        [JsonProperty("calltime")]
+        public string CallTime { get; set; }
+
+        /// <summary>
+        /// Id of the message attempt.
+        /// </summary>
+        [JsonProperty("messageresultid")]
+        public int? MessageResultId { get; set; }
+
+        /// <summary>
+        /// A description of what happened during the call attempt.
+        /// </summary>
+        [JsonProperty("result")]
+        public string Result { get; set; }
+    }
+
+    public class ExpectedProcedureCode
+    {
+        /// <summary>
+        /// The ID of the code.
+        /// </summary>
+        [JsonProperty("procedurecode")]
+        public string Id { get; set; }
+
+        /// <summary>
+        /// The description of the code.
+        /// </summary>
+        [JsonProperty("procedurecodedescription")]
+        public string Description { get; set; }
+    }
+
+    public class AppointmentNoteDisplayedOnSchedule
+    {
+        /// <summary>
+        /// The id of the appointment note.
+        /// </summary>
+        [JsonProperty("id")]
+        public int? Id { get; set; }
+
+        /// <summary>
+        /// The note associated with the appointment.
+        /// </summary>
+        [JsonProperty("text")]
+        public string Text { get; set; }
+
+        /// <summary>
+        /// Whether the note should be displayed on the schedule.
+        /// </summary>
+        [JsonProperty("displayonschedule")]
+        public bool DisplayOnSchedule { get; set; }
+    }
 }

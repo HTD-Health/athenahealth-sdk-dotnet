@@ -58,7 +58,5 @@ namespace AthenaHealth.Sdk.Models.Request
         /// </summary>
         [JsonProperty("reasonid")]
         public int? ReasonId { get; set; }
-
-
     }
 }
