@@ -28,11 +28,13 @@ namespace AthenaHealth.Sdk.Clients
         /// </summary>
         /// <param name="filter"></param>
         /// <returns></returns>
+        [Endpoint]
         public async Task<Practice> GetCurrentPractice(BaseLimitFilter filter = null)
         {
             return await GetById(_connection.PracticeId, filter);
         }
 
+        [Endpoint]
         public async Task<PracticeResponse> GetAll(BaseLimitFilter filter = null)
         {
             return await _connection.Get<PracticeResponse>($"1/practiceinfo", filter);

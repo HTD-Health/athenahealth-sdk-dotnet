@@ -1,12 +1,13 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
+﻿using AthenaHealth.Sdk.Clients;
+using AthenaHealth.Sdk.Clients.Interfaces;
+using AthenaHealth.Sdk.Models.Enums;
+using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
 using AthenaHealth.Sdk.Tests.Integration.TestingHelpers;
 using Shouldly;
+using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
-using AthenaHealth.Sdk.Clients;
-using AthenaHealth.Sdk.Models.Enums;
-using AthenaHealth.Sdk.Models.Request;
 
 namespace AthenaHealth.Sdk.Tests.Integration
 {
@@ -15,9 +16,9 @@ namespace AthenaHealth.Sdk.Tests.Integration
         [Fact]
         public async Task GetAll_ReturnsRecords()
         {
-            var departmentClient = new DepartmentClient(ConnectionFactory.CreateFromFile(@"Data\Department\GetAll_Extended.json"));
+            IDepartmentClient client = new DepartmentClient(ConnectionFactory.CreateFromFile(@"Data\Department\GetAll_Extended.json"));
 
-            DepartmentResponse departmentResponse = await departmentClient.GetAll();
+            var departmentResponse = await client.GetAll();
 
             departmentResponse.ShouldNotBeNull();
             departmentResponse.Total.ShouldBe(31);
@@ -30,9 +31,9 @@ namespace AthenaHealth.Sdk.Tests.Integration
         [Fact]
         public async Task GetById_ExistingId_ReturnsRecord()
         {
-            var departmentClient = new DepartmentClient(ConnectionFactory.CreateFromFile(@"Data\Department\GetById_ExistingId.json"));
+            IDepartmentClient client = new DepartmentClient(ConnectionFactory.CreateFromFile(@"Data\Department\GetById_ExistingId.json"));
 
-            var departmentResponse = await departmentClient.GetById(1);
+            var departmentResponse = await client.GetById(1);
 
             departmentResponse.ShouldNotBeNull();
             departmentResponse.Id.ShouldBe("1");
@@ -44,10 +45,10 @@ namespace AthenaHealth.Sdk.Tests.Integration
         [Fact]
         public async Task SearchFacilities_ReturnsRecords()
         {
-            var departmentClient = new DepartmentClient(ConnectionFactory.CreateFromFile(@"Data\Department\SearchFacilities.json"));
+            IDepartmentClient client = new DepartmentClient(ConnectionFactory.CreateFromFile(@"Data\Department\SearchFacilities.json"));
 
             var filter = new SearchFacilitiesFilter(1, "Labcorp", OrderTypeEnum.DurableMedicalEquipment);
-            Facility[] response = await departmentClient.SearchFacilities(filter);
+            var response = await client.SearchFacilities(filter);
 
             response.ShouldNotBeNull();
             response.Length.ShouldBeGreaterThan(0);

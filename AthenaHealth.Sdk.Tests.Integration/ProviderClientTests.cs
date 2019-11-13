@@ -1,8 +1,9 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
-using AthenaHealth.Sdk.Clients;
+﻿using AthenaHealth.Sdk.Clients;
+using AthenaHealth.Sdk.Clients.Interfaces;
 using AthenaHealth.Sdk.Tests.Integration.TestingHelpers;
 using Shouldly;
+using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace AthenaHealth.Sdk.Tests.Integration
@@ -12,7 +13,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         [Fact]
         public async Task GetAll_ReturnsRecords()
         {
-            var client = new ProviderClient(ConnectionFactory.CreateFromFile(@"Data\Provider\GetAll.json"));
+            IProviderClient client = new ProviderClient(ConnectionFactory.CreateFromFile(@"Data\Provider\GetAll.json"));
 
             var response = await client.GetAll();
 
@@ -24,7 +25,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         [Fact]
         public async Task GetById_ExistingId_ReturnsRecord()
         {
-            var client = new ProviderClient(ConnectionFactory.CreateFromFile(@"Data\Provider\GetById.json"));
+            IProviderClient client = new ProviderClient(ConnectionFactory.CreateFromFile(@"Data\Provider\GetById.json"));
 
             var response = await client.GetById(86);
 

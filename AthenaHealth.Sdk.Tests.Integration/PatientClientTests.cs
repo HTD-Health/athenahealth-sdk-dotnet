@@ -1,8 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Net;
-using System.Threading.Tasks;
-using AthenaHealth.Sdk.Clients;
+﻿using AthenaHealth.Sdk.Clients;
 using AthenaHealth.Sdk.Clients.Interfaces;
 using AthenaHealth.Sdk.Exceptions;
 using AthenaHealth.Sdk.Models.Enums;
@@ -10,6 +6,10 @@ using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
 using AthenaHealth.Sdk.Tests.Integration.TestingHelpers;
 using Shouldly;
+using System;
+using System.Linq;
+using System.Net;
+using System.Threading.Tasks;
 using Xunit;
 
 // ReSharper disable StringLiteralTypo
@@ -21,7 +21,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public async Task GetDocuments_ValidData_ReturnsDocuments()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetDocuments.json"));
+            IPatientClient client = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetDocuments.json"));
             var queryParameters = new GetDocumentsFilter(1)
             {
                 ShowDeleted = true,
@@ -29,7 +29,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
             };
 
             // Act
-            var result = await patientClient.GetDocuments(1, queryParameters);
+            var result = await client.GetDocuments(1, queryParameters);
 
             // Assert
             result.ShouldNotBeNull();
@@ -40,7 +40,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public void GetDocuments_PatientInDifferentDepartment_ThrowsException()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"detailedmessage\":\"The specified patient does not exist in that department.\",\"error\":\"The specified patient does not exist in that department.\"}", HttpStatusCode.BadRequest));
+            IPatientClient client = new PatientClient(ConnectionFactory.Create("{\"detailedmessage\":\"The specified patient does not exist in that department.\",\"error\":\"The specified patient does not exist in that department.\"}", HttpStatusCode.BadRequest));
             var queryParameters = new GetDocumentsFilter(2)
             {
                 ShowDeleted = true,
@@ -48,7 +48,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
             };
 
             // Act
-            ApiException exception = Should.Throw<ApiException>(async () => await patientClient.GetDocuments(1, queryParameters));
+            ApiException exception = Should.Throw<ApiException>(async () => await client.GetDocuments(1, queryParameters));
 
             // Assert
             exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
@@ -58,10 +58,10 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public async Task GetAllergies_ValidData_ReturnsAllergies()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetAllergies.json"));
+            IPatientClient client = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetAllergies.json"));
 
             // Act
-            var result = await patientClient.GetAllergies(1, 1, true);
+            var result = await client.GetAllergies(1, 1, true);
 
             // Assert
             result.ShouldNotBeNull();
@@ -72,10 +72,10 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public void GetAllergies_PatientInDifferentDepartment_ThrowsException()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"detailedmessage\":\"The specified patient does not exist in that department.\",\"error\":\"The specified patient does not exist in that department.\"}", HttpStatusCode.BadRequest));
+            IPatientClient client = new PatientClient(ConnectionFactory.Create("{\"detailedmessage\":\"The specified patient does not exist in that department.\",\"error\":\"The specified patient does not exist in that department.\"}", HttpStatusCode.BadRequest));
 
             // Act
-            ApiException exception = Should.Throw<ApiException>(async () => await patientClient.GetAllergies(1, 2, true));
+            ApiException exception = Should.Throw<ApiException>(async () => await client.GetAllergies(1, 2, true));
 
             // Assert
             exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
@@ -85,10 +85,10 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public async Task GetSocialHistoryTemplates_ValidData_ReturnsTemplates()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetSocialHistoryTemplates.json"));
+            IPatientClient client = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetSocialHistoryTemplates.json"));
 
             // Act
-            var result = await patientClient.GetSocialHistoryTemplates(1, 1);
+            var result = await client.GetSocialHistoryTemplates(1, 1);
 
             // Assert
             result.ShouldNotBeNull();
@@ -99,10 +99,10 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public void GetSocialHistoryTemplates_PatientInDifferentDepartment_ThrowsException()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"detailedmessage\":\"The specified patient does not exist in that department.\",\"error\":\"The specified patient does not exist in that department.\"}", HttpStatusCode.BadRequest));
+            IPatientClient client = new PatientClient(ConnectionFactory.Create("{\"detailedmessage\":\"The specified patient does not exist in that department.\",\"error\":\"The specified patient does not exist in that department.\"}", HttpStatusCode.BadRequest));
 
             // Act
-            ApiException exception = Should.Throw<ApiException>(async () => await patientClient.GetSocialHistoryTemplates(1, 2));
+            ApiException exception = Should.Throw<ApiException>(async () => await client.GetSocialHistoryTemplates(1, 2));
 
             // Assert
             exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
@@ -112,7 +112,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public async Task GetPatientEncounters_ValidData_ReturnsEncounters()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetPatientEncounters.json"));
+            IPatientClient client = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetPatientEncounters.json"));
             var queryParameters = new GetPatientEncountersFilter(1)
             {
                 ShowDiagnoses = true,
@@ -121,7 +121,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
             };
 
             // Act
-            var result = await patientClient.GetPatientEncounters(1, queryParameters);
+            var result = await client.GetPatientEncounters(1, queryParameters);
 
             // Assert
             result.ShouldNotBeNull();
@@ -132,7 +132,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public void GetPatientEncounters_PatientInDifferentDepartment_ThrowsException()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"detailedmessage\":\"The specified patient does not exist in that department.\",\"error\":\"The specified patient does not exist in that department.\"}", HttpStatusCode.BadRequest));
+            IPatientClient client = new PatientClient(ConnectionFactory.Create("{\"detailedmessage\":\"The specified patient does not exist in that department.\",\"error\":\"The specified patient does not exist in that department.\"}", HttpStatusCode.BadRequest));
             var queryParameters = new GetPatientEncountersFilter(2)
             {
                 ShowDiagnoses = true,
@@ -141,7 +141,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
             };
 
             // Act
-            ApiException exception = Should.Throw<ApiException>(async () => await patientClient.GetPatientEncounters(1, queryParameters));
+            ApiException exception = Should.Throw<ApiException>(async () => await client.GetPatientEncounters(1, queryParameters));
 
             // Assert
             exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
@@ -151,10 +151,10 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public async Task GetPatientById_ValidId_ReturnsPatient()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetPatient.json"));
+            IPatientClient client = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetPatient.json"));
 
             // Act
-            var result = await patientClient.GetPatientById(1);
+            var result = await client.GetPatientById(1);
 
             // Assert
             result.ShouldNotBeNull();
@@ -167,10 +167,10 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public void GetPatientById_InvalidId_ThrowsApiException()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{ \"missingfields\": [ \"patientid\" ], \"error\": \"Additional fields are required.\" }", HttpStatusCode.BadRequest));
+            IPatientClient client = new PatientClient(ConnectionFactory.Create("{ \"missingfields\": [ \"patientid\" ], \"error\": \"Additional fields are required.\" }", HttpStatusCode.BadRequest));
 
             // Act
-            ApiException exception = Should.Throw<ApiException>(async () => await patientClient.GetPatientById(0));
+            ApiException exception = Should.Throw<ApiException>(async () => await client.GetPatientById(0));
 
             // Assert
             exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
@@ -180,11 +180,11 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public async Task GetMedications_ValidData_ReturnsMedications()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetMedications.json"));
+            IPatientClient client = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetMedications.json"));
             var queryParameters = new GetMedicationsFilter(1);
 
             // Act
-            var result = await patientClient.GetMedications(1, queryParameters);
+            var result = await client.GetMedications(1, queryParameters);
 
             // Assert
             result.ShouldNotBeNull();
@@ -195,11 +195,11 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public void GetMedications_PatientInDifferentDepartment_ThrowsException()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"detailedmessage\":\"The specified patient does not exist in that department.\",\"error\":\"The specified patient does not exist in that department.\"}", HttpStatusCode.BadRequest));
+            IPatientClient client = new PatientClient(ConnectionFactory.Create("{\"detailedmessage\":\"The specified patient does not exist in that department.\",\"error\":\"The specified patient does not exist in that department.\"}", HttpStatusCode.BadRequest));
             var queryParameters = new GetMedicationsFilter(1);
 
             // Act
-            ApiException exception = Should.Throw<ApiException>(async () => await patientClient.GetMedications(1, queryParameters));
+            ApiException exception = Should.Throw<ApiException>(async () => await client.GetMedications(1, queryParameters));
 
             // Assert
             exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
@@ -209,7 +209,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public async Task GetSocialHistory_ValidData_ReturnsHistory()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetSocialHistory.json"));
+            IPatientClient client = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetSocialHistory.json"));
             var queryParameters = new GetSocialHistoryFilter(1)
             {
                 ShowUnansweredQuestions = true,
@@ -217,7 +217,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
             };
 
             // Act
-            var result = await patientClient.GetSocialHistory(1, queryParameters);
+            var result = await client.GetSocialHistory(1, queryParameters);
 
             // Assert
             result.ShouldNotBeNull();
@@ -228,7 +228,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public void GetSocialHistory_PatientInDifferentDepartment_ThrowsException()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"detailedmessage\":\"The specified patient does not exist in that department.\",\"error\":\"The specified patient does not exist in that department.\"}", HttpStatusCode.BadRequest));
+            IPatientClient client = new PatientClient(ConnectionFactory.Create("{\"detailedmessage\":\"The specified patient does not exist in that department.\",\"error\":\"The specified patient does not exist in that department.\"}", HttpStatusCode.BadRequest));
             var queryParameters = new GetSocialHistoryFilter(2)
             {
                 ShowUnansweredQuestions = true,
@@ -236,7 +236,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
             };
 
             // Act
-            ApiException exception = Should.Throw<ApiException>(async () => await patientClient.GetSocialHistory(1, queryParameters));
+            ApiException exception = Should.Throw<ApiException>(async () => await client.GetSocialHistory(1, queryParameters));
 
             // Assert
             exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
@@ -246,7 +246,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public async Task GetAnalytes_ValidData_ReturnsAnalytes()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetAnalytes.json"));
+            IPatientClient client = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetAnalytes.json"));
             var queryParameters = new GetAnalytesFilter(1)
             {
                 ShowAbnormalDetails = true,
@@ -255,7 +255,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
             };
 
             // Act
-            var result = await patientClient.GetAnalytes(1, queryParameters);
+            var result = await client.GetAnalytes(1, queryParameters);
 
             // Assert
             result.ShouldNotBeNull();
@@ -266,7 +266,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public void GetAnalytes_PatientInDifferentDepartment_ThrowsException()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"detailedmessage\":\"The specified patient does not exist in that department.\",\"error\":\"The specified patient does not exist in that department.\"}", HttpStatusCode.BadRequest));
+            IPatientClient client = new PatientClient(ConnectionFactory.Create("{\"detailedmessage\":\"The specified patient does not exist in that department.\",\"error\":\"The specified patient does not exist in that department.\"}", HttpStatusCode.BadRequest));
             var queryParameters = new GetAnalytesFilter(2)
             {
                 ShowAbnormalDetails = true,
@@ -275,7 +275,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
             };
 
             // Act
-            ApiException exception = Should.Throw<ApiException>(async () => await patientClient.GetAnalytes(1, queryParameters));
+            ApiException exception = Should.Throw<ApiException>(async () => await client.GetAnalytes(1, queryParameters));
 
             // Assert
             exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
@@ -285,10 +285,10 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public async Task GetMedicalHistory_ValidData_ReturnsMedicalHistory()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetMedicalHistory.json"));
+            IPatientClient client = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetMedicalHistory.json"));
 
             // Act
-            var result = await patientClient.GetMedicalHistory(1, 1);
+            var result = await client.GetMedicalHistory(1, 1);
 
             // Assert
             result.ShouldNotBeNull();
@@ -299,10 +299,10 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public void GetMedicalHistory_PatientInDifferentDepartment_ThrowsException()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"detailedmessage\":\"The specified patient does not exist in that department.\",\"error\":\"The specified patient does not exist in that department.\"}", HttpStatusCode.NotFound));
+            IPatientClient client = new PatientClient(ConnectionFactory.Create("{\"detailedmessage\":\"The specified patient does not exist in that department.\",\"error\":\"The specified patient does not exist in that department.\"}", HttpStatusCode.NotFound));
 
             // Act
-            ApiException exception = Should.Throw<ApiException>(async () => await patientClient.GetMedicalHistory(1, 2));
+            ApiException exception = Should.Throw<ApiException>(async () => await client.GetMedicalHistory(1, 2));
 
             // Assert
             exception.StatusCode.ShouldBe(HttpStatusCode.NotFound);
@@ -312,7 +312,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public async Task GetPrescriptions_ValidData_ReturnsPrescriptions()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetPrescriptions.json"));
+            IPatientClient client = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetPrescriptions.json"));
             var queryParameters = new GetPrescriptionsFilter(1)
             {
                 ShowDeleted = true,
@@ -320,7 +320,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
             };
 
             // Act
-            var result = await patientClient.GetPrescriptions(1, queryParameters);
+            var result = await client.GetPrescriptions(1, queryParameters);
 
             // Assert
             result.ShouldNotBeNull();
@@ -331,7 +331,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public void GetPrescriptions_PatientInDifferentDepartment_ThrowsException()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"detailedmessage\":\"The specified patient does not exist in that department.\",\"error\":\"The specified patient does not exist in that department.\"}", HttpStatusCode.BadRequest));
+            IPatientClient client = new PatientClient(ConnectionFactory.Create("{\"detailedmessage\":\"The specified patient does not exist in that department.\",\"error\":\"The specified patient does not exist in that department.\"}", HttpStatusCode.BadRequest));
             var queryParameters = new GetPrescriptionsFilter(2)
             {
                 ShowDeleted = true,
@@ -339,7 +339,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
             };
 
             // Act
-            ApiException exception = Should.Throw<ApiException>(async () => await patientClient.GetPrescriptions(1, queryParameters));
+            ApiException exception = Should.Throw<ApiException>(async () => await client.GetPrescriptions(1, queryParameters));
 
             // Assert
             exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
@@ -349,10 +349,10 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public async Task GetLabResultDetails_ValidData_ReturnsLabResult()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetLabResultDetails.json"));
+            IPatientClient client = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetLabResultDetails.json"));
 
             // Act
-            var result = await patientClient.GetLabResultDetails(1, 1, true);
+            var result = await client.GetLabResultDetails(1, 1, true);
 
             // Assert
             result.ShouldNotBeNull();
@@ -362,10 +362,10 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public void GetLabResultDetails_NoResult_ThrowsException()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"detailedmessage\":\"Document not found\",\"error\":\"The requested ID does not exist.\"}", HttpStatusCode.NotFound));
+            IPatientClient client = new PatientClient(ConnectionFactory.Create("{\"detailedmessage\":\"Document not found\",\"error\":\"The requested ID does not exist.\"}", HttpStatusCode.NotFound));
 
             // Act
-            ApiException exception = Should.Throw<ApiException>(async () => await patientClient.GetLabResultDetails(1, 22308, true));
+            ApiException exception = Should.Throw<ApiException>(async () => await client.GetLabResultDetails(1, 22308, true));
 
             // Assert
             exception.StatusCode.ShouldBe(HttpStatusCode.NotFound);
@@ -375,7 +375,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public async Task GetLabResults_ValidData_ReturnsLabResultCollection()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetLabResults.json"));
+            IPatientClient client = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetLabResults.json"));
             var queryParameters = new GetLabResultsFilter(1)
             {
                 ShowAbnormalDetails = true,
@@ -384,7 +384,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
             };
 
             // Act
-            var result = await patientClient.GetLabResults(1, queryParameters);
+            var result = await client.GetLabResults(1, queryParameters);
 
             // Assert
             result.ShouldNotBeNull();
@@ -395,7 +395,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public void GetLabResults_PatientInDifferentDepartment_ThrowsException()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"error\":\"The Patient ID or Department ID is invalid.\"}", HttpStatusCode.NotFound));
+            IPatientClient client = new PatientClient(ConnectionFactory.Create("{\"error\":\"The Patient ID or Department ID is invalid.\"}", HttpStatusCode.NotFound));
             var queryParameters = new GetLabResultsFilter(2)
             {
                 ShowAbnormalDetails = true,
@@ -404,7 +404,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
             };
 
             // Act
-            ApiException exception = Should.Throw<ApiException>(async () => await patientClient.GetLabResults(1, queryParameters));
+            ApiException exception = Should.Throw<ApiException>(async () => await client.GetLabResults(1, queryParameters));
 
             // Assert
             exception.StatusCode.ShouldBe(HttpStatusCode.NotFound);
@@ -414,7 +414,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public async Task GetPatientProblems_ValidData_ReturnsProblemsCollection()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetPatientProblems.json"));
+            IPatientClient client = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetPatientProblems.json"));
             var queryParameters = new GetPatientProblemsFilter(1)
             {
                 ShowDiagnosisInfo = true,
@@ -422,7 +422,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
             };
 
             // Act
-            var result = await patientClient.GetPatientProblems(1, queryParameters);
+            var result = await client.GetPatientProblems(1, queryParameters);
 
             // Assert
             result.ShouldNotBeNull();
@@ -433,7 +433,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public void GetPatientProblems_PatientInDifferentDepartment_ThrowsException()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"error\":\"Invalid departmentid or departmentid / patientid combination.\"}", HttpStatusCode.BadRequest));
+            IPatientClient client = new PatientClient(ConnectionFactory.Create("{\"error\":\"Invalid departmentid or departmentid / patientid combination.\"}", HttpStatusCode.BadRequest));
             var queryParameters = new GetPatientProblemsFilter(2)
             {
                 ShowDiagnosisInfo = true,
@@ -441,7 +441,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
             };
 
             // Act
-            ApiException exception = Should.Throw<ApiException>(async () => await patientClient.GetPatientProblems(1, queryParameters));
+            ApiException exception = Should.Throw<ApiException>(async () => await client.GetPatientProblems(1, queryParameters));
 
             // Assert
             exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
@@ -451,7 +451,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public async Task GetPatients_ValidData_ReturnsPatientsCollection()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetPatients.json"));
+            IPatientClient client = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetPatients.json"));
             var queryParameters = new GetPatientsFilter()
             {
                 FirstName = "Michael",
@@ -463,7 +463,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
             };
 
             // Act
-            var result = await patientClient.GetPatients(queryParameters);
+            var result = await client.GetPatients(queryParameters);
 
             // Assert
             result.ShouldNotBeNull();
@@ -474,7 +474,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public void GetPatients_TooMuchDataFound_ThrowsException()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"error\":\"The given search parameters would produce a total data set larger than 1000 records.Please refine your search and try again.\"}", HttpStatusCode.BadRequest));
+            IPatientClient client = new PatientClient(ConnectionFactory.Create("{\"error\":\"The given search parameters would produce a total data set larger than 1000 records.Please refine your search and try again.\"}", HttpStatusCode.BadRequest));
             var queryParameters = new GetPatientsFilter()
             {
                 DepartmentId = 1,
@@ -485,7 +485,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
             };
 
             // Act
-            ApiException exception = Should.Throw<ApiException>(async () => await patientClient.GetPatients(queryParameters));
+            ApiException exception = Should.Throw<ApiException>(async () => await client.GetPatients(queryParameters));
 
             // Assert
             exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
@@ -495,7 +495,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public void GetPatients_InvalidFilter_ThrowsException()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"fields\":[\"guarantorfirstname\",\"dob\",\"firstname\",\"workphone\",\"departmentid\",\"guarantorsuffix\",\"guarantorlastname\",\"mobilephone\",\"middlename\",\"suffix\",\"guarantormiddlename\",\"lastname\",\"homephone\",\"anyphone\"],\"error\":\"Data for one or more of the fields listed above are required to successfully find a patient record.Note: invalid phone numbers are ignored.\"}", HttpStatusCode.BadRequest));
+            IPatientClient client = new PatientClient(ConnectionFactory.Create("{\"fields\":[\"guarantorfirstname\",\"dob\",\"firstname\",\"workphone\",\"departmentid\",\"guarantorsuffix\",\"guarantorlastname\",\"mobilephone\",\"middlename\",\"suffix\",\"guarantormiddlename\",\"lastname\",\"homephone\",\"anyphone\"],\"error\":\"Data for one or more of the fields listed above are required to successfully find a patient record.Note: invalid phone numbers are ignored.\"}", HttpStatusCode.BadRequest));
             var queryParameters = new GetPatientsFilter()
             {
                 OmitBalances = false,
@@ -505,7 +505,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
             };
 
             // Act
-            ApiException exception = Should.Throw<ApiException>(async () => await patientClient.GetPatients(queryParameters));
+            ApiException exception = Should.Throw<ApiException>(async () => await client.GetPatients(queryParameters));
 
             // Assert
             exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
@@ -515,7 +515,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public async Task EnhancedBestmatch_ValidData_ReturnsPatientsCollection()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\EnhancedBestmatch.json"));
+            IPatientClient client = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\EnhancedBestmatch.json"));
             var queryParameters = new EnhancedBestmatchFilter(new DateTime(1989, 09, 07), "Peter", "Tots")
             {
                 ShowAllClaims = true,
@@ -530,7 +530,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
             };
 
             // Act
-            var result = await patientClient.EnhancedBestmatch(queryParameters);
+            var result = await client.EnhancedBestmatch(queryParameters);
 
             // Assert
             result.ShouldNotBeNull();
@@ -541,7 +541,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public async Task EnhancedBestmatch_ValidData_ReturnsNoPatient()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("[]"));
+            IPatientClient client = new PatientClient(ConnectionFactory.Create("[]"));
             var queryParameters = new EnhancedBestmatchFilter(new DateTime(1989, 09, 07), "Peter", "Tots")
             {
                 ShowAllClaims = true,
@@ -556,7 +556,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
             };
 
             // Act
-            var result = await patientClient.EnhancedBestmatch(queryParameters);
+            var result = await client.EnhancedBestmatch(queryParameters);
 
             // Assert
             result.ShouldNotBeNull();
@@ -567,7 +567,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public void EnhancedBestmatch_InvalidDateOfBirthFormat_ThrowsException()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\EnhancedBestmatch_InvalidDateOfBirthFormat.json", HttpStatusCode.BadRequest));
+            IPatientClient client = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\EnhancedBestmatch_InvalidDateOfBirthFormat.json", HttpStatusCode.BadRequest));
             var queryParameters = new EnhancedBestmatchFilter(new DateTime(01, 09, 07), "Peter", "Tots")
             {
                 ShowAllClaims = true,
@@ -582,7 +582,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
             };
 
             // Act
-            ApiException exception = Should.Throw<ApiException>(async () => await patientClient.EnhancedBestmatch(queryParameters));
+            ApiException exception = Should.Throw<ApiException>(async () => await client.EnhancedBestmatch(queryParameters));
 
             // Assert
             exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
@@ -592,7 +592,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public void EnhancedBestmatch_MissingFields_ThrowsException()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\EnhancedBestmatch_MissingFields.json", HttpStatusCode.BadRequest));
+            IPatientClient client = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\EnhancedBestmatch_MissingFields.json", HttpStatusCode.BadRequest));
             var queryParameters = new EnhancedBestmatchFilter(new DateTime(1989, 09, 07), "", "Tots")
             {
                 ShowAllClaims = true,
@@ -607,7 +607,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
             };
 
             // Act
-            ApiException exception = Should.Throw<ApiException>(async () => await patientClient.EnhancedBestmatch(queryParameters));
+            ApiException exception = Should.Throw<ApiException>(async () => await client.EnhancedBestmatch(queryParameters));
 
             // Assert
             exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
@@ -617,10 +617,10 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public async Task GetDefaultPharmacy_ValidId_ReturnsDefaultPharmacy()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetDefaultPharmacy.json", HttpStatusCode.OK));
+            IPatientClient client = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetDefaultPharmacy.json", HttpStatusCode.OK));
 
             // Act
-            var result = await patientClient.GetDefaultPharmacy(300, 1);
+            var result = await client.GetDefaultPharmacy(300, 1);
 
             // Assert
             result.ShouldNotBeNull();
@@ -632,10 +632,10 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public async Task GetDefaultLaboratory_ValidId_ReturnsDefaultLaboratory()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetDefaultLaboratory.json"));
+            IPatientClient client = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetDefaultLaboratory.json"));
 
             // Act
-            var result = await patientClient.GetDefaultLaboratory(1, 1);
+            var result = await client.GetDefaultLaboratory(1, 1);
 
             // Assert
             result.ShouldNotBeNull();
@@ -645,10 +645,10 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public void GetDefaultLaboratory_PatientInDifferentDepartment_ThrowsException()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"detailedmessage\":\"The specified patient does not exist in that department.\",\"error\":\"The specified patient does not exist in that department.\"}", HttpStatusCode.BadRequest));
+            IPatientClient client = new PatientClient(ConnectionFactory.Create("{\"detailedmessage\":\"The specified patient does not exist in that department.\",\"error\":\"The specified patient does not exist in that department.\"}", HttpStatusCode.BadRequest));
 
             // Act
-            ApiException exception = Should.Throw<ApiException>(async () => await patientClient.GetDefaultLaboratory(1, 2));
+            ApiException exception = Should.Throw<ApiException>(async () => await client.GetDefaultLaboratory(1, 2));
 
             // Assert
             exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
@@ -658,10 +658,10 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public void GetDefaultLaboratory_NoDefaultLaboratory_ThrowsException()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"error\":\"Default lab not found.\"}", HttpStatusCode.NotFound));
+            IPatientClient client = new PatientClient(ConnectionFactory.Create("{\"error\":\"Default lab not found.\"}", HttpStatusCode.NotFound));
 
             // Act
-            ApiException exception = Should.Throw<ApiException>(async () => await patientClient.GetDefaultLaboratory(1, 2));
+            ApiException exception = Should.Throw<ApiException>(async () => await client.GetDefaultLaboratory(1, 2));
 
             // Assert
             exception.StatusCode.ShouldBe(HttpStatusCode.NotFound);
@@ -671,11 +671,11 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public async Task GetPreferredPharmacies_ReturnsPreferredPharmacies()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetPreferredPharmacies.json", HttpStatusCode.OK));
+            IPatientClient client = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetPreferredPharmacies.json", HttpStatusCode.OK));
             var queryParameters = new GetPreferredPharmacyFilter(1);
 
             // Act
-            var result = await patientClient.GetPreferredPharmacies(300, queryParameters);
+            var result = await client.GetPreferredPharmacies(300, queryParameters);
 
             // Assert
             result.ShouldNotBeNull();
@@ -689,15 +689,15 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public async Task GetPatientInsurances_ReturnsInsurances()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetPatientInsurances.json", HttpStatusCode.OK));
+            IPatientClient client = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetPatientInsurances.json", HttpStatusCode.OK));
             var queryParameters = new GetPatientInsurancesFilter
             {
-              ShowFullSSN = true,
-              ShowCancelled = true
+                ShowFullSSN = true,
+                ShowCancelled = true
             };
 
             // Act
-            var result = await patientClient.GetPatientInsurances(1, queryParameters);
+            var result = await client.GetPatientInsurances(1, queryParameters);
 
             // Assert
             result.ShouldNotBeNull();
@@ -709,40 +709,40 @@ namespace AthenaHealth.Sdk.Tests.Integration
         [Fact]
         public void SetDefaultPharmacy_ValidData_NotThrow()
         {
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"success\": true}", HttpStatusCode.OK));
+            IPatientClient client = new PatientClient(ConnectionFactory.Create("{\"success\": true}", HttpStatusCode.OK));
 
-            Should.NotThrow(async () => await patientClient.SetDefaultPharmacy(5000, new SetPharmacyRequest(164){ ClinicalProviderId = 11242674}));
+            Should.NotThrow(async () => await client.SetDefaultPharmacy(5000, new SetPharmacyRequest(164) { ClinicalProviderId = 11242674 }));
         }
-        
+
         [Fact]
         public void AddPreferredPharmacy_ValidData_NotThrow()
         {
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.Create("{\"success\": true}", HttpStatusCode.OK));
+            IPatientClient client = new PatientClient(ConnectionFactory.Create("{\"success\": true}", HttpStatusCode.OK));
 
-            Should.NotThrow(async () => await patientClient.AddPreferredPharmacy(5000, new SetPharmacyRequest(164){ClinicalProviderId = 11242674}));
+            Should.NotThrow(async () => await client.AddPreferredPharmacy(5000, new SetPharmacyRequest(164) { ClinicalProviderId = 11242674 }));
         }
 
         [Fact]
         public async Task GetPatientAppointments_ReturnsAppointments()
         {
             // Arrange
-            var patientClient = new Sdk.Clients.PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetPatientAppointments.json"));
-            
+            IPatientClient client = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetPatientAppointments.json"));
+
             // Act
-            var result = await patientClient.GetPatientAppointments(1);
+            var result = await client.GetPatientAppointments(1);
 
             // Assert
             result.ShouldNotBeNull();
             result.Total.ShouldBe(2205);
-            result.Items.ShouldContain(a=>a.PatientAppointmentTypeName == "Office Visit");
+            result.Items.ShouldContain(a => a.PatientAppointmentTypeName == "Office Visit");
         }
 
         [Fact]
         public async Task AddMedication_ValidData_ReturnsCreatedId()
         {
-            IPatientClient patientClient = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\AddMedication.json", HttpStatusCode.OK));
+            IPatientClient client = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\AddMedication.json", HttpStatusCode.OK));
 
-            MedicationAddedResponse response = await patientClient.AddMedication(100, new AddMedication(1, 296232));
+            MedicationAddedResponse response = await client.AddMedication(100, new AddMedication(1, 296232));
 
             response.MedicationEntryId.ShouldNotBeNullOrWhiteSpace();
             response.IsSuccess.ShouldBeTrue();
@@ -751,25 +751,25 @@ namespace AthenaHealth.Sdk.Tests.Integration
         [Fact]
         public void SetMedicationSettings_ValidData_NotThrowsException()
         {
-            IPatientClient patientClient = new PatientClient(ConnectionFactory.Create("{\"success\": true}", HttpStatusCode.OK));
+            IPatientClient client = new PatientClient(ConnectionFactory.Create("{\"success\": true}", HttpStatusCode.OK));
 
-            Should.NotThrow(async () 
-                => await patientClient.SetMedicationSettings(100, new MedicationSetting(1, "Test 123", false))
+            Should.NotThrow(async ()
+                => await client.SetMedicationSettings(100, new MedicationSetting(1, "Test 123", false))
                 );
         }
 
         [Fact]
         public void SetPatientDefaultLaboratory_NotThrowsException()
         {
-            IPatientClient patientClient = new PatientClient(ConnectionFactory.Create("{\"success\": true}", HttpStatusCode.OK));
+            IPatientClient client = new PatientClient(ConnectionFactory.Create("{\"success\": true}", HttpStatusCode.OK));
 
-            Should.NotThrow(async () => await patientClient.SetPatientDefaultLaboratory(1, 1, 10943173));
+            Should.NotThrow(async () => await client.SetPatientDefaultLaboratory(1, 1, 10943173));
         }
 
         [Fact]
         public void SetAllergies_NotThrowsException()
         {
-            IPatientClient patientClient = new PatientClient(ConnectionFactory.Create("{\"success\": true}", HttpStatusCode.OK));
+            IPatientClient client = new PatientClient(ConnectionFactory.Create("{\"success\": true}", HttpStatusCode.OK));
             SetPatientAllergies request = new SetPatientAllergies(1)
             {
                 SectionNote = "test",
@@ -794,15 +794,15 @@ namespace AthenaHealth.Sdk.Tests.Integration
                 }
             };
 
-            Should.NotThrow(async () => await patientClient.SetAllergies(111, request));
+            Should.NotThrow(async () => await client.SetAllergies(111, request));
         }
 
         [Fact]
         public async Task CreateInsurance_ValidData_ReturnsInsurance()
         {
-            IPatientClient patientClient = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\CreateInsurance.json", HttpStatusCode.OK));
+            IPatientClient client = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\CreateInsurance.json", HttpStatusCode.OK));
 
-            Insurance response = await patientClient.CreateInsurance(100,
+            Insurance response = await client.CreateInsurance(100,
                 new CreateInsurance(31724, SequenceEnum.Primary, "1842", "Test1", "Test2", SexEnum.Male));
 
             response.InsuranceId.HasValue.ShouldBeTrue();
@@ -811,29 +811,29 @@ namespace AthenaHealth.Sdk.Tests.Integration
         [Fact]
         public void DeleteInsurance_NotThrowsException()
         {
-            IPatientClient patientClient = new PatientClient(ConnectionFactory.Create("{\"success\": true}", HttpStatusCode.OK));
-           
-            Should.NotThrow(async () => await patientClient.DeleteInsurance(100, SequenceEnum.Primary));
+            IPatientClient client = new PatientClient(ConnectionFactory.Create("{\"success\": true}", HttpStatusCode.OK));
+
+            Should.NotThrow(async () => await client.DeleteInsurance(100, SequenceEnum.Primary));
         }
 
         [Fact]
         public void UpdateInsurance_NotThrowsException()
         {
-            IPatientClient patientClient = new PatientClient(ConnectionFactory.Create("{\"success\": true}", HttpStatusCode.OK));
+            IPatientClient client = new PatientClient(ConnectionFactory.Create("{\"success\": true}", HttpStatusCode.OK));
 
             var insurance = new CreateInsurance(31724, SequenceEnum.Primary, "1842", "Test1", "Test2", SexEnum.Male);
 
-            Should.NotThrow(async () => await patientClient.UpdateInsurance(100, insurance));
+            Should.NotThrow(async () => await client.UpdateInsurance(100, insurance));
         }
 
         [Fact]
         public async Task GetPrivacyInformation_ReturnsResult()
         {
             // Arrange
-            IPatientClient patientClient = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetPrivacyInformation.json", HttpStatusCode.OK));
+            IPatientClient client = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetPrivacyInformation.json", HttpStatusCode.OK));
 
             // Act
-            var result = await patientClient.GetPrivacyInformation(34772, 1);
+            var result = await client.GetPrivacyInformation(34772, 1);
 
             // Assert
             result.ShouldNotBeNull();
@@ -844,7 +844,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public async Task SetPrivacyInformation_ValidRequest_ReturnsPatientId()
         {
             // Arrange
-            IPatientClient patientClient = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\SetPrivacyInformation.json", HttpStatusCode.OK));
+            IPatientClient client = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\SetPrivacyInformation.json", HttpStatusCode.OK));
 
             SetPrivacyInformation request = new SetPrivacyInformation(
                 1,
@@ -856,7 +856,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
 
 
             // Act
-            var result = await patientClient.SetPrivacyInformation(patientId, request);
+            var result = await client.SetPrivacyInformation(patientId, request);
 
             // Assert
             result.ShouldNotBeNull();
@@ -867,10 +867,10 @@ namespace AthenaHealth.Sdk.Tests.Integration
         public async Task CreateOrderGroup_ValidRequest_ReturnsEncounterId()
         {
             // Arrange
-            IPatientClient patientClient = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\CreateOrderGroup.json", HttpStatusCode.OK));
+            IPatientClient client = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\CreateOrderGroup.json", HttpStatusCode.OK));
 
             // Act
-            var result = await patientClient.CreateOrderGroup(34772, new CreateOrderGroup(1));
+            var result = await client.CreateOrderGroup(34772, new CreateOrderGroup(1));
 
             // Assert
             result.ShouldNotBeNull();

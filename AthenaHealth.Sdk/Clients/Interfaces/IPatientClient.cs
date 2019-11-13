@@ -262,6 +262,7 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// </summary>
         /// <param name="patientId"></param>
         /// <returns></returns>
+        [Endpoint]
         Task<UpdatePatientResponse> DeletePatient(int patientId);
 
         /// <summary>
