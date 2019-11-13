@@ -11,5 +11,9 @@ namespace AthenaHealth.Sdk
         {
             Name = name;
         }
+
+        public EndpointAttribute()
+        {
+        }
     }
 }

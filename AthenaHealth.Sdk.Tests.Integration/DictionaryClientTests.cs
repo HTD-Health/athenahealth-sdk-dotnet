@@ -1,4 +1,5 @@
 ﻿using AthenaHealth.Sdk.Clients;
+using AthenaHealth.Sdk.Clients.Interfaces;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
 using AthenaHealth.Sdk.Tests.Integration.TestingHelpers;
@@ -15,7 +16,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         [Fact]
         public async Task GetProviderTypes_ReturnsRecords()
         {
-            var client = new DictionaryClient(ConnectionFactory.CreateFromFile(@"Data\Dictionary\GetProviderTypes.json"));
+            IDictionaryClient client = new DictionaryClient(ConnectionFactory.CreateFromFile(@"Data\Dictionary\GetProviderTypes.json"));
 
             var response = await client.GetProviderTypes();
 
@@ -27,7 +28,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         [Fact]
         public async Task GetPaymentMethods_ReturnsRecords()
         {
-            var client = new DictionaryClient(ConnectionFactory.CreateFromFile(@"Data\Dictionary\GetPaymentMethods.json"));
+            IDictionaryClient client = new DictionaryClient(ConnectionFactory.CreateFromFile(@"Data\Dictionary\GetPaymentMethods.json"));
 
             var response = await client.GetPaymentMethods();
 
@@ -39,7 +40,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         [Fact]
         public async Task GetMedicalHistoryQuestions_ReturnsRecords()
         {
-            var client = new DictionaryClient(ConnectionFactory.CreateFromFile(@"Data\Dictionary\GetMedicalHistoryQuestions.json"));
+            IDictionaryClient client = new DictionaryClient(ConnectionFactory.CreateFromFile(@"Data\Dictionary\GetMedicalHistoryQuestions.json"));
 
             var response = await client.GetMedicalHistoryQuestions(new GetMedicalHistoryQuestionsFilter()
             {
@@ -54,7 +55,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         [Fact]
         public async Task GetSocialHistoryTemplates_ReturnsRecords()
         {
-            var client = new DictionaryClient(ConnectionFactory.CreateFromFile(@"Data\Dictionary\GetSocialHistoryTemplates.json"));
+            IDictionaryClient client = new DictionaryClient(ConnectionFactory.CreateFromFile(@"Data\Dictionary\GetSocialHistoryTemplates.json"));
 
             var response = await client.GetSocialHistoryTemplates();
 
@@ -65,7 +66,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         [Fact]
         public async Task SearchOrderTypesByName_TwoDigitsNamePart_ReturnsRecords()
         {
-            var client = new DictionaryClient(ConnectionFactory.CreateFromFile(@"Data\Dictionary\SearchOrderTypesByName.json"));
+            IDictionaryClient client = new DictionaryClient(ConnectionFactory.CreateFromFile(@"Data\Dictionary\SearchOrderTypesByName.json"));
 
             OrderType[] response = await client.SearchOrderTypesByName("ol");
 
@@ -79,7 +80,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         [Fact]
         public async Task SearchMedicationsByName_TwoDigitsNamePart_ReturnsRecords()
         {
-            var client = new DictionaryClient(ConnectionFactory.CreateFromFile(@"Data\Dictionary\SearchMedicationsByName.json"));
+            IDictionaryClient client = new DictionaryClient(ConnectionFactory.CreateFromFile(@"Data\Dictionary\SearchMedicationsByName.json"));
 
             var response = await client.SearchMedicationsByName("ol");
 
@@ -93,7 +94,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         [Fact]
         public async Task SearchAllergiesByName_TwoDigitsNamePart_ReturnsRecords()
         {
-            var client = new DictionaryClient(ConnectionFactory.CreateFromFile(@"Data\Dictionary\SearchAllergiesByName.json"));
+            IDictionaryClient client = new DictionaryClient(ConnectionFactory.CreateFromFile(@"Data\Dictionary\SearchAllergiesByName.json"));
 
             var response = await client.SearchAllergiesByName("ol");
 

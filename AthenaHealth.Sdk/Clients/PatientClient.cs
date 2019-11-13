@@ -418,6 +418,7 @@ namespace AthenaHealth.Sdk.Clients
         /// </summary>
         /// <param name="patientId"></param>
         /// <returns></returns>
+        [Endpoint]
         public async Task<UpdatePatientResponse> DeletePatient(int patientId)
         {
             UpdatePatient request = new UpdatePatient()

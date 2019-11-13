@@ -14,8 +14,10 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// </summary>
         /// <param name="filter"></param>
         /// <returns></returns>
+        [Endpoint]
         Task<Practice> GetCurrentPractice(BaseLimitFilter filter = null);
 
+        [Endpoint]
         Task<PracticeResponse> GetAll(BaseLimitFilter filter = null);
     }
 }

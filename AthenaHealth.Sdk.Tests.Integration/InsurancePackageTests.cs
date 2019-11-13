@@ -1,11 +1,12 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
-using AthenaHealth.Sdk.Tests.Integration.TestingHelpers;
-using Shouldly;
-using Xunit;
-using AthenaHealth.Sdk.Clients;
+﻿using AthenaHealth.Sdk.Clients;
+using AthenaHealth.Sdk.Clients.Interfaces;
 using AthenaHealth.Sdk.Models.Enums;
 using AthenaHealth.Sdk.Models.Request;
+using AthenaHealth.Sdk.Tests.Integration.TestingHelpers;
+using Shouldly;
+using System.Linq;
+using System.Threading.Tasks;
+using Xunit;
 
 namespace AthenaHealth.Sdk.Tests.Integration
 {
@@ -14,7 +15,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         [Fact]
         public async Task GetTop_ReturnsRecords()
         {
-            var client = new InsurancePackageClient(ConnectionFactory.CreateFromFile(@"Data\InsurancePackage\GetTop.json"));
+            IInsurancePackageClient client = new InsurancePackageClient(ConnectionFactory.CreateFromFile(@"Data\InsurancePackage\GetTop.json"));
 
             var response = await client.GetTop();
 
@@ -33,7 +34,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         [Fact]
         public async Task GetCommon_ReturnsRecord()
         {
-            var client = new InsurancePackageClient(ConnectionFactory.CreateFromFile(@"Data\InsurancePackage\GetCommon.json"));
+            IInsurancePackageClient client = new InsurancePackageClient(ConnectionFactory.CreateFromFile(@"Data\InsurancePackage\GetCommon.json"));
 
             var response = await client.GetCommon();
 
@@ -46,7 +47,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         [Fact]
         public async Task Search_ValidModel_ReturnsRecords()
         {
-            var client = new InsurancePackageClient(ConnectionFactory.CreateFromFile(@"Data\InsurancePackage\Search.json"));
+            IInsurancePackageClient client = new InsurancePackageClient(ConnectionFactory.CreateFromFile(@"Data\InsurancePackage\Search.json"));
 
             var response = await client.Search(new SearchInsuranceFilter("*SELF PAY*", "1")
             {

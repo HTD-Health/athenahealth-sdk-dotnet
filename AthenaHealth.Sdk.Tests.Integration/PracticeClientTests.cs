@@ -1,9 +1,10 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
+﻿using AthenaHealth.Sdk.Clients;
+using AthenaHealth.Sdk.Clients.Interfaces;
 using AthenaHealth.Sdk.Tests.Integration.TestingHelpers;
 using Shouldly;
+using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
-using AthenaHealth.Sdk.Clients;
 
 // ReSharper disable StringLiteralTypo
 namespace AthenaHealth.Sdk.Tests.Integration
@@ -13,7 +14,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         [Fact]
         public async Task GetAll_ReturnsRecords()
         {
-            var client = new PracticeClient(ConnectionFactory.CreateFromFile(@"Data\Practice\GetAll.json"));
+            IPracticeClient client = new PracticeClient(ConnectionFactory.CreateFromFile(@"Data\Practice\GetAll.json"));
 
             var response = await client.GetAll();
 
@@ -26,7 +27,7 @@ namespace AthenaHealth.Sdk.Tests.Integration
         [Fact]
         public async Task GetById_ExistingId_ReturnsRecord()
         {
-            var client = new PracticeClient(ConnectionFactory.CreateFromFile(@"Data\Practice\GetById.json"));
+            IPracticeClient client = new PracticeClient(ConnectionFactory.CreateFromFile(@"Data\Practice\GetById.json"));
 
             var response = await client.GetById(195900);
 
