@@ -3,7 +3,6 @@
 // ReSharper disable CommentTypo
 // ReSharper disable StringLiteralTypo
 // ReSharper disable IdentifierTypo
-
 namespace AthenaHealth.Sdk.Models.Response
 {
     public class EncounterOrdersResponse
@@ -282,5 +281,4 @@ namespace AthenaHealth.Sdk.Models.Response
         [JsonProperty("clianumber")]
         public string CliaNumber { get; set; }
     }
-
 }

@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using AthenaHealth.Sdk.Models.Converters;
+﻿using AthenaHealth.Sdk.Models.Converters;
 using Newtonsoft.Json;
-// ReSharper disable StringLiteralTypo
+using System;
 
+// ReSharper disable StringLiteralTypo
 namespace AthenaHealth.Sdk.Models.Response
 {
     public abstract class AppointmentBase
@@ -32,7 +30,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// </summary>
         [JsonProperty("frozen")]
         public bool Frozen { get; set; }
-        
+
         /// <summary>
         /// The practice-friendly (not patient friendly) name for this appointment type.  Note that this may not be the same as the booked appointment because of "generic" slots.
         /// </summary>
@@ -50,32 +48,32 @@ namespace AthenaHealth.Sdk.Models.Response
         /// </summary>
         [JsonProperty("date")]
         public DateTime? Date { get; set; }
-        
+
         /// <summary>
         /// The patient-friendly name for this appointment type.  Note that this may not be the same as the booked appointment because of "generic" slots.
         /// </summary>
         [JsonProperty("patientappointmenttypename")]
         public string PatientAppointmentTypeName { get; set; }
-        
+
         /// <summary>
         /// 
         /// </summary>
         [JsonProperty("providerid")]
         public int? ProviderId { get; set; }
-        
+
         /// <summary>
         /// As HH:MM (where HH is the 0-23 hour and MM is the minute).  This time is local to the department.
         /// </summary>
         [JsonProperty("starttime")]
         [JsonConverter(typeof(CustomClockTimeConverter))]
-        public ClockTime? StartTime { get; set; } 
-        
+        public ClockTime? StartTime { get; set; }
+
         /// <summary>
         /// The rendering provider ID.
         /// </summary>
         [JsonProperty("renderingproviderid")]
         public int? RenderingProviderId { get; set; }
-        
+
         /// <summary>
         /// 
         /// </summary>

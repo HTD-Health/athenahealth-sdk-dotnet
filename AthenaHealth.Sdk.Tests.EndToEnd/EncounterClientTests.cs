@@ -1,14 +1,14 @@
-﻿using System;
-using System.Linq;
-using System.Net;
-using System.Threading.Tasks;
-using AthenaHealth.Sdk.Exceptions;
+﻿using AthenaHealth.Sdk.Exceptions;
 using AthenaHealth.Sdk.Models.Enums;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
 using AthenaHealth.Sdk.Tests.EndToEnd.Data.Encounter;
 using AthenaHealth.Sdk.Tests.EndToEnd.Fixtures;
 using Shouldly;
+using System;
+using System.Linq;
+using System.Net;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace AthenaHealth.Sdk.Tests.EndToEnd
@@ -208,7 +208,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         }
 
         [Fact]
-        public async Task CreateOrderLab_InvalidOrderTypeId_ThrowsApiValidationException ()
+        public async Task CreateOrderLab_InvalidOrderTypeId_ThrowsApiValidationException()
         {
             var model = new CreateOrderLab(0, "52967002");
 

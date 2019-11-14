@@ -1,14 +1,14 @@
 ﻿using AthenaHealth.Sdk.Exceptions;
+using AthenaHealth.Sdk.Http.Adapter;
+using AthenaHealth.Sdk.Http.Helpers;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using AthenaHealth.Sdk.Http.Adapter;
-using AthenaHealth.Sdk.Http.Helpers;
-using System.Diagnostics;
 
 namespace AthenaHealth.Sdk.Http
 {

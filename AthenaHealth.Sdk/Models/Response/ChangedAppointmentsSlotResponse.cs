@@ -1,15 +1,17 @@
-﻿using System;
-using AthenaHealth.Sdk.Models.Converters;
+﻿using AthenaHealth.Sdk.Models.Converters;
 using AthenaHealth.Sdk.Models.Response.Interfaces;
 using Newtonsoft.Json;
-// ReSharper disable StringLiteralTypo
+using System;
 
+// ReSharper disable StringLiteralTypo
 namespace AthenaHealth.Sdk.Models.Response
 {
     public class ChangedAppointmentsSlotResponse : IPagingResponse<ChangedAppointmentSlot>
     {
         public int Total { get; set; }
+
         public string Next { get; set; }
+
         public string Previous { get; set; }
 
         [JsonProperty("appointments")]

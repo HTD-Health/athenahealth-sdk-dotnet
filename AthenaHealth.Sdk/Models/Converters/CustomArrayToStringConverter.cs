@@ -1,5 +1,5 @@
-﻿using System;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
+using System;
 
 namespace AthenaHealth.Sdk.Models.Converters
 {
@@ -11,6 +11,7 @@ namespace AthenaHealth.Sdk.Models.Converters
     public class CustomArrayToStringConverter : JsonConverter
     {
         private readonly string _delimiter;
+
         private readonly bool _emptyInsteadOfNull;
 
         public CustomArrayToStringConverter() : this(",")
@@ -18,7 +19,7 @@ namespace AthenaHealth.Sdk.Models.Converters
         }
 
         public CustomArrayToStringConverter(string delimiter) : this(delimiter, false)
-        { 
+        {
         }
 
         public CustomArrayToStringConverter(string delimiter, bool emptyInsteadOfNull)

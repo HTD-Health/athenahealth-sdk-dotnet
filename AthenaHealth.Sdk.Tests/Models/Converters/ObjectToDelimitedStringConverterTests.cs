@@ -1,6 +1,4 @@
-﻿using System;
-using AthenaHealth.Sdk.Http.Helpers;
-using AthenaHealth.Sdk.Models.Converters;
+﻿using AthenaHealth.Sdk.Models.Converters;
 using Shouldly;
 using Xunit;
 

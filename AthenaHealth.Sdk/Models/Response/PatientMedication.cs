@@ -72,21 +72,21 @@ namespace AthenaHealth.Sdk.Models.Response
         public class Medication
         {
             [JsonProperty("clinicalordertypeid")]
-            public string ClinicalOrderTypeId { get; set; } 
+            public string ClinicalOrderTypeId { get; set; }
 
-             [JsonProperty("lastmodifieddate")]
+            [JsonProperty("lastmodifieddate")]
             [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
-            public DateTime? LastModifiedDate { get; set; } 
-            
-             [JsonProperty("lastmodifiedby")]
-            public string LastModifiedBy { get; set; } 
+            public DateTime? LastModifiedDate { get; set; }
+
+            [JsonProperty("lastmodifiedby")]
+            public string LastModifiedBy { get; set; }
 
             [JsonProperty("fdbmedicationid")]
-            public string FdbMedicationId { get; set; } 
+            public string FdbMedicationId { get; set; }
 
-             [JsonProperty("fdbgenericmedicationnameid")]
-            public string FdbGenericMedicationNameId { get; set; } 
-            
+            [JsonProperty("fdbgenericmedicationnameid")]
+            public string FdbGenericMedicationNameId { get; set; }
+
             /// <summary>
             /// The list of events for this medication. Can be START, END, ORDER, ENTER, FILL, or HIDE.
             /// </summary>

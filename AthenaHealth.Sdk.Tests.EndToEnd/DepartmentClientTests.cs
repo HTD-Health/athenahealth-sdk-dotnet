@@ -1,12 +1,12 @@
-﻿using System.Linq;
-using System.Net;
-using System.Threading.Tasks;
-using AthenaHealth.Sdk.Exceptions;
+﻿using AthenaHealth.Sdk.Exceptions;
 using AthenaHealth.Sdk.Models.Enums;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
 using AthenaHealth.Sdk.Tests.EndToEnd.Fixtures;
 using Shouldly;
+using System.Linq;
+using System.Net;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace AthenaHealth.Sdk.Tests.EndToEnd
@@ -44,7 +44,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         public async Task GetAll_ProviderListRequested_ReturnedRecordsWithProviders()
         {
             DepartmentResponse response = await _client.Departments
-                .GetAll(new GetDepartmentFilter() { ProviderList = true });
+                .GetAll(new GetDepartmentsFilter() { ProviderList = true });
 
             if (response.Total > 0)
             {
@@ -64,10 +64,10 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         public async Task GetAll_ShowAllDepartments_ReturnsMoreRecords()
         {
             DepartmentResponse hiddenDepartmentResponse = await _client.Departments
-                .GetAll(new GetDepartmentFilter() { ShowAllDepartments = true });
+                .GetAll(new GetDepartmentsFilter() { ShowAllDepartments = true });
 
             DepartmentResponse onlyShownDepartmentResponse = await _client.Departments
-                .GetAll(new GetDepartmentFilter() { ShowAllDepartments = false });
+                .GetAll(new GetDepartmentsFilter() { ShowAllDepartments = false });
 
             if (hiddenDepartmentResponse.Total > 0 && onlyShownDepartmentResponse.Total > 0)
             {
@@ -83,7 +83,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         public async Task GetAll_HospitalOnly_ReturnsOnlyHospitalDepartments()
         {
             DepartmentResponse departmentResponse = await _client.Departments
-                .GetAll(new GetDepartmentFilter() { HospitalOnly = true });
+                .GetAll(new GetDepartmentsFilter() { HospitalOnly = true });
 
             if (departmentResponse.Total > 0)
             {
@@ -100,7 +100,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         public async Task GetAll_LimitEqual5_ReturnsOnly5Records()
         {
             DepartmentResponse departmentResponse = await _client.Departments
-                .GetAll(new GetDepartmentFilter() { Limit = 5 });
+                .GetAll(new GetDepartmentsFilter() { Limit = 5 });
 
             if (departmentResponse.Total > 0)
             {
@@ -132,7 +132,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         [Fact]
         public void GetById_NotExistingId_ThrowsApiException()
         {
-             Should.Throw<ApiValidationException>(async () => await _client.Departments.GetById(999));
+            Should.Throw<ApiValidationException>(async () => await _client.Departments.GetById(999));
         }
 
         [Fact]

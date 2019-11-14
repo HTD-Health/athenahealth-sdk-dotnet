@@ -1,22 +1,14 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using AthenaHealth.Sdk.Models.Converters;
+﻿using AthenaHealth.Sdk.Models.Converters;
 using Newtonsoft.Json;
+using System;
+using System.ComponentModel.DataAnnotations;
+
 // ReSharper disable StringLiteralTypo
 // ReSharper disable CommentTypo
-
 namespace AthenaHealth.Sdk.Models.Request
 {
     public class CreateAppointmentSlot
     {
-        public CreateAppointmentSlot(int departmentId, int providerId, DateTime appointmentDate, ClockTime[] appointmentTime)
-        {
-            DepartmentId = departmentId;
-            ProviderId = providerId;
-            AppointmentDate = appointmentDate;
-            AppointmentTime = appointmentTime;
-        }
-
         /// <summary>
         /// The appointment date for the new open appointment slot (mm/dd/yyyy).
         /// </summary>
@@ -58,5 +50,13 @@ namespace AthenaHealth.Sdk.Models.Request
         /// </summary>
         [JsonProperty("reasonid")]
         public int? ReasonId { get; set; }
+
+        public CreateAppointmentSlot(int departmentId, int providerId, DateTime appointmentDate, ClockTime[] appointmentTime)
+        {
+            DepartmentId = departmentId;
+            ProviderId = providerId;
+            AppointmentDate = appointmentDate;
+            AppointmentTime = appointmentTime;
+        }
     }
 }

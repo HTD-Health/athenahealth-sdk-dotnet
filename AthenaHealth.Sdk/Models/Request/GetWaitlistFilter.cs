@@ -1,8 +1,8 @@
 ﻿using AthenaHealth.Sdk.Models.Converters;
 using AthenaHealth.Sdk.Models.Enums;
 using Newtonsoft.Json;
-// ReSharper disable StringLiteralTypo
 
+// ReSharper disable StringLiteralTypo
 namespace AthenaHealth.Sdk.Models.Request
 {
     public class GetWaitlistFilter

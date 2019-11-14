@@ -7,7 +7,7 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
     public interface IPracticeClient
     {
         [Endpoint("GET /practiceinfo")]
-        Task<Practice> GetById(int practiceId, BaseLimitFilter filter = null);
+        Task<Practice> GetById(int practiceId, GetPracticeFilter filter = null);
 
         /// <summary>
         /// Returns <see cref="Practice"/> for <see cref="IAthenaHealthClient.PracticeId"/>.
@@ -15,9 +15,9 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// <param name="filter"></param>
         /// <returns></returns>
         [Endpoint]
-        Task<Practice> GetCurrentPractice(BaseLimitFilter filter = null);
+        Task<Practice> GetCurrentPractice(GetPracticeFilter filter = null);
 
         [Endpoint]
-        Task<PracticeResponse> GetAll(BaseLimitFilter filter = null);
+        Task<PracticeResponse> GetAll(GetPracticeFilter filter = null);
     }
 }

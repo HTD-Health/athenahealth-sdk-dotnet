@@ -1,18 +1,11 @@
-﻿using AthenaHealth.Sdk.Models.Enums;
-using AthenaHealth.Sdk.Models.Request.Interfaces;
+﻿using AthenaHealth.Sdk.Models.Request.Interfaces;
 using Newtonsoft.Json;
-// ReSharper disable StringLiteralTypo
 
+// ReSharper disable StringLiteralTypo
 namespace AthenaHealth.Sdk.Models.Request
 {
     public class GetAppointmentReasonsFilter : IPagingFilter
     {
-        public GetAppointmentReasonsFilter(int departmentId, int providerId)
-        {
-            DepartmentId = departmentId;
-            ProviderId = providerId;
-        }
-
         /// <summary>
         /// The athenaNet department ID.
         /// </summary>
@@ -34,5 +27,11 @@ namespace AthenaHealth.Sdk.Models.Request
         /// Starting point of entries; 0-indexed
         /// </summary>
         public int? Offset { get; set; }
+
+        public GetAppointmentReasonsFilter(int departmentId, int providerId)
+        {
+            DepartmentId = departmentId;
+            ProviderId = providerId;
+        }
     }
 }

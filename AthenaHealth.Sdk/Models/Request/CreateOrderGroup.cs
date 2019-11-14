@@ -4,11 +4,6 @@ namespace AthenaHealth.Sdk.Models.Request
 {
     public class CreateOrderGroup
     {
-        public CreateOrderGroup(int departmentId)
-        {
-            DepartmentId = departmentId;
-        }
-
         /// <summary>
         /// The department to use for the order group.
         /// </summary>
@@ -24,5 +19,10 @@ namespace AthenaHealth.Sdk.Models.Request
         /// The ID of the patient case generating this new order group.
         /// </summary>
         public int? PatientCaseId { get; set; }
+
+        public CreateOrderGroup(int departmentId)
+        {
+            DepartmentId = departmentId;
+        }
     }
 }

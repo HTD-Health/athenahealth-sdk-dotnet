@@ -1,15 +1,11 @@
 ﻿using AthenaHealth.Sdk.Models.Request.Interfaces;
 using Newtonsoft.Json;
-// ReSharper disable StringLiteralTypo
 
+// ReSharper disable StringLiteralTypo
 namespace AthenaHealth.Sdk.Models.Request
 {
     public class GetPreferredPharmacyFilter : IPagingFilter
     {
-        public GetPreferredPharmacyFilter(int departmentId)
-        {
-            DepartmentId = departmentId;
-        }
         /// <summary>
         /// The athenaNet department id.
         /// </summary>
@@ -25,5 +21,10 @@ namespace AthenaHealth.Sdk.Models.Request
         /// Starting point of entries; 0-indexed
         /// </summary>
         public int? Offset { get; set; }
+
+        public GetPreferredPharmacyFilter(int departmentId)
+        {
+            DepartmentId = departmentId;
+        }
     }
 }

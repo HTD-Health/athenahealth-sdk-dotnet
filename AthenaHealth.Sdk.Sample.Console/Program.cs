@@ -1,11 +1,11 @@
-﻿using System;
-using System.Threading.Tasks;
-using AthenaHealth.Sdk.Exceptions;
+﻿using AthenaHealth.Sdk.Exceptions;
 using AthenaHealth.Sdk.Models.Enums;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
 using AthenaHealth.Sdk.Sample.Console.Enums;
 using AthenaHealth.Sdk.Sample.Console.Extensions;
+using System;
+using System.Threading.Tasks;
 
 namespace AthenaHealth.Sdk.Sample.Console
 {
@@ -191,7 +191,6 @@ namespace AthenaHealth.Sdk.Sample.Console
                 response.Display();
             });
         }
-
 
         private static void DisplayDepartmentSample(AthenaHealthClient client)
         {

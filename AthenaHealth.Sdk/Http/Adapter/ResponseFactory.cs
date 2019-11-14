@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -10,7 +9,7 @@ namespace AthenaHealth.Sdk.Http.Adapter
     {
         public static async Task<Response> Create(HttpResponseMessage httpResponse)
         {
-            
+
 
             object responseBody = null;
             string contentType = null;
@@ -47,7 +46,7 @@ namespace AthenaHealth.Sdk.Http.Adapter
             return response;
         }
 
-        static string GetContentMediaType(HttpContent httpContent)
+        public static string GetContentMediaType(HttpContent httpContent)
         {
             if (httpContent.Headers != null && httpContent.Headers.ContentType != null)
             {

@@ -2,7 +2,6 @@
 using Newtonsoft.Json;
 
 // ReSharper disable StringLiteralTypo
-
 namespace AthenaHealth.Sdk.Models.Request
 {
     public class GetPatientAppointmentFilter : IPagingFilter
@@ -12,7 +11,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// </summary>
         [JsonProperty("showcancelled")]
         public bool? ShowCancelled { get; set; }
-        
+
         /// <summary>
         /// Show expected procedure codes.	
         /// </summary>

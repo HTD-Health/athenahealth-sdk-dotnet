@@ -10,6 +10,13 @@ namespace AthenaHealth.Sdk.Models.Response
         [JsonProperty("subscriptions")]
         public Subscription[] Subscriptions { get; set; }
 
+        /// <summary>
+        /// Will return one of following statuses: ACTIVE, INACTIVE, or PARTIAL. The PARTIAL status
+        /// means that not all events are subscribed to. In the event of a problem, UNKNOWN may be returned.
+        /// </summary>
+        [JsonProperty("status")]
+        public string Status { get; set; }
+
         public class Subscription
         {
             /// <summary>
@@ -18,12 +25,5 @@ namespace AthenaHealth.Sdk.Models.Response
             [JsonProperty("eventname")]
             public string EventName { get; set; }
         }
-
-        /// <summary>
-        /// Will return one of following statuses: ACTIVE, INACTIVE, or PARTIAL. The PARTIAL status
-        /// means that not all events are subscribed to. In the event of a problem, UNKNOWN may be returned.
-        /// </summary>
-        [JsonProperty("status")]
-        public string Status { get; set; }
     }
 }

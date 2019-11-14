@@ -10,18 +10,15 @@ namespace AthenaHealth.Sdk.Models.Converters
 
         public override bool CanWrite => true;
 
-
         public CustomClockTimeConverter()
         {
         }
-
-
 
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {
             try
             {
-                TimeSpan timeSpan = TimeSpan.ParseExact((string) reader.Value, @"hh\:mm", CultureInfo.InvariantCulture);
+                TimeSpan timeSpan = TimeSpan.ParseExact((string)reader.Value, @"hh\:mm", CultureInfo.InvariantCulture);
                 return new ClockTime(timeSpan.Hours, timeSpan.Minutes);
             }
             catch

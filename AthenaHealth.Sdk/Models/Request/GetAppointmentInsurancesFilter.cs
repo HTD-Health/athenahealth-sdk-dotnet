@@ -1,21 +1,17 @@
 ﻿using AthenaHealth.Sdk.Models.Request.Interfaces;
 using Newtonsoft.Json;
-// ReSharper disable StringLiteralTypo
 
+// ReSharper disable StringLiteralTypo
 namespace AthenaHealth.Sdk.Models.Request
 {
     public class GetAppointmentInsurancesFilter : IPagingFilter
     {
-        public GetAppointmentInsurancesFilter(int appointmentId)
-        {
-            AppointmentId = appointmentId;
-        }
-
         /// <summary>
         /// Appointment id
         /// </summary>
         [JsonProperty("appointmentid")]
         public int AppointmentId { get; set; }
+
         /// <summary>
         /// If set, will show full SSN instead of a masked number.
         /// </summary>
@@ -39,5 +35,10 @@ namespace AthenaHealth.Sdk.Models.Request
         /// </summary>
         [JsonProperty("offset")]
         public int? Offset { get; set; }
+
+        public GetAppointmentInsurancesFilter(int appointmentId)
+        {
+            AppointmentId = appointmentId;
+        }
     }
 }

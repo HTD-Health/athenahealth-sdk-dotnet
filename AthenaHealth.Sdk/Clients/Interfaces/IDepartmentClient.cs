@@ -7,7 +7,7 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
     public interface IDepartmentClient
     {
         [Endpoint("GET /departments")]
-        Task<DepartmentResponse> GetAll(GetDepartmentFilter filter = null);
+        Task<DepartmentResponse> GetAll(GetDepartmentsFilter filter = null);
 
         [Endpoint("GET /departments/{departmentid}")]
         Task<Department> GetById(int departmentId, GetDepartmentFilter filter = null);

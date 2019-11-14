@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
-using System.Reflection;
 using System.Web;
 
 namespace AthenaHealth.Sdk.Http.Helpers
@@ -219,8 +218,6 @@ namespace AthenaHealth.Sdk.Http.Helpers
 
             return uriBuilder.ToString();
         }
-
-      
 
         private static string BuildQueryParameters(string initialQuery, IDictionary<string, string> queryParameters)
         {

@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
-// ReSharper disable StringLiteralTypo
 
+// ReSharper disable StringLiteralTypo
 namespace AthenaHealth.Sdk.Models.Request
 {
     public class GetAppointmentFilter
@@ -10,7 +10,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// </summary>
         [JsonProperty("ignorerestrictions")]
         public bool IgnoreRestrictions { get; set; } = false;
-        
+
         /// <summary>
         /// Include claim information, if available, associated with an appointment.
         /// </summary>

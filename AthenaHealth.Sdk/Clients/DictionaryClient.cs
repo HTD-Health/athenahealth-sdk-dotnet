@@ -16,13 +16,13 @@ namespace AthenaHealth.Sdk.Clients
         }
 
         [Endpoint("GET /reference/providertypes")]
-        public async Task<ProviderTypeResponse> GetProviderTypes(BaseLimitFilter filter = null)
+        public async Task<ProviderTypeResponse> GetProviderTypes(GetProviderTypesFilter filter = null)
         {
             return await _connection.Get<ProviderTypeResponse>($"{_connection.PracticeId}/reference/providertypes", filter);
         }
 
         [Endpoint("GET /configuration/validnonccpcreditcardmethods")]
-        public async Task<PaymentMethodResponse> GetPaymentMethods(BaseLimitFilter filter = null)
+        public async Task<PaymentMethodResponse> GetPaymentMethods(GetPaymentMethodsFilter filter = null)
         {
             return await _connection.Get<PaymentMethodResponse>($"{_connection.PracticeId}/configuration/validnonccpcreditcardmethods", filter);
         }

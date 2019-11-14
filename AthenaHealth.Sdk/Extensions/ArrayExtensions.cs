@@ -1,7 +1,7 @@
-﻿using System;
+﻿using AthenaHealth.Sdk.Exceptions;
+using System;
 using System.Linq;
 using System.Net;
-using AthenaHealth.Sdk.Exceptions;
 
 namespace AthenaHealth.Sdk.Extensions
 {
@@ -12,7 +12,7 @@ namespace AthenaHealth.Sdk.Extensions
             if (list.Length == 0)
             {
                 //For some endpoints (e.g. GetAppointmentType) if you request for non existing item, you received 200OK and empty array. For others, Athena responds with 404. Here we make it more consistent for client. 
-                throw new ApiValidationException("Item not found", HttpStatusCode.NotFound); 
+                throw new ApiValidationException("Item not found", HttpStatusCode.NotFound);
             }
             if (list.Length > 1)
             {

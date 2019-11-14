@@ -1,8 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
+
 // ReSharper disable CommentTypo
 // ReSharper disable StringLiteralTypo
-
 namespace AthenaHealth.Sdk.Models.Request
 {
     public class BookAppointment

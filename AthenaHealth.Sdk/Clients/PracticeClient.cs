@@ -17,7 +17,7 @@ namespace AthenaHealth.Sdk.Clients
         }
 
         [Endpoint("GET /practiceinfo")]
-        public async Task<Practice> GetById(int practiceId, BaseLimitFilter filter = null)
+        public async Task<Practice> GetById(int practiceId, GetPracticeFilter filter = null)
         {
             PracticeResponse result = await _connection.Get<PracticeResponse>($"{practiceId}/practiceinfo", filter);
             return result.Items.FirstOrThrowException();
@@ -29,13 +29,13 @@ namespace AthenaHealth.Sdk.Clients
         /// <param name="filter"></param>
         /// <returns></returns>
         [Endpoint]
-        public async Task<Practice> GetCurrentPractice(BaseLimitFilter filter = null)
+        public async Task<Practice> GetCurrentPractice(GetPracticeFilter filter = null)
         {
             return await GetById(_connection.PracticeId, filter);
         }
 
         [Endpoint]
-        public async Task<PracticeResponse> GetAll(BaseLimitFilter filter = null)
+        public async Task<PracticeResponse> GetAll(GetPracticeFilter filter = null)
         {
             return await _connection.Get<PracticeResponse>($"1/practiceinfo", filter);
         }

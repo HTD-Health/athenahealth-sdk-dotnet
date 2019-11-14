@@ -1,7 +1,7 @@
-﻿using System;
+﻿using AthenaHealth.Sdk.Models.Response;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
-using AthenaHealth.Sdk.Models.Response;
 
 namespace AthenaHealth.Sdk.Sample.Console.Extensions
 {
@@ -178,7 +178,6 @@ namespace AthenaHealth.Sdk.Sample.Console.Extensions
 
             System.Console.WriteLine("--------------------");
         }
-
 
         public static T RunTaskSynchronously<T>(this Task<T> task)
         {

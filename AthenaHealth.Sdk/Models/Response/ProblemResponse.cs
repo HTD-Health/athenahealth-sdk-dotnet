@@ -134,8 +134,8 @@ namespace AthenaHealth.Sdk.Models.Response
             public class Event
             {
                 ///<summary>
-              /// List of encounter diagnoses that triggered this problem.
-              /// </summary>
+                /// List of encounter diagnoses that triggered this problem.
+                /// </summary>
                 [JsonProperty("diagnoses")]
                 public Diagnose[] Diagnoses { get; set; }
 

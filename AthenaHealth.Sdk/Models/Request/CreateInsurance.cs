@@ -1,30 +1,14 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using AthenaHealth.Sdk.Models.Converters;
+﻿using AthenaHealth.Sdk.Models.Converters;
 using AthenaHealth.Sdk.Models.Enums;
 using Newtonsoft.Json;
-// ReSharper disable StringLiteralTypo
+using System;
+using System.ComponentModel.DataAnnotations;
 
+// ReSharper disable StringLiteralTypo
 namespace AthenaHealth.Sdk.Models.Request
 {
     public class CreateInsurance
     {
-        public CreateInsurance(int insurancePackageId, SequenceEnum sequenceNumber)
-        {
-            InsurancePackageId = insurancePackageId;
-            SequenceNumber = sequenceNumber;
-        }
-
-        public CreateInsurance(int insurancePackageId, SequenceEnum sequenceNumber, string insuranceIdNumber, string insurancePolicyHolderFirstName, string insurancePolicyHolderLastName, SexEnum insurancePolicyHolderSex)
-            :this(insurancePackageId, sequenceNumber)
-        {
-            InsuranceIdNumber = insuranceIdNumber;
-            InsurancePolicyHolderFirstName = insurancePolicyHolderFirstName;
-            InsurancePolicyHolderLastName = insurancePolicyHolderLastName;
-            InsurancePolicyHolderSex = insurancePolicyHolderSex;
-        }
-
-
         /// <summary>
         /// If set, we will use the department id in an attempt to add to the local patient.
         /// </summary>
@@ -188,5 +172,20 @@ namespace AthenaHealth.Sdk.Models.Request
         /// </summary>
         [JsonProperty("validateinsuranceidnumber")]
         public bool ValidateInsuranceIdNumber { get; set; }
+
+        public CreateInsurance(int insurancePackageId, SequenceEnum sequenceNumber)
+        {
+            InsurancePackageId = insurancePackageId;
+            SequenceNumber = sequenceNumber;
+        }
+
+        public CreateInsurance(int insurancePackageId, SequenceEnum sequenceNumber, string insuranceIdNumber, string insurancePolicyHolderFirstName, string insurancePolicyHolderLastName, SexEnum insurancePolicyHolderSex)
+            : this(insurancePackageId, sequenceNumber)
+        {
+            InsuranceIdNumber = insuranceIdNumber;
+            InsurancePolicyHolderFirstName = insurancePolicyHolderFirstName;
+            InsurancePolicyHolderLastName = insurancePolicyHolderLastName;
+            InsurancePolicyHolderSex = insurancePolicyHolderSex;
+        }
     }
 }

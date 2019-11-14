@@ -1,12 +1,12 @@
 ﻿using AthenaHealth.Sdk.Exceptions;
 using AthenaHealth.Sdk.Http;
+using AthenaHealth.Sdk.Http.Adapter;
 using NSubstitute;
 using Shouldly;
 using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
-using AthenaHealth.Sdk.Http.Adapter;
 using Xunit;
 
 namespace AthenaHealth.Sdk.Tests.Http

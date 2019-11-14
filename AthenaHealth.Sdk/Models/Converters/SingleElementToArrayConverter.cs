@@ -38,18 +38,5 @@ namespace AthenaHealth.Sdk.Models.Converters
         {
             return objectType.IsArray;
         }
-
-        private JsonReader CopyReaderForObject(JsonReader reader, JObject jObject)
-        {
-            JsonReader jObjectReader = jObject.CreateReader();
-            jObjectReader.Culture = reader.Culture;
-            jObjectReader.DateFormatString = reader.DateFormatString;
-            jObjectReader.DateParseHandling = reader.DateParseHandling;
-            jObjectReader.DateTimeZoneHandling = reader.DateTimeZoneHandling;
-            jObjectReader.FloatParseHandling = reader.FloatParseHandling;
-            jObjectReader.MaxDepth = reader.MaxDepth;
-            jObjectReader.SupportMultipleContent = reader.SupportMultipleContent;
-            return jObjectReader;
-        }
     }
 }

@@ -1,15 +1,15 @@
-﻿using System.Linq;
-using System.Net;
-using System.Threading.Tasks;
-using AthenaHealth.Sdk.Exceptions;
+﻿using AthenaHealth.Sdk.Exceptions;
 using AthenaHealth.Sdk.Models.Enums;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
 using AthenaHealth.Sdk.Tests.EndToEnd.Fixtures;
 using Shouldly;
+using System.Linq;
+using System.Net;
+using System.Threading.Tasks;
 using Xunit;
-// ReSharper disable StringLiteralTypo
 
+// ReSharper disable StringLiteralTypo
 namespace AthenaHealth.Sdk.Tests.EndToEnd
 {
     public class InsurancePackageClientTests : IClassFixture<AthenaHealthClientFixture>

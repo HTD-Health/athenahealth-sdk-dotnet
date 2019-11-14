@@ -1,19 +1,16 @@
 ﻿using AthenaHealth.Sdk.Models.Response.Interfaces;
 using Newtonsoft.Json;
+
 // ReSharper disable StringLiteralTypo
 // ReSharper disable CommentTypo
-
 namespace AthenaHealth.Sdk.Models.Response
 {
     public class PharmacyResponse : IPagingResponse<Pharmacy>
     {
-        [JsonProperty("totalcount")]
         public int Total { get; set; }
 
-        [JsonProperty("next")]
         public string Next { get; set; }
-        
-        [JsonProperty("previous")]
+
         public string Previous { get; set; }
 
         [JsonProperty("pharmacies")]
@@ -99,8 +96,5 @@ namespace AthenaHealth.Sdk.Models.Response
         /// </summary>
         [JsonProperty("defaultpharmacy")]
         public bool DefaultPharmacy { get; set; }
-
-
-
     }
 }

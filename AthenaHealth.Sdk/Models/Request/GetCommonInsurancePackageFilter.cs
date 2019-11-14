@@ -1,6 +1,8 @@
-﻿namespace AthenaHealth.Sdk.Models.Request
+﻿using AthenaHealth.Sdk.Models.Request.Interfaces;
+
+namespace AthenaHealth.Sdk.Models.Request
 {
-    public class GetCommonInsurancePackageFilter : BaseLimitFilter
+    public class GetCommonInsurancePackageFilter : IPagingFilter
     {
         /// <summary>
         /// Only look at patients who are associated with this department's provider group in determining which insurance packages to list.
@@ -14,12 +16,20 @@
         /// </summary>
         public bool ShowOnlyCasePolicies { get; set; } = false;
 
-        public GetCommonInsurancePackageFilter(int departmentId, bool showOnlyCasePolicies = false, int limit = 1500, int offset = 0)
+        /// <summary>
+        /// Number of entries to return (default 1500, max 5000)
+        /// </summary>
+        public int? Limit { get; set; }
+
+        /// <summary>
+        /// Starting point of entries; 0-indexed
+        /// </summary>
+        public int? Offset { get; set; }
+
+        public GetCommonInsurancePackageFilter(int departmentId, bool showOnlyCasePolicies = false)
         {
             DepartmentId = departmentId;
             ShowOnlyCasePolicies = showOnlyCasePolicies;
-            Limit = limit;
-            Offset = offset;
         }
     }
 }

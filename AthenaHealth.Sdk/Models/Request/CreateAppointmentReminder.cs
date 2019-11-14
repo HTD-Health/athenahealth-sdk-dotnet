@@ -1,21 +1,13 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using AthenaHealth.Sdk.Models.Converters;
+﻿using AthenaHealth.Sdk.Models.Converters;
 using Newtonsoft.Json;
-// ReSharper disable StringLiteralTypo
+using System;
+using System.ComponentModel.DataAnnotations;
 
+// ReSharper disable StringLiteralTypo
 namespace AthenaHealth.Sdk.Models.Request
 {
     public class CreateAppointmentReminder
     {
-        public CreateAppointmentReminder(DateTime approximateDate, int appointmentTypeId, int patientId, int departmentId)
-        {
-            AppointmentTypeId = appointmentTypeId;
-            PatientId = patientId;
-            DepartmentId = departmentId;
-            ApproximateDate = approximateDate;
-        }
-
         /// <summary>
         /// The athenaNet department ID.
         /// </summary>
@@ -67,5 +59,13 @@ namespace AthenaHealth.Sdk.Models.Request
         /// </summary>
         [JsonProperty("patientinstructions")]
         public string PatientInstructions { get; set; }
+
+        public CreateAppointmentReminder(DateTime approximateDate, int appointmentTypeId, int patientId, int departmentId)
+        {
+            AppointmentTypeId = appointmentTypeId;
+            PatientId = patientId;
+            DepartmentId = departmentId;
+            ApproximateDate = approximateDate;
+        }
     }
 }

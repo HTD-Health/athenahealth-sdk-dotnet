@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using AthenaHealth.Sdk.Http.Helpers;
+﻿using AthenaHealth.Sdk.Http.Helpers;
 using Shouldly;
+using System;
+using System.Collections.Generic;
 using Xunit;
 
 namespace AthenaHealth.Sdk.Tests.Http.Helpers
