@@ -1,9 +1,8 @@
-﻿using System;
-using AthenaHealth.Sdk.Models.Converters;
+﻿using AthenaHealth.Sdk.Models.Converters;
 using Newtonsoft.Json;
+using System;
 
 // ReSharper disable StringLiteralTypo
-
 namespace AthenaHealth.Sdk.Models.Response
 {
     public class PrivacyInformationResponse

@@ -43,9 +43,5 @@ namespace AthenaHealth.Sdk.Models.Request
         /// </summary>
         [JsonProperty("providerids")]
         public int[] ProviderIds { get; set; }
-
-
-
     }
-
 }

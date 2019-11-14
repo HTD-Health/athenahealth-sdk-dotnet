@@ -1,18 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
+using System.ComponentModel.DataAnnotations;
+
 // ReSharper disable StringLiteralTypo
 // ReSharper disable CommentTypo
-
 namespace AthenaHealth.Sdk.Models.Request
 {
     public class CancelAppointment
     {
-        public CancelAppointment(int patientId, string cancellationReason)
-        {
-            PatientId = patientId;
-            CancellationReason = cancellationReason;
-        }
-
         /// <summary>
         /// Passing in this parameter will override the default cancel reason. Valid reasons can be retrieved via a call to the GET /appointmentcancelreasons endpoint.
         /// </summary>
@@ -46,6 +40,10 @@ namespace AthenaHealth.Sdk.Models.Request
         [JsonProperty("patientid")]
         public int PatientId { get; set; }
 
-
+        public CancelAppointment(int patientId, string cancellationReason)
+        {
+            PatientId = patientId;
+            CancellationReason = cancellationReason;
+        }
     }
 }

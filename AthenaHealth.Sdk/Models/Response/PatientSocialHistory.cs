@@ -45,7 +45,6 @@ namespace AthenaHealth.Sdk.Models.Response
             [JsonProperty("socialhistorystatus")]
             public string SocialHistoryStatus { get; set; }
 
-
             /// <summary>
             /// The patient answer to this question
             /// </summary>

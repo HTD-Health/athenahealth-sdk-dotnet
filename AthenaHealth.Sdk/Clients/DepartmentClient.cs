@@ -17,7 +17,7 @@ namespace AthenaHealth.Sdk.Clients
         }
 
         [Endpoint("GET /departments")]
-        public async Task<DepartmentResponse> GetAll(GetDepartmentFilter filter = null)
+        public async Task<DepartmentResponse> GetAll(GetDepartmentsFilter filter = null)
         {
             return await _connection.Get<DepartmentResponse>($"{_connection.PracticeId}/departments", filter);
         }

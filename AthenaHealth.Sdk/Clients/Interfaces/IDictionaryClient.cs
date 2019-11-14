@@ -12,7 +12,7 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// <param name="filter"></param>
         /// <returns></returns>
         [Endpoint("GET /reference/providertypes")]
-        Task<ProviderTypeResponse> GetProviderTypes(BaseLimitFilter filter = null);
+        Task<ProviderTypeResponse> GetProviderTypes(GetProviderTypesFilter filter = null);
 
         /// <summary>
         /// Retrieves a list of valid credit card methods for practices not using CCP for use with
@@ -21,7 +21,7 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// <param name="filter"></param>
         /// <returns></returns>
         [Endpoint("GET /configuration/validnonccpcreditcardmethods")]
-        Task<PaymentMethodResponse> GetPaymentMethods(BaseLimitFilter filter = null);
+        Task<PaymentMethodResponse> GetPaymentMethods(GetPaymentMethodsFilter filter = null);
 
         /// <summary>
         /// The list of matching orders alias autocomplete.

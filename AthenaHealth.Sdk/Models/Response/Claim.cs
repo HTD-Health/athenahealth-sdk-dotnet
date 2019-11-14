@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
-using Newtonsoft.Json;
-// ReSharper disable StringLiteralTypo
 
+// ReSharper disable StringLiteralTypo
 namespace AthenaHealth.Sdk.Models.Response
 {
     public class Claim

@@ -1,22 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using AthenaHealth.Sdk.Models.Enums;
+﻿using AthenaHealth.Sdk.Models.Enums;
 using AthenaHealth.Sdk.Models.Response.Interfaces;
 using Newtonsoft.Json;
+using System;
+
 // ReSharper disable StringLiteralTypo
 // ReSharper disable CommentTypo
-
 namespace AthenaHealth.Sdk.Models.Response
 {
     public class AppointmentResponse : IPagingResponse<Appointment>
     {
-        [JsonProperty("totalcount")]
         public int Total { get; set; }
 
-        [JsonProperty("next")]
         public string Next { get; set; }
 
-        [JsonProperty("previous")]
         public string Previous { get; set; }
 
         [JsonProperty("appointments")]
@@ -295,7 +291,6 @@ namespace AthenaHealth.Sdk.Models.Response
         [JsonProperty("encounterprep")]
         public bool? EncounterPrep { get; set; }
 
-
         public class AppointmentNote
         {
             /// <summary>
@@ -449,6 +444,4 @@ namespace AthenaHealth.Sdk.Models.Response
             public string AllowableAmount { get; set; }
         }
     }
-
-
 }

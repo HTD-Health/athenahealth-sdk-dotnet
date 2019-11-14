@@ -1,19 +1,10 @@
 ﻿using AthenaHealth.Sdk.Models.Converters;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace AthenaHealth.Sdk.Models.Request
 {
     public class UpdateSocialHistoryTemplates
     {
-        public UpdateSocialHistoryTemplates(int departmentId, int[] templateIds)
-        {
-            DepartmentId = departmentId;
-            TemplateIds = templateIds;
-        }
-
         /// <summary>
         /// The athenaNet department id.
         /// </summary>
@@ -26,5 +17,11 @@ namespace AthenaHealth.Sdk.Models.Request
         [JsonProperty("templateids")]
         [JsonConverter(typeof(CustomArrayToStringConverter), ",", true)]
         public int[] TemplateIds { get; set; }
+
+        public UpdateSocialHistoryTemplates(int departmentId, int[] templateIds)
+        {
+            DepartmentId = departmentId;
+            TemplateIds = templateIds;
+        }
     }
 }

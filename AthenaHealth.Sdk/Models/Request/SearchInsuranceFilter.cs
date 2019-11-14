@@ -1,20 +1,13 @@
-﻿using System.ComponentModel.DataAnnotations;
-using AthenaHealth.Sdk.Models.Converters;
+﻿using AthenaHealth.Sdk.Models.Converters;
 using AthenaHealth.Sdk.Models.Enums;
 using Newtonsoft.Json;
+using System.ComponentModel.DataAnnotations;
 
 // ReSharper disable StringLiteralTypo
-
 namespace AthenaHealth.Sdk.Models.Request
 {
     public class SearchInsuranceFilter
     {
-        public SearchInsuranceFilter(string insurancePlanName, string memberId)
-        {
-            InsurancePlanName = insurancePlanName;
-            MemberId = memberId;
-        }
-
         /// <summary>
         /// The name of the insurer.
         /// </summary>
@@ -71,5 +64,11 @@ namespace AthenaHealth.Sdk.Models.Request
         /// </summary>
         [JsonProperty("stateofcoverage")]
         public string StateOfCoverage { get; set; }
+
+        public SearchInsuranceFilter(string insurancePlanName, string memberId)
+        {
+            InsurancePlanName = insurancePlanName;
+            MemberId = memberId;
+        }
     }
 }

@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using Newtonsoft.Json;
-// ReSharper disable StringLiteralTypo
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 
+// ReSharper disable StringLiteralTypo
 namespace AthenaHealth.Sdk.Models.Response
 {
     public class AppointmentSlotCreationResponse

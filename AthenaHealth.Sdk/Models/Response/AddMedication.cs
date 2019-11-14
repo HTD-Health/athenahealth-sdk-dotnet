@@ -1,19 +1,13 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.ComponentModel.DataAnnotations;
-using Newtonsoft.Json;
+
 // ReSharper disable StringLiteralTypo
 // ReSharper disable CommentTypo
-
 namespace AthenaHealth.Sdk.Models.Response
 {
     public class AddMedication
     {
-        public AddMedication(int departmentId, int medicationId)
-        {
-            DepartmentId = departmentId;
-            MedicationId = medicationId;
-        }
-
         /// <summary>
         /// The athenanet department ID
         /// </summary>
@@ -70,6 +64,10 @@ namespace AthenaHealth.Sdk.Models.Response
         [JsonProperty("unstructuredsig")]
         public string UnstructuredSig { get; set; }
 
-
+        public AddMedication(int departmentId, int medicationId)
+        {
+            DepartmentId = departmentId;
+            MedicationId = medicationId;
+        }
     }
 }

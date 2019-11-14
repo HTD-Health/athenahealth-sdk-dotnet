@@ -1,24 +1,17 @@
-﻿using AthenaHealth.Sdk.Models.Converters;
+﻿using AthenaHealth.Sdk.Clients.Interfaces;
+using AthenaHealth.Sdk.Models.Converters;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using AthenaHealth.Sdk.Clients.Interfaces;
 
 // ReSharper disable StringLiteralTypo
 // ReSharper disable IdentifierTypo
 // ReSharper disable CommentTypo
-
 namespace AthenaHealth.Sdk.Models.Request
 {
     public class RecordPayment
     {
-        public RecordPayment(int departmentId, string paymentMethod)
-        {
-            DepartmentId = departmentId;
-            PaymentMethod = paymentMethod;
-        }
-
         /// <summary>
         /// The ID of the department where the payment or contract is being collected.
         /// </summary>
@@ -89,5 +82,11 @@ namespace AthenaHealth.Sdk.Models.Request
         /// </summary>
         [JsonProperty("claimpayment")]
         public Dictionary<string, string> ClaimPayment { get; set; }
+
+        public RecordPayment(int departmentId, string paymentMethod)
+        {
+            DepartmentId = departmentId;
+            PaymentMethod = paymentMethod;
+        }
     }
 }

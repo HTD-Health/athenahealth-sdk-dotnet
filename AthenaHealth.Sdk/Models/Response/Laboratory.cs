@@ -1,7 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace AthenaHealth.Sdk.Models.Response
 {
@@ -66,7 +63,5 @@ namespace AthenaHealth.Sdk.Models.Response
         /// </summary>
         [JsonProperty("acceptfax")]
         public bool? AcceptFax { get; set; }
-
-
     }
 }

@@ -1,8 +1,8 @@
-﻿using System;
-using AthenaHealth.Sdk.Models.Converters;
+﻿using AthenaHealth.Sdk.Models.Converters;
 using Newtonsoft.Json;
-// ReSharper disable StringLiteralTypo
+using System;
 
+// ReSharper disable StringLiteralTypo
 namespace AthenaHealth.Sdk.Models.Request
 {
     public class GetChangedAppointmentSlotsFilter
@@ -83,7 +83,5 @@ namespace AthenaHealth.Sdk.Models.Request
         /// </summary>
         [JsonProperty("showremindercalldetail")]
         public bool? ShowReminderCallDetail { get; set; }
-
-
     }
 }

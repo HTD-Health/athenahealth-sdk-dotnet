@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AthenaHealth.Tools.WebDocParser;
+﻿using AthenaHealth.Tools.WebDocParser;
+using System;
 
 namespace AthenaHealth.Tools.WebDocComparer
 {

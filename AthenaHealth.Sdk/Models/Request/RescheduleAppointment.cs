@@ -1,19 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
+using System.ComponentModel.DataAnnotations;
+
 // ReSharper disable StringLiteralTypo
 // ReSharper disable CommentTypo
-
 namespace AthenaHealth.Sdk.Models.Request
 {
     public class RescheduleAppointment
     {
-        public RescheduleAppointment(int newAppointmentId, int patientId, string rescheduleReason)
-        {
-            NewAppointmentId = newAppointmentId;
-            PatientId = patientId;
-            RescheduleReason = rescheduleReason;
-        }
-
         /// <summary>
         /// By default, we allow booking of appointments marked as schedulable via the web.
         /// This flag allows you to bypass that restriction for booking.
@@ -28,7 +21,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// </summary>
         [JsonProperty("newappointmentid")]
         [Required]
-        public int NewAppointmentId{ get; set; }
+        public int NewAppointmentId { get; set; }
 
         /// <summary>
         /// By default, we create a patient case upon booking an appointment for new patients.
@@ -42,7 +35,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// </summary>
         [JsonProperty("patientid")]
         [Required]
-        public int PatientId{ get; set; }
+        public int PatientId { get; set; }
 
         /// <summary>
         /// The appointment reason ID to be booked. If not provided, the same reason used in the original appointment will be used.
@@ -59,5 +52,12 @@ namespace AthenaHealth.Sdk.Models.Request
         /// </summary>
         [JsonProperty("reschedulereason")]
         public string RescheduleReason { get; set; }
+
+        public RescheduleAppointment(int newAppointmentId, int patientId, string rescheduleReason)
+        {
+            NewAppointmentId = newAppointmentId;
+            PatientId = patientId;
+            RescheduleReason = rescheduleReason;
+        }
     }
 }

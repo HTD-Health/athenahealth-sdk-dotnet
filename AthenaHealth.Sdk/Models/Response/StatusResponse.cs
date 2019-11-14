@@ -1,7 +1,6 @@
 ﻿using Newtonsoft.Json;
 
 // ReSharper disable once StringLiteralTypo
-
 namespace AthenaHealth.Sdk.Models.Response
 {
     public class StatusResponse : BaseResponse

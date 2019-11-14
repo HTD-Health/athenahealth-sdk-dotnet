@@ -1,9 +1,9 @@
-﻿using System.Threading.Tasks;
-using AthenaHealth.Sdk.Exceptions;
+﻿using AthenaHealth.Sdk.Exceptions;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
 using AthenaHealth.Sdk.Tests.EndToEnd.Fixtures;
 using Shouldly;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace AthenaHealth.Sdk.Tests.EndToEnd
@@ -38,8 +38,7 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         [Fact]
         public async Task GetAll_LimitEqual5_ReturnsOnly5Records()
         {
-            PracticeResponse response = await _client.Practices
-                .GetAll(new BaseLimitFilter() { Limit = 5 });
+            PracticeResponse response = await _client.Practices.GetAll(new GetPracticeFilter() { Limit = 5 });
 
             if (response.Total > 0)
             {

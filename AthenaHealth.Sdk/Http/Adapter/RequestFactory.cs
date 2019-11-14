@@ -30,6 +30,5 @@ namespace AthenaHealth.Sdk.Http.Adapter
 
             return requestMessage;
         }
-        
     }
 }

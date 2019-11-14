@@ -7,22 +7,25 @@ namespace AthenaHealth.Sdk
 {
     public class AthenaHealthClient : IAthenaHealthClient
     {
-        public IPatientClient Patients { get; }
-        public IPracticeClient Practices { get; }
-        public IDepartmentClient Departments { get; }
-        public IProviderClient Providers { get; }
-        public IAppointmentClient Appointments { get; }
-        public IInsurancePackageClient InsurancePackage { get; }
-        public IEncounterClient Encounters { get; }
-        public IDictionaryClient Dictionaries { get; }
-
         private readonly IConnection _connection;
 
-        public int PracticeId
-        {
-            get => _connection.PracticeId;
-            set => _connection.PracticeId = value;
-        }
+        public IPatientClient Patients { get; }
+
+        public IPracticeClient Practices { get; }
+
+        public IDepartmentClient Departments { get; }
+
+        public IProviderClient Providers { get; }
+
+        public IAppointmentClient Appointments { get; }
+
+        public IInsurancePackageClient InsurancePackage { get; }
+
+        public IEncounterClient Encounters { get; }
+
+        public IDictionaryClient Dictionaries { get; }
+
+        public int PracticeId { get => _connection.PracticeId; set => _connection.PracticeId = value; }
 
         public AthenaHealthClient(ApiVersion version, string clientId, string clientSecret, int practiceId)
         {

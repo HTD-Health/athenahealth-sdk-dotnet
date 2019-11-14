@@ -1,10 +1,10 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
-using AthenaHealth.Sdk.Exceptions;
+﻿using AthenaHealth.Sdk.Exceptions;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
 using AthenaHealth.Sdk.Tests.EndToEnd.Fixtures;
 using Shouldly;
+using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace AthenaHealth.Sdk.Tests.EndToEnd

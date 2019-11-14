@@ -1,18 +1,22 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using AthenaHealth.Sdk.Models.Response.Interfaces;
 using Newtonsoft.Json;
-// ReSharper disable StringLiteralTypo
+using System;
 
+// ReSharper disable StringLiteralTypo
 namespace AthenaHealth.Sdk.Models.Response
 {
-    public class AppointmentRemindersResponse
+    public class AppointmentRemindersResponse : IPagingResponse<AppointmentReminder>
     {
-        [JsonProperty("totalcount")]
         public int Total { get; set; }
+
+        public string Next { get; set; }
+
+        public string Previous { get; set; }
 
         [JsonProperty("reminders")]
         public AppointmentReminder[] Items { get; set; }
     }
+
     public class AppointmentReminder
     {
         /// <summary>

@@ -1,32 +1,13 @@
-﻿using System.ComponentModel.DataAnnotations;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
+using System.ComponentModel.DataAnnotations;
+
 // ReSharper disable StringLiteralTypo
 
 // ReSharper disable CommentTypo
-
 namespace AthenaHealth.Sdk.Models.Request
 {
     public class MedicationSetting
     {
-        public MedicationSetting(int departmentId)
-        {
-            DepartmentId = departmentId;
-        }
-        public MedicationSetting(int departmentId, string sectionNote) : this(departmentId)
-        {
-            SectionNote = sectionNote;
-        }
-
-        public MedicationSetting(int departmentId, bool noMedicationReported) : this(departmentId)
-        {
-            NoMedicationReported = noMedicationReported;
-        }
-
-        public MedicationSetting(int departmentId, string sectionNote, bool noMedicationReported) : this(departmentId, sectionNote)
-        {
-            NoMedicationReported = noMedicationReported;
-        }
-
         /// <summary>
         /// The athenanet department ID.
         /// </summary>
@@ -45,5 +26,25 @@ namespace AthenaHealth.Sdk.Models.Request
         /// </summary>
         [JsonProperty("sectionnote")]
         public string SectionNote { get; set; }
+
+        public MedicationSetting(int departmentId)
+        {
+            DepartmentId = departmentId;
+        }
+
+        public MedicationSetting(int departmentId, string sectionNote) : this(departmentId)
+        {
+            SectionNote = sectionNote;
+        }
+
+        public MedicationSetting(int departmentId, bool noMedicationReported) : this(departmentId)
+        {
+            NoMedicationReported = noMedicationReported;
+        }
+
+        public MedicationSetting(int departmentId, string sectionNote, bool noMedicationReported) : this(departmentId, sectionNote)
+        {
+            NoMedicationReported = noMedicationReported;
+        }
     }
 }

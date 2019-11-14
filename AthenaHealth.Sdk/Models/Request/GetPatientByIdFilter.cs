@@ -19,7 +19,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// </summary>
         [JsonProperty("ignorerestrictions")]
         public bool? IgnoreRestrictions { get; set; }
-        
+
         /// <summary>
         /// If set, will return local patient id tied to the passed in DepartmentID.
         /// </summary>
@@ -79,7 +79,5 @@ namespace AthenaHealth.Sdk.Models.Request
         /// </summary>
         [JsonProperty("showportalstatus")]
         public bool? ShowPortalStatus { get; set; }
-
     }
-
 }

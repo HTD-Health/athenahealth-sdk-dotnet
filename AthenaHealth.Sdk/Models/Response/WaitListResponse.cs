@@ -1,17 +1,18 @@
-﻿using System.ComponentModel.DataAnnotations;
-using AthenaHealth.Sdk.Models.Converters;
+﻿using AthenaHealth.Sdk.Models.Converters;
 using AthenaHealth.Sdk.Models.Enums;
 using AthenaHealth.Sdk.Models.Response.Interfaces;
 using Newtonsoft.Json;
+using System.ComponentModel.DataAnnotations;
 
 // ReSharper disable StringLiteralTypo
-
 namespace AthenaHealth.Sdk.Models.Response
 {
     public class WaitListResponse : IPagingResponse<WaitListItem>
     {
         public int Total { get; set; }
+
         public string Next { get; set; }
+
         public string Previous { get; set; }
 
         [JsonProperty("waitlistentries")]

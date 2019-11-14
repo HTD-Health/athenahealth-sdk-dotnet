@@ -1,8 +1,8 @@
-﻿using System;
-using AthenaHealth.Sdk.Models;
+﻿using AthenaHealth.Sdk.Models;
 using AthenaHealth.Sdk.Models.Converters;
 using Newtonsoft.Json;
 using Shouldly;
+using System;
 using Xunit;
 
 namespace AthenaHealth.Sdk.Tests.Models.Converters
@@ -25,16 +25,15 @@ namespace AthenaHealth.Sdk.Tests.Models.Converters
         [Fact]
         public void ClockTimeSerialization_InvalidData_ThrowsException()
         {
-            Should.Throw<ArgumentException>(()=> new ClockTime(25, 00));
-            Should.Throw<ArgumentException>(()=> new ClockTime(10, 60));
-            Should.Throw<ArgumentException>(()=> new ClockTime(10, -1));
+            Should.Throw<ArgumentException>(() => new ClockTime(25, 00));
+            Should.Throw<ArgumentException>(() => new ClockTime(10, 60));
+            Should.Throw<ArgumentException>(() => new ClockTime(10, -1));
         }
-
 
         [Fact]
         public void ClockTimeDeserialization_ValidData_CorrectClockTime()
         {
-            
+
             var testClass = JsonConvert.DeserializeObject<TestClass>("{\"time\":\"10:00\"}");
             testClass.Time.ToString().ShouldBe("10:00");
 
@@ -61,10 +60,11 @@ namespace AthenaHealth.Sdk.Tests.Models.Converters
         [JsonProperty("time")]
         [JsonConverter(typeof(CustomClockTimeConverter))]
         public ClockTime? Time { get; set; }
-        
+
         public TestClass()
         {
         }
+
         public TestClass(ClockTime time)
         {
             Time = time;

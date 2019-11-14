@@ -1,24 +1,11 @@
-﻿using System;
-using AthenaHealth.Sdk.Models.Converters;
+﻿using AthenaHealth.Sdk.Models.Converters;
 using Newtonsoft.Json;
+using System;
 
 namespace AthenaHealth.Sdk.Models.Request
 {
     public class SearchAppointmentRemindersFilter
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="departmentId">An athenaNet department ID.</param>
-        /// <param name="startDate">Find reminders for appointments whose approximate date is on or after this date.</param>
-        /// <param name="endDate">Find reminders for appointments whose approximate date is on or before this date.</param>
-        public SearchAppointmentRemindersFilter(int departmentId, DateTime startDate, DateTime endDate)
-        {
-            DepartmentId = departmentId;
-            StartDate = startDate;
-            EndDate = endDate;
-        }
-
         public int DepartmentId { get; set; }
 
         /// <summary>
@@ -53,5 +40,18 @@ namespace AthenaHealth.Sdk.Models.Request
         /// Starting point of entries; 0-indexed
         /// </summary>
         public int Offset { get; set; } = 0;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="departmentId">An athenaNet department ID.</param>
+        /// <param name="startDate">Find reminders for appointments whose approximate date is on or after this date.</param>
+        /// <param name="endDate">Find reminders for appointments whose approximate date is on or before this date.</param>
+        public SearchAppointmentRemindersFilter(int departmentId, DateTime startDate, DateTime endDate)
+        {
+            DepartmentId = departmentId;
+            StartDate = startDate;
+            EndDate = endDate;
+        }
     }
 }

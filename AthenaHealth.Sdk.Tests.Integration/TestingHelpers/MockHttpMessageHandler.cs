@@ -8,6 +8,7 @@ namespace AthenaHealth.Sdk.Tests.Integration.TestingHelpers
     public class MockHttpMessageHandler : HttpMessageHandler
     {
         private readonly string _responseContent;
+
         private readonly HttpStatusCode _statusCode;
 
         public MockHttpMessageHandler(string responseContent, HttpStatusCode statusCode)

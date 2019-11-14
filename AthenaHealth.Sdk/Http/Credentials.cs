@@ -2,6 +2,10 @@
 {
     public class Credentials
     {
+        public string ClientId { get; }
+
+        public string ClientSecret { get; }
+
         public Credentials(string clientId, string clientSecret)
         {
             ClientId = clientId;
@@ -11,8 +15,5 @@
         private Credentials()
         {
         }
-
-        public string ClientId { get; }
-        public string ClientSecret { get; }
     }
 }

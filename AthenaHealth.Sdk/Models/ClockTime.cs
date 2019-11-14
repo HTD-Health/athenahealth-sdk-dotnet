@@ -9,10 +9,11 @@ namespace AthenaHealth.Sdk.Models
     [DataContract]
     public struct ClockTime
     {
-        public int Hour => _time.Hours;
-        public int Minute => _time.Minutes;
-
         private TimeSpan _time;
+
+        public int Hour => _time.Hours;
+
+        public int Minute => _time.Minutes;
 
         public ClockTime(int hour, int minute)
         {
@@ -20,6 +21,8 @@ namespace AthenaHealth.Sdk.Models
 
             _time = new TimeSpan(hour, minute, 0);
         }
+
+        public override string ToString() => _time.ToString(@"hh\:mm");
 
         private static void Validate(int hour, int minute)
         {
@@ -29,7 +32,5 @@ namespace AthenaHealth.Sdk.Models
             if (minute < 0 || minute > 59)
                 throw new ArgumentException("Incorrect minute");
         }
-
-        public override string ToString() => _time.ToString(@"hh\:mm");
     }
 }

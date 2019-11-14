@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using AthenaHealth.Sdk.Http;
 using System.Net;
-using System.Net.Http;
-using System.Text;
-using AthenaHealth.Sdk.Http;
 
 namespace AthenaHealth.Sdk.Exceptions
 {

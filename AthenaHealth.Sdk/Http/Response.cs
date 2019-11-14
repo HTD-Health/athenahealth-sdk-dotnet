@@ -6,13 +6,36 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Net;
-using System.Text;
 
 namespace AthenaHealth.Sdk.Http
 {
     public class Response
     {
         private static readonly CustomEnumConverter EnumConverter = new CustomEnumConverter();
+
+        /// <summary>
+        /// Raw response body. Typically a string, but when requesting images, it will be a byte array.
+        /// </summary>
+        public object Body { get; }
+
+        /// <summary>
+        /// Information about the API.
+        /// </summary>
+        public IReadOnlyDictionary<string, string> Headers { get; }
+
+        /// <summary>
+        /// The response status code.
+        /// </summary>
+        public HttpStatusCode StatusCode { get; set; }
+
+        /// <summary>
+        /// The content type of the response.
+        /// </summary>
+        public string ContentType { get; }
+
+        public bool IsSuccessStatusCode { get; set; }
+
+        public DateTime Time { get; } = DateTime.Now;
 
         public Response() : this(new Dictionary<string, string>())
         {
@@ -31,30 +54,6 @@ namespace AthenaHealth.Sdk.Http
             ContentType = contentType;
             IsSuccessStatusCode = isSuccessStatusCode;
         }
-
-        /// <summary>
-        /// Raw response body. Typically a string, but when requesting images, it will be a byte array.
-        /// </summary>
-        public object Body { get;  }
-
-        /// <summary>
-        /// Information about the API.
-        /// </summary>
-        public IReadOnlyDictionary<string, string> Headers { get;  }
-
-        /// <summary>
-        /// The response status code.
-        /// </summary>
-        public HttpStatusCode StatusCode { get; set; }
-
-        /// <summary>
-        /// The content type of the response.
-        /// </summary>
-        public string ContentType { get;  }
-
-        public bool IsSuccessStatusCode { get; set; }
-
-        public DateTime Time { get; } = DateTime.Now;
 
         /// <summary>
         /// Deserializes response content to object of specified type.

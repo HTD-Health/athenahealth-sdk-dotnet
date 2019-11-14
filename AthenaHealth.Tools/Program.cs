@@ -6,11 +6,11 @@ namespace AthenaHealth.Tools
     /// <summary>
     /// This project is just for development purposes and may be removed in the future
     /// </summary>
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Parser.ParseAndSave(); 
+            Parser.ParseAndSave();
             Comparer.Compare();
         }
     }

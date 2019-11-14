@@ -1,29 +1,13 @@
-﻿using System.ComponentModel.DataAnnotations;
-using AthenaHealth.Sdk.Models.Converters;
+﻿using AthenaHealth.Sdk.Models.Converters;
 using AthenaHealth.Sdk.Models.Enums;
 using Newtonsoft.Json;
-// ReSharper disable StringLiteralTypo
+using System.ComponentModel.DataAnnotations;
 
+// ReSharper disable StringLiteralTypo
 namespace AthenaHealth.Sdk.Models.Request
 {
     public class AddToWaitListRequest
     {
-        public AddToWaitListRequest(int patientId, int departmentId)
-        {
-            PatientId = patientId;
-            DepartmentId = departmentId;
-        }
-
-        /// <summary>
-        /// <see cref="DepartmentId"/> not required. Automatically sets <see cref="AllowAnyDepartment"/> to true.
-        /// </summary>
-        /// <param name="patientId"></param>
-        public AddToWaitListRequest(int patientId)
-        {
-            PatientId = patientId;
-            AllowAnyDepartment = true;
-        }
-
         /// <summary>
         /// The patient ID of the patient who is on the wait list.
         /// </summary>
@@ -93,5 +77,21 @@ namespace AthenaHealth.Sdk.Models.Request
         /// </summary>
         [JsonProperty("providerid")]
         public int? ProviderId { get; set; }
+
+        public AddToWaitListRequest(int patientId, int departmentId)
+        {
+            PatientId = patientId;
+            DepartmentId = departmentId;
+        }
+
+        /// <summary>
+        /// <see cref="DepartmentId"/> not required. Automatically sets <see cref="AllowAnyDepartment"/> to true.
+        /// </summary>
+        /// <param name="patientId"></param>
+        public AddToWaitListRequest(int patientId)
+        {
+            PatientId = patientId;
+            AllowAnyDepartment = true;
+        }
     }
 }

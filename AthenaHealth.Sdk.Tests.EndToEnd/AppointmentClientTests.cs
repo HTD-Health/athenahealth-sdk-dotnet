@@ -69,7 +69,6 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         public async Task GetBookedAppointments_SingleDepartment_ReturnsRecords()
         {
             GetAppointmentsBookedFilter filter = new GetAppointmentsBookedFilter(
-                new[] { 1 },
                 new DateTime(2019, 01, 01),
                 new DateTime(2019, 02, 01))
             {
@@ -94,10 +93,10 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         public async Task GetBookedAppointments_MultipleDepartments_ReturnsRecords()
         {
             GetAppointmentsBookedFilter filter = new GetAppointmentsBookedFilter(
-                new[] { 1, 21 },
                 new DateTime(2019, 01, 01),
                 new DateTime(2019, 02, 01))
             {
+                DepartmentIds = new[] { 1, 21 },
                 ShowClaimDetail = true,
                 ShowExpectedProcedureCodes = true,
                 ShowCopay = true,

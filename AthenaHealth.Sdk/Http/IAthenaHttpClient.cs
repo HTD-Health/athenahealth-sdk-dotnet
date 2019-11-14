@@ -7,6 +7,7 @@ namespace AthenaHealth.Sdk.Http
     public interface IAthenaHttpClient
     {
         Uri BaseAddress { get; set; }
+
         Task<HttpResponseMessage> SendAsync(HttpRequestMessage request);
     }
 }

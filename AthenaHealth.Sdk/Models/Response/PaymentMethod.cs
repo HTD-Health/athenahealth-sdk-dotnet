@@ -1,16 +1,17 @@
 ﻿using AthenaHealth.Sdk.Clients.Interfaces;
+using AthenaHealth.Sdk.Models.Response.Interfaces;
 using Newtonsoft.Json;
-// ReSharper disable StringLiteralTypo
 
+// ReSharper disable StringLiteralTypo
 namespace AthenaHealth.Sdk.Models.Response
 {
-    public class PaymentMethodResponse
+    public class PaymentMethodResponse : IPagingResponse<PaymentMethod>
     {
-        [JsonProperty("next")]
+        public int Total { get; set; }
+
         public string Next { get; set; }
 
-        [JsonProperty("totalcount")]
-        public int Total { get; set; }
+        public string Previous { get; set; }
 
         [JsonProperty("paymentmethods")]
         public PaymentMethod[] Items { get; set; }

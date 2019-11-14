@@ -1,26 +1,21 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using AthenaHealth.Sdk.Models.Converters;
+﻿using AthenaHealth.Sdk.Models.Converters;
 using Newtonsoft.Json;
+using System;
+using System.ComponentModel.DataAnnotations;
 
 // ReSharper disable StringLiteralTypo
 // ReSharper disable CommentTypo
-
 namespace AthenaHealth.Sdk.Models.Request
 {
     public class SetPatientAllergies
     {
-        public SetPatientAllergies(int departmentId)
-        {
-            DepartmentId = departmentId;
-        }
         /// <summary>
         /// The ID of the department for this patient. A patient may have multiple charts, and the department determines which chart to use.
         /// </summary>
         [JsonProperty("departmentid")]
         [Required]
-        public int DepartmentId  { get; set; }
-        
+        public int DepartmentId { get; set; }
+
         /// <summary>
         /// Allergies
         /// </summary>
@@ -39,6 +34,10 @@ namespace AthenaHealth.Sdk.Models.Request
         [JsonProperty("sectionnote")]
         public string SectionNote { get; set; }
 
+        public SetPatientAllergies(int departmentId)
+        {
+            DepartmentId = departmentId;
+        }
 
         public class Allergy
         {

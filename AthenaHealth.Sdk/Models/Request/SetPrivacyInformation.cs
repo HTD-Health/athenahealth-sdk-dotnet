@@ -1,20 +1,13 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using AthenaHealth.Sdk.Models.Converters;
+﻿using AthenaHealth.Sdk.Models.Converters;
 using Newtonsoft.Json;
-// ReSharper disable StringLiteralTypo
+using System;
+using System.ComponentModel.DataAnnotations;
 
+// ReSharper disable StringLiteralTypo
 namespace AthenaHealth.Sdk.Models.Request
 {
     public class SetPrivacyInformation
     {
-        public SetPrivacyInformation(int departmentId, DateTime signatureDateTime, string signatureName)
-        {
-            DepartmentId = departmentId;
-            SignatureDateTime = signatureDateTime;
-            SignatureName = signatureName;
-        }
-
         /// <summary>
         /// The ID of the department where the privacy information was verified.
         /// </summary>
@@ -72,5 +65,12 @@ namespace AthenaHealth.Sdk.Models.Request
         /// </summary>
         [JsonProperty("signerrelationshiptopatientid")]
         public string SignerRelationshipToPatient { get; set; }
+
+        public SetPrivacyInformation(int departmentId, DateTime signatureDateTime, string signatureName)
+        {
+            DepartmentId = departmentId;
+            SignatureDateTime = signatureDateTime;
+            SignatureName = signatureName;
+        }
     }
 }

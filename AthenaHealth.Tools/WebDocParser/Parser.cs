@@ -1,13 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using HtmlAgilityPack;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text;
-using HtmlAgilityPack;
 
 // ReSharper disable StringLiteralTypo
-
 namespace AthenaHealth.Tools.WebDocParser
 {
     public class Parser
@@ -39,17 +37,6 @@ namespace AthenaHealth.Tools.WebDocParser
             File.WriteAllText("WebDocParser\\out.cs", sb.ToString());
         }
 
-
-        private static string ConvertType(string typeDoc)
-        {
-            if (typeDoc == null)
-                return "";
-            typeDoc = typeDoc.Replace("integer", "int?");
-            typeDoc = typeDoc.Replace("boolean", "bool");
-            return typeDoc;
-        }
-
-
         public static List<Item> ParseItems(string file)
         {
             List<Item> items = new List<Item>();
@@ -62,39 +49,49 @@ namespace AthenaHealth.Tools.WebDocParser
                 item.Type = tr.SelectNodes($"./td[@class='outputtype' and @data-label='Type']")?.First().InnerText;
                 item.Description = tr.SelectNodes($"./td[@class='outputnote' and @data-label='Description']")?.First().InnerText;
 
-                if(item.Name == null)
+                if (item.Name == null)
                     item.Name = tr.SelectNodes($"./td[@class='outputname required' and @data-label='Name']")?.First().InnerText.Trim();
 
-                if(item.Name == null)
+                if (item.Name == null)
                     item.Name = tr.SelectNodes($"./td[@class='outputname' and @data-label='Name']")?.First().InnerText.Trim();
 
 
-                if(item.Type == null)
+                if (item.Type == null)
                     item.Type = tr.SelectNodes($"./td[@class='outputname required' and @data-label='Type']")?.First().InnerText.Trim();
 
-                if(item.Type == null)
+                if (item.Type == null)
                     item.Type = tr.SelectNodes($"./td[@class='outputname' and @data-label='Type']")?.First().InnerText.Trim();
 
-                if(item.Description == null)
+                if (item.Description == null)
                     item.Description = tr.SelectNodes($"./td[@class='outputname required' and @data-label='Description']")?.First().InnerText.Trim();
 
-                if(item.Description == null)
+                if (item.Description == null)
                     item.Description = tr.SelectNodes($"./td[@class='outputname' and @data-label='Description']")?.First().InnerText.Trim();
 
-                if(item.Name != null)
+                if (item.Name != null)
                     items.Add(item);
-                
+
             }
 
             return items;
         }
 
+        private static string ConvertType(string typeDoc)
+        {
+            if (typeDoc == null)
+                return "";
+            typeDoc = typeDoc.Replace("integer", "int?");
+            typeDoc = typeDoc.Replace("boolean", "bool");
+            return typeDoc;
+        }
 
         [DebuggerDisplay("{Name,nq} | {Type,nq} | {Description,nq}")]
         public class Item
         {
             public string Name;
+
             public string Type;
+
             public string Description;
 
             public override bool Equals(object other)
@@ -102,7 +99,7 @@ namespace AthenaHealth.Tools.WebDocParser
                 if (other == null)
                     return false;
 
-                if (this.Name == ((Item)other).Name && this.Type == ((Item)other).Type && this.Description == ((Item)other).Description) 
+                if (this.Name == ((Item)other).Name && this.Type == ((Item)other).Type && this.Description == ((Item)other).Description)
                     return true; ;
                 return false;
             }

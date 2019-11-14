@@ -1,28 +1,15 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using AthenaHealth.Sdk.Clients.Interfaces;
+﻿using AthenaHealth.Sdk.Clients.Interfaces;
 using Newtonsoft.Json;
+using System;
+using System.ComponentModel.DataAnnotations;
 
 // ReSharper disable IdentifierTypo
 // ReSharper disable StringLiteralTypo
 // ReSharper disable CommentTypo
-
 namespace AthenaHealth.Sdk.Models.Request
 {
     public class CreateOrderLab
     {
-        public CreateOrderLab(int orderTypeId, string diagnosisSnomedCode)
-        {
-            OrderTypeId = orderTypeId;
-            DiagnosisSnomedCode = diagnosisSnomedCode;
-        }
-
-        public CreateOrderLab(string loinc, string diagnosisSnomedCode)
-        {
-            Loinc = loinc;
-            DiagnosisSnomedCode = diagnosisSnomedCode;
-        }
-
         /// <summary>
         /// The SNOMED code for diagnosis this order is for.
         /// </summary>
@@ -73,5 +60,17 @@ namespace AthenaHealth.Sdk.Models.Request
         /// </summary>
         [JsonProperty("providernote")]
         public string ProviderNote { get; set; }
+
+        public CreateOrderLab(int orderTypeId, string diagnosisSnomedCode)
+        {
+            OrderTypeId = orderTypeId;
+            DiagnosisSnomedCode = diagnosisSnomedCode;
+        }
+
+        public CreateOrderLab(string loinc, string diagnosisSnomedCode)
+        {
+            Loinc = loinc;
+            DiagnosisSnomedCode = diagnosisSnomedCode;
+        }
     }
 }

@@ -53,10 +53,10 @@ namespace AthenaHealth.Sdk.Tests.Integration
             IAppointmentClient client = new Clients.AppointmentClient(ConnectionFactory.CreateFromFile(@"Data\Appointment\GetBookedAppointments.json"));
 
             GetAppointmentsBookedFilter filter = new GetAppointmentsBookedFilter(
-                new[] { 1 },
                 new DateTime(2019, 01, 01),
                 new DateTime(2019, 02, 01))
             {
+                DepartmentIds = new[] { 1 },
                 ShowClaimDetail = true,
                 ShowExpectedProcedureCodes = true,
                 ShowCopay = true,

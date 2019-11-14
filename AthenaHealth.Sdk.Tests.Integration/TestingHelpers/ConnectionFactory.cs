@@ -1,7 +1,7 @@
-﻿using System.IO;
-using System.Net;
-using AthenaHealth.Sdk.Http;
+﻿using AthenaHealth.Sdk.Http;
 using AthenaHealth.Sdk.Http.Adapter;
+using System.IO;
+using System.Net;
 
 namespace AthenaHealth.Sdk.Tests.Integration.TestingHelpers
 {
@@ -18,7 +18,7 @@ namespace AthenaHealth.Sdk.Tests.Integration.TestingHelpers
 
         public static Connection CreateFromFile(string responsePath, HttpStatusCode responseStatus = HttpStatusCode.OK)
         {
-            if(!File.Exists(responsePath))
+            if (!File.Exists(responsePath))
                 throw new FileNotFoundException($"Couldn't load test data file {responsePath}. Ensure file has Copy output enabled.");
 
             var content = File.ReadAllText(responsePath);
