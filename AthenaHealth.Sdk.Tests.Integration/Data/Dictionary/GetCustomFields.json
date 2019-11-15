@@ -1,0 +1,120 @@
+[
+  {
+    "customfieldid": "304",
+    "disallowupdate": true,
+    "select": false,
+    "casesensitive": false,
+    "name": "AAM CSC Test MRN",
+    "searchable": true,
+    "length": "100",
+    "type": "TEXT"
+  },
+  {
+    "customfieldid": "141",
+    "disallowupdate": false,
+    "select": false,
+    "casesensitive": false,
+    "name": "Admitted",
+    "searchable": true,
+    "type": "TEXT"
+  },
+  {
+    "customfieldid": "222",
+    "disallowupdate": false,
+    "select": false,
+    "casesensitive": false,
+    "name": "CCM Enabled",
+    "type": "TEXT"
+  },
+  {
+    "customfieldid": "223",
+    "disallowupdate": false,
+    "select": true,
+    "casesensitive": false,
+    "name": "CCM Enabled TEST",
+    "type": "DATE"
+  },
+  {
+    "customfieldid": "263",
+    "disallowupdate": false,
+    "select": false,
+    "casesensitive": false,
+    "name": "David_test",
+    "searchable": true,
+    "type": "TEXT"
+  },
+  {
+    "selectlist": [
+      {
+        "optionvalue": "Yes",
+        "optionid": "63"
+      }
+    ],
+    "customfieldid": "203",
+    "disallowupdate": false,
+    "select": true,
+    "casesensitive": false,
+    "name": "Dental Patient",
+    "type": "TEXT"
+  },
+  {
+    "customfieldid": "283",
+    "disallowupdate": false,
+    "select": false,
+    "casesensitive": false,
+    "name": "GUID",
+    "searchable": true,
+    "type": "TEXT"
+  },
+  {
+    "selectlist": [
+      {
+        "optionvalue": "Yes",
+        "optionid": "61"
+      },
+      {
+        "optionvalue": "No",
+        "optionid": "62"
+      }
+    ],
+    "customfieldid": "162",
+    "disallowupdate": false,
+    "select": true,
+    "casesensitive": false,
+    "name": "Healthkit Enabled",
+    "type": "TEXT"
+  },
+  {
+    "customfieldid": "181",
+    "disallowupdate": false,
+    "select": true,
+    "casesensitive": false,
+    "name": "Hk",
+    "type": "TEXT"
+  },
+  {
+    "customfieldid": "21",
+    "disallowupdate": false,
+    "select": false,
+    "casesensitive": false,
+    "name": "Medical Record Number",
+    "searchable": true,
+    "type": "TEXT"
+  },
+  {
+    "customfieldid": "242",
+    "disallowupdate": false,
+    "select": false,
+    "casesensitive": false,
+    "name": "Mystical Unicorn",
+    "type": "TEXT"
+  },
+  {
+    "customfieldid": "201",
+    "disallowupdate": false,
+    "select": false,
+    "casesensitive": false,
+    "name": "TEST",
+    "type": "TEXT"
+  }
+]

@@ -231,5 +231,15 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             response.ShouldNotBeNull();
             response.Items.Length.ShouldBeGreaterThan(0);
         }
+
+        [Fact]
+        public async Task GetCustomFields_ReturnsRecords()
+        {
+            CustomField[] response = await _client.Dictionaries.GetCustomFields();
+
+            response.ShouldNotBeNull();
+            response.Length.ShouldBeGreaterThan(0);
+            response.ShouldAllBe(x => x.Id != 0);
+        }
     }
 }
