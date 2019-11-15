@@ -80,5 +80,11 @@ namespace AthenaHealth.Sdk.Clients
         {
             return await _connection.Get<State[]>($"{_connection.PracticeId}/states");
         }
+
+        [Endpoint("GET /misc/patientlocations")]
+        public async Task<PatientLocation[]> GetPatientLocations()
+        {
+            return await _connection.Get<PatientLocation[]>($"{_connection.PracticeId}/misc/patientlocations");
+        }
     }
 }

@@ -1,0 +1,14 @@
+[
+  {
+    "patientlocationid": 2,
+    "name": "Office 2"
+  },
+  {
+    "patientlocationid": 1,
+    "name": "Office 1"
+  },
+  {
+    "patientlocationid": 21,
+    "name": "Patient Rm. 1"
+  }
+]
