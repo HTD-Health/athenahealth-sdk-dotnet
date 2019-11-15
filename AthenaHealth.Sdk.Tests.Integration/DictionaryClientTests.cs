@@ -185,5 +185,17 @@ namespace AthenaHealth.Sdk.Tests.Integration
             response.ShouldAllBe(x => x.Id != 0);
         }
 
+
+        [Fact]
+        public async Task GetMobileCarriers_ReturnsRecords()
+        {
+            IDictionaryClient client = new DictionaryClient(ConnectionFactory.CreateFromFile(@"Data\Dictionary\GetMobileCarriers.json"));
+
+            var response = await client.GetMobileCarriers();
+
+            response.ShouldNotBeNull();
+            response.Length.ShouldBeGreaterThan(0);
+            response.ShouldAllBe(x => x.Id != 0);
+        }
     }
 }
