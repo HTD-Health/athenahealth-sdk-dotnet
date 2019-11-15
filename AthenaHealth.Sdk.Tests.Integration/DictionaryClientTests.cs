@@ -209,5 +209,16 @@ namespace AthenaHealth.Sdk.Tests.Integration
             response.Length.ShouldBeGreaterThan(0);
             response.ShouldAllBe(x => x.Id != 0);
         }
+
+        [Fact]
+        public async Task GetAllergySeverities_ReturnsRecords()
+        {
+            IDictionaryClient client = new DictionaryClient(ConnectionFactory.CreateFromFile(@"Data\Dictionary\GetAllergySeverities.json"));
+
+            var response = await client.GetAllergySeverities();
+
+            response.ShouldNotBeNull();
+            response.Length.ShouldBeGreaterThan(0);
+        }
     }
 }

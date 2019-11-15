@@ -110,5 +110,11 @@ namespace AthenaHealth.Sdk.Clients
         {
             return await _connection.Get<AllergyReaction[]>($"{_connection.PracticeId}/reference/allergies/reactions");
         }
+
+        [Endpoint("GET /reference/allergies/severities")]
+        public async Task<AllergySeverity[]> GetAllergySeverities()
+        {
+            return await _connection.Get<AllergySeverity[]>($"{_connection.PracticeId}/reference/allergies/severities");
+        }
     }
 }
