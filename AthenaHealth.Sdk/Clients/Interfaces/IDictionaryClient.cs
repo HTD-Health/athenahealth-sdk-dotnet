@@ -87,5 +87,8 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
 
         [Endpoint("GET /reference/allergies/severities")]
         Task<AllergySeverity[]> GetAllergySeverities();
+
+        [Endpoint("GET /slidingfeeplans")]
+        Task<SlidingFeePlanResponse> GetSlidingFeePlans(GetSlidingFeePlansFilter queryParameters = null);
     }
 }
