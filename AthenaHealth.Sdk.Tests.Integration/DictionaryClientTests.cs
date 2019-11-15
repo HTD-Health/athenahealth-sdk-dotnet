@@ -137,5 +137,16 @@ namespace AthenaHealth.Sdk.Tests.Integration
             response.ShouldNotBeNull();
             response.Length.ShouldBeGreaterThan(0);
         }
+
+        [Fact]
+        public async Task GetStates_ReturnsRecords()
+        {
+            IDictionaryClient client = new DictionaryClient(ConnectionFactory.CreateFromFile(@"Data\Dictionary\GetStates.json"));
+
+            var response = await client.GetStates();
+
+            response.ShouldNotBeNull();
+            response.Length.ShouldBeGreaterThan(0);
+        }
     }
 }
