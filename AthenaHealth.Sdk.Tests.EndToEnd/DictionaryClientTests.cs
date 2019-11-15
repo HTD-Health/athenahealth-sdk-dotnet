@@ -203,5 +203,14 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             response.Length.ShouldBeGreaterThan(0);
         }
 
+
+        [Fact]
+        public async Task GetStates_ReturnsRecords()
+        {
+            State[] response = await _client.Dictionaries.GetStates();
+
+            response.ShouldNotBeNull();
+            response.Length.ShouldBeGreaterThan(0);
+        }
     }
 }

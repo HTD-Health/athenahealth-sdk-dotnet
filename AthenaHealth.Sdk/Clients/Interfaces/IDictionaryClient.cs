@@ -66,5 +66,8 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
 
         [Endpoint("GET /races")]
         Task<Race[]> GetRaces();
+
+        [Endpoint("GET /states")]
+        Task<State[]> GetStates();
     }
 }
