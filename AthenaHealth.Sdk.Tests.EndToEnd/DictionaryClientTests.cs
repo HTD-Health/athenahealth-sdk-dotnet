@@ -270,5 +270,14 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             response.ShouldNotBeNull();
             response.Length.ShouldBeGreaterThan(0);
         }
+
+        [Fact]
+        public async Task GetSlidingFeePlans_ReturnsRecords()
+        {
+            SlidingFeePlanResponse response = await _client.Dictionaries.GetSlidingFeePlans();
+
+            response.ShouldNotBeNull();
+            response.Items.Length.ShouldBeGreaterThan(0);
+        }
     }
 }

@@ -1,0 +1,17 @@
+{
+  "totalcount": 1,
+  "slidingfeeplans": [
+    {
+      "calculationtypeid": "2",
+      "calculationtypename": "Percentage only",
+      "percentageresponsibility": "50",
+      "povertylevelupperbound": "200",
+      "name": "50% Off Charged Amount",
+      "programname": "Sliding Fee Discounts",
+      "calculationtypeshortname": "Percentage only",
+      "note": "50% off 200% and under poverty level",
+      "povertylevellowerbound": "0",
+      "slidingfeeplanid": "1"
+    }
+  ]
+}
