@@ -183,5 +183,15 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             response.ShouldNotBeNull();
             response.Length.ShouldBeGreaterThan(0);
         }
+
+
+        [Fact]
+        public async Task GetLanguages_ReturnsRecords()
+        {
+            Language[] response = await _client.Dictionaries.GetLanguages();
+
+            response.ShouldNotBeNull();
+            response.Length.ShouldBeGreaterThan(0);
+        }
     }
 }

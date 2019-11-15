@@ -62,5 +62,11 @@ namespace AthenaHealth.Sdk.Clients
         {
             return await _connection.Get<Ethnicity[]>($"{_connection.PracticeId}/ethnicities");
         }
+
+        [Endpoint("GET /languages")]
+        public async Task<Language[]> GetLanguages()
+        {
+            return await _connection.Get<Language[]>($"{_connection.PracticeId}/languages");
+        }
     }
 }

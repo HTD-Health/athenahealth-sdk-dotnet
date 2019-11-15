@@ -4,7 +4,7 @@ using System.Linq;
 using System.Reflection;
 using Xunit;
 
-namespace AthenaHealth.Sdk.Tests.Http
+namespace AthenaHealth.Sdk.Tests
 {
     public class ClientsTests
     {
