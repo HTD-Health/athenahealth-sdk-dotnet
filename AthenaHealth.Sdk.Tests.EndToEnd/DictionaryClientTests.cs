@@ -174,5 +174,14 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
                 response.Items.Length.ShouldBe(0);
             }
         }
+
+        [Fact]
+        public async Task GetEthnicities_ReturnsRecords()
+        {
+            Ethnicity[] response = await _client.Dictionaries.GetEthnicities();
+
+            response.ShouldNotBeNull();
+            response.Length.ShouldBeGreaterThan(0);
+        }
     }
 }

@@ -57,5 +57,8 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
 
         [Endpoint("GET /chart/configuration/socialhistory")]
         Task<SocialHistoryTemplate[]> GetSocialHistoryTemplates();
+
+        [Endpoint("GET /ethnicities")]
+        Task<Ethnicity[]> GetEthnicities();
     }
 }

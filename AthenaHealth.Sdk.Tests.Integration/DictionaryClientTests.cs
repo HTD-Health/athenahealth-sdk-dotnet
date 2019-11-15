@@ -104,5 +104,16 @@ namespace AthenaHealth.Sdk.Tests.Integration
             response.Any(x => x.Name == "olaparib").ShouldBeTrue();
             response.Any(x => x.Id == 91387).ShouldBeTrue();
         }
+
+        [Fact]
+        public async Task GetEthnicities_ReturnsRecords()
+        {
+            IDictionaryClient client = new DictionaryClient(ConnectionFactory.CreateFromFile(@"Data\Dictionary\GetEthnicities.json"));
+
+            var response = await client.GetEthnicities();
+
+            response.ShouldNotBeNull();
+            response.Length.ShouldBeGreaterThan(0);
+        }
     }
 }
