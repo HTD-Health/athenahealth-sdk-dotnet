@@ -9,6 +9,9 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         [Endpoint("GET /practiceinfo")]
         Task<Practice> GetById(int practiceId, GetPracticeFilter filter = null);
 
+        [Endpoint("GET /ping")]
+        Task<bool> HasAccess(int practiceId);
+
         /// <summary>
         /// Returns <see cref="Practice"/> for <see cref="IAthenaHealthClient.PracticeId"/>.
         /// </summary>

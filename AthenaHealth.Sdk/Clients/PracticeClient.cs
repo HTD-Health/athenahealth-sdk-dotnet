@@ -23,6 +23,13 @@ namespace AthenaHealth.Sdk.Clients
             return result.Items.FirstOrThrowException();
         }
 
+        [Endpoint("GET /ping")]
+        public async Task<bool> HasAccess(int practiceId)
+        {
+            HasAccessResponse result =  await _connection.Get<HasAccessResponse>($"{practiceId}/ping");
+            return result.IsTrue;
+        }
+
         /// <summary>
         /// Returns <see cref="Practice"/> for <see cref="IAthenaHealthClient.PracticeId"/>.
         /// </summary>

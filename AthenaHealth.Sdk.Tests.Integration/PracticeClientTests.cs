@@ -1,8 +1,10 @@
 ﻿using AthenaHealth.Sdk.Clients;
 using AthenaHealth.Sdk.Clients.Interfaces;
+using AthenaHealth.Sdk.Exceptions;
 using AthenaHealth.Sdk.Tests.Integration.TestingHelpers;
 using Shouldly;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -34,6 +36,38 @@ namespace AthenaHealth.Sdk.Tests.Integration
             response.ShouldNotBeNull();
             response.Id.ShouldBe("195900");
             response.Name.ShouldBe("athenahealth MDP Sandbox");
+        }
+
+        [Fact]
+        public async Task HasAccess_ReturnsTrue()
+        {
+            IPracticeClient client = new PracticeClient(ConnectionFactory.Create("{\"pong\":true}"));
+
+            bool response = await client.HasAccess(195900);
+
+            response.ShouldBeTrue();
+        }
+
+        [Fact]
+        public void HasAccess_NotExistingPractice_ThrowsException()
+        {
+            IPracticeClient client = new PracticeClient(ConnectionFactory.Create("{\"error\":\"Invalid practice.\",\"detailedmessage\":\"The practice ID does not exist.\"}", HttpStatusCode.NotFound));
+
+            ApiValidationException exception = Should.Throw<ApiValidationException>(async () => await client.HasAccess(2));
+
+            exception.StatusCode.ShouldBe(HttpStatusCode.NotFound);
+            exception.Message.ShouldContain("The practice ID does not exist.");
+        }
+
+        [Fact]
+        public void HasAccess_UnauthorizedAccess_ThrowsException()
+        {
+            IPracticeClient client = new PracticeClient(ConnectionFactory.Create("{\"detailedmessage\":\"Bad auth.\",\"error\":\"Incorrect permissions.\"}", HttpStatusCode.Unauthorized));
+
+            ApiValidationException exception = Should.Throw<ApiValidationException>(async () => await client.HasAccess(195901));
+
+            exception.StatusCode.ShouldBe(HttpStatusCode.Unauthorized);
+            exception.Message.ShouldContain("Incorrect permissions.");
         }
     }
 }
