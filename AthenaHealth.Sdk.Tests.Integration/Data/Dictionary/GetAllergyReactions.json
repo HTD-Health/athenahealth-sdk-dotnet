@@ -1,0 +1,197 @@
+[
+  {
+    "reactionname": "Abdominal pain",
+    "snomedcode": 21522001,
+    "reactionid": 129
+  },
+  {
+    "reactionname": "Anaphylaxis",
+    "snomedcode": 39579001,
+    "reactionid": 2
+  },
+  {
+    "reactionname": "Angioedema",
+    "snomedcode": 41291007,
+    "reactionid": 49
+  },
+  {
+    "reactionname": "Arthralgia (joint pain)",
+    "snomedcode": 57676002,
+    "reactionid": 69
+  },
+  {
+    "reactionname": "Bradycardia",
+    "snomedcode": 48867003,
+    "reactionid": 149
+  },
+  {
+    "reactionname": "Chest pain",
+    "snomedcode": 29857009,
+    "reactionid": 9
+  },
+  {
+    "reactionname": "Confusion",
+    "snomedcode": 40917007,
+    "reactionid": 130
+  },
+  {
+    "reactionname": "Cough",
+    "snomedcode": 49727002,
+    "reactionid": 8
+  },
+  {
+    "reactionname": "Decreased blood pressure",
+    "snomedcode": 12763006,
+    "reactionid": 135
+  },
+  {
+    "reactionname": "Diarrhea",
+    "snomedcode": 62315008,
+    "reactionid": 11
+  },
+  {
+    "reactionname": "Dizziness",
+    "snomedcode": 404640003,
+    "reactionid": 16
+  },
+  {
+    "reactionname": "Edema",
+    "snomedcode": 267038008,
+    "reactionid": 109
+  },
+  {
+    "reactionname": "Eye redness",
+    "snomedcode": 75705005,
+    "reactionid": 169
+  },
+  {
+    "reactionname": "Eye swelling",
+    "snomedcode": 45177002,
+    "reactionid": 131
+  },
+  {
+    "reactionname": "Facial swelling",
+    "snomedcode": 278528006,
+    "reactionid": 132
+  },
+  {
+    "reactionname": "Fever",
+    "snomedcode": 386661006,
+    "reactionid": 133
+  },
+  {
+    "reactionname": "Flushing",
+    "snomedcode": 403618004,
+    "reactionid": 134
+  },
+  {
+    "reactionname": "GI bleed",
+    "snomedcode": 74474003,
+    "reactionid": 151
+  },
+  {
+    "reactionname": "Hallucinations",
+    "snomedcode": 7011001,
+    "reactionid": 141
+  },
+  {
+    "reactionname": "Headache",
+    "snomedcode": 25064002,
+    "reactionid": 17
+  },
+  {
+    "reactionname": "Hives",
+    "snomedcode": 126485001,
+    "reactionid": 7
+  },
+  {
+    "reactionname": "Insomnia",
+    "snomedcode": 193462001,
+    "reactionid": 190
+  },
+  {
+    "reactionname": "Irregular heart rate",
+    "snomedcode": 361138002,
+    "reactionid": 10
+  },
+  {
+    "reactionname": "Itching",
+    "snomedcode": 418290006,
+    "reactionid": 3
+  },
+  {
+    "reactionname": "Lightheadedness",
+    "snomedcode": 386705008,
+    "reactionid": 136
+  },
+  {
+    "reactionname": "Myalgias (muscle pain)",
+    "snomedcode": 68962001,
+    "reactionid": 29
+  },
+  {
+    "reactionname": "Nausea",
+    "snomedcode": 422587007,
+    "reactionid": 14
+  },
+  {
+    "reactionname": "Other",
+    "snomedcode": 74964007,
+    "reactionid": 89
+  },
+  {
+    "reactionname": "Palpitations",
+    "snomedcode": 80313002,
+    "reactionid": 209
+  },
+  {
+    "reactionname": "Photosensitivity",
+    "snomedcode": 90128006,
+    "reactionid": 12
+  },
+  {
+    "reactionname": "Rash",
+    "snomedcode": 271807003,
+    "reactionid": 1
+  },
+  {
+    "reactionname": "Respiratory distress",
+    "snomedcode": 271825005,
+    "reactionid": 13
+  },
+  {
+    "reactionname": "Ringing in ears",
+    "snomedcode": 60862001,
+    "reactionid": 138
+  },
+  {
+    "reactionname": "Seizure",
+    "snomedcode": 91175000,
+    "reactionid": 189
+  },
+  {
+    "reactionname": "Stevens-Johnson syndrome",
+    "snomedcode": 73442001,
+    "reactionid": 137
+  },
+  {
+    "reactionname": "Tachycardia",
+    "snomedcode": 3424008,
+    "reactionid": 150
+  },
+  {
+    "reactionname": "Vasculitis",
+    "snomedcode": 31996006,
+    "reactionid": 139
+  },
+  {
+    "reactionname": "Vomiting",
+    "snomedcode": 422400008,
+    "reactionid": 15
+  },
+  {
+    "reactionname": "Wheezing",
+    "snomedcode": 56018004,
+    "reactionid": 140
+  }
+]

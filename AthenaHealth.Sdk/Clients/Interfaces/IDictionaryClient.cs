@@ -81,5 +81,8 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
 
         [Endpoint("GET /mobilecarriers")]
         Task<MobileCarrier[]> GetMobileCarriers();
+
+        [Endpoint("GET /reference/allergies/reactions")]
+        Task<AllergyReaction[]> GetAllergyReactions();
     }
 }
