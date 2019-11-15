@@ -1,0 +1,26 @@
+[
+  {
+    "snomedcode": "255604002",
+    "severity": "Mild"
+  },
+  {
+    "snomedcode": "371923003",
+    "severity": "Mild to moderate"
+  },
+  {
+    "snomedcode": "6736007",
+    "severity": "Moderate"
+  },
+  {
+    "snomedcode": "371924009",
+    "severity": "Moderate to severe"
+  },
+  {
+    "snomedcode": "24484000",
+    "severity": "Severe"
+  },
+  {
+    "snomedcode": "399166001",
+    "severity": "Fatal"
+  }
+]
