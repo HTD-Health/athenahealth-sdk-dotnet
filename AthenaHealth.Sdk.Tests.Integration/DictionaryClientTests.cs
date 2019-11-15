@@ -160,5 +160,17 @@ namespace AthenaHealth.Sdk.Tests.Integration
             response.Length.ShouldBeGreaterThan(0);
             response.ShouldAllBe(x => x.Id != 0);
         }
+
+        [Fact]
+        public async Task GetGenderIdentities_ReturnsRecords()
+        {
+            IDictionaryClient client = new DictionaryClient(ConnectionFactory.CreateFromFile(@"Data\Dictionary\GetGenderIdentities.json"));
+
+            var response = await client.GetGenderIdentities();
+
+            response.ShouldNotBeNull();
+            response.Items.Length.ShouldBeGreaterThan(0);
+            response.Total.ShouldBe(response.Items.Length);
+        }
     }
 }
