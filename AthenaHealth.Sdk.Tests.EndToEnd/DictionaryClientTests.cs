@@ -222,5 +222,14 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             response.Length.ShouldBeGreaterThan(0);
             response.ShouldAllBe(x => x.Id != 0);
         }
+
+        [Fact]
+        public async Task GetGenderIdentities_ReturnsRecords()
+        {
+            GenderIdentityResponse response = await _client.Dictionaries.GetGenderIdentities();
+
+            response.ShouldNotBeNull();
+            response.Items.Length.ShouldBeGreaterThan(0);
+        }
     }
 }

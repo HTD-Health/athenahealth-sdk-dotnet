@@ -72,5 +72,8 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
 
         [Endpoint("GET /misc/patientlocations")]
         Task<PatientLocation[]> GetPatientLocations();
+
+        [Endpoint("GET /configuration/patients/genderidentity")]
+        Task<GenderIdentityResponse> GetGenderIdentities(GetGenderIdentitiesFilter queryParameters = null);
     }
 }
