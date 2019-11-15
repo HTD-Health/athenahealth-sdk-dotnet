@@ -56,5 +56,11 @@ namespace AthenaHealth.Sdk.Clients
         {
             return await _connection.Get<SocialHistoryTemplate[]>($"{_connection.PracticeId}/chart/configuration/socialhistory");
         }
+
+        [Endpoint("GET /ethnicities")]
+        public async Task<Ethnicity[]> GetEthnicities()
+        {
+            return await _connection.Get<Ethnicity[]>($"{_connection.PracticeId}/ethnicities");
+        }
     }
 }

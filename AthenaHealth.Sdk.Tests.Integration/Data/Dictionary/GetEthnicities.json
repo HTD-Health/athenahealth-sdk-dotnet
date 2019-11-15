@@ -1,0 +1,175 @@
+[
+  {
+    "ethnicityid": "2135-2",
+    "name": "Hispanic or Latino\/Spanish"
+  },
+  {
+    "ethnicityid": "2137-8",
+    "name": "Spaniard"
+  },
+  {
+    "ethnicityid": "2138-6",
+    "name": "Andalusian"
+  },
+  {
+    "ethnicityid": "2139-4",
+    "name": "Asturian"
+  },
+  {
+    "ethnicityid": "2140-2",
+    "name": "Castillian"
+  },
+  {
+    "ethnicityid": "2141-0",
+    "name": "Catalonian"
+  },
+  {
+    "ethnicityid": "2142-8",
+    "name": "Belearic Islander"
+  },
+  {
+    "ethnicityid": "2143-6",
+    "name": "Gallego"
+  },
+  {
+    "ethnicityid": "2144-4",
+    "name": "Valencian"
+  },
+  {
+    "ethnicityid": "2145-1",
+    "name": "Canarian"
+  },
+  {
+    "ethnicityid": "2146-9",
+    "name": "Spanish Basque"
+  },
+  {
+    "ethnicityid": "2148-5",
+    "name": "Mexican"
+  },
+  {
+    "ethnicityid": "2149-3",
+    "name": "Mexican American"
+  },
+  {
+    "ethnicityid": "2150-1",
+    "name": "Mexicano"
+  },
+  {
+    "ethnicityid": "2151-9",
+    "name": "Chicano"
+  },
+  {
+    "ethnicityid": "2152-7",
+    "name": "La Raza"
+  },
+  {
+    "ethnicityid": "2153-5",
+    "name": "Mexican American Indian"
+  },
+  {
+    "ethnicityid": "2155-0",
+    "name": "Central American"
+  },
+  {
+    "ethnicityid": "2156-8",
+    "name": "Costa Rican"
+  },
+  {
+    "ethnicityid": "2157-6",
+    "name": "Guatemalan"
+  },
+  {
+    "ethnicityid": "2158-4",
+    "name": "Honduran"
+  },
+  {
+    "ethnicityid": "2159-2",
+    "name": "Nicaraguan"
+  },
+  {
+    "ethnicityid": "2160-0",
+    "name": "Panamanian"
+  },
+  {
+    "ethnicityid": "2161-8",
+    "name": "Salvadoran"
+  },
+  {
+    "ethnicityid": "2162-6",
+    "name": "Central American Indian"
+  },
+  {
+    "ethnicityid": "2163-4",
+    "name": "Canal Zone"
+  },
+  {
+    "ethnicityid": "2165-9",
+    "name": "South American"
+  },
+  {
+    "ethnicityid": "2166-7",
+    "name": "Argentinean"
+  },
+  {
+    "ethnicityid": "2167-5",
+    "name": "Bolivian"
+  },
+  {
+    "ethnicityid": "2168-3",
+    "name": "Chilean"
+  },
+  {
+    "ethnicityid": "2169-1",
+    "name": "Colombian"
+  },
+  {
+    "ethnicityid": "2170-9",
+    "name": "Ecuadorian"
+  },
+  {
+    "ethnicityid": "2171-7",
+    "name": "Paraguayan"
+  },
+  {
+    "ethnicityid": "2172-5",
+    "name": "Peruvian"
+  },
+  {
+    "ethnicityid": "2173-3",
+    "name": "Uruguayan"
+  },
+  {
+    "ethnicityid": "2174-1",
+    "name": "Venezuelan"
+  },
+  {
+    "ethnicityid": "2175-8",
+    "name": "South American Indian"
+  },
+  {
+    "ethnicityid": "2176-6",
+    "name": "Criollo"
+  },
+  {
+    "ethnicityid": "2178-2",
+    "name": "Latin American\/Latin, Latino"
+  },
+  {
+    "ethnicityid": "2180-8",
+    "name": "Puerto Rican"
+  },
+  {
+    "ethnicityid": "2182-4",
+    "name": "Cuban"
+  },
+  {
+    "ethnicityid": "2184-0",
+    "name": "Dominican"
+  },
+  {
+    "ethnicityid": "2186-5",
+    "name": "Not Hispanic or Latino"
+  },
+  { "name": "Patient Declined" }
+]
