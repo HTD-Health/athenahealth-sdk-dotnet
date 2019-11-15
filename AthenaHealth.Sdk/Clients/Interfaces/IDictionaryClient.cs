@@ -63,5 +63,8 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
 
         [Endpoint("GET /languages")]
         Task<Language[]> GetLanguages();
+
+        [Endpoint("GET /races")]
+        Task<Race[]> GetRaces();
     }
 }

@@ -193,5 +193,15 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             response.ShouldNotBeNull();
             response.Length.ShouldBeGreaterThan(0);
         }
+
+        [Fact]
+        public async Task GetRaces_ReturnsRecords()
+        {
+            Race[] response = await _client.Dictionaries.GetRaces();
+
+            response.ShouldNotBeNull();
+            response.Length.ShouldBeGreaterThan(0);
+        }
+
     }
 }
