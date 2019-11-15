@@ -172,5 +172,18 @@ namespace AthenaHealth.Sdk.Tests.Integration
             response.Items.Length.ShouldBeGreaterThan(0);
             response.Total.ShouldBe(response.Items.Length);
         }
+
+        [Fact]
+        public async Task GetCustomFields_ReturnsRecords()
+        {
+            IDictionaryClient client = new DictionaryClient(ConnectionFactory.CreateFromFile(@"Data\Dictionary\GetCustomFields.json"));
+
+            var response = await client.GetCustomFields();
+
+            response.ShouldNotBeNull();
+            response.Length.ShouldBeGreaterThan(0);
+            response.ShouldAllBe(x => x.Id != 0);
+        }
+
     }
 }

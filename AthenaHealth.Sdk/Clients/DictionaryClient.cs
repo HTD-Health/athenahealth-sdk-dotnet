@@ -92,5 +92,11 @@ namespace AthenaHealth.Sdk.Clients
         {
             return await _connection.Get<GenderIdentityResponse>($"{_connection.PracticeId}/configuration/patients/genderidentity", queryParameters);
         }
+
+        [Endpoint("GET /customfields")]
+        public async Task<CustomField[]> GetCustomFields()
+        {
+            return await _connection.Get<CustomField[]>($"{_connection.PracticeId}/customfields");
+        }
     }
 }
