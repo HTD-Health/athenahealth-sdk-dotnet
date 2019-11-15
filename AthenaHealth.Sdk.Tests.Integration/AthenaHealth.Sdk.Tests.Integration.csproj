@@ -115,6 +115,9 @@
     <None Update="Data\Dictionary\GetCustomFields.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Data\Dictionary\GetMobileCarriers.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Data\Dictionary\GetSocialHistoryTemplates.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

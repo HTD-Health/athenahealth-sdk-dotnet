@@ -98,5 +98,11 @@ namespace AthenaHealth.Sdk.Clients
         {
             return await _connection.Get<CustomField[]>($"{_connection.PracticeId}/customfields");
         }
+
+        [Endpoint("GET /mobilecarriers")]
+        public async Task<MobileCarrier[]> GetMobileCarriers()
+        {
+            return await _connection.Get<MobileCarrier[]>($"{_connection.PracticeId}/mobilecarriers");
+        }
     }
 }

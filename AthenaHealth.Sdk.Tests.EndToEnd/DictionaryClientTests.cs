@@ -241,5 +241,15 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             response.Length.ShouldBeGreaterThan(0);
             response.ShouldAllBe(x => x.Id != 0);
         }
+
+        [Fact]
+        public async Task GetMobileCarriers_ReturnsRecords()
+        {
+            MobileCarrier[] response = await _client.Dictionaries.GetMobileCarriers();
+
+            response.ShouldNotBeNull();
+            response.Length.ShouldBeGreaterThan(0);
+            response.ShouldAllBe(x => x.Id != 0);
+        }
     }
 }

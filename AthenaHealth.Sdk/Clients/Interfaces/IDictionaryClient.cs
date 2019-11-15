@@ -78,5 +78,8 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
 
         [Endpoint("GET /customfields")]
         Task<CustomField[]> GetCustomFields();
+
+        [Endpoint("GET /mobilecarriers")]
+        Task<MobileCarrier[]> GetMobileCarriers();
     }
 }
