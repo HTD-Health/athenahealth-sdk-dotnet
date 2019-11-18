@@ -96,5 +96,8 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
 
         [Endpoint("GET /reference/providerspecialties")]
         Task<SpecialtyResponse> GetSpecialties(GetSpecialtiesFilter queryParameters = null);
+
+        [Endpoint("GET /configuration/chartsharinggroups")]
+        Task<ChartSharingGroup[]> GetChartSharingGroups();
     }
 }

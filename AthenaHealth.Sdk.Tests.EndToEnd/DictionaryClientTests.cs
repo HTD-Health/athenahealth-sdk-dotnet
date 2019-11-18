@@ -297,5 +297,15 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             response.ShouldNotBeNull();
             response.Items.Length.ShouldBeGreaterThan(0);
         }
+
+        [Fact]
+        public async Task GetChartSharingGroups_ReturnsRecords()
+        {
+            ChartSharingGroup[] response = await _client.Dictionaries.GetChartSharingGroups();
+
+            response.ShouldNotBeNull();
+            response.Length.ShouldBeGreaterThan(0);
+            response.ShouldAllBe(x => x.Id != 0);
+        }
     }
 }

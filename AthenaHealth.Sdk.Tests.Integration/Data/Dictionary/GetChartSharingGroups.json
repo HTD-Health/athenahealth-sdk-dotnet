@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Surgical Center",
+    "chartsharinggroupid": "41",
+    "created": "11\/17\/2011",
+    "patientfacingname": "6 Hills Medical Associates"
+  },
+  {
+    "name": "Emergency Services Group",
+    "chartsharinggroupid": "42",
+    "created": "11\/17\/2011",
+    "patientfacingname": "7 Hills Medical Group"
+  },
+  {
+    "name": "Mental Health",
+    "chartsharinggroupid": "43",
+    "created": "11\/17\/2011",
+    "patientfacingname": "BLACKSTONE VALLEY MEDICAL GROUP"
+  },
+  {
+    "name": "Mental Health 2",
+    "chartsharinggroupid": "81",
+    "created": "08\/11\/2012",
+    "patientfacingname": "5 Peaks Medical Organization"
+  }
+]
