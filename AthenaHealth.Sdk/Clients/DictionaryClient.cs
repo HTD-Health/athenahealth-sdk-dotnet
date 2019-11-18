@@ -140,5 +140,11 @@ namespace AthenaHealth.Sdk.Clients
         {
             return await _connection.Get<ChartSharingGroup[]>($"{_connection.PracticeId}/configuration/chartsharinggroups");
         }
+
+        [Endpoint("GET /communicatorbrands")]
+        public async Task<CommunicatorBrandResponse> GetCommunicatorBrands(GetCommunicatorBrandsFilter queryParameters = null)
+        {
+            return await _connection.Get<CommunicatorBrandResponse>($"{_connection.PracticeId}/communicatorbrands", queryParameters);
+        }
     }
 }

@@ -99,5 +99,8 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
 
         [Endpoint("GET /configuration/chartsharinggroups")]
         Task<ChartSharingGroup[]> GetChartSharingGroups();
+
+        [Endpoint("GET /communicatorbrands")]
+        Task<CommunicatorBrandResponse> GetCommunicatorBrands(GetCommunicatorBrandsFilter queryParameters = null);
     }
 }

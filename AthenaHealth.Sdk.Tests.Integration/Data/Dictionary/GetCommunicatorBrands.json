@@ -1,0 +1,26 @@
+{
+  "communicatorbrands": [
+    {
+      "fromemail": "noreply@mail.patient-message.com",
+      "hasportal": true,
+      "haspatientinfocenter": false,
+      "name": "COMMUNICATOR-7 Hills Medical Group",
+      "communicatorbrandid": 1
+    },
+    {
+      "fromemail": "noreply@mail.patient-message.com",
+      "hasportal": false,
+      "haspatientinfocenter": false,
+      "name": "Communicator-Blackstone Valley",
+      "communicatorbrandid": 21
+    },
+    {
+      "fromemail": "noreply@mail.patient-message.com",
+      "hasportal": false,
+      "haspatientinfocenter": false,
+      "name": "kate BRAND",
+      "communicatorbrandid": 42
+    }
+  ],
+  "totalcount": 3
+}
