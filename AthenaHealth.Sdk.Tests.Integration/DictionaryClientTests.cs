@@ -256,5 +256,17 @@ namespace AthenaHealth.Sdk.Tests.Integration
             response.Items.Length.ShouldBeGreaterThan(0);
             response.Total.ShouldBe(response.Items.Length);
         }
+
+        [Fact]
+        public async Task GetChartSharingGroups_ReturnsRecords()
+        {
+            IDictionaryClient client = new DictionaryClient(ConnectionFactory.CreateFromFile(@"Data\Dictionary\GetChartSharingGroups.json"));
+
+            var response = await client.GetChartSharingGroups();
+
+            response.ShouldNotBeNull();
+            response.Length.ShouldBeGreaterThan(0);
+            response.ShouldAllBe(x => x.Id != 0);
+        }
     }
 }
