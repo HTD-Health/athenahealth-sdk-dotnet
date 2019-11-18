@@ -268,5 +268,17 @@ namespace AthenaHealth.Sdk.Tests.Integration
             response.Length.ShouldBeGreaterThan(0);
             response.ShouldAllBe(x => x.Id != 0);
         }
+
+        [Fact]
+        public async Task GetCommunicatorBrands_ReturnsRecords()
+        {
+            IDictionaryClient client = new DictionaryClient(ConnectionFactory.CreateFromFile(@"Data\Dictionary\GetCommunicatorBrands.json"));
+
+            var response = await client.GetCommunicatorBrands();
+
+            response.ShouldNotBeNull();
+            response.Items.Length.ShouldBeGreaterThan(0);
+            response.Total.ShouldBe(response.Items.Length);
+        }
     }
 }

@@ -307,5 +307,15 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             response.Length.ShouldBeGreaterThan(0);
             response.ShouldAllBe(x => x.Id != 0);
         }
+
+        [Fact]
+        public async Task GetCommunicatorBrands_ReturnsRecords()
+        {
+            CommunicatorBrandResponse response = await _client.Dictionaries.GetCommunicatorBrands();
+
+            response.ShouldNotBeNull();
+            response.Items.Length.ShouldBeGreaterThan(0);
+            response.Items.ShouldAllBe(x => x.Id != 0);
+        }
     }
 }
