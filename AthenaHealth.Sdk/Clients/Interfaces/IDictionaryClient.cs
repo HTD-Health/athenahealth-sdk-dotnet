@@ -90,5 +90,8 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
 
         [Endpoint("GET /slidingfeeplans")]
         Task<SlidingFeePlanResponse> GetSlidingFeePlans(GetSlidingFeePlansFilter queryParameters = null);
+
+        [Endpoint("GET /chart/configuration/vitals")]
+        Task<VitalResponse> GetVitals(GetVitalsFilter queryParameters = null);
     }
 }

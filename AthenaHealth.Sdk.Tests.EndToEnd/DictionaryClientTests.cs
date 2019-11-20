@@ -279,5 +279,14 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             response.ShouldNotBeNull();
             response.Items.Length.ShouldBeGreaterThan(0);
         }
+
+        [Fact]
+        public async Task GetVitals_ReturnsRecords()
+        {
+            VitalResponse response = await _client.Dictionaries.GetVitals();
+
+            response.ShouldNotBeNull();
+            response.Items.Length.ShouldBeGreaterThan(0);
+        }
     }
 }
