@@ -1,0 +1,318 @@
+{
+  "vitals": [
+    {
+      "ordering": 0,
+      "istiedtomeasurement": false,
+      "abbreviation": "BP",
+      "attributes": [
+        {
+          "name": "Blood Pressure Systolic",
+          "abbreviation": "BP Systolic",
+          "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+          "datatype": "NUMERIC"
+        },
+        {
+          "name": "Blood Pressure Diastolic",
+          "abbreviation": "BP Diastolic",
+          "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+          "datatype": "NUMERIC"
+        },
+        {
+          "dataset": [ "L arm", "R arm", "L leg", "R leg", "L wrist", "R wrist" ],
+          "name": "Blood Pressure Site",
+          "abbreviation": "BP Site",
+          "clinicalelementid": "VITALS.BLOODPRESSURE.SITE",
+          "datatype": "SET"
+        },
+        {
+          "dataset": [ "sitting", "standing", "supine", "lying on side", "prone" ],
+          "name": "Blood Pressure Type",
+          "abbreviation": "BP Type",
+          "clinicalelementid": "VITALS.BLOODPRESSURE.TYPE",
+          "datatype": "SET"
+        },
+        {
+          "name": "Blood Pressure Not Performed",
+          "abbreviation": "Not Performed",
+          "clinicalelementid": "VITALS.BLOODPRESSURE.REFUSED",
+          "datatype": "CHECKBOX"
+        },
+        {
+          "dataset": [ "Not indicated", "Not tolerated", "Patient refused" ],
+          "name": "Blood Pressure Not Performed Reason",
+          "abbreviation": "Not Performed Reason",
+          "clinicalelementid": "VITALS.BLOODPRESSURE.REFUSEDREASON",
+          "datatype": "SET"
+        },
+        {
+          "name": "Blood Pressure Systolic Not Performed",
+          "abbreviation": "Not Performed",
+          "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLICREFUSED",
+          "datatype": "CHECKBOX"
+        },
+        {
+          "name": "Blood Pressure Diastolic Not Performed",
+          "abbreviation": "Not Performed",
+          "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLICREFUSED",
+          "datatype": "CHECKBOX"
+        }
+      ],
+      "key": "BLOODPRESSURE"
+    },
+    {
+      "ordering": 1,
+      "istiedtomeasurement": false,
+      "abbreviation": "BMI",
+      "attributes": [
+        {
+          "name": "BMI",
+          "abbreviation": "BMI",
+          "clinicalelementid": "VITALS.BMI",
+          "datatype": "NUMERIC"
+        },
+        {
+          "name": "BMI percentile: Age and sex",
+          "abbreviation": "BMI %ile: Age & sex",
+          "clinicalelementid": "VITALS.BMI.PERCENTILE",
+          "datatype": "NUMERIC"
+        }
+      ],
+      "key": "BMI"
+    },
+    {
+      "ordering": 2,
+      "istiedtomeasurement": false,
+      "abbreviation": "Ht",
+      "attributes": [
+        {
+          "unit": "cm",
+          "name": "Height",
+          "abbreviation": "Ht",
+          "clinicalelementid": "VITALS.HEIGHT",
+          "datatype": "NUMERIC"
+        }
+      ],
+      "key": "HEIGHT"
+    },
+    {
+      "ordering": 3,
+      "istiedtomeasurement": false,
+      "abbreviation": "Wt",
+      "attributes": [
+        {
+          "unit": "g",
+          "name": "Weight",
+          "abbreviation": "Wt",
+          "clinicalelementid": "VITALS.WEIGHT",
+          "datatype": "NUMERIC"
+        },
+        {
+          "name": "Weight Not Performed",
+          "abbreviation": "Not Performed",
+          "clinicalelementid": "VITALS.WEIGHT.REFUSED",
+          "datatype": "CHECKBOX"
+        },
+        {
+          "name": "Weight Out of Range",
+          "abbreviation": "Out of Range",
+          "clinicalelementid": "VITALS.WEIGHT.OUTOFRANGE",
+          "datatype": "CHECKBOX"
+        },
+        {
+          "dataset": [ "Weight", "Stated", "Dry", "Preoperative", "With clothes", "Without clothes", "First" ],
+          "name": "Weight type",
+          "abbreviation": "Wt type",
+          "clinicalelementid": "VITALS.WEIGHT.TYPE",
+          "datatype": "SET"
+        },
+        {
+          "dataset": [ "Not indicated", "Not tolerated", "Patient refused" ],
+          "name": "Weight Not Performed Reason",
+          "abbreviation": "Not Performed Reason",
+          "clinicalelementid": "VITALS.WEIGHT.REFUSEDREASON",
+          "datatype": "SET"
+        }
+      ],
+      "key": "WEIGHT"
+    },
+    {
+      "ordering": 4,
+      "istiedtomeasurement": false,
+      "abbreviation": "Blood Glucose",
+      "attributes": [
+        {
+          "name": "Blood Glucose",
+          "abbreviation": "Blood Glucose",
+          "clinicalelementid": "VITALS.BLOODSUGAR",
+          "datatype": "FREETEXT"
+        }
+      ],
+      "key": "BLOODSUGAR"
+    },
+    {
+      "ordering": 5,
+      "istiedtomeasurement": false,
+      "abbreviation": "HR",
+      "attributes": [
+        {
+          "name": "Heart Rate",
+          "abbreviation": "HR",
+          "clinicalelementid": "VITALS.HEARTRATE",
+          "datatype": "FREETEXT"
+        }
+      ],
+      "key": "HEARTRATE"
+    },
+    {
+      "ordering": 6,
+      "istiedtomeasurement": false,
+      "abbreviation": "O2Sat",
+      "attributes": [
+        {
+          "name": "O2 Saturation",
+          "abbreviation": "O2Sat",
+          "clinicalelementid": "VITALS.O2SATURATION",
+          "datatype": "NUMERIC"
+        },
+        {
+          "dataset": [ "Room Air at Rest", "Oxygen", "Breathing Treatment", "Room Air with Oxygen", "Room Air with Exercise", "Ambulating with Oxygen", "Ambulating on Room Air", "CPAP" ],
+          "name": "O2 Saturation Air Type",
+          "abbreviation": "O2Sat Air Type",
+          "clinicalelementid": "VITALS.O2SATURATION.AIRTYPE",
+          "datatype": "SET"
+        },
+        {
+          "name": "O2 Saturation Oxygen Quantity",
+          "abbreviation": "O2Sat Oxygen Quantity",
+          "clinicalelementid": "VITALS.O2SATURATION.OXYGENQUANTITY",
+          "datatype": "NUMERIC"
+        }
+      ],
+      "key": "O2SATURATION"
+    },
+    {
+      "ordering": 7,
+      "istiedtomeasurement": false,
+      "abbreviation": "Pulse",
+      "attributes": [
+        {
+          "name": "Pulse Rate",
+          "abbreviation": "Pulse Rate",
+          "clinicalelementid": "VITALS.PULSE.RATE",
+          "datatype": "NUMERIC"
+        },
+        {
+          "dataset": [ "regular", "irregular", "regularly irregular", "irregularly irregular" ],
+          "name": "Pulse Type",
+          "abbreviation": "Pulse Type",
+          "clinicalelementid": "VITALS.PULSE.TYPE",
+          "datatype": "SET"
+        },
+        {
+          "dataset": [ "apical", "brachial", "carotid", "femoral", "pedal", "popliteal", "radial" ],
+          "name": "Pulse Location",
+          "abbreviation": "Pulse Location",
+          "clinicalelementid": "VITALS.PULSE.LOCATION",
+          "datatype": "SET"
+        }
+      ],
+      "key": "PULSE"
+    },
+    {
+      "ordering": 8,
+      "istiedtomeasurement": false,
+      "abbreviation": "T",
+      "attributes": [
+        {
+          "unit": "F",
+          "name": "Temperature",
+          "abbreviation": "T",
+          "clinicalelementid": "VITALS.TEMPERATURE",
+          "datatype": "NUMERIC"
+        },
+        {
+          "dataset": [ "oral", "ear", "axillary", "rectal", "temporal artery" ],
+          "name": "Temperature Type",
+          "abbreviation": "T Type",
+          "clinicalelementid": "VITALS.TEMPERATURE.TYPE",
+          "datatype": "SET"
+        }
+      ],
+      "key": "TEMPERATURE"
+    },
+    {
+      "ordering": 9,
+      "istiedtomeasurement": false,
+      "abbreviation": "Ankle Circumference",
+      "attributes": [
+        {
+          "unit": "cm",
+          "name": "Ankle Circumference",
+          "abbreviation": "Ankle Circumference",
+          "clinicalelementid": "VITALS.ANKLECIRCUMFERENCE",
+          "datatype": "NUMERIC"
+        }
+      ],
+      "key": "ANKLECIRCUMFERENCE"
+    },
+    {
+      "ordering": 10,
+      "istiedtomeasurement": false,
+      "abbreviation": "Ankle Circumference Left",
+      "attributes": [
+        {
+          "unit": "cm",
+          "name": "Ankle Circumference Left",
+          "abbreviation": "Ankle Circumference Left",
+          "clinicalelementid": "VITALS.ANKLECIRCUMFERENCELEFT",
+          "datatype": "NUMERIC"
+        }
+      ],
+      "key": "ANKLECIRCUMFERENCELEFT"
+    },
+    {
+      "ordering": 11,
+      "istiedtomeasurement": false,
+      "abbreviation": "Ankle Circumference Right",
+      "attributes": [
+        {
+          "unit": "cm",
+          "name": "Ankle Circumference Right",
+          "abbreviation": "Ankle Circumference Right",
+          "clinicalelementid": "VITALS.ANKLECIRCUMFERENCERIGHT",
+          "datatype": "NUMERIC"
+        }
+      ],
+      "key": "ANKLECIRCUMFERENCERIGHT"
+    },
+    {
+      "ordering": 12,
+      "istiedtomeasurement": false,
+      "abbreviation": "Arm Circumference",
+      "attributes": [
+        {
+          "name": "Arm Circumference",
+          "abbreviation": "Arm Circumference",
+          "clinicalelementid": "VITALS.ARMCIRCUMFERENCE",
+          "datatype": "FREETEXT"
+        }
+      ],
+      "key": "ARMCIRCUMFERENCE"
+    },
+    {
+      "ordering": 13,
+      "istiedtomeasurement": false,
+      "abbreviation": "BMR",
+      "attributes": [
+        {
+          "name": "Basal Metabolic Rate",
+          "abbreviation": "BMR",
+          "clinicalelementid": "VITALS.BASALMETABOLICRATE",
+          "datatype": "FREETEXT"
+        }
+      ],
+      "key": "BASALMETABOLICRATE"
+    }
+  ],
+  "totalcount": 14
+}
