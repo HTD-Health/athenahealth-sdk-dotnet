@@ -288,5 +288,14 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             response.ShouldNotBeNull();
             response.Items.Length.ShouldBeGreaterThan(0);
         }
+
+        [Fact]
+        public async Task GetSpecialties_ReturnsRecords()
+        {
+            SpecialtyResponse response = await _client.Dictionaries.GetSpecialties();
+
+            response.ShouldNotBeNull();
+            response.Items.Length.ShouldBeGreaterThan(0);
+        }
     }
 }

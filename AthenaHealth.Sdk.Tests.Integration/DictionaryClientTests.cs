@@ -244,5 +244,17 @@ namespace AthenaHealth.Sdk.Tests.Integration
             response.Items.Length.ShouldBeGreaterThan(0);
             response.Total.ShouldBe(response.Items.Length);
         }
+
+        [Fact]
+        public async Task GetSpecialties_ReturnsRecords()
+        {
+            IDictionaryClient client = new DictionaryClient(ConnectionFactory.CreateFromFile(@"Data\Dictionary\GetSpecialties.json"));
+
+            var response = await client.GetSpecialties();
+
+            response.ShouldNotBeNull();
+            response.Items.Length.ShouldBeGreaterThan(0);
+            response.Total.ShouldBe(response.Items.Length);
+        }
     }
 }
