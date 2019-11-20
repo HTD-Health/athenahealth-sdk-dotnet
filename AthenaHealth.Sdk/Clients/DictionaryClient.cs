@@ -128,5 +128,11 @@ namespace AthenaHealth.Sdk.Clients
         {
             return await _connection.Get<VitalResponse>($"{_connection.PracticeId}/chart/configuration/vitals", queryParameters);
         }
+
+        [Endpoint("GET /reference/providerspecialties")]
+        public async Task<SpecialtyResponse> GetSpecialties(GetSpecialtiesFilter queryParameters = null)
+        {
+            return await _connection.Get<SpecialtyResponse>($"{_connection.PracticeId}/reference/providerspecialties", queryParameters);
+        }
     }
 }

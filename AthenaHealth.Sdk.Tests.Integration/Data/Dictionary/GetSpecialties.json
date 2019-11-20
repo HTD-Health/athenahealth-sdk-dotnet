@@ -1,0 +1,901 @@
+{
+  "totalcount": 224,
+  "providerspecialties": [
+    {
+      "specialtyname": "Acupuncture",
+      "specialtyid": "660"
+    },
+    {
+      "specialtyname": "Addiction Medicine",
+      "specialtyid": "079"
+    },
+    {
+      "specialtyname": "Adolescent Medicine",
+      "specialtyid": "635"
+    },
+    {
+      "specialtyname": "Advanced Diagnostic Imaging",
+      "specialtyid": "095"
+    },
+    {
+      "specialtyname": "Allergy\/Immunology",
+      "specialtyid": "003"
+    },
+    {
+      "specialtyname": "Ambulance - Ground",
+      "specialtyid": "059"
+    },
+    {
+      "specialtyname": "Ambulatory Surgical Center",
+      "specialtyid": "625"
+    },
+    {
+      "specialtyname": "Anesthesiologist Assistant",
+      "specialtyid": "032"
+    },
+    {
+      "specialtyname": "Anesthesiology",
+      "specialtyid": "005"
+    },
+    {
+      "specialtyname": "Anticoagulation Medicine",
+      "specialtyid": "738"
+    },
+    {
+      "specialtyname": "Applied Behavior Analyst",
+      "specialtyid": "695"
+    },
+    {
+      "specialtyname": "Audiology",
+      "specialtyid": "064"
+    },
+    {
+      "specialtyname": "Bariatric Medicine",
+      "specialtyid": "737"
+    },
+    {
+      "specialtyname": "Bariatric Surgery",
+      "specialtyid": "102"
+    },
+    {
+      "specialtyname": "Behavioral Health",
+      "specialtyid": "726"
+    },
+    {
+      "specialtyname": "Bone Marrow Transplant",
+      "specialtyid": "636"
+    },
+    {
+      "specialtyname": "Breast Surgery",
+      "specialtyid": "634"
+    },
+    {
+      "specialtyname": "Cardiac Surgery",
+      "specialtyid": "078"
+    },
+    {
+      "specialtyname": "Cardio Thoracic Critical Care",
+      "specialtyid": "638"
+    },
+    {
+      "specialtyname": "Cardiology",
+      "specialtyid": "006"
+    },
+    {
+      "specialtyname": "Cardiology: Invasive\/Interventional",
+      "specialtyid": "641"
+    },
+    {
+      "specialtyname": "Cardiology: Noninvasive",
+      "specialtyid": "642"
+    },
+    {
+      "specialtyname": "Cardiopulmonary Disease",
+      "specialtyid": "643"
+    },
+    {
+      "specialtyname": "Cardiovascular Disease",
+      "specialtyid": "644"
+    },
+    {
+      "specialtyname": "Cardiovascular and Thoracic Surgery",
+      "specialtyid": "640"
+    },
+    {
+      "specialtyname": "Care Management",
+      "specialtyid": "673"
+    },
+    {
+      "specialtyname": "Certified Health Coach",
+      "specialtyid": "709"
+    },
+    {
+      "specialtyname": "Certified Lactation Counselor",
+      "specialtyid": "706"
+    },
+    {
+      "specialtyname": "Certified Nurse Midwife",
+      "specialtyid": "042"
+    },
+    {
+      "specialtyname": "Certified Registered Nurse Anesthetist",
+      "specialtyid": "043"
+    },
+    {
+      "specialtyname": "Chaplain",
+      "specialtyid": "723"
+    },
+    {
+      "specialtyname": "Child and Adolescent Psychiatry",
+      "specialtyid": "670"
+    },
+    {
+      "specialtyname": "Chiropractic",
+      "specialtyid": "035"
+    },
+    {
+      "specialtyname": "Clinical Cardiac Electrophysiology",
+      "specialtyid": "606"
+    },
+    {
+      "specialtyname": "Clinical Nurse Specialist",
+      "specialtyid": "089"
+    },
+    {
+      "specialtyname": "Clinical Psychology",
+      "specialtyid": "068"
+    },
+    {
+      "specialtyname": "Colorectal Surgery",
+      "specialtyid": "028"
+    },
+    {
+      "specialtyname": "Community Health Worker",
+      "specialtyid": "103"
+    },
+    {
+      "specialtyname": "Cosmetic Surgeon",
+      "specialtyid": "727"
+    },
+    {
+      "specialtyname": "Critical Care: Intensive",
+      "specialtyid": "081"
+    },
+    {
+      "specialtyname": "Dental Hygienist",
+      "specialtyid": "711"
+    },
+    {
+      "specialtyname": "Dentist",
+      "specialtyid": "632"
+    },
+    {
+      "specialtyname": "Dermatology",
+      "specialtyid": "007"
+    },
+    {
+      "specialtyname": "Dermatology Surgery",
+      "specialtyid": "710"
+    },
+    {
+      "specialtyname": "Dermatopathology",
+      "specialtyid": "662"
+    },
+    {
+      "specialtyname": "Developmental Pediatrics",
+      "specialtyid": "608"
+    },
+    {
+      "specialtyname": "Diabetes Education",
+      "specialtyid": "611"
+    },
+    {
+      "specialtyname": "Diagnostic Radiology",
+      "specialtyid": "030"
+    },
+    {
+      "specialtyname": "EMT-Basic",
+      "specialtyid": "624"
+    },
+    {
+      "specialtyname": "EMT-Basic Advanced",
+      "specialtyid": "631"
+    },
+    {
+      "specialtyname": "EMT-Intermediate",
+      "specialtyid": "623"
+    },
+    {
+      "specialtyname": "EMT-Paramedic",
+      "specialtyid": "622"
+    },
+    {
+      "specialtyname": "Early Intervention",
+      "specialtyid": "696"
+    },
+    {
+      "specialtyname": "Emergency Medicine",
+      "specialtyid": "093"
+    },
+    {
+      "specialtyname": "Emergency Transport",
+      "specialtyid": "639"
+    },
+    {
+      "specialtyname": "Employee Health Center",
+      "specialtyid": "630"
+    },
+    {
+      "specialtyname": "Endocrine Surgery",
+      "specialtyid": "701"
+    },
+    {
+      "specialtyname": "Endocrinology",
+      "specialtyid": "046"
+    },
+    {
+      "specialtyname": "Endodontics",
+      "specialtyid": "733"
+    },
+    {
+      "specialtyname": "Exercise Physiology",
+      "specialtyid": "735"
+    },
+    {
+      "specialtyname": "Family Medicine",
+      "specialtyid": "008"
+    },
+    {
+      "specialtyname": "Fertility and Reproductive Endocrinology",
+      "specialtyid": "106"
+    },
+    {
+      "specialtyname": "Gastroenterology",
+      "specialtyid": "010"
+    },
+    {
+      "specialtyname": "General Practice",
+      "specialtyid": "001"
+    },
+    {
+      "specialtyname": "General Surgery",
+      "specialtyid": "002"
+    },
+    {
+      "specialtyname": "Genetics",
+      "specialtyid": "607"
+    },
+    {
+      "specialtyname": "Geriatric Medicine",
+      "specialtyid": "038"
+    },
+    {
+      "specialtyname": "Gynecological\/Oncology",
+      "specialtyid": "098"
+    },
+    {
+      "specialtyname": "Gynecology",
+      "specialtyid": "612"
+    },
+    {
+      "specialtyname": "Hand Surgeon",
+      "specialtyid": "722"
+    },
+    {
+      "specialtyname": "Hematology",
+      "specialtyid": "082"
+    },
+    {
+      "specialtyname": "Hematology\/Oncology",
+      "specialtyid": "083"
+    },
+    {
+      "specialtyname": "Hematology\/Oncology:Cell Therapy",
+      "specialtyid": "9083"
+    },
+    {
+      "specialtyname": "Hepatology",
+      "specialtyid": "105"
+    },
+    {
+      "specialtyname": "Home Health",
+      "specialtyid": "731"
+    },
+    {
+      "specialtyname": "Homeopathy",
+      "specialtyid": "657"
+    },
+    {
+      "specialtyname": "Hospitalist",
+      "specialtyid": "104"
+    },
+    {
+      "specialtyname": "Indigent Care",
+      "specialtyid": "617"
+    },
+    {
+      "specialtyname": "Infectious Disease",
+      "specialtyid": "044"
+    },
+    {
+      "specialtyname": "Infusion Therapy",
+      "specialtyid": "693"
+    },
+    {
+      "specialtyname": "Internal Medicine",
+      "specialtyid": "011"
+    },
+    {
+      "specialtyname": "Interventional Cardiology",
+      "specialtyid": "664"
+    },
+    {
+      "specialtyname": "Interventional Pain Management",
+      "specialtyid": "009"
+    },
+    {
+      "specialtyname": "Interventional Radiology",
+      "specialtyid": "094"
+    },
+    {
+      "specialtyname": "Lactation Consultant",
+      "specialtyid": "704"
+    },
+    {
+      "specialtyname": "Licensed Clinical Social Worker",
+      "specialtyid": "080"
+    },
+    {
+      "specialtyname": "Lifestyle Medicine",
+      "specialtyid": "730"
+    },
+    {
+      "specialtyname": "Liver Transplant",
+      "specialtyid": "637"
+    },
+    {
+      "specialtyname": "Massage Therapy",
+      "specialtyid": "656"
+    },
+    {
+      "specialtyname": "Maternal Fetal Medicine",
+      "specialtyid": "676"
+    },
+    {
+      "specialtyname": "Maxillofacial Surgery",
+      "specialtyid": "085"
+    },
+    {
+      "specialtyname": "Medical Oncology",
+      "specialtyid": "090"
+    },
+    {
+      "specialtyname": "Multispecialty Clinic",
+      "specialtyid": "070"
+    },
+    {
+      "specialtyname": "Naturopathic Medicine",
+      "specialtyid": "697"
+    },
+    {
+      "specialtyname": "Neonatology",
+      "specialtyid": "100"
+    },
+    {
+      "specialtyname": "Nephrology",
+      "specialtyid": "039"
+    },
+    {
+      "specialtyname": "Neurology",
+      "specialtyid": "013"
+    },
+    {
+      "specialtyname": "Neurophysiology",
+      "specialtyid": "677"
+    },
+    {
+      "specialtyname": "Neuropsychiatry",
+      "specialtyid": "086"
+    },
+    {
+      "specialtyname": "Neuropsychology",
+      "specialtyid": "691"
+    },
+    {
+      "specialtyname": "Neurosurgery",
+      "specialtyid": "014"
+    },
+    {
+      "specialtyname": "Nuclear Medicine",
+      "specialtyid": "036"
+    },
+    {
+      "specialtyname": "Nurse Practitioner- Generalist",
+      "specialtyid": "703"
+    },
+    {
+      "specialtyname": "Nurse Practitioner- Specialist",
+      "specialtyid": "050"
+    },
+    {
+      "specialtyname": "Nutritionist",
+      "specialtyid": "107"
+    },
+    {
+      "specialtyname": "OB\/GYN",
+      "specialtyid": "016"
+    },
+    {
+      "specialtyname": "OB\/GYN Oncology",
+      "specialtyid": "108"
+    },
+    {
+      "specialtyname": "Obesity Medicine",
+      "specialtyid": "705"
+    },
+    {
+      "specialtyname": "Occupational Medicine",
+      "specialtyid": "074"
+    },
+    {
+      "specialtyname": "Occupational Therapy",
+      "specialtyid": "067"
+    },
+    {
+      "specialtyname": "Occupational Therapy - Certified Hand Therapist",
+      "specialtyid": "721"
+    },
+    {
+      "specialtyname": "Ophthalmology",
+      "specialtyid": "018"
+    },
+    {
+      "specialtyname": "Optometry",
+      "specialtyid": "041"
+    },
+    {
+      "specialtyname": "Oral Surgery\/Dentist",
+      "specialtyid": "019"
+    },
+    {
+      "specialtyname": "Orthopaedic Surgery - Hand",
+      "specialtyid": "040"
+    },
+    {
+      "specialtyname": "Orthopedic Musculoskeletal Oncology",
+      "specialtyid": "719"
+    },
+    {
+      "specialtyname": "Orthopedic Sports Medicine",
+      "specialtyid": "718"
+    },
+    {
+      "specialtyname": "Orthopedic Surgery",
+      "specialtyid": "020"
+    },
+    {
+      "specialtyname": "Orthopedic Surgery Ankle\/Foot",
+      "specialtyid": "716"
+    },
+    {
+      "specialtyname": "Orthopedic Surgery Shoulder and Elbow",
+      "specialtyid": "717"
+    },
+    {
+      "specialtyname": "Orthopedic Surgery Total Joint",
+      "specialtyid": "720"
+    },
+    {
+      "specialtyname": "Orthopedic Surgery-Adult Reconstructive",
+      "specialtyid": "628"
+    },
+    {
+      "specialtyname": "Orthopedic Surgery-Spine",
+      "specialtyid": "629"
+    },
+    {
+      "specialtyname": "Orthopedic Trauma Surgery",
+      "specialtyid": "700"
+    },
+    {
+      "specialtyname": "Orthopedics",
+      "specialtyid": "653"
+    },
+    {
+      "specialtyname": "Orthotics",
+      "specialtyid": "055"
+    },
+    {
+      "specialtyname": "Orthotics-Prosthetics",
+      "specialtyid": "057"
+    },
+    {
+      "specialtyname": "Osteopathic Manipulative Medicine",
+      "specialtyid": "012"
+    },
+    {
+      "specialtyname": "Osteoporosis",
+      "specialtyid": "699"
+    },
+    {
+      "specialtyname": "Otolaryngology",
+      "specialtyid": "004"
+    },
+    {
+      "specialtyname": "Otolaryngology-Head and Neck Surgery",
+      "specialtyid": "728"
+    },
+    {
+      "specialtyname": "Pain Management",
+      "specialtyid": "072"
+    },
+    {
+      "specialtyname": "Palliative Care",
+      "specialtyid": "101"
+    },
+    {
+      "specialtyname": "Pathology",
+      "specialtyid": "022"
+    },
+    {
+      "specialtyname": "Pediatric Allergy\/Immunology",
+      "specialtyid": "681"
+    },
+    {
+      "specialtyname": "Pediatric Audiology",
+      "specialtyid": "661"
+    },
+    {
+      "specialtyname": "Pediatric Bariatric Medicine",
+      "specialtyid": "708"
+    },
+    {
+      "specialtyname": "Pediatric Cardiology",
+      "specialtyid": "654"
+    },
+    {
+      "specialtyname": "Pediatric Critical Care: Intensive",
+      "specialtyid": "682"
+    },
+    {
+      "specialtyname": "Pediatric Dentist",
+      "specialtyid": "109"
+    },
+    {
+      "specialtyname": "Pediatric Dermatology",
+      "specialtyid": "663"
+    },
+    {
+      "specialtyname": "Pediatric Emergency Medicine",
+      "specialtyid": "648"
+    },
+    {
+      "specialtyname": "Pediatric Endocrinology",
+      "specialtyid": "615"
+    },
+    {
+      "specialtyname": "Pediatric Gastroenterology",
+      "specialtyid": "655"
+    },
+    {
+      "specialtyname": "Pediatric Genetics",
+      "specialtyid": "620"
+    },
+    {
+      "specialtyname": "Pediatric Hematology\/Oncology",
+      "specialtyid": "666"
+    },
+    {
+      "specialtyname": "Pediatric Hospitalist",
+      "specialtyid": "650"
+    },
+    {
+      "specialtyname": "Pediatric Infectious Disease",
+      "specialtyid": "667"
+    },
+    {
+      "specialtyname": "Pediatric Intensivist",
+      "specialtyid": "649"
+    },
+    {
+      "specialtyname": "Pediatric Internal Medicine",
+      "specialtyid": "713"
+    },
+    {
+      "specialtyname": "Pediatric Medicine",
+      "specialtyid": "037"
+    },
+    {
+      "specialtyname": "Pediatric Neonatal-Perinatal Medicine",
+      "specialtyid": "694"
+    },
+    {
+      "specialtyname": "Pediatric Nephrology",
+      "specialtyid": "668"
+    },
+    {
+      "specialtyname": "Pediatric Neurology",
+      "specialtyid": "619"
+    },
+    {
+      "specialtyname": "Pediatric Neuropsychiatry",
+      "specialtyid": "683"
+    },
+    {
+      "specialtyname": "Pediatric Neuropsychology",
+      "specialtyid": "692"
+    },
+    {
+      "specialtyname": "Pediatric Neurosurgery",
+      "specialtyid": "684"
+    },
+    {
+      "specialtyname": "Pediatric Nutrition",
+      "specialtyid": "674"
+    },
+    {
+      "specialtyname": "Pediatric Ophthalmology",
+      "specialtyid": "685"
+    },
+    {
+      "specialtyname": "Pediatric Orthopedic Surgery",
+      "specialtyid": "672"
+    },
+    {
+      "specialtyname": "Pediatric Otolaryngology",
+      "specialtyid": "665"
+    },
+    {
+      "specialtyname": "Pediatric Pain Management",
+      "specialtyid": "675"
+    },
+    {
+      "specialtyname": "Pediatric Palliative Care",
+      "specialtyid": "680"
+    },
+    {
+      "specialtyname": "Pediatric Physical Medicine and Rehabilitation",
+      "specialtyid": "678"
+    },
+    {
+      "specialtyname": "Pediatric Plastic\/Reconstructive Surgery",
+      "specialtyid": "679"
+    },
+    {
+      "specialtyname": "Pediatric Psychiatry",
+      "specialtyid": "688"
+    },
+    {
+      "specialtyname": "Pediatric Psychology",
+      "specialtyid": "687"
+    },
+    {
+      "specialtyname": "Pediatric Pulmonology",
+      "specialtyid": "633"
+    },
+    {
+      "specialtyname": "Pediatric Rheumatology",
+      "specialtyid": "669"
+    },
+    {
+      "specialtyname": "Pediatric Sleep Medicine",
+      "specialtyid": "686"
+    },
+    {
+      "specialtyname": "Pediatric Sports Medicine",
+      "specialtyid": "689"
+    },
+    {
+      "specialtyname": "Pediatric Surgery",
+      "specialtyid": "618"
+    },
+    {
+      "specialtyname": "Pediatric Urology",
+      "specialtyid": "671"
+    },
+    {
+      "specialtyname": "Pedodontist",
+      "specialtyid": "732"
+    },
+    {
+      "specialtyname": "Perfusionist",
+      "specialtyid": "609"
+    },
+    {
+      "specialtyname": "Perinatology",
+      "specialtyid": "613"
+    },
+    {
+      "specialtyname": "Periodontics",
+      "specialtyid": "110"
+    },
+    {
+      "specialtyname": "Peripheral V. D.\/Ost",
+      "specialtyid": "023 "
+    },
+    {
+      "specialtyname": "Peripheral Vas. Dis.",
+      "specialtyid": "076"
+    },
+    {
+      "specialtyname": "Pharmacist",
+      "specialtyid": "702"
+    },
+    {
+      "specialtyname": "Phys. Med. & Rehab.",
+      "specialtyid": "025"
+    },
+    {
+      "specialtyname": "Physical Therapy",
+      "specialtyid": "065"
+    },
+    {
+      "specialtyname": "Physician Assistant",
+      "specialtyid": "097"
+    },
+    {
+      "specialtyname": "Plastic\/Reconstructive Surg.",
+      "specialtyid": "024"
+    },
+    {
+      "specialtyname": "Podiatric Surgery",
+      "specialtyid": "652"
+    },
+    {
+      "specialtyname": "Podiatry",
+      "specialtyid": "048"
+    },
+    {
+      "specialtyname": "Preventive Medicine",
+      "specialtyid": "084"
+    },
+    {
+      "specialtyname": "Procurement",
+      "specialtyid": "651"
+    },
+    {
+      "specialtyname": "Prosthetics",
+      "specialtyid": "056"
+    },
+    {
+      "specialtyname": "Prosthodontic",
+      "specialtyid": "734"
+    },
+    {
+      "specialtyname": "Psychiatry",
+      "specialtyid": "026"
+    },
+    {
+      "specialtyname": "Psychology",
+      "specialtyid": "062"
+    },
+    {
+      "specialtyname": "Pulmonary Critical Care",
+      "specialtyid": "647"
+    },
+    {
+      "specialtyname": "Pulmonary Disease",
+      "specialtyid": "029"
+    },
+    {
+      "specialtyname": "RESPIRATORY THERAPY",
+      "specialtyid": "729"
+    },
+    {
+      "specialtyname": "Radiation Oncology",
+      "specialtyid": "092"
+    },
+    {
+      "specialtyname": "Registered Dietitian\/Nutritionist",
+      "specialtyid": "071"
+    },
+    {
+      "specialtyname": "Research",
+      "specialtyid": "698"
+    },
+    {
+      "specialtyname": "Retail Clinic",
+      "specialtyid": "614"
+    },
+    {
+      "specialtyname": "Retina Specialist",
+      "specialtyid": "725"
+    },
+    {
+      "specialtyname": "Rheumatology",
+      "specialtyid": "066"
+    },
+    {
+      "specialtyname": "Roentgenology\/Radio",
+      "specialtyid": "031"
+    },
+    {
+      "specialtyname": "Sleep Medicine",
+      "specialtyid": "111"
+    },
+    {
+      "specialtyname": "Social Worker",
+      "specialtyid": "690"
+    },
+    {
+      "specialtyname": "Speech Language Pathologist",
+      "specialtyid": "015"
+    },
+    {
+      "specialtyname": "Spine Surgery",
+      "specialtyid": "736"
+    },
+    {
+      "specialtyname": "Sports Medicine",
+      "specialtyid": "023"
+    },
+    {
+      "specialtyname": "Surgical Assistant",
+      "specialtyid": "610"
+    },
+    {
+      "specialtyname": "Surgical Oncology",
+      "specialtyid": "091"
+    },
+    {
+      "specialtyname": "Telehealth",
+      "specialtyid": "714"
+    },
+    {
+      "specialtyname": "Thoracic Surgery",
+      "specialtyid": "033"
+    },
+    {
+      "specialtyname": "Transplant Hepatology",
+      "specialtyid": "646"
+    },
+    {
+      "specialtyname": "Transplant Nephrologist",
+      "specialtyid": "724"
+    },
+    {
+      "specialtyname": "Transplant Surgery",
+      "specialtyid": "645"
+    },
+    {
+      "specialtyname": "Trauma Surgery",
+      "specialtyid": "712"
+    },
+    {
+      "specialtyname": "Unknown Provider",
+      "specialtyid": "099"
+    },
+    {
+      "specialtyname": "Urgent Care",
+      "specialtyid": "626"
+    },
+    {
+      "specialtyname": "Urogynecology",
+      "specialtyid": "627"
+    },
+    {
+      "specialtyname": "Urology",
+      "specialtyid": "034"
+    },
+    {
+      "specialtyname": "Vascular Surgery",
+      "specialtyid": "077"
+    },
+    {
+      "specialtyname": "Visiting Nurse",
+      "specialtyid": "112"
+    },
+    {
+      "specialtyname": "Weight Management",
+      "specialtyid": "707"
+    },
+    {
+      "specialtyname": "Wheelchair Van",
+      "specialtyid": "621"
+    },
+    {
+      "specialtyname": "Wound Care",
+      "specialtyid": "715"
+    }
+  ]
+}
