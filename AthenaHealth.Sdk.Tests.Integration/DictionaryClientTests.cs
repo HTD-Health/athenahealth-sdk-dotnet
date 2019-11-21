@@ -280,5 +280,16 @@ namespace AthenaHealth.Sdk.Tests.Integration
             response.Items.Length.ShouldBeGreaterThan(0);
             response.Total.ShouldBe(response.Items.Length);
         }
+
+        [Fact]
+        public async Task GetOfficeOrderTypes_ReturnsRecords()
+        {
+            IDictionaryClient client = new DictionaryClient(ConnectionFactory.CreateFromFile(@"Data\Dictionary\GetOfficeOrderTypes.json"));
+
+            var response = await client.GetOfficeOrderTypes();
+
+            response.ShouldNotBeNull();
+            response.Length.ShouldBeGreaterThan(0);
+        }
     }
 }
