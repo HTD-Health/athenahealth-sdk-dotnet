@@ -51,7 +51,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// The status of the task to filter document results.
         /// </summary>
         [JsonProperty("status")]
-        [JsonConverter(typeof(CustomEnumConverter))]
+        [JsonConverter(typeof(EnumConverter))]
         public PrescriptionStatusEnum? Status { get; set; }
 
         /// <summary>

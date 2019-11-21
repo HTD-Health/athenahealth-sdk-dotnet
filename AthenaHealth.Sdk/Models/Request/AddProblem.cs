@@ -17,7 +17,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// Update the laterality of this problem. Can be null, LEFT, RIGHT, or BILATERAL.
         /// </summary>
         [JsonProperty("laterality")]
-        [JsonConverter(typeof(CustomEnumConverter))]
+        [JsonConverter(typeof(EnumConverter))]
         public LateralityEnum? Laterality { get; set; }
 
         /// <summary>
@@ -36,14 +36,14 @@ namespace AthenaHealth.Sdk.Models.Request
         /// The onset date to be updated for this problem in MM/DD/YYYY format.
         /// </summary>
         [JsonProperty("startdate")]
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
         public DateTime? StartDate { get; set; }
 
         /// <summary>
         /// Whether the problem is chronic or acute.
         /// </summary>
         [JsonProperty("status")]
-        [JsonConverter(typeof(CustomEnumConverter))]
+        [JsonConverter(typeof(EnumConverter))]
         public ProblemStatusEnum? Status { get; set; }
 
         public AddProblem(int departmentId, string snomedCode)

@@ -13,7 +13,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// The appointment date for the new open appointment slot (mm/dd/yyyy).
         /// </summary>
         [JsonProperty("appointmentdate")]
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
         [Required]
         public DateTime AppointmentDate { get; set; }
 
@@ -21,7 +21,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// The time (hh24:mi) for the new appointment slot.  Multiple times (either as a comma delimited list or multiple POSTed values) are allowed.  24 hour time.
         /// </summary>
         [JsonProperty("appointmenttime")]
-        [JsonConverter(typeof(CustomArrayToStringConverter), ",")]
+        [JsonConverter(typeof(DelimitedStringConverter), ",")]
         [Required]
         public ClockTime[] AppointmentTime { get; set; }
 

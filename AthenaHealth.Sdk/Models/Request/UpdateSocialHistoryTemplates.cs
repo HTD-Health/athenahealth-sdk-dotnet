@@ -15,7 +15,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// A comma separated list of template IDs to subscribe to.
         /// </summary>
         [JsonProperty("templateids")]
-        [JsonConverter(typeof(CustomArrayToStringConverter), ",", true)]
+        [JsonConverter(typeof(DelimitedStringConverter), ",", true)]
         public int[] TemplateIds { get; set; }
 
         public UpdateSocialHistoryTemplates(int departmentId, int[] templateIds)

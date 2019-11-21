@@ -48,7 +48,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// Appointment reasons can be for new patients, existing patients, or all. Values are "new", "existing", or "all".
         /// </summary>
         [JsonProperty("reasontype")]
-        [JsonConverter(typeof(CustomEnumConverter))]
+        [JsonConverter(typeof(EnumConverter))]
         public AppointmentReasonTypeEnum ReasonType { get; set; }
 
         /// <summary>

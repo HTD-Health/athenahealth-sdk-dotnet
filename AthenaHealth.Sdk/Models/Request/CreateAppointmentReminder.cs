@@ -20,7 +20,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// </summary>
         [JsonProperty("approximatedate")]
         [Required]
-        [JsonConverter(typeof(CustomDateConverter))]
+        [JsonConverter(typeof(DateConverter))]
         public DateTime ApproximateDate { get; set; }
 
         /// <summary>

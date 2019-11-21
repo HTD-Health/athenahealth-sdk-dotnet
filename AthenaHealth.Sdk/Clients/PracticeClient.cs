@@ -26,7 +26,7 @@ namespace AthenaHealth.Sdk.Clients
         [Endpoint("GET /ping")]
         public async Task<bool> HasAccess(int practiceId)
         {
-            HasAccessResponse result =  await _connection.Get<HasAccessResponse>($"{practiceId}/ping");
+            HasAccessResponse result = await _connection.Get<HasAccessResponse>($"{practiceId}/ping");
             return result.IsTrue;
         }
 

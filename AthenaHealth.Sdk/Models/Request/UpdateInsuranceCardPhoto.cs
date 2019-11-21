@@ -16,6 +16,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// scaled down after submission. PUT is not recommended when using multipart/form-data.
         /// Since POST and PUT have identical functionality, POST is recommended.
         /// </summary>
+        [JsonIgnore]
         [JsonProperty("image")]
         public FileInfo Image { get; set; }
 

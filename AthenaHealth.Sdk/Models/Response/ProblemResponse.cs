@@ -35,7 +35,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// Deprecated, used LASTMODIFIEDDATETIME instead. The last date any of the problems in the returned list were updated. Does not include no known problems or the section note, and is date precision.
         /// </summary>
         [JsonProperty("lastupdated")]
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
         public DateTime? LastUpdated { get; set; }
 
         /// <summary>
@@ -74,7 +74,7 @@ namespace AthenaHealth.Sdk.Models.Response
             /// Date of problem deactivation.
             /// </summary>
             [JsonProperty("deactivateddate")]
-            [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+            [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
             public DateTime? DeactivatedDate { get; set; }
 
             /// <summary>
@@ -161,28 +161,28 @@ namespace AthenaHealth.Sdk.Models.Response
                 /// The specified onset date for this problem, as entered by the practice. If available this is more accurate than the start date.
                 /// </summary>
                 [JsonProperty("onsetdate")]
-                [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+                [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
                 public DateTime? OnsetDate { get; set; }
 
                 /// <summary>
                 /// The date this problem event started or was restarted. Uses the onsetdate if available, otherwise uses the date the problem was entered into the system.
                 /// </summary>
                 [JsonProperty("startdate")]
-                [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+                [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
                 public DateTime? StartDate { get; set; }
 
                 /// <summary>
                 /// The date this problem event ended or was hidden
                 /// </summary>
                 [JsonProperty("enddate")]
-                [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+                [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
                 public DateTime? EndDate { get; set; }
 
                 /// <summary>
                 /// The date of the encounter where a diagnosis matching this problem was used.
                 /// </summary>
                 [JsonProperty("encounterdate")]
-                [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+                [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
                 public DateTime? EncounterDate { get; set; }
 
                 /// <summary>
@@ -201,7 +201,7 @@ namespace AthenaHealth.Sdk.Models.Response
                 /// The date that the user entered this problem.
                 /// </summary>
                 [JsonProperty("createddate")]
-                [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+                [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
                 public DateTime? CreatedDate { get; set; }
 
                 /// <summary>

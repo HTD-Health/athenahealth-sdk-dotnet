@@ -16,7 +16,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// Date the document was created. Please use createddatetime instead.
         /// </summary>
         [JsonProperty("createddate")]
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
         public DateTime? CreatedDate { get; set; }
 
         /// <summary>
@@ -242,7 +242,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// Date/time the observation was taken
         /// </summary>
         [JsonProperty("observationdate")]
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
         public DateTime? ObservationDate { get; set; }
 
         /// <summary>
@@ -255,14 +255,14 @@ namespace AthenaHealth.Sdk.Models.Response
         /// Date/time (ISO 8601) the document was last modified
         /// </summary>
         [JsonProperty("lastmodifieddate")]
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
         public DateTime? LastModifiedDate { get; set; }
 
         /// <summary>
         /// Date of the encounter associated with this document
         /// </summary>
         [JsonProperty("encounterdate")]
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
         public DateTime? EncounterDate { get; set; }
 
         /// <summary>

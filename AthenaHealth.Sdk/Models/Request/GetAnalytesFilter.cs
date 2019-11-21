@@ -29,7 +29,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// free text field, this list is not exhaustive, but does represent a majority of the used statuses.
         /// </summary>
         [JsonProperty("analyteresultstatus")]
-        [JsonConverter(typeof(CustomEnumConverter))]
+        [JsonConverter(typeof(EnumConverter))]
         public AnalyteResultStatusEnum? AnalyteResultStatus { get; set; }
 
         /// <summary>
@@ -38,7 +38,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// be included if specified.
         /// </summary>
         [JsonProperty("enddate")]
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
         public DateTime? EndDate { get; set; }
 
         /// <summary>
@@ -52,7 +52,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// free text field, this list is not exhaustive, but does represent a majority of the used statuses.
         /// </summary>
         [JsonProperty("labresultstatus")]
-        [JsonConverter(typeof(CustomEnumConverter))]
+        [JsonConverter(typeof(EnumConverter))]
         public LabResultStatusEnum? LabResultStatus { get; set; }
 
         /// <summary>
@@ -80,7 +80,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// until enddate if specified.
         /// </summary>
         [JsonProperty("startdate")]
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
         public DateTime? StartDate { get; set; }
 
         /// <summary>

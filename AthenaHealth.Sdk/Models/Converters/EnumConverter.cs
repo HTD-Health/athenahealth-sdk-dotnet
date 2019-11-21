@@ -5,28 +5,28 @@ using System;
 
 namespace AthenaHealth.Sdk.Models.Converters
 {
-    public class CustomEnumConverter : StringEnumConverter
+    public class EnumConverter : StringEnumConverter
     {
-        public CustomEnumConverter()
+        public EnumConverter()
         {
         }
 
-        public CustomEnumConverter(Type namingStrategyType)
+        public EnumConverter(Type namingStrategyType)
             : base(namingStrategyType)
         {
         }
 
-        public CustomEnumConverter(NamingStrategy namingStrategy, bool allowIntegerValues = true)
+        public EnumConverter(NamingStrategy namingStrategy, bool allowIntegerValues = true)
             : base(namingStrategy, allowIntegerValues)
         {
         }
 
-        public CustomEnumConverter(Type namingStrategyType, object[] namingStrategyParameters)
+        public EnumConverter(Type namingStrategyType, object[] namingStrategyParameters)
             : base(namingStrategyType, namingStrategyParameters)
         {
         }
 
-        public CustomEnumConverter(Type namingStrategyType, object[] namingStrategyParameters, bool allowIntegerValues)
+        public EnumConverter(Type namingStrategyType, object[] namingStrategyParameters, bool allowIntegerValues)
             : base(namingStrategyType, namingStrategyParameters, allowIntegerValues)
         {
         }

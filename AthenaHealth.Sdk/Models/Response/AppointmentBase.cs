@@ -1,5 +1,4 @@
-﻿using AthenaHealth.Sdk.Models.Converters;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
 
 // ReSharper disable StringLiteralTypo
@@ -65,7 +64,6 @@ namespace AthenaHealth.Sdk.Models.Response
         /// As HH:MM (where HH is the 0-23 hour and MM is the minute).  This time is local to the department.
         /// </summary>
         [JsonProperty("starttime")]
-        [JsonConverter(typeof(CustomClockTimeConverter))]
         public ClockTime? StartTime { get; set; }
 
         /// <summary>

@@ -27,13 +27,13 @@ namespace AthenaHealth.Sdk.Models.Request
         /// </summary>
         [JsonProperty("departmentid")]
         [Required]
-        [JsonConverter(typeof(CustomArrayToStringConverter), ",")]
+        [JsonConverter(typeof(DelimitedStringConverter), ",")]
         public int[] DepartmentId { get; set; }
 
         /// <summary>
         /// End of the appointment search date range (mm/dd/yyyy).  Inclusive. Defaults to seven days from startdate.
         /// </summary>
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
         [JsonProperty("enddate")]
         public DateTime? EndDate { get; set; }
 
@@ -48,14 +48,14 @@ namespace AthenaHealth.Sdk.Models.Request
         /// The athenaNet provider ID. Required if a reasonid other than -1 is specified.
         /// </summary>
         [JsonProperty("providerid")]
-        [JsonConverter(typeof(CustomArrayToStringConverter), ",")]
+        [JsonConverter(typeof(DelimitedStringConverter), ",")]
         public int[] ProviderId { get; set; }
 
         /// <summary>
         /// The athenaNet patient appointment reason ID, from GET /patientappointmentreasons. While this is not technically required due to some unusual use cases, it is highly recommended for most calls. We do allow a special value of -1 for the reasonid. This reasonid will return open, web-schedulable slots regardless of reason.  However, slots returned using a search of -1 may return slots that are not bookable by any reason ID (they may be bookable by specific appointment type IDs instead).  This argument allows multiple valid reason IDs to be specified (e.g. reasonid=1,2,3), so if you are looking for slots that match "any" reason, it is recommended that you enumerate the set of reasons you are looking for.  Either a reasonid or an appointmenttypeid must be specified or no results will be returned. If a reasonid other than -1 is specified then a providerid must also be specified.
         /// </summary>
         [JsonProperty("reasonid")]
-        [JsonConverter(typeof(CustomArrayToStringConverter), ",")]
+        [JsonConverter(typeof(DelimitedStringConverter), ",")]
         public int[] ReasonId { get; set; }
 
         /// <summary>
@@ -67,7 +67,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// <summary>
         /// Start of the appointment search date range (mm/dd/yyyy).  Inclusive.  Defaults to today.
         /// </summary>
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
         [JsonProperty("startdate")]
         public DateTime? StartDate { get; set; }
 

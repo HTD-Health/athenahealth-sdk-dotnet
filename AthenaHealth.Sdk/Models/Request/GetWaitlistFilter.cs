@@ -52,7 +52,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// <summary>
         /// Indicating the priority of this wait list entry.
         /// </summary>
-        [JsonConverter(typeof(CustomEnumConverter))]
+        [JsonConverter(typeof(EnumConverter))]
         [JsonProperty("priority")]
         public PriorityEnum? Priority { get; set; }
 

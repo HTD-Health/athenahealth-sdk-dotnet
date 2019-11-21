@@ -1,28 +1,17 @@
 ﻿using AthenaHealth.Sdk.Models.Converters;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Reflection;
-using System.Text;
 
 namespace AthenaHealth.Sdk.Http.Helpers
 {
     public static class ContentConverter
     {
-        public static HttpContent ToJson(object obj)
-        {
-            if (obj == null)
-                return null;
-
-            if (obj is string)
-                return new StringContent(obj as string, Encoding.UTF8, "application/json");
-
-            return new StringContent(JsonConvert.SerializeObject(obj), Encoding.UTF8, "application/json");
-        }
-
         public static HttpContent ToUrlEncoded(object obj)
         {
             return new FormUrlEncodedContent(ConvertObjectToDictionary(obj));
@@ -46,7 +35,59 @@ namespace AthenaHealth.Sdk.Http.Helpers
             return content;
         }
 
-        public static IDictionary<string, FileInfo> GetFilesDictionary(object obj)
+        /// <summary>
+        /// Performs conversion from object to dictionary.
+        /// Name of the property becomes a dictionary key. Value of the property becomes dictionary value.
+        /// If JsonConvert attribute is set up, converter is used.
+        /// If value is an array, it is converted to delimited string
+        /// If value is neither an array nor simple type, it is serialized to JSON
+        /// </summary>
+        /// <param name="obj">Object to be converted</param>
+        /// <returns>Converted object as dictionary</returns>
+        public static IDictionary<string, string> ConvertObjectToDictionary(object obj)
+        {
+            IDictionary<string, string> dictionary = new Dictionary<string, string>();
+
+            if (obj == null)
+                return dictionary;
+
+            foreach (var item in JToken.FromObject(obj).Children<JProperty>())
+            {
+                // First child determine underlying type (other than JTokenType.Property)
+                var innerChild = item.Children().First();
+
+                // Omit null values
+                if (innerChild.Type == JTokenType.Null)
+                    continue;
+
+                // If underlying type is an array
+                if (innerChild.Type == JTokenType.Array)
+                {
+                    // Get all null children
+                    var nullChildren = innerChild.Children()
+                        .Where(x => x.Type == JTokenType.Null)
+                        .ToList();
+
+                    // And remove them
+                    foreach (var nullChild in nullChildren)
+                    {
+                        nullChild.Remove();
+                    }
+                }
+
+                // There is need to remove trailing "
+                string value = item.Value
+                    .ToString(Formatting.None, new DateConverter("MM/dd/yyyy HH:mm:ss"))
+                    .Trim('"');
+
+                // If everything is OK just add to dictionary
+                dictionary.Add(item.Name, value);
+            }
+
+            return dictionary;
+        }
+
+        private static IDictionary<string, FileInfo> GetFilesDictionary(object obj)
         {
             IDictionary<string, FileInfo> dictionary = new Dictionary<string, FileInfo>();
 
@@ -68,74 +109,6 @@ namespace AthenaHealth.Sdk.Http.Helpers
         }
 
         /// <summary>
-        /// Performs conversion from object to dictionary.
-        /// Name of the property becomes a dictionary key. Value of the property becomes dictionary value.
-        /// If JsonConvert attribute is set up, converter is used.
-        /// If value is an array, it is converted to delimited string
-        /// If value is neither an array nor simple type, it is serialized to JSON
-        /// </summary>
-        /// <param name="obj">Object to be converted</param>
-        /// <returns>Converted object as dictionary</returns>
-        public static IDictionary<string, string> ConvertObjectToDictionary(object obj)
-        {
-            IDictionary<string, string> dictionary = new Dictionary<string, string>();
-
-            if (obj == null)
-                return dictionary;
-
-            foreach (var item in obj.GetType().GetProperties())
-            {
-                var key = GetKey(item);
-
-                string value = GetValue(obj, item);
-
-                if (value != null)
-                    dictionary[key] = value;
-            }
-
-            return dictionary;
-        }
-
-        /// <summary>
-        /// Get value of an object in different cases
-        /// </summary>
-        /// <param name="obj"></param>
-        /// <param name="item"></param>
-        /// <returns></returns>
-        private static string GetValue(object obj, PropertyInfo item)
-        {
-            object value = item.GetValue(obj);
-            if (value == null)
-                return null;
-
-            //if JsonConverter attribute is set up
-            JsonConverterAttribute jsonConverterAttribute = item.GetAttribute<JsonConverterAttribute>();
-            if (jsonConverterAttribute != null)
-            {
-                return GetValueWithJsonConverter(jsonConverterAttribute, value);
-            }
-
-            return ObjectToStringOrDelimitedStringConverter.Convert(value);
-        }
-
-        /// <summary>
-        /// Gets value of an object using JsonConverter
-        /// </summary>
-        /// <param name="jsonConverterAttribute"></param>
-        /// <param name="value"></param>
-        /// <returns></returns>
-        private static string GetValueWithJsonConverter(JsonConverterAttribute jsonConverterAttribute, object value)
-        {
-            JsonConverter converter = (JsonConverter)Activator.CreateInstance(jsonConverterAttribute.ConverterType,
-                jsonConverterAttribute.ConverterParameters);
-
-            string stringValue = JsonConvert.SerializeObject(value, converter)
-                .Trim('"');
-
-            return stringValue;
-        }
-
-        /// <summary>
         /// Get item's key for dictionary. If item has JsonPropertyAttribute, name is get from the attribute.
         /// </summary>
         /// <param name="item"></param>
@@ -147,6 +120,7 @@ namespace AthenaHealth.Sdk.Http.Helpers
             string key = item.Name;
             if (jsonPropertyAttribute != null)
                 key = jsonPropertyAttribute.PropertyName;
+
             return key;
         }
 

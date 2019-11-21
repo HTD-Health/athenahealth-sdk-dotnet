@@ -37,7 +37,7 @@ namespace AthenaHealth.Sdk.Models.Request
             /// Answer to this question
             /// </summary>
             [JsonProperty("answer")]
-            [JsonConverter(typeof(CustomEnumConverter))]
+            [JsonConverter(typeof(EnumConverter))]
             public AnswerEnum? Answer { get; set; }
 
             /// <summary>

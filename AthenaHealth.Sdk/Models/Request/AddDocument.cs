@@ -26,6 +26,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// that this is a multipart/form-data content-type submission. This does NOT work correctly
         /// in I/O Docs. The filename itself is not used by athenaNet, but it is required to be sent.
         /// </summary>
+        [JsonIgnore]
         [JsonProperty("attachmentcontents")]
         public FileInfo Attachment { get; set; }
 
@@ -48,7 +49,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// The document subclass.
         /// </summary>
         [JsonProperty("documentsubclass")]
-        [JsonConverter(typeof(CustomEnumConverter))]
+        [JsonConverter(typeof(EnumConverter))]
         public DocumentSubclassEnum DocumentSubclass { get; set; }
 
         /// <summary>

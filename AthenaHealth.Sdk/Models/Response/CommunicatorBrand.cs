@@ -1,10 +1,6 @@
-﻿using AthenaHealth.Sdk.Models.Converters;
-using AthenaHealth.Sdk.Models.Enums;
-using AthenaHealth.Sdk.Models.Response.Interfaces;
+﻿using AthenaHealth.Sdk.Models.Response.Interfaces;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using System;
-using System.Runtime.Serialization;
 
 namespace AthenaHealth.Sdk.Models.Response
 {
@@ -51,7 +47,5 @@ namespace AthenaHealth.Sdk.Models.Response
         /// </summary>
         [JsonProperty("hasportal")]
         public bool? HasPortal { get; set; }
-
-
     }
 }

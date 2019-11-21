@@ -40,7 +40,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// The list of departments that have this point of care order type configured
         /// </summary>
         [JsonProperty("departmentids")]
-        [JsonConverter(typeof(CustomDelimitedStringToArrayConverter))]
+        [JsonConverter(typeof(DelimitedStringConverter), ",")]
         public int[] DepartmentIds { get; set; }
 
         /// <summary>

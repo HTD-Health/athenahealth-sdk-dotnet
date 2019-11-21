@@ -25,7 +25,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// The type of facility to search for.
         /// </summary>
         [Required]
-        [JsonConverter(typeof(CustomEnumConverter))]
+        [JsonConverter(typeof(EnumConverter))]
         public OrderTypeEnum OrderType { get; set; }
 
         /// <summary>

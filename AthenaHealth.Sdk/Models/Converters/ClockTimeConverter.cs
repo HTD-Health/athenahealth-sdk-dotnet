@@ -4,13 +4,13 @@ using System.Globalization;
 
 namespace AthenaHealth.Sdk.Models.Converters
 {
-    public class CustomClockTimeConverter : JsonConverter
+    public class ClockTimeConverter : JsonConverter
     {
         public override bool CanRead => true;
 
         public override bool CanWrite => true;
 
-        public CustomClockTimeConverter()
+        public ClockTimeConverter()
         {
         }
 

@@ -11,7 +11,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// Department ID. Multiple departments are allowed, either comma separated or with multiple values.
         /// </summary>
         [JsonProperty("departmentid")]
-        [JsonConverter(typeof(CustomArrayToStringConverter), ",")]
+        [JsonConverter(typeof(DelimitedStringConverter), ",")]
         public int[] DepartmentIds { get; set; }
 
         /// <summary>
@@ -30,14 +30,14 @@ namespace AthenaHealth.Sdk.Models.Request
         /// Patient ID. Multiple Patient IDs are allowed, either comma separated or with multiple values.
         /// </summary>
         [JsonProperty("patientid")]
-        [JsonConverter(typeof(CustomArrayToStringConverter), ",")]
+        [JsonConverter(typeof(DelimitedStringConverter), ",")]
         public int[] PatientId { get; set; }
 
         /// <summary>
         /// Provider ID.  Multiple providers are allowed using comma separated values.
         /// </summary>
         [JsonProperty("providerid")]
-        [JsonConverter(typeof(CustomArrayToStringConverter), ",")]
+        [JsonConverter(typeof(DelimitedStringConverter), ",")]
         public int[] ProviderId { get; set; }
 
         /// <summary>
@@ -68,14 +68,14 @@ namespace AthenaHealth.Sdk.Models.Request
         /// See <see cref="ShowProcessedStartDateTime"/>.
         /// </summary>
         [JsonProperty("showprocessedenddatetime")]
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
         public DateTime? ShowProcessedEndDateTime { get; set; }
 
         /// <summary>
         /// Show already processed changes.  This will show changes that you previously retrieved at some point after this datetime mm/dd/yyyy hh24:mi:ss (Eastern). Can be used to refetch data if there was an error, such as a timeout, and records are marked as already retrieved. This is intended to be used with showprocessedenddatetime and for a short period of time only. Also note that all messages will eventually be deleted.
         /// </summary>
         [JsonProperty("showprocessedstartdatetime")]
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
         public DateTime? ShowProcessedStartDateTime { get; set; }
 
         /// <summary>
