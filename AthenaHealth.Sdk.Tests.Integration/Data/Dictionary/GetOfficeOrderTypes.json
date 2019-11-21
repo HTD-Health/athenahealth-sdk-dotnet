@@ -1,0 +1,244 @@
+[
+  {
+    "clinicalprovider": "Department Clinical Provider",
+    "clinicalordertypeid": 266844,
+    "departmentids": "1",
+    "ordertypecategory": "IMAGING",
+    "ordertype": "ARTHROGRAM, HIP"
+  },
+  {
+    "clinicalprovider": "Department Clinical Provider",
+    "clinicalordertypeid": 340271,
+    "departmentids": "1",
+    "ordertypecategory": "IMAGING",
+    "ordertype": "CAROTID DUPLEX SCAN, BILATERAL"
+  },
+  {
+    "clinicalprovider": "Department Clinical Provider",
+    "clinicalordertypeid": 257861,
+    "departmentids": "1",
+    "ordertypecategory": "IMAGING",
+    "ordertype": "ECHOCARDIOGRAM"
+  },
+  {
+    "clinicalprovider": "Department Clinical Provider",
+    "clinicalordertypeid": 257770,
+    "departmentids": "1,102",
+    "ordertypecategory": "IMAGING",
+    "ordertype": "ELECTROCARDIOGRAM"
+  },
+  {
+    "clinicalprovider": "Department Clinical Provider",
+    "clinicalordertypeid": 392334,
+    "departmentids": "1,102",
+    "ordertypecategory": "IMAGING",
+    "ordertype": "ELECTROCARDIOGRAM",
+    "loinc": "11524-6"
+  },
+  {
+    "clinicalprovider": "Department Clinical Provider",
+    "clinicalordertypeid": 342260,
+    "departmentids": "82",
+    "ordertypecategory": "LAB",
+    "ordertype": "FECAL OCCULT BLOOD, STOOL"
+  },
+  {
+    "clinicalprovider": "Department Clinical Provider",
+    "clinicalordertypeid": 342273,
+    "departmentids": "1,82",
+    "ordertypecategory": "LAB",
+    "ordertype": "GLUCOSE, FINGERSTICK, BLOOD",
+    "loinc": "32016-8"
+  },
+  {
+    "clinicalprovider": "Department Clinical Provider",
+    "clinicalordertypeid": 342097,
+    "departmentids": "1",
+    "ordertypecategory": "LAB",
+    "ordertype": "H PYLORI UREA BREATH TEST, CO2 INFRARED",
+    "loinc": "29891-9"
+  },
+  {
+    "clinicalprovider": "Department Clinical Provider",
+    "clinicalordertypeid": 342104,
+    "departmentids": "1",
+    "ordertypecategory": "LAB",
+    "ordertype": "HBA1C (HEMOGLOBIN A1C), BLOOD",
+    "loinc": "4548-4"
+  },
+  {
+    "clinicalprovider": "Department Clinical Provider",
+    "clinicalordertypeid": 342244,
+    "departmentids": "1,21,42,62,82,102,122,142,143,144,145,146,147,148,149,150,155",
+    "ordertypecategory": "LAB",
+    "ordertype": "INR, PLASMA",
+    "loinc": "6301-6"
+  },
+  {
+    "clinicalprovider": "Department Clinical Provider",
+    "clinicalordertypeid": 342249,
+    "departmentids": "82",
+    "ordertypecategory": "LAB",
+    "ordertype": "KOH WET PREP",
+    "loinc": "667-6"
+  },
+  {
+    "clinicalprovider": "Department Clinical Provider",
+    "clinicalordertypeid": 257492,
+    "departmentids": "-1",
+    "ordertypecategory": "LAB",
+    "ordertype": "LIPID PANEL"
+  },
+  {
+    "clinicalprovider": "Department Clinical Provider",
+    "clinicalordertypeid": 342286,
+    "departmentids": "1,150",
+    "ordertypecategory": "LAB",
+    "ordertype": "LIPID PANEL, SERUM",
+    "loinc": "24331-1"
+  },
+  {
+    "clinicalprovider": "Department Clinical Provider",
+    "clinicalordertypeid": 342288,
+    "departmentids": "82",
+    "ordertypecategory": "LAB",
+    "ordertype": "MONONUCLEOSIS, HETEROPHILE AB, SERUM",
+    "loinc": "31418-7"
+  },
+  {
+    "clinicalprovider": "Department Clinical Provider",
+    "clinicalordertypeid": 354358,
+    "departmentids": "1,21,42,62,82,102,122,142,143,144,145,146,147,148,149,150,155,156,157",
+    "ordertypecategory": "LAB",
+    "ordertype": "NEISSERIA MENINGITIDIS VACCINE RESPONSE, SERUM",
+    "loinc": "33396-3"
+  },
+  {
+    "clinicalprovider": "Department Clinical Provider",
+    "clinicalordertypeid": 289099,
+    "departmentids": "1,150",
+    "ordertypecategory": "OTHER",
+    "ordertype": "ORTHOPEDIC SURGERY"
+  },
+  {
+    "clinicalprovider": "Department Clinical Provider",
+    "clinicalordertypeid": 342087,
+    "departmentids": "82",
+    "ordertypecategory": "LAB",
+    "ordertype": "PPD (PURIFIED PROTEIN DERIVATIVE), SKIN TEST",
+    "loinc": "23538-2"
+  },
+  {
+    "clinicalprovider": "Department Clinical Provider",
+    "clinicalordertypeid": 266081,
+    "departmentids": "1",
+    "ordertypecategory": "LAB",
+    "ordertype": "PROTHROMBIN TIME W\/ INR"
+  },
+  {
+    "clinicalprovider": "Department Clinical Provider",
+    "clinicalordertypeid": 293825,
+    "departmentids": "1,150",
+    "ordertypecategory": "PROCEDURE",
+    "ordertype": "PULMONARY STRESS TEST, COMPLEX (PROC)"
+  },
+  {
+    "clinicalprovider": "Department Clinical Provider",
+    "clinicalordertypeid": 257871,
+    "departmentids": "82",
+    "ordertypecategory": "LAB",
+    "ordertype": "RAPID FLU"
+  },
+  {
+    "clinicalprovider": "Department Clinical Provider",
+    "clinicalordertypeid": 342184,
+    "departmentids": "1,82",
+    "ordertypecategory": "LAB",
+    "ordertype": "RAPID FLU (A+B)"
+  },
+  {
+    "clinicalprovider": "Department Clinical Provider",
+    "clinicalordertypeid": 257872,
+    "departmentids": "82",
+    "ordertypecategory": "LAB",
+    "ordertype": "RAPID MONO"
+  },
+  {
+    "clinicalprovider": "Department Clinical Provider",
+    "clinicalordertypeid": 342069,
+    "departmentids": "82",
+    "ordertypecategory": "LAB",
+    "ordertype": "RAPID STREP GROUP A, THROAT"
+  },
+  {
+    "clinicalprovider": "Department Clinical Provider",
+    "clinicalordertypeid": 267749,
+    "departmentids": "1",
+    "ordertypecategory": "LAB",
+    "ordertype": "SHEEP'S WOOL IGE"
+  },
+  {
+    "clinicalprovider": "Department Clinical Provider",
+    "clinicalordertypeid": 286222,
+    "departmentids": "21,82,149",
+    "ordertypecategory": "LAB",
+    "ordertype": "TESTOSTERONE, TOTAL, FREE & BIOAVAILABLE, AND SHBG"
+  },
+  {
+    "clinicalprovider": "Department Clinical Provider",
+    "clinicalordertypeid": 261667,
+    "departmentids": "1",
+    "ordertypecategory": "IMAGING",
+    "ordertype": "ULTRASOUND, OB FOLLOW-UP"
+  },
+  {
+    "clinicalprovider": "Department Clinical Provider",
+    "clinicalordertypeid": 258056,
+    "departmentids": "1",
+    "ordertypecategory": "LAB",
+    "ordertype": "URINALYSIS, DIPSTICK"
+  },
+  {
+    "clinicalprovider": "Department Clinical Provider",
+    "clinicalordertypeid": 342226,
+    "departmentids": "1",
+    "ordertypecategory": "LAB",
+    "ordertype": "URINALYSIS, DIPSTICK",
+    "loinc": "24357-6"
+  },
+  {
+    "clinicalprovider": "Department Clinical Provider",
+    "clinicalordertypeid": 392620,
+    "departmentids": "1",
+    "ordertypecategory": "IMAGING",
+    "ordertype": "US, DUPLEX, CAROTID ARTERY"
+  },
+  {
+    "clinicalprovider": "Department Clinical Provider",
+    "clinicalordertypeid": 392148,
+    "departmentids": "1",
+    "ordertypecategory": "IMAGING",
+    "ordertype": "US, ECHOCARDIOGRAM"
+  },
+  {
+    "clinicalprovider": "Department Clinical Provider",
+    "clinicalordertypeid": 393395,
+    "departmentids": "1",
+    "ordertypecategory": "IMAGING",
+    "ordertype": "US, OBSTETRIC, FOLLOW-UP"
+  },
+  {
+    "clinicalprovider": "Department Clinical Provider",
+    "clinicalordertypeid": 347360,
+    "departmentids": "1,150",
+    "ordertypecategory": "OTHER",
+    "ordertype": "XR LUMBAR SPINE 2 VIEW"
+  },
+  {
+    "clinicalprovider": "Department Clinical Provider",
+    "clinicalordertypeid": 392269,
+    "departmentids": "1",
+    "ordertypecategory": "IMAGING",
+    "ordertype": "XR, ARTHROGRAM, HIP"
+  }
+]

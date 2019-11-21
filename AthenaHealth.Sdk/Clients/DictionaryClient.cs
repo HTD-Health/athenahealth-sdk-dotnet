@@ -146,5 +146,11 @@ namespace AthenaHealth.Sdk.Clients
         {
             return await _connection.Get<CommunicatorBrandResponse>($"{_connection.PracticeId}/communicatorbrands", queryParameters);
         }
+
+        [Endpoint("GET /chart/configuration/officeordertypes")]
+        public async Task<OfficeOrderType[]> GetOfficeOrderTypes()
+        {
+            return await _connection.Get<OfficeOrderType[]>($"{_connection.PracticeId}/chart/configuration/officeordertypes");
+        }
     }
 }

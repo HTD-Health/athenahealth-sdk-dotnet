@@ -317,5 +317,14 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             response.Items.Length.ShouldBeGreaterThan(0);
             response.Items.ShouldAllBe(x => x.Id != 0);
         }
+
+        [Fact]
+        public async Task GetOfficeOrderTypes_ReturnsRecords()
+        {
+            OfficeOrderType[] response = await _client.Dictionaries.GetOfficeOrderTypes();
+
+            response.ShouldNotBeNull();
+            response.Length.ShouldBeGreaterThan(0);
+        }
     }
 }

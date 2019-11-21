@@ -102,5 +102,8 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
 
         [Endpoint("GET /communicatorbrands")]
         Task<CommunicatorBrandResponse> GetCommunicatorBrands(GetCommunicatorBrandsFilter queryParameters = null);
+
+        [Endpoint("GET /chart/configuration/officeordertypes")]
+        Task<OfficeOrderType[]> GetOfficeOrderTypes();
     }
 }
