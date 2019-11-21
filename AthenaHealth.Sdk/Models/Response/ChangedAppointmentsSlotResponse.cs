@@ -48,7 +48,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// The time (mm/dd/yyyy hh24:mi:ss; Eastern time) that this appointment was cancelled (if cancelled)
         /// </summary>
         [JsonProperty("cancelleddatetime")]
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy HH:mm:ss")]
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy HH:mm:ss")]
         public DateTime CancelledDateTime { get; set; }
 
         /// <summary>
@@ -82,7 +82,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// This occurs when appointment fields not included in the API output are updated.
         /// </summary>
         [JsonProperty("lastmodified")]
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
         public DateTime? LastModified { get; set; }
 
         /// <summary>
@@ -95,7 +95,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// The time (mm/dd/yyyy hh24:mi:ss) that the appointment was checked out.
         /// </summary>
         [JsonProperty("checkoutdatetime")]
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy HH:mm:ss")]
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy HH:mm:ss")]
         public DateTime? CheckoutDateTime { get; set; }
 
         /// <summary>
@@ -120,7 +120,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// The time (mm/dd/yyyy hh24:mi:ss) that the appointment was checked in.
         /// </summary>
         [JsonProperty("checkindatetime")]
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy HH:mm:ss")]
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy HH:mm:ss")]
         public DateTime? CheckInDateTime { get; set; }
 
         /// <summary>
@@ -133,7 +133,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// The time (mm/dd/yyyy hh24:mi:ss) that the intake process was completed.
         /// </summary>
         [JsonProperty("stopintakedatetime")]
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy HH:mm:ss")]
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy HH:mm:ss")]
         public DateTime? StopIntakeDateTime { get; set; }
 
         /// <summary>
@@ -195,7 +195,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// The time (mm/dd/yyyy hh24:mi:ss; Eastern time) that this appointment was scheduled.
         /// </summary>
         [JsonProperty("scheduleddatetime")]
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy HH:mm:ss")]
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy HH:mm:ss")]
         public DateTime? ScheduledDateTime { get; set; }
 
         /// <summary>
@@ -241,7 +241,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// The appointment date.
         /// </summary>
         [JsonProperty("date")]
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
         public DateTime Date { get; set; }
 
         /// <summary>
@@ -254,7 +254,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// The time (mm/dd/yyyy hh24:mi:ss) that the appointment check-out was started.
         /// </summary>
         [JsonProperty("startcheckoutdatetime")]
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy HH:mm:ss")]
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy HH:mm:ss")]
         public DateTime? StartCheckoutDateTime { get; set; }
 
         /// <summary>
@@ -285,7 +285,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// As HH:MM (where HH is the 0-23 hour and MM is the minute).  This time is local to the department.
         /// </summary>
         [JsonProperty("starttime")]
-        [JsonConverter(typeof(CustomDateConverter), "HH:mm")]
+        [JsonConverter(typeof(DateConverter), "HH:mm")]
         public DateTime? StartTime { get; set; }
 
         /// <summary>
@@ -304,7 +304,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// The time (mm/dd/yyyy hh24:mi:ss) that the exam was completed.
         /// </summary>
         [JsonProperty("stopexamdatetime")]
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy HH:mm:ss")]
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy HH:mm:ss")]
         public DateTime? StopExamDateTime { get; set; }
 
         /// <summary>

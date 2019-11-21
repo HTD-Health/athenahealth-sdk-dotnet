@@ -48,7 +48,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// Date the privacy notice was given.
         /// </summary>
         [JsonProperty("privacynoticegivendate")]
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
         public DateTime? GivenDate { get; set; }
     }
 
@@ -58,14 +58,14 @@ namespace AthenaHealth.Sdk.Models.Response
         /// Date the release of billing information check expires.
         /// </summary>
         [JsonProperty("patientsignatureexpirationdate")]
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
         public DateTime? ExpirationDate { get; set; }
 
         /// <summary>
         /// Date the release of billing information check takes effect.
         /// </summary>
         [JsonProperty("patientsignatureeffectivedate")]
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
         public DateTime? EffectiveDate { get; set; }
 
         /// <summary>
@@ -82,14 +82,14 @@ namespace AthenaHealth.Sdk.Models.Response
         /// Date the assignment of benefits check expires.
         /// </summary>
         [JsonProperty("insuredsignatureexpirationdate")]
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
         public DateTime? ExpirationDate { get; set; }
 
         /// <summary>
         /// Date the assignment of benefits check takes effect.
         /// </summary>
         [JsonProperty("insuredsignatureeffectivedate")]
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
         public DateTime? EffectiveDate { get; set; }
 
         /// <summary>

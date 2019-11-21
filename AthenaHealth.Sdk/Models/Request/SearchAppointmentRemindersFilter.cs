@@ -11,13 +11,13 @@ namespace AthenaHealth.Sdk.Models.Request
         /// <summary>
         /// Find reminders for appointments whose approximate date is on or before this date.
         /// </summary>
-        [JsonConverter(typeof(CustomDateConverter))]
+        [JsonConverter(typeof(DateConverter))]
         public DateTime EndDate { get; set; }
 
         /// <summary>
         /// Find reminders for appointments whose approximate date is on or after this date.
         /// </summary>
-        [JsonConverter(typeof(CustomDateConverter))]
+        [JsonConverter(typeof(DateConverter))]
         public DateTime StartDate { get; set; }
 
         public int? AppointmentTypeId { get; set; }

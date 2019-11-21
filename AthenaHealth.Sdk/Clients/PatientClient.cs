@@ -219,14 +219,14 @@ namespace AthenaHealth.Sdk.Clients
         [Endpoint("DELETE /patients/{patientid}/insurances")]
         public async Task DeleteInsurance(int patientId, SequenceEnum sequenceNumber, int? departmentId = null, string cancellationNote = null)
         {
-            var filter = new
+            var queryParameters = new
             {
                 sequenceNumber = (int)sequenceNumber,
                 departmentId,
                 cancellationNote
             };
 
-            await _connection.Delete<StatusResponse>($"{_connection.PracticeId}/patients/{patientId}/insurances", filter);
+            await _connection.Delete<StatusResponse>($"{_connection.PracticeId}/patients/{patientId}/insurances", queryParameters);
         }
 
         [Endpoint("GET /chart/{patientid}/encounters")]

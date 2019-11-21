@@ -91,14 +91,14 @@ namespace AthenaHealth.Sdk.Models.Response
             /// The date this answer was last updated (or first answered if never updated).
             /// </summary>
             [JsonProperty("lastupdated")]
-            [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+            [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
             public DateTime? LastUpdated { get; set; }
 
             /// <summary>
             /// The date this note was last updated (or first added if never updated).
             /// </summary>
             [JsonProperty("notelastupdateddate")]
-            [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+            [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
             public DateTime? NoteLastUpdatedDate { get; set; }
 
             /// <summary>

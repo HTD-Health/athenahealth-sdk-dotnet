@@ -1,25 +1,28 @@
 ﻿using AthenaHealth.Sdk.Models;
-using AthenaHealth.Sdk.Models.Converters;
 using Newtonsoft.Json;
 using Shouldly;
 using System;
+using System.Linq;
 using Xunit;
 
 namespace AthenaHealth.Sdk.Tests.Models.Converters
 {
-    public class CustomClockTimeConverterTests
+    public class ClockTimeConverterTests
     {
         [Fact]
         public void ClockTimeSerialization_ValidData_CorrectFormat()
         {
-            var obj = new TestClass(new ClockTime(10, 0));
-            JsonConvert.SerializeObject(obj).ShouldBe("{\"time\":\"10:00\"}");
+            var obj = new TestClass()
+            {
+                Time = new ClockTime(10, 00),
+                Times = new ClockTime[]
+                {
+                    new ClockTime(23, 59),
+                    new ClockTime(00, 00)
+                }
+            };
 
-            obj = new TestClass(new ClockTime(23, 59));
-            JsonConvert.SerializeObject(obj).ShouldBe("{\"time\":\"23:59\"}");
-
-            obj = new TestClass(new ClockTime(0, 0));
-            JsonConvert.SerializeObject(obj).ShouldBe("{\"time\":\"00:00\"}");
+            JsonConvert.SerializeObject(obj).ShouldBe("{\"time\":\"10:00\",\"times\":[\"23:59\",\"00:00\"]}");
         }
 
         [Fact]
@@ -34,14 +37,13 @@ namespace AthenaHealth.Sdk.Tests.Models.Converters
         public void ClockTimeDeserialization_ValidData_CorrectClockTime()
         {
 
-            var testClass = JsonConvert.DeserializeObject<TestClass>("{\"time\":\"10:00\"}");
-            testClass.Time.ToString().ShouldBe("10:00");
+            var testClass = JsonConvert.DeserializeObject<TestClass>("{\"time\":\"10:00\",\"times\":[\"23:59\",\"00:00\"]}");
 
-            testClass = JsonConvert.DeserializeObject<TestClass>("{\"time\":\"23:59\"}");
-            testClass.Time.ToString().ShouldBe("23:59");
+            testClass.Time.ShouldBe(new ClockTime(10, 0));
 
-            testClass = JsonConvert.DeserializeObject<TestClass>("{\"time\":\"00:00\"}");
-            testClass.Time.ToString().ShouldBe("00:00");
+            testClass.Times.Length.ShouldBe(2);
+            testClass.Times.First().ShouldBe(new ClockTime(23, 59));
+            testClass.Times.Last().ShouldBe(new ClockTime(00, 00));
         }
 
         [Fact]
@@ -58,16 +60,9 @@ namespace AthenaHealth.Sdk.Tests.Models.Converters
     public class TestClass
     {
         [JsonProperty("time")]
-        [JsonConverter(typeof(CustomClockTimeConverter))]
         public ClockTime? Time { get; set; }
 
-        public TestClass()
-        {
-        }
-
-        public TestClass(ClockTime time)
-        {
-            Time = time;
-        }
+        [JsonProperty("times")]
+        public ClockTime[] Times { get; set; }
     }
 }

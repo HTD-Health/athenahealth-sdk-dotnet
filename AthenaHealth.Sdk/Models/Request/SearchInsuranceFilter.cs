@@ -26,7 +26,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// The insurance product type ID.
         /// </summary>
         [JsonProperty("producttypeid")]
-        [JsonConverter(typeof(CustomEnumConverter))]
+        [JsonConverter(typeof(EnumConverter))]
         public ProductTypeEnum? ProductType { get; set; }
 
         /// <summary>

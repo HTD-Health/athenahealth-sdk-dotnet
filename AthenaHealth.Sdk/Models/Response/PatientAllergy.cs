@@ -69,7 +69,7 @@ namespace AthenaHealth.Sdk.Models.Response
             /// Date of allergy deactivation. Set to deactivate the allergy
             /// </summary>
             [JsonProperty("deactivatedate")]
-            [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+            [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
             public DateTime? DeactivateDate { get; set; }
 
             [JsonProperty("rxnormdescription")]
@@ -112,7 +112,7 @@ namespace AthenaHealth.Sdk.Models.Response
             /// Date of allergy onset
             /// </summary>
             [JsonProperty("onsetdate")]
-            [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+            [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
             public DateTime? OnsetDate { get; set; }
 
             /// <summary>

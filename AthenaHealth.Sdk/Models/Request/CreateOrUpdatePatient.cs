@@ -17,7 +17,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// Patient's DOB (mm/dd/yyyy)
         /// </summary>
         [JsonProperty("dob")]
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
         public DateTime? DateOfBirth { get; set; }
 
         /// <summary>
@@ -48,14 +48,14 @@ namespace AthenaHealth.Sdk.Models.Request
         /// (Max length: 1)
         /// </summary>
         [JsonProperty("agriculturalworker")]
-        [JsonConverter(typeof(CustomEnumConverter))]
+        [JsonConverter(typeof(EnumConverter))]
         public YesNoDeclinedEnum? AgriculturalWorker { get; set; }
 
         /// <summary>
         /// (Max length: 20)
         /// </summary>
         [JsonProperty("agriculturalworkertype")]
-        [JsonConverter(typeof(CustomEnumConverter))]
+        [JsonConverter(typeof(EnumConverter))]
         public AgriculturalWorkerTypeEnum? AgriculturalWorkerType { get; set; }
 
         /// <summary>
@@ -68,14 +68,14 @@ namespace AthenaHealth.Sdk.Models.Request
         /// Sex that this patient was assigned at birth.
         /// </summary>
         [JsonProperty("assignedsexatbirth")]
-        [JsonConverter(typeof(CustomEnumConverter))]
+        [JsonConverter(typeof(EnumConverter))]
         public SexEnum? AssignedSexAtBirth { get; set; }
 
         /// <summary>
         /// (Max length: 50)
         /// </summary>
         [JsonProperty("caresummarydeliverypreference")]
-        [JsonConverter(typeof(CustomEnumConverter))]
+        [JsonConverter(typeof(EnumConverter))]
         public CareSummaryDeliveryPreferenceEnum? CareSummaryDeliveryPreference { get; set; }
 
         /// <summary>
@@ -125,7 +125,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// (Max length: 20)
         /// </summary>
         [JsonProperty("contactpreference")]
-        [JsonConverter(typeof(CustomEnumConverter))]
+        [JsonConverter(typeof(EnumConverter))]
         public ContactPreferenceEnum? ContactPreference { get; set; }
 
         /// <summary>
@@ -240,7 +240,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// (Max length: 10)
         /// </summary>
         [JsonProperty("contactrelationship")]
-        [JsonConverter(typeof(CustomEnumConverter))]
+        [JsonConverter(typeof(EnumConverter))]
         public RelationshipEnum? ContactRelationship { get; set; }
 
         /// <summary>
@@ -253,7 +253,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// If present, the date on which a patient died.
         /// </summary>
         [JsonProperty("deceaseddate")]
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
         public DateTime? DeceasedDate { get; set; }
 
         /// <summary>
@@ -288,7 +288,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// The state of the patient's driver's license. This is in the form of a 2 letter state code.
         /// </summary>
         [JsonProperty("driverslicensestateid")]
-        [JsonConverter(typeof(CustomEnumConverter))]
+        [JsonConverter(typeof(EnumConverter))]
         public DriversLicenseStateEnum? DriversLicenseStateId { get; set; }
 
         /// <summary>
@@ -365,7 +365,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// Guarantor's DOB (mm/dd/yyyy)
         /// </summary>
         [JsonProperty("guarantordob")]
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
         public DateTime? GuarantorDateOfBirth { get; set; }
 
         /// <summary>
@@ -408,7 +408,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// The guarantor's relationship to the patient
         /// </summary>
         [JsonProperty("guarantorrelationshiptopatient")]
-        [JsonConverter(typeof(CustomEnumConverter))]
+        [JsonConverter(typeof(EnumConverter))]
         public GuarantorRelationshipToPatientEnum? GuarantorRelationshipToPatient { get; set; }
 
         /// <summary>
@@ -475,14 +475,14 @@ namespace AthenaHealth.Sdk.Models.Request
         /// (Max length: 1)
         /// </summary>
         [JsonProperty("homeless")]
-        [JsonConverter(typeof(CustomEnumConverter))]
+        [JsonConverter(typeof(EnumConverter))]
         public YesNoDeclinedEnum? Homeless { get; set; }
 
         /// <summary>
         /// (Max length: 30)
         /// </summary>
         [JsonProperty("homelesstype")]
-        [JsonConverter(typeof(CustomEnumConverter))]
+        [JsonConverter(typeof(EnumConverter))]
         public HomelessTypeEnum? HomelessType { get; set; }
 
         /// <summary>
@@ -518,7 +518,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// (Max length: 1)
         /// </summary>
         [JsonProperty("maritalstatus")]
-        [JsonConverter(typeof(CustomEnumConverter))]
+        [JsonConverter(typeof(EnumConverter))]
         public MaritalStatusEnum? MaritalStatus { get; set; }
 
         /// <summary>
@@ -555,7 +555,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// (Max length: 10)
         /// </summary>
         [JsonProperty("nextkinrelationship")]
-        [JsonConverter(typeof(CustomEnumConverter))]
+        [JsonConverter(typeof(EnumConverter))]
         public RelationshipEnum? NextKinRelationship { get; set; }
 
         /// <summary>
@@ -589,7 +589,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// Poverty Level fields turned on.
         /// </summary>
         [JsonProperty("povertylevelcalculated")]
-        [JsonConverter(typeof(CustomEnumConverter))]
+        [JsonConverter(typeof(EnumConverter))]
         public PovertyLevelCalculatedEnum? PovertyLevelCalculated { get; set; }
 
         /// <summary>
@@ -615,7 +615,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// (Max length: 20)
         /// </summary>
         [JsonProperty("povertylevelincomepayperiod")]
-        [JsonConverter(typeof(CustomEnumConverter))]
+        [JsonConverter(typeof(EnumConverter))]
         public PovertyLevelIncomePayPeriodEnum? PovertyLevelIncomePayPeriod { get; set; }
 
         /// <summary>
@@ -641,7 +641,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// Pronoun this patient uses.
         /// </summary>
         [JsonProperty("preferredpronouns")]
-        [JsonConverter(typeof(CustomEnumConverter))]
+        [JsonConverter(typeof(EnumConverter))]
         public PreferredPronounsEnum? PreferredPronouns { get; set; }
 
         /// <summary>
@@ -660,7 +660,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// (Max length: 1)
         /// </summary>
         [JsonProperty("publichousing")]
-        [JsonConverter(typeof(CustomEnumConverter))]
+        [JsonConverter(typeof(EnumConverter))]
         public YesNoDeclinedEnum? PublicHousing { get; set; }
 
         /// <summary>
@@ -689,21 +689,21 @@ namespace AthenaHealth.Sdk.Models.Request
         /// (Max length: 1)
         /// </summary>
         [JsonProperty("schoolbasedhealthcenter")]
-        [JsonConverter(typeof(CustomEnumConverter))]
+        [JsonConverter(typeof(EnumConverter))]
         public YesNoDeclinedEnum? SchoolBasedHealthCenter { get; set; }
 
         /// <summary>
         /// (Max length: 1)
         /// </summary>
         [JsonProperty("sex")]
-        [JsonConverter(typeof(CustomEnumConverter))]
+        [JsonConverter(typeof(EnumConverter))]
         public SexEnum? Sex { get; set; }
 
         /// <summary>
         /// Sexual orientation of this patient.
         /// </summary>
         [JsonProperty("sexualorientation")]
-        [JsonConverter(typeof(CustomEnumConverter))]
+        [JsonConverter(typeof(EnumConverter))]
         public SexualOrientationEnum? SexualOrientation { get; set; }
 
         /// <summary>
@@ -729,7 +729,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// (Max length: 1)
         /// </summary>
         [JsonProperty("status")]
-        [JsonConverter(typeof(CustomEnumConverter))]
+        [JsonConverter(typeof(EnumConverter))]
         public StatusEnum? Status { get; set; }
 
         /// <summary>
@@ -742,7 +742,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// (Max length: 1)
         /// </summary>
         [JsonProperty("veteran")]
-        [JsonConverter(typeof(CustomEnumConverter))]
+        [JsonConverter(typeof(EnumConverter))]
         public YesNoDeclinedEnum? Veteran { get; set; }
 
         /// <summary>

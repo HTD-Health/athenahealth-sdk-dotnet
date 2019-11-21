@@ -1,15 +1,16 @@
-﻿using System;
-using System.Runtime.Serialization;
+﻿using AthenaHealth.Sdk.Models.Converters;
+using Newtonsoft.Json;
+using System;
 
 namespace AthenaHealth.Sdk.Models
 {
     /// <summary>
     /// Class representing time with minutes and hours (without seconds). 
     /// </summary>
-    [DataContract]
+    [JsonConverter(typeof(ClockTimeConverter))]
     public struct ClockTime
     {
-        private TimeSpan _time;
+        private readonly TimeSpan _time;
 
         public int Hour => _time.Hours;
 

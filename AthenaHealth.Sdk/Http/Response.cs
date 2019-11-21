@@ -11,7 +11,7 @@ namespace AthenaHealth.Sdk.Http
 {
     public class Response
     {
-        private static readonly CustomEnumConverter EnumConverter = new CustomEnumConverter();
+        private static readonly EnumConverter EnumConverter = new EnumConverter();
 
         /// <summary>
         /// Raw response body. Typically a string, but when requesting images, it will be a byte array.

@@ -28,14 +28,14 @@ namespace AthenaHealth.Sdk.Models.Request
         /// </summary>
         [Required]
         [JsonProperty("departmentid")]
-        [JsonConverter(typeof(CustomArrayToStringConverter), ",")]
+        [JsonConverter(typeof(DelimitedStringConverter), ",")]
         public int[] DepartmentIds { get; set; }
 
         /// <summary>
         /// Start of the appointment search date range (mm/dd/yyyy).  Inclusive.
         /// </summary>
         [Required]
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
         [JsonProperty("startdate")]
         public DateTime StartDate { get; set; }
 
@@ -43,21 +43,21 @@ namespace AthenaHealth.Sdk.Models.Request
         /// End of the appointment search date range (mm/dd/yyyy).  Inclusive.
         /// </summary>
         [Required]
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
         [JsonProperty("enddate")]
         public DateTime EndDate { get; set; }
 
         /// <summary>
         /// Identify appointments modified after this date/time (mm/dd/yyyy hh:mi:ss).  Inclusive.
         /// </summary>
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy HH:mm:ss")]
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy HH:mm:ss")]
         [JsonProperty("startlastmodified")]
         public DateTime? StartLastModified { get; set; }
 
         /// <summary>
         /// Identify appointments modified prior to this date/time (mm/dd/yyyy hh:mi:ss).  Inclusive. Note: This can only be used if a startlastmodified value is supplied as well.
         /// </summary>
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy HH:mm:ss")]
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy HH:mm:ss")]
         [JsonProperty("endlastmodified")]
         public DateTime? EndLastModified { get; set; }
 
@@ -71,20 +71,20 @@ namespace AthenaHealth.Sdk.Models.Request
         /// The athenaNet provider ID.  Multiple IDs (either as a comma delimited list or multiple POSTed values) are allowed.
         /// </summary>
         [JsonProperty("providerid")]
-        [JsonConverter(typeof(CustomArrayToStringConverter), ",")]
+        [JsonConverter(typeof(DelimitedStringConverter), ",")]
         public int[] ProviderId { get; set; }
 
         /// <summary>
         /// Start of the appointment scheduled search date range (mm/dd/yyyy).  Inclusive.
         /// </summary>
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
         [JsonProperty("scheduledstartdate")]
         public DateTime? ScheduledStartDate { get; set; }
 
         /// <summary>
         /// End of the appointment scheduled search date range (mm/dd/yyyy).  Inclusive.
         /// </summary>
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
         [JsonProperty("scheduledenddate")]
         public DateTime? ScheduledEndDate { get; set; }
 

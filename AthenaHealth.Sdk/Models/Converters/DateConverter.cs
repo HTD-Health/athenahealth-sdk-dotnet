@@ -4,7 +4,7 @@ using System.Globalization;
 
 namespace AthenaHealth.Sdk.Models.Converters
 {
-    public class CustomDateConverter : JsonConverter
+    public class DateConverter : JsonConverter
     {
         private readonly string _format;
 
@@ -12,11 +12,11 @@ namespace AthenaHealth.Sdk.Models.Converters
 
         public override bool CanWrite => true;
 
-        public CustomDateConverter() : this("MM/dd/yyyy")
+        public DateConverter() : this("MM/dd/yyyy")
         {
         }
 
-        public CustomDateConverter(string format)
+        public DateConverter(string format)
         {
             _format = format;
         }

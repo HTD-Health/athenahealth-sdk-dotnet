@@ -75,7 +75,7 @@ namespace AthenaHealth.Sdk.Models.Response
             /// Data type for this attribute. Can be CHECKBOX, FREETEXT, NUMERIC, or SET.
             /// </summary>
             [JsonProperty("datatype")]
-            [JsonConverter(typeof(CustomEnumConverter))]
+            [JsonConverter(typeof(EnumConverter))]
             public VitalAttributeDataTypeEnum? DataType { get; set; }
 
             /// <summary>

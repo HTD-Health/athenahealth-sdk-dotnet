@@ -89,7 +89,7 @@ namespace AthenaHealth.Sdk.Tests
 
                 foreach (var item in interfaceEndpoints.GroupBy(x => x.Name))
                 {
-                    if(item.Count() > 1)
+                    if (item.Count() > 1)
                         throw new Exception($"Endpoint attribute '{item.Key}' is already present in {interfaceType.Name}");
                 }
 

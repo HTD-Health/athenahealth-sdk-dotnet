@@ -38,7 +38,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// Laterality of the SNOMED code.
         /// </summary>
         [JsonProperty("laterality")]
-        [JsonConverter(typeof(CustomEnumConverter))]
+        [JsonConverter(typeof(EnumConverter))]
         public LateralityEnum? Laterality { get; set; }
     }
 }

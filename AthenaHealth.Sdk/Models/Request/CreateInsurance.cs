@@ -19,7 +19,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// Set the date that the insurance will expire. This is usually a date within the next year and not in the past.
         /// </summary>
         [JsonProperty("expirationdate")]
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
         public DateTime? ExpirationDate { get; set; }
 
         /// <summary>
@@ -105,7 +105,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// The sex of the insurance policy holder.  Except for self-pay, required for new policies.
         /// </summary>
         [JsonProperty("insurancepolicyholdersex")]
-        [JsonConverter(typeof(CustomEnumConverter))]
+        [JsonConverter(typeof(EnumConverter))]
         public SexEnum InsurancePolicyHolderSex { get; set; }
 
         /// <summary>
@@ -139,7 +139,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// Set the date that the insurance was issued. This is usually a date in the past year and not in the future.
         /// </summary>
         [JsonProperty("issuedate")]
-        [JsonConverter(typeof(CustomDateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
         public DateTime? IssueDate { get; set; }
 
         /// <summary>
@@ -158,7 +158,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// 1 = primary, 2 = secondary.  Must have a primary before a secondary. This field is required if the insurance package is not a case policy.
         /// </summary>
         [JsonProperty("sequencenumber")]
-        [JsonConverter(typeof(CustomEnumConverter))]
+        [JsonConverter(typeof(EnumConverter))]
         public SequenceEnum SequenceNumber { get; set; }
 
         /// <summary>
