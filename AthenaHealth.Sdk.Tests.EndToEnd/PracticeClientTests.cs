@@ -99,5 +99,15 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             exception.StatusCode.ShouldBe(HttpStatusCode.Unauthorized);
             exception.Message.ShouldContain("Incorrect permissions.");
         }
+
+        [Fact]
+        public async Task GetEmployers_ReturnsRecords()
+        {
+            EmployerResponse response = await _client.Practices.GetEmployers();
+
+            response.ShouldNotBeNull();
+            response.Items.Length.ShouldBeGreaterThan(0);
+            response.Items.ShouldAllBe(x => x.Id != 0);
+        }
     }
 }
