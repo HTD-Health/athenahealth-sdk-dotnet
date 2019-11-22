@@ -8,6 +8,7 @@ using Bogus;
 using Bogus.DataSets;
 using Shouldly;
 using System;
+using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -1230,6 +1231,19 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             // Assert
             result.ShouldNotBeNull();
             result.EncounterId.ShouldBeGreaterThan(0);
+        }
+
+        [Theory]
+        [ClassData(typeof(GetPatientChartListData))]
+        public async Task GetPatientChartList_ChartListExists_ShouldNotThrowJsonSerializationException(int patientId)
+        {
+            // Arrange
+            // Act
+            var result = await _client.Patients.GetPatientChartList(patientId);
+
+            // Assert
+            result.ShouldNotBeNull();
+            result.Items.Count().ShouldBeGreaterThan(0);
         }
     }
 }

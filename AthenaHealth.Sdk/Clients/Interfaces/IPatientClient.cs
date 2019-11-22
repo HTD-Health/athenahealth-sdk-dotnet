@@ -273,5 +273,8 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// <returns></returns>
         [Endpoint("POST /chart/{patientid}/ordergroups")]
         Task<CreateOrderResponse> CreateOrderGroup(int patientId, CreateOrderGroup request);
+
+        [Endpoint("GET /chart/{patientid}/patientchartlist")]
+        Task<ChartGroupResponse> GetPatientChartList(int patientId, GetPatientChartListFilter queryParameters = null);
     }
 }
