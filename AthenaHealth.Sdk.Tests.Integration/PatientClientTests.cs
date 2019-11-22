@@ -876,5 +876,19 @@ namespace AthenaHealth.Sdk.Tests.Integration
             result.ShouldNotBeNull();
             result.EncounterId.ShouldBe(36480);
         }
+
+        [Fact]
+        public async Task GetPatientChartList_ReturnsChartList()
+        {
+            // Arrange
+            IPatientClient client = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetPatientChartList.json"));
+
+            // Act
+            var result = await client.GetPatientChartList(1);
+
+            // Assert
+            result.ShouldNotBeNull();
+            result.Total.ShouldBe(4);
+        }
     }
 }

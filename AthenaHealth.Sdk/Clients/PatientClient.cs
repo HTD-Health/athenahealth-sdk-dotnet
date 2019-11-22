@@ -440,5 +440,11 @@ namespace AthenaHealth.Sdk.Clients
         {
             return await _connection.Post<CreateOrderResponse>($"{_connection.PracticeId}/chart/{patientId}/ordergroups", body: request);
         }
+
+        [Endpoint("GET /chart/{patientid}/patientchartlist")]
+        public async Task<ChartGroupResponse> GetPatientChartList(int patientId, GetPatientChartListFilter queryParameters = null)
+        {
+            return await _connection.Get<ChartGroupResponse>($"{_connection.PracticeId}/chart/{patientId}/patientchartlist", queryParameters);
+        }
     }
 }

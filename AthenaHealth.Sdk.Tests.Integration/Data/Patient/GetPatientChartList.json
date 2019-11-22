@@ -1,0 +1,21 @@
+{
+  "chartlist": [
+    {
+      "sampledepartmentid": 82,
+      "chartsharinggroupid": 41
+    },
+    {
+      "sampledepartmentid": 1,
+      "chartsharinggroupid": 42
+    },
+    {
+      "sampledepartmentid": 62,
+      "chartsharinggroupid": 43
+    },
+    {
+      "sampledepartmentid": 149,
+      "chartsharinggroupid": 81
+    }
+  ],
+  "totalcount": 4
+}
