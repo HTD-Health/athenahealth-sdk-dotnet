@@ -22,5 +22,8 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
 
         [Endpoint]
         Task<PracticeResponse> GetAll(GetPracticeFilter filter = null);
+
+        [Endpoint("GET /employers")]
+        Task<EmployerResponse> GetEmployers(GetEmployersFilter filter = null);
     }
 }

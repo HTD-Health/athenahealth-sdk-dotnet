@@ -274,6 +274,9 @@
     <None Update="Data\Patient\GetPatient.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Data\Practice\GetEmployers.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Data\Practice\GetById.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

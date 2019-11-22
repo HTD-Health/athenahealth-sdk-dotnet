@@ -46,5 +46,11 @@ namespace AthenaHealth.Sdk.Clients
         {
             return await _connection.Get<PracticeResponse>($"1/practiceinfo", filter);
         }
+
+        [Endpoint("GET /employers")]
+        public async Task<EmployerResponse> GetEmployers(GetEmployersFilter filter = null)
+        {
+            return await _connection.Get<EmployerResponse>($"{_connection.PracticeId}/employers", filter);
+        }
     }
 }
