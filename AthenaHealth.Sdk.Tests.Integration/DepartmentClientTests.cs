@@ -57,5 +57,16 @@ namespace AthenaHealth.Sdk.Tests.Integration
             response.All(x => x.Id > 0).ShouldBeTrue();
             response.All(x => !string.IsNullOrWhiteSpace(x.Name)).ShouldBeTrue();
         }
+
+        [Fact]
+        public async Task GetCheckInRequiredFields_ReturnsRecords()
+        {
+            IDepartmentClient client = new DepartmentClient(ConnectionFactory.CreateFromFile(@"Data\Department\GetCheckInRequiredFields.json"));
+
+            var response = await client.GetCheckInRequiredFields(1);
+
+            response.ShouldNotBeNull();
+            response.Length.ShouldBeGreaterThan(0);
+        }
     }
 }

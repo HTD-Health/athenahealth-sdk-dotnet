@@ -20,5 +20,8 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// <returns></returns>
         [Endpoint("GET /chart/configuration/facilities")]
         Task<Facility[]> SearchFacilities(SearchFacilitiesFilter filter);
+
+        [Endpoint("GET /departments/{departmentid}/checkinrequired")]
+        Task<string[]> GetCheckInRequiredFields(int departmentId);
     }
 }

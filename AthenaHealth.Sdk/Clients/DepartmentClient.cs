@@ -34,5 +34,12 @@ namespace AthenaHealth.Sdk.Clients
         {
             return await _connection.Get<Facility[]>($"{_connection.PracticeId}/chart/configuration/facilities", filter);
         }
+
+        [Endpoint("GET /departments/{departmentid}/checkinrequired")]
+        public async Task<string[]> GetCheckInRequiredFields(int departmentId)
+        {
+            GetCheckInRequiredFieldsResponse result = await _connection.Get<GetCheckInRequiredFieldsResponse>($"{_connection.PracticeId}/departments/{departmentId}/checkinrequired");
+            return result.Fields;
+        }
     }
 }

@@ -2,8 +2,10 @@
 using AthenaHealth.Sdk.Models.Enums;
 using AthenaHealth.Sdk.Models.Request;
 using AthenaHealth.Sdk.Models.Response;
+using AthenaHealth.Sdk.Tests.EndToEnd.Data.Department;
 using AthenaHealth.Sdk.Tests.EndToEnd.Fixtures;
 using Shouldly;
+using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
@@ -168,6 +170,21 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
 
             exception.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
             exception.Message.ShouldContain(@"""missingfields"":[""name""]");
+        }
+
+        [Theory]
+        [ClassData(typeof(GetCheckInRequiredFieldsData))]
+        public async Task GetCheckInRequiredFields_ShouldNotThrowJsonSerializationException(int departmentId)
+        {
+            // Arrange
+            // Act
+            var result = await _client.Departments.GetCheckInRequiredFields(departmentId);
+
+            // Assert
+            result.ShouldNotBeNull();
+            result.Length.ShouldBeGreaterThan(0);
+
+            Debug.WriteLine($"yield return new object[] {{ {departmentId} }};");
         }
     }
 }
