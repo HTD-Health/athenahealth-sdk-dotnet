@@ -1,0 +1,58 @@
+{
+  "ordersets": [
+    {
+      "ordersetname": "ADHD",
+      "diagnoses": [
+        {
+          "diagnosisdescription": "Attention deficit hyperactivity disorder",
+          "snomedicd10code": "F909",
+          "snomedcode": 406506008,
+          "orderrequests": [
+            {
+              "ordertypeid": "281489",
+              "ordername": "attention deficit hyperactivity disorder (ADHD) in children: care instructions"
+            }
+          ]
+        }
+      ],
+      "ordersetid": 41
+    },
+    {
+      "ordersetname": "RetinaVue Eye Exam",
+      "diagnoses": [],
+      "ordersetid": 842
+    },
+    {
+      "ordersetname": "Emma Test Order Set",
+      "diagnoses": [
+        {
+          "diagnosisdescription": "Cardiomegaly",
+          "snomedicd10code": "I517",
+          "snomedcode": 8186001,
+          "orderrequests": [
+            {
+              "ordertypeid": "249430",
+              "ordername": "Webcol topical pads"
+            },
+            {
+              "ordertypeid": "342286",
+              "ordername": "lipid panel, serum"
+            },
+            {
+              "ordertypeid": "392165",
+              "ordername": "acoustic reflex threshold"
+            },
+            {
+              "clinicalproviderid": "12711455",
+              "ordertypeid": "395064",
+              "clinicalprovidername": "Anthony S Ekong MD",
+              "ordername": "CT, arthrogram, sacroiliac joint"
+            }
+          ]
+        }
+      ],
+      "ordersetid": 822
+    }
+  ],
+  "totalcount": 3
+}

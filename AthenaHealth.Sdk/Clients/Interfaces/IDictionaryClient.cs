@@ -105,5 +105,8 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
 
         [Endpoint("GET /chart/configuration/officeordertypes")]
         Task<OfficeOrderType[]> GetOfficeOrderTypes();
+
+        [Endpoint("GET /configuration/ordersets")]
+        Task<OrderSetResponse> GetOrderSets(GetOrderSetsFilter queryParameters = null);
     }
 }

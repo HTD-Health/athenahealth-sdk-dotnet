@@ -152,5 +152,11 @@ namespace AthenaHealth.Sdk.Clients
         {
             return await _connection.Get<OfficeOrderType[]>($"{_connection.PracticeId}/chart/configuration/officeordertypes");
         }
+
+        [Endpoint("GET /configuration/ordersets")]
+        public async Task<OrderSetResponse> GetOrderSets(GetOrderSetsFilter queryParameters = null)
+        {
+            return await _connection.Get<OrderSetResponse>($"{_connection.PracticeId}/configuration/ordersets");
+        }
     }
 }
