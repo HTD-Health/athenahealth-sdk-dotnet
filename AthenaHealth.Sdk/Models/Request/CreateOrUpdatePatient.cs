@@ -17,7 +17,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// Patient's DOB (mm/dd/yyyy)
         /// </summary>
         [JsonProperty("dob")]
-        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter))]
         public DateTime? DateOfBirth { get; set; }
 
         /// <summary>
@@ -253,7 +253,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// If present, the date on which a patient died.
         /// </summary>
         [JsonProperty("deceaseddate")]
-        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter))]
         public DateTime? DeceasedDate { get; set; }
 
         /// <summary>
@@ -365,7 +365,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// Guarantor's DOB (mm/dd/yyyy)
         /// </summary>
         [JsonProperty("guarantordob")]
-        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter))]
         public DateTime? GuarantorDateOfBirth { get; set; }
 
         /// <summary>

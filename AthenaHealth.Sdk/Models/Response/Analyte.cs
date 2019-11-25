@@ -56,7 +56,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// Date when this observation was recorded
         /// </summary>
         [JsonProperty("analytedate")]
-        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter))]
         public DateTime? AnalyteDate { get; set; }
 
         /// <summary>

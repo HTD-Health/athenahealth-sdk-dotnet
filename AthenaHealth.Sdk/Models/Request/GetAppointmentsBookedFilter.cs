@@ -35,7 +35,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// Start of the appointment search date range (mm/dd/yyyy).  Inclusive.
         /// </summary>
         [Required]
-        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter))]
         [JsonProperty("startdate")]
         public DateTime StartDate { get; set; }
 
@@ -43,7 +43,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// End of the appointment search date range (mm/dd/yyyy).  Inclusive.
         /// </summary>
         [Required]
-        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter))]
         [JsonProperty("enddate")]
         public DateTime EndDate { get; set; }
 
@@ -77,14 +77,14 @@ namespace AthenaHealth.Sdk.Models.Request
         /// <summary>
         /// Start of the appointment scheduled search date range (mm/dd/yyyy).  Inclusive.
         /// </summary>
-        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter))]
         [JsonProperty("scheduledstartdate")]
         public DateTime? ScheduledStartDate { get; set; }
 
         /// <summary>
         /// End of the appointment scheduled search date range (mm/dd/yyyy).  Inclusive.
         /// </summary>
-        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter))]
         [JsonProperty("scheduledenddate")]
         public DateTime? ScheduledEndDate { get; set; }
 

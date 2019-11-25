@@ -19,7 +19,7 @@ namespace AthenaHealth.Sdk.Models.Response
         public string Name { get; set; }
 
         [JsonProperty("created")]
-        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter))]
         public DateTime? CreatedDate { get; set; }
 
         [JsonProperty("patientfacingname")]

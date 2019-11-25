@@ -19,7 +19,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// Set the date that the insurance will expire. This is usually a date within the next year and not in the past.
         /// </summary>
         [JsonProperty("expirationdate")]
-        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter))]
         public DateTime? ExpirationDate { get; set; }
 
         /// <summary>
@@ -139,7 +139,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// Set the date that the insurance was issued. This is usually a date in the past year and not in the future.
         /// </summary>
         [JsonProperty("issuedate")]
-        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter))]
         public DateTime? IssueDate { get; set; }
 
         /// <summary>

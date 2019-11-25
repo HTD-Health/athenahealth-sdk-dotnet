@@ -38,7 +38,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// be included if specified.
         /// </summary>
         [JsonProperty("enddate")]
-        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter))]
         public DateTime? EndDate { get; set; }
 
         /// <summary>
@@ -80,7 +80,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// until enddate if specified.
         /// </summary>
         [JsonProperty("startdate")]
-        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter))]
         public DateTime? StartDate { get; set; }
 
         /// <summary>

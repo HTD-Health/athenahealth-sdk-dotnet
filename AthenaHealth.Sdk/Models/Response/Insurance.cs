@@ -31,7 +31,7 @@ namespace AthenaHealth.Sdk.Models.Response
         public string InsuredCity { get; set; }
 
         [JsonProperty("insureddob")]
-        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter))]
         public DateTime? InsuredDateOfBirth { get; set; }
 
         [JsonProperty("insuredaddress")]
@@ -102,7 +102,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// Date the insurance expires.
         /// </summary>
         [JsonProperty("expirationdate")]
-        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter))]
         public DateTime? ExpirationDate { get; set; }
 
         /// <summary>
@@ -115,7 +115,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// The date in which the insurance was marked cancelled.
         /// </summary>
         [JsonProperty("cancelled")]
-        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter))]
         public DateTime? Cancelled { get; set; }
 
         /// <summary>
@@ -210,7 +210,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// The DOB of the insurance policy holder (mm/dd/yyyy).
         /// </summary>
         [JsonProperty("insurancepolicyholderdob")]
-        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter))]
         public DateTime? InsurancePolicyHolderDateOfBirth { get; set; }
 
         /// <summary>

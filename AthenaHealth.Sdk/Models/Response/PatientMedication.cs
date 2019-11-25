@@ -30,7 +30,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// The last time any of the medications were updated
         /// </summary>
         [JsonProperty("lastupdated")]
-        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter))]
         public DateTime? LastUpdated { get; set; }
 
         /// <summary>
@@ -75,7 +75,7 @@ namespace AthenaHealth.Sdk.Models.Response
             public string ClinicalOrderTypeId { get; set; }
 
             [JsonProperty("lastmodifieddate")]
-            [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+            [JsonConverter(typeof(DateConverter))]
             public DateTime? LastModifiedDate { get; set; }
 
             [JsonProperty("lastmodifiedby")]
@@ -288,7 +288,7 @@ namespace AthenaHealth.Sdk.Models.Response
                 /// The date this event occurred
                 /// </summary>
                 [JsonProperty("eventdate")]
-                [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+                [JsonConverter(typeof(DateConverter))]
                 public DateTime? EventDate { get; set; }
 
                 /// <summary>

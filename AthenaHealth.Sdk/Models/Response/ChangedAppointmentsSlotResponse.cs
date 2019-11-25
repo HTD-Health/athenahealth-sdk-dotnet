@@ -82,7 +82,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// This occurs when appointment fields not included in the API output are updated.
         /// </summary>
         [JsonProperty("lastmodified")]
-        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter))]
         public DateTime? LastModified { get; set; }
 
         /// <summary>
@@ -241,7 +241,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// The appointment date.
         /// </summary>
         [JsonProperty("date")]
-        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter))]
         public DateTime Date { get; set; }
 
         /// <summary>

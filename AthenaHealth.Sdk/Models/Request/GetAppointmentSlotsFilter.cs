@@ -33,7 +33,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// <summary>
         /// End of the appointment search date range (mm/dd/yyyy).  Inclusive. Defaults to seven days from startdate.
         /// </summary>
-        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter))]
         [JsonProperty("enddate")]
         public DateTime? EndDate { get; set; }
 
@@ -67,7 +67,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// <summary>
         /// Start of the appointment search date range (mm/dd/yyyy).  Inclusive.  Defaults to today.
         /// </summary>
-        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter))]
         [JsonProperty("startdate")]
         public DateTime? StartDate { get; set; }
 

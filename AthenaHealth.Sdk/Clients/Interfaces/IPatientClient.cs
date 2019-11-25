@@ -279,5 +279,8 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
 
         [Endpoint("GET /patients/{patientid}/patientcases")]
         Task<PatientCaseResponse> GetPatientCases(int patientId, GetPatientCasesFilter filter);
+
+        [Endpoint("GET /chart/{patientid}/vitals")]
+        Task<PatientVitalResponse> GetPatientVitals(int patientId, GetPatientVitalsFilter queryParameters);
     }
 }

@@ -1,0 +1,5108 @@
+{
+  "vitals": [
+    {
+      "ordering": 0,
+      "abbreviation": "BP",
+      "readings": [
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "80",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 22449,
+            "readingtaken": "10\/08\/2014",
+            "codeset": "LOINC",
+            "vitalid": 25967,
+            "createddate": "10\/01\/2015 11:28:18",
+            "createdby": "API-1840",
+            "code": "8462-4"
+          },
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "123",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 22449,
+            "readingtaken": "10\/08\/2014",
+            "codeset": "LOINC",
+            "vitalid": 25968,
+            "createddate": "10\/01\/2015 11:28:18",
+            "createdby": "API-1840",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "80",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 22449,
+            "readingtaken": "10\/08\/2014",
+            "codeset": "LOINC",
+            "vitalid": 25964,
+            "createddate": "10\/01\/2015 10:59:24",
+            "createdby": "API-1840",
+            "code": "8462-4"
+          },
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "120",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 22449,
+            "readingtaken": "10\/08\/2014",
+            "codeset": "LOINC",
+            "vitalid": 25965,
+            "createddate": "10\/01\/2015 10:59:24",
+            "createdby": "API-1840",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 35617,
+            "readingtaken": "01\/01\/2016",
+            "codeset": "LOINC",
+            "vitalid": 28736,
+            "createddate": "06\/19\/2018 07:41:51",
+            "createdby": "API-6442",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "160",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 35617,
+            "readingtaken": "01\/01\/2016",
+            "codeset": "LOINC",
+            "vitalid": 28735,
+            "createddate": "06\/19\/2018 07:41:51",
+            "createdby": "API-6442",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "160",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 35617,
+            "readingtaken": "01\/01\/2016",
+            "codeset": "LOINC",
+            "vitalid": 28734,
+            "createddate": "06\/15\/2018 06:01:27",
+            "createdby": "API-6442",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 2,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 35617,
+            "readingtaken": "01\/01\/2016",
+            "codeset": "LOINC",
+            "vitalid": 28738,
+            "createddate": "06\/19\/2018 08:05:52",
+            "createdby": "API-6442",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": false,
+            "value": "sitting",
+            "readingid": 2,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.TYPE",
+            "sourceid": 35617,
+            "readingtaken": "01\/01\/2016",
+            "vitalid": 28737,
+            "createddate": "06\/19\/2018 08:05:52",
+            "createdby": "API-6442"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "70",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 32955,
+            "readingtaken": "04\/24\/2016",
+            "codeset": "LOINC",
+            "vitalid": 26342,
+            "createddate": "04\/24\/2016 11:49:49",
+            "createdby": "API-3317",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 32955,
+            "readingtaken": "04\/24\/2016",
+            "codeset": "LOINC",
+            "vitalid": 26344,
+            "createddate": "04\/24\/2016 11:49:49",
+            "createdby": "API-3317",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "120",
+            "readingid": 2,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 32955,
+            "readingtaken": "04\/24\/2016",
+            "codeset": "LOINC",
+            "vitalid": 26347,
+            "createddate": "04\/24\/2016 12:04:11",
+            "createdby": "API-3317",
+            "code": "8462-4"
+          },
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": false,
+            "value": "L arm",
+            "readingid": 2,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SITE",
+            "sourceid": 32955,
+            "readingtaken": "04\/24\/2016",
+            "vitalid": 26349,
+            "createddate": "04\/24\/2016 12:04:11",
+            "createdby": "API-3317"
+          },
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 2,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 32955,
+            "readingtaken": "04\/24\/2016",
+            "codeset": "LOINC",
+            "vitalid": 26351,
+            "createddate": "04\/24\/2016 12:04:11",
+            "createdby": "API-3317",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "120",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 32965,
+            "readingtaken": "04\/25\/2016",
+            "codeset": "LOINC",
+            "vitalid": 26359,
+            "createddate": "04\/24\/2016 12:14:41",
+            "createdby": "API-3317",
+            "code": "8462-4"
+          },
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": false,
+            "value": "L arm",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SITE",
+            "sourceid": 32965,
+            "readingtaken": "04\/25\/2016",
+            "vitalid": 26357,
+            "createddate": "04\/24\/2016 12:14:41",
+            "createdby": "API-3317"
+          },
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 32965,
+            "readingtaken": "04\/25\/2016",
+            "codeset": "LOINC",
+            "vitalid": 26362,
+            "createddate": "04\/24\/2016 12:14:41",
+            "createdby": "API-3317",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "82",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 33770,
+            "readingtaken": "07\/31\/2016",
+            "codeset": "LOINC",
+            "vitalid": 27217,
+            "createddate": "04\/28\/2017 01:27:33",
+            "createdby": "API-5892",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": false,
+            "value": "R arm",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SITE",
+            "sourceid": 33770,
+            "readingtaken": "07\/31\/2016",
+            "vitalid": 27218,
+            "createddate": "04\/28\/2017 01:27:33",
+            "createdby": "API-5892"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "128",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 33770,
+            "readingtaken": "07\/31\/2016",
+            "codeset": "LOINC",
+            "vitalid": 27216,
+            "createddate": "04\/28\/2017 01:27:33",
+            "createdby": "API-5892",
+            "code": "8480-6"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": false,
+            "value": "sitting",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.TYPE",
+            "sourceid": 33770,
+            "readingtaken": "07\/31\/2016",
+            "vitalid": 27219,
+            "createddate": "04\/28\/2017 01:27:33",
+            "createdby": "API-5892"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "82",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 33770,
+            "readingtaken": "07\/31\/2016",
+            "codeset": "LOINC",
+            "vitalid": 26594,
+            "createddate": "09\/20\/2016 21:23:22",
+            "createdby": "API-3192",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": false,
+            "value": "R arm",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SITE",
+            "sourceid": 33770,
+            "readingtaken": "07\/31\/2016",
+            "vitalid": 26595,
+            "createddate": "09\/20\/2016 21:23:22",
+            "createdby": "API-3192"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "128",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 33770,
+            "readingtaken": "07\/31\/2016",
+            "codeset": "LOINC",
+            "vitalid": 26593,
+            "createddate": "09\/20\/2016 21:23:22",
+            "createdby": "API-3192",
+            "code": "8480-6"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": false,
+            "value": "sitting",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.TYPE",
+            "sourceid": 33770,
+            "readingtaken": "07\/31\/2016",
+            "vitalid": 26596,
+            "createddate": "09\/20\/2016 21:23:22",
+            "createdby": "API-3192"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "121",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 33893,
+            "readingtaken": "10\/03\/2016",
+            "codeset": "LOINC",
+            "vitalid": 26701,
+            "createddate": "10\/12\/2016 17:03:17",
+            "createdby": "API-3192",
+            "code": "8462-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "121",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 33893,
+            "readingtaken": "10\/03\/2016",
+            "codeset": "LOINC",
+            "vitalid": 26700,
+            "createddate": "10\/12\/2016 17:03:11",
+            "createdby": "API-3192",
+            "code": "8462-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "120",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 33892,
+            "readingtaken": "10\/12\/2016",
+            "codeset": "LOINC",
+            "vitalid": 26697,
+            "createddate": "10\/12\/2016 17:01:27",
+            "createdby": "API-3192",
+            "code": "8462-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "70",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 34732,
+            "readingtaken": "05\/02\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27223,
+            "createddate": "05\/02\/2017 10:02:59",
+            "createdby": "API-5532",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "120",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 34732,
+            "readingtaken": "05\/02\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27222,
+            "createddate": "05\/02\/2017 10:02:59",
+            "createdby": "API-5532",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "70",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 34732,
+            "readingtaken": "05\/02\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27221,
+            "createddate": "05\/02\/2017 09:51:43",
+            "createdby": "API-5532",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "120",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 34732,
+            "readingtaken": "05\/02\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27220,
+            "createddate": "05\/02\/2017 09:51:43",
+            "createdby": "API-5532",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "70",
+            "readingid": 6,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 34733,
+            "readingtaken": "05\/05\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27249,
+            "createddate": "05\/05\/2017 15:59:56",
+            "createdby": "API-5787",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "120",
+            "readingid": 6,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 34733,
+            "readingtaken": "05\/05\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27248,
+            "createddate": "05\/05\/2017 15:59:56",
+            "createdby": "API-5787",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "70",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 34733,
+            "readingtaken": "05\/05\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27239,
+            "createddate": "05\/05\/2017 12:38:38",
+            "createdby": "API-5532",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "120",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 34733,
+            "readingtaken": "05\/05\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27238,
+            "createddate": "05\/05\/2017 12:38:38",
+            "createdby": "API-5532",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "70",
+            "readingid": 4,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 34733,
+            "readingtaken": "05\/05\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27245,
+            "createddate": "05\/05\/2017 13:10:55",
+            "createdby": "API-5787",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "120",
+            "readingid": 4,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 34733,
+            "readingtaken": "05\/05\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27244,
+            "createddate": "05\/05\/2017 13:10:55",
+            "createdby": "API-5787",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "70",
+            "readingid": 3,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 34733,
+            "readingtaken": "05\/05\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27243,
+            "createddate": "05\/05\/2017 12:56:12",
+            "createdby": "API-5787",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "120",
+            "readingid": 3,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 34733,
+            "readingtaken": "05\/05\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27242,
+            "createddate": "05\/05\/2017 12:56:12",
+            "createdby": "API-5787",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "70",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 34733,
+            "readingtaken": "05\/05\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27237,
+            "createddate": "05\/05\/2017 12:04:38",
+            "createdby": "API-5532",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "120",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 34733,
+            "readingtaken": "05\/05\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27236,
+            "createddate": "05\/05\/2017 12:04:38",
+            "createdby": "API-5532",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "70",
+            "readingid": 7,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 34733,
+            "readingtaken": "05\/05\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27251,
+            "createddate": "05\/05\/2017 16:01:16",
+            "createdby": "API-5787",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "120",
+            "readingid": 7,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 34733,
+            "readingtaken": "05\/05\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27250,
+            "createddate": "05\/05\/2017 16:01:16",
+            "createdby": "API-5787",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "70",
+            "readingid": 2,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 34733,
+            "readingtaken": "05\/05\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27241,
+            "createddate": "05\/05\/2017 12:40:34",
+            "createdby": "API-5787",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "120",
+            "readingid": 2,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 34733,
+            "readingtaken": "05\/05\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27240,
+            "createddate": "05\/05\/2017 12:40:34",
+            "createdby": "API-5787",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "70",
+            "readingid": 5,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 34733,
+            "readingtaken": "05\/05\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27247,
+            "createddate": "05\/05\/2017 13:11:11",
+            "createdby": "API-5787",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "120",
+            "readingid": 5,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 34733,
+            "readingtaken": "05\/05\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27246,
+            "createddate": "05\/05\/2017 13:11:11",
+            "createdby": "API-5787",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "85",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 34984,
+            "readingtaken": "06\/12\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27596,
+            "createddate": "07\/27\/2017 05:14:29",
+            "createdby": "API-3916",
+            "code": "8462-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "8",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 34889,
+            "readingtaken": "06\/16\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27513,
+            "createddate": "06\/16\/2017 15:49:26",
+            "createdby": "API-5532",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "7",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 34889,
+            "readingtaken": "06\/16\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27512,
+            "createddate": "06\/16\/2017 15:49:26",
+            "createdby": "API-5532",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "8",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 34889,
+            "readingtaken": "06\/16\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27503,
+            "createddate": "06\/16\/2017 15:48:36",
+            "createdby": "API-5532",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "7",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 34889,
+            "readingtaken": "06\/16\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27502,
+            "createddate": "06\/16\/2017 15:48:36",
+            "createdby": "API-5532",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90024",
+            "readingid": 6,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 35951,
+            "readingtaken": "09\/04\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29132,
+            "createddate": "09\/04\/2019 18:41:52",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "900",
+            "readingid": 3,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 35951,
+            "readingtaken": "09\/04\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29129,
+            "createddate": "09\/04\/2019 18:37:38",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "900",
+            "readingid": 7,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 35951,
+            "readingtaken": "09\/04\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29133,
+            "createddate": "09\/04\/2019 18:43:58",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "8000",
+            "readingid": 2,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 35951,
+            "readingtaken": "09\/04\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29128,
+            "createddate": "09\/04\/2019 18:33:11",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 8,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 35951,
+            "readingtaken": "09\/04\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29134,
+            "createddate": "09\/04\/2019 22:56:28",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "8000",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 35951,
+            "readingtaken": "09\/04\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29127,
+            "createddate": "09\/04\/2019 18:23:54",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "900",
+            "readingid": 4,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 35951,
+            "readingtaken": "09\/04\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29130,
+            "createddate": "09\/04\/2019 18:39:50",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "8000",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 35951,
+            "readingtaken": "09\/04\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29126,
+            "createddate": "09\/04\/2019 17:49:27",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "900",
+            "readingid": 5,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 35951,
+            "readingtaken": "09\/04\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29131,
+            "createddate": "09\/04\/2019 18:41:35",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "900",
+            "readingid": 6,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 36095,
+            "readingtaken": "09\/19\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29176,
+            "createddate": "09\/19\/2019 17:28:48",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "100",
+            "readingid": 6,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 36095,
+            "readingtaken": "09\/19\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29177,
+            "createddate": "09\/19\/2019 17:28:48",
+            "createdby": "API-11059",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "121",
+            "readingid": 11,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 36095,
+            "readingtaken": "09\/19\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29199,
+            "createddate": "09\/19\/2019 21:20:13",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 11,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 36095,
+            "readingtaken": "09\/19\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29200,
+            "createddate": "09\/19\/2019 21:20:13",
+            "createdby": "API-11059",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "900",
+            "readingid": 3,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 36095,
+            "readingtaken": "09\/19\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29170,
+            "createddate": "09\/19\/2019 17:21:41",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "100",
+            "readingid": 3,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 36095,
+            "readingtaken": "09\/19\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29171,
+            "createddate": "09\/19\/2019 17:21:41",
+            "createdby": "API-11059",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "121",
+            "readingid": 7,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 36095,
+            "readingtaken": "09\/19\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29179,
+            "createddate": "09\/19\/2019 21:19:31",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 7,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 36095,
+            "readingtaken": "09\/19\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29180,
+            "createddate": "09\/19\/2019 21:19:31",
+            "createdby": "API-11059",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "121",
+            "readingid": 9,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 36095,
+            "readingtaken": "09\/19\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29189,
+            "createddate": "09\/19\/2019 21:20:12",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 9,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 36095,
+            "readingtaken": "09\/19\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29190,
+            "createddate": "09\/19\/2019 21:20:12",
+            "createdby": "API-11059",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "900",
+            "readingid": 2,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 36095,
+            "readingtaken": "09\/19\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29168,
+            "createddate": "09\/19\/2019 17:05:03",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "100",
+            "readingid": 2,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 36095,
+            "readingtaken": "09\/19\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29169,
+            "createddate": "09\/19\/2019 17:05:03",
+            "createdby": "API-11059",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "121",
+            "readingid": 8,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 36095,
+            "readingtaken": "09\/19\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29184,
+            "createddate": "09\/19\/2019 21:19:51",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 8,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 36095,
+            "readingtaken": "09\/19\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29185,
+            "createddate": "09\/19\/2019 21:19:51",
+            "createdby": "API-11059",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "900",
+            "readingid": 4,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 36095,
+            "readingtaken": "09\/19\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29172,
+            "createddate": "09\/19\/2019 17:26:28",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "100",
+            "readingid": 4,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 36095,
+            "readingtaken": "09\/19\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29173,
+            "createddate": "09\/19\/2019 17:26:28",
+            "createdby": "API-11059",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "900",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 36095,
+            "readingtaken": "09\/19\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29166,
+            "createddate": "09\/19\/2019 16:51:59",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "100",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 36095,
+            "readingtaken": "09\/19\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29167,
+            "createddate": "09\/19\/2019 16:51:59",
+            "createdby": "API-11059",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "900",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 36095,
+            "readingtaken": "09\/19\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29164,
+            "createddate": "09\/19\/2019 16:28:26",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "100",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 36095,
+            "readingtaken": "09\/19\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29165,
+            "createddate": "09\/19\/2019 16:28:26",
+            "createdby": "API-11059",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "121",
+            "readingid": 10,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 36095,
+            "readingtaken": "09\/19\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29194,
+            "createddate": "09\/19\/2019 21:20:13",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 10,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 36095,
+            "readingtaken": "09\/19\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29195,
+            "createddate": "09\/19\/2019 21:20:13",
+            "createdby": "API-11059",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "900",
+            "readingid": 5,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 36095,
+            "readingtaken": "09\/19\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29174,
+            "createddate": "09\/19\/2019 17:28:14",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "100",
+            "readingid": 5,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 36095,
+            "readingtaken": "09\/19\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29175,
+            "createddate": "09\/19\/2019 17:28:14",
+            "createdby": "API-11059",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "121",
+            "readingid": 6,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29234,
+            "createddate": "09\/20\/2019 17:01:05",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 6,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29235,
+            "createddate": "09\/20\/2019 17:01:05",
+            "createdby": "API-11059",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "121",
+            "readingid": 11,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29259,
+            "createddate": "09\/20\/2019 17:03:37",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 11,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29260,
+            "createddate": "09\/20\/2019 17:03:37",
+            "createdby": "API-11059",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "121",
+            "readingid": 3,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29219,
+            "createddate": "09\/20\/2019 16:59:16",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 3,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29220,
+            "createddate": "09\/20\/2019 16:59:16",
+            "createdby": "API-11059",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "121",
+            "readingid": 7,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29239,
+            "createddate": "09\/20\/2019 17:01:05",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 7,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29240,
+            "createddate": "09\/20\/2019 17:01:05",
+            "createdby": "API-11059",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "121",
+            "readingid": 9,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29249,
+            "createddate": "09\/20\/2019 17:03:36",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 9,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29250,
+            "createddate": "09\/20\/2019 17:03:36",
+            "createdby": "API-11059",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "121",
+            "readingid": 2,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29214,
+            "createddate": "09\/20\/2019 16:58:51",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 2,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29215,
+            "createddate": "09\/20\/2019 16:58:51",
+            "createdby": "API-11059",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "121",
+            "readingid": 12,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29264,
+            "createddate": "09\/20\/2019 17:03:56",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 12,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29265,
+            "createddate": "09\/20\/2019 17:03:56",
+            "createdby": "API-11059",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "121",
+            "readingid": 14,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29274,
+            "createddate": "09\/20\/2019 17:03:57",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 14,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29275,
+            "createddate": "09\/20\/2019 17:03:57",
+            "createdby": "API-11059",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "121",
+            "readingid": 8,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29244,
+            "createddate": "09\/20\/2019 17:01:06",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 8,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29245,
+            "createddate": "09\/20\/2019 17:01:06",
+            "createdby": "API-11059",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "121",
+            "readingid": 4,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29224,
+            "createddate": "09\/20\/2019 16:59:16",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 4,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29225,
+            "createddate": "09\/20\/2019 16:59:16",
+            "createdby": "API-11059",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "121",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29209,
+            "createddate": "09\/20\/2019 16:58:50",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29210,
+            "createddate": "09\/20\/2019 16:58:50",
+            "createdby": "API-11059",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "121",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29204,
+            "createddate": "09\/20\/2019 16:58:50",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29205,
+            "createddate": "09\/20\/2019 16:58:50",
+            "createdby": "API-11059",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "121",
+            "readingid": 13,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29269,
+            "createddate": "09\/20\/2019 17:03:57",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 13,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29270,
+            "createddate": "09\/20\/2019 17:03:57",
+            "createdby": "API-11059",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "121",
+            "readingid": 10,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29254,
+            "createddate": "09\/20\/2019 17:03:37",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 10,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29255,
+            "createddate": "09\/20\/2019 17:03:37",
+            "createdby": "API-11059",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "121",
+            "readingid": 5,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29229,
+            "createddate": "09\/20\/2019 16:59:17",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 5,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29230,
+            "createddate": "09\/20\/2019 16:59:17",
+            "createdby": "API-11059",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "121",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 36107,
+            "readingtaken": "09\/26\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29294,
+            "createddate": "09\/26\/2019 13:00:20",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 36107,
+            "readingtaken": "09\/26\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29295,
+            "createddate": "09\/26\/2019 13:00:20",
+            "createdby": "API-11059",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "121",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 36107,
+            "readingtaken": "09\/26\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29289,
+            "createddate": "09\/26\/2019 13:00:20",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 36107,
+            "readingtaken": "09\/26\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29290,
+            "createddate": "09\/26\/2019 13:00:20",
+            "createdby": "API-11059",
+            "code": "8480-6"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "121",
+            "readingid": 2,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.DIASTOLIC",
+            "codedescription": "Diastolic blood pressure",
+            "sourceid": 36107,
+            "readingtaken": "09\/26\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29299,
+            "createddate": "09\/26\/2019 13:00:21",
+            "createdby": "API-11059",
+            "code": "8462-4"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 2,
+            "clinicalelementid": "VITALS.BLOODPRESSURE.SYSTOLIC",
+            "codedescription": "Systolic blood pressure",
+            "sourceid": 36107,
+            "readingtaken": "09\/26\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29300,
+            "createddate": "09\/26\/2019 13:00:21",
+            "createdby": "API-11059",
+            "code": "8480-6"
+          }
+        ]
+      ],
+      "key": "BLOODPRESSURE"
+    },
+    {
+      "ordering": 1,
+      "abbreviation": "BMI",
+      "readings": [
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "22",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.BMI",
+            "codedescription": "Body mass index (BMI) [Ratio]",
+            "sourceid": 34732,
+            "readingtaken": "05\/02\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27224,
+            "createddate": "05\/02\/2017 10:02:59",
+            "createdby": "API-5532",
+            "code": "39156-5"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "22",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.BMI",
+            "codedescription": "Body mass index (BMI) [Ratio]",
+            "sourceid": 34733,
+            "readingtaken": "05\/05\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27252,
+            "createddate": "05\/05\/2017 16:01:16",
+            "createdby": "API-5787",
+            "code": "39156-5"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "1406",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.BMI",
+            "codedescription": "Body mass index (BMI) [Ratio]",
+            "sourceid": 34889,
+            "readingtaken": "06\/16\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27514,
+            "createddate": "06\/16\/2017 15:49:26",
+            "createdby": "API-5532",
+            "code": "39156-5"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "1406",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.BMI",
+            "codedescription": "Body mass index (BMI) [Ratio]",
+            "sourceid": 34889,
+            "readingtaken": "06\/16\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27504,
+            "createddate": "06\/16\/2017 15:48:36",
+            "createdby": "API-5532",
+            "code": "39156-5"
+          }
+        ]
+      ],
+      "key": "BMI"
+    },
+    {
+      "ordering": 2,
+      "abbreviation": "Ht",
+      "readings": [
+        [
+          {
+            "source": "ENCOUNTER",
+            "codedescription": "Body height",
+            "percentilespec": {
+              "high": 69,
+              "highordinal": "th",
+              "lowordinal": "th",
+              "low": 69
+            },
+            "readingtaken": "01\/04\/2010",
+            "codeset": "LOINC",
+            "createdby": "jdoe",
+            "code": "8302-2",
+            "isgraphable": true,
+            "value": "180.34",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.HEIGHT",
+            "sourceid": 15946,
+            "unit": "cm",
+            "vitalid": 232,
+            "createddate": "01\/17\/2014 10:27:17"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "codedescription": "Body height",
+            "percentilespec": {
+              "high": 74,
+              "highordinal": "th",
+              "lowordinal": "th",
+              "low": 74
+            },
+            "readingtaken": "06\/22\/2010",
+            "codeset": "LOINC",
+            "createdby": "jdoe",
+            "code": "8302-2",
+            "isgraphable": true,
+            "value": "181.61",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.HEIGHT",
+            "sourceid": 15951,
+            "unit": "cm",
+            "vitalid": 242,
+            "createddate": "01\/17\/2014 10:40:55"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "181.61",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.HEIGHT",
+            "codedescription": "Body height",
+            "sourceid": 15947,
+            "unit": "cm",
+            "readingtaken": "01\/06\/2011",
+            "codeset": "LOINC",
+            "vitalid": 234,
+            "createddate": "01\/17\/2014 10:27:48",
+            "createdby": "jdoe",
+            "code": "8302-2"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "182.88",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.HEIGHT",
+            "codedescription": "Body height",
+            "sourceid": 15952,
+            "unit": "cm",
+            "readingtaken": "07\/07\/2011",
+            "codeset": "LOINC",
+            "vitalid": 244,
+            "createddate": "01\/17\/2014 10:41:28",
+            "createdby": "jdoe",
+            "code": "8302-2"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "Testing",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.HEIGHT",
+            "codedescription": "Body height",
+            "sourceid": 15948,
+            "unit": "cm",
+            "readingtaken": "12\/29\/2011",
+            "codeset": "LOINC",
+            "vitalid": 236,
+            "createddate": "01\/17\/2014 10:28:08",
+            "createdby": "jdoe",
+            "code": "8302-2"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "184.15",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.HEIGHT",
+            "codedescription": "Body height",
+            "sourceid": 15953,
+            "unit": "cm",
+            "readingtaken": "07\/01\/2012",
+            "codeset": "LOINC",
+            "vitalid": 246,
+            "createddate": "01\/17\/2014 10:42:08",
+            "createdby": "jdoe",
+            "code": "8302-2"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "184.15",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.HEIGHT",
+            "codedescription": "Body height",
+            "sourceid": 15949,
+            "unit": "cm",
+            "readingtaken": "01\/05\/2013",
+            "codeset": "LOINC",
+            "vitalid": 238,
+            "createddate": "01\/17\/2014 10:28:32",
+            "createdby": "jdoe",
+            "code": "8302-2"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "1",
+            "readingid": 6,
+            "clinicalelementid": "VITALS.HEIGHT",
+            "codedescription": "Body height",
+            "sourceid": 12342,
+            "unit": "cm",
+            "readingtaken": "07\/15\/2013",
+            "codeset": "LOINC",
+            "vitalid": 26065,
+            "createddate": "10\/12\/2015 09:38:09",
+            "createdby": "API-1423",
+            "code": "8302-2"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "1",
+            "readingid": 11,
+            "clinicalelementid": "VITALS.HEIGHT",
+            "codedescription": "Body height",
+            "sourceid": 12342,
+            "unit": "cm",
+            "readingtaken": "07\/15\/2013",
+            "codeset": "LOINC",
+            "vitalid": 26143,
+            "createddate": "10\/27\/2015 09:58:30",
+            "createdby": "API-1423",
+            "code": "8302-2"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "1",
+            "readingid": 3,
+            "clinicalelementid": "VITALS.HEIGHT",
+            "codedescription": "Body height",
+            "sourceid": 12342,
+            "unit": "cm",
+            "readingtaken": "07\/15\/2013",
+            "codeset": "LOINC",
+            "vitalid": 26062,
+            "createddate": "10\/12\/2015 08:10:17",
+            "createdby": "API-1423",
+            "code": "8302-2"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "1",
+            "readingid": 7,
+            "clinicalelementid": "VITALS.HEIGHT",
+            "codedescription": "Body height",
+            "sourceid": 12342,
+            "unit": "cm",
+            "readingtaken": "07\/15\/2013",
+            "codeset": "LOINC",
+            "vitalid": 26082,
+            "createddate": "10\/13\/2015 09:16:17",
+            "createdby": "API-1423",
+            "code": "8302-2"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "1",
+            "readingid": 9,
+            "clinicalelementid": "VITALS.HEIGHT",
+            "codedescription": "Body height",
+            "sourceid": 12342,
+            "unit": "cm",
+            "readingtaken": "07\/15\/2013",
+            "codeset": "LOINC",
+            "vitalid": 26102,
+            "createddate": "10\/14\/2015 06:47:25",
+            "createdby": "API-1423",
+            "code": "8302-2"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "1",
+            "readingid": 12,
+            "clinicalelementid": "VITALS.HEIGHT",
+            "codedescription": "Body height",
+            "sourceid": 12342,
+            "unit": "cm",
+            "readingtaken": "07\/15\/2013",
+            "codeset": "LOINC",
+            "vitalid": 26144,
+            "createddate": "10\/27\/2015 09:58:46",
+            "createdby": "API-1423",
+            "code": "8302-2"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "7",
+            "readingid": 2,
+            "clinicalelementid": "VITALS.HEIGHT",
+            "codedescription": "Body height",
+            "sourceid": 12342,
+            "unit": "cm",
+            "readingtaken": "07\/15\/2013",
+            "codeset": "LOINC",
+            "vitalid": 26043,
+            "createddate": "10\/08\/2015 08:19:37",
+            "createdby": "API-1423",
+            "code": "8302-2"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "1",
+            "readingid": 8,
+            "clinicalelementid": "VITALS.HEIGHT",
+            "codedescription": "Body height",
+            "sourceid": 12342,
+            "unit": "cm",
+            "readingtaken": "07\/15\/2013",
+            "codeset": "LOINC",
+            "vitalid": 26083,
+            "createddate": "10\/13\/2015 09:18:01",
+            "createdby": "API-1423",
+            "code": "8302-2"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "1",
+            "readingid": 4,
+            "clinicalelementid": "VITALS.HEIGHT",
+            "codedescription": "Body height",
+            "sourceid": 12342,
+            "unit": "cm",
+            "readingtaken": "07\/15\/2013",
+            "codeset": "LOINC",
+            "vitalid": 26063,
+            "createddate": "10\/12\/2015 08:10:44",
+            "createdby": "API-1423",
+            "code": "8302-2"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "1",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.HEIGHT",
+            "codedescription": "Body height",
+            "sourceid": 12342,
+            "unit": "cm",
+            "readingtaken": "07\/15\/2013",
+            "codeset": "LOINC",
+            "vitalid": 26042,
+            "createddate": "10\/08\/2015 08:17:15",
+            "createdby": "API-1423",
+            "code": "8302-2"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "1",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.HEIGHT",
+            "codedescription": "Body height",
+            "sourceid": 12342,
+            "unit": "cm",
+            "readingtaken": "07\/15\/2013",
+            "codeset": "LOINC",
+            "vitalid": 26022,
+            "createddate": "10\/06\/2015 09:59:50",
+            "createdby": "API-1423",
+            "code": "8302-2"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "1",
+            "readingid": 10,
+            "clinicalelementid": "VITALS.HEIGHT",
+            "codedescription": "Body height",
+            "sourceid": 12342,
+            "unit": "cm",
+            "readingtaken": "07\/15\/2013",
+            "codeset": "LOINC",
+            "vitalid": 26142,
+            "createddate": "10\/27\/2015 09:55:14",
+            "createdby": "API-1423",
+            "code": "8302-2"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "1",
+            "readingid": 13,
+            "clinicalelementid": "VITALS.HEIGHT",
+            "codedescription": "Body height",
+            "sourceid": 12342,
+            "unit": "cm",
+            "readingtaken": "07\/15\/2013",
+            "codeset": "LOINC",
+            "vitalid": 26202,
+            "createddate": "11\/23\/2015 04:54:19",
+            "createdby": "API-1423",
+            "code": "8302-2"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "1",
+            "readingid": 5,
+            "clinicalelementid": "VITALS.HEIGHT",
+            "codedescription": "Body height",
+            "sourceid": 12342,
+            "unit": "cm",
+            "readingtaken": "07\/15\/2013",
+            "codeset": "LOINC",
+            "vitalid": 26064,
+            "createddate": "10\/12\/2015 08:31:22",
+            "createdby": "API-1423",
+            "code": "8302-2"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "182.88",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.HEIGHT",
+            "codedescription": "Body height",
+            "sourceid": 15950,
+            "unit": "cm",
+            "readingtaken": "12\/23\/2013",
+            "codeset": "LOINC",
+            "vitalid": 240,
+            "createddate": "01\/17\/2014 10:28:49",
+            "createdby": "jdoe",
+            "code": "8302-2"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "175 cm",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.HEIGHT",
+            "codedescription": "Body height",
+            "sourceid": 32955,
+            "unit": "cm",
+            "readingtaken": "04\/24\/2016",
+            "codeset": "LOINC",
+            "vitalid": 26346,
+            "createddate": "04\/24\/2016 12:04:11",
+            "createdby": "API-3317",
+            "code": "8302-2"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "175 cm",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.HEIGHT",
+            "codedescription": "Body height",
+            "sourceid": 32965,
+            "unit": "cm",
+            "readingtaken": "04\/25\/2016",
+            "codeset": "LOINC",
+            "vitalid": 26360,
+            "createddate": "04\/24\/2016 12:14:41",
+            "createdby": "API-3317",
+            "code": "8302-2"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "71",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.HEIGHT",
+            "codedescription": "Body height",
+            "sourceid": 34732,
+            "unit": "cm",
+            "readingtaken": "05\/02\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27225,
+            "createddate": "05\/02\/2017 10:02:59",
+            "createdby": "API-5532",
+            "code": "8302-2"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "71",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.HEIGHT",
+            "codedescription": "Body height",
+            "sourceid": 34733,
+            "unit": "cm",
+            "readingtaken": "05\/05\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27253,
+            "createddate": "05\/05\/2017 16:01:16",
+            "createdby": "API-5787",
+            "code": "8302-2"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "2.54",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.HEIGHT",
+            "codedescription": "Body height",
+            "sourceid": 34889,
+            "unit": "cm",
+            "readingtaken": "06\/16\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27515,
+            "createddate": "06\/16\/2017 15:49:26",
+            "createdby": "API-5532",
+            "code": "8302-2"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "2.54",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.HEIGHT",
+            "codedescription": "Body height",
+            "sourceid": 34889,
+            "unit": "cm",
+            "readingtaken": "06\/16\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27505,
+            "createddate": "06\/16\/2017 15:48:36",
+            "createdby": "API-5532",
+            "code": "8302-2"
+          }
+        ]
+      ],
+      "key": "HEIGHT"
+    },
+    {
+      "ordering": 3,
+      "abbreviation": "Wt",
+      "readings": [
+        [
+          {
+            "source": "ENCOUNTER",
+            "codedescription": "Body weight",
+            "percentilespec": {
+              "high": 86,
+              "highordinal": "th",
+              "lowordinal": "th",
+              "low": 86
+            },
+            "readingtaken": "01\/04\/2010",
+            "codeset": "LOINC",
+            "createdby": "jdoe",
+            "code": "29463-7",
+            "isgraphable": true,
+            "value": "86182.5503",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "sourceid": 15946,
+            "unit": "g",
+            "vitalid": 233,
+            "createddate": "01\/17\/2014 10:27:17"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "codedescription": "Body weight",
+            "percentilespec": {
+              "high": 90,
+              "highordinal": "th",
+              "lowordinal": "th",
+              "low": 90
+            },
+            "readingtaken": "06\/22\/2010",
+            "codeset": "LOINC",
+            "createdby": "jdoe",
+            "code": "29463-7",
+            "isgraphable": true,
+            "value": "90718.474",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "sourceid": 15951,
+            "unit": "g",
+            "vitalid": 243,
+            "createddate": "01\/17\/2014 10:40:55"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "92986.43585",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 15947,
+            "unit": "g",
+            "readingtaken": "01\/06\/2011",
+            "codeset": "LOINC",
+            "vitalid": 235,
+            "createddate": "01\/17\/2014 10:27:48",
+            "createdby": "jdoe",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "97522.35955",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 15952,
+            "unit": "g",
+            "readingtaken": "07\/07\/2011",
+            "codeset": "LOINC",
+            "vitalid": 245,
+            "createddate": "01\/17\/2014 10:41:28",
+            "createdby": "jdoe",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "102058.28325",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 15948,
+            "unit": "g",
+            "readingtaken": "12\/29\/2011",
+            "codeset": "LOINC",
+            "vitalid": 237,
+            "createddate": "01\/17\/2014 10:28:08",
+            "createdby": "jdoe",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "104326.2451",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 15953,
+            "unit": "g",
+            "readingtaken": "07\/01\/2012",
+            "codeset": "LOINC",
+            "vitalid": 247,
+            "createddate": "01\/17\/2014 10:42:08",
+            "createdby": "jdoe",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "111130.13065",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 15949,
+            "unit": "g",
+            "readingtaken": "01\/05\/2013",
+            "codeset": "LOINC",
+            "vitalid": 239,
+            "createddate": "01\/17\/2014 10:28:32",
+            "createdby": "jdoe",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "106594.20695",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 15950,
+            "unit": "g",
+            "readingtaken": "12\/23\/2013",
+            "codeset": "LOINC",
+            "vitalid": 241,
+            "createddate": "01\/17\/2014 10:28:49",
+            "createdby": "jdoe",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 101010101,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 21442,
+            "unit": "g",
+            "readingtaken": "01\/08\/2014",
+            "codeset": "LOINC",
+            "vitalid": 581,
+            "createddate": "08\/25\/2014 16:27:44",
+            "createdby": "jdoe",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 21362,
+            "unit": "g",
+            "readingtaken": "04\/28\/2014",
+            "codeset": "LOINC",
+            "vitalid": 561,
+            "createddate": "08\/24\/2014 22:51:17",
+            "createdby": "jdoe",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "99000",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 22449,
+            "unit": "g",
+            "readingtaken": "10\/08\/2014",
+            "codeset": "LOINC",
+            "vitalid": 25962,
+            "createddate": "10\/01\/2015 10:36:53",
+            "createdby": "API-1840",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "99000",
+            "readingid": 4,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 22449,
+            "unit": "g",
+            "readingtaken": "10\/08\/2014",
+            "codeset": "LOINC",
+            "vitalid": 25982,
+            "createddate": "10\/01\/2015 15:04:15",
+            "createdby": "API-1840",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "99000",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 22449,
+            "unit": "g",
+            "readingtaken": "10\/08\/2014",
+            "codeset": "LOINC",
+            "vitalid": 25922,
+            "createddate": "09\/16\/2015 15:53:14",
+            "createdby": "API-1840",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "99000",
+            "readingid": 3,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 22449,
+            "unit": "g",
+            "readingtaken": "10\/08\/2014",
+            "codeset": "LOINC",
+            "vitalid": 25966,
+            "createddate": "10\/01\/2015 11:28:16",
+            "createdby": "API-1840",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "99000",
+            "readingid": 2,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 22449,
+            "unit": "g",
+            "readingtaken": "10\/08\/2014",
+            "codeset": "LOINC",
+            "vitalid": 25963,
+            "createddate": "10\/01\/2015 10:59:23",
+            "createdby": "API-1840",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "99000",
+            "readingid": 5,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 22449,
+            "unit": "g",
+            "readingtaken": "10\/08\/2014",
+            "codeset": "LOINC",
+            "vitalid": 25983,
+            "createddate": "10\/01\/2015 15:59:04",
+            "createdby": "API-1840",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "7800",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 32955,
+            "unit": "g",
+            "readingtaken": "04\/24\/2016",
+            "codeset": "LOINC",
+            "vitalid": 26350,
+            "createddate": "04\/24\/2016 12:04:11",
+            "createdby": "API-3317",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "7800",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 32965,
+            "unit": "g",
+            "readingtaken": "04\/25\/2016",
+            "codeset": "LOINC",
+            "vitalid": 26363,
+            "createddate": "04\/24\/2016 12:14:41",
+            "createdby": "API-3317",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "168",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 34732,
+            "unit": "g",
+            "readingtaken": "05\/02\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27226,
+            "createddate": "05\/02\/2017 10:02:59",
+            "createdby": "API-5532",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "168",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 34733,
+            "unit": "g",
+            "readingtaken": "05\/05\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27254,
+            "createddate": "05\/05\/2017 16:01:16",
+            "createdby": "API-5787",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "907.18",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 34889,
+            "unit": "g",
+            "readingtaken": "06\/16\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27516,
+            "createddate": "06\/16\/2017 15:49:26",
+            "createdby": "API-5532",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "907.18",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 34889,
+            "unit": "g",
+            "readingtaken": "06\/16\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27506,
+            "createddate": "06\/16\/2017 15:48:36",
+            "createdby": "API-5532",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "75",
+            "readingid": 4,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 36095,
+            "unit": "g",
+            "readingtaken": "09\/19\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29202,
+            "createddate": "09\/19\/2019 21:20:13",
+            "createdby": "API-11059",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "75",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 36095,
+            "unit": "g",
+            "readingtaken": "09\/19\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29187,
+            "createddate": "09\/19\/2019 21:19:51",
+            "createdby": "API-11059",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "75",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 36095,
+            "unit": "g",
+            "readingtaken": "09\/19\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29182,
+            "createddate": "09\/19\/2019 21:19:31",
+            "createdby": "API-11059",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "75",
+            "readingid": 3,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 36095,
+            "unit": "g",
+            "readingtaken": "09\/19\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29197,
+            "createddate": "09\/19\/2019 21:20:13",
+            "createdby": "API-11059",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "75",
+            "readingid": 2,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 36095,
+            "unit": "g",
+            "readingtaken": "09\/19\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29192,
+            "createddate": "09\/19\/2019 21:20:12",
+            "createdby": "API-11059",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "75",
+            "readingid": 6,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 36097,
+            "unit": "g",
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29237,
+            "createddate": "09\/20\/2019 17:01:05",
+            "createdby": "API-11059",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "75",
+            "readingid": 11,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 36097,
+            "unit": "g",
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29262,
+            "createddate": "09\/20\/2019 17:03:37",
+            "createdby": "API-11059",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "75",
+            "readingid": 3,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 36097,
+            "unit": "g",
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29222,
+            "createddate": "09\/20\/2019 16:59:16",
+            "createdby": "API-11059",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "75",
+            "readingid": 7,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 36097,
+            "unit": "g",
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29242,
+            "createddate": "09\/20\/2019 17:01:05",
+            "createdby": "API-11059",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "75",
+            "readingid": 9,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 36097,
+            "unit": "g",
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29252,
+            "createddate": "09\/20\/2019 17:03:36",
+            "createdby": "API-11059",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "75",
+            "readingid": 2,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 36097,
+            "unit": "g",
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29217,
+            "createddate": "09\/20\/2019 16:58:51",
+            "createdby": "API-11059",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "75",
+            "readingid": 12,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 36097,
+            "unit": "g",
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29267,
+            "createddate": "09\/20\/2019 17:03:56",
+            "createdby": "API-11059",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "75",
+            "readingid": 14,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 36097,
+            "unit": "g",
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29277,
+            "createddate": "09\/20\/2019 17:03:57",
+            "createdby": "API-11059",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "75",
+            "readingid": 8,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 36097,
+            "unit": "g",
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29247,
+            "createddate": "09\/20\/2019 17:01:06",
+            "createdby": "API-11059",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "75",
+            "readingid": 4,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 36097,
+            "unit": "g",
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29227,
+            "createddate": "09\/20\/2019 16:59:16",
+            "createdby": "API-11059",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "75",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 36097,
+            "unit": "g",
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29212,
+            "createddate": "09\/20\/2019 16:58:50",
+            "createdby": "API-11059",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "75",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 36097,
+            "unit": "g",
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29207,
+            "createddate": "09\/20\/2019 16:58:50",
+            "createdby": "API-11059",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "75",
+            "readingid": 13,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 36097,
+            "unit": "g",
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29272,
+            "createddate": "09\/20\/2019 17:03:57",
+            "createdby": "API-11059",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "75",
+            "readingid": 10,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 36097,
+            "unit": "g",
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29257,
+            "createddate": "09\/20\/2019 17:03:37",
+            "createdby": "API-11059",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "75",
+            "readingid": 5,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 36097,
+            "unit": "g",
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29232,
+            "createddate": "09\/20\/2019 16:59:17",
+            "createdby": "API-11059",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "75",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 36107,
+            "unit": "g",
+            "readingtaken": "09\/26\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29297,
+            "createddate": "09\/26\/2019 13:00:20",
+            "createdby": "API-11059",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "75",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 36107,
+            "unit": "g",
+            "readingtaken": "09\/26\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29292,
+            "createddate": "09\/26\/2019 13:00:20",
+            "createdby": "API-11059",
+            "code": "29463-7"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "75",
+            "readingid": 2,
+            "clinicalelementid": "VITALS.WEIGHT",
+            "codedescription": "Body weight",
+            "sourceid": 36107,
+            "unit": "g",
+            "readingtaken": "09\/26\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29302,
+            "createddate": "09\/26\/2019 13:00:21",
+            "createdby": "API-11059",
+            "code": "29463-7"
+          }
+        ]
+      ],
+      "key": "WEIGHT"
+    },
+    {
+      "ordering": 4,
+      "abbreviation": "Blood Glucose",
+      "readings": [
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "130 mg\/dL",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.BLOODSUGAR",
+            "sourceid": 32955,
+            "readingtaken": "04\/24\/2016",
+            "vitalid": 26352,
+            "createddate": "04\/24\/2016 12:04:11",
+            "createdby": "API-3317"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "130 mg\/dL",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.BLOODSUGAR",
+            "sourceid": 32965,
+            "readingtaken": "04\/25\/2016",
+            "vitalid": 26358,
+            "createddate": "04\/24\/2016 12:14:41",
+            "createdby": "API-3317"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "100-200",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.BLOODSUGAR",
+            "sourceid": 34732,
+            "readingtaken": "05\/02\/2017",
+            "vitalid": 27227,
+            "createddate": "05\/02\/2017 10:02:59",
+            "createdby": "API-5532"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "100-200",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.BLOODSUGAR",
+            "sourceid": 34733,
+            "readingtaken": "05\/05\/2017",
+            "vitalid": 27255,
+            "createddate": "05\/05\/2017 16:01:16",
+            "createdby": "API-5787"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "Unknown",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.BLOODSUGAR",
+            "sourceid": 34889,
+            "readingtaken": "06\/16\/2017",
+            "vitalid": 27517,
+            "createddate": "06\/16\/2017 15:49:26",
+            "createdby": "API-5532"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "Unknown",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.BLOODSUGAR",
+            "sourceid": 34889,
+            "readingtaken": "06\/16\/2017",
+            "vitalid": 27507,
+            "createddate": "06\/16\/2017 15:48:36",
+            "createdby": "API-5532"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "251.0",
+            "readingid": 4,
+            "clinicalelementid": "VITALS.BLOODSUGAR",
+            "sourceid": 36095,
+            "readingtaken": "09\/19\/2019",
+            "vitalid": 29198,
+            "createddate": "09\/19\/2019 21:20:13",
+            "createdby": "API-11059"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "251.0",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.BLOODSUGAR",
+            "sourceid": 36095,
+            "readingtaken": "09\/19\/2019",
+            "vitalid": 29183,
+            "createddate": "09\/19\/2019 21:19:51",
+            "createdby": "API-11059"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "251.0",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.BLOODSUGAR",
+            "sourceid": 36095,
+            "readingtaken": "09\/19\/2019",
+            "vitalid": 29178,
+            "createddate": "09\/19\/2019 21:19:31",
+            "createdby": "API-11059"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "251.0",
+            "readingid": 3,
+            "clinicalelementid": "VITALS.BLOODSUGAR",
+            "sourceid": 36095,
+            "readingtaken": "09\/19\/2019",
+            "vitalid": 29193,
+            "createddate": "09\/19\/2019 21:20:13",
+            "createdby": "API-11059"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "251.0",
+            "readingid": 2,
+            "clinicalelementid": "VITALS.BLOODSUGAR",
+            "sourceid": 36095,
+            "readingtaken": "09\/19\/2019",
+            "vitalid": 29188,
+            "createddate": "09\/19\/2019 21:20:12",
+            "createdby": "API-11059"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "251.0",
+            "readingid": 6,
+            "clinicalelementid": "VITALS.BLOODSUGAR",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "vitalid": 29233,
+            "createddate": "09\/20\/2019 17:01:05",
+            "createdby": "API-11059"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "251.0",
+            "readingid": 11,
+            "clinicalelementid": "VITALS.BLOODSUGAR",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "vitalid": 29258,
+            "createddate": "09\/20\/2019 17:03:37",
+            "createdby": "API-11059"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "251.0",
+            "readingid": 3,
+            "clinicalelementid": "VITALS.BLOODSUGAR",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "vitalid": 29218,
+            "createddate": "09\/20\/2019 16:59:16",
+            "createdby": "API-11059"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "251.0",
+            "readingid": 7,
+            "clinicalelementid": "VITALS.BLOODSUGAR",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "vitalid": 29238,
+            "createddate": "09\/20\/2019 17:01:05",
+            "createdby": "API-11059"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "251.0",
+            "readingid": 9,
+            "clinicalelementid": "VITALS.BLOODSUGAR",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "vitalid": 29248,
+            "createddate": "09\/20\/2019 17:03:36",
+            "createdby": "API-11059"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "251.0",
+            "readingid": 2,
+            "clinicalelementid": "VITALS.BLOODSUGAR",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "vitalid": 29213,
+            "createddate": "09\/20\/2019 16:58:51",
+            "createdby": "API-11059"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "251.0",
+            "readingid": 12,
+            "clinicalelementid": "VITALS.BLOODSUGAR",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "vitalid": 29263,
+            "createddate": "09\/20\/2019 17:03:56",
+            "createdby": "API-11059"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "251.0",
+            "readingid": 14,
+            "clinicalelementid": "VITALS.BLOODSUGAR",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "vitalid": 29273,
+            "createddate": "09\/20\/2019 17:03:57",
+            "createdby": "API-11059"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "251.0",
+            "readingid": 8,
+            "clinicalelementid": "VITALS.BLOODSUGAR",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "vitalid": 29243,
+            "createddate": "09\/20\/2019 17:01:06",
+            "createdby": "API-11059"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "251.0",
+            "readingid": 4,
+            "clinicalelementid": "VITALS.BLOODSUGAR",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "vitalid": 29223,
+            "createddate": "09\/20\/2019 16:59:16",
+            "createdby": "API-11059"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "251.0",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.BLOODSUGAR",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "vitalid": 29208,
+            "createddate": "09\/20\/2019 16:58:50",
+            "createdby": "API-11059"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "251.0",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.BLOODSUGAR",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "vitalid": 29203,
+            "createddate": "09\/20\/2019 16:58:50",
+            "createdby": "API-11059"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "251.0",
+            "readingid": 13,
+            "clinicalelementid": "VITALS.BLOODSUGAR",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "vitalid": 29268,
+            "createddate": "09\/20\/2019 17:03:57",
+            "createdby": "API-11059"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "251.0",
+            "readingid": 10,
+            "clinicalelementid": "VITALS.BLOODSUGAR",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "vitalid": 29253,
+            "createddate": "09\/20\/2019 17:03:37",
+            "createdby": "API-11059"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "251.0",
+            "readingid": 5,
+            "clinicalelementid": "VITALS.BLOODSUGAR",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "vitalid": 29228,
+            "createddate": "09\/20\/2019 16:59:17",
+            "createdby": "API-11059"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "251.0",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.BLOODSUGAR",
+            "sourceid": 36107,
+            "readingtaken": "09\/26\/2019",
+            "vitalid": 29293,
+            "createddate": "09\/26\/2019 13:00:20",
+            "createdby": "API-11059"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "251.0",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.BLOODSUGAR",
+            "sourceid": 36107,
+            "readingtaken": "09\/26\/2019",
+            "vitalid": 29288,
+            "createddate": "09\/26\/2019 13:00:20",
+            "createdby": "API-11059"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "251.0",
+            "readingid": 2,
+            "clinicalelementid": "VITALS.BLOODSUGAR",
+            "sourceid": 36107,
+            "readingtaken": "09\/26\/2019",
+            "vitalid": 29298,
+            "createddate": "09\/26\/2019 13:00:21",
+            "createdby": "API-11059"
+          }
+        ]
+      ],
+      "key": "BLOODSUGAR"
+    },
+    {
+      "ordering": 5,
+      "abbreviation": "HR",
+      "readings": [
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": false,
+            "value": "120",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.HEARTRATE",
+            "codedescription": "Heart rate",
+            "sourceid": 34732,
+            "readingtaken": "05\/02\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27228,
+            "createddate": "05\/02\/2017 10:02:59",
+            "createdby": "API-5532",
+            "code": "8867-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": false,
+            "value": "120",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.HEARTRATE",
+            "codedescription": "Heart rate",
+            "sourceid": 34733,
+            "readingtaken": "05\/05\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27256,
+            "createddate": "05\/05\/2017 16:01:16",
+            "createdby": "API-5787",
+            "code": "8867-4"
+          }
+        ]
+      ],
+      "key": "HEARTRATE"
+    },
+    {
+      "ordering": 6,
+      "abbreviation": "O2Sat",
+      "readings": [
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "99",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.O2SATURATION",
+            "codedescription": "Oxygen saturation in Arterial blood by Pulse oximetry",
+            "sourceid": 34368,
+            "readingtaken": "01\/13\/2017",
+            "codeset": "LOINC",
+            "vitalid": 26916,
+            "createddate": "01\/13\/2017 16:27:06",
+            "createdby": "API-1840",
+            "code": "59408-5"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "99",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.O2SATURATION",
+            "codedescription": "Oxygen saturation in Arterial blood by Pulse oximetry",
+            "sourceid": 34368,
+            "readingtaken": "01\/13\/2017",
+            "codeset": "LOINC",
+            "vitalid": 26914,
+            "createddate": "01\/13\/2017 16:18:43",
+            "createdby": "API-1840",
+            "code": "59408-5"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "89",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.O2SATURATION",
+            "codedescription": "Oxygen saturation in Arterial blood by Pulse oximetry",
+            "sourceid": 34732,
+            "readingtaken": "05\/02\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27229,
+            "createddate": "05\/02\/2017 10:02:59",
+            "createdby": "API-5532",
+            "code": "59408-5"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "89",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.O2SATURATION",
+            "codedescription": "Oxygen saturation in Arterial blood by Pulse oximetry",
+            "sourceid": 34733,
+            "readingtaken": "05\/05\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27257,
+            "createddate": "05\/05\/2017 16:01:16",
+            "createdby": "API-5787",
+            "code": "59408-5"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "5",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.O2SATURATION",
+            "codedescription": "Oxygen saturation in Arterial blood by Pulse oximetry",
+            "sourceid": 34889,
+            "readingtaken": "06\/16\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27518,
+            "createddate": "06\/16\/2017 15:49:26",
+            "createdby": "API-5532",
+            "code": "59408-5"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "5",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.O2SATURATION",
+            "codedescription": "Oxygen saturation in Arterial blood by Pulse oximetry",
+            "sourceid": 34889,
+            "readingtaken": "06\/16\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27508,
+            "createddate": "06\/16\/2017 15:48:36",
+            "createdby": "API-5532",
+            "code": "59408-5"
+          }
+        ]
+      ],
+      "key": "O2SATURATION"
+    },
+    {
+      "ordering": 7,
+      "abbreviation": "Pulse",
+      "readings": [
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "98.6",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.PULSE.RATE",
+            "codedescription": "Heart rate",
+            "sourceid": 32955,
+            "readingtaken": "04\/24\/2016",
+            "codeset": "LOINC",
+            "vitalid": 26353,
+            "createddate": "04\/24\/2016 12:04:11",
+            "createdby": "API-3317",
+            "code": "8867-4"
+          },
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": false,
+            "value": "regular",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.PULSE.TYPE",
+            "sourceid": 32955,
+            "readingtaken": "04\/24\/2016",
+            "vitalid": 26345,
+            "createddate": "04\/24\/2016 12:04:11",
+            "createdby": "API-3317"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "85",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.PULSE.RATE",
+            "codedescription": "Heart rate",
+            "sourceid": 32965,
+            "readingtaken": "04\/25\/2016",
+            "codeset": "LOINC",
+            "vitalid": 26355,
+            "createddate": "04\/24\/2016 12:14:41",
+            "createdby": "API-3317",
+            "code": "8867-4"
+          },
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": false,
+            "value": "regular",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.PULSE.TYPE",
+            "sourceid": 32965,
+            "readingtaken": "04\/25\/2016",
+            "vitalid": 26364,
+            "createddate": "04\/24\/2016 12:14:41",
+            "createdby": "API-3317"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "70",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.PULSE.RATE",
+            "codedescription": "Heart rate",
+            "sourceid": 34368,
+            "readingtaken": "01\/13\/2017",
+            "codeset": "LOINC",
+            "vitalid": 26917,
+            "createddate": "01\/13\/2017 16:27:06",
+            "createdby": "API-1840",
+            "code": "8867-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "70",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.PULSE.RATE",
+            "codedescription": "Heart rate",
+            "sourceid": 34368,
+            "readingtaken": "01\/13\/2017",
+            "codeset": "LOINC",
+            "vitalid": 26915,
+            "createddate": "01\/13\/2017 16:18:43",
+            "createdby": "API-1840",
+            "code": "8867-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "110",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.PULSE.RATE",
+            "codedescription": "Heart rate",
+            "sourceid": 34732,
+            "readingtaken": "05\/02\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27230,
+            "createddate": "05\/02\/2017 10:02:59",
+            "createdby": "API-5532",
+            "code": "8867-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "110",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.PULSE.RATE",
+            "codedescription": "Heart rate",
+            "sourceid": 34733,
+            "readingtaken": "05\/05\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27258,
+            "createddate": "05\/05\/2017 16:01:16",
+            "createdby": "API-5787",
+            "code": "8867-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "6",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.PULSE.RATE",
+            "codedescription": "Heart rate",
+            "sourceid": 34889,
+            "readingtaken": "06\/16\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27519,
+            "createddate": "06\/16\/2017 15:49:26",
+            "createdby": "API-5532",
+            "code": "8867-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "6",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.PULSE.RATE",
+            "codedescription": "Heart rate",
+            "sourceid": 34889,
+            "readingtaken": "06\/16\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27509,
+            "createddate": "06\/16\/2017 15:48:36",
+            "createdby": "API-5532",
+            "code": "8867-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 4,
+            "clinicalelementid": "VITALS.PULSE.RATE",
+            "codedescription": "Heart rate",
+            "sourceid": 36095,
+            "readingtaken": "09\/19\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29201,
+            "createddate": "09\/19\/2019 21:20:13",
+            "createdby": "API-11059",
+            "code": "8867-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.PULSE.RATE",
+            "codedescription": "Heart rate",
+            "sourceid": 36095,
+            "readingtaken": "09\/19\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29186,
+            "createddate": "09\/19\/2019 21:19:51",
+            "createdby": "API-11059",
+            "code": "8867-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.PULSE.RATE",
+            "codedescription": "Heart rate",
+            "sourceid": 36095,
+            "readingtaken": "09\/19\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29181,
+            "createddate": "09\/19\/2019 21:19:31",
+            "createdby": "API-11059",
+            "code": "8867-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 3,
+            "clinicalelementid": "VITALS.PULSE.RATE",
+            "codedescription": "Heart rate",
+            "sourceid": 36095,
+            "readingtaken": "09\/19\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29196,
+            "createddate": "09\/19\/2019 21:20:13",
+            "createdby": "API-11059",
+            "code": "8867-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 2,
+            "clinicalelementid": "VITALS.PULSE.RATE",
+            "codedescription": "Heart rate",
+            "sourceid": 36095,
+            "readingtaken": "09\/19\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29191,
+            "createddate": "09\/19\/2019 21:20:12",
+            "createdby": "API-11059",
+            "code": "8867-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 6,
+            "clinicalelementid": "VITALS.PULSE.RATE",
+            "codedescription": "Heart rate",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29236,
+            "createddate": "09\/20\/2019 17:01:05",
+            "createdby": "API-11059",
+            "code": "8867-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 11,
+            "clinicalelementid": "VITALS.PULSE.RATE",
+            "codedescription": "Heart rate",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29261,
+            "createddate": "09\/20\/2019 17:03:37",
+            "createdby": "API-11059",
+            "code": "8867-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 3,
+            "clinicalelementid": "VITALS.PULSE.RATE",
+            "codedescription": "Heart rate",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29221,
+            "createddate": "09\/20\/2019 16:59:16",
+            "createdby": "API-11059",
+            "code": "8867-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 7,
+            "clinicalelementid": "VITALS.PULSE.RATE",
+            "codedescription": "Heart rate",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29241,
+            "createddate": "09\/20\/2019 17:01:05",
+            "createdby": "API-11059",
+            "code": "8867-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 9,
+            "clinicalelementid": "VITALS.PULSE.RATE",
+            "codedescription": "Heart rate",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29251,
+            "createddate": "09\/20\/2019 17:03:36",
+            "createdby": "API-11059",
+            "code": "8867-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 2,
+            "clinicalelementid": "VITALS.PULSE.RATE",
+            "codedescription": "Heart rate",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29216,
+            "createddate": "09\/20\/2019 16:58:51",
+            "createdby": "API-11059",
+            "code": "8867-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 12,
+            "clinicalelementid": "VITALS.PULSE.RATE",
+            "codedescription": "Heart rate",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29266,
+            "createddate": "09\/20\/2019 17:03:56",
+            "createdby": "API-11059",
+            "code": "8867-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 14,
+            "clinicalelementid": "VITALS.PULSE.RATE",
+            "codedescription": "Heart rate",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29276,
+            "createddate": "09\/20\/2019 17:03:57",
+            "createdby": "API-11059",
+            "code": "8867-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 8,
+            "clinicalelementid": "VITALS.PULSE.RATE",
+            "codedescription": "Heart rate",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29246,
+            "createddate": "09\/20\/2019 17:01:06",
+            "createdby": "API-11059",
+            "code": "8867-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 4,
+            "clinicalelementid": "VITALS.PULSE.RATE",
+            "codedescription": "Heart rate",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29226,
+            "createddate": "09\/20\/2019 16:59:16",
+            "createdby": "API-11059",
+            "code": "8867-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.PULSE.RATE",
+            "codedescription": "Heart rate",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29211,
+            "createddate": "09\/20\/2019 16:58:50",
+            "createdby": "API-11059",
+            "code": "8867-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.PULSE.RATE",
+            "codedescription": "Heart rate",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29206,
+            "createddate": "09\/20\/2019 16:58:50",
+            "createdby": "API-11059",
+            "code": "8867-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 13,
+            "clinicalelementid": "VITALS.PULSE.RATE",
+            "codedescription": "Heart rate",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29271,
+            "createddate": "09\/20\/2019 17:03:57",
+            "createdby": "API-11059",
+            "code": "8867-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 10,
+            "clinicalelementid": "VITALS.PULSE.RATE",
+            "codedescription": "Heart rate",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29256,
+            "createddate": "09\/20\/2019 17:03:37",
+            "createdby": "API-11059",
+            "code": "8867-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 5,
+            "clinicalelementid": "VITALS.PULSE.RATE",
+            "codedescription": "Heart rate",
+            "sourceid": 36097,
+            "readingtaken": "09\/20\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29231,
+            "createddate": "09\/20\/2019 16:59:17",
+            "createdby": "API-11059",
+            "code": "8867-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.PULSE.RATE",
+            "codedescription": "Heart rate",
+            "sourceid": 36107,
+            "readingtaken": "09\/26\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29296,
+            "createddate": "09\/26\/2019 13:00:20",
+            "createdby": "API-11059",
+            "code": "8867-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.PULSE.RATE",
+            "codedescription": "Heart rate",
+            "sourceid": 36107,
+            "readingtaken": "09\/26\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29291,
+            "createddate": "09\/26\/2019 13:00:20",
+            "createdby": "API-11059",
+            "code": "8867-4"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "90",
+            "readingid": 2,
+            "clinicalelementid": "VITALS.PULSE.RATE",
+            "codedescription": "Heart rate",
+            "sourceid": 36107,
+            "readingtaken": "09\/26\/2019",
+            "codeset": "LOINC",
+            "vitalid": 29301,
+            "createddate": "09\/26\/2019 13:00:21",
+            "createdby": "API-11059",
+            "code": "8867-4"
+          }
+        ]
+      ],
+      "key": "PULSE"
+    },
+    {
+      "ordering": 8,
+      "abbreviation": "T",
+      "readings": [
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "98.9",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.TEMPERATURE",
+            "codedescription": "Body temperature",
+            "sourceid": 34010,
+            "unit": "F",
+            "readingtaken": "10\/08\/2015",
+            "codeset": "LOINC",
+            "vitalid": 26736,
+            "createddate": "10\/27\/2016 16:12:02",
+            "createdby": "API-3192",
+            "code": "8310-5"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "97.9",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.TEMPERATURE",
+            "codedescription": "Body temperature",
+            "sourceid": 34010,
+            "unit": "F",
+            "readingtaken": "10\/08\/2015",
+            "codeset": "LOINC",
+            "vitalid": 26735,
+            "createddate": "10\/27\/2016 16:11:55",
+            "createdby": "API-3192",
+            "code": "8310-5"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "98",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.TEMPERATURE",
+            "codedescription": "Body temperature",
+            "sourceid": 32705,
+            "unit": "F",
+            "readingtaken": "02\/02\/2016",
+            "codeset": "LOINC",
+            "vitalid": 26322,
+            "createddate": "04\/23\/2016 16:34:53",
+            "createdby": "API-531",
+            "code": "8310-5"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "98.6",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.TEMPERATURE",
+            "codedescription": "Body temperature",
+            "sourceid": 32955,
+            "unit": "F",
+            "readingtaken": "04\/24\/2016",
+            "codeset": "LOINC",
+            "vitalid": 26354,
+            "createddate": "04\/24\/2016 12:04:11",
+            "createdby": "API-3317",
+            "code": "8310-5"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "98.6",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.TEMPERATURE",
+            "codedescription": "Body temperature",
+            "sourceid": 32955,
+            "unit": "F",
+            "readingtaken": "04\/24\/2016",
+            "codeset": "LOINC",
+            "vitalid": 26343,
+            "createddate": "04\/24\/2016 11:49:49",
+            "createdby": "API-3317",
+            "code": "8310-5"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "98.6",
+            "readingid": 2,
+            "clinicalelementid": "VITALS.TEMPERATURE",
+            "codedescription": "Body temperature",
+            "sourceid": 32955,
+            "unit": "F",
+            "readingtaken": "04\/24\/2016",
+            "codeset": "LOINC",
+            "vitalid": 26348,
+            "createddate": "04\/24\/2016 12:04:11",
+            "createdby": "API-3317",
+            "code": "8310-5"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "98.6",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.TEMPERATURE",
+            "codedescription": "Body temperature",
+            "sourceid": 32965,
+            "unit": "F",
+            "readingtaken": "04\/25\/2016",
+            "codeset": "LOINC",
+            "vitalid": 26356,
+            "createddate": "04\/24\/2016 12:14:41",
+            "createdby": "API-3317",
+            "code": "8310-5"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "105",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.TEMPERATURE",
+            "codedescription": "Body temperature",
+            "sourceid": 32965,
+            "unit": "F",
+            "readingtaken": "04\/25\/2016",
+            "codeset": "LOINC",
+            "vitalid": 26361,
+            "createddate": "04\/24\/2016 12:14:41",
+            "createdby": "API-3317",
+            "code": "8310-5"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "120",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.TEMPERATURE",
+            "codedescription": "Body temperature",
+            "sourceid": 34214,
+            "unit": "F",
+            "readingtaken": "10\/22\/2016",
+            "codeset": "LOINC",
+            "vitalid": 26795,
+            "createddate": "11\/24\/2016 05:55:36",
+            "createdby": "API-3916",
+            "code": "8310-5"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "36.7",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.TEMPERATURE",
+            "codedescription": "Body temperature",
+            "sourceid": 34145,
+            "unit": "F",
+            "readingtaken": "11\/08\/2016",
+            "codeset": "LOINC",
+            "vitalid": 28909,
+            "createddate": "11\/15\/2018 06:41:32",
+            "createdby": "API-9397",
+            "code": "8310-5"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "36.7",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.TEMPERATURE",
+            "codedescription": "Body temperature",
+            "sourceid": 34145,
+            "unit": "F",
+            "readingtaken": "11\/08\/2016",
+            "codeset": "LOINC",
+            "vitalid": 28908,
+            "createddate": "11\/15\/2018 06:38:52",
+            "createdby": "API-9397",
+            "code": "8310-5"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "99.0",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.TEMPERATURE",
+            "codedescription": "Body temperature",
+            "sourceid": 34732,
+            "unit": "F",
+            "readingtaken": "05\/02\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27231,
+            "createddate": "05\/02\/2017 10:02:59",
+            "createdby": "API-5532",
+            "code": "8310-5"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "99.0",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.TEMPERATURE",
+            "codedescription": "Body temperature",
+            "sourceid": 34733,
+            "unit": "F",
+            "readingtaken": "05\/05\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27259,
+            "createddate": "05\/05\/2017 16:01:16",
+            "createdby": "API-5787",
+            "code": "8310-5"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "4",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.TEMPERATURE",
+            "codedescription": "Body temperature",
+            "sourceid": 34889,
+            "unit": "F",
+            "readingtaken": "06\/16\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27520,
+            "createddate": "06\/16\/2017 15:49:26",
+            "createdby": "API-5532",
+            "code": "8310-5"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": false,
+            "value": "oral",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.TEMPERATURE.TYPE",
+            "sourceid": 34889,
+            "readingtaken": "06\/16\/2017",
+            "vitalid": 27521,
+            "createddate": "06\/16\/2017 15:49:26",
+            "createdby": "API-5532"
+          }
+        ],
+        [
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": true,
+            "value": "4",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.TEMPERATURE",
+            "codedescription": "Body temperature",
+            "sourceid": 34889,
+            "unit": "F",
+            "readingtaken": "06\/16\/2017",
+            "codeset": "LOINC",
+            "vitalid": 27510,
+            "createddate": "06\/16\/2017 15:48:36",
+            "createdby": "API-5532",
+            "code": "8310-5"
+          },
+          {
+            "source": "FLOWSHEET",
+            "isgraphable": false,
+            "value": "oral",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.TEMPERATURE.TYPE",
+            "sourceid": 34889,
+            "readingtaken": "06\/16\/2017",
+            "vitalid": 27511,
+            "createddate": "06\/16\/2017 15:48:36",
+            "createdby": "API-5532"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "36.7",
+            "readingid": 11,
+            "clinicalelementid": "VITALS.TEMPERATURE",
+            "codedescription": "Body temperature",
+            "sourceid": 34934,
+            "unit": "F",
+            "readingtaken": "02\/10\/2018",
+            "codeset": "LOINC",
+            "vitalid": 28921,
+            "createddate": "12\/07\/2018 18:26:06",
+            "createdby": "API-9397",
+            "code": "8310-5"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "36.7",
+            "readingid": 7,
+            "clinicalelementid": "VITALS.TEMPERATURE",
+            "codedescription": "Body temperature",
+            "sourceid": 34934,
+            "unit": "F",
+            "readingtaken": "02\/10\/2018",
+            "codeset": "LOINC",
+            "vitalid": 28910,
+            "createddate": "11\/15\/2018 06:46:26",
+            "createdby": "API-9397",
+            "code": "8310-5"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "36.7",
+            "readingid": 2,
+            "clinicalelementid": "VITALS.TEMPERATURE",
+            "codedescription": "Body temperature",
+            "sourceid": 34934,
+            "unit": "F",
+            "readingtaken": "02\/10\/2018",
+            "codeset": "LOINC",
+            "vitalid": 28903,
+            "createddate": "11\/02\/2018 12:45:37",
+            "createdby": "API-9397",
+            "code": "8310-5"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "36.7",
+            "readingid": 1,
+            "clinicalelementid": "VITALS.TEMPERATURE",
+            "codedescription": "Body temperature",
+            "sourceid": 34934,
+            "unit": "F",
+            "readingtaken": "02\/10\/2018",
+            "codeset": "LOINC",
+            "vitalid": 28902,
+            "createddate": "11\/02\/2018 02:59:36",
+            "createdby": "API-9397",
+            "code": "8310-5"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "36.7",
+            "readingid": 0,
+            "clinicalelementid": "VITALS.TEMPERATURE",
+            "codedescription": "Body temperature",
+            "sourceid": 34934,
+            "unit": "F",
+            "readingtaken": "02\/10\/2018",
+            "codeset": "LOINC",
+            "vitalid": 28901,
+            "createddate": "11\/02\/2018 02:36:07",
+            "createdby": "API-9397",
+            "code": "8310-5"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "36.7",
+            "readingid": 16,
+            "clinicalelementid": "VITALS.TEMPERATURE",
+            "codedescription": "Body temperature",
+            "sourceid": 34934,
+            "unit": "F",
+            "readingtaken": "02\/10\/2018",
+            "codeset": "LOINC",
+            "vitalid": 28972,
+            "createddate": "02\/26\/2019 07:32:24",
+            "createdby": "API-9397",
+            "code": "8310-5"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "36.7",
+            "readingid": 13,
+            "clinicalelementid": "VITALS.TEMPERATURE",
+            "codedescription": "Body temperature",
+            "sourceid": 34934,
+            "unit": "F",
+            "readingtaken": "02\/10\/2018",
+            "codeset": "LOINC",
+            "vitalid": 28942,
+            "createddate": "01\/29\/2019 07:58:13",
+            "createdby": "API-9397",
+            "code": "8310-5"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "36.7",
+            "readingid": 6,
+            "clinicalelementid": "VITALS.TEMPERATURE",
+            "codedescription": "Body temperature",
+            "sourceid": 34934,
+            "unit": "F",
+            "readingtaken": "02\/10\/2018",
+            "codeset": "LOINC",
+            "vitalid": 28907,
+            "createddate": "11\/15\/2018 06:37:14",
+            "createdby": "API-9397",
+            "code": "8310-5"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "36.7",
+            "readingid": 3,
+            "clinicalelementid": "VITALS.TEMPERATURE",
+            "codedescription": "Body temperature",
+            "sourceid": 34934,
+            "unit": "F",
+            "readingtaken": "02\/10\/2018",
+            "codeset": "LOINC",
+            "vitalid": 28904,
+            "createddate": "11\/02\/2018 17:15:04",
+            "createdby": "API-9397",
+            "code": "8310-5"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "36.7",
+            "readingid": 9,
+            "clinicalelementid": "VITALS.TEMPERATURE",
+            "codedescription": "Body temperature",
+            "sourceid": 34934,
+            "unit": "F",
+            "readingtaken": "02\/10\/2018",
+            "codeset": "LOINC",
+            "vitalid": 28919,
+            "createddate": "12\/07\/2018 15:30:06",
+            "createdby": "API-9397",
+            "code": "8310-5"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "36.7",
+            "readingid": 12,
+            "clinicalelementid": "VITALS.TEMPERATURE",
+            "codedescription": "Body temperature",
+            "sourceid": 34934,
+            "unit": "F",
+            "readingtaken": "02\/10\/2018",
+            "codeset": "LOINC",
+            "vitalid": 28941,
+            "createddate": "01\/29\/2019 06:58:54",
+            "createdby": "API-9397",
+            "code": "8310-5"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "36.7",
+            "readingid": 14,
+            "clinicalelementid": "VITALS.TEMPERATURE",
+            "codedescription": "Body temperature",
+            "sourceid": 34934,
+            "unit": "F",
+            "readingtaken": "02\/10\/2018",
+            "codeset": "LOINC",
+            "vitalid": 28943,
+            "createddate": "01\/29\/2019 08:10:05",
+            "createdby": "API-9397",
+            "code": "8310-5"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "36.7",
+            "readingid": 15,
+            "clinicalelementid": "VITALS.TEMPERATURE",
+            "codedescription": "Body temperature",
+            "sourceid": 34934,
+            "unit": "F",
+            "readingtaken": "02\/10\/2018",
+            "codeset": "LOINC",
+            "vitalid": 28944,
+            "createddate": "01\/29\/2019 09:58:22",
+            "createdby": "API-9397",
+            "code": "8310-5"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "36.7",
+            "readingid": 8,
+            "clinicalelementid": "VITALS.TEMPERATURE",
+            "codedescription": "Body temperature",
+            "sourceid": 34934,
+            "unit": "F",
+            "readingtaken": "02\/10\/2018",
+            "codeset": "LOINC",
+            "vitalid": 28911,
+            "createddate": "11\/20\/2018 13:30:58",
+            "createdby": "API-9397",
+            "code": "8310-5"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "36.7",
+            "readingid": 4,
+            "clinicalelementid": "VITALS.TEMPERATURE",
+            "codedescription": "Body temperature",
+            "sourceid": 34934,
+            "unit": "F",
+            "readingtaken": "02\/10\/2018",
+            "codeset": "LOINC",
+            "vitalid": 28905,
+            "createddate": "11\/05\/2018 20:47:38",
+            "createdby": "API-9397",
+            "code": "8310-5"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "36.7",
+            "readingid": 10,
+            "clinicalelementid": "VITALS.TEMPERATURE",
+            "codedescription": "Body temperature",
+            "sourceid": 34934,
+            "unit": "F",
+            "readingtaken": "02\/10\/2018",
+            "codeset": "LOINC",
+            "vitalid": 28920,
+            "createddate": "12\/07\/2018 17:14:22",
+            "createdby": "API-9397",
+            "code": "8310-5"
+          }
+        ],
+        [
+          {
+            "source": "ENCOUNTER",
+            "isgraphable": true,
+            "value": "36.7",
+            "readingid": 5,
+            "clinicalelementid": "VITALS.TEMPERATURE",
+            "codedescription": "Body temperature",
+            "sourceid": 34934,
+            "unit": "F",
+            "readingtaken": "02\/10\/2018",
+            "codeset": "LOINC",
+            "vitalid": 28906,
+            "createddate": "11\/05\/2018 21:20:00",
+            "createdby": "API-9397",
+            "code": "8310-5"
+          }
+        ]
+      ],
+      "key": "TEMPERATURE"
+    }
+  ],
+  "totalcount": 9
+}

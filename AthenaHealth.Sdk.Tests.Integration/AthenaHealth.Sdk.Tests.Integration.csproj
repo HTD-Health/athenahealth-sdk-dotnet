@@ -199,6 +199,9 @@
     <None Update="Data\Patient\GetPatientCases.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Data\Patient\GetPatientVitals.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Data\Patient\CreateOrderGroup.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

@@ -1260,5 +1260,20 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
 
             Debug.WriteLine($"yield return new object[] {{ {patientId} }};");
         }
+
+        [Theory]
+        [ClassData(typeof(GetPatientVitalsData))]
+        public async Task GetPatientVitals_ShouldNotThrowJsonSerializationException(int patientId)
+        {
+            // Arrange
+            // Act
+            var result = await _client.Patients.GetPatientVitals(patientId, new GetPatientVitalsFilter(1));
+
+            // Assert
+            result.ShouldNotBeNull();
+            result.Items.Length.ShouldBeGreaterThan(0);
+
+            Debug.WriteLine($"yield return new object[] {{ {patientId} }};");
+        }
     }
 }

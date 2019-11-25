@@ -902,5 +902,19 @@ namespace AthenaHealth.Sdk.Tests.Integration
             response.Items.Length.ShouldBeGreaterThan(0);
             response.Total.ShouldBe(response.Items.Length);
         }
+
+        [Fact]
+        public async Task GetPatientVitals_ReturnsRecords()
+        {
+            // Arrange
+            IPatientClient client = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetPatientVitals.json"));
+
+            // Act
+            var result = await client.GetPatientVitals(1, new GetPatientVitalsFilter(1));
+
+            // Assert
+            result.ShouldNotBeNull();
+            result.Items.Count().ShouldBeGreaterThan(0);
+        }
     }
 }

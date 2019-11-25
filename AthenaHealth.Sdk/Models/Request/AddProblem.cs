@@ -36,7 +36,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// The onset date to be updated for this problem in MM/DD/YYYY format.
         /// </summary>
         [JsonProperty("startdate")]
-        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter))]
         public DateTime? StartDate { get; set; }
 
         /// <summary>
