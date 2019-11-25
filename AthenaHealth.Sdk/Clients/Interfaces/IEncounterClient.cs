@@ -60,5 +60,8 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// <returns></returns>
         [Endpoint("GET /chart/encounter/{encounterid}/orders/{orderid}")]
         Task<EncounterOrder> GetOrderById(int encounterId, int orderId, EncounterGetOrderByIdFilter filter = null);
+
+        [Endpoint("GET /chart/encounter/{encounterid}/patientgoals")]
+        Task<PatientGoals> GetPatientGoals(int encounterId);
     }
 }

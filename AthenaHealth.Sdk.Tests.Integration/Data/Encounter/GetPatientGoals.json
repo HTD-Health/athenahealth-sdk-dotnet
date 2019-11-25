@@ -1,0 +1,21 @@
+{
+  "auditinformation": {
+    "patientinstructions": {},
+    "discussionnotes": {},
+    "freetextgoal": {}
+  },
+  "versiontokens": {
+    "patientinstructions": 0,
+    "discussionnotes": 0,
+    "freetextgoal": 0
+  },
+  "goals": [
+    {
+      "compoundvalues": [],
+      "targetvalue": "180",
+      "name": "Excess Body Weight Loss %",
+      "goaltype": "VITALS",
+      "duration": "Long term goal"
+    }
+  ]
+}

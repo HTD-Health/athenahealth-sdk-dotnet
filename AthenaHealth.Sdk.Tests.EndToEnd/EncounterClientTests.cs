@@ -6,6 +6,7 @@ using AthenaHealth.Sdk.Tests.EndToEnd.Data.Encounter;
 using AthenaHealth.Sdk.Tests.EndToEnd.Fixtures;
 using Shouldly;
 using System;
+using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
@@ -265,6 +266,18 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             response.ShouldNotBeNull();
             response.Id.ShouldBeGreaterThan(0);
             response.Status.ShouldNotBeNull();
+        }
+
+        [Fact]
+        public async Task GetPatientGoals_ShouldNotThrowJsonSerializationException()
+        {
+            // Arrange
+            // Act
+            var result = await _client.Encounters.GetPatientGoals(10282);
+
+            // Assert
+            result.ShouldNotBeNull();
+            result.Goals.Length.ShouldBeGreaterThan(0);
         }
     }
 }
