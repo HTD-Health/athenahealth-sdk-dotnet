@@ -13,7 +13,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// The appointment date for the new open appointment slot (mm/dd/yyyy).
         /// </summary>
         [JsonProperty("appointmentdate")]
-        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter))]
         [Required]
         public DateTime AppointmentDate { get; set; }
 

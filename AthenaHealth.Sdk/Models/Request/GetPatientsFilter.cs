@@ -12,7 +12,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// If present, the date on which a patient died.
         /// </summary>
         [JsonProperty("deceaseddate")]
-        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter))]
         public DateTime? DeceasedDate { get; set; }
 
         /// <summary>

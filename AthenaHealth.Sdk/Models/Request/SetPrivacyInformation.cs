@@ -19,7 +19,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// If presenting an e-signature, the mm/dd/yyyy hh24:mi:ss formatted time that the signer signed. This is required if a signature name is provided.
         /// </summary>
         [JsonProperty("signaturedatetime")]
-        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter))]
         [Required]
         public DateTime SignatureDateTime { get; set; }
 

@@ -121,7 +121,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// Observation date associated with this lab result
         /// </summary>
         [JsonProperty("labresultdate")]
-        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter))]
         public DateTime? LabResultDate { get; set; }
 
         /// <summary>
@@ -180,7 +180,7 @@ namespace AthenaHealth.Sdk.Models.Response
             /// Date when this observation was recorded
             /// </summary>
             [JsonProperty("analytedate")]
-            [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+            [JsonConverter(typeof(DateConverter))]
             public DateTime? AnalyteDate { get; set; }
 
             /// <summary>

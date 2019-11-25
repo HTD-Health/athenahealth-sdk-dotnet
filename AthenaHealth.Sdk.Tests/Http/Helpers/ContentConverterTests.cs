@@ -322,7 +322,7 @@ namespace AthenaHealth.Sdk.Tests.Http.Helpers
             public TestEnum?[] Enums { get; set; }
 
             [JsonProperty("date")]
-            [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+            [JsonConverter(typeof(DateConverter))]
             public DateTime? Date { get; set; }
 
             [JsonProperty("dates", ItemConverterType = typeof(DateConverter), ItemConverterParameters = new[] { "MM/dd/yyyy" })]

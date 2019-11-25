@@ -38,7 +38,7 @@ namespace AthenaHealth.Sdk.Models.Request
         /// The date the payment was made. Defaulted to today.
         /// </summary>
         [JsonProperty("postdate")]
-        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter))]
         public DateTime? PostDate { get; set; }
 
         /// <summary>

@@ -68,14 +68,14 @@ namespace AthenaHealth.Sdk.Models.Request
         /// See <see cref="ShowProcessedStartDateTime"/>.
         /// </summary>
         [JsonProperty("showprocessedenddatetime")]
-        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter))]
         public DateTime? ShowProcessedEndDateTime { get; set; }
 
         /// <summary>
         /// Show already processed changes.  This will show changes that you previously retrieved at some point after this datetime mm/dd/yyyy hh24:mi:ss (Eastern). Can be used to refetch data if there was an error, such as a timeout, and records are marked as already retrieved. This is intended to be used with showprocessedenddatetime and for a short period of time only. Also note that all messages will eventually be deleted.
         /// </summary>
         [JsonProperty("showprocessedstartdatetime")]
-        [JsonConverter(typeof(DateConverter), "MM/dd/yyyy")]
+        [JsonConverter(typeof(DateConverter))]
         public DateTime? ShowProcessedStartDateTime { get; set; }
 
         /// <summary>
