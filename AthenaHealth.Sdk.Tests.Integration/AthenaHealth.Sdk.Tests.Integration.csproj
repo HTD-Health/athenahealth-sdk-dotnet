@@ -85,6 +85,9 @@
     <None Update="Data\Appointment\GetAppointmentSlots.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Data\Department\GetCheckInRequiredFields.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Data\Department\GetAll_Extended.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
