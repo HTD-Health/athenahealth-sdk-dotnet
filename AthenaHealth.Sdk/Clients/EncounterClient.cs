@@ -75,5 +75,11 @@ namespace AthenaHealth.Sdk.Clients
         {
             return await _connection.Get<EncounterOrder>($"{_connection.PracticeId}/chart/encounter/{encounterId}/orders/{orderId}", filter);
         }
+
+        [Endpoint("GET /chart/encounter/{encounterid}/patientgoals")]
+        public async Task<PatientGoals> GetPatientGoals(int encounterId)
+        {
+            return await _connection.Get<PatientGoals>($"{_connection.PracticeId}/chart/encounter/{encounterId}/patientgoals");
+        }
     }
 }

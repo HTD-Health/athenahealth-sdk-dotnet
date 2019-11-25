@@ -117,5 +117,16 @@ namespace AthenaHealth.Sdk.Tests.Integration
             response.Status.ShouldNotBeNullOrEmpty();
             response.Id.ShouldBe(21098);
         }
+
+        [Fact]
+        public async Task GetPatientGoals_ReturnsRecord()
+        {
+            IEncounterClient client = new EncounterClient(ConnectionFactory.CreateFromFile(@"Data\Encounter\GetPatientGoals.json"));
+
+            var response = await client.GetPatientGoals(1);
+
+            response.ShouldNotBeNull();
+            response.Goals.Length.ShouldBeGreaterThan(0);
+        }
     }
 }
