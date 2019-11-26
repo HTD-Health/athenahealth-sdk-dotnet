@@ -24,7 +24,8 @@ namespace AthenaHealth.Sdk.Models.Request
         public int? AppointmentTypeId { get; set; }
 
         /// <summary>
-        /// The athenaNet department ID. Multiple IDs (either as a comma delimited list or multiple POSTed values) are allowed.
+        /// The athenaNet department ID. Multiple IDs (either as a comma delimited list or multiple
+        /// POSTed values) are allowed.
         /// </summary>
         [Required]
         [JsonProperty("departmentid")]
@@ -32,7 +33,7 @@ namespace AthenaHealth.Sdk.Models.Request
         public int[] DepartmentIds { get; set; }
 
         /// <summary>
-        /// Start of the appointment search date range (mm/dd/yyyy).  Inclusive.
+        /// Start of the appointment search date range (mm/dd/yyyy). Inclusive.
         /// </summary>
         [Required]
         [JsonConverter(typeof(DateConverter))]
@@ -40,7 +41,7 @@ namespace AthenaHealth.Sdk.Models.Request
         public DateTime StartDate { get; set; }
 
         /// <summary>
-        /// End of the appointment search date range (mm/dd/yyyy).  Inclusive.
+        /// End of the appointment search date range (mm/dd/yyyy). Inclusive.
         /// </summary>
         [Required]
         [JsonConverter(typeof(DateConverter))]
@@ -48,41 +49,44 @@ namespace AthenaHealth.Sdk.Models.Request
         public DateTime EndDate { get; set; }
 
         /// <summary>
-        /// Identify appointments modified after this date/time (mm/dd/yyyy hh:mi:ss).  Inclusive.
+        /// Identify appointments modified after this date/time (mm/dd/yyyy hh:mi:ss). Inclusive.
         /// </summary>
         [JsonConverter(typeof(DateConverter), "MM/dd/yyyy HH:mm:ss")]
         [JsonProperty("startlastmodified")]
         public DateTime? StartLastModified { get; set; }
 
         /// <summary>
-        /// Identify appointments modified prior to this date/time (mm/dd/yyyy hh:mi:ss).  Inclusive. Note: This can only be used if a startlastmodified value is supplied as well.
+        /// Identify appointments modified prior to this date/time (mm/dd/yyyy hh:mi:ss). Inclusive.
+        /// Note: This can only be used if a startlastmodified value is supplied as well.
         /// </summary>
         [JsonConverter(typeof(DateConverter), "MM/dd/yyyy HH:mm:ss")]
         [JsonProperty("endlastmodified")]
         public DateTime? EndLastModified { get; set; }
 
         /// <summary>
-        /// The athenaNet patient ID.  If operating in a Provider Group Enterprise practice, this should be the enterprise patient ID.
+        /// The athenaNet patient ID. If operating in a Provider Group Enterprise practice, this
+        /// should be the enterprise patient ID.
         /// </summary>
         [JsonProperty("patientid")]
         public int? PatientId { get; set; }
 
         /// <summary>
-        /// The athenaNet provider ID.  Multiple IDs (either as a comma delimited list or multiple POSTed values) are allowed.
+        /// The athenaNet provider ID. Multiple IDs (either as a comma delimited list or multiple
+        /// POSTed values) are allowed.
         /// </summary>
         [JsonProperty("providerid")]
         [JsonConverter(typeof(DelimitedStringConverter), ",")]
         public int[] ProviderId { get; set; }
 
         /// <summary>
-        /// Start of the appointment scheduled search date range (mm/dd/yyyy).  Inclusive.
+        /// Start of the appointment scheduled search date range (mm/dd/yyyy). Inclusive.
         /// </summary>
         [JsonConverter(typeof(DateConverter))]
         [JsonProperty("scheduledstartdate")]
         public DateTime? ScheduledStartDate { get; set; }
 
         /// <summary>
-        /// End of the appointment scheduled search date range (mm/dd/yyyy).  Inclusive.
+        /// End of the appointment scheduled search date range (mm/dd/yyyy). Inclusive.
         /// </summary>
         [JsonConverter(typeof(DateConverter))]
         [JsonProperty("scheduledenddate")]
@@ -101,7 +105,8 @@ namespace AthenaHealth.Sdk.Models.Request
         public bool ShowReminderCallDetail { get; set; }
 
         /// <summary>
-        /// Number of entries to return (default 1000, max 10000)Please note that this endpoint has a different default and max than normal.
+        /// Number of entries to return (default 1000, max 10000). Please note that this endpoint
+        /// has a different default and max than normal.
         /// </summary>
         public int? Limit { get; set; } = 1000;
 

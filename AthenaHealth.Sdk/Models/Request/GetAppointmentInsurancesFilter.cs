@@ -25,7 +25,8 @@ namespace AthenaHealth.Sdk.Models.Request
         public bool? ShowCancelled { get; set; }
 
         /// <summary>
-        /// Number of entries to return (default 100, max 5000)Please note that this endpoint has a different default than normal.
+        /// Number of entries to return (default 100, max 5000). Please note that this endpoint has
+        /// a different default than normal.
         /// </summary>
         [JsonProperty("limit")]
         public int? Limit { get; set; } = 100;

@@ -1,0 +1,14 @@
+{
+  "appointmentcustomfields": [
+    {
+      "customfieldid": 243,
+      "disallowupdate": false,
+      "select": false,
+      "casesensitive": false,
+      "name": "Telehealth Room #",
+      "searchable": true,
+      "type": "TEXT"
+    }
+  ],
+  "totalcount": 1
+}
