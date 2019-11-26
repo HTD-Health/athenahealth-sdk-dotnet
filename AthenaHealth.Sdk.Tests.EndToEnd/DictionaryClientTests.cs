@@ -336,5 +336,14 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             response.Items.Length.ShouldBeGreaterThan(0);
             response.Items.ShouldAllBe(x => x.Id != 0);
         }
+
+        [Fact]
+        public async Task GetReferringProviders_ReturnsRecords()
+        {
+            var response = await _client.Dictionaries.GetReferringProviders();
+
+            response.ShouldNotBeNull();
+            response.Items.Length.ShouldBeGreaterThan(0);
+        }
     }
 }

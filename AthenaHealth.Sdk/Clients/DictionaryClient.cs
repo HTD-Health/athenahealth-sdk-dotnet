@@ -156,7 +156,13 @@ namespace AthenaHealth.Sdk.Clients
         [Endpoint("GET /configuration/ordersets")]
         public async Task<OrderSetResponse> GetOrderSets(GetOrderSetsFilter queryParameters = null)
         {
-            return await _connection.Get<OrderSetResponse>($"{_connection.PracticeId}/configuration/ordersets");
+            return await _connection.Get<OrderSetResponse>($"{_connection.PracticeId}/configuration/ordersets", queryParameters);
+        }
+
+        [Endpoint("GET /referringproviders")]
+        public async Task<ReferringProviderResponse> GetReferringProviders(GetReferringProvidersFilter queryParameters = null)
+        {
+            return await _connection.Get<ReferringProviderResponse>($"{_connection.PracticeId}/referringproviders", queryParameters);
         }
     }
 }

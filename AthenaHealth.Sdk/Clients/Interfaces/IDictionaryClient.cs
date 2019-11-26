@@ -108,5 +108,8 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
 
         [Endpoint("GET /configuration/ordersets")]
         Task<OrderSetResponse> GetOrderSets(GetOrderSetsFilter queryParameters = null);
+
+        [Endpoint("GET /referringproviders")]
+        Task<ReferringProviderResponse> GetReferringProviders(GetReferringProvidersFilter queryParameters = null);
     }
 }
