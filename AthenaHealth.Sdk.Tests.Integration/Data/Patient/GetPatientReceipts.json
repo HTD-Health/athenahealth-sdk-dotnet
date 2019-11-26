@@ -1,0 +1,1264 @@
+[
+  {
+    "cardnumberlast4digits": "3003",
+    "cardtypeabbreviation": "MC",
+    "requestdate": "07\/13\/2009 17:28:14",
+    "epaymentid": "7",
+    "cardtypename": "MasterCard",
+    "amount": "1",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "3003",
+    "cardtypeabbreviation": "MC",
+    "requestdate": "07\/13\/2009 17:28:51",
+    "epaymentid": "8",
+    "cardtypename": "MasterCard",
+    "amount": "1",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "3003",
+    "cardtypeabbreviation": "MC",
+    "requestdate": "07\/13\/2009 17:29:06",
+    "epaymentid": "9",
+    "cardtypename": "MasterCard",
+    "amount": "1",
+    "type": "VOID"
+  },
+  {
+    "cardnumberlast4digits": "3003",
+    "cardtypeabbreviation": "MC",
+    "requestdate": "07\/13\/2009 18:26:48",
+    "epaymentid": "10",
+    "cardtypename": "MasterCard",
+    "amount": "9.01",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "3003",
+    "cardtypeabbreviation": "MC",
+    "requestdate": "07\/13\/2009 18:52:42",
+    "epaymentid": "11",
+    "cardtypename": "MasterCard",
+    "amount": "1.01",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "3003",
+    "cardtypeabbreviation": "MC",
+    "requestdate": "07\/13\/2009 18:52:52",
+    "epaymentid": "12",
+    "cardtypename": "MasterCard",
+    "amount": "1.01",
+    "type": "VOID"
+  },
+  {
+    "cardnumberlast4digits": "3003",
+    "cardtypeabbreviation": "MC",
+    "requestdate": "07\/13\/2009 18:53:09",
+    "epaymentid": "13",
+    "cardtypename": "MasterCard",
+    "amount": "2.02",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "1111",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "07\/14\/2009 09:52:37",
+    "epaymentid": "21",
+    "cardtypename": "Visa",
+    "amount": "1",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "1111",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "07\/14\/2009 10:06:08",
+    "epaymentid": "22",
+    "cardtypename": "Visa",
+    "amount": "9",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "1111",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "07\/14\/2009 10:07:13",
+    "epaymentid": "23",
+    "cardtypename": "Visa",
+    "amount": "9",
+    "type": "VOID"
+  },
+  {
+    "cardnumberlast4digits": "3003",
+    "cardtypeabbreviation": "MC",
+    "requestdate": "07\/14\/2009 10:12:43",
+    "epaymentid": "24",
+    "cardtypename": "MasterCard",
+    "amount": "7",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "3003",
+    "cardtypeabbreviation": "MC",
+    "requestdate": "07\/14\/2009 10:19:55",
+    "epaymentid": "25",
+    "cardtypename": "MasterCard",
+    "amount": "9",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "9439",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "11\/13\/2009 22:02:46",
+    "epaymentid": "2165",
+    "cardtypename": "Visa",
+    "amount": "1",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "1111",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "01\/27\/2016 19:56:40",
+    "epaymentid": "3158",
+    "cardtypename": "Visa",
+    "amount": "0",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "1111",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "01\/27\/2016 19:57:00",
+    "epaymentid": "3159",
+    "cardtypename": "Visa",
+    "amount": "1",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "9990",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "02\/01\/2016 03:30:58",
+    "epaymentid": "3179",
+    "epaymentcontractbalance": "3000",
+    "cardtypename": "Visa",
+    "amount": "0",
+    "epaymentcontractmaxamount": "3000",
+    "type": "AUTHORIZATION"
+  },
+  {
+    "cardnumberlast4digits": "9990",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "02\/02\/2016 14:05:19",
+    "epaymentid": "3185",
+    "cardtypename": "Visa",
+    "amount": "0",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "9990",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "02\/02\/2016 14:06:00",
+    "epaymentid": "3186",
+    "cardtypename": "Visa",
+    "amount": "1.33",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "9990",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "03\/11\/2016 06:38:02",
+    "epaymentid": "3218",
+    "cardtypename": "Visa",
+    "amount": "7",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "3330",
+    "cardtypeabbreviation": "MC",
+    "requestdate": "07\/19\/2016 12:16:22",
+    "epaymentid": "3538",
+    "cardtypename": "MasterCard",
+    "amount": "6",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "3330",
+    "cardtypeabbreviation": "MC",
+    "requestdate": "07\/19\/2016 12:25:50",
+    "epaymentid": "3539",
+    "cardtypename": "MasterCard",
+    "amount": "7",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "3330",
+    "cardtypeabbreviation": "MC",
+    "requestdate": "07\/19\/2016 12:39:36",
+    "epaymentid": "3540",
+    "cardtypename": "MasterCard",
+    "amount": "8",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "3330",
+    "cardtypeabbreviation": "MC",
+    "requestdate": "07\/19\/2016 12:58:40",
+    "epaymentid": "3541",
+    "cardtypename": "MasterCard",
+    "amount": "10",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "3331",
+    "cardtypeabbreviation": "DS",
+    "requestdate": "07\/19\/2016 12:58:56",
+    "epaymentid": "3542",
+    "cardtypename": "Discover",
+    "amount": "11",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "3330",
+    "cardtypeabbreviation": "MC",
+    "requestdate": "07\/19\/2016 13:01:53",
+    "epaymentid": "3544",
+    "cardtypename": "MasterCard",
+    "amount": "13",
+    "type": "VOIDPURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "3331",
+    "cardtypeabbreviation": "DS",
+    "requestdate": "07\/19\/2016 13:01:55",
+    "epaymentid": "3546",
+    "cardtypename": "Discover",
+    "amount": "14",
+    "type": "VOIDPURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "3330",
+    "cardtypeabbreviation": "MC",
+    "requestdate": "07\/19\/2016 13:02:11",
+    "epaymentid": "3548",
+    "cardtypename": "MasterCard",
+    "amount": "13",
+    "type": "VOIDPURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "3331",
+    "cardtypeabbreviation": "DS",
+    "requestdate": "07\/19\/2016 13:02:13",
+    "epaymentid": "3550",
+    "cardtypename": "Discover",
+    "amount": "14",
+    "type": "VOIDPURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "3330",
+    "cardtypeabbreviation": "MC",
+    "requestdate": "07\/19\/2016 13:02:42",
+    "epaymentid": "3552",
+    "cardtypename": "MasterCard",
+    "amount": "13",
+    "type": "VOIDPURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "3331",
+    "cardtypeabbreviation": "DS",
+    "requestdate": "07\/19\/2016 13:06:47",
+    "epaymentid": "3554",
+    "cardtypename": "Discover",
+    "amount": "14",
+    "type": "VOIDPURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "3330",
+    "cardtypeabbreviation": "MC",
+    "requestdate": "07\/19\/2016 13:14:52",
+    "epaymentid": "3556",
+    "cardtypename": "MasterCard",
+    "amount": "13",
+    "type": "VOIDPURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "3331",
+    "cardtypeabbreviation": "DS",
+    "requestdate": "07\/19\/2016 13:14:54",
+    "epaymentid": "3558",
+    "cardtypename": "Discover",
+    "amount": "14",
+    "type": "VOIDPURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "3330",
+    "cardtypeabbreviation": "MC",
+    "requestdate": "07\/19\/2016 13:15:36",
+    "epaymentid": "3560",
+    "cardtypename": "MasterCard",
+    "amount": "13",
+    "type": "VOIDPURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "3331",
+    "cardtypeabbreviation": "DS",
+    "requestdate": "07\/19\/2016 13:15:38",
+    "epaymentid": "3562",
+    "cardtypename": "Discover",
+    "amount": "14",
+    "type": "VOIDPURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "3330",
+    "cardtypeabbreviation": "MC",
+    "requestdate": "07\/19\/2016 13:17:39",
+    "epaymentid": "3564",
+    "cardtypename": "MasterCard",
+    "amount": "13",
+    "type": "VOIDPURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "3331",
+    "cardtypeabbreviation": "DS",
+    "requestdate": "07\/19\/2016 13:17:41",
+    "epaymentid": "3566",
+    "cardtypename": "Discover",
+    "amount": "14",
+    "type": "VOIDPURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "9990",
+    "cardtypeabbreviation": "AX",
+    "requestdate": "07\/19\/2016 13:17:43",
+    "epaymentid": "3568",
+    "cardtypename": "American Express",
+    "amount": "13",
+    "type": "VOIDPURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "3330",
+    "cardtypeabbreviation": "MC",
+    "requestdate": "07\/19\/2016 13:35:46",
+    "epaymentid": "3570",
+    "cardtypename": "MasterCard",
+    "amount": "13",
+    "type": "VOIDPURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "3331",
+    "cardtypeabbreviation": "DS",
+    "requestdate": "07\/19\/2016 13:35:48",
+    "epaymentid": "3572",
+    "cardtypename": "Discover",
+    "amount": "14",
+    "type": "VOIDPURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "9990",
+    "cardtypeabbreviation": "AX",
+    "requestdate": "07\/19\/2016 13:35:50",
+    "epaymentid": "3574",
+    "cardtypename": "American Express",
+    "amount": "13",
+    "type": "VOIDPURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "3330",
+    "cardtypeabbreviation": "MC",
+    "requestdate": "07\/19\/2016 14:56:57",
+    "epaymentid": "3576",
+    "cardtypename": "MasterCard",
+    "amount": "13",
+    "type": "VOIDPURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "3330",
+    "cardtypeabbreviation": "MC",
+    "requestdate": "07\/19\/2016 14:58:26",
+    "epaymentid": "3578",
+    "cardtypename": "MasterCard",
+    "amount": "13",
+    "type": "VOIDPURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "9990",
+    "cardtypeabbreviation": "AX",
+    "requestdate": "07\/19\/2016 14:58:43",
+    "epaymentid": "3579",
+    "cardtypename": "American Express",
+    "amount": "13",
+    "type": "VOIDPURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "3331",
+    "cardtypeabbreviation": "DS",
+    "requestdate": "07\/19\/2016 14:59:00",
+    "epaymentid": "3580",
+    "cardtypename": "Discover",
+    "amount": "14",
+    "type": "VOIDPURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "3330",
+    "cardtypeabbreviation": "MC",
+    "requestdate": "07\/19\/2016 14:59:16",
+    "epaymentid": "3581",
+    "cardtypename": "MasterCard",
+    "amount": "13",
+    "type": "VOIDPURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "3330",
+    "cardtypeabbreviation": "MC",
+    "requestdate": "07\/19\/2016 15:08:19",
+    "epaymentid": "3582",
+    "cardtypename": "MasterCard",
+    "amount": "13",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "3330",
+    "cardtypeabbreviation": "MC",
+    "requestdate": "09\/20\/2016 19:09:13",
+    "epaymentid": "3760",
+    "cardtypename": "MasterCard",
+    "amount": "13",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "9990",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "10\/11\/2016 05:48:28",
+    "epaymentid": "3780",
+    "cardtypename": "Visa",
+    "amount": "7",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "9990",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "11\/09\/2016 05:02:30",
+    "epaymentid": "3800",
+    "cardtypename": "Visa",
+    "amount": "5",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "9990",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "11\/15\/2016 08:38:27",
+    "epaymentid": "3821",
+    "cardtypename": "Visa",
+    "amount": "5",
+    "type": "VOIDPURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "9990",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "11\/15\/2016 08:38:31",
+    "epaymentid": "3822",
+    "cardtypename": "Visa",
+    "amount": "5",
+    "type": "VOIDPURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "9990",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "11\/15\/2016 08:41:35",
+    "epaymentid": "3824",
+    "cardtypename": "Visa",
+    "amount": "5",
+    "type": "VOIDPURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "9990",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "11\/15\/2016 08:44:07",
+    "epaymentid": "3825",
+    "cardtypename": "Visa",
+    "amount": "5",
+    "type": "VOIDPURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "9990",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "11\/15\/2016 08:55:48",
+    "epaymentid": "3827",
+    "cardtypename": "Visa",
+    "amount": "220",
+    "type": "VOIDPURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "9990",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "04\/10\/2017 16:17:46",
+    "epaymentid": "3969",
+    "cardtypename": "Visa",
+    "amount": "40",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "9990",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "08\/24\/2017 11:08:40",
+    "epaymentid": "4325",
+    "cardtypename": "Visa",
+    "amount": "10",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "3330",
+    "cardtypeabbreviation": "MC",
+    "requestdate": "08\/24\/2017 12:09:01",
+    "epaymentid": "4326",
+    "cardtypename": "MasterCard",
+    "amount": "0",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "9990",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "08\/24\/2017 14:40:14",
+    "epaymentid": "4328",
+    "cardtypename": "Visa",
+    "amount": "11",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "9990",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "08\/29\/2017 14:26:38",
+    "epaymentid": "4345",
+    "cardtypename": "Visa",
+    "amount": "11",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "9990",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "08\/29\/2017 14:35:48",
+    "epaymentid": "4346",
+    "cardtypename": "Visa",
+    "amount": "12",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "9990",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "08\/29\/2017 14:36:51",
+    "epaymentid": "4347",
+    "cardtypename": "Visa",
+    "amount": "13",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "9990",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "08\/30\/2017 09:26:18",
+    "epaymentid": "4348",
+    "cardtypename": "Visa",
+    "amount": "25",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "9990",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "08\/31\/2017 08:40:17",
+    "epaymentid": "4349",
+    "cardtypename": "Visa",
+    "amount": "0",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "9990",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "08\/31\/2017 08:40:41",
+    "epaymentid": "4350",
+    "cardtypename": "Visa",
+    "amount": "8",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "9990",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "08\/31\/2017 08:41:28",
+    "epaymentid": "4351",
+    "cardtypename": "Visa",
+    "amount": "9",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "9990",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "08\/31\/2017 08:45:43",
+    "epaymentid": "4352",
+    "cardtypename": "Visa",
+    "amount": "29",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "3330",
+    "cardtypeabbreviation": "MC",
+    "requestdate": "08\/31\/2017 08:56:22",
+    "epaymentid": "4353",
+    "cardtypename": "MasterCard",
+    "amount": "2",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "9990",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "08\/31\/2017 11:19:06",
+    "epaymentid": "4354",
+    "cardtypename": "Visa",
+    "amount": "2",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "3330",
+    "cardtypeabbreviation": "MC",
+    "requestdate": "09\/05\/2017 14:32:57",
+    "epaymentid": "4355",
+    "cardtypename": "MasterCard",
+    "amount": "2",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "9990",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "09\/05\/2017 14:37:01",
+    "epaymentid": "4356",
+    "cardtypename": "Visa",
+    "amount": "2",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "9990",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "09\/05\/2017 14:39:29",
+    "epaymentid": "4357",
+    "cardtypename": "Visa",
+    "amount": "2.5",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "6781",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "09\/05\/2017 15:53:33",
+    "epaymentid": "4358",
+    "cardtypename": "Visa",
+    "amount": "2",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "9990",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "09\/11\/2017 13:27:40",
+    "epaymentid": "4365",
+    "cardtypename": "Visa",
+    "amount": "2.5",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "6781",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "11\/06\/2017 13:37:13",
+    "epaymentid": "4385",
+    "cardtypename": "Visa",
+    "amount": "2",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "09\/27\/2018 16:25:23",
+    "epaymentid": "4710",
+    "cardtypename": "Visa",
+    "amount": "10.1",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "09\/27\/2018 16:47:06",
+    "epaymentid": "4711",
+    "cardtypename": "Visa",
+    "amount": "9.99",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "09\/27\/2018 16:54:19",
+    "epaymentid": "4712",
+    "cardtypename": "Visa",
+    "amount": "10.11",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "09\/27\/2018 16:59:25",
+    "epaymentid": "4713",
+    "cardtypename": "Visa",
+    "amount": "14.01",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "10\/03\/2018 14:46:00",
+    "epaymentid": "4716",
+    "cardtypename": "Visa",
+    "amount": "10.1",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "1111",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "10\/03\/2018 14:47:40",
+    "epaymentid": "4717",
+    "cardtypename": "Visa",
+    "amount": "2",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "10\/03\/2018 14:48:12",
+    "epaymentid": "4718",
+    "cardtypename": "Visa",
+    "amount": "2",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "10\/10\/2018 16:33:56",
+    "epaymentid": "4720",
+    "cardtypename": "Visa",
+    "amount": "12",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "10\/10\/2018 18:05:10",
+    "epaymentid": "4721",
+    "cardtypename": "Visa",
+    "amount": "17.07",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "10\/10\/2018 18:08:22",
+    "epaymentid": "4722",
+    "cardtypename": "Visa",
+    "amount": "18.01",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "10\/11\/2018 11:46:42",
+    "epaymentid": "4723",
+    "cardtypename": "Visa",
+    "amount": "11.11",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "1111",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "10\/22\/2018 11:41:06",
+    "epaymentid": "4733",
+    "cardtypename": "Visa",
+    "amount": "18",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "4849",
+    "cardtypeabbreviation": "MC",
+    "requestdate": "10\/22\/2018 14:22:51",
+    "epaymentid": "4737",
+    "cardtypename": "MasterCard",
+    "amount": "1.51",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "9258",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "12\/10\/2018 12:29:34",
+    "epaymentid": "4753",
+    "cardtypename": "Visa",
+    "amount": "0",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "01\/15\/2019 09:45:52",
+    "epaymentid": "4761",
+    "cardtypename": "Visa",
+    "amount": "10.11",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "2124",
+    "cardtypeabbreviation": "MC",
+    "requestdate": "01\/15\/2019 11:35:33",
+    "epaymentid": "4762",
+    "cardtypename": "MasterCard",
+    "amount": "40",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "2124",
+    "cardtypeabbreviation": "MC",
+    "requestdate": "01\/15\/2019 11:36:35",
+    "epaymentid": "4763",
+    "cardtypename": "MasterCard",
+    "amount": "40.32",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "01\/22\/2019 11:46:18",
+    "epaymentid": "4766",
+    "cardtypename": "Visa",
+    "amount": "40",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "01\/22\/2019 11:48:21",
+    "epaymentid": "4767",
+    "cardtypename": "Visa",
+    "amount": "40",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "2124",
+    "cardtypeabbreviation": "MC",
+    "requestdate": "01\/22\/2019 11:49:20",
+    "epaymentid": "4768",
+    "cardtypename": "MasterCard",
+    "amount": "40",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "01\/22\/2019 11:50:29",
+    "epaymentid": "4770",
+    "cardtypename": "Visa",
+    "amount": "10.11",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "2124",
+    "cardtypeabbreviation": "MC",
+    "requestdate": "01\/22\/2019 11:52:01",
+    "epaymentid": "4771",
+    "cardtypename": "MasterCard",
+    "amount": "40",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "01\/25\/2019 17:17:08",
+    "epaymentid": "4775",
+    "cardtypename": "Visa",
+    "amount": "15",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "01\/25\/2019 17:17:49",
+    "epaymentid": "4776",
+    "cardtypename": "Visa",
+    "amount": "15",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "01\/29\/2019 08:16:44",
+    "epaymentid": "4777",
+    "cardtypename": "Visa",
+    "amount": "10.12",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "01\/29\/2019 11:58:33",
+    "epaymentid": "4778",
+    "cardtypename": "Visa",
+    "amount": "15",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "1111",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "01\/30\/2019 18:13:09",
+    "epaymentid": "4782",
+    "cardtypename": "Visa",
+    "amount": "16",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "01\/30\/2019 18:14:11",
+    "epaymentid": "4783",
+    "cardtypename": "Visa",
+    "amount": "16",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "02\/01\/2019 16:23:30",
+    "epaymentid": "4785",
+    "cardtypename": "Visa",
+    "amount": "15",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "1111",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "02\/05\/2019 16:31:13",
+    "epaymentid": "4787",
+    "cardtypename": "Visa",
+    "amount": "2.22",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "02\/05\/2019 16:32:05",
+    "epaymentid": "4788",
+    "cardtypename": "Visa",
+    "amount": "2.22",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "02\/05\/2019 16:32:39",
+    "epaymentid": "4790",
+    "cardtypename": "Visa",
+    "amount": "2.22",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "02\/05\/2019 16:32:52",
+    "epaymentid": "4791",
+    "cardtypename": "Visa",
+    "amount": "10.11",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "02\/05\/2019 16:33:27",
+    "epaymentid": "4793",
+    "cardtypename": "Visa",
+    "amount": "16",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "2124",
+    "cardtypeabbreviation": "MC",
+    "requestdate": "02\/05\/2019 16:34:19",
+    "epaymentid": "4794",
+    "cardtypename": "MasterCard",
+    "amount": "16",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "02\/05\/2019 16:36:06",
+    "epaymentid": "4795",
+    "cardtypename": "Visa",
+    "amount": "16",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "1111",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "02\/05\/2019 17:23:51",
+    "epaymentid": "4796",
+    "cardtypename": "Visa",
+    "amount": "16",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "02\/06\/2019 12:14:27",
+    "epaymentid": "4797",
+    "cardtypename": "Visa",
+    "amount": "16",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "02\/06\/2019 14:57:36",
+    "epaymentid": "4803",
+    "cardtypename": "Visa",
+    "amount": "10.12",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "1111",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "02\/08\/2019 12:25:05",
+    "epaymentid": "4806",
+    "cardtypename": "Visa",
+    "amount": ".7",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "1111",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "02\/08\/2019 15:29:20",
+    "epaymentid": "4811",
+    "cardtypename": "Visa",
+    "amount": "7.5",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "1111",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "02\/11\/2019 12:02:12",
+    "epaymentid": "4812",
+    "cardtypename": "Visa",
+    "amount": "16.12",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "1111",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "02\/11\/2019 13:15:26",
+    "epaymentid": "4813",
+    "cardtypename": "Visa",
+    "amount": "16.11",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "1111",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "02\/11\/2019 16:10:21",
+    "epaymentid": "4814",
+    "cardtypename": "Visa",
+    "amount": "12.11",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "1111",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "02\/12\/2019 01:40:34",
+    "epaymentid": "4815",
+    "cardtypename": "Visa",
+    "amount": "11.11",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "1111",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "02\/14\/2019 14:40:33",
+    "epaymentid": "4817",
+    "cardtypename": "Visa",
+    "amount": "10.12",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "02\/15\/2019 14:01:08",
+    "epaymentid": "4818",
+    "cardtypename": "Visa",
+    "amount": "16",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "1111",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "02\/15\/2019 15:59:21",
+    "epaymentid": "4819",
+    "cardtypename": "Visa",
+    "amount": "1",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "02\/15\/2019 15:59:49",
+    "epaymentid": "4820",
+    "cardtypename": "Visa",
+    "amount": "1",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "02\/18\/2019 12:25:30",
+    "epaymentid": "4821",
+    "cardtypename": "Visa",
+    "amount": "1",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "02\/18\/2019 12:26:10",
+    "epaymentid": "4822",
+    "cardtypename": "Visa",
+    "amount": "1",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "02\/18\/2019 12:28:41",
+    "epaymentid": "4823",
+    "cardtypename": "Visa",
+    "amount": "13",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "02\/18\/2019 12:56:21",
+    "epaymentid": "4824",
+    "cardtypename": "Visa",
+    "amount": "15",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "02\/18\/2019 12:58:30",
+    "epaymentid": "4825",
+    "cardtypename": "Visa",
+    "amount": "15",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "02\/18\/2019 13:08:00",
+    "epaymentid": "4826",
+    "cardtypename": "Visa",
+    "amount": "15",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "1881",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "02\/18\/2019 13:08:53",
+    "epaymentid": "4827",
+    "cardtypename": "Visa",
+    "amount": "15",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "1881",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "02\/18\/2019 13:09:25",
+    "epaymentid": "4828",
+    "cardtypename": "Visa",
+    "amount": "15",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "1881",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "02\/18\/2019 13:09:51",
+    "epaymentid": "4829",
+    "cardtypename": "Visa",
+    "amount": "15",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "02\/18\/2019 13:20:55",
+    "epaymentid": "4830",
+    "cardtypename": "Visa",
+    "amount": "10",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "02\/18\/2019 13:21:20",
+    "epaymentid": "4831",
+    "cardtypename": "Visa",
+    "amount": "10",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "02\/18\/2019 14:31:08",
+    "epaymentid": "4832",
+    "cardtypename": "Visa",
+    "amount": "15",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "8431",
+    "cardtypeabbreviation": "AX",
+    "requestdate": "02\/22\/2019 14:56:22",
+    "epaymentid": "4835",
+    "cardtypename": "American Express",
+    "amount": "15.11",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "1111",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "02\/22\/2019 14:58:09",
+    "epaymentid": "4836",
+    "cardtypename": "Visa",
+    "amount": "16.23",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "1009",
+    "cardtypeabbreviation": "AX",
+    "requestdate": "02\/25\/2019 11:37:27",
+    "epaymentid": "4837",
+    "cardtypename": "American Express",
+    "amount": "1.11",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "1111",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "02\/25\/2019 11:40:34",
+    "epaymentid": "4838",
+    "cardtypename": "Visa",
+    "amount": ".16",
+    "type": "PURCHASE"
+  },
+  {
+    "cardnumberlast4digits": "0002",
+    "cardtypeabbreviation": "VI",
+    "requestdate": "08\/30\/2019 08:49:08",
+    "epaymentid": "5158",
+    "cardtypename": "Visa",
+    "amount": "10",
+    "type": "PURCHASE"
+  }
+]
