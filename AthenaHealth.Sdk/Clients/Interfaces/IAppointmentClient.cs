@@ -174,5 +174,8 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
 
         [Endpoint("GET /appointments/{appointmentid}/accidentdata")]
         Task<AccidentData> GetAccidentInfo(int appointmentId);
+
+        [Endpoint("GET /appointments/customfields")]
+        Task<AppointmentCustomFieldResponse> GetCustomFields(GetCustomFieldsFilter queryParameters = null);
     }
 }

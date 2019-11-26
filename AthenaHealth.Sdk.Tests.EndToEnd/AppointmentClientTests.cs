@@ -571,5 +571,14 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
         {
             await _client.Appointments.GetAccidentInfo(1457);
         }
+
+        [Fact]
+        public async Task GetCustomFields_ReturnsRecords()
+        {
+            var response = await _client.Appointments.GetCustomFields();
+
+            response.Total.ShouldBeGreaterThan(0);
+            response.Items.Length.ShouldBeGreaterThan(0);
+        }
     }
 }

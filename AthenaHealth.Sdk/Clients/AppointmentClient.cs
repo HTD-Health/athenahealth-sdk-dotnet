@@ -209,5 +209,11 @@ namespace AthenaHealth.Sdk.Clients
         {
             return await _connection.Get<AccidentData>($"{_connection.PracticeId}/appointments/{appointmentId}/accidentdata");
         }
+
+        [Endpoint("GET /appointments/customfields")]
+        public async Task<AppointmentCustomFieldResponse> GetCustomFields(GetCustomFieldsFilter queryParameters = null)
+        {
+            return await _connection.Get<AppointmentCustomFieldResponse>($"{_connection.PracticeId}/appointments/customfields", queryParameters);
+        }
     }
 }

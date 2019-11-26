@@ -386,5 +386,16 @@ namespace AthenaHealth.Sdk.Tests.Integration
             response.Items.ShouldAllBe(x => x.DepartmentId.HasValue);
             response.Items.ShouldAllBe(x => x.Duration > 0);
         }
+
+        [Fact]
+        public async Task GetCustomFields_ReturnsRecords()
+        {
+            IAppointmentClient client = new Clients.AppointmentClient(ConnectionFactory.CreateFromFile(@"Data\Appointment\GetCustomFields.json"));
+
+            var response = await client.GetCustomFields();
+
+            response.Total.ShouldBeGreaterThan(0);
+            response.Items.Length.ShouldBeGreaterThan(0);
+        }
     }
 }
