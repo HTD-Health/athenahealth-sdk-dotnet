@@ -183,8 +183,6 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             // Assert
             result.ShouldNotBeNull();
             result.Length.ShouldBeGreaterThan(0);
-
-            Debug.WriteLine($"yield return new object[] {{ {departmentId} }};");
         }
     }
 }

@@ -1257,8 +1257,6 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             // Assert
             result.ShouldNotBeNull();
             result.Items.Length.ShouldBeGreaterThan(0);
-
-            Debug.WriteLine($"yield return new object[] {{ {patientId} }};");
         }
 
         [Theory]
@@ -1273,7 +1271,16 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             result.ShouldNotBeNull();
             result.Items.Length.ShouldBeGreaterThan(0);
 
-            Debug.WriteLine($"yield return new object[] {{ {patientId} }};");
+            
+        }
+
+        [Fact]
+        public async Task GetPatientReceipts_ReturnsRecords()
+        {
+            Receipt[] response = await _client.Patients.GetPatientReceipts(1, 1);
+
+            response.ShouldNotBeNull();
+            response.Length.ShouldBeGreaterThan(0);
         }
     }
 }
