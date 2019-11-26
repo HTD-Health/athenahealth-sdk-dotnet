@@ -565,5 +565,11 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             response.Items.ShouldAllBe(x => x.DepartmentId.HasValue);
             response.Items.ShouldAllBe(x => x.Duration > 0);
         }
+
+        [Fact]
+        public async Task GetAccidentData_ShouldNotThrowSerializationException()
+        {
+            await _client.Appointments.GetAccidentInfo(1457);
+        }
     }
 }
