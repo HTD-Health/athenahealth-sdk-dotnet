@@ -203,5 +203,11 @@ namespace AthenaHealth.Sdk.Clients
         {
             return await _connection.Get<ChangedAppointmentsSlotResponse>($"{_connection.PracticeId}/appointments/changed", filter);
         }
+
+        [Endpoint("GET /appointments/{appointmentid}/accidentdata")]
+        public async Task<AccidentData> GetAccidentInfo(int appointmentId)
+        {
+            return await _connection.Get<AccidentData>($"{_connection.PracticeId}/appointments/{appointmentId}/accidentdata");
+        }
     }
 }

@@ -171,5 +171,8 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
         /// <returns></returns>
         [Endpoint("GET /appointments/changed")]
         Task<ChangedAppointmentsSlotResponse> GetChangedAppointmentSlots(GetChangedAppointmentSlotsFilter filter = null);
+
+        [Endpoint("GET /appointments/{appointmentid}/accidentdata")]
+        Task<AccidentData> GetAccidentInfo(int appointmentId);
     }
 }
