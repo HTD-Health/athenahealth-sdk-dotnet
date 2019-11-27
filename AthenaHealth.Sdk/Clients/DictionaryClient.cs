@@ -164,5 +164,11 @@ namespace AthenaHealth.Sdk.Clients
         {
             return await _connection.Get<ReferringProviderResponse>($"{_connection.PracticeId}/referringproviders", queryParameters);
         }
+
+        [Endpoint("GET /referralsources")]
+        public async Task<ReferralSourceResponse> GetReferralSources(GetReferralSourcesFilter filter = null)
+        {
+            return await _connection.Get<ReferralSourceResponse>($"{_connection.PracticeId}/referralsources", filter);
+        }
     }
 }

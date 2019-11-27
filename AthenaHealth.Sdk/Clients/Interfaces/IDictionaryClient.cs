@@ -111,5 +111,8 @@ namespace AthenaHealth.Sdk.Clients.Interfaces
 
         [Endpoint("GET /referringproviders")]
         Task<ReferringProviderResponse> GetReferringProviders(GetReferringProvidersFilter queryParameters = null);
+
+        [Endpoint("GET /referralsources")]
+        Task<ReferralSourceResponse> GetReferralSources(GetReferralSourcesFilter filter = null);
     }
 }
