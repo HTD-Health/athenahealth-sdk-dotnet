@@ -6,7 +6,6 @@ using AthenaHealth.Sdk.Tests.EndToEnd.Data.Encounter;
 using AthenaHealth.Sdk.Tests.EndToEnd.Fixtures;
 using Shouldly;
 using System;
-using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;

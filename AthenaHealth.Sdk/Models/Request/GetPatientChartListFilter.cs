@@ -1,5 +1,4 @@
 ﻿using AthenaHealth.Sdk.Models.Request.Interfaces;
-using Newtonsoft.Json;
 
 // ReSharper disable StringLiteralTypo
 namespace AthenaHealth.Sdk.Models.Request

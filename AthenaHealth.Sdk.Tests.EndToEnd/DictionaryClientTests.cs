@@ -184,7 +184,6 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             response.Length.ShouldBeGreaterThan(0);
         }
 
-
         [Fact]
         public async Task GetLanguages_ReturnsRecords()
         {
@@ -202,7 +201,6 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             response.ShouldNotBeNull();
             response.Length.ShouldBeGreaterThan(0);
         }
-
 
         [Fact]
         public async Task GetStates_ReturnsRecords()

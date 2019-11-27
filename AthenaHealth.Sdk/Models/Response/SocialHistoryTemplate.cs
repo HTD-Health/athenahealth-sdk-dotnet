@@ -29,7 +29,7 @@ namespace AthenaHealth.Sdk.Models.Response
         public class Question
         {
             [JsonProperty("options")]
-            private IList<IDictionary<string, string>> _options;
+            private IList<IDictionary<string, string>> _options = null;
 
             /// <summary>
             /// Unique ID for this question within this template.

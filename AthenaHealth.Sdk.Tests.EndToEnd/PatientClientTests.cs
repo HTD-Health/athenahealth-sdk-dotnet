@@ -8,7 +8,6 @@ using Bogus;
 using Bogus.DataSets;
 using Shouldly;
 using System;
-using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -1270,8 +1269,6 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             // Assert
             result.ShouldNotBeNull();
             result.Items.Length.ShouldBeGreaterThan(0);
-
-            
         }
 
         [Fact]
