@@ -285,8 +285,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// As HH:MM (where HH is the 0-23 hour and MM is the minute).  This time is local to the department.
         /// </summary>
         [JsonProperty("starttime")]
-        [JsonConverter(typeof(DateConverter), "HH:mm")]
-        public DateTime? StartTime { get; set; }
+        public ClockTime? StartTime { get; set; }
 
         /// <summary>
         /// The timestamp when the check-in process was finished for this appointment.

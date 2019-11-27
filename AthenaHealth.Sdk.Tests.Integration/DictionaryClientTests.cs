@@ -185,7 +185,6 @@ namespace AthenaHealth.Sdk.Tests.Integration
             response.ShouldAllBe(x => x.Id != 0);
         }
 
-
         [Fact]
         public async Task GetMobileCarriers_ReturnsRecords()
         {

@@ -5,7 +5,6 @@ using AthenaHealth.Sdk.Models.Response;
 using AthenaHealth.Sdk.Tests.EndToEnd.Data.Department;
 using AthenaHealth.Sdk.Tests.EndToEnd.Fixtures;
 using Shouldly;
-using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;

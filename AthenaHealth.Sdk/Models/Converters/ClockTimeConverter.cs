@@ -10,10 +10,6 @@ namespace AthenaHealth.Sdk.Models.Converters
 
         public override bool CanWrite => true;
 
-        public ClockTimeConverter()
-        {
-        }
-
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {
             try
