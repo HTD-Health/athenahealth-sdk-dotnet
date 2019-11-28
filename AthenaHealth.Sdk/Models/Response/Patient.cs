@@ -414,7 +414,7 @@ namespace AthenaHealth.Sdk.Models.Response
         /// call is preferred. Only for a single patient when showcustomfields is set to true.
         /// </summary>
         [JsonProperty("customfields")]
-        public CustomField[] CustomFields { get; set; }
+        public PatientCustomField[] CustomFields { get; set; }
 
         /// <summary>
         /// The guarantor's relationship to the patient
@@ -1016,27 +1016,6 @@ namespace AthenaHealth.Sdk.Models.Response
         /// </summary>
         [JsonProperty("driverslicenseurl")]
         public string DriversLicenseUrl { get; set; }
-
-        public class CustomField
-        {
-            /// <summary>
-            /// Corresponds to the /customfields customfieldid.
-            /// </summary>
-            [JsonProperty("customfieldid")]
-            public int? Id { get; set; }
-
-            /// <summary>
-            /// For a non-select custom field, the value.
-            /// </summary>
-            [JsonProperty("customfieldvalue")]
-            public string CustomFieldValue { get; set; }
-
-            /// <summary>
-            /// For a select custom field, the selectid value (from /customfield's selectlist).
-            /// </summary>
-            [JsonProperty("optionid")]
-            public int? OptionId { get; set; }
-        }
 
         public class PortalStatusModel
         {

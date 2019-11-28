@@ -8,6 +8,7 @@ using Bogus;
 using Bogus.DataSets;
 using Shouldly;
 using System;
+using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -57,6 +58,21 @@ namespace AthenaHealth.Sdk.Tests.EndToEnd
             // Assert
             result.ShouldNotBeNull();
             result.Items.Count().ShouldBeGreaterThan(0);
+        }
+
+        [Theory]
+        [ClassData(typeof(GetPatientCustomFieldsData))]
+        public async Task GetPatientCustomFields_FieldsExist_ShouldNotThrowJsonSerializationException(int patientId)
+        {
+            // Arrange
+            // Act
+            var result = await _client.Patients.GetPatientCustomFields(patientId, 1);
+
+            // Assert
+            result.ShouldNotBeNull();
+            result.Length.ShouldBeGreaterThan(0);
+
+            Debug.WriteLine($"yield return new object[] {{ {patientId} }};");
         }
 
         [Fact]

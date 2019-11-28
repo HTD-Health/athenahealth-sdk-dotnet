@@ -927,5 +927,16 @@ namespace AthenaHealth.Sdk.Tests.Integration
             response.ShouldNotBeNull();
             response.Length.ShouldBeGreaterThan(0);
         }
+
+        [Fact]
+        public async Task GetPatientCustomFields_ReturnsRecords()
+        {
+            IPatientClient client = new PatientClient(ConnectionFactory.CreateFromFile(@"Data\Patient\GetPatientCustomFields.json"));
+
+            var response = await client.GetPatientCustomFields(1, 1);
+
+            response.ShouldNotBeNull();
+            response.Length.ShouldBeGreaterThan(0);
+        }
     }
 }
