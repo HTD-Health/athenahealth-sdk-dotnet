@@ -1,0 +1,41 @@
+trigger: none
+
+pr:
+- master
+- develop
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Debug'
+
+steps:
+- task: NuGetToolInstaller@1
+
+- task: NuGetCommand@2
+  inputs:
+    command: 'restore'
+    restoreSolution: '$(solution)'
+    feedsToUse: 'select'
+
+- task: VSBuild@1
+  inputs:
+    solution: '$(solution)'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+- task: VSTest@2
+  inputs:
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: |
+      **\*AthenaHealth.Sdk.Tests.Integration*.dll
+      **\*AthenaHealth.Sdk.Tests*.dll
+      !**\*AthenaHealth.Sdk.Tests.EndToEnd*.dll
+      !**\*TestAdapter.dll
+      !**\obj\**
+    searchFolder: '$(System.DefaultWorkingDirectory)'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
